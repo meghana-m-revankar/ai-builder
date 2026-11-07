@@ -1,41 +1,25 @@
 # UI Design Specification - Fleet Tracker
 
-## 1. Dashboard
-- **Purpose**: High-level overview of fleet status, active deliveries, and upcoming maintenance.
+## 1. Dashboard (Main Overview)
+- **Purpose**: At-a-glance status of the fleet.
 - **Layout**: 
-    - Header: Search, Notifications, User Profile.
-    - KPI Row: "Active Vans", "Drivers Due for License Renewal", "Maintenance Alerts", "Total Fuel Expense".
-    - Main: Two-column grid:
-        - Left: Recent Deliveries table (last 5).
-        - Right: Fleet Status donut chart + Urgent Maintenance Alerts list.
-- **Actions**: View Details links.
+  - Top row: 4 KPI cards (Total Vans, Active, In Maintenance, Alerts).
+  - Middle row: "Recent Maintenance" (table) and "Maintenance Costs" (chart).
+  - Bottom row: "Fleet Health" heatmap/bento grid.
+- **Actions**: Refresh data, Add Maintenance (CTA).
 
 ## 2. Fleet Management
-- **Purpose**: Manage the van inventory.
-- **Layout**: 
-    - Header: Page Title, "Add New Van" CTA.
-    - Filters: Status (Active, In Repair, Retired), Model search.
-    - Main: Data table with columns: ID, Plate, Model, Status, Last Maintenance.
-- **Actions**: Edit/View details via row menu.
+- **Purpose**: List and edit van details.
+- **Layout**: Data table with search, status filters (All, Active, Maintenance), and a list of vans.
+- **Fields**: Plate, Status, Last Maintenance, Actions (View/Edit).
+- **Actions**: Add New Van, Edit Status, Log Maintenance.
 
-## 3. Maintenance Logs
-- **Purpose**: Record and track vehicle maintenance.
-- **Layout**: 
-    - Header: Page Title, "Add Log" button.
-    - Filters: Van search, Date range.
-    - Main: Table with ID, Van Plate, Description, Cost, Date.
-- **Actions**: Delete button (with confirmation modal).
+## 3. Maintenance Tracker
+- **Purpose**: Logging and reporting maintenance activities.
+- **Layout**: Split view: Form on left, History list on right.
+- **Fields**: Van Select, Cost, Description, Date.
+- **Actions**: Submit Maintenance, Export Report.
 
-## 4. HR/Compliance
-- **Purpose**: Track driver data and license status.
-- **Layout**: 
-    - Header: Page Title.
-    - Filters: License Status (Valid, Expiring Soon, Expired).
-    - Main: List cards per driver showing name, license number, and expiry date.
-- **Actions**: View profile.
-
-## 5. Reporting
-- **Purpose**: Analyze fuel costs and performance.
-- **Layout**: 
-    - Header: Title, Date range selector.
-    - Main: Multi-line chart (Fuel Costs vs. Time) and aggregate cards (Avg Fuel Cost per KM).
+## 4. Reports
+- **Purpose**: Fuel and operational insights.
+- **Layout**: Date range picker followed by data visualization widgets.

@@ -1,16 +1,23 @@
 using Microsoft.AspNetCore.Mvc;
-using FleetTracker.Application.Services;
+using FleetTracker.Application.Queries;
 
 namespace FleetTracker.Api.Controllers;
 
 [ApiController]
 [Route("api/v1/vans")]
-public class VansController(VanService vanService) : ControllerBase
+public sealed class VansController : ControllerBase
 {
-    [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] string? status)
+    private readonly GetVansQueryHandler _handler;
+
+    public VansController(GetVansQueryHandler handler)
     {
-        var result = await vanService.GetVansAsync(status);
+        _handler = handler;
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAll(CancellationToken ct)
+    {
+        var result = await _handler.HandleAsync(ct);
         return Ok(result);
     }
 }

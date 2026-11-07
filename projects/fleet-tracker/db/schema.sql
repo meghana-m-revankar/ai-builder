@@ -1,62 +1,48 @@
 -- Fleet Tracker Schema
--- Version: 1.0.0
+-- Tables: vans, drivers, maintenance
 
--- Extensions
-create extension if not exists "uuid-ossp";
-
--- Tables
 create table vans (
     id uuid primary key default gen_random_uuid(),
-    plate_number text not null unique,
-    model text not null,
-    status text not null check (status in ('Active', 'InMaintenance', 'Retired')),
-    last_maintenance_date timestamptz,
+    plate text not null unique,
+    -- Status: 'available', 'in_maintenance', 'in_transit', 'retired'
+    status text not null check (status in ('available', 'in_maintenance', 'in_transit', 'retired')),
+    last_maintenance_date timestamptz not null default now(),
     created_at timestamptz not null default now(),
-    updated_at timestamptz not null default now()
+    updated_at timestamptz not null default now(),
+    created_by uuid,
+    updated_by uuid,
+    deleted_at timestamptz null
 );
-comment on table vans is 'Registry of all delivery vans in the fleet';
+
+create index idx_vans_status on vans(status) where deleted_at is null;
 
 create table drivers (
     id uuid primary key default gen_random_uuid(),
     name text not null,
-    license_number text not null unique,
-    license_expiry_date date not null,
+    license_expiry timestamptz not null,
     created_at timestamptz not null default now(),
-    updated_at timestamptz not null default now()
+    updated_at timestamptz not null default now(),
+    created_by uuid,
+    updated_by uuid,
+    deleted_at timestamptz null
 );
 
-create table maintenance_logs (
+create table maintenance (
     id uuid primary key default gen_random_uuid(),
     van_id uuid not null references vans(id) on delete restrict,
-    description text not null,
     cost numeric(18,2) not null check (cost >= 0),
-    log_date timestamptz not null default now(),
-    created_at timestamptz not null default now()
-);
-create index idx_maintenance_logs_van_id on maintenance_logs(van_id);
-
-create table deliveries (
-    id uuid primary key default gen_random_uuid(),
-    van_id uuid not null references vans(id) on delete restrict,
-    driver_id uuid not null references drivers(id) on delete restrict,
-    status text not null check (status in ('Planned', 'InProgress', 'Completed', 'Cancelled')),
-    completion_time timestamptz,
-    fuel_cost numeric(18,2) default 0,
+    currency char(3) not null default 'AED',
+    description text not null,
     created_at timestamptz not null default now(),
-    updated_at timestamptz not null default now()
+    updated_at timestamptz not null default now(),
+    created_by uuid,
+    updated_by uuid,
+    deleted_at timestamptz null
 );
-create index idx_deliveries_van_id on deliveries(van_id);
-create index idx_deliveries_driver_id on deliveries(driver_id);
 
--- Audit / System Columns trigger
-create or replace function fn_update_updated_at()
-returns trigger as $$
-begin
-    new.updated_at = now();
-    return new;
-end;
-$$ language plpgsql;
+create index idx_maintenance_van_id on maintenance(van_id);
+create index idx_maintenance_created_at on maintenance(created_at);
 
-create trigger trg_vans_updated_at before update on vans for each row execute function fn_update_updated_at();
-create trigger trg_drivers_updated_at before update on drivers for each row execute function fn_update_updated_at();
-create trigger trg_deliveries_updated_at before update on deliveries for each row execute function fn_update_updated_at();
+comment on table vans is 'Stores fleet vehicles';
+comment on column vans.status is 'Allowed values: available, in_maintenance, in_transit, retired';
+comment on table maintenance is 'Stores service history for vans';

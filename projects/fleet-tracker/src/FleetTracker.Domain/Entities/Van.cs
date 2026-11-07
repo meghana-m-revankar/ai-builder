@@ -1,19 +1,24 @@
 namespace FleetTracker.Domain.Entities;
 
-public enum VanStatus
+public sealed class Van
 {
-    Active,
-    InMaintenance,
-    Retired
-}
+    public Guid Id { get; private init; }
+    public string Plate { get; private set; }
+    public string Status { get; private set; }
+    public DateTime LastMaintenanceDate { get; private set; }
 
-public class Van
-{
-    public Guid Id { get; set; }
-    public string PlateNumber { get; set; } = string.Empty;
-    public string Model { get; set; } = string.Empty;
-    public VanStatus Status { get; set; }
-    public DateTime? LastMaintenanceDate { get; set; }
-    public DateTime CreatedAt { get; set; }
-    public DateTime UpdatedAt { get; set; }
+    private Van() { }
+
+    public Van(string plate, string status, DateTime lastMaintenanceDate)
+    {
+        Id = Guid.NewGuid();
+        Plate = plate;
+        Status = status;
+        LastMaintenanceDate = lastMaintenanceDate;
+    }
+
+    public void UpdateMaintenance(DateTime date)
+    {
+        LastMaintenanceDate = date;
+    }
 }

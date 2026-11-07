@@ -1,25 +1,17 @@
-using Microsoft.EntityFrameworkCore;
 using FleetTracker.Domain.Entities;
-using FleetTracker.Application.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace FleetTracker.Infrastructure.Persistence;
 
-public class FleetDbContext : DbContext
+public sealed class FleetDbContext : DbContext
 {
-    public FleetDbContext(DbContextOptions<FleetDbContext> options) : base(options) { }
     public DbSet<Van> Vans => Set<Van>();
-    // TODO: Add other DbSets
-}
 
-public class VanRepository(FleetDbContext context) : IVanRepository
-{
-    public async Task<IEnumerable<Van>> GetAllAsync(VanStatus? status = null)
+    public FleetDbContext(DbContextOptions<FleetDbContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        var query = context.Vans.AsQueryable();
-        if (status.HasValue)
-        {
-            query = query.Where(v => v.Status == status.Value);
-        }
-        return await query.ToListAsync();
+        modelBuilder.Entity<Van>().ToTable("vans");
+        modelBuilder.Entity<Van>().HasKey(v => v.Id);
     }
 }
