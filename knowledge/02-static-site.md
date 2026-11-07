@@ -27,7 +27,7 @@ All three choices use the same fonts, the icon pack chosen in the brief (see 01 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 ```
 - MUST include the Google Fonts link and the chosen icon pack on every page, whatever the framework.
-- Images only from `https://picsum.photos`, `https://i.pravatar.cc` and the client's own "Logo URL". See 01 Design System → Imagery.
+- Images: the URLs in the brief's **Image Library** first, then `https://picsum.photos` as fallback, `https://i.pravatar.cc` for avatars, and the client's own "Logo URL". See 01 Design System → Imagery.
 - No jQuery, no other libraries. Charts: inline SVG or CSS.
 
 ## No inline styles (MUST)

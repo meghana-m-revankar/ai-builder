@@ -66,6 +66,33 @@ EndGlobal
 ```
 - Repeat the four `ProjectConfigurationPlatforms` lines for every project. Every GUID unique and in upper case. Paths use backslashes.
 
+**Who writes what** (avoids missing or duplicated files):
+- Services & API agent: the `.sln`, root files, Domain, Application, Infrastructure, Api and test projects.
+- UI Design agent: the complete `src/<Project>.Web` project (below). It must not write backend projects.
+- Each file is written once. No duplicate pages (e.g. `Dashboard.razor` in two places).
+
+**Blazor Web project (MUST be complete, not only pages)** - Blazor Web App, .NET 8, interactive server render mode, Tailwind via CDN in `App.razor`:
+```
+src/<Project>.Web/
+  <Project>.Web.csproj            <Project Sdk="Microsoft.NET.Sdk.Web">, references Application
+  Program.cs                      AddRazorComponents().AddInteractiveServerComponents(), HttpClient for the Api, MapRazorComponents<App>().AddInteractiveServerRenderMode()
+  appsettings.json                { "ApiBaseUrl": "https://localhost:7001" }
+  Properties/launchSettings.json
+  Components/App.razor            <html>, <head> with Google Fonts, Tailwind CDN + tailwind.config.js, app.css, <HeadOutlet />; <body> with <Routes /> and blazor.web.js
+  Components/Routes.razor         <Router AppAssembly="typeof(Program).Assembly"> with MainLayout and a NotFound page
+  Components/_Imports.razor       @using lines for the project namespaces, Microsoft.AspNetCore.Components.Web, static RenderMode
+  Components/Layout/MainLayout.razor   sidebar or top nav + @Body, same design system as the static site
+  Components/Layout/NavMenu.razor      NavLink items with icons, active state
+  Components/Pages/<Page>.razor   one file per page, @page "/route", @rendermode InteractiveServer where interactive
+  Components/Shared/*.razor       reusable components (KpiCard, StatusBadge, DataTable, ConfirmDialog, Toast)
+  Services/<Entity>ApiClient.cs   typed HttpClient per resource, async, CancellationToken
+  wwwroot/css/app.css             tokens + shared component classes (plain CSS, as in 09 Site Template)
+  wwwroot/js/tailwind.config.js   same config as the static site
+  wwwroot/favicon.svg
+```
+- Pages get data through the ApiClient services, never directly from the DbContext.
+- Seed/demo data comes from the Api (DbSeeder), so pages show real rows on first run.
+
 **.csproj rules** (SDK-style, minimal; shared settings come from Directory.Build.props):
 - Domain: `<Project Sdk="Microsoft.NET.Sdk">`, no package or project references.
 - Application: references Domain; packages FluentValidation, MediatR (or own handler interfaces).
