@@ -3,25 +3,22 @@
 ## ER Diagram
 ```mermaid
 erDiagram
-    PRODUCT ||--o{ ORDER : includes
+    PRODUCT ||--o{ PREORDER : has
     PRODUCT {
-        uuid id PK
-        text name_en
-        text name_ar
-        numeric price_aed
-        boolean is_best_seller
+        uuid id
+        string name_en
+        string name_ar
+        numeric price
+        string currency
+        bool is_bestseller
     }
-    ORDER {
-        uuid id PK
-        text customer_name
-        text phone
-        uuid product_id FK
-        integer quantity
+    PREORDER {
+        uuid id
+        string customer_name
+        string phone
+        uuid product_id
+        int quantity
         timestamptz pickup_date
-        text status
+        string status
     }
 ```
-
-## Schema Details
-- All tables include `created_at` (timestamptz), `updated_at` (timestamptz).
-- Orders status: 'Pending', 'Confirmed', 'Completed', 'Cancelled'.

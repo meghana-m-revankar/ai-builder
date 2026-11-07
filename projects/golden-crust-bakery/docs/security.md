@@ -1,15 +1,12 @@
 # 06 Security - Golden Crust Bakery
 
-## Threat Model (STRIDE)
-- **Spoofing**: User impersonation mitigated by OIDC/OAuth2.
-- **Tampering**: All API inputs validated via FluentValidation.
-- **Repudiation**: Idempotency keys used for order submissions.
-- **Information Disclosure**: No personal data in logs; TLS 1.3 enforced.
-- **DoS**: Rate limiting on the pre-order form.
-- **Elevation of Privilege**: Role-based access (Customer vs Admin).
+## Threat List (STRIDE)
+- **Spoofing**: Users submitting orders as others (Mitigation: Auth required for Admin).
+- **Tampering**: Modifying order prices (Mitigation: Server-side validation).
+- **Information Disclosure**: Exposing customer phone numbers (Mitigation: RLS + Authorized API).
 
 ## Permissions Matrix
-| Role | View Menu | Place Order | View Orders | Edit Products |
-| :--- | :--- | :--- | :--- | :--- |
-| Customer | Yes | Yes | No | No |
-| Admin | Yes | No | Yes | Yes |
+| Role | View Products | Submit Order | View Orders |
+|---|---|---|---|
+| Customer | Yes | Yes | No |
+| Admin | Yes | Yes | Yes |

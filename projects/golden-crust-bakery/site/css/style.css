@@ -1,0 +1,7 @@
+:root {
+  --bs-primary: #1e3a8a;
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+.hero { background: linear-gradient(180deg, #e7ecfb 0%, #ffffff 100%); }
+.card { border: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); border-radius: 1rem; }
