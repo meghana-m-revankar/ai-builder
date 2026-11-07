@@ -23,5 +23,5 @@
 - Colour contrast at least 4.5:1. Every image has alt text. All actions usable by keyboard.
 
 ## Not allowed
-- No external CDNs, fonts or images from the internet. Everything is local.
+- The only allowed external resource is Bootstrap 5 from the jsDelivr CDN (CSS and JS bundle). No other CDNs, web fonts or images from the internet.
 - No lorem ipsum. Use realistic sample data.
