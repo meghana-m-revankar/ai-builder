@@ -1,4 +1,6 @@
-body { font-family: 'Plus Jakarta Sans', sans-serif; }
-.hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=1600'); background-size: cover; height: 80vh; }
-.navbar { transition: 0.3s; }
-.card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+body { font-family: 'Segoe UI', sans-serif; background-color: #fdfaf6; color: #4a3728; }
+.navbar { background-color: #fff !important; border-bottom: 2px solid #e3c08d; }
+.hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=1200') center/cover; color: white; padding: 100px 0; }
+.card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); background-color: #fff; }
+.btn-primary { background-color: #b8860b; border: none; }
+.btn-primary:hover { background-color: #9c7309; }

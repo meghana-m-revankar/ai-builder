@@ -1,19 +1,24 @@
 # UI Design: Golden Crust Bakery
 
-## 1. Landing Page
-- **Purpose**: Showcase artisan products, explain service, and offer CTA to order.
-- **Layout**: Hero (high-res image, tagline), Feature Cards, Product Highlights, Testimonials, CTA.
-- **Actions**: "Order Now" button in Hero.
-- **Navigation**: Sticky Navbar (Logo, Shop, About, Contact, Language Toggle).
+## 1. Landing Page (Home)
+- **Purpose**: Showcase brand, highlight featured products, and guide users to ordering.
+- **Layout**: Hero banner, featured product grid, 3-step ordering process, testimonial slider.
+- **Actions**: "Order Now" (nav to orders page), "View Menu" (scroll to products).
+- **Navigation**: Sticky navbar with links to Home, Menu, About, Contact, Order.
 
-## 2. Order Page (Shop)
-- **Purpose**: Allow customers to select products and submit an order.
-- **Layout**: 3-column grid for products, sidebar for cart (or dedicated modal).
-- **Fields**: Product quantity, pickup date, customer name, phone.
-- **Actions**: Submit Order button (Primary).
+## 2. Menu Page
+- **Purpose**: Browse full product catalog.
+- **Layout**: Filterable grid by category (Bread, Pastry, Cakes).
+- **Actions**: Filter buttons, "Add to Order" per product.
 
-## 3. Admin Dashboard
-- **Purpose**: Order fulfillment and management.
-- **Layout**: Sidebar navigation, Stats KPI row, Orders Table.
-- **Actions**: Status filter (Pending, Ready, Completed), Update Status (Dropdown/Action).
-- **Navigation**: Profile management, Orders, Product management.
+## 3. Order Page
+- **Purpose**: Place a pre-order for pickup.
+- **Fields**: Product selector, quantity, pickup date, customer name, phone number.
+- **Actions**: Submit order button.
+- **Navigation**: Back to Home.
+
+## 4. Admin Dashboard
+- **Purpose**: Management interface for bakery staff.
+- **Layout**: Sidebar navigation, summary KPI cards, active orders table.
+- **Actions**: Filter orders by status (Pending, Ready, Completed), "Mark as Ready" / "Complete" buttons.
+- **Navigation**: Logout, Dashboard, Manage Inventory.

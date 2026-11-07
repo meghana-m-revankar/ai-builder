@@ -1,0 +1,27 @@
+@page "/"
+@inject IProductService ProductService
+
+<PageTitle>Home | Golden Crust Bakery</PageTitle>
+
+<section class="hero text-center py-5">
+    <h1>Artisan Bakery in Dubai</h1>
+    <p class="lead">Slow-fermented bread, baked fresh every morning.</p>
+    <a href="/order" class="btn btn-primary btn-lg">Pre-order for Pickup</a>
+</section>
+
+<section class="container mt-5">
+    <h2>Featured Products</h2>
+    <div class="row">
+        @if (featuredProducts == null) { <p>Loading...</p> }
+        else {
+            @foreach (var product in featuredProducts) {
+                <div class="col-md-4"><ProductCard Product="product" /></div>
+            }
+        }
+    </div>
+</section>
+
+@code {
+    private IEnumerable<ProductDto>? featuredProducts;
+    protected override async Task OnInitializedAsync() => featuredProducts = await ProductService.GetFeaturedAsync();
+}

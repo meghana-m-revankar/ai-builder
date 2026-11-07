@@ -1,7 +1,8 @@
-# Golden Crust Bakery Website
+# Golden Crust Bakery
 
-## How to use
-1. Clone or download this repository.
-2. Ensure you have a web server installed (e.g., Live Server in VS Code, or simple HTTP server).
-3. Open `index.html` in your web browser.
-4. No build step required; it uses CDN for Bootstrap.
+A premium artisan bakery website for Dubai.
+
+## How to open
+1. Clone this repository.
+2. Simply open `index.html` in any modern web browser. 
+3. No build step or server is required for this static version.

@@ -1,43 +1,44 @@
-# Architecture: Golden Crust Bakery
+# Architecture Document: Golden Crust Bakery
 
 ## Overview
-Golden Crust Bakery is a premium artisan bakery platform built with .NET 8, Blazor (Server), and PostgreSQL. It supports English and Arabic, enabling customers to pre-order products and allowing admins to manage orders.
+Golden Crust Bakery is a premium artisan bakery platform serving Dubai customers. It provides a public-facing catalogue, a pre-order system for daily pickups, and an administrative dashboard for order management.
 
-## Container Diagram
+## Context Diagram
 ```mermaid
 flowchart LR
-    User((Customer/Admin)) --> Web[Blazor Web App]
-    Web --> API[Application Core]
+    Customer((Customer)) --> WebApp[Blazor Web App]
+    Admin((Bakery Admin)) --> WebApp
+    WebApp --> API[ASP.NET Core API]
     API --> DB[(PostgreSQL)]
+    API --> Email[SMTP / Email Service]
 ```
-
-## Modules
-- **Domain**: Entities (Product, Order, Testimonial), Value Objects.
-- **Application**: CQRS Handlers, FluentValidation, DTOs.
-- **Infrastructure**: Entity Framework Core, Repository pattern.
-- **Web**: Blazor components, Localization, UI Layout.
 
 ## Folder Structure
 ```
 src/
-  GoldenCrust.Domain/
-  GoldenCrust.Application/
-  GoldenCrust.Infrastructure/
-  GoldenCrust.Api/
-  GoldenCrust.Web/
+  GoldenCrust.Domain          # Entities: Order, Product, Category
+  GoldenCrust.Application     # Use Cases, DTOs, FluentValidation
+  GoldenCrust.Infrastructure  # EF Core, DbSeeder, SMTP service
+  GoldenCrust.Api             # REST Controllers, ProblemDetails
+  GoldenCrust.Web             # Blazor Components (Pages/Layouts)
+tests/
+  GoldenCrust.UnitTests       # Domain logic & Application handlers
+  GoldenCrust.IntegrationTests# API endpoint testing with Testcontainers
 ```
 
 ## Data Entities
-- **Product**: id, name_en, name_ar, description_en, description_ar, price_aed, category, is_available.
-- **Order**: id, customer_name, phone, product_id, quantity, pickup_date, status (pending, ready, completed).
+- **Product**: `id`, `name_en`, `name_ar`, `price`, `category`, `image_url`
+- **Order**: `id`, `customer_name`, `phone`, `product_id`, `quantity`, `pickup_date`, `status` (Pending, Ready, Completed)
 
 ## API Endpoints
-- `GET /api/v1/products`
-- `POST /api/v1/orders`
-- `GET /api/v1/orders` (Admin only)
-- `PATCH /api/v1/orders/{id}/status` (Admin only)
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | /api/v1/products | List available products |
+| POST | /api/v1/orders | Create a new pre-order |
+| GET | /api/v1/orders | List orders (Admin only) |
+| PATCH | /api/v1/orders/{id} | Update order status |
 
 ## Design Decisions
-- **Localization**: Use `IStringLocalizer` for English/Arabic support.
-- **Architecture**: Onion Architecture to keep domain logic independent.
-- **UI**: Premium, spacious design using Plus Jakarta Sans and Inter fonts.
+- **CQRS-lite**: Decoupled commands (create order) from queries (get product list) to keep handlers focused.
+- **Localization**: Uses .NET `IStringLocalizer` for English and Arabic support, managed in resources.
+- **Reliability**: Uses database transactions for order creation to ensure stock consistency if extended.
