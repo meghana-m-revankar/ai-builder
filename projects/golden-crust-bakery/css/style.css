@@ -1,0 +1,4 @@
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=1600'); background-size: cover; height: 80vh; }
+.navbar { transition: 0.3s; }
+.card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }

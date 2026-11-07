@@ -1,0 +1,25 @@
+@page "/"
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Index> Localizer
+
+<PageTitle>Golden Crust | Artisan Bakery</PageTitle>
+
+<header class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Golden Crust</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/shop">Shop</a></li>
+                <li class="nav-item"><button class="btn btn-sm btn-outline-primary">AR</button></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="container py-5">
+    <section class="hero text-center py-5">
+        <h1 class="display-3 fw-bold">Artisan Breads & Pastries</h1>
+        <p class="lead text-muted mb-4">Freshly baked, delivered to your door.</p>
+        <a href="/shop" class="btn btn-primary btn-lg px-5">Order Now</a>
+    </section>
+</main>
