@@ -1,0 +1,24 @@
+@page "/maintenance"
+<PageTitle>Maintenance Logs | Fleet Tracker</PageTitle>
+
+<div class="container-fluid py-4">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Maintenance Logs</h2>
+        <button class="btn btn-primary" @onclick="OpenAddModal"><i class="bi bi-wrench"></i> Add Log</button>
+    </header>
+    <div class="table-responsive bg-white rounded shadow-sm">
+        <table class="table table-hover mb-0">
+            <thead><tr><th>Van</th><th>Description</th><th>Cost</th><th>Date</th><th>Action</th></tr></thead>
+            <tbody>
+                <!-- Row template -->
+                <tr><td>TRK-001</td><td>Oil Change</td><td>$85.00</td><td>2023-11-01</td>
+                <td><button class="btn btn-sm btn-outline-danger" @onclick="ConfirmDelete"><i class="bi bi-trash3"></i></button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    void OpenAddModal() {}
+    void ConfirmDelete() {}
+}
