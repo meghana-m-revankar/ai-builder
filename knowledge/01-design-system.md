@@ -2,6 +2,20 @@
 
 Every screen must look like a premium, modern SaaS product, not a template. When unsure, choose the more polished, more spacious option.
 
+## Design inspiration (Dribbble / Behance / Awwwards level)
+Design as if the page will be posted as a top shot on Dribbble. Use these current patterns where they fit the business:
+- **Big, confident typography**: hero headline 56-72px on desktop, tight letter-spacing, one key word highlighted in the brand or accent colour.
+- **Bento grids**: feature sections as a grid of cards in different sizes (one large 2×2 card with an image or mockup, smaller cards around it).
+- **Layered depth**: cards on soft tinted backgrounds, floating UI chips over images (rating badge, "Order ready" notification, small stat card), subtle shadows.
+- **Soft gradient backgrounds**: radial gradient or blurred colour blobs behind the hero in brand tints. No harsh rainbow gradients.
+- **Product / UI mockups** built in HTML/CSS (a fake app card, dashboard preview, phone frame) instead of plain text.
+- **Rounded, friendly shapes**: 16-24px radius on large cards and images, pill buttons and tags.
+- **Generous whitespace**: let sections breathe; never cram.
+- **Micro-interactions**: hover lift on cards, image zoom on hover (scale 1.04), animated underline on links, smooth accordion.
+- **Rich footers**: logo, short pitch, link columns, newsletter field, social icons.
+- Light glassmorphism only for overlays on images (navbar on scroll, floating chips): `background: rgba(255,255,255,.7); backdrop-filter: blur(12px)`.
+- The AI cannot browse Dribbble: apply these patterns from memory, and aim for that level of polish on every section.
+
 ## Typography
 - Headings and UI: **Plus Jakarta Sans** (weights 500, 600, 700, 800).
 - Body text: **Inter** (weights 400, 500, 600).
@@ -14,10 +28,41 @@ Every screen must look like a premium, modern SaaS product, not a template. When
 - Uppercase labels: 0.75rem, weight 600, letter-spacing 0.08em.
 
 ## Icons
-- Use **Bootstrap Icons** only (`<i class="bi bi-calendar-check"></i>`). Never mix icon packs. Never use emoji as icons.
-- Size icons with the text (1em) or 1.25rem in buttons, 1.5-2rem in feature cards.
+Use the pack from the "Icon Pack" field of the brief (default **Lucide**). Use exactly one pack per project. Never mix packs. Never use emoji as icons.
+
+| Pack | Load (exact) | Usage |
+|---|---|---|
+| **Lucide** (default) | `<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>` | `<i data-lucide="calendar"></i>`; call `lucide.createIcons()` in `app.js` after every render |
+| **Phosphor** | `<link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">` (+ `.../src/fill/style.css` if filled icons are used) | `<i class="ph ph-calendar"></i>`, filled: `<i class="ph-fill ph-star"></i>` |
+| **Boxicons** | `<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">` | `<i class="bx bx-calendar"></i>`, solid `bxs-`, brands `bxl-` |
+| **Bootstrap Icons** | `<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">` | `<i class="bi bi-calendar3"></i>` |
+
+Common icons in each pack:
+| Meaning | Lucide | Phosphor | Boxicons | Bootstrap |
+|---|---|---|---|---|
+| Dashboard | layout-dashboard | ph-squares-four | bx-grid-alt | bi-grid-1x2 |
+| Users | users | ph-users | bx-group | bi-people |
+| Calendar | calendar | ph-calendar | bx-calendar | bi-calendar3 |
+| Settings | settings | ph-gear | bx-cog | bi-gear |
+| Money | banknote | ph-money | bx-money | bi-cash-stack |
+| Cart / order | shopping-bag | ph-shopping-bag | bx-shopping-bag | bi-bag-check |
+| Success | circle-check | ph-check-circle | bx-check-circle | bi-check-circle |
+| Warning | triangle-alert | ph-warning | bx-error | bi-exclamation-triangle |
+| Delete | trash-2 | ph-trash | bx-trash | bi-trash3 |
+| Edit | square-pen | ph-pencil-simple | bx-edit | bi-pencil-square |
+| Search | search | ph-magnifying-glass | bx-search | bi-search |
+| Star | star | ph-star | bxs-star | bi-star-fill |
+| Time | clock | ph-clock | bx-time | bi-clock |
+| Phone | phone | ph-phone | bx-phone | bi-telephone |
+| Location | map-pin | ph-map-pin | bx-map | bi-geo-alt |
+| Menu | menu | ph-list | bx-menu | bi-list |
+| Arrow | arrow-right | ph-arrow-right | bx-right-arrow-alt | bi-arrow-right |
+| Instagram | instagram | ph-instagram-logo | bxl-instagram | bi-instagram |
+
+- Size icons with the text (1em) or 20px in buttons, 24-32px in feature cards (Lucide: set `width`/`height` via CSS on `svg.lucide`, `stroke-width: 1.75`).
+- Feature icons sit in a tinted rounded square (48-56px, brand-100 background, brand-700 icon).
 - Every icon-only button has `aria-label`. Decorative icons have `aria-hidden="true"`.
-- Pick meaningful icons: dashboard `bi-grid-1x2`, users `bi-people`, calendar `bi-calendar3`, settings `bi-gear`, money `bi-cash-stack`, success `bi-check-circle`, warning `bi-exclamation-triangle`, delete `bi-trash3`, edit `bi-pencil-square`, search `bi-search`.
+- The 09 Site Template uses Bootstrap Icons class names: swap them for the chosen pack using the table above.
 
 ## Brand colours from the logo (takes priority)
 - If the brief contains a "Brand Palette" (extracted from the client's logo), build the colour tokens from it:
