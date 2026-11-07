@@ -59,6 +59,21 @@ Every screen must look like a premium, modern SaaS product, not a template. When
 - Container max width 1200px (marketing) or fluid with 24px padding (app).
 - Grids collapse: 4 → 2 → 1 columns. Nothing scrolls sideways except tables in `.table-responsive`.
 
+## Responsive (mobile first, mandatory)
+- Write mobile styles first, then add `min-width` media queries. Use Bootstrap breakpoints: sm 576, md 768, lg 992, xl 1200, xxl 1400.
+- Must look finished at 360px, 375px, 414px (phones), 768px (tablet), 1024px, 1280px and 1440px+ (desktop).
+- Use Bootstrap grid (`row`, `col-12 col-md-6 col-lg-4`) and `gap`; never fixed pixel widths on layout containers.
+- Side padding at least 16px on phones; content never touches the screen edge and nothing scrolls sideways.
+- Navbar collapses to a hamburger below lg; app sidebar becomes an offcanvas drawer below lg.
+- Fluid type for hero headings: `font-size: clamp(2rem, 5vw + 1rem, 3.75rem)`.
+- Tables: wrap in `.table-responsive`; on phones, show key columns only or switch to stacked cards.
+- Forms: one column on phones, two columns from md. Inputs full width on phones.
+- Buttons: full width on phones in forms and CTA bands (`w-100 w-md-auto`).
+- Touch targets at least 44×44px; spacing between tappable items at least 8px.
+- Images: `max-width: 100%`, `height: auto`, `aspect-ratio` set, `srcset` sizes where it matters (e.g. hero 800 / 1600 wide).
+- Grids: 4 → 2 → 1 columns; cards keep equal height per row.
+- Test landscape phones and avoid `100vh` heroes (use `min-height: 70svh` at most).
+
 ## Components (quality bar)
 - **Buttons**: primary solid, secondary outline, tertiary link. Min height 40px, icon + label, visible focus ring `0 0 0 3px var(--brand-100)`.
 - **Cards**: 24px padding, title + supporting text + action. Same height in a row.
