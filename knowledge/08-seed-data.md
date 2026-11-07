@@ -15,7 +15,7 @@ Every project ships with realistic dummy data in every layer so it can be opened
 ## Where seed data must exist
 | Layer | File | Form |
 |---|---|---|
-| Static site | `site/js/data.js` | `const products = [...]`, `const testimonials = [...]`, `const orders = [...]` with ids, names, prices, `image` (picsum seed URL), `icon` (Bootstrap Icon name), status, dates |
+| Static site | `site/js/data.js` | `const products = [...]`, `const testimonials = [...]`, `const orders = [...]` with ids, names, prices, `image` (picsum seed URL), `icon` (icon name from the chosen pack, e.g. Lucide `croissant`), status, dates |
 | Database | `db/seed.sql` | `insert into ... values ...` for every table, respecting foreign keys and order of insertion; fixed UUIDs so tests can reference them |
 | Backend | `src/<Project>.Infrastructure/Data/DbSeeder.cs` | `SeedAsync(DbContext, CancellationToken)` that inserts the same data when the database is empty; called at startup in Development only |
 | Tests | `tests/fixtures/*.json` and Postman environment variables | Known IDs and records used by Playwright and Postman tests |

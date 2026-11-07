@@ -7,11 +7,11 @@ Applies to the Static Site agent and any HTML/CSS/JS output.
 - As a **developer**: clean, semantic, valid code that works. Separate structure (HTML), style (CSS) and behaviour (JS). Every button, link and form does something.
 - Before writing, plan each page: list its sections, the content of each, the images and icons used. Then write the code.
 
-## UI framework (follow the "UI Framework" field of the brief; default Bootstrap)
+## UI framework (follow the "UI Framework" field of the brief; **default and primary: Tailwind**)
 | Choice | Load | Styling approach |
 |---|---|---|
-| **Bootstrap** | Bootstrap 5.3.3 CSS + JS bundle (links below) | Bootstrap components and utilities + `css/style.css` for brand tokens and custom components |
-| **Tailwind** | `<script src="https://cdn.tailwindcss.com/3.4.17"></script>` followed by `<script src="js/tailwind.config.js"></script>` (sets `tailwind.config = { theme: { extend: { colors, fontFamily } } }` with the brand tokens) | Utility classes in HTML; repeated patterns (buttons, cards) as plain CSS classes in `css/style.css` |
+| **Tailwind** (default) | `<script src="https://cdn.tailwindcss.com/3.4.17"></script>` followed by `<script src="js/tailwind.config.js"></script>` (sets `tailwind.config = { theme: { extend: { colors, fontFamily, borderRadius, boxShadow } } }` with the brand tokens) | Utility classes in HTML using the brand names (`bg-brand-700`, `text-ink-600`, `font-display`); repeated patterns rendered by `app.js` from one class-string helper; only tokens and a few effects (gradients, keyframes) in `css/style.css` |
+| **Bootstrap** | Bootstrap 5.3.3 CSS + JS bundle (links below) | Bootstrap components and utilities + `css/style.css` for brand tokens (`--bs-primary` etc.) and custom components |
 | **Plain CSS** | Nothing | Hand-written `css/style.css` with design tokens, a grid system, and component classes (BEM naming: `.card`, `.card__title`, `.card--featured`) |
 
 All three choices use the same fonts, the icon pack chosen in the brief (see 01 Design System → Icons) and the same colour tokens.

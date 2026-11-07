@@ -62,7 +62,7 @@ Common icons in each pack:
 - Size icons with the text (1em) or 20px in buttons, 24-32px in feature cards (Lucide: set `width`/`height` via CSS on `svg.lucide`, `stroke-width: 1.75`).
 - Feature icons sit in a tinted rounded square (48-56px, brand-100 background, brand-700 icon).
 - Every icon-only button has `aria-label`. Decorative icons have `aria-hidden="true"`.
-- The 09 Site Template uses Bootstrap Icons class names: swap them for the chosen pack using the table above.
+- The 09 Site Template uses Lucide (`data-lucide="..."`): for another pack, swap the names using the table above.
 
 ## Brand colours from the logo (takes priority)
 - If the brief contains a "Brand Palette" (extracted from the client's logo), build the colour tokens from it:
@@ -88,7 +88,7 @@ Common icons in each pack:
 | --line | #E2E8F0 | borders, dividers |
 | --success | #16A34A | --warning #D97706, --danger #DC2626, --info #0284C7 |
 
-- Override Bootstrap: `--bs-primary` = brand-700, `--bs-body-font-family` = Inter, `--bs-border-radius` = 0.75rem.
+- Map the tokens into the framework: **Tailwind** (default) `theme.extend.colors.brand = { 900, 700, 500, 100 }`, `accent`, `ink`, `canvas`, `line`, and `fontFamily.display / body / mono` in `js/tailwind.config.js`; Bootstrap `--bs-primary` = brand-700, `--bs-body-font-family` = Inter, `--bs-border-radius` = 0.75rem.
 - Contrast: text at least 4.5:1, large text at least 3:1.
 - Never use pure grey #808080 or default Bootstrap blue #0D6EFD.
 
@@ -105,9 +105,9 @@ Common icons in each pack:
 - Grids collapse: 4 → 2 → 1 columns. Nothing scrolls sideways except tables in `.table-responsive`.
 
 ## Responsive (mobile first, mandatory)
-- Write mobile styles first, then add `min-width` media queries. Use Bootstrap breakpoints: sm 576, md 768, lg 992, xl 1200, xxl 1400.
+- Write mobile styles first, then add breakpoint prefixes. Tailwind (default): `sm` 640, `md` 768, `lg` 1024, `xl` 1280, `2xl` 1536. Bootstrap: sm 576, md 768, lg 992, xl 1200, xxl 1400.
 - Must look finished at 360px, 375px, 414px (phones), 768px (tablet), 1024px, 1280px and 1440px+ (desktop).
-- Use Bootstrap grid (`row`, `col-12 col-md-6 col-lg-4`) and `gap`; never fixed pixel widths on layout containers.
+- Use the framework grid with gap: Tailwind `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6` (Bootstrap: `row g-4` + `col-12 col-md-6 col-lg-4`); never fixed pixel widths on layout containers.
 - Side padding at least 16px on phones; content never touches the screen edge and nothing scrolls sideways.
 - Navbar collapses to a hamburger below lg; app sidebar becomes an offcanvas drawer below lg.
 - Fluid type for hero headings: `font-size: clamp(2rem, 5vw + 1rem, 3.75rem)`.
@@ -123,7 +123,7 @@ Common icons in each pack:
 - **Buttons**: primary solid, secondary outline, tertiary link. Min height 40px, icon + label, visible focus ring `0 0 0 3px var(--brand-100)`.
 - **Cards**: 24px padding, title + supporting text + action. Same height in a row.
 - **Tables**: sticky header, zebra or hover rows, status badges, row actions in a dropdown, empty state, pagination, search and filters above.
-- **Forms**: label above every field, helper text, required `*`, Bootstrap validation states, grouped in sections with headings, primary action bottom right.
+- **Forms**: label above every field, helper text, required `*`, clear valid/invalid states (red border + message under the field), grouped in sections with headings, primary action bottom right.
 - **Badges/status pills**: soft background + strong text (e.g. success: bg #DCFCE7, text #166534).
 - **Feedback**: toasts for success, inline alerts for errors, skeleton loaders for loading, designed empty states (icon, sentence, action button).
 - **Modals**: for confirm/delete only; destructive buttons in danger colour.
@@ -138,7 +138,7 @@ Common icons in each pack:
 - Image source: `https://picsum.photos/seed/<project-slug>-<topic>/<width>/<height>` (e.g. `https://picsum.photos/seed/bakery-hero/1600/900`). Use a different seed per image so they don't repeat.
 - Picsum photos are generic, so always style them to fit the brand: `object-fit: cover`, fixed `aspect-ratio`, rounded corners, and a brand-coloured gradient overlay on hero images so text stays readable.
 - Every `<img>` has a descriptive `alt`, `loading="lazy"` (except the hero), and explicit `width` and `height`.
-- Combine photos with inline SVG illustrations, CSS gradient shapes, product mockups built in HTML/CSS, and Bootstrap Icons in tinted circles.
+- Combine photos with inline SVG illustrations, CSS gradient shapes, product mockups built in HTML/CSS, and icons from the chosen pack in tinted circles.
 - Dashboards and app screens use few photos: avatars (initials in coloured circles or `https://i.pravatar.cc/80?u=<name>`), illustrations for empty states.
 
 ## Content
