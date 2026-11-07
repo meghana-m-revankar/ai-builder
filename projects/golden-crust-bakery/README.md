@@ -1,6 +1,9 @@
 # Golden Crust Bakery
-Artisan bakery website in Dubai.
+## Prerequisites
+- .NET 8 SDK
+- PostgreSQL
 
-## Opening
-1. Open the `site/index.html` file in any modern web browser.
-2. The site uses CDN-hosted Bootstrap and fonts, so ensure an internet connection.
+## Run
+dotnet restore
+dotnet ef database update --project src/GoldenCrust.Infrastructure
+dotnet run --project src/GoldenCrust.Api

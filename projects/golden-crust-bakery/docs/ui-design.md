@@ -1,23 +1,21 @@
 # UI Design - Golden Crust Bakery
 
-## 1. Landing Page (Home)
-- **Purpose**: Brand introduction, showcase products, call to action for pre-orders.
-- **Layout**: Hero section (image + headline), Bento grid for featured products, Testimonials carousel.
-- **Actions**: "Order Now" button, Language switcher.
-- **Navigation**: Navbar with links to Menu, About, Contact.
+## 1. Homepage (Customer)
+- **Purpose**: Showcase daily specials, featured items, and call to action.
+- **Layout**: Hero section (gradient background, tagline), Featured Products grid (Bento style), Testimonials, Quick CTA.
+- **Actions**: "View All Products", "Order Now".
 
-## 2. Menu Page
-- **Purpose**: Full listing of artisan products.
-- **Layout**: Filtered grid of product cards.
-- **Fields**: Product name, price (AED), "Best Seller" badge.
-- **Actions**: "Add to Order" button.
+## 2. Menu/Shop Page (Customer)
+- **Purpose**: Browse full catalog of artisan goods.
+- **Layout**: Sidebar filters (categories), Grid layout for product cards.
+- **Actions**: "Add to Cart" (opens Modal for order details), "Search".
 
-## 3. Pre-Order Form (Modal)
-- **Purpose**: Capture customer details and order items.
-- **Fields**: Customer Name, Phone Number, Pickup Date, Quantity.
-- **Actions**: Submit button, Cancel button.
+## 3. Order Modal (Customer)
+- **Purpose**: Collect order specifics.
+- **Fields**: Customer Name, Phone, Quantity, Pickup Date.
+- **Actions**: "Confirm Pre-Order", "Cancel".
 
-## 4. Admin Dashboard
-- **Purpose**: Manage incoming pre-orders.
-- **Layout**: Sidebar navigation, Data table for orders.
-- **Actions**: Update order status (Pending/Confirmed/Delivered).
+## 4. Admin Dashboard (Admin)
+- **Purpose**: Manage order lifecycle and bakery operations.
+- **Layout**: Sidebar (Orders, Inventory, Settings), Table of current orders with status filters.
+- **Actions**: Update Status (Baking, Ready, Collected), View Order Details.

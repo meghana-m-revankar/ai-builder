@@ -1,61 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Golden Crust Bakery | Artisan Bread & Pastries in Dubai</title>
-  <meta name="description" content="Artisan, slow-fermented sourdough and fresh French pastries in the heart of Dubai. Pre-order for pickup.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link href="css/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Golden Crust Bakery | Artisan bread and pastries in Dubai</title>
+    <meta name="description" content="Slow-fermented sourdough and French pastries baked every morning in Dubai. Pre-order online for pickup.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍞</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
 </head>
 <body class="bg-light">
-  <header class="sticky-top bg-white border-bottom">
-    <nav class="navbar navbar-expand-lg py-3">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.html">
-          <i class="bi bi-basket3"></i> Golden Crust
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto gap-3">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">Our Story</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Order / Contact</a></li>
-          </ul>
+    <header class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.html">
+                <i data-lucide="chef-hat"></i> Golden Crust
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Pre-order</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <main>
-    <section class="hero py-5 text-center">
-      <div class="container py-5">
-        <h1 class="display-2 fw-bold mb-4">Artisan <span class="text-primary">Sourdough</span> in Dubai</h1>
-        <p class="lead text-secondary mb-5">Slow-fermented, stone-baked, and made with love. Order by 8pm for pickup tomorrow.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-4">Order for pickup</a>
-      </div>
-    </section>
+    <main id="main">
+        <section class="py-5 text-center container">
+            <h1 class="display-3 fw-bold mb-3">Freshly baked in <span class="text-primary">Dubai</span></h1>
+            <p class="lead text-muted mb-4">48-hour fermented sourdough and artisanal pastries.</p>
+            <a href="order.html" class="btn btn-primary btn-lg rounded-pill px-4">Place Order</a>
+        </section>
+        
+        <section class="container py-5">
+            <div class="row g-4" id="product-grid"></div>
+        </section>
+    </main>
 
-    <section class="container py-5">
-      <h2 class="text-center mb-5">Our Best Sellers</h2>
-      <div id="product-list" class="row g-4"></div>
-    </section>
-  </main>
+    <footer class="py-4 text-center border-top mt-5">
+        <p class="text-muted small">&copy; 2024 Golden Crust Bakery. Crafted in Dubai.</p>
+    </footer>
 
-  <footer class="bg-dark text-white py-5 mt-5">
-    <div class="container text-center">
-      <p>&copy; 2024 Golden Crust Bakery, Dubai. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
