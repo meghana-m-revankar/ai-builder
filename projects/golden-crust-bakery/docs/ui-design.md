@@ -1,24 +1,23 @@
-# UI Design: Golden Crust Bakery
+# UI Design - Golden Crust Bakery
 
 ## 1. Landing Page (Home)
-- **Purpose**: Showcase brand, highlight featured products, and guide users to ordering.
-- **Layout**: Hero banner, featured product grid, 3-step ordering process, testimonial slider.
-- **Actions**: "Order Now" (nav to orders page), "View Menu" (scroll to products).
-- **Navigation**: Sticky navbar with links to Home, Menu, About, Contact, Order.
+- **Purpose**: Brand introduction, showcase products, call to action for pre-orders.
+- **Layout**: Hero section (image + headline), Bento grid for featured products, Testimonials carousel.
+- **Actions**: "Order Now" button, Language switcher.
+- **Navigation**: Navbar with links to Menu, About, Contact.
 
 ## 2. Menu Page
-- **Purpose**: Browse full product catalog.
-- **Layout**: Filterable grid by category (Bread, Pastry, Cakes).
-- **Actions**: Filter buttons, "Add to Order" per product.
+- **Purpose**: Full listing of artisan products.
+- **Layout**: Filtered grid of product cards.
+- **Fields**: Product name, price (AED), "Best Seller" badge.
+- **Actions**: "Add to Order" button.
 
-## 3. Order Page
-- **Purpose**: Place a pre-order for pickup.
-- **Fields**: Product selector, quantity, pickup date, customer name, phone number.
-- **Actions**: Submit order button.
-- **Navigation**: Back to Home.
+## 3. Pre-Order Form (Modal)
+- **Purpose**: Capture customer details and order items.
+- **Fields**: Customer Name, Phone Number, Pickup Date, Quantity.
+- **Actions**: Submit button, Cancel button.
 
 ## 4. Admin Dashboard
-- **Purpose**: Management interface for bakery staff.
-- **Layout**: Sidebar navigation, summary KPI cards, active orders table.
-- **Actions**: Filter orders by status (Pending, Ready, Completed), "Mark as Ready" / "Complete" buttons.
-- **Navigation**: Logout, Dashboard, Manage Inventory.
+- **Purpose**: Manage incoming pre-orders.
+- **Layout**: Sidebar navigation, Data table for orders.
+- **Actions**: Update order status (Pending/Confirmed/Delivered).

@@ -1,44 +1,39 @@
-# Architecture Document: Golden Crust Bakery
+# 03 Architecture - Golden Crust Bakery
 
 ## Overview
-Golden Crust Bakery is a premium artisan bakery platform serving Dubai customers. It provides a public-facing catalogue, a pre-order system for daily pickups, and an administrative dashboard for order management.
+Golden Crust Bakery is a dual-language (English/Arabic) artisan bakery website in Dubai. It enables customers to view the menu, read the bakery story, and submit pre-order requests. The Admin dashboard allows management of pre-orders.
 
-## Context Diagram
-```mermaid
-flowchart LR
-    Customer((Customer)) --> WebApp[Blazor Web App]
-    Admin((Bakery Admin)) --> WebApp
-    WebApp --> API[ASP.NET Core API]
-    API --> DB[(PostgreSQL)]
-    API --> Email[SMTP / Email Service]
-```
+## Modules/Components
+- **Api**: RESTful backend (ASP.NET Core 8) for order management and content retrieval.
+- **Application**: Business logic (CQRS pattern, validation, pre-order orchestration).
+- **Domain**: Entities (Product, Order, Testimonial, DailySpecial), Value Objects.
+- **Infrastructure**: PostgreSQL persistence using EF Core.
+- **Web (Blazor)**: Server-side Blazor UI with localization support.
 
 ## Folder Structure
 ```
 src/
-  GoldenCrust.Domain          # Entities: Order, Product, Category
-  GoldenCrust.Application     # Use Cases, DTOs, FluentValidation
-  GoldenCrust.Infrastructure  # EF Core, DbSeeder, SMTP service
-  GoldenCrust.Api             # REST Controllers, ProblemDetails
-  GoldenCrust.Web             # Blazor Components (Pages/Layouts)
+  GoldenCrust.Domain/
+  GoldenCrust.Application/
+  GoldenCrust.Infrastructure/
+  GoldenCrust.Api/
+  GoldenCrust.Web/
 tests/
-  GoldenCrust.UnitTests       # Domain logic & Application handlers
-  GoldenCrust.IntegrationTests# API endpoint testing with Testcontainers
+  GoldenCrust.UnitTests/
+  GoldenCrust.IntegrationTests/
 ```
 
 ## Data Entities
-- **Product**: `id`, `name_en`, `name_ar`, `price`, `category`, `image_url`
-- **Order**: `id`, `customer_name`, `phone`, `product_id`, `quantity`, `pickup_date`, `status` (Pending, Ready, Completed)
+- **Product**: `id`, `name_en`, `name_ar`, `price_aed`, `is_best_seller`, `created_at`.
+- **Order**: `id`, `customer_name`, `phone`, `product_id`, `quantity`, `pickup_date`, `status`, `created_at`.
+- **Testimonial**: `id`, `customer_name`, `content`, `rating`.
 
 ## API Endpoints
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | /api/v1/products | List available products |
-| POST | /api/v1/orders | Create a new pre-order |
-| GET | /api/v1/orders | List orders (Admin only) |
-| PATCH | /api/v1/orders/{id} | Update order status |
+- `GET /api/v1/products` - List products.
+- `POST /api/v1/orders` - Create pre-order (Idempotent).
+- `GET /api/v1/orders` - Admin list of orders (Authenticated).
 
-## Design Decisions
-- **CQRS-lite**: Decoupled commands (create order) from queries (get product list) to keep handlers focused.
-- **Localization**: Uses .NET `IStringLocalizer` for English and Arabic support, managed in resources.
-- **Reliability**: Uses database transactions for order creation to ensure stock consistency if extended.
+## Key Design Decisions
+- **Localization**: Use `IStringLocalizer` for English/Arabic support.
+- **Styling**: Warm/Premium theme using Tailwind CSS.
+- **Timezone**: All business logic uses `TimeProvider` with UTC; displayed times converted to GST at the UI layer.

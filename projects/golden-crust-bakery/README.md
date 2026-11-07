@@ -1,8 +1,11 @@
 # Golden Crust Bakery
+Premium artisan bakery website for Dubai residents.
 
-A premium artisan bakery website for Dubai.
+## Features
+- Fully responsive design using Bootstrap 5.
+- Dynamic rendering of products and testimonials.
+- Pre-order form with client-side validation.
+- Modern, warm aesthetic suitable for a premium bakery.
 
-## How to open
-1. Clone this repository.
-2. Simply open `index.html` in any modern web browser. 
-3. No build step or server is required for this static version.
+## How to use
+Simply open `index.html` in any modern web browser. No local server or installation required.

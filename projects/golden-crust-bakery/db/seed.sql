@@ -1,30 +1,32 @@
 -- Seed Data for Golden Crust Bakery
 
--- Categories
-insert into categories (id, name_en, name_ar) values 
-('c0000000-0000-0000-0000-000000000001', 'Bread', 'خبز'),
-('c0000000-0000-0000-0000-000000000002', 'Pastry', 'معجنات');
+insert into products (id, name_en, name_ar, price_aed, is_best_seller) values
+('550e8400-e29b-41d4-a716-446655440000', 'Sourdough Country Loaf', 'خبز العجين المخمر', 28.00, true),
+('550e8400-e29b-41d4-a716-446655440001', 'Pistachio Croissant', 'كرواسون بالفستق', 22.00, true),
+('550e8400-e29b-41d4-a716-446655440002', 'Zaatar Flatbread', 'مناقيش زعتر', 15.00, false),
+('550e8400-e29b-41d4-a716-446655440003', 'Chocolate Babka', 'بابكا الشوكولاتة', 35.00, false),
+('550e8400-e29b-41d4-a716-446655440004', 'Baguette', 'خبز فرنسي', 12.00, false),
+('550e8400-e29b-41d4-a716-446655440005', 'Almond Tart', 'تارت اللوز', 25.00, false),
+('550e8400-e29b-41d4-a716-446655440006', 'Focaccia', 'فوكاتشيا', 18.00, false),
+('550e8400-e29b-41d4-a716-446655440007', 'Honey Cake', 'كيكة العسل', 40.00, true),
+('550e8400-e29b-41d4-a716-446655440008', 'Cinnamon Roll', 'لفائف القرفة', 18.00, false),
+('550e8400-e29b-41d4-a716-446655440009', 'Rye Bread', 'خبز الجاودار', 20.00, false);
 
--- Products
-insert into products (id, category_id, name_en, name_ar, price, image_url) values
-('p0000000-0000-0000-0000-000000000001', 'c0000000-0000-0000-0000-000000000001', 'Sourdough Country Loaf', 'خبز العجين المخمر', 28.00, 'https://picsum.photos/seed/sourdough/800/600'),
-('p0000000-0000-0000-0000-000000000002', 'c0000000-0000-0000-0000-000000000002', 'Pistachio Croissant', 'كرواسون بالفستق', 22.00, 'https://picsum.photos/seed/croissant/800/600');
+insert into orders (customer_name, phone, product_id, quantity, pickup_date, status) values
+('Aisha Al Mansoori', '+971 50 123 4567', '550e8400-e29b-41d4-a716-446655440000', 1, now() + interval '1 day', 'Confirmed'),
+('Omar Haddad', '+971 50 987 6543', '550e8400-e29b-41d4-a716-446655440001', 2, now() + interval '2 days', 'Pending'),
+('Fatima Al Shamsi', '+971 55 555 0101', '550e8400-e29b-41d4-a716-446655440007', 1, now() + interval '3 days', 'Pending'),
+('John Smith', '+971 56 111 2233', '550e8400-e29b-41d4-a716-446655440003', 3, now() + interval '4 days', 'Completed'),
+('Sara Ibrahim', '+971 50 444 8899', '550e8400-e29b-41d4-a716-446655440000', 2, now() + interval '5 days', 'Cancelled'),
+('Ahmed Hassan', '+971 52 777 3344', '550e8400-e29b-41d4-a716-446655440002', 5, now() + interval '6 days', 'Confirmed'),
+('Layla Noor', '+971 50 222 0011', '550e8400-e29b-41d4-a716-446655440005', 1, now() + interval '7 days', 'Pending'),
+('Khalid Saeed', '+971 55 999 8877', '550e8400-e29b-41d4-a716-446655440006', 2, now() + interval '8 days', 'Pending'),
+('Mariam Ali', '+971 56 333 4455', '550e8400-e29b-41d4-a716-446655440008', 4, now() + interval '9 days', 'Pending'),
+('Yousef Bakri', '+971 54 123 7890', '550e8400-e29b-41d4-a716-446655440009', 1, now() + interval '10 days', 'Confirmed');
 
--- Orders (10 sample orders)
-insert into orders (id, customer_name, phone, pickup_date, status, total_amount) values
-('o0000000-0000-0000-0000-000000000001', 'Aisha Al Mansoori', '+971 50 123 4567', now() + interval '1 day', 'Pending', 50.00),
-('o0000000-0000-0000-0000-000000000002', 'Omar Haddad', '+971 50 234 5678', now() + interval '1 day', 'Ready', 28.00),
-('o0000000-0000-0000-0000-000000000003', 'Sara Ibrahim', '+971 50 345 6789', now() + interval '2 days', 'Completed', 22.00),
-('o0000000-0000-0000-0000-000000000004', 'Khalid Al Maktoum', '+971 50 456 7890', now() + interval '2 days', 'Pending', 78.00),
-('o0000000-0000-0000-0000-000000000005', 'Layla Noor', '+971 50 567 8901', now() + interval '3 days', 'Pending', 22.00),
-('o0000000-0000-0000-0000-000000000006', 'Ahmed Hassan', '+971 50 678 9012', now() + interval '3 days', 'Cancelled', 28.00),
-('o0000000-0000-0000-0000-000000000007', 'Fatima Zaid', '+971 50 789 0123', now() + interval '4 days', 'Pending', 50.00),
-('o0000000-0000-0000-0000-000000000008', 'Yousef Ali', '+971 50 890 1234', now() + interval '4 days', 'Completed', 28.00),
-('o0000000-0000-0000-0000-000000000009', 'Noura Saeed', '+971 50 901 2345', now() + interval '5 days', 'Ready', 22.00),
-('o0000000-0000-0000-0000-000000000010', 'Mohammed Bin Zayed', '+971 50 012 3456', now() + interval '5 days', 'Pending', 22.00);
-
--- Order Items
-insert into order_items (order_id, product_id, quantity, price_at_purchase) values
-('o0000000-0000-0000-0000-000000000001', 'p0000000-0000-0000-0000-000000000001', 1, 28.00),
-('o0000000-0000-0000-0000-000000000001', 'p0000000-0000-0000-0000-000000000002', 1, 22.00),
-('o0000000-0000-0000-0000-000000000002', 'p0000000-0000-0000-0000-000000000001', 1, 28.00);
+insert into testimonials (customer_name, content, rating) values
+('Aisha Al Mansoori', 'The sourdough is the best I have had outside Europe. Pre-ordering is easy.', 5),
+('Omar Haddad', 'Authentic taste, great quality.', 4),
+('Fatima Al Shamsi', 'Fresh and delicious, especially the Honey Cake!', 5),
+('John Smith', 'Love the croissants, very flaky.', 5),
+('Sara Ibrahim', 'Great service, will order again.', 4);
