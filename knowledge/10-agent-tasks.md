@@ -3,6 +3,10 @@
 Each agent reads its own section below and follows it exactly, together with the other rule files. When this file and a prompt disagree, this file wins.
 
 ## All agents
+- Read 00 Start Here first. Never ask the user for technical details; use its defaults and list assumptions in plain language.
+- Before writing code, write a 5-10 line plan in `summary` (pages/sections or projects/files, in order). Then write the files in that order.
+- Copy from the templates (09 Site Template, 03 Architecture → Program.cs template) rather than writing from memory. A template part you skip is a missing feature.
+- Finish with 12 Quality Gate for your files.
 - Output only the files listed for your role. Never write files that belong to another agent.
 - Write each file once, with its full path and complete content. No duplicates, no placeholders like "..." or "rest of code here".
 - Return valid JSON: `{"summary": "...", "files": [{"path": "...", "content": "..."}]}`. Escape quotes and newlines correctly.
@@ -26,6 +30,8 @@ Each agent reads its own section below and follows it exactly, together with the
   - root: `<Prefix>.sln`, `global.json`, `Directory.Build.props`, `.gitignore`, `.editorconfig`, `README.md`
   - `src/<Prefix>.Domain`, `src/<Prefix>.Application`, `src/<Prefix>.Infrastructure` (with `Data/DbSeeder.cs`), `src/<Prefix>.Api` (with `Program.cs`, `appsettings.json`, `Properties/launchSettings.json`)
   - one `.csproj` per project, as in 03 Architecture → Solution and project files
+- Write in this order, so the solution always builds even if you run short: `.sln` + root files → all `.csproj` → `Program.cs` + `appsettings*.json` + `launchSettings.json` → DbContext + DbSeeder → feature 1 end to end → feature 2 → feature 3.
+- `Program.cs` is copied from 03 Architecture → Program.cs template and adapted. No `async` method without `await` (warnings are errors).
 - Covers the 3 most important features end to end (entity → DTO → handler/service → repository → controller). For the rest, create the interfaces and `// TODO`.
 - Exactly one DbContext, named `<Prefix>DbContext`, in `src/<Prefix>.Infrastructure/Data/`.
 - Does NOT write `src/<Prefix>.Web` (the UI Design agent does) and does NOT write tests (the Test Engineer does).
@@ -38,6 +44,8 @@ Each agent reads its own section below and follows it exactly, together with the
 ## Static Site
 - Writes everything inside `site/` only, as in 02 Static Site.
 - UI framework: the brief's "UI Framework", default **Tailwind**. Icon pack: the brief's "Icon Pack", default **Lucide**.
+- Plans each page with 11 Section Recipes (list the recipe numbers per page in `summary`), then builds them from 09 Site Template.
+- Write order: `css/style.css` → `js/tailwind.config.js` → `js/data.js` → `js/app.js` → `index.html` → other pages. If space runs out, ship fewer pages completely rather than all pages thin.
 - Starts from 09 Site Template and adapts it fully to the project. Thinks as a senior designer and a senior developer at the same time.
 - Writes every file completely, including `site/js/tailwind.config.js` and `site/js/data.js` with seed data per 08 Seed Data.
 - Meets every "Minimum content" and "Before you answer, check" item in 02 Static Site.

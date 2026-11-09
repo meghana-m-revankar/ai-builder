@@ -23,6 +23,29 @@ Design as if the page will be posted as a top shot on Dribbble. Use these curren
 - Load from Google Fonts with `display=swap` and a system fallback:
   `"Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`.
 - Type scale (rem): 0.75 caption, 0.875 small, 1 body, 1.125 lead, 1.5 h4, 1.875 h3, 2.25 h2, 3 h1, 3.75 hero.
+- **Responsive sizes: always `rem`, never `px`, for font sizes.** Headings and lead text grow smoothly between phone (360px) and desktop (1280px) with `clamp(min, calc(rem + vw), max)`. Define them once as tokens in `css/style.css` and use them everywhere:
+  ```css
+  :root {
+    --fs-caption: 0.75rem;
+    --fs-small:   0.875rem;
+    --fs-body:    clamp(1rem,     calc(0.95rem + 0.25vw), 1.0625rem);
+    --fs-lead:    clamp(1.0625rem, calc(1rem + 0.4vw),    1.25rem);
+    --fs-h4:      clamp(1.25rem,  calc(1.1rem + 0.6vw),   1.5rem);
+    --fs-h3:      clamp(1.5rem,   calc(1.25rem + 1vw),    1.875rem);
+    --fs-h2:      clamp(1.875rem, calc(1.4rem + 1.8vw),   2.5rem);
+    --fs-h1:      clamp(2.25rem,  calc(1.6rem + 2.8vw),   3.5rem);
+    --fs-hero:    clamp(2.5rem,   calc(1.5rem + 4.5vw),   4.5rem);
+    --space-section: clamp(4rem, calc(2.5rem + 5vw), 6rem);   /* section padding top/bottom */
+  }
+  html { font-size: 100%; }            /* respects the user's browser font setting */
+  body { font-size: var(--fs-body); line-height: 1.6; }
+  h1 { font-size: var(--fs-h1); } h2 { font-size: var(--fs-h2); } h3 { font-size: var(--fs-h3); } h4 { font-size: var(--fs-h4); }
+  .hero-title { font-size: var(--fs-hero); line-height: 1.08; }
+  .lead { font-size: var(--fs-lead); }
+  section { padding-block: var(--space-section); }
+  ```
+- Tailwind: add these to `tailwind.config.js` → `theme.extend.fontSize` (e.g. `hero: "var(--fs-hero)"`, `h1: "var(--fs-h1)"`) and use `text-hero`, `text-h1` instead of stacking `text-4xl sm:text-5xl lg:text-6xl`. Bootstrap: override `h1`-`h4` and `.display-*` with the same variables.
+- Spacing and radius may use `rem` too (1rem = 16px: 0.25, 0.5, 0.75, 1, 1.5, 2, 3, 4, 6). Never set `font-size` in `vw` alone (text must still zoom); always wrap `vw` in `clamp()` with `rem` limits.
 - Headings: weight 700-800, letter-spacing -0.02em, line-height 1.15, `text-wrap: balance`.
 - Body: line-height 1.6, max line length 70 characters.
 - Uppercase labels: 0.75rem, weight 600, letter-spacing 0.08em.
@@ -110,7 +133,7 @@ Common icons in each pack:
 - Use the framework grid with gap: Tailwind `grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6` (Bootstrap: `row g-4` + `col-12 col-md-6 col-lg-4`); never fixed pixel widths on layout containers.
 - Side padding at least 16px on phones; content never touches the screen edge and nothing scrolls sideways.
 - Navbar collapses to a hamburger below lg; app sidebar becomes an offcanvas drawer below lg.
-- Fluid type for hero headings: `font-size: clamp(2rem, 5vw + 1rem, 3.75rem)`.
+- Fluid type and section spacing: use the `--fs-*` and `--space-section` tokens from Typography (rem + `clamp(calc())`), never fixed px font sizes.
 - Tables: wrap in `.table-responsive`; on phones, show key columns only or switch to stacked cards.
 - Forms: one column on phones, two columns from md. Inputs full width on phones.
 - Buttons: full width on phones in forms and CTA bands (`w-100 w-md-auto`).

@@ -80,7 +80,7 @@ tailwind.config = {
       <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-28">
         <div>
           <span class="eyebrow"><i data-lucide="flame" aria-hidden="true"></i> Baked fresh at 5 am</span>
-          <h1 class="mt-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">Slow-fermented bread, baked <span class="text-brand-500">every morning</span> in Dubai</h1>
+          <h1 class="hero-title mt-4 font-display font-extrabold tracking-tight text-balance">Slow-fermented bread, baked <span class="text-brand-500">every morning</span> in Dubai</h1>
           <p class="mt-5 max-w-xl text-lg text-ink-600">48-hour sourdough, buttery viennoiserie and seasonal cakes. Order by 8 pm, pick up warm the next morning.</p>
           <div class="mt-8 flex flex-wrap gap-3">
             <a href="order.html" class="btn btn-accent btn-lg"><i data-lucide="shopping-bag" aria-hidden="true"></i> Order for pickup</a>
@@ -176,8 +176,10 @@ The Tailwind CDN does not process `@apply` in linked files, so shared components
 .text-balance { text-wrap: balance; }
 .hero-glow { background: radial-gradient(55% 60% at 90% 10%, var(--brand-100), transparent 70%), radial-gradient(40% 40% at 0% 100%, #FDF3E4, transparent 70%); }
 .eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-500); }
-.section-title { margin-top: 12px; font-family: var(--font-display); font-size: 1.875rem; font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
-@media (min-width: 640px) { .section-title { font-size: 2.25rem; } }
+/* fluid type tokens: copy the full --fs-* list from 01 Design System → Typography */
+:root { --fs-h2: clamp(1.875rem, calc(1.4rem + 1.8vw), 2.5rem); --fs-hero: clamp(2.5rem, calc(1.5rem + 4.5vw), 4.5rem); }
+.hero-title { font-size: var(--fs-hero); line-height: 1.08; }
+.section-title { margin-top: 0.75rem; font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
 .nav-link { display: block; border-radius: 8px; padding: 8px 12px; font-weight: 500; color: var(--ink-600); transition: color .2s; }
 .nav-link:hover, .nav-link--active { color: var(--brand-700); }
 .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 8px; font-weight: 600; transition: transform .2s, background-color .2s, color .2s, filter .2s; }
@@ -252,7 +254,7 @@ const App = {
 
   toast(message) { const t = document.getElementById("toast"); if (!t) return; t.textContent = message; t.hidden = false; setTimeout(() => { t.hidden = true; }, 3000); },
 
-  init() {
+  init() { // short version: the full init() is in "app.js (continued)" below and replaces this one
     App.initMenu(); App.renderBento(); App.renderProducts();
     const y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
     App.refreshIcons();
@@ -260,4 +262,167 @@ const App = {
 };
 document.addEventListener("DOMContentLoaded", App.init);
 ```
-Follow the same pattern for hero stats, the category filter buttons, steps, testimonials (avatar, stars, quote), FAQ (button + panel with `aria-expanded`), forms (validation, `localStorage`, `App.toast`) and delete (confirm dialog + toast). Call `App.refreshIcons()` after every render.
+The renderers below complete `App`. Copy ALL of them; do not drop any. Add each `render*` call to `App.init()`. Call `App.refreshIcons()` after every render.
+
+## site/js/app.js (continued: the rest of the renderers, MUST be included)
+```js
+// Add these methods inside the App object.
+  renderHeroStats() {
+    const ul = document.getElementById("hero-stats"); if (!ul) return;
+    heroStats.forEach(s => { const li = App.el("li"); li.append(App.el("p", "font-mono text-3xl font-medium text-brand-900", s.value), App.el("p", "text-sm text-ink-600", s.label)); ul.append(li); });
+  },
+
+  renderFilter() {
+    const wrap = document.getElementById("product-filter"); if (!wrap) return;
+    ["All", ...new Set(products.map(p => p.category))].forEach((c, i) => {
+      const b = App.el("button", "filter-pill", c); b.type = "button"; b.setAttribute("aria-pressed", String(i === 0));
+      b.addEventListener("click", () => { wrap.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", "false")); b.setAttribute("aria-pressed", "true"); App.renderProducts(c); });
+      wrap.append(b);
+    });
+  },
+
+  renderSteps() {
+    const ol = document.getElementById("steps"); if (!ol) return;
+    steps.forEach((s, i) => {
+      const li = App.el("li", "card text-center");
+      const num = App.el("span", "mx-auto grid h-12 w-12 place-items-center rounded-full bg-brand-700 font-mono text-lg font-medium text-white", String(i + 1).padStart(2, "0"));
+      const tile = App.el("div", "icon-tile mx-auto mt-4"); tile.append(App.icon(s.icon));
+      li.append(num, tile, App.el("h3", "mt-4 font-display text-lg font-bold", s.title), App.el("p", "mt-2 text-ink-600", s.text));
+      ol.append(li);
+    });
+  },
+
+  renderTestimonials() {
+    const grid = document.getElementById("testimonial-grid"); if (!grid) return;
+    testimonials.forEach(t => {
+      const card = App.el("figure", "rounded-xl2 border border-white/10 bg-white/5 p-6");
+      const stars = App.el("div", "flex gap-1 text-accent-500"); stars.setAttribute("aria-label", `${t.rating} out of 5 stars`);
+      for (let i = 0; i < t.rating; i++) stars.append(App.icon("star", "fill-current"));
+      const who = App.el("figcaption", "mt-6 flex items-center gap-3");
+      const img = document.createElement("img"); img.src = t.avatar; img.alt = ""; img.width = 48; img.height = 48; img.loading = "lazy"; img.className = "h-12 w-12 rounded-full object-cover";
+      const meta = App.el("div"); meta.append(App.el("p", "font-semibold text-white", t.name), App.el("p", "text-sm text-white/60", t.role));
+      who.append(img, meta);
+      card.append(stars, App.el("blockquote", "mt-4 text-white/85", `“${t.text}”`), who);
+      grid.append(card);
+    });
+  },
+
+  renderFaq() {
+    const wrap = document.getElementById("faq"); if (!wrap) return;
+    faqs.forEach((f, i) => {
+      const item = App.el("div");
+      const btn = App.el("button", "faq-btn"); btn.type = "button"; btn.id = `faq-b${i}`; btn.setAttribute("aria-controls", `faq-p${i}`); btn.setAttribute("aria-expanded", "false");
+      btn.append(App.el("span", "", f.q), App.icon("chevron-down", "faq-chevron"));
+      const panel = App.el("div", "px-6 pb-5 text-ink-600", f.a); panel.id = `faq-p${i}`; panel.hidden = true; panel.setAttribute("role", "region"); panel.setAttribute("aria-labelledby", btn.id);
+      btn.addEventListener("click", () => {
+        const open = btn.getAttribute("aria-expanded") === "true";
+        wrap.querySelectorAll(".faq-btn").forEach(b => { b.setAttribute("aria-expanded", "false"); document.getElementById(b.getAttribute("aria-controls")).hidden = true; });
+        if (!open) { btn.setAttribute("aria-expanded", "true"); panel.hidden = false; }
+      });
+      item.append(btn, panel); wrap.append(item);
+    });
+  },
+
+  // Forms: <form id="booking-form" novalidate> with inputs that have name, required, and a <p class="field-error" hidden> after each.
+  STORE_KEY: "<project-slug>:records",   // replace <project-slug> with the project's slug
+  load() { try { return JSON.parse(localStorage.getItem(App.STORE_KEY)) || []; } catch { return []; } },
+  save(list) { try { localStorage.setItem(App.STORE_KEY, JSON.stringify(list)); } catch { /* storage blocked: keep in memory */ } },
+
+  initForm() {
+    const form = document.getElementById("booking-form"); if (!form) return;
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      let ok = true;
+      form.querySelectorAll("[required]").forEach(input => {
+        const err = input.parentElement.querySelector(".field-error");
+        const valid = input.checkValidity();
+        input.classList.toggle("is-invalid", !valid); input.setAttribute("aria-invalid", String(!valid));
+        if (err) { err.hidden = valid; err.textContent = valid ? "" : (input.dataset.error || "Please fill in this field."); }
+        if (!valid) ok = false;
+      });
+      if (!ok) { form.querySelector(".is-invalid")?.focus(); return; }
+      const record = Object.fromEntries(new FormData(form)); record.id = crypto.randomUUID(); record.createdAt = new Date().toISOString();
+      App.save([record, ...App.load()]);
+      form.reset(); App.toast(form.dataset.success || "Thanks! We received your request."); App.renderSaved();
+    });
+  },
+
+  // Saved records list with delete + confirm dialog: <ul id="saved-list"></ul> and the <dialog id="confirm"> below.
+  renderSaved() {
+    const ul = document.getElementById("saved-list"); if (!ul) return; ul.replaceChildren();
+    const list = App.load();
+    if (!list.length) { const empty = App.el("li", "card text-center text-ink-600"); empty.append(App.icon("calendar", "mx-auto mb-2"), App.el("p", "", "No bookings yet. Your next one will appear here.")); ul.append(empty); App.refreshIcons(); return; }
+    list.forEach(r => {
+      const li = App.el("li", "card flex items-center justify-between gap-4");
+      const del = App.el("button", "btn-icon"); del.type = "button"; del.setAttribute("aria-label", `Delete booking for ${r.name || "guest"}`); del.append(App.icon("trash-2"));
+      del.addEventListener("click", () => App.confirm(`Delete the booking for ${r.name || "guest"}?`, () => { App.save(App.load().filter(x => x.id !== r.id)); App.renderSaved(); App.toast("Booking deleted."); }));
+      li.append(App.el("p", "font-medium", `${r.name || "Guest"} · ${r.date || ""}`), del); ul.append(li);
+    });
+    App.refreshIcons();
+  },
+
+  confirm(message, onYes) {
+    const d = document.getElementById("confirm"); if (!d) return;
+    d.querySelector("[data-msg]").textContent = message;
+    const yes = d.querySelector("[data-yes]"), no = d.querySelector("[data-no]");
+    const close = () => { d.close(); yes.onclick = null; };
+    yes.onclick = () => { close(); onYes(); }; no.onclick = close; d.showModal();
+  },
+
+  init() {
+    App.initMenu(); App.renderHeroStats(); App.renderBento(); App.renderFilter(); App.renderProducts();
+    App.renderSteps(); App.renderTestimonials(); App.renderFaq(); App.initForm(); App.renderSaved();
+    const y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+    App.refreshIcons();
+  }
+```
+
+## site/js/data.js (every collection the renderers use, MUST all exist)
+```js
+"use strict";
+const heroStats = [ { value: "48h", label: "Fermentation" }, { value: "4.9", label: "Google rating" }, { value: "12k", label: "Loaves a year" } ];
+const features = [ /* 5 items: first has image, others have icon */ { title: "Wild yeast, 48-hour dough", text: "…", image: "https://picsum.photos/seed/golden-crust-dough/1200/675" }, { title: "Local flour", text: "…", icon: "wheat" } ];
+const products = [ /* 8 items, see 08 Seed Data */ ];
+const steps = [ { icon: "smartphone", title: "Order by 8 pm", text: "…" }, { icon: "flame", title: "We bake at 5 am", text: "…" }, { icon: "shopping-bag", title: "Pick up warm", text: "…" } ];
+const testimonials = [ /* 3+ items: name, role, avatar, rating, text */ ];
+const faqs = [ /* 5+ items */ { q: "Can I order the same day?", a: "…" } ];
+```
+
+## Extra HTML parts (forms page, confirm dialog)
+```html
+<form id="booking-form" class="grid gap-5 rounded-xl2 bg-white p-6 shadow-soft md:grid-cols-2 sm:p-8" novalidate>
+  <div><label for="f-name" class="form-label">Full name <span class="text-red-600">*</span></label>
+    <input id="f-name" name="name" class="form-input" required autocomplete="name" data-error="Please enter your name.">
+    <p class="field-error" hidden></p></div>
+  <div><label for="f-phone" class="form-label">Phone <span class="text-red-600">*</span></label>
+    <input id="f-phone" name="phone" type="tel" class="form-input" required pattern="^\+?[0-9 ]{8,16}$" placeholder="+971 50 123 4567" data-error="Use a number like +971 50 123 4567.">
+    <p class="field-error" hidden></p></div>
+  <div><label for="f-date" class="form-label">Date <span class="text-red-600">*</span></label>
+    <input id="f-date" name="date" type="date" class="form-input" required data-error="Pick a date.">
+    <p class="field-error" hidden></p></div>
+  <div><label for="f-notes" class="form-label">Notes</label><input id="f-notes" name="notes" class="form-input"><p class="mt-1 text-sm text-ink-600">Allergies, special requests.</p></div>
+  <div class="md:col-span-2 flex justify-end"><button class="btn btn-accent btn-lg w-full justify-center md:w-auto" type="submit"><i data-lucide="send" aria-hidden="true"></i> Send booking</button></div>
+</form>
+
+<dialog id="confirm" class="confirm-dialog" aria-labelledby="confirm-title">
+  <h2 id="confirm-title" class="font-display text-lg font-bold">Are you sure?</h2>
+  <p data-msg class="mt-2 text-ink-600"></p>
+  <div class="mt-6 flex justify-end gap-3"><button data-no type="button" class="btn btn-outline">Cancel</button><button data-yes type="button" class="btn btn-danger"><i data-lucide="trash-2" aria-hidden="true"></i> Delete</button></div>
+</dialog>
+```
+
+## site/css/style.css (continued)
+```css
+.filter-pill { min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); background: #fff; font-weight: 600; color: var(--ink-600); transition: background-color .2s, color .2s; }
+.filter-pill[aria-pressed="true"] { background: var(--brand-700); border-color: var(--brand-700); color: #fff; }
+.faq-btn { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; text-align: left; font-weight: 600; }
+.faq-chevron { transition: transform .2s; } .faq-btn[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+.form-label { display: block; margin-bottom: 6px; font-size: .875rem; font-weight: 600; }
+.form-input { width: 100%; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.form-input:focus { outline: none; border-color: var(--brand-500); box-shadow: 0 0 0 3px var(--brand-100); }
+.form-input.is-invalid { border-color: #DC2626; }
+.field-error { margin-top: 4px; font-size: .875rem; color: #DC2626; }
+.btn-danger { background: #DC2626; color: #fff; } .btn-danger:hover { background: #B91C1C; }
+.confirm-dialog { width: min(92vw, 420px); border: 0; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-soft); }
+.confirm-dialog::backdrop { background: rgba(15,23,42,.45); backdrop-filter: blur(2px); }
+```

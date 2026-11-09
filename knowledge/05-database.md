@@ -31,6 +31,21 @@
 - Row-level security for multi-tenant data (`tenant_id` / `client_id` column + RLS policy).
 - Never store plain passwords; personal data minimised and documented.
 
+## How the database is created (one way only, MUST)
+The SQL files in `db/` are the source of truth. EF Core maps the existing tables and does NOT use migrations.
+- DbContext: `ToTable("snake_case_name")` and `UseSnakeCaseNamingConvention()` (package `EFCore.NamingConventions`) so entities match `schema.sql`.
+- No `Migrations/` folder, no `dotnet ef` commands anywhere (README included).
+- Connection string in `appsettings.Development.json` under `ConnectionStrings:Default`, value `Host=localhost;Port=5432;Database=<project_slug>;Username=postgres;Password=postgres`; overridable with env var `ConnectionStrings__Default`.
+- README "How to run" uses exactly:
+  ```
+  createdb -U postgres <project_slug>
+  psql -U postgres -d <project_slug> -f db/schema.sql
+  psql -U postgres -d <project_slug> -f db/procedures.sql
+  psql -U postgres -d <project_slug> -f db/seed.sql
+  dotnet run --project src/<Prefix>.Api
+  ```
+- `DbSeeder` (08 Seed Data) only inserts when tables are empty, so it is safe after `seed.sql`.
+
 ## Delivery
 - `db/schema.sql` (tables, constraints, indexes, comments), `db/procedures.sql`, `db/seed.sql` (realistic sample data, at least 10 rows per main table).
 - Migrations are forward-only and repeatable in CI.

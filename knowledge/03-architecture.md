@@ -23,7 +23,7 @@ global.json                       { "sdk": { "version": "8.0.100", "rollForward"
 Directory.Build.props             shared: net8.0, Nullable enable, ImplicitUsings enable, TreatWarningsAsErrors true, LangVersion latest
 .gitignore                        standard Visual Studio / .NET ignore (bin/, obj/, .vs/, *.user, appsettings.*.local.json, .env)
 .editorconfig                     C# naming and formatting rules from 04 SOLID and Code Quality
-README.md                         prerequisites, how to run (dotnet restore, dotnet ef database update, dotnet run --project src/<Project>.Api), test commands
+README.md                         prerequisites, how to run (exact commands from 05 Database → How the database is created), test commands
 src/<Project>.Domain/<Project>.Domain.csproj
 src/<Project>.Application/<Project>.Application.csproj
 src/<Project>.Infrastructure/<Project>.Infrastructure.csproj
@@ -97,12 +97,48 @@ src/<Project>.Web/
 **.csproj rules** (SDK-style, minimal; shared settings come from Directory.Build.props):
 - Domain: `<Project Sdk="Microsoft.NET.Sdk">`, no package or project references.
 - Application: references Domain; packages FluentValidation, MediatR (or own handler interfaces).
-- Infrastructure: references Application; packages Npgsql.EntityFrameworkCore.PostgreSQL, Microsoft.EntityFrameworkCore.Design.
+- Infrastructure: references Application; packages Npgsql.EntityFrameworkCore.PostgreSQL 8.0.10, EFCore.NamingConventions 8.0.3 (no migrations, see 05 Database).
 - Api: `<Project Sdk="Microsoft.NET.Sdk.Web">`, references Application and Infrastructure; packages Swashbuckle.AspNetCore, Serilog.AspNetCore.
 - Web: `<Project Sdk="Microsoft.NET.Sdk.Web">`, references Application (or calls the Api over HTTP).
 - Tests: `<IsPackable>false</IsPackable>`, packages Microsoft.NET.Test.Sdk, xunit, xunit.runner.visualstudio, FluentAssertions, NSubstitute; IntegrationTests also Microsoft.AspNetCore.Mvc.Testing and Testcontainers.PostgreSql.
 - Pin package versions (e.g. `Version="8.0.10"`), never `*`.
 - Every `.cs` file's namespace matches its project and folder; `Program.cs` registers all services, DbContext, the DbSeeder (Development), Swagger, health checks and the exception middleware.
+
+## Program.cs template (Api, copy and adapt; MUST exist)
+```csharp
+using <Prefix>.Infrastructure;
+using <Prefix>.Infrastructure.Data;
+using Serilog;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog((ctx, cfg) => cfg.ReadFrom.Configuration(ctx.Configuration).WriteTo.Console());
+
+builder.Services.AddInfrastructure(builder.Configuration);   // DbContext, repositories (extension in Infrastructure/DependencyInjection.cs)
+builder.Services.AddControllers();
+builder.Services.AddProblemDetails();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddHealthChecks().AddDbContextCheck<<Prefix>DbContext>("db", tags: new[] { "ready" });
+builder.Services.AddCors(o => o.AddDefaultPolicy(p => p.WithOrigins(builder.Configuration.GetSection("Cors:Origins").Get<string[]>() ?? Array.Empty<string>()).AllowAnyHeader().AllowAnyMethod()));
+
+var app = builder.Build();
+app.UseExceptionHandler();
+app.UseSerilogRequestLogging();
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger(); app.UseSwaggerUI();
+    using var scope = app.Services.CreateScope();
+    await DbSeeder.SeedAsync(scope.ServiceProvider.GetRequiredService<<Prefix>DbContext>(), CancellationToken.None);
+}
+app.UseCors();
+app.MapControllers();
+app.MapHealthChecks("/health/live", new() { Predicate = _ => false });
+app.MapHealthChecks("/health/ready", new() { Predicate = c => c.Tags.Contains("ready") });
+app.Run();
+
+public partial class Program { }   // for WebApplicationFactory in integration tests
+```
+Matching packages: Api adds `Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore 8.0.10`. `appsettings.Development.json` holds `ConnectionStrings:Default` and `Cors:Origins` (`["http://localhost:5500"]`).
 
 ## Rules
 - **Domain** holds business rules. Entities protect their invariants (private setters, factory methods, guard clauses).
