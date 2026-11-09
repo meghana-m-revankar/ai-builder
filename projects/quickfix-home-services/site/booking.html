@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Service | QuickFix Home Services</title>
+  <meta name="description" content="Book your home repair service online.">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body class="bg-canvas font-body text-ink-900 antialiased">
+  <header class="sticky top-0 z-40 border-b border-line bg-canvas/80 backdrop-blur-md">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6" aria-label="Main">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold text-brand-900">
+        <img src="assets/logo.svg" alt="QuickFix logo" width="36" height="36"><span>QuickFix</span>
+      </a>
+    </nav>
+  </header>
+  <main class="mx-auto max-w-3xl px-4 py-20 sm:px-6">
+    <h1 class="section-title">Book a Service</h1>
+    <div class="mt-10">
+      <form id="booking-form" class="grid gap-5 rounded-xl2 bg-white p-6 shadow-soft md:grid-cols-2 sm:p-8" novalidate>
+        <div><label for="f-name" class="form-label">Full name <span class="text-red-600">*</span></label>
+          <input id="f-name" name="name" class="form-input" required autocomplete="name" data-error="Please enter your name.">
+          <p class="field-error" hidden></p></div>
+        <div><label for="f-phone" class="form-label">Phone <span class="text-red-600">*</span></label>
+          <input id="f-phone" name="phone" type="tel" class="form-input" required pattern="^\+?[0-9 ]{8,16}$" placeholder="+91 90 1234 5678" data-error="Use a number like +91 90 1234 5678.">
+          <p class="field-error" hidden></p></div>
+        <div><label for="f-date" class="form-label">Date <span class="text-red-600">*</span></label>
+          <input id="f-date" name="date" type="date" class="form-input" required data-error="Pick a date.">
+          <p class="field-error" hidden></p></div>
+        <div><label for="f-notes" class="form-label">Notes</label><input id="f-notes" name="notes" class="form-input"><p class="mt-1 text-sm text-ink-600">Allergies, special requests.</p></div>
+        <div class="md:col-span-2 flex justify-end"><button class="btn btn-accent btn-lg w-full justify-center md:w-auto" type="submit"><i data-lucide="send" aria-hidden="true"></i> Send booking</button></div>
+      </form>
+    </div>
+  </main>
+  <dialog id="confirm" class="confirm-dialog" aria-labelledby="confirm-title">
+    <h2 id="confirm-title" class="font-display text-lg font-bold">Are you sure?</h2>
+    <p data-msg class="mt-2 text-ink-600"></p>
+    <div class="mt-6 flex justify-end gap-3"><button data-no type="button" class="btn btn-outline">Cancel</button><button data-yes type="button" class="btn btn-danger"><i data-lucide="trash-2" aria-hidden="true"></i> Delete</button></div>
+  </dialog>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

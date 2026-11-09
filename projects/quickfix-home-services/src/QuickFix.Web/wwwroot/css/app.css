@@ -1,0 +1,6 @@
+:root {
+    --brand-700: #0284C7;
+    --brand-900: #0C4A6E;
+    --accent-500: #16A34A;
+}
+body { font-family: 'Inter', sans-serif; }
