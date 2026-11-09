@@ -1,0 +1,10 @@
+:root {
+  --brand-700: #1E3A8A;
+  --bs-primary: #1E3A8A;
+  --bs-body-font-family: 'Inter', sans-serif;
+  --fs-hero: clamp(2.5rem, 4vw, 4.5rem);
+}
+body { font-family: var(--bs-body-font-family); }
+.hero-title { font-family: 'Plus Jakarta Sans'; font-size: var(--fs-hero); font-weight: 800; line-height: 1.1; }
+.navbar { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); }
+.btn-primary { border-radius: 999px; }
