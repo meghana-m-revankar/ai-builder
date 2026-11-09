@@ -1,0 +1,43 @@
+:root {
+  --brand-900: #5D2E1C; --brand-700: #A0522D; --brand-500: #CD853F; --brand-100: #FDF5E6;
+  --accent-500: #D2691E; --ink-900: #2D1B14; --ink-600: #6B5B4E; --line: #EADFD3;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+  --shadow-soft: 0 1px 2px rgba(93,46,28,.06), 0 12px 32px rgba(93,46,28,.08);
+}
+.text-balance { text-wrap: balance; }
+.hero-glow { background: radial-gradient(55% 60% at 90% 10%, var(--brand-100), transparent 70%), radial-gradient(40% 40% at 0% 100%, #FDF3E4, transparent 70%); }
+.eyebrow { display: inline-flex; align-items: center; gap: 6px; font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand-500); }
+:root { --fs-h2: clamp(1.875rem, calc(1.4rem + 1.8vw), 2.5rem); --fs-hero: clamp(2.5rem, calc(1.5rem + 4.5vw), 4.5rem); }
+.hero-title { font-size: var(--fs-hero); line-height: 1.08; }
+.section-title { margin-top: 0.75rem; font-family: var(--font-display); font-size: var(--fs-h2); font-weight: 800; letter-spacing: -0.02em; text-wrap: balance; }
+.nav-link { display: block; border-radius: 8px; padding: 8px 12px; font-weight: 500; color: var(--ink-600); transition: color .2s; }
+.nav-link:hover, .nav-link--active { color: var(--brand-700); }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 8px; font-weight: 600; transition: transform .2s, background-color .2s, color .2s, filter .2s; }
+.btn:focus-visible, .btn-icon:focus-visible { outline: 3px solid var(--brand-500); outline-offset: 2px; }
+.btn-lg { padding: 0 24px; font-size: 1rem; }
+.btn-accent { background: var(--accent-500); color: #fff; }
+.btn-accent:hover { transform: translateY(-2px); filter: brightness(.95); }
+.btn-outline { border: 2px solid var(--brand-700); color: var(--brand-700); }
+.btn-outline:hover { background: var(--brand-700); color: #fff; }
+.btn-light { background: #fff; color: var(--brand-900); }
+.btn-light:hover { background: var(--brand-100); }
+.btn-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--line); }
+.chip { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: 12px; background: rgba(255,255,255,.9); box-shadow: var(--shadow-soft); backdrop-filter: blur(8px); }
+.card { height: 100%; border: 1px solid var(--line); border-radius: 20px; background: #fff; padding: 24px; transition: transform .2s, box-shadow .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+.icon-tile { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: var(--brand-100); color: var(--brand-700); }
+.cta-band { background: linear-gradient(90deg, var(--brand-700), var(--brand-500)); color: #fff; }
+.footer-title { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+.social-link { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px; background: rgba(255,255,255,.1); color: #fff; transition: background-color .2s; }
+.social-link:hover { background: rgba(255,255,255,.2); }
+.toast { position: fixed; right: 20px; bottom: 20px; z-index: 50; padding: 12px 20px; border-radius: 12px; background: var(--ink-900); color: #fff; font-weight: 500; box-shadow: var(--shadow-soft); }
+svg.lucide { width: 1.25em; height: 1.25em; stroke-width: 1.75; }
+.img-zoom { transition: transform .4s ease; } .group:hover .img-zoom { transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+.faq-btn { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; text-align: left; font-weight: 600; }
+.faq-chevron { transition: transform .2s; } .faq-btn[aria-expanded="true"] .faq-chevron { transform: rotate(180deg); }
+.form-label { display: block; margin-bottom: 6px; font-size: .875rem; font-weight: 600; }
+.form-input { width: 100%; min-height: 44px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.form-input:focus { outline: none; border-color: var(--brand-500); box-shadow: 0 0 0 3px var(--brand-100); }
+.confirm-dialog { width: min(92vw, 420px); border: 0; border-radius: 16px; padding: 24px; box-shadow: var(--shadow-soft); }
+.confirm-dialog::backdrop { background: rgba(15,23,42,.45); backdrop-filter: blur(2px); }

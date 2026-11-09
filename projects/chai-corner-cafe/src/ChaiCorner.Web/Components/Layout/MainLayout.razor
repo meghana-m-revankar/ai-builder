@@ -1,0 +1,21 @@
+@inherits LayoutComponentBase
+<div class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-40 bg-[#FFFBF6]/80 backdrop-blur-md border-b border-[#EADFD3]">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="/" class="text-2xl font-display font-extrabold text-[#5D3A25]">Chai Corner</a>
+            <div class="flex gap-6 font-medium text-[#6B5B4E]">
+                <a href="/">Home</a>
+                <a href="/menu">Menu</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow">@Body</main>
+    <footer class="bg-[#5D3A25] text-white/80 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Chai Corner Café. 14, 5th Block, Koramangala, Bangalore.</p>
+            <p class="text-sm mt-2">Image credits: CC licensed photos from Flickr and Wikimedia.</p>
+        </div>
+    </footer>
+</div>
