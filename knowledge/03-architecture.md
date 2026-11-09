@@ -67,8 +67,9 @@ EndGlobal
 - Repeat the four `ProjectConfigurationPlatforms` lines for every project. Every GUID unique and in upper case. Paths use backslashes.
 
 **Who writes what** (avoids missing or duplicated files):
-- Services & API agent: the `.sln`, root files, Domain, Application, Infrastructure, Api and test projects.
+- Services & API agent: the `.sln`, root files, Domain, Application, Infrastructure and Api projects.
 - UI Design agent: the complete `src/<Project>.Web` project (below). It must not write backend projects.
+- Test Engineer agent: the `tests/` projects. Full task list per agent: 10 Agent Tasks.
 - Each file is written once. No duplicate pages (e.g. `Dashboard.razor` in two places).
 
 **Blazor Web project (MUST be complete, not only pages)** - Blazor Web App, .NET 8, interactive server render mode, Tailwind via CDN in `App.razor`:
