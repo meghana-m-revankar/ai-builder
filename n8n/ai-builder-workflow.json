@@ -1,0 +1,1460 @@
+{
+  "name": "AI Builder v2",
+  "nodes": [
+    {
+      "id": "b93fb01d-f217-4bc8-97a4-8e49736719d5",
+      "name": "Project Request",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        -528,
+        -192
+      ],
+      "webhookId": "2c74fd8f-0bed-4140-a914-38d33c12d92b",
+      "parameters": {
+        "formTitle": "Build my website",
+        "formDescription": "Answer in plain words. Only the first three questions are required.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Business name",
+              "requiredField": true,
+              "placeholder": "e.g. Pulse Fitness Studio"
+            },
+            {
+              "fieldLabel": "What does your business do?",
+              "fieldType": "textarea",
+              "requiredField": true,
+              "placeholder": "What you sell, who your customers are, what makes you different"
+            },
+            {
+              "fieldLabel": "City and country",
+              "requiredField": true,
+              "placeholder": "e.g. Dubai Marina, UAE"
+            },
+            {
+              "fieldLabel": "Colours or feeling",
+              "placeholder": "e.g. black and gold / calm and natural / leave empty"
+            },
+            {
+              "fieldLabel": "Logo link",
+              "placeholder": "https://..."
+            },
+            {
+              "fieldLabel": "Pages you want",
+              "placeholder": "e.g. Home, Services, Pricing, Contact"
+            },
+            {
+              "fieldLabel": "Real details you already have",
+              "fieldType": "textarea",
+              "placeholder": "Prices, opening hours, phone, address, services"
+            },
+            {
+              "fieldLabel": "What should we build?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Website"
+                  },
+                  {
+                    "option": "Website + admin app"
+                  },
+                  {
+                    "option": "Full system (website, app, database, API)"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Icon Pack",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Lucide"
+                  },
+                  {
+                    "option": "Phosphor"
+                  },
+                  {
+                    "option": "Boxicons"
+                  },
+                  {
+                    "option": "Bootstrap Icons"
+                  }
+                ]
+              }
+            },
+            {
+              "fieldLabel": "Your email",
+              "fieldType": "email"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "a1535dd5-49f1-4671-adba-a35549c404b8",
+      "name": "Platform Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -528,
+        16
+      ],
+      "webhookId": "6c37e4ec-f9a9-49f5-beb0-44914a1cd2d9",
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-project",
+        "responseMode": "onReceived",
+        "options": {
+          "allowedOrigins": "https://meghana-m-revankar.github.io,http://localhost:5600"
+        }
+      }
+    },
+    {
+      "id": "7b297d53-77c0-44fd-b5f0-21f623b98ba8",
+      "name": "Normalize Brief",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -304,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const j = $input.first().json;\n  const fromHook = !!(j.body && typeof j.body === \"object\");\n  let b = fromHook ? j.body : j;\n  if (fromHook && typeof b.payload === \"string\") { try { b = JSON.parse(b.payload); } catch (e) { throw new Error(\"Platform payload is not valid JSON\"); } }\n  const pick = (...keys) => { for (const k of keys) { const v = b[k]; if (v != null && String(v).trim()) return v; } return \"\"; };\n  const list = v => (Array.isArray(v) ? v.join(\", \") : String(v || \"\")).trim();\n  const slugify = s => s.toLowerCase().normalize(\"NFKD\").replace(/[^\\w\\s-]/g, \"\").trim().replace(/[\\s_]+/g, \"-\").replace(/-+/g, \"-\").slice(0, 60) || \"project\";\n\n  const name = String(pick(\"businessName\", \"Business name\", \"Project Name\")).trim() || \"New project\";\n  const scopeRaw = String(pick(\"scope\", \"What should we build?\") || \"website\").toLowerCase();\n  const scope = scopeRaw.includes(\"full\") ? \"full-system\" : scopeRaw.includes(\"admin\") ? \"website-admin\" : \"website\";\n  const ui = String(pick(\"uiFramework\") || \"Tailwind\");\n  const icons = String(pick(\"iconPack\", \"Icon Pack\") || \"Lucide\");\n  const facts = String(pick(\"facts\", \"Real details you already have\")).trim();\n  const lines = [\n    `Business: ${name}`,\n    `What they do: ${String(pick(\"description\", \"What does your business do?\", \"Requirements\")).trim()}`,\n    `Location: ${String(pick(\"location\", \"City and country\")).trim() || \"not given\"}`,\n    pick(\"colours\", \"Colours or feeling\") && `Colours / mood: ${pick(\"colours\", \"Colours or feeling\")}`,\n    pick(\"logoUrl\", \"Logo link\") && `Logo URL: ${pick(\"logoUrl\", \"Logo link\")}`,\n    list(pick(\"actions\", \"What should visitors do?\")) && `Visitors should: ${list(pick(\"actions\", \"What should visitors do?\"))}`,\n    list(pick(\"pages\", \"Pages you want\")) && `Pages wanted: ${list(pick(\"pages\", \"Pages you want\"))}`,\n    facts && `Real business details (use these exactly, do not invent different ones):\\n${facts}`,\n    pick(\"references\") && `Websites they like: ${pick(\"references\")}`,\n    `Languages: ${pick(\"languages\") || \"English\"}`,\n    `UI Framework: ${ui}`,\n    `Icon Pack: ${icons}`,\n    pick(\"prefix\") && `.NET prefix: ${pick(\"prefix\")}`,\n    `Scope: ${scope}`\n  ].filter(Boolean);\n\n  return [{ json: {\n    source: fromHook ? \"webhook\" : \"form\",\n    projectName: name,\n    slug: slugify(String(pick(\"slug\") || name)),\n    scope,\n    techStack: scope === \"website\" ? `Static website (${ui} + ${icons})` : \".NET 8 + Blazor + PostgreSQL, plus static website\",\n    requirements: lines.join(\"\\n\"),\n    email: String(pick(\"email\", \"Your email\")).trim(),\n    hasUploadedLogo: !!pick(\"logoDataUrl\")\n  } }];\n"
+      }
+    },
+    {
+      "id": "8251e23d-db2d-4f4f-99ed-e24025dfddd4",
+      "name": "List Knowledge",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -80,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "url": "https://api.github.com/repos/meghana-m-revankar/ai-builder/contents/knowledge",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      }
+    },
+    {
+      "id": "19d6e5eb-c50c-47e1-b320-352c6d6a125a",
+      "name": "Get Knowledge File",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        144,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "method": "GET",
+        "url": "={{ $json.url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/vnd.github.raw"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "025c48e0-b180-4b89-b785-cfdad2dd1786",
+      "name": "Load Knowledge",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        368,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const brief = $(\"Normalize Brief\").first().json;\n  const names = $(\"List Knowledge\").all().map(i => i.json.name);\n  const files = $input.all()\n    .map((it, i) => ({ name: names[i] || `file${i}`, text: String(it.json.data || \"\") }))\n    .filter(f => /\\.(md|txt)$/i.test(f.name) && f.text.trim());\n  if (!files.length) throw new Error(\"Knowledge base is empty: add .md files to the knowledge/ folder in GitHub\");\n\n  // which rule files each agent gets (by file number); smaller, focused prompts = faster and better output\n  const map = {\n    \"Architect\":      [\"00\", \"03\", \"05\", \"06\", \"10\"],\n    \"DB Designer\":    [\"00\", \"05\", \"06\", \"08\", \"10\"],\n    \"Stored Procs\":   [\"00\", \"05\", \"06\", \"10\"],\n    \"Services & API\": [\"00\", \"03\", \"04\", \"05\", \"06\", \"08\", \"10\", \"12\"],\n    \"UI Design\":      [\"00\", \"01\", \"03\", \"09\", \"10\", \"11\"],\n    \"Static Site\":    [\"00\", \"01\", \"02\", \"08\", \"09\", \"10\", \"11\", \"12\"],\n    \"Fixer\":          [\"00\", \"02\", \"03\", \"05\", \"09\", \"12\"],\n    \"Test Engineer\":  [\"00\", \"07\", \"08\", \"10\"]\n  };\n  const pick = nums => files.filter(f => nums.some(n => f.name.startsWith(n)))\n    .map(f => `## ${f.name}\\n${f.text}`).join(\"\\n\\n\");\n  const rulesFor = {};\n  for (const [agent, nums] of Object.entries(map)) rulesFor[agent] = pick(nums);\n  return [{ json: { ...brief, rulesFor } }];\n"
+      }
+    },
+    {
+      "id": "5df8053a-8a9e-4f80-961d-e1a262baaea1",
+      "name": "Website only?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        592,
+        -80
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "b8e777f1-b8ff-4e7c-b4ca-758bf6397561",
+              "leftValue": "={{ $json.scope }}",
+              "rightValue": "website",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "f4dd0004-913d-4837-8b22-c63ee27b333c",
+      "name": "Architect",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        816,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Project: {{ $('Normalize Brief').first().json.projectName }}\nTech stack: {{ $('Normalize Brief').first().json.techStack }}\nBrief:\n{{ $('Normalize Brief').first().json.requirements }}\n\nCreate ONE file at path docs/architecture.md as described in 03 Architecture → \"Documentation the Architect must produce\". State the .NET prefix at the top. Put it FIRST in the files list.",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior software architect. Produce a clear, practical architecture document.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['Architect'] }}"
+        }
+      }
+    },
+    {
+      "id": "238ee940-7c81-42fa-b238-a28b9790bbe6",
+      "name": "Model - Architect",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        832,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "e17def38-73f4-4955-bf95-9e53240cb690",
+      "name": "Parser - Architect",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        960,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "09650663-9f51-437b-851b-5cf6b450e220",
+      "name": "DB Designer",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1168,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Architecture:\n{{ $('Architect').first().json.output.files[0].content }}\n\nCreate db/schema.sql (FIRST) and db/seed.sql as described in 05 Database and 08 Seed Data.",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior PostgreSQL database designer.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['DB Designer'] }}"
+        }
+      }
+    },
+    {
+      "id": "24aa4ca2-d0cf-403f-8d79-a6487618709f",
+      "name": "Model - DB Designer",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "3fb7954c-da7b-41ff-8110-c3bf43b785d0",
+      "name": "Parser - DB Designer",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1312,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "20d77811-82a2-41af-bf7c-253a326c07a0",
+      "name": "Stored Procs",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1520,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Architecture:\n{{ $('Architect').first().json.output.files[0].content }}\nSchema:\n{{ $('DB Designer').first().json.output.files[0].content }}\n\nCreate ONE file db/procedures.sql: CRUD for every table plus the business procedures from the architecture (05 Database).",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior PostgreSQL developer (PL/pgSQL).\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['Stored Procs'] }}"
+        }
+      }
+    },
+    {
+      "id": "60c1893a-9015-4d59-aa51-3d7b37f2aff6",
+      "name": "Model - Stored Procs",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        1536,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "6e150651-1c67-4d58-bdfd-036816d56f5b",
+      "name": "Parser - Stored Procs",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1664,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "a0dfa56f-ffe5-4021-8ef9-3388a81262bc",
+      "name": "Services & API",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        1872,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Architecture:\n{{ $('Architect').first().json.output.files[0].content }}\nSchema:\n{{ $('DB Designer').first().json.output.files[0].content }}\n\nWrite the backend solution exactly as in 10 Agent Tasks → Services & API, in the write order given there. Program.cs is copied from the 03 Architecture template.",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior .NET 8 backend developer. Write code that compiles with TreatWarningsAsErrors.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['Services & API'] }}"
+        }
+      }
+    },
+    {
+      "id": "4f6f2fc0-55cd-46ed-8c5c-eb6cd364f855",
+      "name": "Model - Services & API",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        1888,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-3.1-flash-lite",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.2
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "4236350f-6060-465a-871e-2e664e437a9e",
+      "name": "Parser - Services & API",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        2016,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "312318aa-5223-41cd-a077-38a07de1fb71",
+      "name": "UI Design",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        2224,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Brief:\n{{ $('Normalize Brief').first().json.requirements }}\nArchitecture:\n{{ $('Architect').first().json.output.files[0].content }}\n\nWrite docs/ui-design.md and the COMPLETE Blazor project src/<Prefix>.Web exactly as in 10 Agent Tasks → UI Design and 03 Architecture → Blazor Web project.",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior product designer and Blazor developer. Pages use Tailwind and the design system so the app looks like a premium SaaS product.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['UI Design'] }}"
+        }
+      }
+    },
+    {
+      "id": "198e39e1-9599-436a-90f9-ac0d87084e14",
+      "name": "Model - UI Design",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        2240,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.4
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "43bf4a51-0ae9-48cf-a5f8-bd3e92cdfd2b",
+      "name": "Parser - UI Design",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        2368,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "c3d28750-126c-4b7e-8fb8-1979f7e6a33d",
+      "name": "Static Site",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        2576,
+        -192
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "=Project: {{ $('Normalize Brief').first().json.projectName }}\nBrief:\n{{ $('Normalize Brief').first().json.requirements }}\n{{ $('Architect').isExecuted ? 'Architecture:\\n' + $('Architect').first().json.output.files[0].content : '' }}\n\nBuild the complete static website inside site/ exactly as described in 02 Static Site, 09 Site Template and 11 Section Recipes.\n1. Start \"summary\" with your page plan: each page and its recipe numbers.\n2. Write files in this order: site/css/style.css, site/js/tailwind.config.js, site/js/data.js, site/js/app.js, site/assets/logo.svg, site/index.html, then the other pages.\n3. Copy every renderer from 09 Site Template; replace all content for this business.\n4. End \"summary\" with the plain-language part from 00 Start Here (What you got / Assumptions / How to view it).",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You are a senior product designer and senior front-end developer at once. Every page must look like a premium, Dribbble-quality product site; bland output is a failure. Write every file completely.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['Static Site'] }}"
+        }
+      }
+    },
+    {
+      "id": "0266529e-6e6f-4fd9-82ec-94cf8dde0960",
+      "name": "Model - Static Site",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        2592,
+        48
+      ],
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.5
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "6d725fed-ecc6-41d8-b68c-110efbd2550a",
+      "name": "Parser - Static Site",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        2720,
+        48
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "2d6d9663-c25b-49dd-bb19-1c851db6ed7a",
+      "name": "Collect Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2928,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const names = [\"Architect\", \"DB Designer\", \"Stored Procs\", \"Services & API\", \"UI Design\", \"Static Site\"];\n  const seen = new Map();\n  for (const name of names) {\n    let items = [];\n    try { if (!$(name).isExecuted) continue; items = $(name).all(); } catch (e) { continue; }\n    for (const item of items) {\n      for (const f of ((item.json.output && item.json.output.files) || [])) {\n        if (!f || !f.path) continue;\n        const clean = String(f.path).replace(/\\\\/g, \"/\").split(\"/\").filter(p => p && p !== \"..\" && p !== \".\").join(\"/\");\n        if (clean && !seen.has(clean)) seen.set(clean, String(f.content || \"\"));\n      }\n    }\n  }\n  if (!seen.size) throw new Error(\"No files were generated\");\n  return [{ json: { files: [...seen].map(([path, content]) => ({ path, content })) } }];\n"
+      }
+    },
+    {
+      "id": "eaa5c82a-b5e4-4457-8226-6d15a8f160b3",
+      "name": "Quality Gate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3152,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "// n8n CLOUD Code node: \"Quality Gate\"  (Language: JavaScript, Mode: Run Once for All Items)\r\n// No file system needed: checks the files the agents returned, before they are committed to GitHub.\r\n// Input: one or more items whose json has  files: [{ path, content }]  (the agents' output, merged).\r\n//        Paths are relative to the project root, e.g. \"site/index.html\", \"src/X.Api/Program.cs\".\r\n// Output: { passed, failCount, total, fails:[{owner,message}], feedback:{ \"<Agent>\": \"prompt text\" }, files }\r\nconst files = $input.all().flatMap(i => i.json.files || []);\r\nconst byPath = new Map(files.map(f => [String(f.path).replace(/^\\.?\\//, ''), String(f.content ?? '')]));\r\nconst has = p => byPath.has(p);\r\nconst read = p => byPath.get(p) || '';\r\nconst kb = p => Buffer.byteLength(read(p), 'utf8') / 1024;\r\nconst count = (s, rx) => (s.match(rx) || []).length;\r\nconst norm = p => { const out = []; for (const seg of p.split('/')) { if (seg === '..') out.pop(); else if (seg && seg !== '.') out.push(seg); } return out.join('/'); };\r\n\r\nconst fails = []; let total = 0;\r\nconst check = (ok, owner, message) => { total++; if (!ok) fails.push({ owner, message }); };\r\n\r\n// ---------- static site ----------\r\nconst pages = [...byPath.keys()].filter(p => /^site\\/[^/]+\\.html$/.test(p));\r\nif (pages.length) {\r\n  const S = 'Static Site';\r\n  for (const [rel, min] of Object.entries({ 'site/index.html': 15, 'site/css/style.css': 6, 'site/js/app.js': 4, 'site/js/data.js': 2 }))\r\n    check(kb(rel) >= min, S, `${rel} is ${kb(rel).toFixed(1)} KB, must be at least ${min} KB. Write it completely from 09 Site Template.`);\r\n  check(pages.length >= 3, S, `Only ${pages.length} HTML page(s); need at least 3.`);\r\n  const appJs = read('site/js/app.js'), dataJs = read('site/js/data.js');\r\n  const packs = { lucide: /lucide(@|\\.min\\.js)/, phosphor: /@phosphor-icons\\/web/, boxicons: /boxicons@/, 'bootstrap-icons': /bootstrap-icons@/ };\r\n  const forbidden = { 'style=\"': /style=\"/g, 'onclick=': /onclick=/g, 'href=\"#\"': /href=\"#\"/g, 'lorem ipsum': /lorem ipsum/gi, '\"Feature 1\"': /feature 1\\b/gi, '#0D6EFD': /#0d6efd/gi };\r\n\r\n  for (const n of pages) {\r\n    const html = read(n);\r\n    check(html.includes('<title>'), S, `${n}: missing <title>.`);\r\n    check(html.includes('name=\"description\"'), S, `${n}: missing <meta name=\"description\">.`);\r\n    const h1 = count(html, /<h1[\\s>]/g);\r\n    check(h1 === 1, S, `${n}: has ${h1} <h1>; need exactly 1.`);\r\n    const loaded = Object.keys(packs).filter(k => packs[k].test(html));\r\n    check(loaded.length === 1, S, `${n}: icon packs loaded = [${loaded.join(', ') || 'none'}]; load exactly one.`);\r\n    const icons = count(html, /data-lucide=\"|class=\"[^\"]*\\b(ph|ph-fill|bx|bxs|bxl|bi)\\s+[a-z-]+/g) + count(appJs, /icon\\(\\s*\"/g) + count(dataJs, /icon:\\s*\"/g);\r\n    check(icons >= 15, S, `${n}: about ${icons} icons; need at least 15 used meaningfully.`);\r\n    if (n === 'site/index.html') {\r\n      const sections = count(html, /<section[\\s>]/g);\r\n      check(sections >= 8, S, `${n}: ${sections} sections; need at least 8 (see 11 Section Recipes).`);\r\n      const imgs = count(html, /<img[\\s>]/g) + count(dataJs, /image:\\s*\"/g);\r\n      check(imgs >= 3, S, `${n}: ${imgs} images; need at least 3.`);\r\n    }\r\n    for (const [label, rx] of Object.entries(forbidden)) { const c = count(html, rx); check(c === 0, S, `${n}: remove ${c} occurrence(s) of ${label}.`); }\r\n    for (const m of html.matchAll(/(?:href|src)=\"([^\"#:?]+)\"/g)) {\r\n      const ref = m[1];\r\n      if (ref.startsWith('/')) check(false, S, `${n}: absolute path \"${ref}\"; use a relative path.`);\r\n      else check(has(norm('site/' + ref)), S, `${n}: \"${ref}\" does not exist; create it or fix the link.`);\r\n    }\r\n  }\r\n  const used = new Set([...appJs.matchAll(/\\b([a-z][A-Za-z]+)\\.(?:forEach|map|filter|find|length)\\b/g)].map(m => m[1]));\r\n  const defined = new Set([...dataJs.matchAll(/\\bconst\\s+([A-Za-z]+)\\s*=/g)].map(m => m[1]));\r\n  const local = new Set([...appJs.matchAll(/\\b(?:const|let)\\s+([A-Za-z]+)\\s*=/g), ...appJs.matchAll(/\\(([a-z][A-Za-z]*)\\)\\s*=>/g)].map(m => m[1]));\r\n  const missing = [...used].filter(u => !defined.has(u) && !local.has(u) && !['document', 'window', 'list', 'wrap', 'grid'].includes(u));\r\n  check(missing.length === 0, S, `site/js/data.js must define: ${missing.join(', ')} (used by app.js).`);\r\n}\r\n\r\n// ---------- .NET structure ----------\r\nconst srcFiles = [...byPath.keys()].filter(p => p.startsWith('src/'));\r\nif (srcFiles.length) {\r\n  const A = 'Services & API', U = 'UI Design';\r\n  const projects = [...new Set(srcFiles.map(p => p.split('/')[1]))];\r\n  for (const dir of projects) {\r\n    const inDir = srcFiles.filter(p => p.startsWith(`src/${dir}/`));\r\n    const owner = dir.endsWith('.Web') ? U : A;\r\n    if (inDir.some(f => /\\.(cs|razor)$/.test(f))) check(inDir.some(f => f.endsWith('.csproj')), owner, `src/${dir} has code but no .csproj.`);\r\n    if (/\\.(Api|Web)$/.test(dir)) for (const f of ['Program.cs', 'appsettings.json', 'Properties/launchSettings.json'])\r\n      check(has(`src/${dir}/${f}`), owner, `src/${dir}/${f} is missing (copy from 03 Architecture templates).`);\r\n    for (const f of inDir.filter(f => f.endsWith('.cs')))\r\n      if (/async\\s+Task[^{;]*\\{(?:(?!await)[^}])*\\}/.test(read(f))) check(false, owner, `${f}: async method without await (warnings are errors).`);\r\n  }\r\n  const slns = [...byPath.keys()].filter(p => !p.includes('/') && p.endsWith('.sln'));\r\n  check(slns.length === 1, A, `Found ${slns.length} .sln files at the root; need exactly 1.`);\r\n  if (slns.length) for (const p of [...byPath.keys()].filter(f => f.endsWith('.csproj'))) {\r\n    const name = p.split('/').pop();\r\n    check(read(slns[0]).includes(name), A, `${slns[0]} does not list ${name}.`);\r\n  }\r\n  if (read('README.md').includes('dotnet ef')) check(false, A, `README uses \"dotnet ef\" but the project uses SQL scripts; use the commands in 05 Database.`);\r\n}\r\n\r\nconst feedback = {};\r\nfor (const f of fails) (feedback[f.owner] ||= []).push('- ' + f.message);\r\nfor (const k of Object.keys(feedback)) feedback[k] = `Your previous output failed the quality gate. Fix ONLY these problems and return the complete corrected files as the same JSON format:\\n${feedback[k].join('\\n')}`;\r\n\r\nreturn [{ json: { passed: fails.length === 0, failCount: fails.length, total, fails, feedback, files } }];\r\n"
+      }
+    },
+    {
+      "id": "2d18cfa4-43ee-44f9-bfdc-c1697b3cffbf",
+      "name": "Passed?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3376,
+        -80
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "008a143e-34a7-499a-8b6a-f1161c29f44a",
+              "leftValue": "={{ $json.passed }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "23d4d5fb-234f-4588-8d2e-1dc8669b7458",
+      "name": "Prepare Fix",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3600,
+        64
+      ],
+      "parameters": {
+        "jsCode": "const qg = $input.first().json;\n  const paths = new Set();\n  for (const f of qg.fails) { const m = f.message.match(/^((?:site|src|db|docs|tests)\\/[^\\s:]+)/); if (m) paths.add(m[1]); }\n  if (!paths.size) paths.add(\"site/index.html\");\n  const files = [...paths].map(p => qg.files.find(f => f.path === p) || { path: p, content: \"\" });\n  const prompt = Object.values(qg.feedback).join(\"\\n\\n\") +\n    \"\\n\\nFiles to fix (current content; an empty content means the file is missing and must be created):\\n\" + JSON.stringify(files);\n  return [{ json: { prompt, fixCount: files.length } }];\n"
+      }
+    },
+    {
+      "id": "86bb75a1-58f2-414a-9e83-e1366dde2220",
+      "name": "Fixer",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        3824,
+        64
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.prompt }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=You fix generated projects so they pass the quality gate. Return ONLY the listed files, each COMPLETE (never shortened), with the problems fixed and everything else kept.\nReturn only valid JSON matching the schema. No markdown fences, no extra text.\n\nFollow these company rules strictly. If a rule conflicts with the request, follow the rule and add a note in \"summary\".\n{{ $('Load Knowledge').first().json.rulesFor['Fixer'] }}"
+        }
+      }
+    },
+    {
+      "id": "8c875077-db1e-4f2e-b46d-1c0524d884c2",
+      "name": "Model - Fixer",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        3840,
+        288
+      ],
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {
+          "maxOutputTokens": 65536,
+          "temperature": 0.3
+        }
+      },
+      "credentials": {
+        "googlePalmApi": {
+          "id": "Hvu8Q5n5x8BMCT8J",
+          "name": "Gemini - Upshift"
+        }
+      }
+    },
+    {
+      "id": "e1f26ed4-94d9-453f-9789-0a89e325411f",
+      "name": "Parser - Fixer",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        3968,
+        288
+      ],
+      "parameters": {
+        "jsonSchemaExample": "{\"summary\":\"\",\"files\":[{\"path\":\"\",\"content\":\"\"}]}"
+      },
+      "retryOnFail": true,
+      "maxTries": 2
+    },
+    {
+      "id": "f8c95ccb-2a0c-4a15-8c99-a23849ab083c",
+      "name": "Apply Fixes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4176,
+        64
+      ],
+      "parameters": {
+        "jsCode": "const base = $(\"Quality Gate\").first().json.files;\n  const fixes = ($input.first().json.output && $input.first().json.output.files) || [];\n  const map = new Map(base.map(f => [f.path, f.content]));\n  for (const f of fixes) {\n    if (!f || !f.path) continue;\n    const clean = String(f.path).replace(/\\\\/g, \"/\").split(\"/\").filter(p => p && p !== \"..\" && p !== \".\").join(\"/\");\n    const content = String(f.content || \"\");\n    const old = map.get(clean) || \"\";\n    if (content.length >= old.length * 0.6) map.set(clean, content); // never replace a file with a much shorter \"fix\"\n  }\n  return [{ json: { files: [...map].map(([path, content]) => ({ path, content })), fixedFiles: fixes.length } }];\n"
+      }
+    },
+    {
+      "id": "18680c78-3ea1-4296-8cf7-b993ab97c1bc",
+      "name": "Final Files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4400,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const brief = $(\"Normalize Brief\").first().json;\n  const files = $input.first().json.files;\n  const binary = {};\n  let i = 0;\n  for (const f of files) {\n    const fullPath = brief.slug + \"/\" + f.path;\n    const bin = await this.helpers.prepareBinaryData(Buffer.from(f.content, \"utf8\"), fullPath, \"text/plain\");\n    bin.fileName = fullPath;\n    binary[\"file\" + i++] = bin;\n  }\n  return [{ json: { files, totalFiles: i }, binary }];\n"
+      }
+    },
+    {
+      "id": "38789d84-a1e7-434d-9762-cf300d00e91f",
+      "name": "Zip Project",
+      "type": "n8n-nodes-base.compression",
+      "typeVersion": 1.1,
+      "position": [
+        4624,
+        -80
+      ],
+      "parameters": {
+        "operation": "compress",
+        "binaryPropertyName": "={{ Object.keys($binary).join(',') }}",
+        "fileName": "={{ $('Normalize Brief').first().json.slug }}.zip"
+      }
+    },
+    {
+      "id": "118514ec-3121-492b-8dc4-1e9ed0a12de2",
+      "name": "From form?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4848,
+        -256
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "f8266591-b532-4e6e-acd7-41fa7123a8a1",
+              "leftValue": "={{ $('Normalize Brief').first().json.source }}",
+              "rightValue": "form",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "c13bad77-535c-4d54-a9f7-7769040f487b",
+      "name": "Download Page",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        5072,
+        -256
+      ],
+      "executeOnce": true,
+      "webhookId": "6655fdb5-b57f-4136-bcbf-ee356e091a1b",
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "returnBinary",
+        "completionTitle": "Your project is ready",
+        "completionMessage": "={{ 'Preview: https://meghana-m-revankar.github.io/ai-builder/projects/' + $('Normalize Brief').first().json.slug + '/site/  (live in about 1 minute). Download the full project zip below.' }}",
+        "options": {}
+      }
+    },
+    {
+      "id": "ed814055-ac52-4cef-83d4-3252f69fbdf4",
+      "name": "Build Commit",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4848,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const brief = $('Normalize Brief').first().json;\nconst root = brief.slug;\nconst form = { 'Project Name': brief.projectName };\nconst tree = $('Final Files').first().json.files.map(f => ({ path: `projects/${root}/${f.path}`, mode: '100644', type: 'blob', content: f.content }));\n// ---- .NET safety net: paste into Build Commit, just before `if (!tree.length)` ----\n// Expects: `tree` (array of { path, mode, type, content }) and `root` (project slug).\nfunction dotnetSafetyNet(tree, root) {\n  const P = `projects/${root}/`;\n  const rel = t => t.path.slice(P.length);\n  const has = p => tree.some(t => t.path === P + p);\n  const put = (p, content) => {\n    const i = tree.findIndex(t => t.path === P + p);\n    const entry = { path: P + p, mode: '100644', type: 'blob', content };\n    if (i >= 0) tree[i] = entry; else tree.push(entry);\n  };\n  const add = (p, content) => { if (!has(p)) put(p, content); };\n\n  const m = tree.map(t => rel(t).match(/^src\\/([A-Za-z0-9_.]+?)\\.(Api|Application|Domain|Infrastructure|Web)\\//)).find(Boolean);\n  if (!m) return; // no .NET code in this run\n  const proj = m[1];\n  const W = `src/${proj}.Web/`;\n  const appCsproj = `src/${proj}.Application/${proj}.Application.csproj`;\n\n  // namespaces from Domain + Application so Razor pages can see DTOs, interfaces, services\n  const ns = new Set();\n  tree.forEach(t => {\n    const r = rel(t);\n    if ((r.startsWith(`src/${proj}.Application/`) || r.startsWith(`src/${proj}.Domain/`)) && r.endsWith('.cs')) {\n      const n = String(t.content).match(/^\\s*namespace\\s+([\\w.]+)/m);\n      if (n) ns.add(n[1]);\n    }\n  });\n\n  // --- Web project skeleton (only files the AI did not write) ---\n  add(`${W}${proj}.Web.csproj`, `<Project Sdk=\"Microsoft.NET.Sdk.Web\">\n  <PropertyGroup>\n    <TargetFramework>net8.0</TargetFramework>\n    <Nullable>enable</Nullable>\n    <ImplicitUsings>enable</ImplicitUsings>\n    <RootNamespace>${proj}.Web</RootNamespace>\n  </PropertyGroup>\n${has(appCsproj) ? `  <ItemGroup>\n    <ProjectReference Include=\"..\\\\${proj}.Application\\\\${proj}.Application.csproj\" />\n  </ItemGroup>\n` : ''}</Project>\n`);\n  add(`${W}Program.cs`, `using ${proj}.Web.Components;\n\nvar builder = WebApplication.CreateBuilder(args);\nbuilder.Services.AddRazorComponents().AddInteractiveServerComponents();\nbuilder.Services.AddHttpClient(\"Api\", c => c.BaseAddress = new Uri(builder.Configuration[\"ApiBaseUrl\"] ?? \"https://localhost:7001\"));\n// TODO: register the Api client services used by the pages (e.g. builder.Services.AddScoped<IOrderService, OrderApiClient>()).\n\nvar app = builder.Build();\nif (!app.Environment.IsDevelopment()) { app.UseExceptionHandler(\"/Error\", createScopeForErrors: true); app.UseHsts(); }\napp.UseHttpsRedirection();\napp.UseStaticFiles();\napp.UseAntiforgery();\napp.MapRazorComponents<App>().AddInteractiveServerRenderMode();\napp.Run();\n`);\n  add(`${W}appsettings.json`, `{\\n  \"ApiBaseUrl\": \"https://localhost:7001\",\\n  \"Logging\": { \"LogLevel\": { \"Default\": \"Information\", \"Microsoft.AspNetCore\": \"Warning\" } },\\n  \"AllowedHosts\": \"*\"\\n}\\n`);\n  add(`${W}_Imports.razor`, [\n    'System.Net.Http', 'System.Net.Http.Json', 'Microsoft.AspNetCore.Authorization',\n    'Microsoft.AspNetCore.Components.Forms', 'Microsoft.AspNetCore.Components.Routing',\n    'Microsoft.AspNetCore.Components.Web', 'static Microsoft.AspNetCore.Components.Web.RenderMode',\n    'Microsoft.JSInterop', `${proj}.Web`, `${proj}.Web.Components`, `${proj}.Web.Components.Layout`,\n    ...[...ns].sort()\n  ].map(u => `@using ${u}`).join('\\n') + '\\n');\n  add(`${W}Components/App.razor`, `<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <base href=\"/\" />\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\" />\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap\" rel=\"stylesheet\" />\n    <script src=\"https://cdn.tailwindcss.com/3.4.17\"></script>\n    <script src=\"js/tailwind.config.js\"></script>\n    <link rel=\"stylesheet\" href=\"css/app.css\" />\n    <HeadOutlet @rendermode=\"InteractiveServer\" />\n</head>\n<body class=\"bg-slate-50 font-[Inter] text-slate-900\">\n    <Routes @rendermode=\"InteractiveServer\" />\n    <script src=\"_framework/blazor.web.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js\"></script>\n</body>\n</html>\n`);\n  add(`${W}Components/Routes.razor`, `<Router AppAssembly=\"typeof(Program).Assembly\">\n    <Found Context=\"routeData\">\n        <RouteView RouteData=\"routeData\" DefaultLayout=\"typeof(Layout.MainLayout)\" />\n        <FocusOnNavigate RouteData=\"routeData\" Selector=\"h1\" />\n    </Found>\n    <NotFound>\n        <LayoutView Layout=\"typeof(Layout.MainLayout)\"><h1 class=\"text-2xl font-bold\">Page not found</h1></LayoutView>\n    </NotFound>\n</Router>\n`);\n  // nav links from the pages' @page routes\n  const pages = tree.filter(t => rel(t).startsWith(W) && rel(t).endsWith('.razor'))\n    .map(t => ({ route: (String(t.content).match(/^@page\\s+\"([^\"]+)\"/m) || [])[1], name: rel(t).split('/').pop().replace('.razor', '') }))\n    .filter(p => p.route && !p.route.includes('{'));\n  const links = pages.map(p => `            <NavLink href=\"${p.route.replace(/^\\//, '')}\" class=\"rounded-lg px-3 py-2 text-slate-600 hover:text-slate-900\" ActiveClass=\"text-indigo-600 font-semibold\"${p.route === '/' ? ' Match=\"NavLinkMatch.All\"' : ''}>${p.name.replace(/([a-z])([A-Z])/g, '$1 $2')}</NavLink>`).join('\\n');\n  add(`${W}Components/Layout/MainLayout.razor`, `@inherits LayoutComponentBase\n<div class=\"min-h-screen\">\n    <header class=\"sticky top-0 z-40 border-b border-slate-200 bg-white/80 backdrop-blur\">\n        <nav class=\"mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-4 py-3\">\n            <a href=\"\" class=\"mr-4 font-[Plus_Jakarta_Sans] text-lg font-extrabold\">${proj}</a>\n${links}\n        </nav>\n    </header>\n    <main class=\"mx-auto max-w-6xl px-4 py-8\">@Body</main>\n</div>\n`);\n  add(`${W}wwwroot/css/app.css`, `h1:focus { outline: none; }\\nsvg.lucide { width: 1.25em; height: 1.25em; stroke-width: 1.75; }\\n`);\n  add(`${W}wwwroot/js/tailwind.config.js`, `tailwind.config = { theme: { extend: { fontFamily: { display: ['\"Plus Jakarta Sans\"', 'system-ui', 'sans-serif'], body: ['Inter', 'system-ui', 'sans-serif'] } } } };\\n`);\n  add(`${W}Properties/launchSettings.json`, `{\\n  \"profiles\": {\\n    \"https\": { \"commandName\": \"Project\", \"launchBrowser\": true, \"applicationUrl\": \"https://localhost:7002;http://localhost:5002\", \"environmentVariables\": { \"ASPNETCORE_ENVIRONMENT\": \"Development\" } }\\n  }\\n}\\n`);\n\n  // --- root files ---\n  add('global.json', `{\\n  \"sdk\": { \"version\": \"8.0.100\", \"rollForward\": \"latestMajor\" }\\n}\\n`);\n  add('.gitignore', `bin/\\nobj/\\n.vs/\\n*.user\\nappsettings.*.local.json\\n.env\\n`);\n\n  // --- solution: always rebuilt from the .csproj files that really exist ---\n  tree.splice(0, tree.length, ...tree.filter(t => !(rel(t).endsWith('.sln') && !rel(t).includes('/'))));\n  const csprojs = tree.map(rel).filter(p => p.endsWith('.csproj')).sort();\n  const g = (a, i) => `{8F3A1C2B-${a}-4A00-9000-${String(i).padStart(12, '0')}}`;\n  const C = '{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}', F = '{2150E333-8FDC-42A3-9474-1A3956D46DE8}';\n  let s = 'Microsoft Visual Studio Solution File, Format Version 12.00\\r\\n# Visual Studio Version 17\\r\\nVisualStudioVersion = 17.0.31903.59\\r\\nMinimumVisualStudioVersion = 10.0.40219.1\\r\\n';\n  s += `Project(\"${F}\") = \"src\", \"src\", \"${g('1111', 1)}\"\\r\\nEndProject\\r\\nProject(\"${F}\") = \"tests\", \"tests\", \"${g('1111', 2)}\"\\r\\nEndProject\\r\\n`;\n  csprojs.forEach((p, i) => { s += `Project(\"${C}\") = \"${p.split('/').pop().replace('.csproj', '')}\", \"${p.replace(/\\//g, '\\\\')}\", \"${g('2222', i + 1)}\"\\r\\nEndProject\\r\\n`; });\n  s += 'Global\\r\\n\\tGlobalSection(SolutionConfigurationPlatforms) = preSolution\\r\\n\\t\\tDebug|Any CPU = Debug|Any CPU\\r\\n\\t\\tRelease|Any CPU = Release|Any CPU\\r\\n\\tEndGlobalSection\\r\\n\\tGlobalSection(ProjectConfigurationPlatforms) = postSolution\\r\\n';\n  csprojs.forEach((p, i) => { const id = g('2222', i + 1); ['Debug', 'Release'].forEach(c => { s += `\\t\\t${id}.${c}|Any CPU.ActiveCfg = ${c}|Any CPU\\r\\n\\t\\t${id}.${c}|Any CPU.Build.0 = ${c}|Any CPU\\r\\n`; }); });\n  s += '\\tEndGlobalSection\\r\\n\\tGlobalSection(NestedProjects) = preSolution\\r\\n';\n  csprojs.forEach((p, i) => { s += `\\t\\t${g('2222', i + 1)} = ${p.startsWith('tests/') ? g('1111', 2) : g('1111', 1)}\\r\\n`; });\n  s += '\\tEndGlobalSection\\r\\nEndGlobal\\r\\n';\n  put(`${proj}.sln`, s);\n}\ndotnetSafetyNet(tree, root);\n// ---- end .NET safety net ----\n\nif (!tree.length) throw new Error('No files were generated');\nconst paths = tree.map(t => t.path);\nconst idx = paths.find(p => /\\/site\\/index\\.html$/.test(p)) || paths.find(p => p.endsWith('/index.html'));\nreturn [{ json: {\n  root, tree,\n  message: `AI build: ${form['Project Name']}`,\n  siteUrl: idx ? 'https://meghana-m-revankar.github.io/ai-builder/' + idx.replace(/index\\.html$/, '') : '',\n  repoUrl: `https://github.com/meghana-m-revankar/ai-builder/tree/main/projects/${root}`\n}}];\n"
+      }
+    },
+    {
+      "id": "e6be378c-9439-4835-9049-ee01fba2d329",
+      "name": "Get Main",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        5072,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "url": "https://api.github.com/repos/meghana-m-revankar/ai-builder/git/ref/heads/main"
+      }
+    },
+    {
+      "id": "0e36271a-c1e8-4835-959a-c90771c222af",
+      "name": "Get Commit",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        5296,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "url": "=https://api.github.com/repos/meghana-m-revankar/ai-builder/git/commits/{{ $('Get Main').first().json.object.sha }}"
+      }
+    },
+    {
+      "id": "4c5bc717-004e-4a6d-b00b-7e69cef34470",
+      "name": "Get Old Files",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        5520,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "url": "=https://api.github.com/repos/meghana-m-revankar/ai-builder/git/trees/{{ $('Get Commit').first().json.tree.sha }}?recursive=1"
+      }
+    },
+    {
+      "id": "8e7f5b0a-885e-4474-9ffb-813d5686bdce",
+      "name": "Prepare Tree",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5744,
+        -80
+      ],
+      "parameters": {
+        "jsCode": "const build = $('Build Commit').first().json;\nconst prefix = `projects/${build.root}/`;\nconst keep = new Set(build.tree.map(t => t.path));\nconst oldFiles = ($input.first().json.tree || []).filter(t => t.type === 'blob' && t.path.startsWith(prefix) && !keep.has(t.path));\nconst deletions = oldFiles.map(t => ({ path: t.path, mode: '100644', type: 'blob', sha: null }));\nreturn [{ json: { tree: build.tree.concat(deletions), added: build.tree.length, deleted: deletions.length } }];\n"
+      }
+    },
+    {
+      "id": "099d8c3d-49ee-4ac6-af25-184f23966f89",
+      "name": "Create Tree",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        5968,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "method": "POST",
+        "url": "https://api.github.com/repos/meghana-m-revankar/ai-builder/git/trees",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ base_tree: $('Get Commit').first().json.tree.sha, tree: $('Prepare Tree').first().json.tree }) }}"
+      }
+    },
+    {
+      "id": "b4847e17-0e4e-471b-ad00-4aac6f73b5de",
+      "name": "Create Commit",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        6192,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "method": "POST",
+        "url": "https://api.github.com/repos/meghana-m-revankar/ai-builder/git/commits",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ message: $('Build Commit').first().json.message, tree: $('Create Tree').first().json.sha, parents: [ $('Get Main').first().json.object.sha ] }) }}"
+      }
+    },
+    {
+      "id": "237f6655-397c-44f6-9216-df32522126de",
+      "name": "Update Main",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        6416,
+        -80
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "nUDu60658iuRUTYG",
+          "name": "GitHub ai-builder"
+        }
+      },
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {},
+        "method": "POST",
+        "url": "https://api.github.com/repos/meghana-m-revankar/ai-builder/git/refs/heads/main",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ sha: $json.sha }) }}"
+      }
+    }
+  ],
+  "connections": {
+    "Model - Architect": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Architect",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - Architect": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Architect",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - DB Designer": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "DB Designer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - DB Designer": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "DB Designer",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Stored Procs": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Stored Procs",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - Stored Procs": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Stored Procs",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Services & API": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Services & API",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - Services & API": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Services & API",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - UI Design": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "UI Design",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - UI Design": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "UI Design",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Static Site": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Static Site",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - Static Site": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Static Site",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Model - Fixer": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Fixer",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parser - Fixer": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Fixer",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Project Request": {
+      "main": [
+        [
+          {
+            "node": "Normalize Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Platform Webhook": {
+      "main": [
+        [
+          {
+            "node": "Normalize Brief",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Brief": {
+      "main": [
+        [
+          {
+            "node": "List Knowledge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "List Knowledge": {
+      "main": [
+        [
+          {
+            "node": "Get Knowledge File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Knowledge File": {
+      "main": [
+        [
+          {
+            "node": "Load Knowledge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Knowledge": {
+      "main": [
+        [
+          {
+            "node": "Website only?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Website only?": {
+      "main": [
+        [
+          {
+            "node": "Static Site",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Architect",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Architect": {
+      "main": [
+        [
+          {
+            "node": "DB Designer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DB Designer": {
+      "main": [
+        [
+          {
+            "node": "Stored Procs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stored Procs": {
+      "main": [
+        [
+          {
+            "node": "Services & API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Services & API": {
+      "main": [
+        [
+          {
+            "node": "UI Design",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "UI Design": {
+      "main": [
+        [
+          {
+            "node": "Static Site",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Static Site": {
+      "main": [
+        [
+          {
+            "node": "Collect Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Collect Files": {
+      "main": [
+        [
+          {
+            "node": "Quality Gate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Quality Gate": {
+      "main": [
+        [
+          {
+            "node": "Passed?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Passed?": {
+      "main": [
+        [
+          {
+            "node": "Final Files",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Prepare Fix",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Fix": {
+      "main": [
+        [
+          {
+            "node": "Fixer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fixer": {
+      "main": [
+        [
+          {
+            "node": "Apply Fixes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Apply Fixes": {
+      "main": [
+        [
+          {
+            "node": "Final Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final Files": {
+      "main": [
+        [
+          {
+            "node": "Zip Project",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zip Project": {
+      "main": [
+        [
+          {
+            "node": "From form?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Build Commit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "From form?": {
+      "main": [
+        [
+          {
+            "node": "Download Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Commit": {
+      "main": [
+        [
+          {
+            "node": "Get Main",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Main": {
+      "main": [
+        [
+          {
+            "node": "Get Commit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Commit": {
+      "main": [
+        [
+          {
+            "node": "Get Old Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Old Files": {
+      "main": [
+        [
+          {
+            "node": "Prepare Tree",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Tree": {
+      "main": [
+        [
+          {
+            "node": "Create Tree",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Tree": {
+      "main": [
+        [
+          {
+            "node": "Create Commit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Commit": {
+      "main": [
+        [
+          {
+            "node": "Update Main",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

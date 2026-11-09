@@ -1,0 +1,10 @@
+# Netlify: serve the repo as a static site (no build step).
+[build]
+  publish = "."
+  command = ""
+
+# Don't let Netlify cache the platform scripts, so changes show up immediately.
+[[headers]]
+  for = "/platform/*"
+  [headers.values]
+    Cache-Control = "no-cache"
