@@ -1,0 +1,14 @@
+:root {
+  --brand-900: #0B1B3F; --brand-700: #1E3A8A; --brand-500: #3B5BDB; --brand-100: #E7ECFB;
+  --accent-500: #F97316; --surface: #FFFFFF; --canvas: #F6F7FB;
+  --ink-900: #0F172A; --ink-600: #475569; --line: #E2E8F0;
+}
+body { font-family: 'Inter', sans-serif; color: var(--ink-900); }
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+.btn-primary { background: var(--brand-700); border-color: var(--brand-700); }
+.btn-accent { background: var(--accent-500); border-color: var(--accent-500); color: white; }
+.text-brand-900 { color: var(--brand-900); }
+.text-accent-500 { color: var(--accent-500); }
+.bg-brand-900 { background-color: var(--brand-900); }
+.bg-brand-100 { background-color: var(--brand-100); }
+.card { border: none; border-radius: 12px; }
