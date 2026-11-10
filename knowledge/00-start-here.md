@@ -40,4 +40,6 @@ End `summary` with 3 short parts, no jargon:
 4. It is small and tidy.
 
 ## Definition of done (every agent)
+Follow 13 Build and Deploy: the project is compiled and started in Docker, and code that does not compile or SQL that does not run is a failed project. Image seeds must describe the photo.
+
 Run through 12 Quality Gate for your files before you answer. The pipeline runs the same checks automatically and sends failures back to you.

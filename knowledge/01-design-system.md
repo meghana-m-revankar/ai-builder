@@ -160,7 +160,7 @@ Common icons in each pack:
 - Marketing pages need real images: a hero image, one image per main section (about, services, gallery) and team/testimonial photos where they fit.
 - **Image source, in this order:**
   1. **Image Library** given in the brief (real, relevant photos found for this project, each with `url`, `title`, `query`, `attribution`). Use these first, matching each image to the section whose topic matches its `query` (hero, products, interior, team). Use every library image at most twice.
-  2. Only if the library is empty or has no image for a section: `https://picsum.photos/seed/<project-slug>-<topic>/<width>/<height>` with a different seed per image.
+  2. Only if the library is empty or has no image for a section: `https://picsum.photos/seed/<project-slug>-<2-4 words describing the photo>/<width>/<height>`, e.g. `souq-bazaar-velvet-sofa-living-room`. The seed words are used to find a real matching photo after generation, so never use seeds like `prod-1` or `cat-gifts` (see 13 Build and Deploy → D).
 - Library images are Creative Commons: add a small "Image credits" line in the footer (or a credits section on the About page) listing each used image's `attribution` text.
 - Always style images to fit the brand: `object-fit: cover`, fixed `aspect-ratio`, rounded corners, and a brand-coloured gradient overlay on hero images so text stays readable.
 - Every `<img>` has a descriptive `alt`, `loading="lazy"` (except the hero), and explicit `width` and `height`.
