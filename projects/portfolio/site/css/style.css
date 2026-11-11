@@ -1,0 +1,36 @@
+:root {
+  --fs-body: clamp(1rem, calc(0.95rem + 0.25vw), 1.0625rem);
+  --fs-hero: clamp(2.5rem, calc(1.5rem + 4.5vw), 4.5rem);
+  --space-section: clamp(4rem, calc(2.5rem + 5vw), 6rem);
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--canvas);
+  color: #0F172A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: var(--fs-hero);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  transition: transform 0.2s ease;
+}
