@@ -1,0 +1,6 @@
+:root {
+  --brand-900: #3D2F25;
+}
+.hero-gradient { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); }
+.font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+body { font-family: 'Inter', sans-serif; }
