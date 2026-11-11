@@ -5,13 +5,18 @@ public sealed class Project
     public Guid Id { get; private set; }
     public string Title { get; private set; } = string.Empty;
     public string Description { get; private set; } = string.Empty;
-    public string? ImageUrl { get; private set; }
+    public string[] Technologies { get; private set; } = Array.Empty<string>();
     public string? ProjectUrl { get; private set; }
+    public string? GithubUrl { get; private set; }
+    public string? ImageUrl { get; private set; }
+    public int DisplayOrder { get; private set; }
 
-    public Project(string title, string description)
+    public Project(string title, string description, string[] technologies, int displayOrder)
     {
         Id = Guid.NewGuid();
         Title = title;
         Description = description;
+        Technologies = technologies;
+        DisplayOrder = displayOrder;
     }
 }

@@ -1,38 +1,36 @@
-# Architecture - Meghana Portfolio
+# 03 Architecture - Meghana Portfolio
 
 ## Overview
-A responsive, single-page portfolio website for a front-end developer. The project uses a static architecture to ensure speed, SEO-friendliness, and simple deployment.
+A modern, responsive, one-page portfolio website for a front-end developer. The site focuses on performance, accessibility, and clean design using Tailwind CSS.
 
 ## Navigation & Sections
-- **Navigation:** Sticky top menu with smooth-scroll linking.
-- **Sections:**
-    1. **Home:** Introduction, hero image, CTA buttons.
-    2. **About:** Personal summary, 3+ years experience, resume download.
-    3. **Projects:** Showcase of three featured works with descriptive cards.
-    4. **Skills:** Visual representation of technical stack using stylized badges.
-    5. **Contact:** Interactive form with client-side validation.
-    6. **Footer:** Social links and copyright.
+- **Sticky Header**: Navigation links (Home, About, Projects, Skills, Contact) with smooth scrolling. Hamburger menu for mobile.
+- **Home**: Hero section with name, title, tagline, call-to-action buttons, and atmospheric background.
+- **About**: Professional summary emphasizing 3+ years of experience and resume download.
+- **Projects**: Showcase of 3 key projects using card components.
+- **Skills**: Visual representation of technical stack using color-coded badges.
+- **Contact**: Interactive form with validation and feedback loop.
+- **Footer**: Social links (LinkedIn, GitHub, Instagram) and copyright.
+
+## Functional Requirements
+- **Theme**: Light/Dark mode toggle.
+- **Interactivity**: Smooth scrolling, hamburger menu, form validation, "Back to Top" button.
+- **Responsiveness**: Mobile-first design via Tailwind CSS.
 
 ## Folder Structure
 ```
 /
-├── index.html
+├── index.html          # Main entry point
 ├── css/
-│   └── style.css
+│   └── style.css       # Custom overrides and animations
 ├── js/
-│   └── main.js
-├── assets/
-│   ├── images/
-│   │   ├── hero.jpg
-│   │   ├── project-1.jpg
-│   │   ├── project-2.jpg
-│   │   └── project-3.jpg
-│   └── resume.pdf
-└── README.md
+│   └── script.js       # Main interaction logic (theme, scroll, form, menu)
+├── images/             # Assets (profile, projects, background)
+└── favicon.ico
 ```
 
-## Design Decisions
-- **Framework:** Vanilla HTML5, CSS3, and JavaScript to maintain zero dependencies and high performance.
-- **UI System:** Custom CSS combined with a clean, modern color palette and typography.
-- **Responsiveness:** Mobile-first approach with a CSS-based hamburger menu.
-- **Interactivity:** Smooth scrolling, dark mode toggle using CSS variables, and basic form validation.
+## Key Design Decisions
+- **Architecture**: Static Site (Jamstack-ready). No backend/database required.
+- **Styling**: Tailwind CSS CDN for rapid styling and responsiveness.
+- **Icons**: Lucide or FontAwesome via CDN for professional UI icons.
+- **State**: Vanilla JavaScript for theme toggling and DOM manipulation.

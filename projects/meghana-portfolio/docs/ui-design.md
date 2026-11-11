@@ -1,35 +1,46 @@
-# UI Design - Meghana M Revankar Portfolio
+# UI Design - Meghana Portfolio
 
-## Single-Page Portfolio
-- **Purpose:** Showcase skills, experience, and projects for professional opportunities.
-- **Layout:** Responsive, single-column design on mobile, centered max-width content container on desktop.
-- **Navigation:**
-    - Sticky top navbar with logo (left) and links (right).
-    - Links: About, Projects, Skills, Contact.
-    - Hamburger menu triggers off-canvas/dropdown overlay on mobile.
-- **Sections & Elements:**
-    1. **Home:** 
-        - Split layout: text left, hero visual right.
-        - Headline: "I turn Figma designs into fast, pixel-perfect, responsive websites."
-        - CTA: "View Projects" (solid button), "Contact Me" (outline button).
-    2. **About:**
-        - Heading: "About Me"
-        - Text block: 3+ years of experience description.
-        - Button: "Download Resume" (secondary action).
-    3. **Projects:**
-        - Grid: 3 cards.
-        - Card content: Image, title, short description, link to project demo.
-    4. **Skills:**
-        - Flex grid of skill badges (HTML5, CSS3, JS, TS, React, Tailwind, MUI, Figma).
-    5. **Contact:**
-        - Fields: Name (text), Email (email), Message (textarea).
-        - Buttons: "Send Message" (primary action).
-    6. **Footer:**
-        - Social icons (LinkedIn, GitHub), copyright notice.
+## Overview
+A modern, responsive, one-page portfolio website designed for a front-end developer, focusing on clarity, professional aesthetics, and seamless navigation.
 
-## Interaction Patterns
-- Dark mode toggle in the navbar.
-- Smooth scrolling on link clicks.
-- Hover states for all buttons and interactive cards.
-- Mobile menu transition.
-- Form validation: visual error state on invalid inputs.
+## Design System
+- **Typography**: Plus Jakarta Sans for headings, Inter for body text, JetBrains Mono for technical labels/code.
+- **Colors**: Brand-700 (#1E3A8A) for primary actions, Accent-500 (#F97316) for highlights, Surface white, Canvas light grey.
+- **Components**: Rounded cards (12px), Pill-shaped buttons (999px), Soft shadows.
+
+## Sections
+
+### 1. Navigation (Sticky Header)
+- **Purpose**: Facilitate easy navigation across the single-page site.
+- **Layout**: Logo on left, navigation links centered, theme toggle and mobile menu on right.
+- **Actions**: Smooth scroll links, toggle theme, hamburger menu trigger.
+
+### 2. Hero (Home)
+- **Purpose**: Strong first impression with personal branding.
+- **Layout**: Large headline (Meghana M Revankar), sub-headline with role (Front-End Web Developer), and two CTA buttons (View Projects, Contact Me).
+- **Visuals**: A soft gradient background with an illustrative portrait.
+
+### 3. About
+- **Purpose**: Showcase professional background and experience.
+- **Layout**: Split layout on desktop (text on left, visual/image on right).
+- **Content**: 3+ years experience, summary paragraph, resume download button.
+
+### 4. Projects
+- **Purpose**: Visual showcase of key work.
+- **Layout**: Bento-grid inspired layout with 3 major cards.
+- **Card Fields**: Project title, category, description, technical badges, external link icon.
+
+### 5. Skills
+- **Purpose**: Highlight core competencies.
+- **Layout**: Flex grid with color-coded skill badges.
+- **Content**: Icons and names (e.g., React, Tailwind, Figma).
+
+### 6. Contact
+- **Purpose**: Lead capture via professional inquiry form.
+- **Fields**: Name (text), Email (email), Message (textarea).
+- **Actions**: Submit button (primary).
+- **Feedback**: Inline validation, success/error alert handling.
+
+### 7. Footer
+- **Purpose**: Final point of contact and professional links.
+- **Layout**: Left column (branding/tagline), right column (Social icons + Copyright).

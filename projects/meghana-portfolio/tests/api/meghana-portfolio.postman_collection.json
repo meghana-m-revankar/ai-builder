@@ -1,8 +1,8 @@
 {
-	"info": {
-		"_postman_id": "portfolio-collection",
-		"name": "meghana-portfolio",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": []
+  "info": {
+    "_postman_id": "c123-456-789",
+    "name": "meghana-portfolio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": []
 }

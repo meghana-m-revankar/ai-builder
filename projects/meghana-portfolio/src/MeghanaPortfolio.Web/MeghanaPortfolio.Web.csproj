@@ -5,7 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>MeghanaPortfolio.Web</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MeghanaPortfolio.Application\MeghanaPortfolio.Application.csproj" />
-  </ItemGroup>
 </Project>

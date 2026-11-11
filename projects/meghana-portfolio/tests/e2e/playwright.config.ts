@@ -2,13 +2,14 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './',
-  baseURL: process.env.BASE_URL || 'http://localhost:3000',
+  fullyParallel: true,
+  reporter: 'html',
   use: {
-    browserName: 'chromium',
+    baseURL: process.env.BASE_URL || 'http://localhost:3000',
     screenshot: 'only-on-failure',
   },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
+    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile', use: { ...devices['iPhone 13'] } },
   ],
 });
