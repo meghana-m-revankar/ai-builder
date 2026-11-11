@@ -1,36 +1,35 @@
-# 03 Architecture - Meghana Portfolio
+# Architecture - Meghana Portfolio
 
 ## Overview
-A modern, responsive, one-page portfolio website for a front-end developer. The site focuses on performance, accessibility, and clean design using Tailwind CSS.
+A responsive, one-page personal portfolio website for a front-end developer based in Bengaluru. Designed for high performance and accessibility using static HTML, CSS, and Tailwind CSS.
 
-## Navigation & Sections
-- **Sticky Header**: Navigation links (Home, About, Projects, Skills, Contact) with smooth scrolling. Hamburger menu for mobile.
-- **Home**: Hero section with name, title, tagline, call-to-action buttons, and atmospheric background.
-- **About**: Professional summary emphasizing 3+ years of experience and resume download.
-- **Projects**: Showcase of 3 key projects using card components.
-- **Skills**: Visual representation of technical stack using color-coded badges.
-- **Contact**: Interactive form with validation and feedback loop.
-- **Footer**: Social links (LinkedIn, GitHub, Instagram) and copyright.
-
-## Functional Requirements
-- **Theme**: Light/Dark mode toggle.
-- **Interactivity**: Smooth scrolling, hamburger menu, form validation, "Back to Top" button.
-- **Responsiveness**: Mobile-first design via Tailwind CSS.
+## Pages & Sections
+- **Single Page Application (SPA) structure:**
+  - **Header/Nav:** Navigation links (Home, About, Projects, Skills, Contact) + Light/Dark mode toggle.
+  - **Hero:** Name, title, tagline, call-to-action buttons, background imagery.
+  - **About:** Personal bio, professional summary, "Download Resume" button.
+  - **Projects:** Grid layout with three project cards (Shopping Site, Dashboard, Mobile App).
+  - **Skills:** Icon-based grid/flex list of core competencies.
+  - **Contact:** Form with Name, Email, and Message fields, plus success state UI.
+  - **Footer:** Social media links (LinkedIn, GitHub, etc.).
 
 ## Folder Structure
 ```
 /
-├── index.html          # Main entry point
+├── index.html          # Single page entry point
 ├── css/
-│   └── style.css       # Custom overrides and animations
+│   └── style.css       # Custom overrides and Tailwind directives
 ├── js/
-│   └── script.js       # Main interaction logic (theme, scroll, form, menu)
-├── images/             # Assets (profile, projects, background)
-└── favicon.ico
+│   └── main.js         # Theme toggle, smooth scroll, form handling
+├── assets/
+│   ├── images/         # Photos, project screenshots
+│   └── docs/           # Resume PDF
+└── tailwind.config.js  # Tailwind CSS configuration
 ```
 
 ## Key Design Decisions
-- **Architecture**: Static Site (Jamstack-ready). No backend/database required.
-- **Styling**: Tailwind CSS CDN for rapid styling and responsiveness.
-- **Icons**: Lucide or FontAwesome via CDN for professional UI icons.
-- **State**: Vanilla JavaScript for theme toggling and DOM manipulation.
+- **Tech Stack:** Pure static files (HTML/CSS/JS) for speed and easy hosting (e.g., GitHub Pages).
+- **Styling:** Tailwind CSS (via CDN) for utility-first responsive design.
+- **Interactivity:** Simple Vanilla JS for theme toggling and form submission simulation.
+- **Responsiveness:** Mobile-first approach, ensuring seamless transitions between mobile, tablet, and desktop views.
+- **Theme:** Simple dark/light mode toggle via CSS class manipulation on the root element.

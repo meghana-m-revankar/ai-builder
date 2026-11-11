@@ -1,18 +1,17 @@
 -- Schema for Meghana Portfolio Contact Submissions
--- Note: Even though the frontend is static, this database schema supports a backend
--- implementation (e.g. for contact form persistence, site analytics, or CMS features).
+-- Database: PostgreSQL
 
-create extension if not exists "uuid-ossp";
+-- Enable UUID extension
+create extension if not exists "pgcrypto";
 
--- Contact submissions table
-create table contact_submissions (
+-- Table: contacts
+-- Stores messages submitted via the contact form.
+create table contacts (
     id uuid primary key default gen_random_uuid(),
     full_name text not null,
     email text not null,
-    subject text not null,
     message text not null,
-    status text not null default 'new' check (status in ('new', 'read', 'replied', 'archived')),
-    
+    is_read boolean not null default false,
     created_at timestamptz not null default now(),
     updated_at timestamptz not null default now(),
     created_by uuid,
@@ -20,30 +19,9 @@ create table contact_submissions (
     deleted_at timestamptz null
 );
 
-comment on table contact_submissions is 'Stores incoming contact form messages from the portfolio.';
-comment on column contact_submissions.status is 'Allowed values: new, read, replied, archived';
+comment on table contacts is 'User messages submitted through the portfolio contact form.';
+comment on column contacts.is_read is 'Tracking if the message has been viewed by the portfolio owner.';
 
-create index idx_contact_submissions_status on contact_submissions(status) where deleted_at is null;
-create index idx_contact_submissions_created_at on contact_submissions(created_at) where deleted_at is null;
-
--- Projects table
-create table projects (
-    id uuid primary key default gen_random_uuid(),
-    title text not null,
-    description text not null,
-    technologies text[] not null,
-    project_url text,
-    github_url text,
-    image_url text,
-    display_order int not null default 0,
-    
-    created_at timestamptz not null default now(),
-    updated_at timestamptz not null default now(),
-    created_by uuid,
-    updated_by uuid,
-    deleted_at timestamptz null
-);
-
-comment on table projects is 'Portfolio projects for display.';
-
-create index idx_projects_display_order on projects(display_order) where deleted_at is null;
+-- Index for performance
+create index idx_contacts_created_at on contacts(created_at) where deleted_at is null;
+create index idx_contacts_email on contacts(email) where deleted_at is null;

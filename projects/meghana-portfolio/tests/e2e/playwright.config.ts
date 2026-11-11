@@ -2,10 +2,9 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './',
-  fullyParallel: true,
-  reporter: 'html',
+  baseURL: process.env.BASE_URL || 'http://localhost:3000',
   use: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    trace: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
   projects: [

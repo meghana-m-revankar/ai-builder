@@ -1,12 +1,6 @@
 # Meghana Portfolio
 
-A modern, responsive, one-page portfolio website for a front-end developer based in Bengaluru.
+A clean, modern, responsive personal portfolio website for a front-end web developer, built with HTML, Tailwind CSS, and vanilla JavaScript.
 
-## How to use
-Simply open `index.html` in your web browser. No server or build steps are required.
-
-## Technologies used
-- HTML5
-- Tailwind CSS (via CDN)
-- Lucide Icons (via CDN)
-- Vanilla JavaScript
+## How to open
+Simply open `index.html` in any modern web browser. No build process or server required.

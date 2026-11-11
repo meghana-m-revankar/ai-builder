@@ -1,3 +1,4 @@
-/* Custom styles */
+:root { --transition: 0.3s; }
+.dark { color-scheme: dark; }
 html { scroll-behavior: smooth; }
-.dark body { background-color: #111827; }
+body { transition: background-color var(--transition), color var(--transition); }
