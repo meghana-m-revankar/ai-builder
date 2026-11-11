@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wanderlane Trips | Adventurous Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-900 font-body">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-display font-bold text-orange-600">Wanderlane</a>
+      <div class="hidden md:flex gap-8 font-medium">
+        <a href="index.html" class="hover:text-orange-600">Home</a>
+        <a href="packages.html" class="hover:text-orange-600">Packages</a>
+        <a href="contact.html" class="hover:text-orange-600">Contact</a>
+      </div>
+      <a href="contact.html" class="hidden md:block bg-orange-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-orange-700 transition">Book Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative h-[80vh] flex items-center">
+      <img loading="lazy" decoding="async" src="https://loremflickr.com/1600/900/mountain%2Cadventure" alt="Adventure travel hero" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="relative max-w-7xl mx-auto px-6 text-white">
+        <h1 class="text-5xl md:text-7xl font-display font-extrabold max-w-2xl leading-tight">Explore the Extraordinary with Wanderlane.</h1>
+        <p class="mt-6 text-xl max-w-xl text-slate-100">Hand-picked adventurous journeys across Kerala, Goa, Manali, Dubai, and Bali. Your next great story starts here.</p>
+        <div class="mt-10 flex gap-4">
+          <a href="packages.html" class="bg-orange-600 px-8 py-4 rounded-full font-bold hover:bg-orange-700 transition">Explore Packages</a>
+          <a href="#about" class="bg-white/20 backdrop-blur-md px-8 py-4 rounded-full font-bold hover:bg-white/30 transition">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center"><p class="text-4xl font-display font-bold text-orange-600">15+</p><p class="text-slate-600">Global Partners</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-orange-600">5k+</p><p class="text-slate-600">Happy Travelers</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-orange-600">20</p><p class="text-slate-600">Expert Guides</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-orange-600">4.9</p><p class="text-slate-600">Avg. Rating</p></div>
+      </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section class="py-24 max-w-7xl mx-auto px-6" id="packages">
+      <h2 class="text-4xl font-display font-bold text-center">Featured Adventures</h2>
+      <div class="mt-12 grid md:grid-cols-3 gap-8">
+        <article class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-lg transition">
+          <img loading="lazy" decoding="async" src="https://loremflickr.com/600/400/bali%2Cbeach%2Cluxury" alt="Bali package" class="w-full h-56 object-cover rounded-xl">
+          <h3 class="text-xl font-bold mt-6">Bali Tropical Escape</h3>
+          <p class="text-slate-600 mt-2">7 Days of bliss in the heart of Indonesia's paradise.</p>
+          <div class="mt-4 flex justify-between items-center"><span class="font-bold text-orange-600">$1,299</span><a href="packages.html" class="text-sm font-semibold underline">View Details</a></div>
+        </article>
+        <!-- ... others in real implementation ... -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+      <div class="col-span-2">
+        <span class="text-2xl font-display font-bold text-orange-500">Wanderlane</span>
+        <p class="mt-4 text-slate-400 max-w-sm">Crafting unforgettable journeys for the restless soul. Adventurous by nature, thorough by design.</p>
+      </div>
+      <div><h4 class="font-bold mb-4">Quick Links</h4><ul class="space-y-2 text-slate-400"><li><a href="index.html">Home</a></li><li><a href="packages.html">Packages</a></li></ul></div>
+      <div><h4 class="font-bold mb-4">Support</h4><ul class="space-y-2 text-slate-400"><li><a href="contact.html">Bookings</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-sm text-slate-500">© <span data-year></span> Wanderlane Trips. All rights reserved.</div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

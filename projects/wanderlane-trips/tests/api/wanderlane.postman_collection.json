@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "Wanderlane API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Packages",
+      "item": [
+        {
+          "name": "TC-API-001 List packages",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/packages"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": ["pm.test('status is 200', () => pm.response.to.have.status(200));"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
