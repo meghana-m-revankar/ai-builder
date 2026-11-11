@@ -1,0 +1,17 @@
+:root {
+  --brand-900: #064E3B;
+  --brand-700: #064E3B;
+  --brand-500: #10B981;
+  --brand-100: #ECFDF5;
+  --accent-500: #F472B6;
+  --surface: #FFFFFF;
+  --canvas: #F8FAFC;
+  --ink-900: #0F172A;
+  --ink-600: #475569;
+  --line: #E2E8F0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+body { font-family: 'Inter', sans-serif; background-color: var(--canvas); color: var(--ink-900); }
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bloom & Petal | Fresh Flowers in Bengaluru</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-stone-50 font-sans text-stone-900">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur shadow-sm">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-serif font-bold text-emerald-800">Bloom & Petal</a>
+      <div class="hidden md:flex gap-8">
+        <a href="index.html" class="hover:text-emerald-700">Home</a>
+        <a href="shop.html" class="hover:text-emerald-700">Shop</a>
+        <a href="about.html" class="hover:text-emerald-700">About</a>
+        <a href="contact.html" class="hover:text-emerald-700">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden"><i data-lucide="menu"></i></button>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="max-w-6xl mx-auto px-6 py-20 text-center">
+      <h1 class="text-6xl font-serif font-bold mb-6 text-stone-900">Flowers That Tell Your Story</h1>
+      <p class="text-xl text-stone-600 mb-10 max-w-2xl mx-auto">Hand-picked bouquets, curated for every occasion. Delivered fresh from our gardens to your doorstep.</p>
+      <a href="shop.html" class="bg-emerald-800 text-white px-8 py-4 rounded-full font-semibold hover:bg-emerald-900">Explore Collection</a>
+    </section>
+
+    <section class="bg-emerald-50 py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl font-serif font-bold mb-12 text-center text-emerald-900">Featured Bouquets</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://cdn.stocksnap.io/img-thumbs/960w/TQCY3FH54E.jpg" alt="Spring Bouquet" class="w-full h-64 object-cover">
+            <div class="p-6"><h3 class="font-bold text-xl mb-2">Spring Serenade</h3><p class="text-stone-600">Tulips, Daisies, and Hyacinths.</p></div>
+          </div>
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://cdn.stocksnap.io/img-thumbs/960w/FHHQMJJNS3.jpg" alt="Rose Bouquet" class="w-full h-64 object-cover">
+            <div class="p-6"><h3 class="font-bold text-xl mb-2">Classic Romance</h3><p class="text-stone-600">Deep red roses for your special someone.</p></div>
+          </div>
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm">
+            <img src="https://cdn.stocksnap.io/img-thumbs/960w/ZUVR2C2N96.jpg" alt="Sunflower Bouquet" class="w-full h-64 object-cover">
+            <div class="p-6"><h3 class="font-bold text-xl mb-2">Golden Sunshine</h3><p class="text-stone-600">Bright sunflowers to brighten any room.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-300 py-12 text-center">
+    <p>&copy; <span id="year"></span> Bloom & Petal. Handcrafted with love.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
