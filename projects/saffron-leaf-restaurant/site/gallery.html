@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Saffron Leaf Restaurant</title>
+<meta name="description" content="A symphony of North Indian flavors, refined for the modern palate.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#262626','100':'#404040','200':'#525252','300':'#737373','400':'#a3a3a3','500':'#d4d4d4','600':'#e5e5e5','700':'#f5f5f5','800':'#FFC857','900':'#B8860B'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Saffron Leaf Restaurant</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact &amp; Reservations</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact &amp; Reservations</a></div>
+</header>
+<main>
+<main class="bg-neutral-950 text-neutral-200">
+    <!-- Header Hero -->
+    <section class="relative py-32 flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8bHV4dXJ5JTIwaW50ZXJpb3J8ZW58MXx8fHwxNzk0NDIyMzg4fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80')] bg-cover bg-center opacity-30"></div>
+        <div class="relative z-10 px-4">
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-brand-500 mb-6">Our Visual Journal</h1>
+            <p class="text-xl max-w-2xl mx-auto text-neutral-300">A curated collection of culinary art, ambient elegance, and cherished moments at Saffron Leaf.</p>
+        </div>
+    </section>
+
+    <!-- Curated Food Photography -->
+    <section id="cuisine" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-display text-4xl mb-12 text-center text-white">Culinary Artistry</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-brand-900/20 transition-all">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1588644525273-f37b60d78512?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8bm9ydGglMjBpbmRpYW4lMjBjdWlzaW5lfGVufDF8fHx8MTc5NDQyMjM4OHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Signature Dal Makhani" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 bg-neutral-800">
+                        <h3 class="text-xl font-bold mb-2">Dal Makhani</h3>
+                        <p class="text-neutral-400">Slow-cooked for 24 hours to achieve that velvet texture. A timeless North Indian classic perfected over a decade.</p>
+                    </div>
+                </div>
+                <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-brand-900/20 transition-all">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnV0dGVyJTIwY2hpY2tlbiUyMHBsYXRlfGVufDF8fHx8MTc5NDQyMjM4OHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Butter Chicken" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 bg-neutral-800">
+                        <h3 class="text-xl font-bold mb-2">Butter Chicken</h3>
+                        <p class="text-neutral-400">Tender tandoor-grilled chicken simmered in a rich, buttery tomato gravy. Finished with a touch of fenugreek and cream.</p>
+                    </div>
+                </div>
+                <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-brand-900/20 transition-all">
+                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YmlyeWFuaSUyMG5vcnRofGVufDF8fHx8MTc5NDQyMjM4OHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Saffron Biryani" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="p-6 bg-neutral-800">
+                        <h3 class="text-xl font-bold mb-2">Saffron Biryani</h3>
+                        <p class="text-neutral-400">Aromatic long-grain basmati rice infused with premium saffron threads. Served with our signature cucumber raita.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interior Atmosphere -->
+    <section id="interior" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="font-display text-4xl mb-12 text-center text-white">Ambient Elegance</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1616486886892-ff366aa67ba4?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZGluaW5nJTIwcm9vbXxlbnwxfHx8fDE3OTQ0MjIzODh8MA&ixlib=rb-4.1.0&w=800&h=500&fit=crop&auto=format&q=80" alt="Main Dining Area" class="w-full h-96 object-cover rounded-2xl">
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-3xl font-display mb-4 text-brand-500">Sophisticated Dining</h3>
+                    <p class="text-neutral-400 mb-6 text-lg leading-relaxed">Experience a refined atmosphere where charcoal tones meet warm saffron lighting. Our Jayanagar space is designed for intimate conversations and grand celebrations alike.</p>
+                    <div class="flex gap-4">
+                        <i data-lucide="coffee" class="text-brand-600"></i>
+                        <span class="text-neutral-300">Perfect for private gatherings</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Celebration Highlights -->
+    <section id="events" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl mb-12 text-white">Memorable Milestones</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8d2VkZGluZyUyMGJhbnF1ZXR8ZW58MXx8fHwxNzk0NDIyMzg4fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Celebration" class="w-full h-64 object-cover rounded-2xl hover:opacity-90 transition-opacity">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwZXZlbnR8ZW58MXx8fHwxNzk0NDIyMzg4fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Corporate" class="w-full h-64 object-cover rounded-2xl hover:opacity-90 transition-opacity">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YW5uaXZlcnNhcnklMjBkaW5uZXJ8ZW58MXx8fHwxNzk0NDIyMzg4fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Anniversary" class="w-full h-64 object-cover rounded-2xl hover:opacity-90 transition-opacity">
+                <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1572715376701-98568319fd0b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y2hlZiUyMHNlcnZpY2V8ZW58MXx8fHwxNzk0NDIyMzg4fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Service" class="w-full h-64 object-cover rounded-2xl hover:opacity-90 transition-opacity">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 border-t border-neutral-800">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-display text-4xl mb-6">Ready to Experience Saffron Leaf?</h2>
+            <p class="text-neutral-400 mb-8">Join us in Jayanagar for an unforgettable culinary journey. Reservations are highly recommended.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 rounded-full font-bold transition-all">Book a Table</a>
+                <a href="menu.html" class="border border-brand-600 text-brand-500 hover:bg-brand-600 hover:text-white px-8 py-3 rounded-full font-bold transition-all">View Menu</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        lucide.createIcons();
+    });
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Saffron Leaf Restaurant</p><p class="mt-3 text-sm text-slate-400">A symphony of North Indian flavors, refined for the modern palate.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="menu.html" class="hover:text-white">Menu</a><a href="about.html" class="hover:text-white">About Us</a><a href="gallery.html" class="hover:text-white">Gallery</a><a href="contact.html" class="hover:text-white">Contact &amp; Reservations</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 15th Cross, Jayanagar 4th Block, Bangalore, Karnataka 560011. Phone: +91 98860 45678. Email: hello@saffronleaf.in. Hours: 12:00 PM - 11:00 PM daily. Founded: 2015 by Chef Arjun Mehra. Signature: Dal Makhani (₹450), Butter Chicken (₹650), Saffron Biryani (₹550). Milestones: 10 years of service, 80,000+ satisfied guests, 4.8/5 average rating. Team: 4 master chefs specializing in Tandoor and Curries.</p><p class="mt-2 text-sm text-slate-400">Address: 15th Cross, Jayanagar 4th Block, Bangalore, Karnataka 560011. Phone: +91 98860 45678. Email: hello@saffronleaf.in. Hours: 12:00 PM - 11:00 PM daily. Founded: 2015 by Chef Arjun Mehra. Signature: Dal Makhani (₹450), Butter Chicken (₹650), Saffron Biryani (₹550). Milestones: 10 years of service, 80,000+ satisfied guests, 4.8/5 average rating. Team: 4 master chefs specializing in Tandoor and Curries.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 15th Cross, Jayanagar 4th Block, Bangalore, Karnataka 560011. Phone: +91 98860 45678. Email: hello@saffronleaf.in. Hours: 12:00 PM - 11:00 PM daily. Founded: 2015 by Chef Arjun Mehra. Signature: Dal Makhani (₹450), Butter Chicken (₹650), Saffron Biryani (₹550). Milestones: 10 years of service, 80,000+ satisfied guests, 4.8/5 average rating. Team: 4 master chefs specializing in Tandoor and Curries.</p><p class="mt-2 text-sm text-slate-400">Address: 15th Cross, Jayanagar 4th Block, Bangalore, Karnataka 560011. Phone: +91 98860 45678. Email: hello@saffronleaf.in. Hours: 12:00 PM - 11:00 PM daily. Founded: 2015 by Chef Arjun Mehra. Signature: Dal Makhani (₹450), Butter Chicken (₹650), Saffron Biryani (₹550). Milestones: 10 years of service, 80,000+ satisfied guests, 4.8/5 average rating. Team: 4 master chefs specializing in Tandoor and Curries.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Saffron Leaf Restaurant. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
