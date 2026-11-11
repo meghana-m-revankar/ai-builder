@@ -7,9 +7,14 @@ namespace MeghanaPortfolio.Api.Controllers;
 [Route("api/v1/[controller]")]
 public class ProjectsController : ControllerBase
 {
-    private readonly IProjectRepository _repo;
-    public ProjectsController(IProjectRepository repo) => _repo = repo;
+    private readonly IProjectRepository _repository;
+
+    public ProjectsController(IProjectRepository repository) => _repository = repository;
 
     [HttpGet]
-    public async Task<IActionResult> GetAll(CancellationToken ct) => Ok(await _repo.GetAllAsync(ct));
+    public async Task<IActionResult> GetAll(CancellationToken ct)
+    {
+        var projects = await _repository.GetAllAsync(ct);
+        return Ok(projects);
+    }
 }

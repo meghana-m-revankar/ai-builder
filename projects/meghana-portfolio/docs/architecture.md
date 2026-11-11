@@ -1,36 +1,38 @@
-# Architecture: Meghana Portfolio
+# Architecture - Meghana Portfolio
 
 ## Overview
-A clean, responsive, single-page portfolio website built with HTML5, CSS3 (Bootstrap 5), and vanilla JavaScript. Designed for optimal viewing on mobile and desktop.
+A responsive, single-page portfolio website for a front-end developer. The project uses a static architecture to ensure speed, SEO-friendliness, and simple deployment.
 
-## Components & Sections
-- **Navigation**: Sticky top navbar with smooth scrolling to sections.
-- **Hero**: Introduction with CTA buttons.
-- **About**: Personal profile with resume download link.
-- **Projects**: Grid layout showcasing work.
-- **Skills**: Badges highlighting technical stack.
-- **Contact**: Functional form with client-side validation.
-- **Footer**: Social media links.
-- **Features**: Theme toggler (Light/Dark mode) and back-to-top button.
+## Navigation & Sections
+- **Navigation:** Sticky top menu with smooth-scroll linking.
+- **Sections:**
+    1. **Home:** Introduction, hero image, CTA buttons.
+    2. **About:** Personal summary, 3+ years experience, resume download.
+    3. **Projects:** Showcase of three featured works with descriptive cards.
+    4. **Skills:** Visual representation of technical stack using stylized badges.
+    5. **Contact:** Interactive form with client-side validation.
+    6. **Footer:** Social links and copyright.
 
 ## Folder Structure
 ```
 /
-├── index.html          # Main entry point
+├── index.html
 ├── css/
-│   ├── styles.css      # Custom overrides and theme definitions
-│   └── dark-mode.css   # Dark mode variables and overrides
+│   └── style.css
 ├── js/
-│   ├── main.js         # Smooth scrolling, form validation, theme toggle
-│   └── scroll-top.js   # Back-to-top logic
-├── images/
-│   ├── profile.jpg     # Professional headshot
-│   └── project-1.jpg   # Placeholder images
-└── favicon.ico
+│   └── main.js
+├── assets/
+│   ├── images/
+│   │   ├── hero.jpg
+│   │   ├── project-1.jpg
+│   │   ├── project-2.jpg
+│   │   └── project-3.jpg
+│   └── resume.pdf
+└── README.md
 ```
 
 ## Design Decisions
-- **Framework**: Bootstrap 5 used for rapid, responsive layout without external dependencies.
-- **Interaction**: Vanilla JS used to keep the site lightweight and fast.
-- **Accessibility**: Semantic HTML5 tags (`<nav>`, `<header>`, `<main>`, `<section>`, `<footer>`).
-- **Theme**: Light/Dark mode toggled via a CSS class on the `<body>` element.
+- **Framework:** Vanilla HTML5, CSS3, and JavaScript to maintain zero dependencies and high performance.
+- **UI System:** Custom CSS combined with a clean, modern color palette and typography.
+- **Responsiveness:** Mobile-first approach with a CSS-based hamburger menu.
+- **Interactivity:** Smooth scrolling, dark mode toggle using CSS variables, and basic form validation.

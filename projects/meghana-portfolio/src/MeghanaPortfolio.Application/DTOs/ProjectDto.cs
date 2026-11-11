@@ -1,3 +1,3 @@
 namespace MeghanaPortfolio.Application.DTOs;
 
-public record ProjectDto(Guid Id, string Title, string Description, string[] TechStack, string? ProjectUrl, string? ImageUrl);
+public record ProjectDto(Guid Id, string Title, string Description, string? ImageUrl, string? ProjectUrl);

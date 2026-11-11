@@ -3,59 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meghana | Front-End Web Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <title>Meghana M Revankar | Front-End Developer</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Meghana</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar">
+        <div class="logo">Meghana M Revankar</div>
+        <div class="hamburger" id="hamburger">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
     </nav>
 
-    <header id="home" class="py-5 mt-5 text-center">
-        <h1>Meghana</h1>
-        <p class="lead">Front-End Web Developer</p>
-        <a href="#projects" class="btn btn-primary">See My Work</a>
-        <a href="#contact" class="btn btn-outline-secondary">Contact Me</a>
-    </header>
-
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2>About</h2>
-            <p>Passionate developer creating modern web experiences.</p>
-            <a href="#" class="btn btn-dark">Download Resume</a>
+    <section id="home">
+        <h1>Meghana M Revankar</h1>
+        <p class="title">Front-End Web Developer, based in Bengaluru, India</p>
+        <p class="tagline">I turn Figma designs into fast, pixel-perfect, responsive websites.</p>
+        <div class="cta">
+            <a href="#projects" class="btn">See My Work</a>
+            <a href="#contact" class="btn">Contact Me</a>
         </div>
     </section>
 
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-4">Project 1</div>
-                <div class="col-md-4">Project 2</div>
-                <div class="col-md-4">Project 3</div>
-            </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I have over 3 years of experience building scalable web applications with a focus on user experience and clean, maintainable code.</p>
+        <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="card"><h3>Shopping Website</h3><p>E-commerce platform build with React.</p><button>View Project</button></div>
+            <div class="card"><h3>Analytics Dashboard</h3><p>Data visualization tool.</p><button>View Project</button></div>
+            <div class="card"><h3>Mobile App Landing Page</h3><p>High-conversion marketing site.</p><button>View Project</button></div>
         </div>
     </section>
 
-    <footer class="py-4 text-center">
-        <p>&copy; 2023 Meghana</p>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="badges">
+            <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>TypeScript</span> <span>React</span> <span>Tailwind CSS</span> <span>Material UI</span> <span>Figma</span>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="msg-status"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Meghana M Revankar</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

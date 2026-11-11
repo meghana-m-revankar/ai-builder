@@ -1,29 +1,18 @@
--- Seed Data
-insert into projects (id, title, description, tech_stack, project_url, display_order) values
-('f47ac10b-58cc-4372-a567-0e02b2c3d479', 'E-commerce Platform', 'Full-stack retail solution', ARRAY['React', 'Node.js', 'PostgreSQL'], 'https://example.com/project1', 1),
-('c3f4e5a6-b7c8-4d9e-a0f1-b2c3d4e5f6a7', 'Task Manager', 'Personal productivity tool', ARRAY['Vue.js', 'Firebase'], 'https://example.com/project2', 2),
-('a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d', 'Weather Dashboard', 'Real-time climate tracking', ARRAY['JavaScript', 'OpenWeatherAPI'], 'https://example.com/project3', 3);
+-- seed.sql: Sample data for Meghana Portfolio
 
-insert into skills (name, category, proficiency_level) values
-('HTML5', 'Frontend', 5),
-('CSS3', 'Frontend', 5),
-('Bootstrap', 'Frontend', 4),
-('JavaScript', 'Frontend', 5),
-('React', 'Frontend', 4),
-('Node.js', 'Backend', 4),
-('PostgreSQL', 'Backend', 4),
-('Docker', 'Tools', 3),
-('Git', 'Tools', 5),
-('Figma', 'Design', 3);
+insert into projects (id, title, description, image_url) values
+('f47ac10b-58cc-4372-a567-0e02b2c3d479', 'E-commerce Dashboard', 'A responsive admin panel for inventory management.', 'https://picsum.photos/seed/p1/800/600'),
+('e37bc21c-69dd-4483-b678-1f13c3d4e580', 'Task Management App', 'Drag-and-drop task board with real-time updates.', 'https://picsum.photos/seed/p2/800/600'),
+('d26cd32d-70ee-4594-c789-2g24d4e5f691', 'Weather Forecast PWA', 'Offline-capable weather tracking application.', 'https://picsum.photos/seed/p3/800/600');
 
 insert into contact_messages (full_name, email, subject, message, status) values
-('Aisha Al Mansoori', 'aisha@example.com', 'Collaboration', 'Would love to discuss a project.', 'new'),
-('Omar Haddad', 'omar@example.com', 'Job Inquiry', 'Are you currently accepting new clients?', 'new'),
-('Aigerim Nurlanovna', 'aigerim@example.com', 'Feedback', 'Love your portfolio design!', 'read'),
-('Daniyar Seitkali', 'daniyar@example.com', 'Consulting', 'Need help with a web migration.', 'new'),
-('John Smith', 'john@example.com', 'Bug Report', 'Broken link on projects section.', 'archived'),
-('Sara Ali', 'sara@example.com', 'Freelance', 'Do you work with React Native?', 'new'),
-('Khalid Ahmed', 'khalid@example.com', 'Hello', 'Just saying hi!', 'new'),
-('Elena Petrova', 'elena@example.com', 'Question', 'What themes did you use?', 'new'),
-('David Kim', 'david@example.com', 'Partnership', 'Looking to connect.', 'new'),
-('Fatima Zahra', 'fatima@example.com', 'Pricing', 'What are your rates?', 'new');
+('Aisha Al Mansoori', 'aisha@example.com', 'Collaboration', 'Hi Meghana, I saw your portfolio and would like to discuss a web project.', 'new'),
+('Omar Haddad', 'omar@example.com', 'Job Inquiry', 'We have an opening for a senior front-end developer, are you interested?', 'read'),
+('Aigerim Nurlanovna', 'aigerim@example.com', 'Portfolio Feedback', 'Great work on the projects section!', 'archived'),
+('Daniyar Seitkali', 'daniyar@example.com', 'Freelance Opportunity', 'Looking for a developer to help with a UI overhaul.', 'new'),
+('Fatima Zahra', 'fatima@example.com', 'Question', 'What technologies did you use for the task app?', 'new'),
+('Zaid Al-Farsi', 'zaid@example.com', 'Interview', 'Would you be available for a call next week?', 'new'),
+('Sara Mansour', 'sara@example.com', 'Project Help', 'Need help debugging a CSS grid layout.', 'new'),
+('Khalid Ibrahim', 'khalid@example.com', 'Consulting', 'We need a consultation on web performance.', 'new'),
+('Leila Bakir', 'leila@example.com', 'Proposal', 'Please send your resume for our vacancy.', 'read'),
+('Youssef Ahmed', 'youssef@example.com', 'General Inquiry', 'Just saying hello, wonderful site.', 'archived');

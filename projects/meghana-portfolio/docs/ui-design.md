@@ -1,42 +1,35 @@
-# UI Design: Meghana Portfolio
+# UI Design - Meghana M Revankar Portfolio
 
-## Overview
-A minimalist, high-contrast, and performant portfolio website. The design focuses on readability, clear typography, and a modern "Bento grid" aesthetic for projects.
+## Single-Page Portfolio
+- **Purpose:** Showcase skills, experience, and projects for professional opportunities.
+- **Layout:** Responsive, single-column design on mobile, centered max-width content container on desktop.
+- **Navigation:**
+    - Sticky top navbar with logo (left) and links (right).
+    - Links: About, Projects, Skills, Contact.
+    - Hamburger menu triggers off-canvas/dropdown overlay on mobile.
+- **Sections & Elements:**
+    1. **Home:** 
+        - Split layout: text left, hero visual right.
+        - Headline: "I turn Figma designs into fast, pixel-perfect, responsive websites."
+        - CTA: "View Projects" (solid button), "Contact Me" (outline button).
+    2. **About:**
+        - Heading: "About Me"
+        - Text block: 3+ years of experience description.
+        - Button: "Download Resume" (secondary action).
+    3. **Projects:**
+        - Grid: 3 cards.
+        - Card content: Image, title, short description, link to project demo.
+    4. **Skills:**
+        - Flex grid of skill badges (HTML5, CSS3, JS, TS, React, Tailwind, MUI, Figma).
+    5. **Contact:**
+        - Fields: Name (text), Email (email), Message (textarea).
+        - Buttons: "Send Message" (primary action).
+    6. **Footer:**
+        - Social icons (LinkedIn, GitHub), copyright notice.
 
-## Pages
-
-### index.html (Single Page Application)
-
-#### 1. Navigation (Sticky)
-- **Purpose**: Facilitate easy navigation across sections.
-- **Layout**: Logo (left), Nav links (About, Projects, Skills, Contact), Theme Toggler (Sun/Moon icon).
-- **Actions**: Smooth scroll navigation, theme switch.
-
-#### 2. Hero Section
-- **Purpose**: Immediate identification and value proposition.
-- **Layout**: Large headline (72px), subtitle, CTA (Primary: "View Projects", Secondary: "Download Resume").
-- **Actions**: Smooth scroll to Projects section, trigger file download.
-
-#### 3. About Section
-- **Purpose**: Personal narrative and professional summary.
-- **Layout**: Two-column layout (Left: Text, Right: Profile image with soft shadow).
-- **Actions**: None.
-
-#### 4. Projects Section (Bento Grid)
-- **Purpose**: Showcase professional work.
-- **Layout**: 3-column responsive grid using Bootstrap `row`. Each card features: image, title, description, tags, and links.
-- **Actions**: View Project link, View Source link.
-
-#### 5. Skills Section
-- **Purpose**: Highlight technical expertise.
-- **Layout**: Flexbox container with pills for each skill.
-- **Actions**: None.
-
-#### 6. Contact Section
-- **Purpose**: Lead generation.
-- **Layout**: Simple form with Name, Email, Subject, Message fields.
-- **Actions**: Submit (with client-side validation, showing success message).
-
-#### 7. Footer
-- **Purpose**: Standard utility links and branding.
-- **Layout**: Three columns: Branding, Social Links, Copyright.
+## Interaction Patterns
+- Dark mode toggle in the navbar.
+- Smooth scrolling on link clicks.
+- Hover states for all buttons and interactive cards.
+- Mobile menu transition.
+- Form validation: visual error state on invalid inputs.
