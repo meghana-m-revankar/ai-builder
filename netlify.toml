@@ -1,10 +1,25 @@
-# Netlify: serve the repo as a static site (no build step).
 [build]
-  publish = "."
+  publish = "projects"
   command = ""
 
-# Don't let Netlify cache the platform scripts, so changes show up immediately.
-[[headers]]
-  for = "/platform/*"
-  [headers.values]
-    Cache-Control = "no-cache"
+# only the static site/ folders are public; block the full-stack code
+[[redirects]]
+  from = "/:project/src/*"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/:project/db/*"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/:project/tests/*"
+  to = "/404"
+  status = 404
+  force = true
+[[redirects]]
+  from = "/:project/docker/*"
+  to = "/404"
+  status = 404
+  force = true

@@ -1,0 +1,35 @@
+{
+	"info": {
+		"name": "BrewPoint API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "TC-API-001 List products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/api/v1/products"
+					},
+					"event": [{
+						"listen": "test",
+						"script": {
+							"exec": [
+								"pm.test('status is 200', () => pm.response.to.have.status(200));",
+								"pm.test('fast enough', () => pm.expect(pm.response.responseTime).to.be.below(500));"
+							]
+						}
+					}]
+				}
+			]
+		}
+	],
+	"variable": [
+		{ "key": "baseUrl", "value": "http://localhost:5000" },
+		{ "key": "token", "value": "" },
+		{ "key": "createdId", "value": "" }
+	]
+}
