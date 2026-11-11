@@ -1,0 +1,9 @@
+body.dark-mode {
+    --bg: #0B1B3F;
+    --text: #FFFFFF;
+    background-color: var(--bg);
+    color: var(--text);
+}
+.dark-mode .navbar { background-color: #1E293B !important; }
+.dark-mode .card { background-color: #1E293B; color: #FFFFFF; }
+.dark-mode .text-muted { color: #94A3B8 !important; }
