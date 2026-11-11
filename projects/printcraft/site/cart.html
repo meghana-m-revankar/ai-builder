@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart &amp; Checkout | PrintCraft</title>
+<meta name="description" content="Print anything, beautifully.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+</header>
+<main>
+<main class="bg-gray-50 pt-24 pb-16">
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-display font-bold text-gray-900 mb-8">Secure Checkout</h1>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Cart Items -->
+        <div class="lg:col-span-2 space-y-6">
+          <div id="cart-items" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+              <i data-lucide="shopping-bag" class="text-brand-600"></i> Your Items
+            </h2>
+            <div id="cart-list" class="space-y-4">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <!-- Coupon Code -->
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <div class="flex gap-3">
+              <input type="text" id="coupon" placeholder="Enter discount code" class="flex-1 border rounded-xl px-4 py-3 focus:ring-2 focus:ring-brand-500 outline-none">
+              <button onclick="applyCoupon()" class="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-black transition">Apply</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary & Form -->
+        <div class="space-y-6">
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+            <h3 class="font-bold text-lg mb-4">Order Summary</h3>
+            <div id="summary-details" class="space-y-3 text-gray-600">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <form id="checkout-form" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 space-y-4">
+            <h3 class="font-bold text-lg">Shipping Details</h3>
+            <input type="text" required placeholder="Full Name" class="w-full border rounded-xl px-4 py-3">
+            <input type="text" required placeholder="Shipping Address" class="w-full border rounded-xl px-4 py-3">
+            <input type="tel" required placeholder="Phone Number" class="w-full border rounded-xl px-4 py-3">
+            <button type="submit" class="w-full bg-brand-600 text-white py-4 rounded-xl font-bold hover:bg-brand-700 transition flex items-center justify-center gap-2">
+              <i data-lucide="credit-card"></i> Place Order (₹<span id="final-total">0</span>)
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+  let discount = 0;
+
+  function renderCart() {
+    const list = document.getElementById('cart-list');
+    const summary = document.getElementById('summary-details');
+    let subtotal = 0;
+
+    if (cart.length === 0) {
+      list.innerHTML = '<p class="text-gray-500 py-10 text-center">Your cart is empty. <a href="shop.html" class="text-brand-600 font-bold underline">Start shopping</a></p>';
+      summary.innerHTML = '<p class="text-center">No items to calculate</p>';
+      return;
+    }
+
+    list.innerHTML = cart.map((item, index) => {
+      subtotal += item.price * item.qty;
+      return `
+        <div class="flex items-center gap-4 py-3 border-b">
+          <img loading="lazy" decoding="async" src="${item.image}" class="w-16 h-16 object-cover rounded-lg">
+          <div class="flex-1">
+            <h4 class="font-semibold">${item.name}</h4>
+            <p class="text-sm text-gray-500">Qty: ${item.qty} × ₹${item.price}</p>
+          </div>
+          <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700"><i data-lucide="trash-2" class="w-5 h-5"></i></button>
+        </div>
+      `;
+    }).join('');
+
+    const gst = subtotal * 0.18;
+    const shipping = subtotal > 1000 ? 0 : 50;
+    const total = subtotal + gst + shipping - discount;
+
+    summary.innerHTML = `
+      <div class="flex justify-between"><span>Subtotal</span><span>₹${subtotal.toFixed(2)}</span></div>
+      <div class="flex justify-between"><span>GST (18%)</span><span>₹${gst.toFixed(2)}</span></div>
+      <div class="flex justify-between"><span>Shipping</span><span>${shipping === 0 ? 'Free' : '₹' + shipping}</span></div>
+      <div class="border-t pt-3 flex justify-between font-bold text-lg text-brand-900"><span>Total</span><span>₹${total.toFixed(2)}</span></div>
+    `;
+    document.getElementById('final-total').innerText = total.toFixed(2);
+    lucide.createIcons();
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    renderCart();
+  }
+
+  function applyCoupon() {
+    const code = document.getElementById('coupon').value;
+    if (code === 'PRINT10') {
+      discount = 100;
+      alert('Coupon applied: ₹100 off');
+      renderCart();
+    } else {
+      alert('Invalid coupon code');
+    }
+  }
+
+  document.getElementById('checkout-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Order placed successfully! Redirecting...');
+    localStorage.removeItem('cart');
+    window.location.href = 'index.html';
+  });
+
+  renderCart();
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

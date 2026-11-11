@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track Order | PrintCraft</title>
+<meta name="description" content="Print anything, beautifully.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+</header>
+<main>
+<main>
+    <section class="py-20 bg-brand-50">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-display font-bold text-brand-900 mb-6">Track Your Order</h1>
+            <p class="text-xl text-gray-600 mb-10">Enter your order ID below to get real-time updates on your prints.</p>
+            
+            <form id="trackForm" class="bg-white p-8 rounded-2xl shadow-xl flex flex-col md:flex-row gap-4">
+                <input type="text" id="orderInput" placeholder="Enter Order ID (e.g., PC-8829)" class="flex-grow p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none" required>
+                <button type="submit" class="bg-brand-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-brand-700 transition">Track Status</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="timeline-section" class="py-16 hidden">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-brand-900 mb-12 text-center">Current Status</h2>
+            <div id="timeline" class="relative border-l-4 border-brand-200 ml-3 md:ml-0 space-y-12">
+                <!-- Timeline injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="history-section" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-brand-900 mb-8">Recent Orders</h2>
+            <div class="overflow-x-auto bg-white rounded-2xl border border-gray-100 shadow-sm">
+                <table class="w-full text-left">
+                    <thead class="bg-brand-50 text-brand-900">
+                        <tr>
+                            <th class="p-6">Order ID</th>
+                            <th class="p-6">Date</th>
+                            <th class="p-6">Items</th>
+                            <th class="p-6">Total</th>
+                            <th class="p-6">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody" class="divide-y divide-gray-100">
+                        <!-- History injected by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-brand-900 text-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-display font-bold mb-6">Need Assistance?</h2>
+            <p class="text-lg text-brand-200 mb-8">Our team at Residency Road is ready to help with your order inquiries. Call us at +91 80 4712 3456.</p>
+            <a href="shop.html" class="inline-block bg-white text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-brand-100 transition">Browse Shop</a>
+        </div>
+    </section>
+</main>
+
+<script>
+    const orderData = {
+        "PC-8829": { status: "Shipped", date: "2023-10-24", items: "Business Cards x 500", total: "₹1,499", timeline: ["Order Placed", "Printing", "Quality Check", "Shipped"] },
+        "PC-9012": { status: "Delivered", date: "2023-10-15", items: "T-shirts x 5", total: "₹2,495", timeline: ["Order Placed", "Printing", "Quality Check", "Shipped", "Delivered"] }
+    };
+
+    document.getElementById('trackForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('orderInput').value.toUpperCase();
+        const order = orderData[id];
+        const timeline = document.getElementById('timeline');
+        const section = document.getElementById('timeline-section');
+        
+        if (order) {
+            section.classList.remove('hidden');
+            timeline.innerHTML = order.timeline.map((step, index) => `
+                <div class="relative pl-8">
+                    <div class="absolute -left-[14px] top-0 w-7 h-7 bg-brand-600 rounded-full border-4 border-white"></div>
+                    <h3 class="text-xl font-bold text-brand-900">${step}</h3>
+                    <p class="text-gray-500">${index === order.timeline.length - 1 ? 'Completed' : 'Processing'}</p>
+                </div>
+            `).join('');
+            lucide.createIcons();
+        } else {
+            alert("Order not found. Please check your ID.");
+        }
+    });
+
+    const renderHistory = () => {
+        const body = document.getElementById('historyTableBody');
+        body.innerHTML = Object.entries(orderData).map(([id, data]) => `
+            <tr>
+                <td class="p-6 font-semibold">${id}</td>
+                <td class="p-6 text-gray-600">${data.date}</td>
+                <td class="p-6 text-gray-600">${data.items}</td>
+                <td class="p-6 font-bold text-brand-600">${data.total}</td>
+                <td class="p-6"><span class="px-3 py-1 rounded-full ${data.status === 'Delivered' ? 'bg-green-100 text-green-700' : 'bg-blue-100 text-blue-700'}">${data.status}</span></td>
+            </tr>
+        `).join('');
+    };
+
+    renderHistory();
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

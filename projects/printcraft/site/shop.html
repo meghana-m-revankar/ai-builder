@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop | PrintCraft</title>
+<meta name="description" content="Print anything, beautifully.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+</header>
+<main>
+<main class="bg-white">
+  <!-- Hero / Header -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-5xl md:text-6xl text-slate-900 mb-6">Our Premium Collection</h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto">From professional stationery to custom apparel, explore our curated range of high-quality printing solutions.</p>
+    </div>
+  </section>
+
+  <!-- Category & Controls -->
+  <section class="py-8 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex flex-wrap gap-2" id="filter-container">
+        <button onclick="filterProducts('all')" class="px-5 py-2 bg-brand-600 text-white rounded-full hover:bg-brand-700 transition">All Products</button>
+        <button onclick="filterProducts('Stationery')" class="px-5 py-2 bg-white border border-slate-200 rounded-full hover:border-brand-600 transition">Stationery</button>
+        <button onclick="filterProducts('Apparel')" class="px-5 py-2 bg-white border border-slate-200 rounded-full hover:border-brand-600 transition">Apparel</button>
+        <button onclick="filterProducts('Stickers')" class="px-5 py-2 bg-white border border-slate-200 rounded-full hover:border-brand-600 transition">Stickers</button>
+      </div>
+      <div class="relative w-full md:w-64">
+        <input type="text" id="search" placeholder="Search products..." onkeyup="searchProducts()" class="w-full pl-10 pr-4 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none">
+        <i data-lucide="search" class="w-5 h-5 absolute left-3 top-2.5 text-slate-400"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- JS Injected -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="py-20 bg-brand-900 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="font-display text-4xl mb-6">Need a custom quote?</h2>
+      <p class="text-brand-100 mb-8">Join 50,000+ happy creators. Our team at Residency Road is ready to bring your vision to life.</p>
+      <a href="mailto:hello@printcraft.in" class="inline-block bg-white text-brand-900 px-8 py-4 rounded-xl font-bold hover:bg-brand-50 transition">Contact Support</a>
+    </div>
+  </section>
+</main>
+
+<script>
+  const products = [
+    { id: 1, name: "Premium Business Cards", price: 199, category: "Stationery", img: "https://loremflickr.com/800/600/business%2Ccards%2Cmockup" },
+    { id: 2, name: "Custom Vinyl Stickers", price: 99, category: "Stickers", img: "https://loremflickr.com/800/600/vibrant%2Cstickers" },
+    { id: 3, name: "Graphic Cotton T-shirt", price: 499, category: "Apparel", img: "https://loremflickr.com/800/600/tshirt%2Cprinting" },
+    { id: 4, name: "Letterhead Sets", price: 299, category: "Stationery", img: "https://loremflickr.com/800/600/minimalist%2Cstationery" },
+    { id: 5, name: "Die-cut Logo Stickers", price: 149, category: "Stickers", img: "https://loremflickr.com/800/600/die%2Ccut%2Cstickers" },
+    { id: 6, name: "Premium Polo Shirts", price: 799, category: "Apparel", img: "https://loremflickr.com/800/600/polo%2Cshirt%2Cprint" }
+  ];
+
+  function renderProducts(filter = 'all', search = '') {
+    const grid = document.getElementById('product-grid');
+    const filtered = products.filter(p => 
+      (filter === 'all' || p.category === filter) && 
+      (p.name.toLowerCase().includes(search.toLowerCase()))
+    );
+
+    grid.innerHTML = filtered.map(p => `
+      <div class="bg-white rounded-2xl shadow-lg hover:-translate-y-1 transition p-4 border border-slate-100">
+        <img loading="lazy" decoding="async" src="${p.img}" alt="${p.name}" class="w-full h-64 object-cover rounded-xl mb-4">
+        <h3 class="font-display text-xl mb-2">${p.name}</h3>
+        <p class="text-brand-600 font-bold mb-4">₹${p.price} <span class="text-xs text-slate-400 font-normal">incl. GST</span></p>
+        <button onclick="addToCart(${p.id})" class="w-full py-3 bg-slate-900 text-white rounded-xl hover:bg-brand-600 transition flex items-center justify-center gap-2">
+          <i data-lucide="shopping-cart" class="w-4 h-4"></i> Add to Cart
+        </button>
+      </div>
+    `).join('');
+    lucide.createIcons();
+  }
+
+  function filterProducts(cat) { renderProducts(cat, document.getElementById('search').value); }
+  function searchProducts() { renderProducts('all', document.getElementById('search').value); }
+
+  function addToCart(id) {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const product = products.find(p => p.id === id);
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Added ' + product.name + ' to cart!');
+  }
+
+  renderProducts();
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

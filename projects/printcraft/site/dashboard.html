@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard | PrintCraft</title>
+<meta name="description" content="Print anything, beautifully.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+</header>
+<main>
+<main class="bg-slate-50 min-h-screen">
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-display font-bold text-slate-900 mb-8">Admin Dashboard</h1>
+            <div id="kpi-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <!-- KPI Cards Rendered by JS -->
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                    <h2 class="text-xl font-bold mb-4 font-display">Sales Overview</h2>
+                    <div id="sales-chart" class="h-64 flex items-end gap-2 p-4 bg-slate-50 rounded-xl">
+                        <!-- Chart bars -->
+                    </div>
+                </div>
+                <div class="bg-brand-600 text-white p-6 rounded-2xl shadow-lg">
+                    <h2 class="text-xl font-bold mb-4 font-display">Quick Status Update</h2>
+                    <form id="status-form" class="space-y-4">
+                        <input type="text" id="order-id-input" placeholder="Order ID (e.g. PC-101)" class="w-full p-3 rounded-lg text-slate-900" required>
+                        <select id="status-select" class="w-full p-3 rounded-lg text-slate-900">
+                            <option value="Processing">Processing</option>
+                            <option value="Printing">Printing</option>
+                            <option value="Shipped">Shipped</option>
+                            <option value="Delivered">Delivered</option>
+                        </select>
+                        <button type="submit" class="w-full bg-white text-brand-600 font-bold py-3 rounded-lg hover:bg-slate-100 transition">Update Status</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden mb-12">
+                <div class="p-6 border-b border-slate-100"><h2 class="text-xl font-bold font-display">Recent Orders</h2></div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-50 text-slate-600 uppercase text-sm">
+                            <tr>
+                                <th class="p-4">Order ID</th>
+                                <th class="p-4">Customer</th>
+                                <th class="p-4">Product</th>
+                                <th class="p-4">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
+                <h2 class="text-xl font-bold mb-6 font-display">Product Inventory</h2>
+                <div id="inventory-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-6"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    const state = {
+        orders: [
+            { id: 'PC-101', customer: 'Ananya Rao', product: 'Business Cards', status: 'Delivered' },
+            { id: 'PC-102', customer: 'Rahul Sharma', product: 'T-shirts', status: 'Printing' },
+            { id: 'PC-103', customer: 'Priya Singh', product: 'Stickers', status: 'Processing' }
+        ],
+        inventory: [
+            { name: 'Business Cards', stock: 1200, price: '₹199' },
+            { name: 'Stickers', stock: 4500, price: '₹99' },
+            { name: 'T-shirts', stock: 350, price: '₹499' }
+        ]
+    };
+
+    function renderDashboard() {
+        const kpiGrid = document.getElementById('kpi-grid');
+        kpiGrid.innerHTML = `
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm"><p class="text-slate-500">Total Orders</p><h3 class="text-3xl font-bold">${state.orders.length}</h3></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm"><p class="text-slate-500">Revenue</p><h3 class="text-3xl font-bold">₹84,200</h3></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm"><p class="text-slate-500">Active Prints</p><h3 class="text-3xl font-bold">12</h3></div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm"><p class="text-slate-500">Customers</p><h3 class="text-3xl font-bold">50k+</h3></div>
+        `;
+
+        const tableBody = document.getElementById('orders-table-body');
+        tableBody.innerHTML = state.orders.map(o => `
+            <tr class="border-b border-slate-50">
+                <td class="p-4 font-mono font-bold text-brand-600">${o.id}</td>
+                <td class="p-4">${o.customer}</td>
+                <td class="p-4">${o.product}</td>
+                <td class="p-4"><span class="px-3 py-1 rounded-full bg-slate-100 text-xs font-bold">${o.status}</span></td>
+            </tr>
+        `).join('');
+
+        const invGrid = document.getElementById('inventory-grid');
+        invGrid.innerHTML = state.inventory.map(p => `
+            <div class="p-4 bg-slate-50 rounded-xl">
+                <h4 class="font-bold">${p.name}</h4>
+                <p class="text-sm text-slate-600">Stock: ${p.stock} units</p>
+                <p class="text-brand-600 font-bold">${p.price}</p>
+            </div>
+        `).join('');
+
+        const chart = document.getElementById('sales-chart');
+        chart.innerHTML = [40, 70, 45, 90, 60, 85].map(h => `<div class="w-full bg-brand-200 rounded-t-lg" style="height:${h}%"></div>`).join('');
+    }
+
+    document.getElementById('status-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const id = document.getElementById('order-id-input').value;
+        const status = document.getElementById('status-select').value;
+        const order = state.orders.find(o => o.id === id);
+        if(order) {
+            order.status = status;
+            renderDashboard();
+            alert('Status updated successfully!');
+        } else {
+            alert('Order not found.');
+        }
+    });
+
+    renderDashboard();
+    lucide.createIcons();
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
+</footer>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
