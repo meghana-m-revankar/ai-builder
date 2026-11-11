@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | Brew & Bloom</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-gray-100">
+  <div class="flex">
+    <aside class="w-64 bg-brand-900 min-h-screen text-white p-6">
+      <h2 class="text-xl font-bold">Staff Admin</h2>
+      <nav class="mt-10 space-y-4">
+        <a href="#" class="flex gap-3 text-brand-500"><i data-lucide="layout-dashboard"></i> Overview</a>
+        <a href="#" class="flex gap-3 hover:text-white"><i data-lucide="shopping-bag"></i> Orders</a>
+      </nav>
+    </aside>
+    <main class="flex-1 p-8">
+      <div class="grid grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm">Total Sales<h3 class="text-2xl font-bold">₹12,450</h3></div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">New Orders<h3 class="text-2xl font-bold">24</h3></div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">Avg Ticket<h3 class="text-2xl font-bold">₹480</h3></div>
+        <div class="bg-white p-6 rounded-xl shadow-sm">Flowers Sold<h3 class="text-2xl font-bold">12</h3></div>
+      </div>
+      <div class="mt-8 bg-white p-6 rounded-xl shadow-sm">
+        <h3 class="font-bold mb-4">Recent Activity</h3>
+        <table class="w-full text-left">
+          <thead><tr class="border-b"><th class="py-3">Order ID</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead>
+          <tbody id="order-table"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="js/data.js"></script>
+  <script>
+    const table = document.getElementById('order-table');
+    dashboardOrders.forEach(o => {
+      table.innerHTML += `<tr class="border-b py-2"><td>${o.id}</td><td>${o.customer}</td><td>₹${o.total}</td><td>${o.status}</td></tr>`;
+    });
+  </script>
+  <script src="js/main.js"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

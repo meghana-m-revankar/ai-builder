@@ -1,0 +1,8 @@
+:root {
+  --color-cream: #FDFBF7;
+  --color-coffee: #4A3728;
+  --color-rose: #E6A8A8;
+}
+body { background-color: var(--color-cream); color: var(--color-coffee); }
+.text-brand-900 { color: var(--color-coffee); }
+.text-accent { color: var(--color-rose); }
