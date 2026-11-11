@@ -5,7 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>PrintCraft.Web</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PrintCraft.Application\PrintCraft.Application.csproj" />
-  </ItemGroup>
 </Project>

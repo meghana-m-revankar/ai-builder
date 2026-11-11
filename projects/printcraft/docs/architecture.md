@@ -1,21 +1,21 @@
-# 03 Architecture
+# PrintCraft Architecture
 
 ## Overview
-PrintCraft is an online custom printing store based in Bangalore, India. It provides a platform for customers to order custom prints across categories like business cards, flyers, and apparel.
+PrintCraft is an e-commerce platform for custom printing services. It uses a Clean Architecture approach with .NET 8, Blazor Server, and PostgreSQL.
 
 ## Container Diagram
 ```mermaid
 flowchart LR
-    User[Customer/Admin] --> Web[Blazor Web App]
-    Web --> Api[PrintCraft.Api]
-    Api --> DB[(PostgreSQL)]
+    User((User)) --> Web[PrintCraft.Web - Blazor]
+    Web --> API[PrintCraft.Api - ASP.NET Core]
+    API --> DB[(PostgreSQL)]
 ```
 
 ## Modules
-- **Domain**: Core business logic (Orders, Products, Design Files).
-- **Application**: Use cases (PlaceOrder, CalculatePrice, UpdateOrderStatus).
-- **Infrastructure**: Database access (EF Core), File storage (Blob Storage).
-- **Api**: RESTful endpoints.
+- **Domain**: Core entities and business rules (Order, Product, Category, OrderItem).
+- **Application**: CQRS handlers, DTOs, and validation logic.
+- **Infrastructure**: EF Core, Repositories, and Database configuration.
+- **Api**: REST endpoints for the frontend.
 - **Web**: Blazor Interactive Server UI.
 
 ## Folder Structure
@@ -32,17 +32,17 @@ tests/
 ```
 
 ## Data Entities
-- **Product**: Id, Name, BasePrice, Category, Options (JSON), Active.
-- **Order**: Id, CustomerId, Items (List), TotalAmount, Status, GstAmount, ShippingAddress.
-- **OrderItem**: Id, ProductId, Quantity, UnitPrice, FileUrl.
+- **Product**: id, name, category, base_price, description, stock, image_url.
+- **Order**: id, customer_details, total_amount, status, created_at.
+- **OrderItem**: id, order_id, product_id, quantity, unit_price, customization_json.
 
 ## API Endpoints
-- `GET /api/v1/products`
-- `POST /api/v1/orders`
-- `GET /api/v1/orders/{id}`
-- `PUT /api/v1/orders/{id}/status`
+- `GET /api/v1/products`: List products with filtering.
+- `GET /api/v1/products/{id}`: Get product details.
+- `POST /api/v1/orders`: Place an order.
+- `GET /api/v1/orders/{id}`: Track order status.
 
 ## Design Decisions
-- **CQRS**: Simplified implementation for maintainability.
-- **Currency**: All amounts stored in smallest unit (paise) or as decimal to avoid floating point issues.
-- **UI**: Tailwind CSS with custom purple/yellow theme for a modern aesthetic.
+- **Clean Architecture**: Decouple business logic from infrastructure.
+- **Database**: PostgreSQL with direct SQL scripts for schema management (no EF migrations).
+- **Security**: OAuth2 for Auth; RLS for data isolation.

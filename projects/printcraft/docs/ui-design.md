@@ -1,28 +1,27 @@
-# UI Design System for PrintCraft
+# PrintCraft UI Design
 
-## Design Principles
-- **Theme**: Premium SaaS aesthetic, primary purple (#7C3AED), accent yellow (#FBBF24).
-- **Typography**: Plus Jakarta Sans for headers, Inter for body.
-- **Layout**: Clean, spacious, bento-grid inspiration for dashboard/product showcase.
+## Overview
+PrintCraft is a clean, modern e-commerce platform for custom printing services. The interface prioritizes product discovery, clear customization options, and seamless order management.
 
-## Pages Overview
+## Visual Identity
+- **Palette**: Deep navy (#0B1B3F) for structure, royal blue (#1E3A8A) for actions, orange (#F97316) for primary CTAs.
+- **Typography**: Plus Jakarta Sans for headings, Inter for body text.
+- **Components**: Rounded cards (12px radius), pill-shaped buttons, glassmorphism for top navigation.
 
-### 1. Home (Landing Page)
-- **Purpose**: Conversion-focused entry point for custom printing services.
-- **Layout**: Sticky header with logo, hero section, bento-grid featured products, how-it-works steps, and social proof.
-- **Actions**: "Explore Catalog", "Start Design".
+## Pages
 
-### 2. Product Catalog
-- **Purpose**: Browse and select printing products.
-- **Layout**: Sidebar filters (category, price), grid display of product cards.
-- **Actions**: "View Details", "Customize".
+### 1. Home / Product Catalog
+- **Purpose**: Showcase products and drive initial interest.
+- **Layout**: Hero section with search, followed by a grid of product cards.
+- **Actions**: Search input, category filter chips, "View Details" buttons.
 
-### 3. Product Customizer
-- **Purpose**: Upload designs and configure order parameters.
-- **Layout**: Two-column view: Left (Preview & Upload), Right (Configuration, Quantity, Pricing).
-- **Actions**: "Upload File", "Add to Cart".
+### 2. Product Details
+- **Purpose**: Present individual item details and initiate customization.
+- **Layout**: Split screen. Left: product images. Right: title, description, price, customization form, "Add to Cart" button.
 
-### 4. Admin Dashboard
-- **Purpose**: Monitor orders and manage product inventory.
-- **Layout**: Sidebar navigation, summary KPI cards (Total Sales, Pending Orders), data table of recent orders.
-- **Actions**: "Update Status", "Delete Product".
+### 3. Order Tracking
+- **Purpose**: Allow users to check the status of their order.
+- **Layout**: Search bar for Order ID, status timeline visual, order summary panel.
+
+## Navigation
+- Sticky top navigation with logo, product links, and a link to tracking.

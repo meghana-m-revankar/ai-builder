@@ -2,115 +2,109 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Product Details | PrintCraft</title>
+<title>Product | PrintCraft</title>
 <meta name="description" content="Print anything, beautifully.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f9ff','100':'#e0f2fe','200':'#bae6fd','300':'#7dd3fc','400':'#38bdf8','500':'#0ea5e9','600':'#0284c7','700':'#0369a1','800':'#075985','900':'#0c4a6e'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-slate-800">
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin</a></nav>
     <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin</a></div>
 </header>
 <main>
-<main class="bg-white">
-  <!-- 1. Image Gallery -->
+<main>
+  <!-- Product Hero Gallery -->
   <section id="gallery" class="py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-6xl font-display font-bold text-gray-900 mb-8">Premium Business Cards</h1>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <img loading="lazy" decoding="async" src="https://loremflickr.com/1200/800/high%2Cquality%2Cprint%2Cmockups" alt="Main print product mockup" class="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-xl">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwcHJvZmVzc2lvbmFsJTIwcHJpbnRpbmclMjBjbG9zZXxlbnwxfHx8fDE3OTQ0MjE5MzZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Professional printing process" class="w-full h-96 object-cover rounded-3xl shadow-xl">
         <div class="grid grid-cols-2 gap-4">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/600/400/minimalist%2Coffice%2Cstationery" alt="Detail shot 1" class="w-full h-60 object-cover rounded-2xl">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/600/400/vibrant%2Cgraphic%2Cdesign%2Ctools" alt="Detail shot 2" class="w-full h-60 object-cover rounded-2xl">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/600/400/print%2Ctexture%2Cclose%2Cup" alt="Detail shot 3" class="w-full h-60 object-cover rounded-2xl">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/600/400/premium%2Cpaper%2Cstock" alt="Detail shot 4" class="w-full h-60 object-cover rounded-2xl">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1594896733292-9a77b5809c63?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cHJlbWl1bSUyMHRleHR1cmV8ZW58MXx8fHwxNzk0NDIxOTM1fDA&ixlib=rb-4.1.0&w=400&h=300&fit=crop&auto=format&q=80" alt="Texture detail" class="w-full h-46 object-cover rounded-2xl">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8c3R1ZGlvJTIwc2hvdHxlbnwxfHx8fDE3OTQ0MjE5MzZ8MA&ixlib=rb-4.1.0&w=400&h=300&fit=crop&auto=format&q=80" alt="Studio shot" class="w-full h-46 object-cover rounded-2xl">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1579532536935-619928decd08?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnVzaW5lc3MlMjBzdGFja3xlbnwxfHx8fDE3OTQ0MjE5MzZ8MA&ixlib=rb-4.1.0&w=400&h=300&fit=crop&auto=format&q=80" alt="Card stack" class="w-full h-46 object-cover rounded-2xl">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1775740396813-210ffab5a7d5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cHJpbnQlMjBzaG9wJTIwZGV0YWlsc3xlbnwxfHx8fDE3OTQ0MjE5MzZ8MA&ixlib=rb-4.1.0&w=400&h=300&fit=crop&auto=format&q=80" alt="Finishing details" class="w-full h-46 object-cover rounded-2xl">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2 & 3. Options & Calculator -->
-  <section id="config" class="py-16 bg-brand-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12">
-        <div>
-          <h1 class="text-4xl font-display font-bold text-gray-900 mb-6">Premium Business Cards</h1>
-          <p class="text-lg text-gray-600 mb-8">Elevate your professional presence with our heavy-weight matte finish cards. Printed with precision to ensure your brand stands out in every handshake.</p>
-          <form id="product-form" class="space-y-6">
-            <div>
-              <label class="block font-medium mb-2">Paper Quality</label>
-              <select id="paper-type" class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 outline-none">
-                <option value="300">300 GSM Matte - ₹199</option>
-                <option value="400">450 GSM Velvet Touch - ₹299</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-          <h3 class="text-2xl font-display font-semibold mb-6">Price Calculator</h3>
-          <div class="flex justify-between items-center mb-6">
-            <span class="text-gray-600">Quantity</span>
-            <input type="number" id="qty" value="100" min="100" step="100" class="w-24 p-2 border rounded-lg">
+  <!-- Configuration Form -->
+  <section id="config" class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-12">
+      <div class="lg:w-1/2">
+        <h2 class="text-3xl font-display font-bold mb-6">Customize Your Order</h2>
+        <form id="orderForm" class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Material Type</label>
+            <select id="material" class="mt-1 block w-full p-3 border rounded-xl shadow-sm focus:ring-brand-500 focus:border-brand-500">
+              <option value="199">Matte Finish (₹199)</option>
+              <option value="299">Glossy Finish (₹299)</option>
+              <option value="499">Premium Textured (₹499)</option>
+            </select>
           </div>
-          <div class="text-4xl font-bold text-brand-600 mb-8" id="total-price">₹199</div>
-          <button onclick="addToCart()" class="w-full bg-brand-600 text-white py-4 rounded-xl font-semibold hover:bg-brand-700 transition">Add to Cart</button>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Quantity</label>
+            <input type="number" id="qty" value="100" min="50" step="50" class="mt-1 block w-full p-3 border rounded-xl">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Upload Design File</label>
+            <input type="file" class="mt-1 block w-full p-3 border rounded-xl bg-white">
+          </div>
+        </form>
+      </div>
+
+      <div class="lg:w-1/2 bg-white p-8 rounded-3xl shadow-lg border border-gray-100 self-start">
+        <h3 class="text-xl font-bold mb-4">Price Summary</h3>
+        <div class="space-y-4">
+          <div class="flex justify-between"><span>Base Price</span><span id="price-base">₹199</span></div>
+          <div class="flex justify-between font-bold text-2xl text-brand-600"><span>Total</span><span id="price-total">₹199</span></div>
+          <button onclick="addToCart()" class="w-full bg-brand-600 text-white py-4 rounded-xl font-bold hover:bg-brand-700 transition">Add to Cart</button>
+        </div>
+        <div class="mt-6">
+          <label class="text-sm font-medium">Check Delivery Pincode</label>
+          <div class="flex gap-2 mt-2">
+            <input type="text" id="pincode" placeholder="e.g. 560038" class="flex-1 p-3 border rounded-xl">
+            <button onclick="checkDelivery()" class="px-6 bg-gray-900 text-white rounded-xl">Check</button>
+          </div>
+          <p id="delivery-msg" class="mt-2 text-sm"></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. File Upload -->
-  <section id="upload" class="py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-display font-bold mb-4">Upload Your Design</h2>
-      <div class="border-4 border-dashed border-gray-200 rounded-3xl p-12 hover:border-brand-500 transition cursor-pointer">
-        <i data-lucide="upload-cloud" class="w-12 h-12 mx-auto text-brand-600 mb-4"></i>
-        <p class="text-gray-600">Drag & drop your PDF or AI files here (Max 50MB)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Pincode Check -->
-  <section id="delivery" class="py-16 bg-gray-50">
-    <div class="max-w-xl mx-auto px-4 text-center">
-      <h3 class="text-xl font-bold mb-4">Check Delivery</h3>
-      <div class="flex gap-2">
-        <input type="text" placeholder="Enter Pincode" class="flex-1 p-3 rounded-xl border">
-        <button class="bg-gray-900 text-white px-6 rounded-xl">Check</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. Related Items -->
+  <!-- Related Products -->
   <section id="related" class="py-16">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-display font-bold mb-10">You Might Also Like</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/400/300/stickers%2Chigh" class="w-full h-48 object-cover rounded-xl mb-4">
-          <h4 class="font-bold text-xl">Custom Stickers</h4>
-          <p class="text-gray-600 mb-4">Durable vinyl stickers for your brand.</p>
-          <a href="product.html" class="text-brand-600 font-semibold">View Details →</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-display font-bold mb-10">Complete Your Set</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1635873810723-faf3d8505491?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y3VzdG9tJTIwZmx5ZXIlMjBkZXNpZ258ZW58MXx8fHwxNzk0NDIxOTM2fDA&ixlib=rb-4.1.0&w=400&h=250&fit=crop&auto=format&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="font-bold text-lg">Custom Flyers</h4>
+          <p class="text-gray-600 text-sm mb-4">High-quality promotional material for your next event.</p>
+          <a href="product.html" class="text-brand-600 font-bold">View Product →</a>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/400/300/tshirts%2Chigh" class="w-full h-48 object-cover rounded-xl mb-4">
-          <h4 class="font-bold text-xl">Premium T-Shirts</h4>
-          <p class="text-gray-600 mb-4">High-quality cotton, perfect for merch.</p>
-          <a href="product.html" class="text-brand-600 font-semibold">View Details →</a>
+        <div class="p-6 bg-white rounded-2xl shadow hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1781454592087-684fc4f2a11b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnJhbmRlZCUyMGNvZmZlZSUyMG11Z3xlbnwxfHx8fDE3OTQ0MjE5MzV8MA&ixlib=rb-4.1.0&w=400&h=250&fit=crop&auto=format&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="font-bold text-lg">Custom Mugs</h4>
+          <p class="text-gray-600 text-sm mb-4">Perfect for corporate gifting or office morale.</p>
+          <a href="product.html" class="text-brand-600 font-bold">View Product →</a>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-lg">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/400/300/flyers%2Chigh" class="w-full h-48 object-cover rounded-xl mb-4">
-          <h4 class="font-bold text-xl">Glossy Flyers</h4>
-          <p class="text-gray-600 mb-4">Make an impact with vibrant flyers.</p>
-          <a href="product.html" class="text-brand-600 font-semibold">View Details →</a>
+        <div class="p-6 bg-white rounded-2xl shadow hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1625768376503-68d2495d78c5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8dmlueWwlMjBzdGlja2Vyc3xlbnwxfHx8fDE3OTQ0MjE5MzV8MA&ixlib=rb-4.1.0&w=400&h=250&fit=crop&auto=format&q=80" class="w-full h-48 object-cover rounded-xl mb-4">
+          <h4 class="font-bold text-lg">Premium Stickers</h4>
+          <p class="text-gray-600 text-sm mb-4">Durable vinyl stickers for branding any surface.</p>
+          <a href="product.html" class="text-brand-600 font-bold">View Product →</a>
         </div>
       </div>
     </div>
@@ -119,33 +113,44 @@
 
 <script>
   function updatePrice() {
-    const qty = document.getElementById('qty').value;
-    const base = parseInt(document.getElementById('paper-type').value);
-    const total = (base * (qty / 100)).toFixed(2);
-    document.getElementById('total-price').innerText = '₹' + total;
+    const mat = parseInt(document.getElementById('material').value);
+    const qty = parseInt(document.getElementById('qty').value) || 0;
+    const total = (mat * (qty / 100));
+    document.getElementById('price-total').innerText = '₹' + total;
   }
 
+  document.getElementById('material').addEventListener('change', updatePrice);
   document.getElementById('qty').addEventListener('input', updatePrice);
-  document.getElementById('paper-type').addEventListener('change', updatePrice);
+
+  function checkDelivery() {
+    const pin = document.getElementById('pincode').value;
+    const msg = document.getElementById('delivery-msg');
+    if(pin === '560038') {
+      msg.innerText = "✓ Delivery available in Indiranagar!";
+      msg.className = "mt-2 text-sm text-green-600";
+    } else {
+      msg.innerText = "✕ Currently only servicing 560038.";
+      msg.className = "mt-2 text-sm text-red-600";
+    }
+  }
 
   function addToCart() {
-    alert('Added to cart! Redirecting to checkout.');
-    window.location.href = 'cart.html';
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    cart.push({ item: 'Business Cards', price: document.getElementById('price-total').innerText });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert('Added to cart!');
   }
-
-  lucide.createIcons();
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
     <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p><p class="mt-2 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p><p class="mt-2 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
 </footer>
-<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="js/site-kit.js"></script>
 </body>
 </html>

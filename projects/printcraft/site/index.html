@@ -7,147 +7,123 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F5F3FF','100':'#EDE9FE','200':'#DDD6FE','300':'#C4B5FD','400':'#A78BFA','500':'#8B5CF6','600':'#7C3AED','700':'#6D28D9','800':'#5B21B6','900':'#4C1D95'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f9ff','100':'#e0f2fe','200':'#bae6fd','300':'#7dd3fc','400':'#38bdf8','500':'#0ea5e9','600':'#0284c7','700':'#0369a1','800':'#075985','900':'#0c4a6e'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-slate-800">
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">PrintCraft</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product Details</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin Dashboard</a></nav>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="shop.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Shop</a><a href="product.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Product</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart &amp; Checkout</a><a href="track.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Track Order</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Admin</a></nav>
     <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product Details</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin Dashboard</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="shop.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Shop</a><a href="product.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Product</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart &amp; Checkout</a><a href="track.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Track Order</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Admin</a></div>
 </header>
 <main>
-<main>
+<main class="bg-slate-50">
   <!-- Hero Section -->
-  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-    <img loading="lazy" decoding="async" src="https://loremflickr.com/1600/900/high%2Cquality%2Cprint%2Cmockups" alt="PrintCraft Studio" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-    <div class="relative z-10 text-center text-white px-4">
-      <h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Print Anything, <span class="text-brand-400">Beautifully.</span></h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">From premium business cards to custom apparel, we bring your vision to life with vibrant, high-quality printing delivered across India.</p>
+  <section class="relative min-h-[85vh] flex items-center justify-center text-center">
+    <img loading="lazy" decoding="async" src="https://picsum.photos/seed/modern professional printing studio/1600/900" alt="Professional printing facility" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+    <div class="relative z-10 max-w-4xl px-4 text-white">
+      <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">Print Anything, Beautifully.</h1>
+      <p class="text-xl md:text-2xl mb-10 text-slate-200">From business cards to custom merchandise, we deliver professional quality prints to your doorstep in Bengaluru.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="shop.html" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-full font-bold transition">Explore Products</a>
-        <a href="#how-it-works" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white rounded-full font-bold transition backdrop-blur-sm">How It Works</a>
+        <a href="shop.html" class="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-full font-semibold transition">Explore Shop</a>
+        <a href="#how-it-works" class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold backdrop-blur-sm transition">How it Works</a>
       </div>
     </div>
   </section>
 
   <!-- Trust Strip -->
-  <section class="py-10 bg-brand-50">
-    <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-around gap-8 text-brand-900">
-      <div class="flex items-center gap-3"><i data-lucide="check-circle" class="w-6 h-6 text-brand-600"></i><span class="font-bold">50,000+ Happy Creators</span></div>
-      <div class="flex items-center gap-3"><i data-lucide="truck" class="w-6 h-6 text-brand-600"></i><span class="font-bold">Nationwide Delivery</span></div>
-      <div class="flex items-center gap-3"><i data-lucide="shield-check" class="w-6 h-6 text-brand-600"></i><span class="font-bold">GST Included Pricing</span></div>
+  <section class="py-12 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-slate-500 mb-8 font-medium">TRUSTED BY 15,000+ CUSTOMERS ACROSS BENGALURU</p>
+      <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale">
+        <i data-lucide="award" class="w-12 h-12"></i>
+        <i data-lucide="shield-check" class="w-12 h-12"></i>
+        <i data-lucide="zap" class="w-12 h-12"></i>
+        <i data-lucide="truck" class="w-12 h-12"></i>
+      </div>
     </div>
   </section>
 
   <!-- Categories Grid -->
-  <section id="shop" class="py-24 bg-white">
+  <section id="shop" class="py-24">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-display font-bold text-brand-900 mb-16 text-center">Shop by Category</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="group rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/800/600/minimalist%2Cbusiness%2Ccards" alt="Business Cards" class="w-full h-80 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-display font-bold mb-2">Business Cards</h3>
-            <p class="text-gray-600 mb-4">Professional finishes to make your first impression count. Starting at just ₹199.</p>
-            <a href="shop.html" class="text-brand-600 font-bold flex items-center">Shop Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
+      <h2 class="font-display text-4xl font-bold text-slate-900 mb-12">Shop by Category</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[
+          {title: "Business Cards", price: "₹199", img: "business cards stacking"},
+          {title: "Flyers", price: "₹499", img: "flyer printing marketing"},
+          {title: "Custom Mugs", price: "₹299", img: "custom ceramic mugs"},
+          {title: "Stickers", price: "₹99", img: "vinyl stickers collection"}
+        ].map(item => `
+          <div class="bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-2 transition duration-300">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/${item.img}/600/400" alt="${item.title}" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h3 class="text-xl font-bold text-slate-900">${item.title}</h3>
+            <p class="text-brand-600 font-semibold mb-4">Starts at ${item.price}</p>
+            <a href="shop.html" class="text-sm font-bold uppercase tracking-wider flex items-center gap-2 text-slate-600 hover:text-brand-600">View Products <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
           </div>
-        </div>
-        <div class="group rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/800/600/vibrant%2Cstickers" alt="Stickers" class="w-full h-80 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-display font-bold mb-2">Custom Stickers</h3>
-            <p class="text-gray-600 mb-4">Durable, high-definition adhesive prints for any surface. Starting at just ₹99.</p>
-            <a href="shop.html" class="text-brand-600 font-bold flex items-center">Shop Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-          </div>
-        </div>
-        <div class="group rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
-          <img loading="lazy" decoding="async" src="https://loremflickr.com/800/600/graphic%2Ctshirts" alt="T-shirts" class="w-full h-80 object-cover">
-          <div class="p-6">
-            <h3 class="text-2xl font-display font-bold mb-2">Quality T-shirts</h3>
-            <p class="text-gray-600 mb-4">Premium cotton tees with vibrant direct-to-garment printing. Starting at just ₹499.</p>
-            <a href="shop.html" class="text-brand-600 font-bold flex items-center">Shop Now <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i></a>
-          </div>
-        </div>
+        `).join('')}
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
+  <!-- How it Works -->
   <section id="how-it-works" class="py-24 bg-brand-900 text-white">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-display font-bold mb-16 text-center">Simple 3-Step Process</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-        <div>
-          <div class="w-20 h-20 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="upload" class="w-8 h-8"></i></div>
+      <h2 class="font-display text-4xl font-bold mb-16 text-center">Printing Made Simple</h2>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-700 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="upload" class="w-8 h-8"></i></div>
           <h3 class="text-2xl font-bold mb-4">Upload Design</h3>
-          <p class="text-gray-300">Easily upload your artwork or use our design tools to create something unique.</p>
+          <p class="text-brand-200">Simply upload your print-ready file or use our online editor to create something unique.</p>
         </div>
-        <div>
-          <div class="w-20 h-20 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="printer" class="w-8 h-8"></i></div>
-          <h3 class="text-2xl font-bold mb-4">Precision Printing</h3>
-          <p class="text-gray-300">Our expert team handles your print with state-of-the-art machinery and care.</p>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-700 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="printer" class="w-8 h-8"></i></div>
+          <h3 class="text-2xl font-bold mb-4">Expert Printing</h3>
+          <p class="text-brand-200">Our 50+ printing experts handle your project with precision, ensuring colors pop and text is crisp.</p>
         </div>
-        <div>
-          <div class="w-20 h-20 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="package" class="w-8 h-8"></i></div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-700 rounded-full flex items-center justify-center mx-auto mb-6"><i data-lucide="truck" class="w-8 h-8"></i></div>
           <h3 class="text-2xl font-bold mb-4">Fast Delivery</h3>
-          <p class="text-gray-300">We ship across India with tracking enabled, ensuring your order arrives safely.</p>
+          <p class="text-brand-200">We ship across Bengaluru, or drop by our Indiranagar studio to collect your order in person.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Newsletter -->
-  <section class="py-24 bg-gray-50">
+  <!-- Newsletter CTA -->
+  <section class="py-20 bg-slate-100">
     <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-display font-bold text-brand-900 mb-6">Join our creative community</h2>
-      <p class="text-gray-600 mb-10">Get 10% off your first order and stay updated with design tips and exclusive offers.</p>
-      <form name="contact" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-4">
-        <input type="email" required placeholder="Enter your email" class="flex-grow px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
-        <button type="submit" class="px-8 py-4 bg-brand-600 text-white rounded-full font-bold hover:bg-brand-700 transition">Subscribe</button>
+      <h2 class="font-display text-3xl font-bold mb-4">Get 15% off your first order</h2>
+      <p class="text-slate-600 mb-8">Join our newsletter to receive exclusive design tips and seasonal printing offers.</p>
+      <form name="contact" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-2">
+        <input type="email" required placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-full border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        <button type="submit" class="bg-slate-900 text-white px-8 py-3 rounded-full hover:bg-slate-800 transition">Subscribe</button>
       </form>
-    </div>
-  </section>
-
-  <!-- CTA Band -->
-  <section class="py-16 bg-brand-600">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 text-white">
-      <div>
-        <h2 class="text-3xl font-display font-bold">Ready to print your ideas?</h2>
-        <p class="opacity-90">Visit us at Residency Road or shop online 24/7.</p>
-      </div>
-      <a href="shop.html" class="px-8 py-4 bg-white text-brand-600 rounded-full font-bold hover:bg-gray-100 transition">Get Started Now</a>
     </div>
   </section>
 </main>
 
 <script>
-  // Initialize Lucide icons
-  lucide.createIcons();
-
-  // Simple form feedback
-  document.querySelector('form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('Thank you! Our team will be in touch shortly.');
-    e.target.reset();
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
   });
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
     <div><p class="font-display text-xl font-extrabold text-white">PrintCraft</p><p class="mt-3 text-sm text-slate-400">Print anything, beautifully.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product Details</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin Dashboard</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p><p class="mt-2 text-sm text-slate-400">Address: 42, Residency Road, Bangalore, KA 560025. Phone: +91 80 4712 3456. Email: hello@printcraft.in. Hours: Mon-Sat 9AM-8PM. Products: Business Cards from ₹199, Stickers from ₹99, T-shirts from ₹499. Founder: Ananya Rao. Founded: 2018. GST 18% inclusive. Nationwide delivery across India. Serving 50,000+ happy creators.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="shop.html" class="hover:text-white">Shop</a><a href="product.html" class="hover:text-white">Product</a><a href="cart.html" class="hover:text-white">Cart &amp; Checkout</a><a href="track.html" class="hover:text-white">Track Order</a><a href="dashboard.html" class="hover:text-white">Admin</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p><p class="mt-2 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p><p class="mt-2 text-sm text-slate-400">Location: Indiranagar, Bengaluru, KA 560038. Founded by Ananya Rao in 2018. 15,000+ happy customers. 50+ printing experts. 24/7 support. Hours: Mon-Sat 9am-8pm, Sun 10am-4pm. Email: hello@printcraft.in. Phone: +91 80 4123 5678. Signature products: Business Cards (from ₹199), Flyers (from ₹499), Custom Mugs (from ₹299), Stickers (from ₹99).</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> PrintCraft. All rights reserved.</div>
 </footer>
-<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="js/site-kit.js"></script>
 </body>
 </html>

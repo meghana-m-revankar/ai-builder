@@ -5,7 +5,7 @@
     $('[data-year],.year,#year').forEach(function(e){e.textContent=new Date().getFullYear()});
     $('img').forEach(function(img){ img.addEventListener('error',function(){ if(img.dataset.fb) return; img.dataset.fb=1;
       var k=(img.alt||'business').toLowerCase().replace(/[^a-z ]/g,'').split(' ').filter(Boolean).slice(0,3).join(',');
-      img.src='https://loremflickr.com/'+(img.width||800)+'/'+(img.height||600)+'/'+k; }); });
+      img.src='https://picsum.photos/seed/'+(k||'photo').replace(/,/g,'-')+'-fb/'+(img.naturalWidth||img.width||800)+'/'+(img.naturalHeight||img.height||600); }); });
     $('[data-menu-toggle],[aria-controls],#menu-btn,#mobile-menu-button,.menu-toggle').forEach(function(b){
       if(b.dataset.kit) return; b.dataset.kit=1;
       var id=b.getAttribute('aria-controls')||b.dataset.menuToggle||'mobile-menu';
