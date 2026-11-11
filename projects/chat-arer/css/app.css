@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.message-bubble {
+    @apply p-3 rounded-lg max-w-xs shadow-sm;
+}
+.message-sent {
+    @apply bg-green-100 ml-auto;
+}
+.message-received {
+    @apply bg-white mr-auto;
+}

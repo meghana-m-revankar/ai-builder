@@ -1,0 +1,5 @@
+:root { --whatsapp-green: #075e54; }
+body { font-family: 'Inter', system-ui, sans-serif; }
+.message-bubble { max-width: 75%; }
+.own-message { background-color: #dcf8c6; align-self: flex-end; }
+.other-message { background-color: white; align-self: flex-start; }
