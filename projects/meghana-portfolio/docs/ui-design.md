@@ -1,22 +1,15 @@
-# UI Design - Meghana M Revankar Portfolio
+# UI Design: Meghana Portfolio
 
-## Overview
-A modern, single-page portfolio focused on clean typography, generous whitespace, and a high-performance experience.
-
-## Layout Structure
-- **Navbar (Sticky/Glassmorphism):** Logo (Meghana), Navigation Links (Home, About, Projects, Skills, Contact), Dark/Light Toggle.
-- **Hero Section:** Big, bold typography (Name + Role), tagline, two CTA buttons (View Projects, Contact Me).
-- **About Section:** Split layout: Left column for photo, Right column for bio, professional summary, and resume download link.
-- **Projects Section:** Bento-grid style layout featuring 3 main project cards with hover-lift effect, descriptive text, and tech stack badges.
-- **Skills Section:** Icon-grid showing competencies with tooltips.
-- **Contact Section:** Clean form layout with fields: Name, Email, Message. Includes a success state message component.
-- **Footer:** Links to professional profiles (LinkedIn, GitHub), copyright notice, and credits.
-
-## Navigation
-- Smooth scroll integration to section IDs.
-- Hamburger menu for mobile devices (below 1024px).
-
-## Interactive Elements
-- **Dark Mode:** Toggles Tailwind `dark` class on `<html>`.
-- **Form Submission:** Simulated JS handling with success toast/alert.
-- **Animations:** Subtle entrance on scroll for project cards and section headers.
+## 1. Landing Page (index.html)
+- **Purpose**: Serve as a high-conversion personal portfolio showcasing skills, projects, and contact information.
+- **Layout**: Single-page layout with sticky navigation, hero section, bento-grid feature display, project grid, and contact section.
+- **Sections**:
+    - **Navigation**: Sticky, translucent header with logo, anchor links (About, Projects, Skills, Contact), and a theme toggle button.
+    - **Hero**: Confident headline ("Turning ideas into pixel-perfect experiences"), sub-headline, CTA buttons ("View Projects", "Contact Me"), and a stylized developer portrait.
+    - **About**: Professional bio highlighting Bengaluru-based expertise.
+    - **Projects**: Grid display of 3 core projects using cards with image, title, tech stack tags, and links.
+    - **Skills**: Bento-grid or icon-grid layout showcasing technical proficiencies.
+    - **Contact**: Interactive form (Name, Email, Subject, Message) with validation feedback and a submit button.
+    - **Footer**: Branding, quick links, social media icons, and newsletter signup.
+- **Navigation**: Smooth scrolling anchors.
+- **Interactions**: Hover-lift on cards, theme toggling animation, form submission success notification.

@@ -4,5 +4,5 @@ namespace MeghanaPortfolio.Application.Interfaces;
 
 public interface IContactRepository
 {
-    Task AddAsync(Contact contact, CancellationToken ct);
+    Task AddAsync(ContactSubmission submission, CancellationToken ct);
 }

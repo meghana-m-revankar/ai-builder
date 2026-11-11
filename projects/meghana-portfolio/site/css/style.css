@@ -1,0 +1,29 @@
+:root {
+  --fs-caption: 0.75rem;
+  --fs-small: 0.875rem;
+  --fs-body: clamp(1rem, calc(0.95rem + 0.25vw), 1.0625rem);
+  --fs-lead: clamp(1.0625rem, calc(1rem + 0.4vw), 1.25rem);
+  --fs-h4: clamp(1.25rem, calc(1.1rem + 0.6vw), 1.5rem);
+  --fs-h3: clamp(1.5rem, calc(1.25rem + 1vw), 1.875rem);
+  --fs-h2: clamp(1.875rem, calc(1.4rem + 1.8vw), 2.5rem);
+  --fs-h1: clamp(2.25rem, calc(1.6rem + 2.8vw), 3.5rem);
+  --fs-hero: clamp(2.5rem, calc(1.5rem + 4.5vw), 4.5rem);
+  --space-section: clamp(4rem, calc(2.5rem + 5vw), 6rem);
+
+  --brand-900: #0B1B3F;
+  --brand-700: #1E3A8A;
+  --brand-500: #3B5BDB;
+  --brand-100: #E7ECFB;
+  --accent-500: #F97316;
+  --surface: #FFFFFF;
+  --canvas: #F6F7FB;
+  --ink-900: #0F172A;
+  --ink-600: #475569;
+}
+
+html { scroll-behavior: smooth; font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
+body { background-color: var(--canvas); color: var(--ink-900); font-size: var(--fs-body); }
+.hero-title { font-size: var(--fs-hero); line-height: 1.08; }
+section { padding-block: var(--space-section); }
+.glass { background: rgba(255,255,255,.7); backdrop-filter: blur(12px); }
+.dark { color-scheme: dark; background-color: var(--brand-900); color: white; }

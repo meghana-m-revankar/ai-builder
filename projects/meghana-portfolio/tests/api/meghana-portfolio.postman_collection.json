@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "meghana-portfolio-api",
+		"_postman_id": "89344421-e0a5-4277-b952-411234567890",
 		"name": "Meghana Portfolio API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -9,16 +9,16 @@
 			"name": "Contact",
 			"item": [
 				{
-					"name": "TC-API-002 Create contact message",
+					"name": "TC-API-002 Create contact",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"name\": \"Test\", \"email\": \"test@test.com\", \"message\": \"hello\"}",
+							"raw": "{\"name\": \"Test\", \"email\": \"test@example.com\", \"message\": \"Hi\"}",
 							"options": { "raw": { "language": "json" } }
 						},
-						"url": { "raw": "{{baseUrl}}/api/contact", "host": ["{{baseUrl}}"], "path": ["api", "contact"] }
+						"url": { "raw": "{{baseUrl}}/api/contact" }
 					},
 					"event": [
 						{

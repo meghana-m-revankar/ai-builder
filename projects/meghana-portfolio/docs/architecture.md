@@ -1,35 +1,34 @@
-# Architecture - Meghana Portfolio
+# Architecture: Meghana Portfolio
 
 ## Overview
-A responsive, one-page personal portfolio website for a front-end developer based in Bengaluru. Designed for high performance and accessibility using static HTML, CSS, and Tailwind CSS.
+A clean, responsive, single-page portfolio website for a front-end developer based in Bengaluru. Designed for mobile and desktop, featuring a modern aesthetic with light/dark mode support.
 
-## Pages & Sections
-- **Single Page Application (SPA) structure:**
-  - **Header/Nav:** Navigation links (Home, About, Projects, Skills, Contact) + Light/Dark mode toggle.
-  - **Hero:** Name, title, tagline, call-to-action buttons, background imagery.
-  - **About:** Personal bio, professional summary, "Download Resume" button.
-  - **Projects:** Grid layout with three project cards (Shopping Site, Dashboard, Mobile App).
-  - **Skills:** Icon-based grid/flex list of core competencies.
-  - **Contact:** Form with Name, Email, and Message fields, plus success state UI.
-  - **Footer:** Social media links (LinkedIn, GitHub, etc.).
+## Modules/Components
+- **Navigation**: Sticky header with anchor links.
+- **Hero Section**: Personal branding, CTA buttons, and background imagery.
+- **About Section**: Professional summary and resume download action.
+- **Projects Section**: Grid-based display of 3 core projects.
+- **Skills Section**: Visual representation of tech stack (HTML, CSS, JS, React, Figma).
+- **Contact Form**: Interactive form with feedback states.
+- **Theme Switcher**: Global light/dark mode toggler.
+- **Footer**: Social media navigation.
 
 ## Folder Structure
 ```
 /
-├── index.html          # Single page entry point
+├── index.html           # Main page structure
 ├── css/
-│   └── style.css       # Custom overrides and Tailwind directives
+│   └── style.css        # Custom styles + Tailwind directives
 ├── js/
-│   └── main.js         # Theme toggle, smooth scroll, form handling
-├── assets/
-│   ├── images/         # Photos, project screenshots
-│   └── docs/           # Resume PDF
-└── tailwind.config.js  # Tailwind CSS configuration
+│   ├── main.js          # Theme toggler, form submission, scroll behavior
+│   └── tailwind.config.js
+├── images/              # Assets (profile, project screenshots, background)
+└── favicon.svg
 ```
 
 ## Key Design Decisions
-- **Tech Stack:** Pure static files (HTML/CSS/JS) for speed and easy hosting (e.g., GitHub Pages).
-- **Styling:** Tailwind CSS (via CDN) for utility-first responsive design.
-- **Interactivity:** Simple Vanilla JS for theme toggling and form submission simulation.
-- **Responsiveness:** Mobile-first approach, ensuring seamless transitions between mobile, tablet, and desktop views.
-- **Theme:** Simple dark/light mode toggle via CSS class manipulation on the root element.
+- **Static Site**: No backend needed; all content is hardcoded for simplicity.
+- **Styling**: Tailwind CSS via CDN for rapid development and responsiveness.
+- **Responsiveness**: Mobile-first grid layouts for projects and skills.
+- **Theme**: JS-based class toggling on the `<html>` root for light/dark mode.
+- **Contact**: Client-side form handling (e.g., using Formspree or similar service).
