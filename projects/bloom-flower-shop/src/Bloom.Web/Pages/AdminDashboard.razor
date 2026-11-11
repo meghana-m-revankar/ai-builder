@@ -1,0 +1,37 @@
+@page "/admin/dashboard"
+@layout AdminLayout
+
+<div class="container-fluid p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="h3">Order Management</h2>
+        <button class="btn btn-primary rounded-pill">Add New Bouquet</button>
+    </div>
+
+    <div class="table-responsive bg-white rounded-4 p-3 shadow-sm">
+        <table class="table align-middle">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Orders)
+                {
+                    <tr>
+                        <td>@order.CustomerName</td>
+                        <td>@order.DeliveryDate.ToShortDateString()</td>
+                        <td><span class="badge bg-light text-dark">@order.Status</span></td>
+                        <td><button class="btn btn-sm btn-outline-success">Deliver</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private List<Order> Orders = new(); // Mock data
+}

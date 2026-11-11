@@ -1,0 +1,29 @@
+@page "/"
+@layout MainLayout
+
+<div class="container py-5">
+    <header class="mb-5 text-center">
+        <h1 class="display-3 fw-bold text-emerald-900">Fresh <span class="text-rose-600">Blooms</span> Daily</h1>
+        <p class="lead text-secondary">Artisanal bouquets delivered to your doorstep.</p>
+    </header>
+
+    <div class="row g-4">
+        @foreach (var bouquet in Bouquets)
+        {
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="@bouquet.ImageUrl" class="card-img-top" alt="@bouquet.Name" style="height: 240px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <h3 class="h4">@bouquet.Name</h3>
+                        <p class="text-rose-600 fw-bold fs-5">@bouquet.Price.ToString("C")</p>
+                        <button class="btn btn-outline-emerald-800 w-100 rounded-pill mt-2">View Details</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Bouquet> Bouquets = new(); // Mock data
+}

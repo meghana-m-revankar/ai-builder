@@ -1,0 +1,41 @@
+@page "/checkout/{BouquetId:int}"
+@layout MainLayout
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4 rounded-4 shadow-sm border-0">
+                <h2 class="h3 mb-4">Complete Your Order</h2>
+                <form @onsubmit="HandleSubmit">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" @bind="Order.CustomerName" required />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" @bind="Order.CustomerPhone" required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Delivery Date</label>
+                            <input type="date" class="form-control" @bind="Order.DeliveryDate" required />
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Gift Message</label>
+                            <textarea class="form-control" @bind="Order.GiftMessage" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-rose-600 text-white w-100 py-3 rounded-pill">Place Order</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public int BouquetId { get; set; }
+    private Order Order = new();
+    private void HandleSubmit() { /* logic */ }
+}
