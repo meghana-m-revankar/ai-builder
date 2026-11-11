@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Chai Point</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="flex bg-canvas min-h-screen">
+  <aside class="w-64 bg-brand-900 text-white p-6">
+    <h1 class="text-2xl font-bold mb-10">Admin</h1>
+    <nav class="space-y-4">
+      <a href="#" class="block p-3 bg-brand-700 rounded-lg">Dashboard</a>
+      <a href="#" class="block p-3">Orders</a>
+      <a href="#" class="block p-3">Menu</a>
+    </nav>
+  </aside>
+
+  <main class="flex-1 p-8">
+    <h2 class="text-2xl font-bold mb-8">Dashboard</h2>
+    <div class="grid grid-cols-4 gap-6 mb-8">
+      <div class="p-6 bg-white rounded-xl shadow-sm">
+        <p class="text-ink-600">Today's Orders</p>
+        <p class="text-3xl font-bold">142</p>
+        <span class="text-green-600 text-sm">+12%</span>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm">
+        <p class="text-ink-600">Revenue</p>
+        <p class="text-3xl font-bold">₹24,500</p>
+        <span class="text-green-600 text-sm">+5%</span>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm">
+        <p class="text-ink-600">Wait Time</p>
+        <p class="text-3xl font-bold">4m</p>
+        <span class="text-red-600 text-sm">-1m</span>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow-sm">
+        <p class="text-ink-600">Inventory</p>
+        <p class="text-3xl font-bold">88%</p>
+        <span class="text-blue-600 text-sm">Stable</span>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-sm">
+      <table class="w-full">
+        <thead>
+          <tr class="text-left border-b border-line">
+            <th class="p-4">ID</th><th class="p-4">Time</th><th class="p-4">Customer</th>
+            <th class="p-4">Order</th><th class="p-4">Total</th><th class="p-4">Status</th>
+          </tr>
+        </thead>
+        <tbody id="activity-table"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
