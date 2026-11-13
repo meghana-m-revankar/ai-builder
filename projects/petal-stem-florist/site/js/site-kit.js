@@ -1,3 +1,11 @@
+/* Google Analytics (added by Marketing Agent) */
+(function(){ if(window.gtag) return;
+  var s=document.createElement('script'); s.async=true; s.src='https://www.googletagmanager.com/gtag/js?id=G-3NGN2E2GDC';
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments);};
+  gtag('js',new Date()); gtag('config','G-3NGN2E2GDC',{site_name:'petal-stem-florist'});
+  document.addEventListener('submit',function(e){ gtag('event','generate_lead',{site_name:'petal-stem-florist',form_name:(e.target.getAttribute('name')||'form')}); },true);
+})();
 (function(){
   var $=function(s,r){return (r||document).querySelectorAll(s)};
   function run(){
