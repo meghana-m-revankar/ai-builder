@@ -1,7 +1,0 @@
-:root {
-    --brand-700: #1E3A8A;
-    --bs-primary: #1E3A8A;
-    --bs-body-font-family: 'Inter', system-ui, sans-serif;
-}
-h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
-.card { border-radius: 1rem; border: none; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }

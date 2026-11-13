@@ -1,8 +1,0 @@
-:root {
-  --brand-900: #3D2B1F; --brand-700: #7A5230; --brand-500: #B8860B; --brand-100: #FDF5E6;
-  --accent-500: #D2691E; --ink-900: #2D2622; --ink-600: #6B5B4E; --line: #EADFD3;
-}
-.hero-gradient { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)); }
-.nav-link { transition: color 0.2s; }
-.nav-link:hover { color: var(--accent-500); }
-svg.lucide { width: 1.25em; height: 1.25em; }

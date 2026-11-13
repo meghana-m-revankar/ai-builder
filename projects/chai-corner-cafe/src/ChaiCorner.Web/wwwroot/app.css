@@ -1,6 +1,0 @@
-:root {
-  --brand-900: #5D3A25; --brand-700: #A0522D; --brand-500: #D2691E; --brand-100: #FDF5E6;
-  --accent-500: #E8A33D; --ink-900: #1F140C; --ink-600: #6B5B4E; --line: #EADFD3;
-}
-body { font-family: 'Inter', sans-serif; }
-h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
