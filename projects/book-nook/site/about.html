@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us | Book Nook</title>
+<meta name="description" content="Empowering young minds through organized literary discovery.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Book Nook</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book Inventory</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Library Dashboard</a></nav>
+    <a href="books.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book Inventory</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Library Dashboard</a></div>
+</header>
+<main>
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-[70vh] flex items-center justify-center bg-slate-900 overflow-hidden">
+    <img loading="lazy" decoding="async" src="https://picsum.photos/seed/scholarly-library-interior-x/1600/900" alt="Book Nook Library Interior" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center text-white">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-brand-600/30 border border-brand-400/30 text-brand-300 text-sm font-semibold tracking-wide uppercase mb-6 backdrop-blur-sm">Established 2010</span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6">Empowering Young Minds Through Literature</h1>
+      <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 font-light leading-relaxed mb-10">Discover how Book Nook has grown into Pune's premier center for organized literary discovery, fostering a lifelong love for reading among students.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="books.html" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium shadow-lg hover:-translate-y-0.5 transition duration-200">Browse Catalog</a>
+        <a href="dashboard.html" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium backdrop-blur-sm transition duration-200">View Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Founder Story -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Founder's Vision</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2 mb-6">Meena Joshi's Dream for Pune's Youth</h2>
+          <p class="text-slate-600 text-lg leading-relaxed mb-6">Founded in 2010 by Head Librarian Meena Joshi, Book Nook began as a humble reading room on FC Road with a singular mission: to make quality literature accessible and engaging for every young student in Pune.</p>
+          <p class="text-slate-600 leading-relaxed mb-8">Recognizing the growing digital distraction among youth, Meena envisioned a structured yet welcoming sanctuary where physical books spark genuine curiosity, critical thinking, and a profound appreciation for storytelling.</p>
+          <div class="flex items-center gap-4 p-4 rounded-2xl bg-brand-50 border border-brand-100">
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white flex items-center justify-center font-display font-bold text-xl">MJ</div>
+            <div>
+              <h4 class="font-display font-bold text-slate-900">Meena Joshi</h4>
+              <p class="text-sm text-brand-700">Head Librarian & Founder</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/librarian-meena-joshi-x/800/600" alt="Library reading session" class="w-full h-96 object-cover rounded-2xl shadow-xl">
+          <div class="absolute -bottom-6 -left-6 bg-slate-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+            <p class="text-sm italic text-slate-300">"A library is not just a repository of books, but a launchpad for imagination."</p>
+            <p class="text-xs font-semibold text-brand-400 mt-2">— Meena Joshi, 2010</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Library History and Timeline -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Our Journey</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2">A Decade of Literary Growth</h2>
+        <p class="text-slate-600 mt-4">From a modest collection to a thriving intellectual hub on FC Road.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-200">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 font-bold text-sm mb-4">2010</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Foundation & Doors Open</h3>
+          <p class="text-slate-600">Book Nook officially opened at 12 FC Road under Meena Joshi, starting with an initial curated collection of foundational children's and young adult literature.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-200">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 font-bold text-sm mb-4">2016</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Community Expansion</h3>
+          <p class="text-slate-600">Crossed the milestone of 250 registered students and integrated systematic cataloging to manage our expanding inventory of academic and fiction titles.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:-translate-y-1 transition duration-200">
+          <span class="inline-block px-3 py-1 rounded-full bg-brand-100 text-brand-700 font-bold text-sm mb-4">Today</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Modern Digital Tracking</h3>
+          <p class="text-slate-600">Now managing over 15,000 cataloged books and 450+ active students with an efficient 14-day loan system and streamlined digital dashboards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Mission, Vision, and Core Values -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Educational Ethos</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2">Mission, Vision & Values</h2>
+        <p class="text-slate-600 mt-4">Guiding principles that shape every interaction within our reading rooms.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-brand-50 border border-brand-100 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6">
+              <i data-lucide="compass" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Our Mission</h3>
+            <p class="text-slate-600 leading-relaxed">To cultivate organized literary discovery and critical thinking among young minds through accessible physical books and guided reading programs.</p>
+          </div>
+        </div>
+        <div class="p-8 rounded-2xl bg-brand-50 border border-brand-100 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6">
+              <i data-lucide="eye" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Our Vision</h3>
+            <p class="text-slate-600 leading-relaxed">To be Pune's most trusted scholarly sanctuary where every student finds a voice, a mentor, and a lifelong passion for continuous learning.</p>
+          </div>
+        </div>
+        <div class="p-8 rounded-2xl bg-brand-50 border border-brand-100 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6">
+              <i data-lucide="heart" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-3">Core Values</h3>
+            <p class="text-slate-600 leading-relaxed">Inclusivity in access, discipline in cataloging, stewardship of physical books, and genuine encouragement for young readers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Meet the Library Team -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Expert Leadership</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2">Meet Our Team</h2>
+        <p class="text-slate-600 mt-4">Dedicated professionals committed to maintaining our scholarly standards.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition duration-200 text-center p-6">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Meena Joshi" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-2 border-brand-600">
+          <h3 class="font-display font-bold text-slate-900 text-lg">Meena Joshi</h3>
+          <p class="text-sm text-brand-600 font-medium mb-2">Head Librarian</p>
+          <p class="text-xs text-slate-500">Overseeing institutional vision, acquisitions, and overall library administration since 2010.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition duration-200 text-center p-6">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" alt="Rahul Verma" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-2 border-brand-600">
+          <h3 class="font-display font-bold text-slate-900 text-lg">Rahul Verma</h3>
+          <p class="text-sm text-brand-600 font-medium mb-2">Cataloging</p>
+          <p class="text-xs text-slate-500">Managing our 15,000+ book inventory with meticulous classification and indexing standards.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition duration-200 text-center p-6">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=45" alt="Priya Kulkarni" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-2 border-brand-600">
+          <h3 class="font-display font-bold text-slate-900 text-lg">Priya Kulkarni</h3>
+          <p class="text-sm text-brand-600 font-medium mb-2">Outreach</p>
+          <p class="text-xs text-slate-500">Engaging with our 450+ registered students and organizing school reading programs.</p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 hover:-translate-y-1 transition duration-200 text-center p-6">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=68" alt="Amit Deshmukh" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-2 border-brand-600">
+          <h3 class="font-display font-bold text-slate-900 text-lg">Amit Deshmukh</h3>
+          <p class="text-sm text-brand-600 font-medium mb-2">System Admin</p>
+          <p class="text-xs text-slate-500">Maintaining digital student records, loan periods, and system tracking tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Achievements and Student Reading Stats -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Impact & Scale</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2">By The Numbers</h2>
+        <p class="text-slate-600 mt-4">Quantifying our dedication to youth literacy in Pune.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
+          <div class="text-3xl sm:text-4xl font-display font-bold text-brand-600 mb-2">15,000+</div>
+          <p class="text-slate-600 font-medium text-sm">Books Cataloged</p>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
+          <div class="text-3xl sm:text-4xl font-display font-bold text-brand-600 mb-2">450+</div>
+          <p class="text-slate-600 font-medium text-sm">Registered Students</p>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
+          <div class="text-3xl sm:text-4xl font-display font-bold text-brand-600 mb-2">14 Days</div>
+          <p class="text-slate-600 font-medium text-sm">Standard Loan Period</p>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center">
+          <div class="text-3xl sm:text-4xl font-display font-bold text-brand-600 mb-2">₹5</div>
+          <p class="text-slate-600 font-medium text-sm">Late Fine Per Day</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Gallery of the Reading Space -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Visual Tour</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-slate-900 mt-2">Our Reading Sanctuary</h2>
+        <p class="text-slate-600 mt-4">A glimpse into our quiet study halls and organized bookshelves on FC Road.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-bookshelves-rows-x/800/600" alt="Organized bookshelves" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/students-studying-library-x/800/600" alt="Students studying" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/reading-room-desks-x/800/600" alt="Reading room desks" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Band -->
+  <section class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Ready to Begin Your Literary Journey?</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto mb-8">Visit us at Shivajinagar or browse our catalog online to discover your next great read.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="books.html" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium shadow-lg transition">Explore Books</a>
+        <a href="index.html#contact" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-medium transition">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized literary discovery.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="books.html" class="hover:text-white">Book Inventory</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Library Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 8:30 AM - 4:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2553 1234</p><p class="mt-2 text-sm text-slate-400">hello@booknook.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Book Nook. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

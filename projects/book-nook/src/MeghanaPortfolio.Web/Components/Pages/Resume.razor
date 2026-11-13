@@ -1,0 +1,162 @@
+@page "/resume"
+
+<PageTitle>Resume & Experience | Meghana M Revankar</PageTitle>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+        <div>
+            <span class="text-xs font-extrabold text-accent-500 uppercase tracking-widest block mb-2">Professional Background</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-900 tracking-tight">Resume & Experience</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <button @onclick="DownloadResume" class="px-6 py-3 rounded-xl bg-brand-700 text-white font-bold hover:bg-brand-900 transition shadow-md flex items-center gap-2">
+                <i data-lucide="download" class="w-5 h-5"></i> Download PDF Resume
+            </button>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Left Column: Experience Timeline -->
+        <div class="lg:col-span-7 space-y-8">
+            <div class="bg-white rounded-3xl p-8 border border-line shadow-sm">
+                <h3 class="text-2xl font-bold text-brand-900 mb-8 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
+                    </div>
+                    Work Experience
+                </h3>
+
+                <div class="space-y-8 border-l-2 border-brand-100 pl-6 ml-4">
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-700 border-4 border-white shadow-sm"></div>
+                        <span class="text-xs font-mono font-bold text-accent-500">2022 - Present</span>
+                        <h4 class="text-lg font-bold text-brand-900 mt-1">Senior Front-End Developer</h4>
+                        <p class="text-sm font-semibold text-brand-700 mb-2">TechCraft Solutions &bull; Bengaluru, India</p>
+                        <p class="text-ink-600 text-sm leading-relaxed">Leading front-end architecture for enterprise SaaS dashboards using React, TypeScript, and Tailwind CSS. Mentoring junior developers and improving core web vitals by 45%.</p>
+                    </div>
+
+                    <div class="relative pt-6">
+                        <div class="absolute -left-[31px] top-7.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-white shadow-sm"></div>
+                        <span class="text-xs font-mono font-bold text-accent-500">2020 - 2022</span>
+                        <h4 class="text-lg font-bold text-brand-900 mt-1">Front-End Web Developer</h4>
+                        <p class="text-sm font-semibold text-brand-700 mb-2">PixelCraft Studio &bull; Bengaluru, India</p>
+                        <p class="text-ink-600 text-sm leading-relaxed">Converted high-fidelity Figma designs into responsive HTML5, Tailwind, and Blazor web components for e-commerce and fintech clients.</p>
+                    </div>
+
+                    <div class="relative pt-6">
+                        <div class="absolute -left-[31px] top-7.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-white shadow-sm"></div>
+                        <span class="text-xs font-mono font-bold text-accent-500">2019 - 2020</span>
+                        <h4 class="text-lg font-bold text-brand-900 mt-1">UI/UX Developer Intern</h4>
+                        <p class="text-sm font-semibold text-brand-700 mb-2">InnoTech Labs &bull; Bengaluru, India</p>
+                        <p class="text-ink-600 text-sm leading-relaxed">Assisted in building accessible web interfaces and design system components following WCAG guidelines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="bg-white rounded-3xl p-8 border border-line shadow-sm">
+                <h3 class="text-2xl font-bold text-brand-900 mb-8 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                    </div>
+                    Education & Credentials
+                </h3>
+
+                <div class="space-y-6">
+                    <div class="p-4 rounded-2xl bg-canvas border border-line">
+                        <span class="text-xs font-mono text-accent-500 font-bold">2015 - 2019</span>
+                        <h4 class="font-bold text-brand-900 text-base mt-1">Bachelor of Engineering in Computer Science</h4>
+                        <p class="text-sm text-ink-600">Visvesvaraya Technological University, Karnataka, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Skills & Expertise -->
+        <div class="lg:col-span-5 space-y-8">
+            <div class="bg-white rounded-3xl p-8 border border-line shadow-sm">
+                <h3 class="text-2xl font-bold text-brand-900 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="code" class="w-5 h-5"></i>
+                    </div>
+                    Technical Skills
+                </h3>
+
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span>HTML5 & CSS3 / Tailwind CSS</span>
+                            <span class="text-brand-700 font-mono">98%</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-canvas rounded-full overflow-hidden">
+                            <div class="bg-brand-700 h-full rounded-full" style="width: 98%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span>JavaScript & TypeScript</span>
+                            <span class="text-brand-700 font-mono">92%</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-canvas rounded-full overflow-hidden">
+                            <div class="bg-brand-700 h-full rounded-full" style="width: 92%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span>React & Next.js</span>
+                            <span class="text-brand-700 font-mono">90%</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-canvas rounded-full overflow-hidden">
+                            <div class="bg-brand-700 h-full rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span>C# & Blazor (.NET 8)</span>
+                            <span class="text-brand-700 font-mono">85%</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-canvas rounded-full overflow-hidden">
+                            <div class="bg-brand-700 h-full rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm font-semibold mb-1">
+                            <span>Figma & UI/UX Design</span>
+                            <span class="text-brand-700 font-mono">95%</span>
+                        </div>
+                        <div class="w-full h-2.5 bg-canvas rounded-full overflow-hidden">
+                            <div class="bg-brand-700 h-full rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="bg-white rounded-3xl p-8 border border-line shadow-sm">
+                <h3 class="text-2xl font-bold text-brand-900 mb-6 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+                        <i data-lucide="star" class="w-5 h-5"></i>
+                    </div>
+                    Certifications
+                </h3>
+                <ul class="space-y-3 text-sm text-ink-900">
+                    <li class="flex items-center gap-3"><i data-lucide="circle-check" class="w-5 h-5 text-success"></i> Advanced React & Redux Certification</li>
+                    <li class="flex items-center gap-3"><i data-lucide="circle-check" class="w-5 h-5 text-success"></i> Microsoft Certified: .NET Developer</li>
+                    <li class="flex items-center gap-3"><i data-lucide="circle-check" class="w-5 h-5 text-success"></i> Tailwind CSS Mastery Badge</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void DownloadResume()
+    {
+        // Simulated PDF download action
+    }
+}

@@ -1,0 +1,97 @@
+@page "/portfolio"
+
+<PageTitle>Portfolio | Meghana M Revankar</PageTitle>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-extrabold text-accent-500 uppercase tracking-widest block mb-2">My Work</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-brand-900 tracking-tight">Project Portfolio</h1>
+        <p class="text-lg text-ink-600 mt-4">A curated collection of web apps, e-commerce storefronts, and high-performance SaaS interfaces.</p>
+    </div>
+
+    <!-- Filter & Search Bar -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-12 bg-white p-4 rounded-2xl border border-line shadow-sm">
+        <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
+            <button @onclick='() => FilterCategory("All")' class="px-5 py-2.5 rounded-xl text-sm font-semibold transition @(activeCategory == "All" ? "bg-brand-700 text-white shadow-md" : "bg-canvas text-ink-600 hover:bg-brand-100")">All Projects</button>
+            <button @onclick='() => FilterCategory("E-Commerce")' class="px-5 py-2.5 rounded-xl text-sm font-semibold transition @(activeCategory == "E-Commerce" ? "bg-brand-700 text-white shadow-md" : "bg-canvas text-ink-600 hover:bg-brand-100")">E-Commerce</button>
+            <button @onclick='() => FilterCategory("SaaS")' class="px-5 py-2.5 rounded-xl text-sm font-semibold transition @(activeCategory == "SaaS" ? "bg-brand-700 text-white shadow-md" : "bg-canvas text-ink-600 hover:bg-brand-100")">SaaS Dashboards</button>
+            <button @onclick='() => FilterCategory("Mobile")' class="px-5 py-2.5 rounded-xl text-sm font-semibold transition @(activeCategory == "Mobile" ? "bg-brand-700 text-white shadow-md" : "bg-canvas text-ink-600 hover:bg-brand-100")">Mobile & Landing</button>
+        </div>
+
+        <div class="w-full md:w-72 relative">
+            <input type="text" @bind="searchQuery" @bind:event="oninput" placeholder="Search projects..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-canvas border border-line text-sm focus:outline-none focus:border-brand-700" />
+            <i data-lucide="search" class="w-4 h-4 text-ink-600 absolute left-3.5 top-3.5"></i>
+        </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        @foreach (var p in FilteredProjects)
+        {
+            <div class="bg-white rounded-3xl p-6 border border-line shadow-sm hover:shadow-xl transition group flex flex-col justify-between">
+                <div>
+                    <div class="aspect-video rounded-2xl overflow-hidden mb-6 bg-brand-100">
+                        <img src="@p.ImageUrl" alt="@p.Title" width="600" height="400" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+                    </div>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold text-brand-700 bg-brand-100 px-3 py-1 rounded-full">@p.Category</span>
+                        <span class="text-xs font-mono text-ink-600">@p.Year</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-900 mb-2">@p.Title</h3>
+                    <p class="text-ink-600 text-sm mb-4">@p.Description</p>
+                </div>
+                <div>
+                    <div class="flex flex-wrap gap-1.5 mb-6">
+                        @foreach (var tag in p.Tags)
+                        {
+                            <span class="text-[11px] font-mono bg-canvas text-ink-600 px-2.5 py-1 rounded-md border border-line">@tag</span>
+                        }
+                    </div>
+                    <div class="pt-4 border-t border-line flex items-center justify-between">
+                        <a href="contact" class="text-brand-700 font-semibold text-sm hover:text-accent-500 flex items-center gap-1.5">
+                            <i data-lucide="code" class="w-4 h-4"></i> Request Details
+                        </a>
+                        <span class="text-xs font-semibold text-success flex items-center gap-1">
+                            <i data-lucide="circle-check" class="w-3.5 h-3.5"></i> Live
+                        </span>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private string activeCategory = "All";
+    private string searchQuery = "";
+
+    private class ProjectItem
+    {
+        public string Title { get; set; } = "";
+        public string Category { get; set; } = "";
+        public string Description { get; set; } = "";
+        public string ImageUrl { get; set; } = "";
+        public string Year { get; set; } = "";
+        public List<string> Tags { get; set; } = new();
+    }
+
+    private List<ProjectItem> projects = new()
+    {
+        new ProjectItem { Title = "Shopping Website", Category = "E-Commerce", Description = "Full-featured online boutique with lightning-fast cart management and Stripe checkout integration.", ImageUrl = "https://picsum.photos/seed/meghana-shopping-website-ecommerce/600/400", Year = "2024", Tags = new() { "React", "Tailwind CSS", "Stripe" } },
+        new ProjectItem { Title = "Analytics Dashboard", Category = "SaaS", Description = "Real-time financial and metrics tracking panel with interactive charts and dark mode toggle.", ImageUrl = "https://picsum.photos/seed/meghana-analytics-dashboard-saas/600/400", Year = "2024", Tags = new() { "TypeScript", "Blazor", "Chart.js" } },
+        new ProjectItem { Title = "Mobile App Landing Page", Category = "Mobile", Description = "High-converting marketing site featuring smooth animations, pricing tables, and customer testimonials.", ImageUrl = "https://picsum.photos/seed/meghana-mobile-app-landing-page/600/400", Year = "2023", Tags = new() { "HTML5", "Tailwind CSS", "AOS" } },
+        new ProjectItem { Title = "Healthcare Portal UI", Category = "SaaS", Description = "Patient appointment booking and health records dashboard with role-based navigation.", ImageUrl = "https://picsum.photos/seed/meghana-healthcare-portal-ui/600/400", Year = "2023", Tags = new() { "React", "Material UI", "REST API" } },
+        new ProjectItem { Title = "Fintech Mobile Web App", Category = "Mobile", Description = "Secure cryptocurrency and fiat wallet web interface with responsive charts.", ImageUrl = "https://picsum.photos/seed/meghana-fintech-mobile-web-app/600/400", Year = "2024", Tags = new() { "TypeScript", "Tailwind", "Web3" } },
+        new ProjectItem { Title = "Artisan Bakery Storefront", Category = "E-Commerce", Description = "Boutique bakery ordering system with custom cake builder and local delivery slot picker.", ImageUrl = "https://picsum.photos/seed/meghana-artisan-bakery-storefront/600/400", Year = "2024", Tags = new() { "Blazor", "C#", "Tailwind CSS" } }
+    };
+
+    private void FilterCategory(string cat)
+    {
+        activeCategory = cat;
+    }
+
+    private IEnumerable<ProjectItem> FilteredProjects => projects
+        .Where(p => (activeCategory == "All" || p.Category == activeCategory) &&
+                    (string.IsNullOrWhiteSpace(searchQuery) || p.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) || p.Description.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)));
+}

@@ -1,0 +1,129 @@
+@inherits LayoutComponentBase
+
+<div class="min-h-screen flex flex-col bg-canvas text-ink-900 selection:bg-brand-500 selection:text-white">
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-line">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-brand-700 text-white flex items-center justify-center font-extrabold text-xl shadow-md group-hover:bg-brand-900 transition">
+                    MR
+                </div>
+                <div>
+                    <span class="block font-bold text-lg text-brand-900 leading-tight">Meghana M Revankar</span>
+                    <span class="block text-xs font-semibold text-accent-500 tracking-wider uppercase">Front-End Developer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium">
+                <NavLink href="" Match="NavLinkMatch.All" class="text-ink-600 hover:text-brand-700 transition" ActiveClass="text-brand-700 font-bold">Home</NavLink>
+                <NavLink href="portfolio" class="text-ink-600 hover:text-brand-700 transition" ActiveClass="text-brand-700 font-bold">Portfolio</NavLink>
+                <NavLink href="services" class="text-ink-600 hover:text-brand-700 transition" ActiveClass="text-brand-700 font-bold">Services</NavLink>
+                <NavLink href="resume" class="text-ink-600 hover:text-brand-700 transition" ActiveClass="text-brand-700 font-bold">Resume</NavLink>
+                <NavLink href="contact" class="text-ink-600 hover:text-brand-700 transition" ActiveClass="text-brand-700 font-bold">Contact</NavLink>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="contact" class="px-5 py-2.5 rounded-full bg-accent-500 text-white font-semibold hover:bg-orange-600 transition shadow-sm flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i> Hire Me
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button @onclick="ToggleMobileMenu" class="lg:hidden p-2.5 rounded-xl text-ink-600 hover:bg-brand-100 hover:text-brand-700 transition focus:outline-none" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        @if (isMobileMenuOpen)
+        {
+            <div class="lg:hidden absolute top-20 left-0 w-full bg-white border-b border-line shadow-xl py-6 px-6 flex flex-col gap-4 animate-fadeIn">
+                <NavLink href="" Match="NavLinkMatch.All" @onclick="ToggleMobileMenu" class="text-lg font-semibold text-ink-900 hover:text-brand-700">Home</NavLink>
+                <NavLink href="portfolio" @onclick="ToggleMobileMenu" class="text-lg font-semibold text-ink-900 hover:text-brand-700">Portfolio</NavLink>
+                <NavLink href="services" @onclick="ToggleMobileMenu" class="text-lg font-semibold text-ink-900 hover:text-brand-700">Services</NavLink>
+                <NavLink href="resume" @onclick="ToggleMobileMenu" class="text-lg font-semibold text-ink-900 hover:text-brand-700">Resume</NavLink>
+                <NavLink href="contact" @onclick="ToggleMobileMenu" class="text-lg font-semibold text-ink-900 hover:text-brand-700">Contact</NavLink>
+                <div class="pt-4 border-t border-line flex flex-col gap-3">
+                    <a href="contact" @onclick="ToggleMobileMenu" class="w-full py-3 rounded-xl bg-accent-500 text-white font-semibold text-center shadow-sm">Hire Me</a>
+                </div>
+            </div>
+        }
+    </header>
+
+    <!-- Main Content Body -->
+    <main class="flex-grow">
+        @Body
+    </main>
+
+    <!-- Rich Footer -->
+    <footer class="bg-brand-900 text-white pt-16 pb-12 border-t border-brand-700 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-accent-500 text-white flex items-center justify-center font-bold text-lg">
+                            MR
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Meghana M Revankar</span>
+                    </div>
+                    <p class="text-slate-300 max-w-sm mb-6 leading-relaxed">
+                        Turning complex Figma designs into lightning-fast, pixel-perfect, accessible web experiences in Bengaluru, India.
+                    </p>
+                    <div class="flex items-center gap-4 text-slate-400">
+                        <a href="https://github.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-500 hover:text-white flex items-center justify-center transition" aria-label="GitHub"><i data-lucide="code" class="w-5 h-5"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-500 hover:text-white flex items-center justify-center transition" aria-label="LinkedIn"><i data-lucide="users" class="w-5 h-5"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-accent-500 hover:text-white flex items-center justify-center transition" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-wider">Navigation</h4>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><a href="" class="hover:text-accent-500 transition">Home</a></li>
+                        <li><a href="portfolio" class="hover:text-accent-500 transition">Portfolio</a></li>
+                        <li><a href="services" class="hover:text-accent-500 transition">Services</a></li>
+                        <li><a href="resume" class="hover:text-accent-500 transition">Resume</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-wider">Expertise</h4>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><span class="hover:text-accent-500 transition">Tailwind CSS</span></li>
+                        <li><span class="hover:text-accent-500 transition">React & Next.js</span></li>
+                        <li><span class="hover:text-accent-500 transition">Blazor .NET 8</span></li>
+                        <li><span class="hover:text-accent-500 transition">TypeScript UI</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white mb-4 uppercase text-xs tracking-wider">Contact</h4>
+                    <p class="text-slate-300 text-sm mb-2"><i data-lucide="map-pin" class="inline w-4 h-4 mr-2 text-accent-500"></i> Bengaluru, India</p>
+                    <p class="text-slate-300 text-sm mb-4"><i data-lucide="phone" class="inline w-4 h-4 mr-2 text-accent-500"></i> meghana@example.com</p>
+                    <a href="contact" class="inline-block px-4 py-2 rounded-lg bg-brand-700 hover:bg-accent-500 text-white text-xs font-semibold transition">Get in Touch</a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400">
+                <p>&copy; @DateTime.Now.Year Meghana M Revankar. All rights reserved.</p>
+                <p class="mt-4 sm:mt-0 flex items-center gap-1">Built with Blazor .NET 8 & Tailwind CSS</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+@code {
+    private bool isMobileMenuOpen = false;
+
+    private void ToggleMobileMenu()
+    {
+        isMobileMenuOpen = !isMobileMenuOpen;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // Re-initialize Lucide icons on layout updates
+        // In actual Blazor client, interop calls window.lucide?.createIcons()
+    }
+}
