@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asha Foundation | Education and Care for Bengaluru's Children</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body class="bg-canvas text-ink-900">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-line">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-display font-bold text-xl text-brand-700">
+        <i data-lucide="sun" class="text-accent-500"></i> Asha Foundation
+      </a>
+      <div class="hidden md:flex items-center gap-6 font-medium">
+        <a href="index.html" class="nav-link nav-link--active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="programs.html" class="nav-link">Our Programs</a>
+        <a href="volunteer.html" class="nav-link">Volunteer</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="donate.html" class="btn btn-accent">Donate Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="relative py-24 bg-brand-900 text-white">
+      <div class="absolute inset-0 opacity-40">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554721299-e0b8aa7666ce?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y2hpbGRyZW4lMjBsZWFybmluZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc5NDU2ODkzNHww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" class="w-full h-full object-cover" alt="Happy children studying in a classroom">
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-display font-extrabold leading-tight">Every child deserves a <span class="text-accent-500">bright future</span>.</h1>
+        <p class="text-xl mt-6 opacity-90">Join Asha Foundation in Bengaluru to provide education, nutrition, and hope to children from low-income families.</p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="donate.html" class="btn btn-accent text-lg">Donate Now</a>
+          <a href="volunteer.html" class="btn btn-outline text-white border-white text-lg">Become a Volunteer</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center"><p class="text-4xl font-display font-bold text-brand-700">5,000+</p><p class="text-ink-600">Children Supported</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-brand-700">120+</p><p class="text-ink-600">Active Volunteers</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-brand-700">18+</p><p class="text-ink-600">Partner Schools</p></div>
+        <div class="text-center"><p class="text-4xl font-display font-bold text-brand-700">2.4L+</p><p class="text-ink-600">Meals Served</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-brand-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12">
+      <div>
+        <h3 class="font-display font-bold text-xl mb-4 text-accent-500">Asha Foundation</h3>
+        <p class="text-sm opacity-80">Empowering children through education and care since 2012.</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <ul class="space-y-2 opacity-80 text-sm">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="volunteer.html">Volunteer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Visit Us</h4>
+        <p class="text-sm opacity-80">2nd Floor, 14 MG Road,<br>Bengaluru, Karnataka 560001</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Contact</h4>
+        <p class="text-sm opacity-80">+91 80 4567 8910<br>hello@ashafoundation.in</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/10 text-center opacity-60 text-sm">
+      &copy; <span id="year"></span> Asha Foundation. All rights reserved.
+    </div>
+  </footer>
+  <script>lucide.createIcons(); document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
