@@ -1,52 +1,39 @@
-# Restriviz Architecture
+# 03 Architecture
 
 ## Overview
-Restriviz is a restaurant POS system tailored for a small cafe in Bengaluru. It handles menu management, order processing, and payment recording.
+Restriviz is a restaurant POS system designed for small cafes. It follows Clean Architecture principles, ensuring clear separation between domain logic, application use cases, and infrastructure concerns.
 
 ## Container Diagram
 ```mermaid
 flowchart LR
-    User[User: Admin/Cashier] --> Web[Blazor Web App]
-    Web --> API[Restriviz.Api]
-    API --> DB[(PostgreSQL)]
+    User --> Web[Blazor WebAssembly]
+    Web --> Api[ASP.NET Core API]
+    Api --> DB[(PostgreSQL)]
+    Api --> Auth[Identity Provider]
 ```
 
-## Modules
-- **Domain**: Core business logic (Orders, Products, Payments).
-- **Application**: CQRS handlers, validation, DTOs.
-- **Infrastructure**: Entity Framework Core implementation.
-- **Api**: REST controllers, authentication.
-- **Web**: Blazor UI components.
-
-## Folder Structure
-```
-src/
-  Restriviz.Domain/
-  Restriviz.Application/
-  Restriviz.Infrastructure/
-  Restriviz.Api/
-  Restriviz.Web/
-tests/
-  Restriviz.UnitTests/
-  Restriviz.IntegrationTests/
-```
+## Module List
+- **Domain**: Core entities (Product, Order, OrderItem, Table, Category).
+- **Application**: CQRS handlers for menu management, POS order processing, and payment execution.
+- **Infrastructure**: Entity Framework Core repository implementation, PostgreSQL configuration.
+- **Api**: RESTful endpoints and request validation.
+- **Web**: Blazor interactive server-side UI, state management, and API integration.
 
 ## Data Entities
-- **Category**: `id`, `name`.
-- **Product**: `id`, `category_id`, `name`, `price`, `is_veg`, `is_available`.
-- **Table**: `id`, `number`.
-- **Order**: `id`, `table_id`, `type` (Dine-in/Takeaway), `total_amount`, `discount`, `status`.
-- **OrderItem**: `id`, `order_id`, `product_id`, `quantity`, `price`.
-- **Payment**: `id`, `order_id`, `type` (Cash/Card/UPI), `amount`.
+- **Product**: id, category_id, name, price, is_veg, is_available.
+- **Category**: id, name.
+- **Order**: id, table_id, type (dine-in/takeaway), status, total_amount, payment_status, created_at.
+- **OrderItem**: id, order_id, product_id, quantity, notes, price_at_order.
+- **Table**: id, name, is_occupied.
 
 ## API Endpoints
 - `GET /api/v1/menu`
-- `POST /api/v1/menu/products`
-- `POST /api/v1/orders`
-- `POST /api/v1/orders/{id}/payments`
+- `POST /api/v1/menu`
+- `GET /api/v1/orders`
+- `POST /api/v1/orders` (Checkout)
+- `GET /api/v1/dashboard`
 
 ## Design Decisions
-- **Clean Architecture**: Decoupled layers for maintainability.
-- **Server-side Calculation**: All financial logic resides in the Application layer to prevent tampering.
-- **Currency**: Fixed to INR using `numeric(18,2)`.
-- **Auth**: JWT-based authentication with Admin/Cashier roles.
+- **CQRS**: Used to keep handlers focused.
+- **Server-side Calculation**: All financial calculations are performed on the server to prevent client-side manipulation.
+- **Database**: PostgreSQL with snake_case naming and no migrations (direct schema management).

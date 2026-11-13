@@ -9,6 +9,7 @@ public sealed class Product
     public bool IsVeg { get; private set; }
     public bool IsAvailable { get; private set; }
 
+    // Private constructor for EF
     private Product() { }
 
     public static Product Create(Guid categoryId, string name, decimal price, bool isVeg)

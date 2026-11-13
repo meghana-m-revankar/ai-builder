@@ -1,15 +1,15 @@
 html{scroll-behavior:smooth}
 .font-display{letter-spacing:-0.02em}
-::selection{background:#C7D2FE}
+::selection{background:#ddd6fe}
 
 body.theme-dark{color-scheme:dark}
 .theme-dark main :is(.bg-white,.bg-slate-50,.bg-gray-50,.bg-slate-100,.bg-gray-100,.bg-neutral-50,.bg-stone-50){background-color:#0f172a!important}
 .theme-dark main :is(.bg-brand-50,.bg-brand-100){background-color:rgba(255,255,255,.06)!important}
 .theme-dark main :is(.text-slate-900,.text-slate-800,.text-gray-900,.text-gray-800,.text-black,.text-neutral-900,.text-stone-900){color:#f1f5f9!important}
 .theme-dark main :is(.text-slate-700,.text-slate-600,.text-gray-700,.text-gray-600,.text-slate-500,.text-gray-500){color:#cbd5e1!important}
-.theme-dark main :is(.text-brand-900,.text-brand-800,.text-brand-700,.text-brand-600){color:#A5B4FC!important}
+.theme-dark main :is(.text-brand-900,.text-brand-800,.text-brand-700,.text-brand-600){color:#c4b5fd!important}
 .theme-dark main :is(.border-slate-200,.border-slate-100,.border-gray-200,.border-gray-100,.border-slate-300,.border-gray-300){border-color:rgba(255,255,255,.14)!important}
-.theme-dark main :is(.border-brand-900,.border-brand-800,.border-brand-700,.border-brand-600){border-color:#818CF8!important}
+.theme-dark main :is(.border-brand-900,.border-brand-800,.border-brand-700,.border-brand-600){border-color:#a78bfa!important}
 /* solid brand buttons: always white text */
 .theme-dark :is(a,button,[role=button],input[type=submit]):is(.bg-brand-500,.bg-brand-600,.bg-brand-700,.bg-brand-800,.bg-brand-900){color:#fff!important}
 /* white / light pill buttons stay light, so force dark text on them */
@@ -19,4 +19,4 @@ body.theme-dark{color-scheme:dark}
 .theme-dark :is(a,button,[role=button])[class*="border"]:not([class*="bg-"]):hover{background-color:rgba(255,255,255,.08)}
 .theme-dark :is(input,select,textarea){background-color:#0b1222!important;color:#f1f5f9!important;border-color:rgba(255,255,255,.2)!important}
 .theme-dark :is(input,textarea)::placeholder{color:#94a3b8}
-.theme-dark :is(a,button):focus-visible{outline:2px solid #818CF8;outline-offset:2px}
+.theme-dark :is(a,button):focus-visible{outline:2px solid #a78bfa;outline-offset:2px}

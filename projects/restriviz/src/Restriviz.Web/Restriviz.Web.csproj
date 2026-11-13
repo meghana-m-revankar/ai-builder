@@ -5,7 +5,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Restriviz.Web</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Restriviz.Application\Restriviz.Application.csproj" />
-  </ItemGroup>
 </Project>

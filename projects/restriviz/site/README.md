@@ -1,7 +1,7 @@
 # Restriviz
 
-Modern POS for Bengaluru's vibrant cafe culture.
+Full-stack cafe POS for modern Bengaluru.
 
 Static website - open index.html in a browser or host the folder on any static host.
 
-Pages: index.html, menu.html, pos.html, payments.html
+Pages: index.html, pos.html, orders.html, dashboard.html
