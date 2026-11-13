@@ -1,0 +1,18 @@
+{
+  "info": { "name": "Restriviz API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "item": [
+    {
+      "name": "Menu",
+      "item": [
+        {
+          "name": "TC-API-001 List Menu",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/v1/menu"
+          },
+          "event": [{ "listen": "test", "script": { "exec": ["pm.test('200 OK', () => pm.response.to.have.status(200));"] } }]
+        }
+      ]
+    }
+  ]
+}

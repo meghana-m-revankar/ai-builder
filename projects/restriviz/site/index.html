@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | Restriviz</title>
+<meta name="description" content="Modern POS for Bengaluru's vibrant cafe culture.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#F0F4FF','100':'#E0E7FF','200':'#C7D2FE','300':'#A5B4FC','400':'#818CF8','500':'#6366F1','600':'#4F46E5','700':'#4338CA','800':'#3730A3','900':'#1E1B4B'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Restriviz</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Dashboard</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu Management</a><a href="pos.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">POS Checkout</a><a href="payments.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Payments</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Dashboard</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu Management</a><a href="pos.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">POS Checkout</a><a href="payments.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Payments</a></div>
+</header>
+<main>
+<main class="bg-gray-950 text-gray-100 min-h-screen">
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1684482610161-4e8acd76d7b9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YmVuZ2FsdXJ1JTIwY2FmZSUyMGludGVyaW9yfGVufDF8fHx8MTc5NDU2MDc1OXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Modern Bengaluru Cafe" class="absolute inset-0 w-full h-full object-cover opacity-40">
+    <div class="relative z-10 text-center px-4">
+      <h1 class="text-5xl md:text-7xl font-display font-bold mb-6">Restriviz <span class="text-brand-500">Dashboard</span></h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto">Powering Indiranagar's finest cafes with lightning-fast POS and real-time insights.</p>
+    </div>
+  </section>
+
+  <!-- KPI Cards -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 bg-gray-800 rounded-2xl border border-gray-700">
+        <i data-lucide="trending-up" class="text-brand-500 mb-4"></i>
+        <h3 class="text-gray-400">Daily Revenue</h3>
+        <p class="text-3xl font-bold">₹8,450</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-2xl border border-gray-700">
+        <i data-lucide="shopping-bag" class="text-brand-500 mb-4"></i>
+        <h3 class="text-gray-400">Daily Orders</h3>
+        <p class="text-3xl font-bold">10</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-2xl border border-gray-700">
+        <i data-lucide="layout-grid" class="text-brand-500 mb-4"></i>
+        <h3 class="text-gray-400">Active Tables</h3>
+        <p class="text-3xl font-bold">6</p>
+      </div>
+      <div class="p-6 bg-gray-800 rounded-2xl border border-gray-700">
+        <i data-lucide="users" class="text-brand-500 mb-4"></i>
+        <h3 class="text-gray-400">Occupancy</h3>
+        <p class="text-3xl font-bold">82%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Revenue Chart Visualization -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-display mb-8">Revenue Performance</h2>
+      <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 h-80 flex items-end gap-4">
+        <!-- Mock SVG Chart -->
+        <svg viewBox="0 0 1000 300" class="w-full h-full stroke-brand-500 fill-none stroke-[4px]">
+          <polyline points="0,250 200,200 400,220 600,100 800,150 1000,50" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Orders Table -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-display mb-8">Recent Orders</h2>
+      <div class="overflow-x-auto bg-gray-800 rounded-2xl border border-gray-700">
+        <table class="w-full text-left" id="orders-table">
+          <thead>
+            <tr class="border-b border-gray-700 text-gray-400">
+              <th class="p-4">Order ID</th>
+              <th class="p-4">Item</th>
+              <th class="p-4">Amount</th>
+              <th class="p-4">Status</th>
+            </tr>
+          </thead>
+          <tbody id="orders-body">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Actions -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-display mb-10">Quick Actions</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="pos.html" class="bg-brand-600 hover:bg-brand-700 px-8 py-4 rounded-xl font-bold transition flex items-center gap-2">
+          <i data-lucide="plus-circle"></i> New POS Order
+        </a>
+        <a href="menu.html" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-xl font-bold transition flex items-center gap-2">
+          <i data-lucide="coffee"></i> Manage Menu
+        </a>
+        <a href="payments.html" class="bg-gray-800 hover:bg-gray-700 px-8 py-4 rounded-xl font-bold transition flex items-center gap-2">
+          <i data-lucide="credit-card"></i> View Payments
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const orders = [
+    { id: '#1024', item: 'Cold Brew', amount: '₹180', status: 'Completed' },
+    { id: '#1025', item: 'Masala Dosa', amount: '₹120', status: 'Pending' },
+    { id: '#1026', item: 'Filter Coffee', amount: '₹60', status: 'Completed' },
+    { id: '#1027', item: 'Veg Sandwich', amount: '₹150', status: 'In Progress' }
+  ];
+
+  function renderOrders() {
+    const container = document.getElementById('orders-body');
+    container.innerHTML = orders.map(o => `
+      <tr class="border-b border-gray-700 last:border-0 hover:bg-gray-750">
+        <td class="p-4 font-mono">${o.id}</td>
+        <td class="p-4">${o.item}</td>
+        <td class="p-4">${o.amount}</td>
+        <td class="p-4"><span class="px-2 py-1 rounded bg-gray-700 text-xs">${o.status}</span></td>
+      </tr>
+    `).join('');
+  }
+
+  renderOrders();
+  lucide.createIcons();
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Restriviz</p><p class="mt-3 text-sm text-slate-400">Modern POS for Bengaluru's vibrant cafe culture.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Dashboard</a><a href="menu.html" class="hover:text-white">Menu Management</a><a href="pos.html" class="hover:text-white">POS Checkout</a><a href="payments.html" class="hover:text-white">Payments</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Address: 42/A, Indiranagar, Bengaluru, KA 560038. Phone: +91 80 2555 0199. Email: hello@restriviz.in. Hours: 8:00 AM – 11:00 PM. Founder: Ananya Rao. Founded: 2022. Products: Filter Coffee (₹60), Masala Dosa (₹120), Veg Sandwich (₹150), Cold Brew (₹180). 6 active tables, 8 categories, 10 daily orders. Built for speed and reliability.</p><p class="mt-2 text-sm text-slate-400">Address: 42/A, Indiranagar, Bengaluru, KA 560038. Phone: +91 80 2555 0199. Email: hello@restriviz.in. Hours: 8:00 AM – 11:00 PM. Founder: Ananya Rao. Founded: 2022. Products: Filter Coffee (₹60), Masala Dosa (₹120), Veg Sandwich (₹150), Cold Brew (₹180). 6 active tables, 8 categories, 10 daily orders. Built for speed and reliability.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Address: 42/A, Indiranagar, Bengaluru, KA 560038. Phone: +91 80 2555 0199. Email: hello@restriviz.in. Hours: 8:00 AM – 11:00 PM. Founder: Ananya Rao. Founded: 2022. Products: Filter Coffee (₹60), Masala Dosa (₹120), Veg Sandwich (₹150), Cold Brew (₹180). 6 active tables, 8 categories, 10 daily orders. Built for speed and reliability.</p><p class="mt-2 text-sm text-slate-400">Address: 42/A, Indiranagar, Bengaluru, KA 560038. Phone: +91 80 2555 0199. Email: hello@restriviz.in. Hours: 8:00 AM – 11:00 PM. Founder: Ananya Rao. Founded: 2022. Products: Filter Coffee (₹60), Masala Dosa (₹120), Veg Sandwich (₹150), Cold Brew (₹180). 6 active tables, 8 categories, 10 daily orders. Built for speed and reliability.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Restriviz. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
