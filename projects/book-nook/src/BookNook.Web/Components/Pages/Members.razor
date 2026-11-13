@@ -1,0 +1,104 @@
+@page "/members"
+@using BookNook.Domain.Entities
+@using BookNook.Infrastructure.Data
+@using Microsoft.EntityFrameworkCore
+@inject BookNookDbContext Db
+
+<PageTitle>Members Directory - Book Nook Library</PageTitle>
+
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+            <h1 class="text-3xl font-extrabold font-display text-brand-900 tracking-tight">Members Directory</h1>
+            <p class="text-ink-600 mt-1">Manage Sunrise School students and staff library memberships.</p>
+        </div>
+        <button class="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-700 text-white rounded-xl font-medium text-sm hover:bg-brand-500 transition-all shadow-md">
+            <i data-lucide="user-plus" class="w-4 h-4"></i>
+            Register Member
+        </button>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="bg-white p-4 rounded-2xl border border-line shadow-xs flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full sm:w-96">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-ink-600">
+                <i data-lucide="search" class="w-4 h-4"></i>
+            </span>
+            <input type="text" @bind="searchQuery" @bind:event="oninput" placeholder="Search by name, class or email..." class="w-full pl-10 pr-4 py-2 bg-canvas border border-line rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition-all" />
+        </div>
+        <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Total Members: @filteredMembers.Count</span>
+        </div>
+    </div>
+
+    <!-- Members Table -->
+    <div class="bg-white rounded-2xl border border-line shadow-xs overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-canvas border-b border-line text-xs font-semibold text-ink-600 uppercase tracking-wider">
+                        <th class="py-3.5 px-6">Member Name</th>
+                        <th class="py-3.5 px-6">Class / Grade</th>
+                        <th class="py-3.5 px-6">Contact Phone</th>
+                        <th class="py-3.5 px-6">Email Address</th>
+                        <th class="py-3.5 px-6 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-line text-sm">
+                    @if (filteredMembers.Any())
+                    {
+                        @foreach (var member in filteredMembers)
+                        {
+                            <tr class="hover:bg-canvas/50 transition-colors">
+                                <td class="py-4 px-6 flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs">
+                                        @member.Name.Substring(0, Math.Min(2, member.Name.Length)).ToUpper()
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-brand-900">@member.Name</div>
+                                        <div class="text-xs text-ink-600">Joined @member.JoinedDate.ToString("dd MMM yyyy")</div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-50 text-blue-700">
+                                        @member.Class
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 font-mono text-xs text-ink-600">@member.Phone</td>
+                                <td class="py-4 px-6 text-ink-600">@member.Email</td>
+                                <td class="py-4 px-6 text-right space-x-2">
+                                    <button class="p-2 rounded-lg border border-line text-ink-600 hover:text-brand-700 hover:border-brand-500 transition-colors" title="Edit">
+                                        <i data-lucide="square-pen" class="w-4 h-4"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="py-12 text-center text-ink-600">No members found matching your search.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Member> members = new();
+    private string searchQuery = string.Empty;
+
+    private List<Member> filteredMembers => string.IsNullOrWhiteSpace(searchQuery)
+        ? members
+        : members.Where(m => m.Name.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                           m.Class.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                           m.Email.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)).ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        members = await Db.Members.OrderBy(m => m.Name).ToListAsync();
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            900: '#0B1B3F',
+                            700: '#1E3A8A',
+                            500: '#3B5BDB',
+                            100: '#E7ECFB'
+                        },
+                        accent: {
+                            500: '#F97316'
+                        },
+                        ink: {
+                            900: '#0F172A',
+                            600: '#475569'
+                        },
+                        canvas: '#F6F7FB',
+                        line: '#E2E8F0'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+    <link rel="stylesheet" href="css/app.css" />
+    <headOutlet />
+</head>
+<body class="bg-canvas text-ink-900 font-sans antialiased min-h-screen">
+    <routes />
+    <script src="_framework/blazor.web.js"></script>
+    <script>
+        window.initLucide = () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        };
+        document.addEventListener('DOMContentLoaded', () => window.initLucide());
+        window.addEventListener('load', () => window.initLucide());
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+@page "/books"
+@using BookNook.Domain.Entities
+@using BookNook.Infrastructure.Data
+@using Microsoft.EntityFrameworkCore
+@inject BookNookDbContext Db
+
+<PageTitle>Books Catalogue - Book Nook Library</PageTitle>
+
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+            <h1 class="text-3xl font-extrabold font-display text-brand-900 tracking-tight">Books Catalogue</h1>
+            <p class="text-ink-600 mt-1">Manage library inventory, add new publications and track copies.</p>
+        </div>
+        <button @click="openAddModal" class="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-700 text-white rounded-xl font-medium text-sm hover:bg-brand-500 transition-all shadow-md">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            Add New Book
+        </button>
+    </div>
+
+    <!-- Filters & Search Bar -->
+    <div class="bg-white p-4 rounded-2xl border border-line shadow-xs flex flex-col sm:flex-row gap-4 items-center justify-between">
+        <div class="relative w-full sm:w-96">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-ink-600">
+                <i data-lucide="search" class="w-4 h-4"></i>
+            </span>
+            <input type="text" @bind="searchQuery" @bind:event="oninput" placeholder="Search by title, author or category..." class="w-full pl-10 pr-4 py-2 bg-canvas border border-line rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 transition-all" />
+        </div>
+        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+            <span class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Total Titles: @filteredBooks.Count</span>
+        </div>
+    </div>
+
+    <!-- Books Table -->
+    <div class="bg-white rounded-2xl border border-line shadow-xs overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-canvas border-b border-line text-xs font-semibold text-ink-600 uppercase tracking-wider">
+                        <th class="py-3.5 px-6">Book Details</th>
+                        <th class="py-3.5 px-6">Category</th>
+                        <th class="py-3.5 px-6">ISBN</th>
+                        <th class="py-3.5 px-6 text-center">Copies</th>
+                        <th class="py-3.5 px-6 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-line text-sm">
+                    @if (filteredBooks.Any())
+                    {
+                        @foreach (var book in filteredBooks)
+                        {
+                            <tr class="hover:bg-canvas/50 transition-colors">
+                                <td class="py-4 px-6">
+                                    <div class="font-bold text-brand-900">@book.Title</div>
+                                    <div class="text-xs text-ink-600 mt-0.5">by @book.Author</div>
+                                </td>
+                                <td class="py-4 px-6">
+                                    <span class="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-brand-100 text-brand-700">
+                                        @book.Category
+                                    </span>
+                                </td>
+                                <td class="py-4 px-6 font-mono text-xs text-ink-600">@book.Isbn</td>
+                                <td class="py-4 px-6 text-center">
+                                    <span class="font-mono font-bold text-brand-900">@book.AvailableCopies</span>
+                                    <span class="text-xs text-ink-600">/ @book.TotalCopies</span>
+                                </td>
+                                <td class="py-4 px-6 text-right space-x-2">
+                                    <button class="p-2 rounded-lg border border-line text-ink-600 hover:text-brand-700 hover:border-brand-500 transition-colors" title="Edit">
+                                        <i data-lucide="square-pen" class="w-4 h-4"></i>
+                                    </button>
+                                    <button @onclick="() => DeleteBook(book.Id)" class="p-2 rounded-lg border border-line text-ink-600 hover:text-rose-600 hover:border-rose-500 transition-colors" title="Delete">
+                                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="py-12 text-center text-ink-600">No books found matching your search.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Book> books = new();
+    private string searchQuery = string.Empty;
+
+    private List<Book> filteredBooks => string.IsNullOrWhiteSpace(searchQuery)
+        ? books
+        : books.Where(b => b.Title.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                           b.Author.Contains(searchQuery, StringComparison.OrdinalIgnoreCase) ||
+                           b.Category.Contains(searchQuery, StringComparison.OrdinalIgnoreCase)).ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        books = await Db.Books.OrderBy(b => b.Title).ToListAsync();
+    }
+
+    private async Task DeleteBook(Guid id)
+    {
+        var book = await Db.Books.FindAsync(id);
+        if (book != null)
+        {
+            Db.Books.Remove(book);
+            await Db.SaveChangesAsync();
+            books = await Db.Books.OrderBy(b => b.Title).ToListAsync();
+        }
+    }
+
+    private void openAddModal()
+    {
+        // Add book dialog trigger placeholder
+    }
+}

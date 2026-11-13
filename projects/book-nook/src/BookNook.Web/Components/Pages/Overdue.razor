@@ -1,0 +1,117 @@
+@page "/overdue"
+@using BookNook.Domain.Entities
+@using BookNook.Infrastructure.Data
+@using Microsoft.EntityFrameworkCore
+@inject BookNookDbContext Db
+
+<PageTitle>Overdue Loans & Fines - Book Nook Library</PageTitle>
+
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+            <h1 class="text-3xl font-extrabold font-display text-brand-900 tracking-tight">Overdue Loans & Fines</h1>
+            <p class="text-ink-600 mt-1">Track overdue publications and calculate accumulated late fines (₹5/day).</p>
+        </div>
+    </div>
+
+    <!-- Alert Banner -->
+    <div class="bg-rose-50 border border-rose-200 rounded-2xl p-6 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center font-bold">
+                <i data-lucide="triangle-alert" class="w-6 h-6"></i>
+            </div>
+            <div>
+                <h3 class="font-bold font-display text-rose-900">Total Pending Overdue Fines: ₹@totalFinesAmount</h3>
+                <p class="text-xs text-rose-700 mt-0.5">There are @overdueLoans.Count() books currently past their scheduled return date.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overdue Table -->
+    <div class="bg-white rounded-2xl border border-line shadow-xs overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-canvas border-b border-line text-xs font-semibold text-ink-600 uppercase tracking-wider">
+                        <th class="py-3.5 px-6">Book Title</th>
+                        <th class="py-3.5 px-6">Borrower Member</th>
+                        <th class="py-3.5 px-6">Contact Phone</th>
+                        <th class="py-3.5 px-6">Due Date</th>
+                        <th class="py-3.5 px-6">Calculated Fine</th>
+                        <th class="py-3.5 px-6 text-right">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-line text-sm">
+                    @if (overdueLoans.Any())
+                    {
+                        @foreach (var loan in overdueLoans)
+                        {
+                            <tr class="hover:bg-canvas/50 transition-colors">
+                                <td class="py-4 px-6 font-bold text-brand-900">@loan.Book?.Title</td>
+                                <td class="py-4 px-6 text-ink-600">@loan.Member?.Name <span class="text-xs text-ink-600">(@loan.Member?.Class)</span></td>
+                                <td class="py-4 px-6 font-mono text-xs text-ink-600">@loan.Member?.Phone</td>
+                                <td class="py-4 px-6 font-mono text-xs text-rose-600 font-bold">@loan.DueDate.ToString("dd MMM yyyy")</td>
+                                <td class="py-4 px-6 font-mono font-bold text-rose-600">₹@((int)(DateTime.UtcNow - loan.DueDate).TotalDays * 5)</td>
+                                <td class="py-4 px-6 text-right">
+                                    <button @onclick="() => ReturnBook(loan.Id)" class="px-3 py-1.5 bg-brand-700 text-white rounded-lg text-xs font-medium hover:bg-brand-500 transition-colors">
+                                        Return & Collect
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="py-12 text-center text-ink-600">Wonderful! No overdue loans at the moment.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@code {
+    private List<Loan> overdueLoans = new();
+    private decimal totalFinesAmount;
+
+    protected override async Task OnInitializedAsync()
+    {
+        overdueLoans = await Db.Loans
+            .Include(l => l.Book)
+            .Include(l => l.Member)
+            .Where(l => l.ReturnDate == null && l.DueDate < DateTime.UtcNow)
+            .OrderBy(l => l.DueDate)
+            .ToListAsync();
+
+        totalFinesAmount = overdueLoans.Sum(l => (decimal)((DateTime.UtcNow - l.DueDate).TotalDays * 5));
+    }
+
+    private async Task ReturnBook(Guid id)
+    {
+        var loan = await Db.Loans.Include(l => l.Book).FirstOrDefaultAsync(l => l.Id == id);
+        if (loan != null && loan.ReturnDate == null)
+        {
+            loan.ReturnDate = DateTime.UtcNow;
+            if (loan.ReturnDate > loan.DueDate)
+            {
+                int daysLate = (int)(loan.ReturnDate.Value - loan.DueDate).TotalDays;
+                loan.Fine = daysLate * 5;
+            }
+            if (loan.Book != null)
+            {
+                loan.Book.AvailableCopies++;
+            }
+            await Db.SaveChangesAsync();
+            overdueLoans = await Db.Loans
+                .Include(l => l.Book)
+                .Include(l => l.Member)
+                .Where(l => l.ReturnDate == null && l.DueDate < DateTime.UtcNow)
+                .OrderBy(l => l.DueDate)
+                .ToListAsync();
+            totalFinesAmount = overdueLoans.Sum(l => (decimal)((DateTime.UtcNow - l.DueDate).TotalDays * 5));
+        }
+    }
+}

@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Library Dashboard | Book Nook</title>
-<meta name="description" content="Empowering young minds through organized literary discovery.">
+<title>Dashboard | Book Nook</title>
+<meta name="description" content="Empowering young minds through organized reading.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#1e3675'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
@@ -15,684 +15,412 @@
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Book Nook</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book Inventory</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Library Dashboard</a></nav>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Books</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Dashboard</a></nav>
     <a href="books.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book Inventory</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Library Dashboard</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Books</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Dashboard</a></div>
 </header>
 <main>
-<main>
-  <!-- Hero Section / Header -->
-  <section class="relative py-16 md:py-24 bg-brand-900 text-white">
-    <div class="absolute inset-0 opacity-20">
-      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-dashboard-x/1600/900" alt="Library interior" class="w-full h-full object-cover">
-    </div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <span class="text-brand-300 font-semibold tracking-wider uppercase text-sm">Administrative Portal</span>
-        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-2 mb-4">Library Dashboard</h1>
-        <p class="text-lg text-brand-100 mb-8">Manage circulation, track active loans, calculate fines, and oversee daily library operations for Book Nook.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="books.html" class="bg-white text-brand-900 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-brand-50 transition flex items-center gap-2">
-            <i data-lucide="book" class="w-5 h-5"></i> View Inventory
-          </a>
-          <a href="members.html" class="bg-brand-800 text-white font-semibold px-6 py-3 rounded-xl border border-brand-700 hover:bg-brand-700 transition flex items-center gap-2">
-            <i data-lucide="users" class="w-5 h-5"></i> Manage Members
-          </a>
-        </div>
+<main class="bg-brand-50/50 min-h-screen pt-8 pb-16">
+  <!-- Header / Breadcrumbs -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-6 rounded-2xl shadow-sm border border-brand-100">
+      <div>
+        <span class="text-xs font-semibold tracking-wider uppercase text-brand-600 bg-brand-50 px-3 py-1 rounded-full">Admin Portal</span>
+        <h1 class="text-3xl font-display font-bold text-gray-900 mt-2">Librarian Dashboard</h1>
+        <p class="text-gray-600 text-sm mt-1">Manage daily book circulation, fines, and active student members at 12 FC Road, Pune.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 text-xs font-medium bg-green-50 text-green-700 px-3 py-1.5 rounded-lg border border-green-200">
+          <i data-lucide="check-circle" class="w-4 h-4"></i> System Active
+        </span>
+        <span class="text-xs text-gray-500 font-medium bg-gray-50 px-3 py-1.5 rounded-lg border border-gray-200">
+          Librarian: Meena Joshi
+        </span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Summary Statistics Bar -->
-  <section class="py-8 bg-brand-50 border-b border-brand-100">
+  <!-- Section 1: Quick Stats -->
+  <section id="stats" class="mb-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center gap-4">
-          <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase text-gray-500 tracking-wider">Total Collection</p>
+            <h3 class="text-3xl font-display font-bold text-gray-900 mt-1" id="stat-total-books">5,240</h3>
+            <p class="text-xs text-green-600 mt-1 flex items-center gap-1"><i data-lucide="arrow-up-right" class="w-3 h-3"></i> 12+ years cataloged</p>
+          </div>
+          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600">
             <i data-lucide="book-open" class="w-6 h-6"></i>
           </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center justify-between">
           <div>
-            <p class="text-sm text-gray-500 font-medium">Cataloged Books</p>
-            <h3 class="text-2xl font-bold font-display text-brand-900" id="stat-books">15,000+</h3>
+            <p class="text-xs font-semibold uppercase text-gray-500 tracking-wider">Active Members</p>
+            <h3 class="text-3xl font-display font-bold text-gray-900 mt-1" id="stat-members">800+</h3>
+            <p class="text-xs text-brand-600 mt-1 flex items-center gap-1"><i data-lucide="users" class="w-3 h-3"></i> 98% borrow rate</p>
+          </div>
+          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600">
+            <i data-lucide="user-check" class="w-6 h-6"></i>
           </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center gap-4">
-          <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
-            <i data-lucide="users" class="w-6 h-6"></i>
-          </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center justify-between">
           <div>
-            <p class="text-sm text-gray-500 font-medium">Registered Students</p>
-            <h3 class="text-2xl font-bold font-display text-brand-900" id="stat-members">450+</h3>
+            <p class="text-xs font-semibold uppercase text-gray-500 tracking-wider">Daily Issues</p>
+            <h3 class="text-3xl font-display font-bold text-gray-900 mt-1" id="stat-daily-issues">24</h3>
+            <p class="text-xs text-green-600 mt-1 flex items-center gap-1"><i data-lucide="trending-up" class="w-3 h-3"></i> +4 today</p>
           </div>
-        </div>
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center gap-4">
-          <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
+          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600">
             <i data-lucide="repeat" class="w-6 h-6"></i>
           </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center justify-between">
           <div>
-            <p class="text-sm text-gray-500 font-medium">Active Loans</p>
-            <h3 class="text-2xl font-bold font-display text-brand-900" id="stat-loans">4</h3>
+            <p class="text-xs font-semibold uppercase text-gray-500 tracking-wider">Overdue Items</p>
+            <h3 class="text-3xl font-display font-bold text-red-600 mt-1" id="stat-overdue">3</h3>
+            <p class="text-xs text-red-500 mt-1 flex items-center gap-1"><i data-lucide="alert-circle" class="w-3 h-3"></i> Action required</p>
+          </div>
+          <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
+            <i data-lucide="clock" class="w-6 h-6"></i>
           </div>
         </div>
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-100 flex items-center gap-4">
-          <div class="p-3 bg-brand-100 text-brand-700 rounded-xl">
-            <i data-lucide="indian-rupee" class="w-6 h-6"></i>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Total Fines Collected Summary -->
+  <section id="fines-summary" class="mb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-900 to-brand-800 text-white p-6 sm:p-8 rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <span class="text-xs font-semibold tracking-wider uppercase bg-brand-700/50 text-brand-200 px-3 py-1 rounded-full">Financial Audit</span>
+          <h2 class="text-2xl font-display font-bold mt-2">Total Fines Collected</h2>
+          <p class="text-brand-200 text-sm mt-1">Calculated at standard rate of ₹5/day for overdue returns past the loan window.</p>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md px-6 py-4 rounded-xl border border-white/10 flex items-center gap-6">
           <div>
-            <p class="text-sm text-gray-500 font-medium">Fines Collected</p>
-            <h3 class="text-2xl font-bold font-display text-brand-900" id="stat-fines">₹120</h3>
+            <p class="text-xs text-brand-200 uppercase tracking-wider">Total Revenue</p>
+            <p class="text-3xl font-display font-bold text-white mt-0.5" id="total-fines-display">₹450</p>
           </div>
+          <button onclick="resetFines()" class="bg-white/20 hover:bg-white/30 text-white text-xs px-3 py-2 rounded-lg transition font-medium">
+            Clear Ledger
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section 1: Issue Book Form -->
-  <section id="issue-section" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Circulation Desk</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Issue a Book</h2>
-          <p class="text-gray-600 mb-6">Assign books to registered students with our 14-day standard loan period. Ensure member accounts are in good standing before issuing new literary works.</p>
-          <div class="bg-brand-50 p-6 rounded-2xl border border-brand-100 mb-6">
-            <h4 class="font-semibold text-brand-900 mb-2 flex items-center gap-2">
-              <i data-lucide="info" class="w-5 h-5 text-brand-600"></i> Loan Policy Reminder
-            </h4>
-            <p class="text-sm text-brand-800">Standard loan duration is exactly 14 days. Late returns incur an automatic fine of ₹5 per day payable upon return.</p>
+  <!-- Section 3 & 4 Grid: Overdue Loans & Issue Book Form -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Section 3: Overdue Loans List -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-brand-100 p-6">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h2 class="text-xl font-display font-bold text-gray-900">Overdue Loans List</h2>
+            <p class="text-xs text-gray-500 mt-0.5">Students with books past due date (₹5/day fine applies).</p>
           </div>
+          <span class="bg-red-50 text-red-600 text-xs font-semibold px-2.5 py-1 rounded-full" id="overdue-count-badge">3 Overdue</span>
         </div>
-        <div class="bg-brand-50/50 p-8 rounded-2xl border border-brand-100 shadow-sm">
-          <form id="issue-form" class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Select Member</label>
-              <select id="issue-member" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 bg-white">
-                <option value="">-- Choose Student Member --</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Select Book</label>
-              <select id="issue-book" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 bg-white">
-                <option value="">-- Choose Book from Catalog --</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Loan Period</label>
-              <input type="text" disabled value="14 Days (Standard)" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-100 text-gray-600">
-            </div>
-            <button type="submit" class="w-full bg-brand-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-brand-700 transition flex items-center justify-center gap-2">
-              <i data-lucide="check-circle" class="w-5 h-5"></i> Issue Book Now
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2: Return Book & Fine Calculator -->
-  <section id="return-section" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center mb-12">
-        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Returns & Penalties</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Return Book & Fine Calculator</h2>
-        <p class="text-gray-600">Process returned books instantly. The system automatically computes overdue days and applies the ₹5 daily fine rate.</p>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="font-display text-xl font-bold text-gray-900 mb-4">Active Loans List</h3>
-          <p class="text-sm text-gray-500 mb-4">Select a loan to process return.</p>
-          <div id="active-loans-list" class="space-y-3 max-h-96 overflow-y-auto pr-1">
-            <!-- Populated via JS -->
-          </div>
-        </div>
-        <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="font-display text-xl font-bold text-gray-900 mb-6">Return Processing & Calculation</h3>
-          <div id="return-details-panel" class="space-y-6">
-            <div class="p-6 bg-brand-50 rounded-xl border border-brand-100 text-center text-gray-500">
-              <i data-lucide="arrow-left-circle" class="w-10 h-10 mx-auto mb-2 text-brand-400"></i>
-              <p>Select an active loan from the left panel to calculate fines and process the return.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Overdue Loans List -->
-  <section id="overdue-section" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Follow-up & Compliance</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-2">Overdue Loans & Student Contacts</h2>
-          <p class="text-gray-600">Review overdue items and reach out to students to ensure prompt library material recovery.</p>
-        </div>
-        <div class="mt-4 md:mt-0">
-          <span class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-50 text-red-700 font-medium text-sm border border-red-100">
-            <i data-lucide="alert-triangle" class="w-4 h-4"></i> Rate: ₹5 / overdue day
-          </span>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
-              <tr class="bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                <th class="py-4 px-6">Student Name</th>
-                <th class="py-4 px-6">Contact Info</th>
-                <th class="py-4 px-6">Book Title</th>
-                <th class="py-4 px-6">Due Date</th>
-                <th class="py-4 px-6">Days Overdue</th>
-                <th class="py-4 px-6">Accumulated Fine</th>
-                <th class="py-4 px-6 text-right">Action</th>
+              <tr class="border-b border-gray-100 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                <th class="pb-3 px-2">Member</th>
+                <th class="pb-3 px-2">Book Title</th>
+                <th class="pb-3 px-2">Due Date</th>
+                <th class="pb-3 px-2">Fine</th>
+                <th class="pb-3 px-2 text-right">Contact</th>
               </tr>
             </thead>
-            <tbody id="overdue-table-body" class="divide-y divide-gray-200 text-sm">
-              <!-- Populated via JS -->
+            <tbody id="overdue-table-body" class="text-sm divide-y divide-gray-50">
+              <!-- Rendered via JS -->
             </tbody>
           </table>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Section 4: Daily Circulation Summary Report -->
-  <section id="report-section" class="py-16 md:py-24 bg-brand-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-12">
-        <span class="text-brand-300 font-semibold tracking-wider uppercase text-sm">Analytics & Logs</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-4">Daily Circulation Summary Report</h2>
-        <p class="text-brand-100">Overview of today's library transactions, book movements, and general library utilization under Librarian Meena Joshi.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-brand-800 p-6 rounded-2xl border border-brand-700">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="font-semibold text-brand-200">Books Issued Today</h3>
-            <i data-lucide="book-up" class="w-6 h-6 text-brand-300"></i>
-          </div>
-          <p class="text-4xl font-bold font-display" id="report-issued-count">3</p>
-          <p class="text-xs text-brand-300 mt-2">Logged in current session</p>
-        </div>
-        <div class="bg-brand-800 p-6 rounded-2xl border border-brand-700">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="font-semibold text-brand-200">Books Returned Today</h3>
-            <i data-lucide="book-down" class="w-6 h-6 text-brand-300"></i>
-          </div>
-          <p class="text-4xl font-bold font-display" id="report-returned-count">1</p>
-          <p class="text-xs text-brand-300 mt-2">Processed successfully</p>
-        </div>
-        <div class="bg-brand-800 p-6 rounded-2xl border border-brand-700">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="font-semibold text-brand-200">Active Library Users</h3>
-            <i data-lucide="user-check" class="w-6 h-6 text-brand-300"></i>
-          </div>
-          <p class="text-4xl font-bold font-display">450+</p>
-          <p class="text-xs text-brand-300 mt-2">Registered young minds</p>
-        </div>
-      </div>
-      <div class="bg-brand-800 p-8 rounded-2xl border border-brand-700">
-        <h3 class="font-display text-xl font-bold mb-4">Recent Circulation Activity Log</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm">
-            <thead>
-              <tr class="border-b border-brand-700 text-brand-300">
-                <th class="py-3 px-4">Time</th>
-                <th class="py-3 px-4">Action Type</th>
-                <th class="py-3 px-4">Student</th>
-                <th class="py-3 px-4">Book</th>
-                <th class="py-3 px-4">Staff Handler</th>
-              </tr>
-            </thead>
-            <tbody id="activity-log-body" class="divide-y divide-brand-700/50 text-brand-100">
-              <!-- Populated via JS -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: Fine Collection Tracking Dashboard -->
-  <section id="fine-section" class="py-16 md:py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <!-- Section 4: Issue Book Form -->
+      <div class="bg-white rounded-2xl shadow-sm border border-brand-100 p-6 flex flex-col justify-between">
         <div>
-          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Financial Oversight</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-2">Fine Collection Tracking</h2>
-          <p class="text-gray-600">Monitor collected penalties and register new fine payments submitted by students.</p>
-        </div>
-        <div class="mt-4 md:mt-0 bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-200 flex items-center gap-3">
-          <i data-lucide="wallet" class="w-6 h-6 text-brand-600"></i>
-          <div>
-            <p class="text-xs text-gray-500 font-medium">Total Fines Collected</p>
-            <p class="text-xl font-bold font-display text-brand-900" id="total-fines-display">₹120</p>
+          <div class="mb-6">
+            <h2 class="text-xl font-display font-bold text-gray-900">Issue Book</h2>
+            <p class="text-xs text-gray-500 mt-0.5">Assign a library book to an active student member.</p>
           </div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-1 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="font-display text-xl font-bold text-gray-900 mb-4">Record Fine Payment</h3>
-          <form id="fine-form" class="space-y-4">
+
+          <form id="issue-form" onsubmit="handleIssueBook(event)" class="space-y-4">
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Select Student</label>
-              <select id="fine-member" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600 bg-white">
-                <option value="">-- Choose Member --</option>
+              <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Select Member</label>
+              <select id="issue-member" required class="w-full bg-brand-50/50 border border-brand-200 rounded-xl px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="">Choose student member...</option>
+                <option value="Aarav Mehta (M001)">Aarav Mehta (M001)</option>
+                <option value="Diya Joshi (M002)">Diya Joshi (M002)</option>
+                <option value="Kabir Nair (M003)">Kabir Nair (M003)</option>
+                <option value="Ananya Rao (M004)">Ananya Rao (M004)</option>
               </select>
             </div>
+
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Amount (₹)</label>
-              <input type="number" id="fine-amount" min="5" step="5" required placeholder="e.g. 25" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600">
+              <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Select Book</label>
+              <select id="issue-book" required class="w-full bg-brand-50/50 border border-brand-200 rounded-xl px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="">Choose book from collection...</option>
+                <option value="Wings of Fire - A.P.J. Abdul Kalam">Wings of Fire - A.P.J. Abdul Kalam</option>
+                <option value="The Discovery of India - Jawaharlal Nehru">The Discovery of India - Jawaharlal Nehru</option>
+                <option value="Malgudi Days - R.K. Narayan">Malgudi Days - R.K. Narayan</option>
+                <option value="The Blue Umbrella - Ruskin Bond">The Blue Umbrella - Ruskin Bond</option>
+              </select>
             </div>
+
             <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">Payment Notes / Reason</label>
-              <input type="text" id="fine-reason" placeholder="e.g. 5 days late return" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-brand-600">
+              <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Loan Period</label>
+              <input type="text" disabled value="14 Days Standard" class="w-full bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 text-sm text-gray-500 cursor-not-allowed">
             </div>
-            <button type="submit" class="w-full bg-brand-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-brand-700 transition flex items-center justify-center gap-2">
-              <i data-lucide="plus-circle" class="w-5 h-5"></i> Record Payment
+
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-2.5 px-4 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="plus-circle" class="w-4 h-4"></i> Issue Book
             </button>
           </form>
         </div>
-        <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-          <h3 class="font-display text-xl font-bold text-gray-900 mb-4">Fine Collection History</h3>
-          <div class="overflow-x-auto">
-            <table class="w-full text-left text-sm">
-              <thead>
-                <tr class="bg-gray-50 border-b border-gray-200 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  <th class="py-3 px-4">Date</th>
-                  <th class="py-3 px-4">Student Name</th>
-                  <th class="py-3 px-4">Reason</th>
-                  <th class="py-3 px-4 text-right">Amount</th>
-                </tr>
-              </thead>
-              <tbody id="fine-history-body" class="divide-y divide-gray-200">
-                <!-- Populated via JS -->
-              </tbody>
-            </table>
-          </div>
+
+        <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-gray-400 flex items-center justify-between">
+          <span>Free Issuing Service</span>
+          <span>Book Nook Pune</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- CTA Band -->
-  <section class="py-16 bg-brand-800 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Empowering Young Minds Every Day</h2>
-      <p class="text-brand-100 max-w-2xl mx-auto mb-8">Visit us at 12 FC Road, Shivajinagar, Pune or explore our complete book inventory and member directories.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="books.html" class="bg-white text-brand-900 font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-brand-50 transition">Browse Inventory</a>
-        <a href="members.html" class="bg-brand-700 text-white font-semibold px-8 py-3 rounded-xl border border-brand-600 hover:bg-brand-600 transition">View Members</a>
-      </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Section 5 & 6 Grid: Return Book Form & Activity Log -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      
+      <!-- Section 5: Return Book Form with Automated Fine Calculation -->
+      <div class="bg-white rounded-2xl shadow-sm border border-brand-100 p-6 flex flex-col justify-between">
+        <div>
+          <div class="mb-6">
+            <h2 class="text-xl font-display font-bold text-gray-900">Return Book</h2>
+            <p class="text-xs text-gray-500 mt-0.5">Process book returns & compute late fees automatically.</p>
+          </div>
+
+          <form id="return-form" onsubmit="handleReturnBook(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1">Active Loan Item</label>
+              <select id="return-loan-id" required onchange="previewFine()" class="w-full bg-brand-50/50 border border-brand-200 rounded-xl px-3 py-2 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                <option value="">Select active loan...</option>
+                <!-- Populated dynamically via JS -->
+              </select>
+            </div>
+
+            <div class="bg-brand-50 p-4 rounded-xl border border-brand-100">
+              <div class="flex justify-between items-center text-sm">
+                <span class="text-gray-600">Calculated Fine:</span>
+                <span id="preview-fine-amount" class="font-display font-bold text-red-600 text-base">₹0</span>
+              </div>
+              <p class="text-[11px] text-gray-500 mt-1">Rate: ₹5 per day past due date.</p>
+            </div>
+
+            <button type="submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-xl transition text-sm flex items-center justify-center gap-2 shadow-sm">
+              <i data-lucide="check" class="w-4 h-4"></i> Process Return
+            </button>
+          </form>
+        </div>
+
+        <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-gray-400 flex items-center justify-between">
+          <span>Meena Joshi (Librarian)</span>
+          <span>Automated Ledger</span>
+        </div>
+      </div>
+
+      <!-- Section 6: Recent Activity Log for Audit Trail -->
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-brand-100 p-6">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h2 class="text-xl font-display font-bold text-gray-900">Recent Activity Log</h2>
+            <p class="text-xs text-gray-500 mt-0.5">Audit trail of all system issues, returns, and fine payments.</p>
+          </div>
+          <button onclick="clearLogs()" class="text-xs text-gray-400 hover:text-red-600 transition flex items-center gap-1">
+            <i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Clear Audit
+          </button>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-gray-100 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                <th class="pb-3 px-2">Action</th>
+                <th class="pb-3 px-2">Details</th>
+                <th class="pb-3 px-2">Timestamp</th>
+                <th class="pb-3 px-2 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody id="audit-log-body" class="text-sm divide-y divide-gray-50">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </main>
 
 <script>
-  // Initial Seed Data matching prompt facts
-  const initialBooks = [
-    { id: 1, title: "The Discovery of India", author: "Jawaharlal Nehru", category: "History", available: true },
-    { id: 2, title: "Wings of Fire", author: "A.P.J. Abdul Kalam", category: "Autobiography", available: false },
-    { id: 3, title: "Gitanjali", author: "Rabindranath Tagore", category: "Poetry", available: true },
-    { id: 4, title: "Malgudi Days", author: "R.K. Narayan", category: "Fiction", available: false },
-    { id: 5, title: "The Argumentative Indian", author: "Amartya Sen", category: "Philosophy", available: true },
-    { id: 6, title: "Godaan", author: "Munshi Premchand", category: "Classic Literature", available: true },
-    { id: 7, title: "A Bend in the River", author: "V.S. Naipaul", category: "Novel", available: false },
-    { id: 8, title: "India Unbound", author: "Gurcharan Das", category: "Economics", available: true },
-    { id: 9, title: "The White Tiger", author: "Aravind Adiga", category: "Fiction", available: false },
-    { id: 10, title: "Rashmirathi", author: "Ramdhari Singh 'Dinkar'", category: "Poetry", available: true }
+  // Initial Data Store & LocalStorage initialization
+  const defaultOverdue = [
+    { id: 1, member: "Rohan Deshmukh", book: "A Brief History of Time", dueDate: "2023-10-10", fine: 150, phone: "+91 98220 12345" },
+    { id: 2, member: "Sneha Kulkarni", book: "The God of Small Things", dueDate: "2023-10-12", fine: 100, phone: "+91 98220 54321" },
+    { id: 3, member: "Amit Shinde", book: "Ignited Minds", dueDate: "2023-10-15", fine: 75, phone: "+91 98220 98765" }
   ];
 
-  const initialMembers = [
-    { id: 1, name: "Aarav Sharma", email: "aarav@student.in", phone: "+91 98220 11111" },
-    { id: 2, name: "Ananya Deshmukh", email: "ananya@student.in", phone: "+91 98220 22222" },
-    { id: 3, name: "Rohan Kulkarni", email: "rohan@student.in", phone: "+91 98220 33333" },
-    { id: 4, name: "Sneha Joshi", email: "sneha@student.in", phone: "+91 98220 44444" },
-    { id: 5, name: "Kabir Mehta", email: "kabir@student.in", phone: "+91 98220 55555" }
+  const defaultLoans = [
+    { id: 101, label: "Aarav Mehta - Wings of Fire (Due: Oct 28)", fine: 0 },
+    { id: 102, label: "Diya Joshi - Malgudi Days (Due: Oct 30)", fine: 0 },
+    { id: 103, label: "Rohan Deshmukh - A Brief History of Time (Overdue)", fine: 150 }
   ];
 
-  // 4 Active loans tracking (some overdue for fine demonstration)
-  const today = new Date();
-  const formatDate = (d) => d.toISOString().split('T')[0];
-  
-  const pastDate = (daysAgo) => {
-    const d = new Date();
-    d.setDate(d.getDate() - daysAgo);
-    return formatDate(d);
-  };
-
-  const initialLoans = [
-    { id: 101, memberId: 2, bookId: 2, issueDate: pastDate(20), dueDate: pastDate(6), returned: false }, // 6 days overdue -> ₹30 fine
-    { id: 102, memberId: 4, bookId: 4, issueDate: pastDate(18), dueDate: pastDate(4), returned: false }, // 4 days overdue -> ₹20 fine
-    { id: 103, memberId: 1, bookId: 7, issueDate: pastDate(10), dueDate: pastDate(-4), returned: false }, // on time
-    { id: 104, memberId: 3, bookId: 9, issueDate: pastDate(5), dueDate: pastDate(-9), returned: false }   // on time
+  const defaultLogs = [
+    { action: "System Init", details: "Dashboard loaded successfully", time: "Today, 08:30 AM", status: "Success" },
+    { action: "Book Issue", details: "Priya Sharma issued 'The Blue Umbrella' to Kabir Nair", time: "Today, 09:15 AM", status: "Active" },
+    { action: "Fine Collected", details: "Collected ₹125 from student M019", time: "Yesterday, 03:45 PM", status: "Completed" }
   ];
 
-  const initialFines = [
-    { id: 1, date: pastDate(2), memberName: "Aarav Sharma", reason: "2 days late return", amount: 10 },
-    { id: 2, date: pastDate(5), memberName: "Sneha Joshi", reason: "4 days late return", amount: 20 }
-  ];
-
-  const initialLogs = [
-    { time: "09:15 AM", type: "Issue", student: "Aarav Sharma", book: "A Bend in the River", staff: "Meena Joshi" },
-    { time: "10:30 AM", type: "Return", student: "Ananya Deshmukh", book: "Wings of Fire", staff: "Rahul Verma" },
-    { time: "11:45 AM", type: "Issue", student: "Kabir Mehta", book: "The White Tiger", staff: "Meena Joshi" }
-  ];
-
-  // Load from localStorage or initialize
-  if (!localStorage.getItem('bn_books')) localStorage.setItem('bn_books', JSON.stringify(initialBooks));
-  if (!localStorage.getItem('bn_members')) localStorage.setItem('bn_members', JSON.stringify(initialMembers));
-  if (!localStorage.getItem('bn_loans')) localStorage.setItem('bn_loans', JSON.stringify(initialLoans));
-  if (!localStorage.getItem('bn_fines')) localStorage.setItem('bn_fines', JSON.stringify(initialFines));
-  if (!localStorage.getItem('bn_logs')) localStorage.setItem('bn_logs', JSON.stringify(initialLogs));
-
-  function getData(key) { return JSON.parse(localStorage.getItem('bn_key_' + key) || localStorage.getItem('bn_' + key)); }
-  function saveData(key, data) { localStorage.setItem('bn_' + key, JSON.stringify(data)); }
+  // State setup
+  if (!localStorage.getItem('bn_overdue')) localStorage.setItem('bn_overdue', JSON.stringify(defaultOverdue));
+  if (!localStorage.getItem('bn_loans')) localStorage.setItem('bn_loans', JSON.stringify(defaultLoans));
+  if (!localStorage.getItem('bn_logs')) localStorage.setItem('bn_logs', JSON.stringify(defaultLogs));
+  if (!localStorage.getItem('bn_total_fines')) localStorage.setItem('bn_total_fines', '450');
 
   function renderDashboard() {
-    const books = getData('books');
-    const members = getData('members');
-    const loans = getData('loans');
-    const fines = getData('fines');
-    const logs = getData('logs');
+    const overdue = JSON.parse(localStorage.getItem('bn_overdue'));
+    const loans = JSON.parse(localStorage.getItem('bn_loans'));
+    const logs = JSON.parse(localStorage.getItem('bn_logs'));
+    const totalFines = localStorage.getItem('bn_total_fines');
 
-    // Stats
-    document.getElementById('stat-books').innerText = "15,000+";
-    document.getElementById('stat-members').innerText = members.length + "+";
-    const activeLoans = loans.filter(l => !l.returned);
-    document.getElementById('stat-loans').innerText = activeLoans.length;
-    
-    const totalFineSum = fines.reduce((acc, f) => acc + Number(f.amount), 120);
-    document.getElementById('stat-fines').innerText = "₹" + totalFineSum;
-    document.getElementById('total-fines-display').innerText = "₹" + totalFineSum;
-
-    // Issue Book Selectors
-    const memberSelect = document.getElementById('issue-member');
-    memberSelect.innerHTML = '<option value="">-- Choose Student Member --</option>' + 
-      members.map(m => `<option value="${m.id}">${m.name} (${m.email})</option>`).join('');
-
-    const bookSelect = document.getElementById('issue-book');
-    const availableBooks = books.filter(b => b.available);
-    bookSelect.innerHTML = '<option value="">-- Choose Book from Catalog --</option>' + 
-      availableBooks.map(b => `<option value="${b.id}">${b.title} by ${b.author}</option>`).join('');
-
-    // Fine Form Member Selector
-    const fineMemberSelect = document.getElementById('fine-member');
-    fineMemberSelect.innerHTML = '<option value="">-- Choose Member --</option>' + 
-      members.map(m => `<option value="${m.name}">${m.name}</option>`).join('');
-
-    // Active Loans List for Return Section
-    const activeLoansContainer = document.getElementById('active-loans-list');
-    if (activeLoans.length === 0) {
-      activeLoansContainer.innerHTML = '<p class="text-sm text-gray-500 italic p-2">No active loans currently.</p>';
-    } else {
-      activeLoansContainer.innerHTML = activeLoans.map(loan => {
-        const m = members.find(x => x.id == loan.memberId) || { name: 'Unknown' };
-        const b = books.find(x => x.id == loan.bookId) || { title: 'Unknown Book' };
-        return `
-          <div onclick="selectLoanForReturn(${loan.id})" class="p-4 rounded-xl border border-gray-200 hover:border-brand-600 hover:bg-brand-50/50 cursor-pointer transition">
-            <p class="font-semibold text-gray-900 text-sm">${b.title}</p>
-            <p class="text-xs text-gray-500">Borrower: ${m.name}</p>
-            <p class="text-xs text-brand-600 mt-1">Due: ${loan.dueDate}</p>
-          </div>
-        `;
-      }).join('');
-    }
+    // Stats updates
+    document.getElementById('stat-overdue').textContent = overdue.length;
+    document.getElementById('overdue-count-badge').textContent = `${overdue.length} Overdue`;
+    document.getElementById('total-fines-display').textContent = `₹${totalFines}`;
 
     // Overdue Table
-    const overdueTbody = document.getElementById('overdue-table-body');
-    const now = new Date();
-    let overdueRows = "";
-    
-    activeLoans.forEach(loan => {
-      const dueDateObj = new Date(loan.dueDate);
-      const diffTime = now - dueDateObj;
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
-      if (diffDays > 0) {
-        const fine = diffDays * 5;
-        const m = members.find(x => x.id == loan.memberId) || {};
-        const b = books.find(x => x.id == loan.bookId) || {};
-        overdueRows += `
-          <tr class="hover:bg-gray-50">
-            <td class="py-4 px-6 font-medium text-gray-900">${m.name || 'N/A'}</td>
-            <td class="py-4 px-6 text-gray-600">${m.phone || 'N/A'}<br><span class="text-xs text-gray-400">${m.email || ''}</span></td>
-            <td class="py-4 px-6 text-gray-900">${b.title || 'N/A'}</td>
-            <td class="py-4 px-6 text-red-600 font-medium">${loan.dueDate}</td>
-            <td class="py-4 px-6"><span class="px-2.5 py-1 bg-red-100 text-red-800 rounded-full text-xs font-semibold">${diffDays} days</span></td>
-            <td class="py-4 px-6 font-bold text-red-700">₹${fine}</td>
-            <td class="py-4 px-6 text-right">
-              <button onclick="processReturn(${loan.id})" class="bg-brand-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-brand-700 transition">Return & Collect</button>
-            </td>
-          </tr>
-        `;
-      }
-    });
+    const overdueBody = document.getElementById('overdue-table-body');
+    overdueBody.innerHTML = overdue.map(item => `
+      <tr class="hover:bg-brand-50/30 transition">
+        <td class="py-3 px-2 font-medium text-gray-900">${item.member}</td>
+        <td class="py-3 px-2 text-gray-600">${item.book}</td>
+        <td class="py-3 px-2 text-red-600 font-medium">${item.dueDate}</td>
+        <td class="py-3 px-2 font-display font-bold text-gray-900">₹${item.fine}</td>
+        <td class="py-3 px-2 text-right">
+          <a href="tel:${item.phone}" class="inline-flex items-center gap-1 bg-brand-50 hover:bg-brand-100 text-brand-700 text-xs px-2.5 py-1.5 rounded-lg transition font-medium">
+            <i data-lucide="phone" class="w-3.5 h-3.5"></i> Call
+          </a>
+        </td>
+      </tr>
+    `).join('');
 
-    overdueTbody.innerHTML = overdueRows || `<tr><td colspan="7" class="py-6 text-center text-gray-500 italic">No overdue books currently recorded. Excellent compliance!</td></tr>`;
+    // Return Loan Dropdown
+    const returnSelect = document.getElementById('return-loan-id');
+    returnSelect.innerHTML = `<option value="">Select active loan...</option>` + loans.map(l => `
+      <option value="${l.id}" data-fine="${l.fine}">${l.label} (Fine: ₹${l.fine})</option>
+    `).join('');
 
-    // Report Counters & Logs
-    document.getElementById('report-issued-count').innerText = logs.filter(l => l.type === 'Issue').length;
-    document.getElementById('report-returned-count').innerText = logs.filter(l => l.type === 'Return').length;
-
-    const logBody = document.getElementById('activity-log-body');
+    // Audit Log Table
+    const logBody = document.getElementById('audit-log-body');
     logBody.innerHTML = logs.map(l => `
-      <tr class="border-b border-brand-700/30">
-        <td class="py-3 px-4 font-mono text-xs text-brand-300">${l.time}</td>
-        <td class="py-3 px-4"><span class="px-2 py-0.5 rounded text-xs font-semibold ${l.type === 'Issue' ? 'bg-blue-900 text-blue-200' : 'bg-emerald-900 text-emerald-200'}">${l.type}</span></td>
-        <td class="py-3 px-4">${l.student}</td>
-        <td class="py-3 px-4">${l.book}</td>
-        <td class="py-3 px-4 text-brand-300 text-xs">${l.staff}</td>
+      <tr class="hover:bg-brand-50/30 transition">
+        <td class="py-3 px-2 font-medium text-gray-900">${l.action}</td>
+        <td class="py-3 px-2 text-gray-600 text-xs">${l.details}</td>
+        <td class="py-3 px-2 text-gray-400 text-xs">${l.time}</td>
+        <td class="py-3 px-2 text-right">
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-full ${l.status === 'Success' ? 'bg-green-50 text-green-700' : 'bg-brand-50 text-brand-700'}">
+            ${l.status}
+          </span>
+        </td>
       </tr>
     `).join('');
 
-    // Fine History Table
-    const fineHistoryBody = document.getElementById('fine-history-body');
-    fineHistoryBody.innerHTML = fines.map(f => `
-      <tr class="hover:bg-gray-50">
-        <td class="py-3 px-4 text-gray-500 text-xs font-mono">${f.date}</td>
-        <td class="py-3 px-4 font-medium text-gray-900">${f.memberName}</td>
-        <td class="py-3 px-4 text-gray-600">${f.reason || 'Late return fine'}</td>
-        <td class="py-3 px-4 text-right font-bold text-brand-900">₹${f.amount}</td>
-      </tr>
-    `).join('');
-
-    if (window.lucide) lucide.createIcons();
+    lucide.createIcons();
   }
 
-  // Global helper to select loan for return panel
-  window.selectLoanForReturn = function(loanId) {
-    const loans = getData('loans');
-    const members = getData('members');
-    const books = getData('books');
+  function handleIssueBook(e) {
+    e.preventDefault();
+    const member = document.getElementById('issue-member').value;
+    const book = document.getElementById('issue-book').value;
     
-    const loan = loans.find(l => l.id == loanId);
-    if (!loan) return;
+    if(!member || !book) return;
 
-    const m = members.find(x => x.id == loan.memberId) || {};
-    const b = books.find(x => x.id == loan.bookId) || {};
+    let loans = JSON.parse(localStorage.getItem('bn_loans'));
+    let logs = JSON.parse(localStorage.getItem('bn_logs'));
 
-    const now = new Date();
-    const dueDateObj = new Date(loan.dueDate);
-    const diffDays = Math.ceil((now - dueDateObj) / (1000 * 60 * 60 * 24));
-    const overdueDays = diffDays > 0 ? diffDays : 0;
-    const fineAmount = overdueDays * 5;
+    const newLoanId = Date.now();
+    loans.push({ id: newLoanId, label: `${member.split('(')[0].trim()} - ${book} (Due: 14 Days)`, fine: 0 });
+    logs.unshift({ action: "Book Issue", details: `Issued '${book}' to ${member}`, time: "Just now", status: "Active" });
 
-    const panel = document.getElementById('return-details-panel');
-    panel.innerHTML = `
-      <div class="space-y-4">
-        <div class="grid grid-cols-2 gap-4 pb-4 border-b border-gray-200">
-          <div>
-            <p class="text-xs text-gray-500 font-medium">Book Title</p>
-            <p class="font-semibold text-gray-900">${b.title}</p>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 font-medium">Borrower</p>
-            <p class="font-semibold text-gray-900">${m.name}</p>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 font-medium">Issue Date</p>
-            <p class="text-gray-700">${loan.issueDate}</p>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 font-medium">Due Date</p>
-            <p class="text-gray-700">${loan.dueDate}</p>
-          </div>
-        </div>
-        <div class="bg-brand-50 p-4 rounded-xl border border-brand-100 flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-brand-900">Overdue Calculation</p>
-            <p class="text-xs text-brand-700">${overdueDays} days overdue × ₹5 per day rate</p>
-          </div>
-          <div class="text-right">
-            <p class="text-xs text-gray-500">Calculated Fine</p>
-            <p class="text-2xl font-bold font-display text-red-600">₹${fineAmount}</p>
-          </div>
-        </div>
-        <button onclick="processReturn(${loan.id})" class="w-full bg-emerald-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-emerald-700 transition flex items-center justify-center gap-2">
-          <i data-lucide="check" class="w-5 h-5"></i> Confirm Return & Collect ₹${fineAmount}
-        </button>
-      </div>
-    `;
-    if (window.lucide) lucide.createIcons();
-  };
+    localStorage.setItem('bn_loans', JSON.stringify(loans));
+    localStorage.setItem('bn_logs', JSON.stringify(logs));
 
-  window.processReturn = function(loanId) {
-    let loans = getData('loans');
-    let books = getData('books');
-    let fines = getData('fines');
-    let members = getData('members');
-    let logs = getData('logs');
+    document.getElementById('issue-form').reset();
+    renderDashboard();
+    alert('Book issued successfully!');
+  }
 
-    const loanIndex = loans.findIndex(l => l.id == loanId);
-    if (loanIndex === -1) return;
+  function previewFine() {
+    const select = document.getElementById('return-loan-id');
+    const selectedOpt = select.options[select.selectedIndex];
+    const fine = selectedOpt ? selectedOpt.getAttribute('data-fine') || 0 : 0;
+    document.getElementById('preview-fine-amount').textContent = `₹${fine}`;
+  }
 
-    const loan = loans[loanIndex];
-    loan.returned = true;
+  function handleReturnBook(e) {
+    e.preventDefault();
+    const loanId = document.getElementById('return-loan-id').value;
+    if(!loanId) return;
 
-    // Free up book
-    const book = books.find(b => b.id == loan.bookId);
-    if (book) book.available = true;
+    let loans = JSON.parse(localStorage.getItem('bn_loans'));
+    let logs = JSON.parse(localStorage.getItem('bn_logs'));
+    let totalFines = parseInt(localStorage.getItem('bn_total_fines') || '0');
 
-    // Calculate fine if overdue
-    const now = new Date();
-    const dueDateObj = new Date(loan.dueDate);
-    const diffDays = Math.ceil((now - dueDateObj) / (1000 * 60 * 60 * 24));
-    if (diffDays > 0) {
-      const fineAmount = diffDays * 5;
-      const m = members.find(x => x.id == loan.memberId) || { name: 'Student' };
-      fines.unshift({
-        id: Date.now(),
-        date: formatDate(new Date()),
-        memberName: m.name,
-        reason: `${diffDays} days late return`,
-        amount: fineAmount
-      });
+    const loanObj = loans.find(l => l.id == loanId);
+    if(loanObj) {
+      totalFines += parseInt(loanObj.fine);
+      localStorage.setItem('bn_total_fines', totalFines);
+
+      logs.unshift({ action: "Book Return", details: `Returned: ${loanObj.label}`, time: "Just now", status: "Completed" });
+      
+      loans = loans.filter(l => l.id != loanId);
+      localStorage.setItem('bn_loans', JSON.stringify(loans));
+      localStorage.setItem('bn_logs', JSON.stringify(logs));
     }
 
-    // Add log
-    const mLog = members.find(x => x.id == loan.memberId) || { name: 'Student' };
-    const bLog = books.find(x => x.id == loan.bookId) || { title: 'Book' };
-    logs.unshift({
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      type: "Return",
-      student: mLog.name,
-      book: bLog.title,
-      staff: "Meena Joshi"
-    });
-
-    saveData('loans', loans);
-    saveData('books', books);
-    saveData('fines', fines);
-    saveData('logs', logs);
-
-    alert("Book returned successfully!");
+    document.getElementById('return-form').reset();
+    document.getElementById('preview-fine-amount').textContent = '₹0';
     renderDashboard();
+    alert('Book returned successfully and ledger updated.');
+  }
 
-    // Reset return panel
-    document.getElementById('return-details-panel').innerHTML = `
-      <div class="p-6 bg-brand-50 rounded-xl border border-brand-100 text-center text-gray-500">
-        <i data-lucide="arrow-left-circle" class="w-10 h-10 mx-auto mb-2 text-brand-400"></i>
-        <p>Select an active loan from the left panel to calculate fines and process the return.</p>
-      </div>
-    `;
-    if (window.lucide) lucide.createIcons();
-  };
+  function resetFines() {
+    if(confirm('Are you sure you want to clear the fine collection ledger?')) {
+      localStorage.setItem('bn_total_fines', '0');
+      let logs = JSON.parse(localStorage.getItem('bn_logs'));
+      logs.unshift({ action: "Ledger Reset", details: "Fine collection total cleared by librarian", time: "Just now", status: "Reset" });
+      localStorage.setItem('bn_logs', JSON.stringify(logs));
+      renderDashboard();
+    }
+  }
 
-  // Form Handlers
-  document.getElementById('issue-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const memberId = document.getElementById('issue-member').value;
-    const bookId = document.getElementById('issue-book').value;
-
-    if (!memberId || !bookId) return;
-
-    let loans = getData('loans');
-    let books = getData('books');
-    let members = getData('members');
-    let logs = getData('logs');
-
-    // 14 days due date
-    const dueDateObj = new Date();
-    dueDateObj.setDate(dueDateObj.getDate() + 14);
-
-    const newLoan = {
-      id: Date.now(),
-      memberId: Number(memberId),
-      bookId: Number(bookId),
-      issueDate: formatDate(new Date()),
-      dueDate: formatDate(dueDateObj),
-      returned: false
-    };
-
-    loans.push(newLoan);
-
-    // Mark book unavailable
-    const book = books.find(b => b.id == bookId);
-    if (book) book.available = false;
-
-    // Log activity
-    const m = members.find(x => x.id == memberId) || { name: 'Student' };
-    logs.unshift({
-      time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      type: "Issue",
-      student: m.name,
-      book: book ? book.title : 'Book',
-      staff: "Meena Joshi"
-    });
-
-    saveData('loans', loans);
-    saveData('books', books);
-    saveData('logs', logs);
-
-    alert("Book issued successfully for 14 days!");
-    this.reset();
-    renderDashboard();
-  });
-
-  document.getElementById('fine-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const memberName = document.getElementById('fine-member').value;
-    const amount = document.getElementById('fine-amount').value;
-    const reason = document.getElementById('fine-reason').value || "Fine payment";
-
-    if (!memberName || !amount) return;
-
-    let fines = getData('fines');
-    fines.unshift({
-      id: Date.now(),
-      date: formatDate(new Date()),
-      memberName: memberName,
-      reason: reason,
-      amount: Number(amount)
-    });
-
-    saveData('fines', fines);
-    alert("Fine payment recorded successfully!");
-    this.reset();
-    renderDashboard();
-  });
+  function clearLogs() {
+    if(confirm('Clear audit trail logs?')) {
+      localStorage.setItem('bn_logs', JSON.stringify([]));
+      renderDashboard();
+    }
+  }
 
   // Initial render on load
   document.addEventListener('DOMContentLoaded', renderDashboard);
@@ -700,9 +428,9 @@
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized literary discovery.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="books.html" class="hover:text-white">Book Inventory</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Library Dashboard</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 8:30 AM - 4:00 PM</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized reading.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="books.html" class="hover:text-white">Books</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 8:30 AM - 4:00 PM</p></div>
     <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2553 1234</p><p class="mt-2 text-sm text-slate-400">hello@booknook.in</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Book Nook. All rights reserved.</div>

@@ -8,8 +8,11 @@
       if(n===0){ var k=(img.alt||'photo').toLowerCase().replace(/[^a-z ]/g,'').split(' ').filter(Boolean).slice(0,3).join('-')||'photo';
         img.src='https://picsum.photos/seed/'+k+'-fb/'+(img.width>50?img.width:800)+'/'+(img.height>50?img.height:600); }
       else { img.src='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2e8f0"/><stop offset="1" stop-color="#cbd5e1"/></linearGradient></defs><rect width="800" height="600" fill="url(#g)"/></svg>'); } }
-    $('img').forEach(function(img){ img.addEventListener('error',function(){ fixImg(img); });
-      if(img.complete && img.naturalWidth===0 && img.getAttribute('src')) fixImg(img); });
+    $('img').forEach(function(img){ if(img.complete && img.naturalWidth===0 && img.getAttribute('src')) fixImg(img); });
+    // one listener for the whole page (capture phase) also covers images that page scripts add later
+    if(!window.__kitImg){ window.__kitImg=1; document.addEventListener('error',function(e){ if(e.target && e.target.tagName==='IMG') fixImg(e.target); },true); }
+    // images with no src at all
+    $('img:not([src]), img[src=""]').forEach(fixImg);
     $('[data-menu-toggle],[aria-controls],#menu-btn,#mobile-menu-button,.menu-toggle').forEach(function(b){
       if(b.dataset.kit) return; b.dataset.kit=1;
       var id=b.getAttribute('aria-controls')||b.dataset.menuToggle||'mobile-menu';

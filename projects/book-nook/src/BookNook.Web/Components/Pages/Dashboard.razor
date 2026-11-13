@@ -1,0 +1,224 @@
+@page "/"
+@using BookNook.Infrastructure.Data
+@using Microsoft.EntityFrameworkCore
+@inject BookNookDbContext Db
+
+<PageTitle>Dashboard - Book Nook Library</PageTitle>
+
+<div class="space-y-8">
+    <!-- Page Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+            <h1 class="text-3xl font-extrabold font-display text-brand-900 tracking-tight">Library Dashboard</h1>
+            <p class="text-ink-600 mt-1">Welcome back, Meena. Here is the current circulation overview for Sunrise School.</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="loans" class="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-700 text-white rounded-xl font-medium text-sm hover:bg-brand-500 transition-all shadow-md shadow-brand-700/2anc">
+                <i data-lucide="book-check" class="w-4 h-4"></i>
+                Issue New Book
+            </a>
+        </div>
+    </div>
+
+    <!-- Bento Metric Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-line shadow-xs flex items-center justify-between">
+            <div>
+                <p class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Total Books</p>
+                <h3 class="text-3xl font-extrabold font-mono text-brand-900 mt-2">@totalBooks</h3>
+                <span class="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 mt-2 bg-emerald-50 px-2 py-0.5 rounded-md">
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> Catalogue active
+                </span>
+            </div>
+            <div class="w-14 h-14 rounded-2xl bg-brand-100 flex items-center justify-center text-brand-700">
+                <i data-lucide="book-open" class="w-7 h-7"></i>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-line shadow-xs flex items-center justify-between">
+            <div>
+                <p class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Active Members</p>
+                <h3 class="text-3xl font-extrabold font-mono text-brand-900 mt-2">@totalMembers</h3>
+                <span class="inline-flex items-center gap-1 text-xs font-medium text-blue-600 mt-2 bg-blue-50 px-2 py-0.5 rounded-md">
+                    <i data-lucide="users" class="w-3.5 h-3.5"></i> Students & Staff
+                </span>
+            </div>
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-line shadow-xs flex items-center justify-between">
+            <div>
+                <p class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Active Loans</p>
+                <h3 class="text-3xl font-extrabold font-mono text-brand-900 mt-2">@activeLoans</h3>
+                <span class="inline-flex items-center gap-1 text-xs font-medium text-amber-600 mt-2 bg-amber-50 px-2 py-0.5 rounded-md">
+                    <i data-lucide="clock" class="w-3.5 h-3.5"></i> Currently issued
+                </span>
+            </div>
+            <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-amber-600">
+                <i data-lucide="book-check" class="w-7 h-7"></i>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-line shadow-xs flex items-center justify-between">
+            <div>
+                <p class="text-xs font-semibold text-ink-600 uppercase tracking-wider">Overdue Fines</p>
+                <h3 class="text-3xl font-extrabold font-mono text-rose-600 mt-2">₹@totalFines</h3>
+                <span class="inline-flex items-center gap-1 text-xs font-medium text-rose-600 mt-2 bg-rose-50 px-2 py-0.5 rounded-md">
+                    <i data-lucide="alert-circle" class="w-3.5 h-3.5"></i> @overdueLoans overdue
+                </span>
+            </div>
+            <div class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center text-rose-600">
+                <i data-lucide="banknote" class="w-7 h-7"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Activity & Shortcuts -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Recent Loans Table -->
+        <div class="lg:col-span-2 bg-white rounded-2xl border border-line shadow-xs p-6">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-lg font-bold font-display text-brand-900">Recent Circulation Activity</h2>
+                    <p class="text-xs text-ink-600">Latest book checkouts and returns recorded in the library.</p>
+                </div>
+                <a href="loans" class="text-sm font-semibold text-brand-700 hover:text-brand-500 transition-colors">View All →</a>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-line text-xs font-semibold text-ink-600 uppercase tracking-wider">
+                            <th class="py-3 px-4">Book Title</th>
+                            <th class="py-3 px-4">Member</th>
+                            <th class="py-3 px-4">Issue Date</th>
+                            <th class="py-3 px-4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-line text-sm">
+                        @if (recentLoans != null && recentLoans.Any())
+                        {
+                            @foreach (var loan in recentLoans)
+                            {
+                                <tr class="hover:bg-canvas/50 transition-colors">
+                                    <td class="py-3 px-4 font-medium text-brand-900">@loan.Book?.Title</td>
+                                    <td class="py-3 px-4 text-ink-600">@loan.Member?.Name (@loan.Member?.Class)</td>
+                                    <td class="py-3 px-4 font-mono text-xs text-ink-600">@loan.IssueDate.ToString("dd MMM yyyy")</td>
+                                    <td class="py-3 px-4">
+                                        @if (loan.ReturnDate != null)
+                                        {
+                                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700">Returned</span>
+                                        }
+                                        else if (loan.DueDate < DateTime.UtcNow)
+                                        {
+                                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-rose-50 text-rose-700">Overdue</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-amber-50 text-amber-700">Active</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="py-8 text-center text-ink-600">No circulation records found.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Quick Actions & Library Info -->
+        <div class="space-y-6">
+            <div class="bg-white rounded-2xl border border-line shadow-xs p-6">
+                <h2 class="text-lg font-bold font-display text-brand-900 mb-4">Quick Shortcuts</h2>
+                <div class="space-y-3">
+                    <a href="books" class="flex items-center justify-between p-3 rounded-xl bg-canvas hover:bg-brand-100/50 text-brand-900 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-brand-700 text-white flex items-center justify-center">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold">Browse Catalogue</p>
+                                <p class="text-xs text-ink-600">Search and manage inventory</p>
+                            </div>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-ink-600 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+
+                    <a href="members" class="flex items-center justify-between p-3 rounded-xl bg-canvas hover:bg-brand-100/50 text-brand-900 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold">Student Members</p>
+                                <p class="text-xs text-ink-600">View active library cards</p>
+                            </div>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-ink-600 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+
+                    <a href="overdue" class="flex items-center justify-between p-3 rounded-xl bg-canvas hover:bg-brand-100/50 text-brand-900 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-lg bg-rose-600 text-white flex items-center justify-center">
+                                <i data-lucide="triangle-alert" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold">Overdue & Fines</p>
+                                <p class="text-xs text-ink-600">Pending fine collection</p>
+                            </div>
+                        </div>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-ink-600 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-brand-900 to-brand-700 rounded-2xl p-6 text-white shadow-lg">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-accent-500 flex items-center justify-center font-bold">
+                        <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold font-display">Library Hours</h3>
+                        <p class="text-xs text-white/80">Mon - Sat: 8:00 AM - 4:00 PM</p>
+                    </div>
+                </div>
+                <p class="text-xs text-white/70 leading-relaxed">
+                    Sunrise School library policy allows students to borrow up to 3 books concurrently for a maximum duration of 14 days. Late fee is ₹5 per day.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int totalBooks;
+    private int totalMembers;
+    private int activeLoans;
+    private int overdueLoans;
+    private decimal totalFines;
+    private List<BookNook.Domain.Entities.Loan> recentLoans = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        totalBooks = await Db.Books.SumAsync(b => b.TotalCopies);
+        totalMembers = await Db.Members.CountAsync();
+        activeLoans = await Db.Loans.CountAsync(l => l.ReturnDate == null);
+        overdueLoans = await Db.Loans.CountAsync(l => l.ReturnDate == null && l.DueDate < DateTime.UtcNow);
+        totalFines = await Db.Loans.SumAsync(l => l.Fine);
+
+        recentLoans = await Db.Loans
+            .Include(l => l.Book)
+            .Include(l => l.Member)
+            .OrderByDescending(l => l.CreatedAt)
+            .Take(5)
+            .ToListAsync();
+    }
+}

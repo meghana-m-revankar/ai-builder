@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Book Inventory | Book Nook</title>
-<meta name="description" content="Empowering young minds through organized literary discovery.">
+<title>Books | Book Nook</title>
+<meta name="description" content="Empowering young minds through organized reading.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#1e3675'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
@@ -15,361 +15,330 @@
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Book Nook</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book Inventory</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Library Dashboard</a></nav>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Books</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Dashboard</a></nav>
     <a href="books.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book Inventory</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Library Dashboard</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Books</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Dashboard</a></div>
 </header>
 <main>
-<main class="bg-slate-50 text-slate-800">
-  <section class="relative py-20 bg-brand-900 text-white">
-    <div class="absolute inset-0 overflow-hidden opacity-20">
-      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-books-shelves-x/1600/900" alt="Library bookshelves" class="w-full h-full object-cover">
+<main>
+  <!-- Hero / Header Section -->
+  <section class="relative py-16 md:py-24 bg-brand-900 text-white">
+    <div class="absolute inset-0 opacity-20">
+      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-shelves-books-x/1600/900" alt="Library bookshelf" class="w-full h-full object-cover">
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Book Inventory System</h1>
-      <p class="text-xl text-brand-100 max-w-2xl mx-auto mb-8">Manage our catalog of over 15,000+ books, track loans, and update literary resources for young minds.</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-4">Library Catalogue</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-8">
+        Explore our collection of over 5,000+ books. Empowering young minds through organized reading since 2012.
+      </p>
       <div class="flex justify-center gap-4">
-        <a href="#inventory-list" class="bg-brand-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-brand-500 transition shadow-lg">View Catalog</a>
-        <a href="#add-book" class="bg-white text-brand-900 px-6 py-3 rounded-xl font-medium hover:bg-brand-50 transition shadow-lg">Add New Book</a>
+        <a href="#catalogue" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition">Browse Catalogue</a>
+        <a href="dashboard.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur transition">Librarian Portal</a>
       </div>
     </div>
   </section>
 
-  <section id="search-filter" class="py-16 md:py-24">
+  <!-- 1. Search and filter interface for catalogue -->
+  <section id="catalogue" class="py-16 md:py-24 bg-brand-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
-        <div class="flex flex-col md:flex-row gap-4 items-center justify-between mb-8">
-          <div>
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-brand-900">Search & Filter Catalog</h2>
-            <p class="text-slate-600">Quickly find books by title, author, or literary category.</p>
-          </div>
-          <div class="flex items-center gap-2 text-sm text-brand-700 bg-brand-50 px-4 py-2 rounded-lg font-medium">
-            <i data-lucide="book-open" class="w-4 h-4"></i>
-            <span id="total-count">10</span> Seeded Titles Available
-          </div>
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-900 mb-4">Search Inventory</h2>
+        <p class="text-brand-700">Quickly find titles, authors, or ISBN numbers in our active collection.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow-lg max-w-4xl mx-auto flex flex-col md:flex-row gap-4">
+        <div class="flex-1 relative">
+          <i data-lucide="search" class="absolute left-4 top-3.5 w-5 h-5 text-brand-600"></i>
+          <input type="text" id="bookSearchInput" placeholder="Search by title, author, or genre..." class="w-full pl-12 pr-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600">
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="relative">
-            <i data-lucide="search" class="absolute left-3 top-3.5 w-5 h-5 text-slate-400"></i>
-            <input type="text" id="search-input" placeholder="Search by title or author..." class="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600">
-          </div>
-          <div>
-            <select id="category-filter" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-              <option value="">All Categories</option>
-              <option value="Fiction">Fiction</option>
-              <option value="Science">Science</option>
-              <option value="History">History</option>
-              <option value="Philosophy">Philosophy</option>
-            </select>
-          </div>
-          <div>
-            <button onclick="filterBooks()" class="w-full bg-brand-900 text-white py-3 rounded-xl font-medium hover:bg-brand-800 transition flex items-center justify-center gap-2">
-              <i data-lucide="filter" class="w-5 h-5"></i> Apply Filters
-            </button>
-          </div>
-        </div>
+        <select id="availabilityFilter" class="px-4 py-3 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white text-brand-800">
+          <option value="all">All Statuses</option>
+          <option value="Available">Available</option>
+          <option value="Issued">Issued</option>
+        </select>
       </div>
     </div>
   </section>
 
-  <section id="low-stock" class="py-12 bg-amber-50 border-y border-amber-200">
+  <!-- 2. Category tabs for fiction, science, and history -->
+  <section class="py-12 bg-white border-b border-brand-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center gap-4 mb-6">
-        <div class="p-3 bg-amber-500 text-white rounded-xl shadow">
-          <i data-lucide="alert-triangle" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <h2 class="font-display text-2xl font-bold text-amber-900">Low Stock & Popular Alerts</h2>
-          <p class="text-amber-700 text-sm">Titles with high demand and low available copies requiring restock or attention.</p>
-        </div>
-      </div>
-      <div id="low-stock-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="flex justify-center gap-2 sm:gap-4 flex-wrap" id="categoryTabs">
+        <button onclick="filterCategory('All')" class="cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-600 text-white shadow transition">All Genres</button>
+        <button onclick="filterCategory('Fiction')" class="cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-100 text-brand-800 hover:bg-brand-200 transition">Fiction</button>
+        <button onclick="filterCategory('Science')" class="cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-100 text-brand-800 hover:bg-brand-200 transition">Science</button>
+        <button onclick="filterCategory('History')" class="cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-100 text-brand-800 hover:bg-brand-200 transition">History</button>
       </div>
     </div>
   </section>
 
-  <section id="inventory-list" class="py-16 md:py-24">
+  <!-- 3. List of all books with availability status -->
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center mb-8">
-        <div>
-          <h2 class="font-display text-3xl font-bold text-brand-900">Detailed Book Inventory</h2>
-          <p class="text-slate-600">Complete catalog of currently tracked library resources.</p>
-        </div>
+      <div class="flex justify-between items-center mb-10">
+        <h3 class="text-2xl sm:text-3xl font-display font-bold text-brand-900">Catalogue List</h3>
+        <span class="text-sm text-brand-600 font-semibold" id="bookCountIndicator">Showing all titles</span>
       </div>
-      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-brand-900 text-white text-sm uppercase tracking-wider">
-                <th class="p-4">Title</th>
-                <th class="p-4">Author</th>
-                <th class="p-4">Category</th>
-                <th class="p-4">Copies</th>
-                <th class="p-4">Status</th>
-                <th class="p-4 text-right">Actions</th>
-              </tr>
-            </thead>
-            <tbody id="inventory-table-body" class="divide-y divide-slate-100 text-sm">
-            </tbody>
-          </table>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="bookGridContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Add/Edit/Delete forms for librarian use -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h3 class="text-3xl font-display font-bold text-brand-900 mb-4">Librarian Book Management</h3>
+          <p class="text-brand-700 mb-6">Use this portal to register new acquisitions or update existing inventory details. Managed under Meena Joshi and team.</p>
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/school-books-desk-x/800/600" alt="Books on desk" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h4 class="text-xl font-display font-bold text-brand-900 mb-6" id="formTitle">Add New Book</h4>
+          <form id="bookManagerForm" onsubmit="handleBookSubmit(event)" class="space-y-4">
+            <input type="hidden" id="editBookId">
+            <div>
+              <label class="block text-sm font-medium text-brand-800 mb-1">Book Title</label>
+              <input type="text" id="bookTitleInput" required class="w-full px-4 py-2.5 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-brand-800 mb-1">Author</label>
+              <input type="text" id="bookAuthorInput" required class="w-full px-4 py-2.5 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600">
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium text-brand-800 mb-1">Category</label>
+                <select id="bookCategoryInput" class="w-full px-4 py-2.5 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
+                  <option value="Fiction">Fiction</option>
+                  <option value="Science">Science</option>
+                  <option value="History">History</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-brand-800 mb-1">Status</label>
+                <select id="bookStatusInput" class="w-full px-4 py-2.5 rounded-xl border border-brand-200 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
+                  <option value="Available">Available</option>
+                  <option value="Issued">Issued</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex gap-3 pt-2">
+              <button type="submit" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition shadow">Save Book</button>
+              <button type="button" onclick="resetBookForm()" class="px-4 py-3 border border-brand-200 rounded-xl text-brand-700 hover:bg-brand-50 transition">Cancel</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="add-book" class="py-16 md:py-24 bg-brand-50">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white rounded-2xl shadow-xl p-8">
-        <div class="text-center mb-8">
-          <div class="inline-block p-3 bg-brand-100 text-brand-700 rounded-xl mb-3">
-            <i data-lucide="book-plus" class="w-8 h-8"></i>
-          </div>
-          <h2 class="font-display text-3xl font-bold text-brand-900">Add New Book to Database</h2>
-          <p class="text-slate-600">Enter book details to catalog a new volume into the Book Nook system.</p>
+  <!-- 5. Featured book of the month showcase -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-900 to-brand-800 rounded-3xl text-white p-8 md:p-12 overflow-hidden shadow-xl flex flex-col lg:flex-row items-center gap-10">
+        <div class="w-full lg:w-1/3">
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/featured-library-x/600/800" alt="Featured Book" class="w-full h-80 object-cover rounded-2xl shadow-lg">
         </div>
-        <form id="add-book-form" onsubmit="handleAddBook(event)" class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Book Title</label>
-              <input type="text" id="new-title" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600" placeholder="e.g. A Brief History of Time">
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Author</label>
-              <input type="text" id="new-author" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600" placeholder="e.g. Stephen Hawking">
-            </div>
+        <div class="w-full lg:w-2/3">
+          <span class="bg-brand-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider mb-4 inline-block">Book of the Month</span>
+          <h3 class="text-3xl sm:text-4xl font-display font-bold mb-3">The Discovery of India</h3>
+          <p class="text-brand-200 font-medium mb-4">By Jawaharlal Nehru • Recommended by Meena Joshi</p>
+          <p class="text-brand-100 mb-6 leading-relaxed">
+            Written during Nehru's imprisonment in Ahmednagar Fort, this masterpiece journeys through India's rich historical tapestry. A foundational read for young minds exploring our national heritage.
+          </p>
+          <div class="flex items-center gap-4">
+            <span class="bg-emerald-500/20 text-emerald-300 px-3 py-1.5 rounded-xl text-sm font-semibold border border-emerald-500/30">Available for Issue</span>
+            <a href="books.html" class="text-white hover:text-brand-200 font-semibold text-sm underline underline-offset-4">View in catalogue &rarr;</a>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Category</label>
-              <select id="new-category" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-                <option value="Fiction">Fiction</option>
-                <option value="Science">Science</option>
-                <option value="History">History</option>
-                <option value="Philosophy">Philosophy</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-700 mb-2">Initial Copies</label>
-              <input type="number" id="new-copies" min="1" value="3" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-600">
-            </div>
-          </div>
-          <button type="submit" class="w-full bg-brand-900 text-white py-4 rounded-xl font-medium hover:bg-brand-800 transition shadow-lg flex items-center justify-center gap-2">
-            <i data-lucide="plus-circle" class="w-5 h-5"></i> Add Book to Catalog
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <div id="edit-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="font-display text-2xl font-bold text-brand-900">Edit Book Details</h3>
-        <button onclick="closeEditModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-6 h-6"></i></button>
+  <!-- 6. Inventory summary and stock alerts -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h3 class="text-3xl font-display font-bold text-brand-900 mb-4">Inventory Summary & Alerts</h3>
+        <p class="text-brand-700">Real-time statistics managed by our dedicated cataloging staff at 12 FC Road, Pune.</p>
       </div>
-      <form id="edit-book-form" onsubmit="handleEditBook(event)" class="space-y-4">
-        <input type="hidden" id="edit-id">
-        <div>
-          <label class="block text-sm font-medium text-slate-700 mb-1">Book Title</label>
-          <input type="text" id="edit-title" required class="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-600">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+        <div class="bg-white p-6 rounded-2xl shadow border border-brand-100 text-center">
+          <p class="text-brand-600 text-sm font-medium mb-1">Total Collection</p>
+          <h4 class="text-3xl font-display font-bold text-brand-900">5,000+</h4>
+          <p class="text-xs text-brand-500 mt-2">12+ years of curating books</p>
         </div>
-        <div>
-          <label class="block text-sm font-medium text-slate-700 mb-1">Author</label>
-          <input type="text" id="edit-author" required class="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-600">
+        <div class="bg-white p-6 rounded-2xl shadow border border-brand-100 text-center">
+          <p class="text-brand-600 text-sm font-medium mb-1">Active Borrow Rate</p>
+          <h4 class="text-3xl font-display font-bold text-brand-900">98%</h4>
+          <p class="text-xs text-emerald-600 mt-2 font-medium">High student engagement</p>
         </div>
-        <div>
-          <label class="block text-sm font-medium text-slate-700 mb-1">Category</label>
-          <select id="edit-category" class="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-600 bg-white">
-            <option value="Fiction">Fiction</option>
-            <option value="Science">Science</option>
-            <option value="History">History</option>
-            <option value="Philosophy">Philosophy</option>
-          </select>
+        <div class="bg-white p-6 rounded-2xl shadow border border-brand-100 text-center">
+          <p class="text-brand-600 text-sm font-medium mb-1">Stock Alerts</p>
+          <h4 class="text-3xl font-display font-bold text-amber-600" id="stockAlertCount">0</h4>
+          <p class="text-xs text-brand-500 mt-2">Titles requiring replenishment</p>
         </div>
-        <div>
-          <label class="block text-sm font-medium text-slate-700 mb-1">Copies Available</label>
-          <input type="number" id="edit-copies" min="0" required class="w-full px-4 py-2 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-600">
-        </div>
-        <div class="flex justify-end gap-3 mt-6">
-          <button type="button" onclick="closeEditModal()" class="px-4 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50">Cancel</button>
-          <button type="submit" class="px-4 py-2 rounded-xl bg-brand-900 text-white hover:bg-brand-800">Save Changes</button>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <section class="py-16 bg-brand-900 text-white text-center">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Empowering Young Minds Through Literature</h2>
-      <p class="text-brand-100 mb-8">Visit our library at 12 FC Road, Shivajinagar, Pune or contact Meena Joshi for specialized reading recommendations.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="members.html" class="bg-white text-brand-900 px-6 py-3 rounded-xl font-medium hover:bg-brand-50 transition">Manage Members</a>
-        <a href="dashboard.html" class="bg-brand-600 text-white px-6 py-3 rounded-xl font-medium hover:bg-brand-500 transition">Library Dashboard</a>
+  <!-- CTA Band -->
+  <section class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-3xl font-display font-bold mb-4">Ready to Borrow Your Next Book?</h3>
+      <p class="text-brand-200 max-w-xl mx-auto mb-8">Visit our reading corner at 12 FC Road, Shivajinagar, Pune or contact us for reference assistance.</p>
+      <div class="flex justify-center gap-4">
+        <a href="members.html" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3 rounded-xl transition shadow">Become a Member</a>
+        <a href="index.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3 rounded-xl backdrop-blur transition">Back to Home</a>
       </div>
     </div>
   </section>
 </main>
 
 <script>
-  const initialBooks = [
-    { id: 1, title: "To Kill a Mockingbird", author: "Harper Lee", category: "Fiction", copies: 4 },
-    { id: 2, title: "A Brief History of Time", author: "Stephen Hawking", category: "Science", copies: 1 },
-    { id: 3, title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", category: "History", copies: 2 },
-    { id: 4, title: "The Republic", author: "Plato", category: "Philosophy", copies: 5 },
-    { id: 5, title: "1984", author: "George Orwell", category: "Fiction", copies: 2 },
-    { id: 6, title: "Cosmos", author: "Carl Sagan", category: "Science", copies: 3 },
-    { id: 7, title: "The Silk Roads", author: "Peter Frankopan", category: "History", copies: 1 },
-    { id: 8, title: "Meditations", author: "Marcus Aurelius", category: "Philosophy", copies: 4 },
-    { id: 9, title: "Pride and Prejudice", author: "Jane Austen", category: "Fiction", copies: 3 },
-    { id: 10, title: "The Gene: An Intimate History", author: "Siddhartha Mukherjee", category: "Science", copies: 2 }
+  let booksData = [
+    { id: 1, title: 'The Discovery of India', author: 'Jawaharlal Nehru', category: 'History', status: 'Available' },
+    { id: 2, title: 'A Brief History of Time', author: 'Stephen Hawking', category: 'Science', status: 'Available' },
+    { id: 3, title: 'Malgudi Days', author: 'R.K. Narayan', category: 'Fiction', status: 'Issued' },
+    { id: 4, title: 'Cosmos', author: 'Carl Sagan', category: 'Science', status: 'Available' },
+    { id: 5, title: 'Wings of Fire', author: 'A.P.J. Abdul Kalam', category: 'History', status: 'Available' },
+    { id: 6, title: 'The Room on the Roof', author: 'Ruskin Bond', category: 'Fiction', status: 'Issued' }
   ];
 
-  let books = JSON.parse(localStorage.getItem('booknook_books')) || initialBooks;
+  let currentCategory = 'All';
 
-  function saveBooks() {
-    localStorage.setItem('booknook_books', JSON.stringify(books));
-    renderInventory();
-    renderLowStock();
-    document.getElementById('total-count').textContent = books.length;
-    lucide.createIcons();
+  function initBooksPage() {
+    const saved = localStorage.getItem('bookNook_books');
+    if (saved) {
+      try { booksData = JSON.parse(saved); } catch(e){}
+    }
+    renderBooks();
+    
+    document.getElementById('bookSearchInput').addEventListener('input', renderBooks);
+    document.getElementById('availabilityFilter').addEventListener('change', renderBooks);
   }
 
-  function renderInventory(filteredBooks = books) {
-    const tbody = document.getElementById('inventory-table-body');
-    tbody.innerHTML = '';
-    if(filteredBooks.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="6" class="p-6 text-center text-slate-500">No books found matching criteria.</td></tr>`;
-      return;
-    }
-    filteredBooks.forEach(book => {
-      const statusBadge = book.copies > 1 
-        ? `<span class="px-2 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-medium">Available</span>`
-        : book.copies === 1 
-        ? `<span class="px-2 py-1 bg-amber-100 text-amber-800 rounded-full text-xs font-medium">Low Stock</span>`
-        : `<span class="px-2 py-1 bg-rose-100 text-rose-800 rounded-full text-xs font-medium">Out of Stock</span>`;
+  function saveBooksToStorage() {
+    localStorage.setItem('bookNook_books', JSON.stringify(booksData));
+  }
 
-      tbody.innerHTML += `
-        <tr class="hover:bg-slate-50 transition">
-          <td class="p-4 font-medium text-slate-900">${book.title}</td>
-          <td class="p-4 text-slate-600">${book.author}</td>
-          <td class="p-4"><span class="px-2 py-1 bg-brand-50 text-brand-700 rounded-md text-xs font-medium">${book.category}</span></td>
-          <td class="p-4 font-semibold text-slate-700">${book.copies}</td>
-          <td class="p-4">${statusBadge}</td>
-          <td class="p-4 text-right space-x-2">
-            <button onclick="openEditModal(${book.id})" class="p-2 text-slate-600 hover:text-brand-600 transition" title="Edit"><i data-lucide="edit-3" class="w-4 h-4"></i></button>
-            <button onclick="deleteBook(${book.id})" class="p-2 text-slate-600 hover:text-rose-600 transition" title="Delete"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-          </td>
-        </tr>
-      `;
+  function filterCategory(cat) {
+    currentCategory = cat;
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      if(btn.textContent.includes(cat) || (cat === 'All' && btn.textContent.includes('All'))) {
+        btn.className = 'cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-600 text-white shadow transition';
+      } else {
+        btn.className = 'cat-btn px-6 py-2.5 rounded-full font-semibold text-sm bg-brand-100 text-brand-800 hover:bg-brand-200 transition';
+      }
     });
-    lucide.createIcons();
+    renderBooks();
   }
 
-  function renderLowStock() {
-    const grid = document.getElementById('low-stock-grid');
-    grid.innerHTML = '';
-    const lowStockBooks = books.filter(b => b.copies <= 1);
-    if(lowStockBooks.length === 0) {
-      grid.innerHTML = `<div class="col-span-3 text-sm text-amber-800 bg-amber-100/50 p-4 rounded-xl">All popular titles are currently well-stocked.</div>`;
+  function renderBooks() {
+    const searchVal = document.getElementById('bookSearchInput').value.toLowerCase();
+    const statusVal = document.getElementById('availabilityFilter').value;
+    
+    const filtered = booksData.filter(b => {
+      const matchesCat = currentCategory === 'All' || b.category === currentCategory;
+      const matchesSearch = b.title.toLowerCase().includes(searchVal) || b.author.toLowerCase().includes(searchVal);
+      const matchesStatus = statusVal === 'all' || b.status === statusVal;
+      return matchesCat && matchesSearch && matchesStatus;
+    });
+
+    const grid = document.getElementById('bookGridContainer');
+    document.getElementById('bookCountIndicator').textContent = `Showing ${filtered.length} of ${booksData.length} titles`;
+    
+    if(filtered.length === 0) {
+      grid.innerHTML = `<div class="col-span-full text-center py-12 text-brand-500">No books found matching your criteria.</div>`;
       return;
     }
-    lowStockBooks.forEach(book => {
-      grid.innerHTML += `
-        <div class="bg-white p-5 rounded-xl border border-amber-200 shadow-sm flex justify-between items-center">
+
+    let html = '';
+    for(let i=0; i<filtered.length; i++) {
+      const b = filtered[i];
+      const badgeClass = b.status === 'Available' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
+      html += `
+        <div class="bg-white p-6 rounded-2xl shadow-lg hover:-translate-y-1 transition flex flex-col justify-between border border-brand-100">
           <div>
-            <span class="text-xs font-bold text-amber-700 uppercase tracking-wide">${book.category}</span>
-            <h4 class="font-display font-bold text-slate-900">${book.title}</h4>
-            <p class="text-xs text-slate-500">By ${book.author}</p>
+            <div class="flex justify-between items-start mb-3">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">${b.category}</span>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full ${badgeClass}">${b.status}</span>
+            </div>
+            <h4 class="text-xl font-display font-bold text-brand-900 mb-1">${b.title}</h4>
+            <p class="text-brand-600 text-sm mb-4">By ${b.author}</p>
           </div>
-          <div class="text-right">
-            <span class="inline-block px-2.5 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">${book.copies} left</span>
+          <div class="pt-4 border-t border-brand-100 flex justify-between items-center">
+            <span class="text-xs text-brand-500">ID: BK-${b.id}</span>
+            <div class="flex gap-2">
+              <button onclick="editBook(${b.id})" class="p-2 text-brand-600 hover:bg-brand-50 rounded-lg transition" title="Edit"><i data-lucide="edit-2" class="w-4 h-4"></i></button>
+              <button onclick="deleteBook(${b.id})" class="p-2 text-red-600 hover:bg-red-50 rounded-lg transition" title="Delete"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+            </div>
           </div>
         </div>
       `;
-    });
+    }
+    grid.innerHTML = html;
+    document.getElementById('stockAlertCount').textContent = booksData.filter(b => b.status === 'Issued').length > 4 ? '1' : '0';
+    if(window.lucide) lucide.createIcons();
   }
 
-  function filterBooks() {
-    const query = document.getElementById('search-input').value.toLowerCase();
-    const category = document.getElementById('category-filter').value;
-    const filtered = books.filter(b => {
-      const matchesQuery = b.title.toLowerCase().includes(query) || b.author.toLowerCase().includes(query);
-      const matchesCat = category === "" || b.category === category;
-      return matchesQuery && matchesCat;
-    });
-    renderInventory(filtered);
-  }
-
-  document.getElementById('search-input').addEventListener('input', filterBooks);
-
-  function handleAddBook(e) {
+  function handleBookSubmit(e) {
     e.preventDefault();
-    const title = document.getElementById('new-title').value;
-    const author = document.getElementById('new-author').value;
-    const category = document.getElementById('new-category').value;
-    const copies = parseInt(document.getElementById('new-copies').value);
+    const idField = document.getElementById('editBookId').value;
+    const title = document.getElementById('bookTitleInput').value;
+    const author = document.getElementById('bookAuthorInput').value;
+    const category = document.getElementById('bookCategoryInput').value;
+    const status = document.getElementById('bookStatusInput').value;
 
-    const newBook = {
-      id: Date.now(),
-      title,
-      author,
-      category,
-      copies
-    };
+    if(idField) {
+      const id = parseInt(idField);
+      booksData = booksData.map(b => b.id === id ? { ...b, title, author, category, status } : b);
+    } else {
+      const newId = booksData.length > 0 ? Math.max(...booksData.map(b => b.id)) + 1 : 1;
+      booksData.push({ id: newId, title, author, category, status });
+    }
 
-    books.push(newBook);
-    saveBooks();
-    document.getElementById('add-book-form').reset();
-    alert('Book added successfully to database!');
+    saveBooksToStorage();
+    resetBookForm();
+    renderBooks();
   }
 
-  function openEditModal(id) {
-    const book = books.find(b => b.id === id);
-    if(!book) return;
-    document.getElementById('edit-id').value = book.id;
-    document.getElementById('edit-title').value = book.title;
-    document.getElementById('edit-author').value = book.author;
-    document.getElementById('edit-category').value = book.category;
-    document.getElementById('edit-copies').value = book.copies;
-    document.getElementById('edit-modal').classList.remove('hidden');
-  }
-
-  function closeEditModal() {
-    document.getElementById('edit-modal').classList.add('hidden');
-  }
-
-  function handleEditBook(e) {
-    e.preventDefault();
-    const id = parseInt(document.getElementById('edit-id').value);
-    const title = document.getElementById('edit-title').value;
-    const author = document.getElementById('edit-author').value;
-    const category = document.getElementById('edit-category').value;
-    const copies = parseInt(document.getElementById('edit-copies').value);
-
-    books = books.map(b => b.id === id ? { ...b, title, author, category, copies } : b);
-    saveBooks();
-    closeEditModal();
+  function editBook(id) {
+    const b = booksData.find(item => item.id === id);
+    if(!b) return;
+    document.getElementById('editBookId').value = b.id;
+    document.getElementById('bookTitleInput').value = b.title;
+    document.getElementById('bookAuthorInput').value = b.author;
+    document.getElementById('bookCategoryInput').value = b.category;
+    document.getElementById('bookStatusInput').value = b.status;
+    document.getElementById('formTitle').textContent = 'Edit Book (ID: ' + b.id + ')';
+    window.scrollTo({ top: document.getElementById('bookManagerForm').offsetTop - 100, behavior: 'smooth' });
   }
 
   function deleteBook(id) {
-    if(confirm('Are you sure you want to remove this book from the catalog?')) {
-      books = books.filter(b => b.id !== id);
-      saveBooks();
+    if(confirm('Are you sure you want to remove this book from inventory?')) {
+      booksData = booksData.filter(b => b.id !== id);
+      saveBooksToStorage();
+      renderBooks();
     }
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    saveBooks();
-  });
+  function resetBookForm() {
+    document.getElementById('editBookId').value = '';
+    document.getElementById('bookManagerForm').reset();
+    document.getElementById('formTitle').textContent = 'Add New Book';
+  }
+
+  document.addEventListener('DOMContentLoaded', initBooksPage);
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized literary discovery.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="books.html" class="hover:text-white">Book Inventory</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Library Dashboard</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 8:30 AM - 4:00 PM</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized reading.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="books.html" class="hover:text-white">Books</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 8:30 AM - 4:00 PM</p></div>
     <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2553 1234</p><p class="mt-2 text-sm text-slate-400">hello@booknook.in</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Book Nook. All rights reserved.</div>

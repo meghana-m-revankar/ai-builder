@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Members | Book Nook</title>
-<meta name="description" content="Empowering young minds through organized literary discovery.">
+<meta name="description" content="Empowering young minds through organized reading.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#1e3675'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
@@ -15,55 +15,171 @@
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Book Nook</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book Inventory</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Library Dashboard</a></nav>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="books.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Books</a><a href="members.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Members</a><a href="dashboard.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Dashboard</a></nav>
     <a href="books.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book Inventory</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Library Dashboard</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="books.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Books</a><a href="members.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Members</a><a href="dashboard.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Dashboard</a></div>
 </header>
 <main>
-<main class="bg-slate-50 text-slate-800">
-  <section class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white py-20 px-4">
-    <div class="absolute inset-0 z-0 opacity-30">
-      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-students-reading-x/1600/900" alt="Library students" class="w-full h-full object-cover">
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden py-16">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-school-books-x/1600/900" alt="Book Nook Library Interior" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/60 to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-4xl mx-auto text-center">
-      <span class="bg-brand-600 text-white text-xs uppercase tracking-widest px-3 py-1 rounded-full font-semibold">Scholarly Community</span>
-      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6">Student Members Directory</h1>
-      <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto mb-8">Manage young minds, track library memberships, active loans, and generate digital ID cards seamlessly.</p>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-brand-800 text-brand-200 text-sm font-semibold mb-4 tracking-wide uppercase">Member Portal</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">Student Members & Loan Management</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-brand-100 mb-8">Manage student registrations, active loans, profile updates, and library memberships efficiently for our 800+ active student members.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#register" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-medium transition shadow-lg">Register Member</a>
-        <a href="#directory" class="bg-white/1> hover:bg-white/20 border border-white/30 text-white px-6 py-3 rounded-xl font-medium transition">View Directory</a>
+        <a href="#directory" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-medium shadow-lg transition-all">
+          <i data-lucide="search" class="w-5 h-5 mr-2"></i> Search Directory
+        </a>
+        <a href="#register" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium backdrop-blur-sm transition-all border border-white/20">
+          <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i> Register Student
+        </a>
       </div>
     </div>
   </section>
 
-  <section id="directory" class="py-16 md:py-24">
+  <!-- 1. Member Directory with Search -->
+  <section id="directory" class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-        <div>
-          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Active Roster</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">Library Member Directory</h2>
-        </div>
-        <div class="mt-4 md:mt-0 flex items-center gap-3">
-          <input type="text" id="memberSearch" placeholder="Search members..." class="px-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 text-sm">
-          <span class="text-sm text-slate-500 font-medium bg-brand-50 px-3 py-2 rounded-xl border border-brand-100">Total: <strong id="totalMembersCount" class="text-brand-600">5</strong> registered</span>
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Member Directory</h2>
+        <p class="text-gray-600">Browse and search through our active student community. Use the live search below to find specific members instantly.</p>
+      </div>
+
+      <div class="bg-brand-50 rounded-2xl p-6 sm:p-8 shadow-sm border border-brand-100 mb-8">
+        <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+          <div class="relative w-full md:w-96">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </span>
+            <input type="text" id="memberSearch" placeholder="Search by name, ID or grade..." class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-gray-800">
+          </div>
+          <div class="text-sm text-gray-600 font-medium">
+            Total Active Members: <span id="totalMembersCount" class="text-brand-600 font-bold">800+</span>
+          </div>
         </div>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="memberDirectoryGrid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Registration Form for New Students -->
+  <section id="register" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+        <div class="bg-brand-900 px-6 sm:px-10 py-8 text-white">
+          <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">New Student Registration</h2>
+          <p class="text-brand-100 text-sm">Empowering young minds through organized reading. Enroll a new student to access our 5,000+ book collection.</p>
+        </div>
+        <form id="registrationForm" class="p-6 sm:p-10 space-y-6" onsubmit="handleRegistration(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="regName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Aarav Mehta">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Student ID / Roll No</label>
+              <input type="text" id="regId" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="BN-2024-850">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Grade / Class</label>
+              <input type="text" id="regGrade" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Grade 9 - Section A">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="regEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="student@school.com">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Parent / Guardian Name & Contact</label>
+            <input type="text" id="regParent" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Rajesh Mehta (+91 98765 43210)">
+          </div>
+          <div class="pt-4">
+            <button type="submit" class="w-full py-4 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-md transition-all flex items-center justify-center">
+              <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i> Complete Registration
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Edit Profile Details -->
+  <section id="edit-profile" class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Edit Member Profile</h2>
+        <p class="text-gray-600">Update contact details, grade progression, or parent information for existing members managed by Meena Joshi and staff.</p>
+      </div>
+
+      <div class="bg-stone-50 rounded-2xl p-6 sm:p-10 border border-gray-200">
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700 mb-2">Select Member to Edit</label>
+          <select id="editMemberSelect" onchange="loadMemberProfile()" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <option value="">-- Choose a member --</option>
+          </select>
+        </div>
+
+        <form id="editProfileForm" class="space-y-6 hidden" onsubmit="saveMemberProfile(event)">
+          <input type="hidden" id="editIndex">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" id="editName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Grade / Class</label>
+              <input type="text" id="editGrade" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" id="editEmail" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Parent / Contact Info</label>
+              <input type="text" id="editParent" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            </div>
+          </div>
+          <div class="pt-4 flex justify-end gap-3">
+            <button type="submit" class="px-6 py-3 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-md transition-all flex items-center">
+              <i data-lucide="save" class="w-5 h-5 mr-2"></i> Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Active Member Loan History Display -->
+  <section id="loans" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Active Loan History</h2>
+        <p class="text-gray-600">Track book issues, due dates, and return statuses. Enjoy our 98% borrow rate with free book issuing services.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse">
             <thead>
               <tr class="bg-brand-900 text-white text-sm uppercase tracking-wider">
-                <th class="py-4 px-6 font-semibold">Member ID</th>
                 <th class="py-4 px-6 font-semibold">Student Name</th>
-                <th class="py-4 px-6 font-semibold">Grade / Class</th>
-                <th class="py-4 px-6 font-semibold">Contact Email</th>
-                <th class="py-4 px-6 font-semibold">Join Date</th>
-                <th class="py-4 px-6 font-semibold text-right">Actions</th>
+                <th class="py-4 px-6 font-semibold">Book Title</th>
+                <th class="py-4 px-6 font-semibold">Issue Date</th>
+                <th class="py-4 px-6 font-semibold">Due Date</th>
+                <th class="py-4 px-6 font-semibold">Status</th>
               </tr>
             </thead>
-            <tbody id="membersTableBody" class="divide-y divide-slate-100 text-sm text-slate-700">
+            <tbody id="loanHistoryTable" class="divide-y divide-gray-200 text-sm text-gray-700">
               <!-- Rendered via JS -->
             </tbody>
           </table>
@@ -72,376 +188,324 @@
     </div>
   </section>
 
-  <section id="register" class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">New Admission</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">Register a New Student Member</h2>
-        <p class="text-slate-600 mt-2">Enrolling young minds into Book Nook grants them access to 15,000+ books with a standard 14-day loan period.</p>
-      </div>
-      <div class="bg-slate-50 p-8 rounded-2xl shadow-lg border border-slate-100">
-        <form id="registerMemberForm" class="grid grid-cols-1 sm:grid-cols-2 gap-6" onsubmit="handleRegisterMember(event)">
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Student Full Name</label>
-            <input type="text" id="regName" required placeholder="e.g. Aarav Sharma" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Grade / Standard</label>
-            <input type="text" id="regGrade" required placeholder="e.g. Grade 9-B" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
-            <input type="email" id="regEmail" required placeholder="student@school.edu" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
-            <input type="tel" id="regPhone" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div class="sm:col-span-2">
-            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
-              <i data-lucide="user-plus" class="w-5 h-5"></i> Complete Student Registration
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="edit-account" class="py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Account Management</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">Edit Student Account Information</h2>
-        <p class="text-slate-600 mt-2">Select a member to update their contact details, grade progression, or membership status.</p>
-      </div>
-      <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100">
-        <div class="mb-6">
-          <label class="block text-sm font-medium text-slate-700 mb-2">Select Member to Edit</label>
-          <select id="editMemberSelect" onchange="populateEditForm()" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-            <option value="">-- Choose student member --</option>
-          </select>
-        </div>
-        <form id="editMemberForm" class="grid grid-cols-1 sm:grid-cols-2 gap-6" onsubmit="handleUpdateMember(event)">
-          <input type="hidden" id="editId">
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Student Full Name</label>
-            <input type="text" id="editName" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Grade / Standard</label>
-            <input type="text" id="editGrade" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
-            <input type="email" id="editEmail" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div>
-            <label class="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
-            <input type="tel" id="editPhone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-          </div>
-          <div class="sm:col-span-2 flex gap-4">
-            <button type="submit" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
-              <i data-lucide="save" class="w-5 h-5"></i> Save Changes
-            </button>
-            <button type="button" onclick="handleDeleteMember()" class="bg-red-50 hover:bg-red-100 text-red-600 font-medium px-6 py-3 rounded-xl transition flex items-center gap-2">
-              <i data-lucide="trash-2" class="w-5 h-5"></i> Remove
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="loans" class="py-16 md:py-24 bg-white">
+  <!-- 5. Membership Renewal and Status Updates -->
+  <section id="renewal" class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Circulation Tracking</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">View Active Loans Per Member</h2>
-        <p class="text-slate-600 mt-2">Book Nook enforces a 14-day loan period with ₹5 late fines per overdue day to encourage prompt literary exchange.</p>
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Membership Renewal & Status</h2>
+        <p class="text-gray-600">Quickly update student membership validity for the academic year 2024-2025 at 12 FC Road, Shivajinagar.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="memberLoansGrid">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="renewalCardsGrid">
         <!-- Rendered via JS -->
       </div>
     </div>
   </section>
 
-  <section id="id-card" class="py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Digital Credential</span>
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-1">Print Member ID Card Preview</h2>
-        <p class="text-slate-600 mt-2">Generate official Book Nook library identification cards for school access and book checkouts.</p>
+  <!-- 6. Contact List for Outstanding Returns -->
+  <section id="outstanding" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Outstanding Returns Contact List</h2>
+        <p class="text-gray-600">Members with overdue books subject to a late fee of ₹5/day. Reach out promptly to ensure collection circulation.</p>
       </div>
-      <div class="bg-slate-50 p-8 rounded-2xl shadow-lg border border-slate-100 flex flex-col items-center">
-        <div class="w-full max-w-md mb-6">
-          <label class="block text-sm font-medium text-slate-700 mb-2">Select Member for ID Card</label>
-          <select id="idCardSelect" onchange="renderIdCard()" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-600 bg-white">
-            <option value="">-- Choose member --</option>
-          </select>
-        </div>
-        
-        <div id="idCardPreviewContainer" class="w-full max-w-sm bg-gradient-to-br from-brand-900 to-slate-900 text-white rounded-2xl shadow-2xl p-6 border-2 border-brand-600 relative overflow-hidden">
-          <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-600/20 rounded-full blur-2xl pointer-events-none"></div>
-          <div class="flex items-center justify-between border-b border-white/20 pb-4 mb-4">
-            <div class="flex items-center gap-2">
-              <i data-lucide="book-open" class="w-6 h-6 text-brand-400"></i>
-              <span class="font-display font-bold text-lg tracking-wide">BOOK NOOK</span>
-            </div>
-            <span class="text-xs bg-brand-600 px-2.5 py-1 rounded-full font-medium">STUDENT ID</span>
-          </div>
-          <div class="flex items-center gap-4 mb-6">
-            <img loading="lazy" decoding="async" id="cardAvatar" src="https://i.pravatar.cc/120?img=1" alt="Avatar" class="w-20 h-20 rounded-xl object-cover border-2 border-white/20 shadow">
-            <div>
-              <h3 id="cardName" class="font-display font-bold text-xl text-white">Select a member</h3>
-              <p id="cardGrade" class="text-brand-300 text-sm">Grade --</p>
-              <p id="cardId" class="text-xs text-slate-400 mt-1">ID: BN-000</p>
-            </div>
-          </div>
-          <div class="bg-white/10 rounded-xl p-3 text-xs text-slate-300 space-y-1 mb-4">
-            <div class="flex justify-between"><span>Library:</span> <span class="font-medium text-white">FC Road, Pune</span></div>
-            <div class="flex justify-between"><span>Loan Period:</span> <span class="font-medium text-white">14 Days</span></div>
-          </div>
-          <div class="flex justify-between items-center text-[10px] text-slate-400 border-t border-white/10 pt-3">
-            <span>Librarian: Meena Joshi</span>
-            <span>Valid 2024-25</span>
-          </div>
-        </div>
 
-        <button onclick="window.print()" class="mt-8 bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-3 rounded-xl transition shadow-md flex items-center gap-2">
-          <i data-lucide="printer" class="w-5 h-5"></i> Print ID Card
-        </button>
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-stone-800 text-white text-sm uppercase tracking-wider">
+                <th class="py-4 px-6 font-semibold">Student Name</th>
+                <th class="py-4 px-6 font-semibold">Parent / Contact</th>
+                <th class="py-4 px-6 font-semibold">Overdue Book</th>
+                <th class="py-4 px-6 font-semibold">Days Overdue</th>
+                <th class="py-4 px-6 font-semibold">Fine (₹5/day)</th>
+                <th class="py-4 px-6 font-semibold">Action</th>
+              </tr>
+            </thead>
+            <tbody id="outstandingTable" class="divide-y divide-gray-200 text-sm text-gray-700">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA Band -->
   <section class="py-16 bg-brand-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Empowering Young Minds Through Literature</h2>
-      <p class="text-slate-300 max-w-2xl mx-auto mb-8">Visit us at 12 FC Road, Shivajinagar, Pune or explore our complete inventory of 15,000+ cataloged books.</p>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Empowering Young Minds Through Literacy</h2>
+      <p class="max-w-2xl mx-auto text-brand-100 mb-8">Visit us at 12 FC Road, Shivajinagar, Pune or explore our collection online.</p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="books.html" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-medium transition shadow">Book Inventory</a>
-        <a href="dashboard.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3 rounded-xl font-medium transition">Library Dashboard</a>
+        <a href="books.html" class="px-8 py-3 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-lg transition-all">Browse Books</a>
+        <a href="dashboard.html" class="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl backdrop-blur-sm transition-all border border-white/20">Staff Dashboard</a>
       </div>
     </div>
   </section>
 </main>
 
 <script>
-  let members = JSON.parse(localStorage.getItem('booknook_members')) || [
-    { id: 'BN-101', name: 'Aarav Sharma', grade: 'Grade 9-B', email: 'aarav.s@school.edu', phone: '+91 98765 43210', date: '2023-06-15' },
-    { id: 'BN-102', name: 'Diya Patel', grade: 'Grade 8-A', email: 'diya.p@school.edu', phone: '+91 98765 43211', date: '2023-07-20' },
-    { id: 'BN-103', name: 'Kabir Mehta', grade: 'Grade 10-C', email: 'kabir.m@school.edu', phone: '+91 98765 43212', date: '2023-08-10' },
-    { id: 'BN-104', name: 'Ananya Rao', grade: 'Grade 7-B', email: 'ananya.r@school.edu', phone: '+91 98765 43213', date: '2023-09-05' },
-    { id: 'BN-105', name: 'Rohan Joshi', grade: 'Grade 9-A', email: 'rohan.j@school.edu', phone: '+91 98765 43214', date: '2023-10-12' }
+  // Initial Member Data
+  const initialMembers = [
+    { name: "Aarav Joshi", id: "BN-2024-001", grade: "Grade 10 - A", email: "aarav.j@school.com", parent: "Sunil Joshi (+91 98220 11223)", status: "Active", expiry: "March 2025" },
+    { name: "Diya Kulkarni", id: "BN-2024-014", grade: "Grade 8 - B", email: "diya.k@school.com", parent: "Anjali Kulkarni (+91 94223 44556)", status: "Active", expiry: "March 2025" },
+    { name: "Rohan Deshmukh", id: "BN-2024-042", grade: "Grade 9 - C", email: "rohan.d@school.com", parent: "Vikas Deshmukh (+91 98555 78901)", status: "Expired", expiry: "January 2024" },
+    { name: "Ananya Sharma", id: "BN-2024-089", grade: "Grade 7 - A", email: "ananya.s@school.com", parent: "Meera Sharma (+91 97654 32109)", status: "Active", expiry: "April 2025" },
+    { name: "Kabir Patil", id: "BN-2024-105", grade: "Grade 11 - Science", email: "kabir.p@school.com", parent: "Sanjay Patil (+91 99234 56789)", status: "Active", expiry: "May 2025" },
+    { name: "Tanvi Rao", id: "BN-2024-156", grade: "Grade 6 - B", email: "tanvi.r@school.com", parent: "Geeta Rao (+91 98811 22334)", status: "Pending Renewal", expiry: "Expired" }
   ];
 
-  let activeLoans = JSON.parse(localStorage.getItem('booknook_active_loans')) || [
-    { memberId: 'BN-101', bookTitle: 'The Discovery of India', dueDate: '2024-05-15', status: 'Active' },
-    { memberId: 'BN-102', bookTitle: 'A Brief History of Time', dueDate: '2024-05-10', status: 'Overdue' },
-    { memberId: 'BN-103', bookTitle: 'Wings of Fire', dueDate: '2024-05-20', status: 'Active' },
-    { memberId: 'BN-104', bookTitle: 'Cosmos', dueDate: '2024-05-18', status: 'Active' }
+  // Initial Loan History Data
+  const loanHistory = [
+    { student: "Aarav Joshi", book: "To Kill a Mockingbird", issueDate: "10 Oct 2024", dueDate: "24 Oct 2024", status: "Returned" },
+    { student: "Diya Kulkarni", book: "The God of Small Things", issueDate: "18 Oct 2024", dueDate: "01 Nov 2024", status: "Active Loan" },
+    { student: "Rohan Deshmukh", book: "A Brief History of Time", issueDate: "01 Sep 2024", dueDate: "15 Sep 2024", status: "Overdue" },
+    { student: "Ananya Sharma", book: "Harry Potter and the Sorcerer's Stone", issueDate: "20 Oct 2024", dueDate: "03 Nov 2024", status: "Active Loan" },
+    { student: "Kabir Patil", book: "Cosmos by Carl Sagan", issueDate: "05 Oct 2024", dueDate: "19 Oct 2024", status: "Returned" }
   ];
 
-  function saveMembers() {
-    localStorage.setItem('booknook_members', JSON.stringify(members));
+  // Outstanding Returns Data
+  const outstandingReturns = [
+    { student: "Rohan Deshmukh", parent: "Vikas Deshmukh (+91 98555 78901)", book: "A Brief History of Time", days: 38, fine: 190 },
+    { student: "Tanvi Rao", parent: "Geeta Rao (+91 98811 22334)", book: "Charlotte's Web", days: 12, fine: 60 },
+    { student: "Sameer Kulkarni", parent: "Prakash Kulkarni (+91 97333 22111)", book: "Wings of Fire", days: 5, fine: 25 }
+  ];
+
+  // LocalStorage initialization
+  if (!localStorage.getItem('bookNookMembers')) {
+    localStorage.setItem('bookNookMembers', JSON.stringify(initialMembers));
   }
 
-  function renderMembers(filter = '') {
-    const tbody = document.getElementById('membersTableBody');
-    const filtered = members.filter(m => m.name.toLowerCase().includes(filter.toLowerCase()) || m.id.toLowerCase().includes(filter.toLowerCase()) || m.grade.toLowerCase().includes(filter.toLowerCase()));
+  function getMembers() {
+    return JSON.parse(localStorage.getItem('bookNookMembers'));
+  }
+
+  // Render Directory
+  function renderDirectory(filter = '') {
+    const members = getMembers();
+    const container = document.getElementById('memberDirectoryGrid');
+    container.innerHTML = '';
     
-    document.getElementById('totalMembersCount').textContent = members.length;
+    const filtered = members.filter(m => 
+      m.name.toLowerCase().includes(filter.toLowerCase()) || 
+      m.id.toLowerCase().includes(filter.toLowerCase()) || 
+      m.grade.toLowerCase().includes(filter.toLowerCase())
+    );
+
+    document.getElementById('totalMembersCount').innerText = members.length + "+";
 
     if (filtered.length === 0) {
-      tbody.innerHTML = `<tr><td colspan="6" class="py-8 text-center text-slate-500">No members found matching your search.</td></tr>`;
+      container.innerHTML = '<div class="col-span-full text-center py-8 text-gray-500">No members found matching your search.</div>';
       return;
     }
 
-    let html = '';
     filtered.forEach((m, index) => {
-      html += `
-        <tr class="hover:bg-slate-50 transition">
-          <td class="py-4 px-6 font-medium text-brand-600">${m.id}</td>
-          <td class="py-4 px-6 font-semibold text-slate-900 flex items-center gap-3">
-            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=${(index % 30) + 1}" alt="" class="w-8 h-8 rounded-full object-cover">
-            ${m.name}
-          </td>
-          <td class="py-4 px-6">${m.grade}</td>
-          <td class="py-4 px-6 text-slate-600">${m.email}</td>
-          <td class="py-4 px-6 text-slate-500 text-xs">${m.date}</td>
-          <td class="py-4 px-6 text-right">
-            <button onclick="selectMemberForEdit('${m.id}')" class="text-brand-600 hover:text-brand-800 font-medium text-xs bg-brand-50 px-3 py-1.5 rounded-lg border border-brand-100 transition">Edit</button>
+      const badgeColor = m.status === 'Active' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800';
+      container.innerHTML += `
+        <div class="bg-stone-50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-3 py-1 rounded-full ${badgeColor}">${m.status}</span>
+              <span class="text-xs text-gray-500 font-mono">${m.id}</span>
+            </div>
+            <h3 class="text-lg font-display font-bold text-gray-900 mb-1">${m.name}</h3>
+            <p class="text-sm font-medium text-brand-600 mb-3">${m.grade}</p>
+            <p class="text-xs text-gray-600 mb-1"><i data-lucide="mail" class="w-3.5 h-3.5 inline mr-1"></i> ${m.email}</p>
+            <p class="text-xs text-gray-600"><i data-lucide="users" class="w-3.5 h-3.5 inline mr-1"></i> ${m.parent}</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center text-xs text-gray-500">
+            <span>Expiry: ${m.expiry}</span>
+            <button onclick="quickEditRedirect('${m.id}')" class="text-brand-600 hover:text-brand-700 font-medium">Edit Profile &rarr;</button>
+          </div>
+        </div>
+      `;
+    });
+    lucide.createIcons();
+  }
+
+  // Render Edit Select Options
+  function populateEditDropdown() {
+    const members = getMembers();
+    const select = document.getElementById('editMemberSelect');
+    select.innerHTML = '<option value="">-- Choose a member --</option>';
+    members.forEach((m, idx) => {
+      select.innerHTML += `<option value="${idx}">${m.name} (${m.id})</option>`;
+    });
+  }
+
+  function loadMemberProfile() {
+    const idx = document.getElementById('editMemberSelect').value;
+    const form = document.getElementById('editProfileForm');
+    if (idx === "") {
+      form.classList.add('hidden');
+      return;
+    }
+    const members = getMembers();
+    const m = members[idx];
+    document.getElementById('editIndex').value = idx;
+    document.getElementById('editName').value = m.name;
+    document.getElementById('editGrade').value = m.grade;
+    document.getElementById('editEmail').value = m.email;
+    document.getElementById('editParent').value = m.parent;
+    form.classList.remove('hidden');
+  }
+
+  function quickEditRedirect(memberId) {
+    const members = getMembers();
+    const idx = members.findIndex(m => m.id === memberId);
+    if (idx !== -1) {
+      document.getElementById('editMemberSelect').value = idx;
+      loadMemberProfile();
+      document.getElementById('edit-profile').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Save Member Profile
+  function saveMemberProfile(e) {
+    e.preventDefault();
+    const idx = document.getElementById('editIndex').value;
+    const members = getMembers();
+    members[idx].name = document.getElementById('editName').value;
+    members[idx].grade = document.getElementById('editGrade').value;
+    members[idx].email = document.getElementById('editEmail').value;
+    members[idx].parent = document.getElementById('editParent').value;
+    
+    localStorage.setItem('bookNookMembers', JSON.stringify(members));
+    alert('Member profile updated successfully!');
+    renderDirectory();
+    populateEditDropdown();
+    renderRenewalCards();
+  }
+
+  // Handle New Registration
+  function handleRegistration(e) {
+    e.preventDefault();
+    const members = getMembers();
+    const newMember = {
+      name: document.getElementById('regName').value,
+      id: document.getElementById('regId').value,
+      grade: document.getElementById('regGrade').value,
+      email: document.getElementById('regEmail').value,
+      parent: document.getElementById('regParent').value,
+      status: "Active",
+      expiry: "March 2025"
+    };
+    members.unshift(newMember);
+    localStorage.setItem('bookNookMembers', JSON.stringify(members));
+    alert('Student successfully registered to Book Nook!');
+    document.getElementById('registrationForm').reset();
+    renderDirectory();
+    populateEditDropdown();
+    renderRenewalCards();
+  }
+
+  // Render Loan History Table
+  function renderLoanHistory() {
+    const tbody = document.getElementById('loanHistoryTable');
+    tbody.innerHTML = '';
+    loanHistory.forEach(l => {
+      let badge = 'bg-gray-100 text-gray-800';
+      if (l.status === 'Returned') badge = 'bg-emerald-100 text-emerald-800';
+      if (l.status === 'Active Loan') badge = 'bg-blue-100 text-blue-800';
+      if (l.status === 'Overdue') badge = 'bg-rose-100 text-rose-800';
+
+      tbody.innerHTML += `
+        <tr class="hover:bg-stone-50/50">
+          <td class="py-4 px-6 font-medium text-gray-900">${l.student}</td>
+          <td class="py-4 px-6">${l.book}</td>
+          <td class="py-4 px-6 text-gray-500">${l.issueDate}</td>
+          <td class="py-4 px-6 text-gray-500">${l.dueDate}</td>
+          <td class="py-4 px-6"><span class="px-2.5 py-1 rounded-full text-xs font-semibold ${badge}">${l.status}</span></td>
+        </tr>
+      `;
+    });
+  }
+
+  // Render Renewal Cards
+  function renderRenewalCards() {
+    const members = getMembers();
+    const grid = document.getElementById('renewalCardsGrid');
+    grid.innerHTML = '';
+    members.slice(0, 3).forEach((m, idx) => {
+      grid.innerHTML += `
+        <div class="bg-stone-50 rounded-2xl p-6 shadow-sm border border-gray-200 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-mono text-gray-500">${m.id}</span>
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-100 text-brand-800">${m.status}</span>
+            </div>
+            <h3 class="text-lg font-display font-bold text-gray-900 mb-1">${m.name}</h3>
+            <p class="text-sm text-gray-600 mb-4">${m.grade}</p>
+            <p class="text-xs text-gray-500 mb-1">Current Expiry: <span class="font-medium text-gray-700">${m.expiry}</span></p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-200">
+            <button onclick="renewMembership('${m.id}')" class="w-full py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-medium text-sm rounded-xl transition-all shadow-sm flex items-center justify-center">
+              <i data-lucide="refresh-cw" class="w-4 h-4 mr-2"></i> Renew for 1 Year
+            </button>
+          </div>
+        </div>
+      `;
+    });
+    lucide.createIcons();
+  }
+
+  function renewMembership(id) {
+    const members = getMembers();
+    const member = members.find(m => m.id === id);
+    if (member) {
+      member.status = "Active";
+      member.expiry = "March 2026";
+      localStorage.setItem('bookNookMembers', JSON.stringify(members));
+      alert(`Membership renewed successfully for ${member.name}!`);
+      renderDirectory();
+      renderRenewalCards();
+    }
+  }
+
+  // Render Outstanding Table
+  function renderOutstanding() {
+    const tbody = document.getElementById('outstandingTable');
+    tbody.innerHTML = '';
+    outstandingReturns.forEach(o => {
+      tbody.innerHTML += `
+        <tr class="hover:bg-stone-50/50">
+          <td class="py-4 px-6 font-medium text-gray-900">${o.student}</td>
+          <td class="py-4 px-6 text-gray-600">${o.parent}</td>
+          <td class="py-4 px-6 text-gray-800">${o.book}</td>
+          <td class="py-4 px-6 text-rose-600 font-medium">${o.days} days</td>
+          <td class="py-4 px-6 font-bold text-brand-900">₹${o.fine}</td>
+          <td class="py-4 px-6">
+            <button onclick="alert('Reminder notification sent to ${o.parent}')" class="px-3 py-1.5 bg-brand-50 hover:bg-brand-100 text-brand-700 font-medium text-xs rounded-lg transition-all border border-brand-200">
+              Send Reminder
+            </button>
           </td>
         </tr>
       `;
     });
-    tbody.innerHTML = html;
-    
-    // Update select dropdowns
-    const editSelect = document.getElementById('editMemberSelect');
-    let editOpts = '<option value="">-- Choose student member --</option>';
-    members.forEach(m => {
-      editOpts += `<option value="${m.id}">${m.name} (${m.id} - ${m.grade})</option>`;
-    });
-    editSelect.innerHTML = editOpts;
-
-    const idCardSelect = document.getElementById('idCardSelect');
-    let cardOpts = '<option value="">-- Choose member --</option>';
-    members.forEach(m => {
-      cardOpts += `<option value="${m.id}">${m.name} (${m.id})</option>`;
-    });
-    idCardSelect.innerHTML = cardOpts;
-
-    renderLoansGrid();
-    lucide.createIcons();
   }
 
-  function renderLoansGrid() {
-    const grid = document.getElementById('memberLoansGrid');
-    let html = '';
-    members.forEach((m, index) => {
-      const loan = activeLoans.find(l => l.memberId === m.id);
-      html += `
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col justify-between shadow-sm">
-          <div>
-            <div class="flex items-center gap-3 mb-4">
-              <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=${(index % 30) + 1}" alt="" class="w-12 h-12 rounded-xl object-cover">
-              <div>
-                <h3 class="font-display font-bold text-slate-900">${m.name}</h3>
-                <p class="text-xs text-slate-500">${m.id} • ${m.grade}</p>
-              </div>
-            </div>
-            <div class="bg-white p-4 rounded-xl border border-slate-200 mb-4">
-              <span class="text-xs text-slate-400 block mb-1">Current Book Loan</span>
-              <p class="font-medium text-slate-800 text-sm">${loan ? loan.bookTitle : 'No active loans'}</p>
-              ${loan ? `<div class="flex justify-between items-center mt-3 pt-3 border-t border-slate-100 text-xs">
-                <span class="text-slate-500">Due: ${loan.dueDate}</span>
-                <span class="px-2 py-0.5 rounded-full font-medium ${loan.status === 'Overdue' ? 'bg-red-100 text-red-600' : 'bg-emerald-100 text-emerald-700'}">${loan.status}</span>
-              </div>` : ''}
-            </div>
-          </div>
-          <span class="text-[11px] text-slate-400 text-center">Standard 14-day return policy</span>
-        </div>
-      `;
-    });
-    grid.innerHTML = html;
-  }
-
-  function handleRegisterMember(e) {
-    e.preventDefault();
-    const name = document.getElementById('regName').value;
-    const grade = document.getElementById('regGrade').value;
-    const email = document.getElementById('regEmail').value;
-    const phone = document.getElementById('regPhone').value;
-    
-    const newId = 'BN-' + (100 + members.length + 1);
-    const newMember = {
-      id: newId,
-      name,
-      grade,
-      email,
-      phone,
-      date: new Date().toISOString().split('T')[0]
-    };
-
-    members.push(newMember);
-    saveMembers();
-    renderMembers();
-    document.getElementById('registerMemberForm').reset();
-    alert('Student successfully registered with ID: ' + newId);
-  }
-
-  function selectMemberForEdit(id) {
-    const member = members.find(m => m.id === id);
-    if (!member) return;
-    
-    document.getElementById('editMemberSelect').value = id;
-    document.getElementById('editId').value = member.id;
-    document.getElementById('editName').value = member.name;
-    document.getElementById('editGrade').value = member.grade;
-    document.getElementById('editEmail').value = member.email;
-    document.getElementById('editPhone').value = member.phone;
-
-    document.getElementById('edit-account').scrollIntoView({ behavior: 'smooth' });
-  }
-
-  function populateEditForm() {
-    const id = document.getElementById('editMemberSelect').value;
-    if (!id) {
-      document.getElementById('editMemberForm').reset();
-      return;
-    }
-    selectMemberForEdit(id);
-  }
-
-  function handleUpdateMember(e) {
-    e.preventDefault();
-    const id = document.getElementById('editId').value;
-    const index = members.findIndex(m => m.id === id);
-    if (index === -1) return;
-
-    members[index].name = document.getElementById('editName').value;
-    members[index].grade = document.getElementById('editGrade').value;
-    members[index].email = document.getElementById('editEmail').value;
-    members[index].phone = document.getElementById('editPhone').value;
-
-    saveMembers();
-    renderMembers();
-    alert('Member account updated successfully.');
-  }
-
-  function handleDeleteMember() {
-    const id = document.getElementById('editId').value;
-    if (!id) {
-      alert('Please select a member to remove.');
-      return;
-    }
-    if (confirm('Are you sure you want to remove this member?')) {
-      members = members.filter(m => m.id !== id);
-      saveMembers();
-      renderMembers();
-      document.getElementById('editMemberForm').reset();
-      alert('Member account removed.');
-    }
-  }
-
-  function renderIdCard() {
-    const id = document.getElementById('idCardSelect').value;
-    const member = members.find(m => m.id === id);
-    const index = members.findIndex(m => m.id === id);
-
-    if (!member) {
-      document.getElementById('cardName').textContent = 'Select a member';
-      document.getElementById('cardGrade').textContent = 'Grade --';
-      document.getElementById('cardId').textContent = 'ID: BN-000';
-      document.getElementById('cardAvatar').src = 'https://i.pravatar.cc/120?img=1';
-      return;
-    }
-
-    document.getElementById('cardName').textContent = member.name;
-    document.getElementById('cardGrade').textContent = member.grade;
-    document.getElementById('cardId').textContent = 'ID: ' + member.id;
-    document.getElementById('cardAvatar').src = `https://i.pravatar.cc/120?img=${(index % 30) + 1}`;
-  }
-
+  // Search Event Listener
   document.getElementById('memberSearch').addEventListener('input', (e) => {
-    renderMembers(e.target.value);
+    renderDirectory(e.target.value);
   });
 
-  window.addEventListener('DOMContentLoaded', () => {
-    renderMembers();
-    if (members.length > 0) {
-      document.getElementById('idCardSelect').value = members[0].id;
-      renderIdCard();
-    }
+  // Initial load
+  document.addEventListener('DOMContentLoaded', () => {
+    renderDirectory();
+    populateEditDropdown();
+    renderLoanHistory();
+    renderRenewalCards();
+    renderOutstanding();
+    lucide.createIcons();
   });
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized literary discovery.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="books.html" class="hover:text-white">Book Inventory</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Library Dashboard</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 8:30 AM - 4:00 PM</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">Book Nook</p><p class="mt-3 text-sm text-slate-400">Empowering young minds through organized reading.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="books.html" class="hover:text-white">Books</a><a href="members.html" class="hover:text-white">Members</a><a href="dashboard.html" class="hover:text-white">Dashboard</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12 FC Road, Shivajinagar, Pune 411005</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 8:30 AM - 4:00 PM</p></div>
     <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2553 1234</p><p class="mt-2 text-sm text-slate-400">hello@booknook.in</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Book Nook. All rights reserved.</div>
