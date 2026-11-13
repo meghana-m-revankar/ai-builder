@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Green Valley Public School, Mysuru</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Top Bar -->
+    <div class="bg-emerald-800 text-emerald-100 text-xs py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-phone-alt text-yellow-400 mr-1"></i> +91 821 456 7890</span>
+                <span><i class="fas fa-envelope text-yellow-400 mr-1"></i> info@greenvalleyschool.in</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-map-marker-alt text-yellow-400 mr-1"></i> Vijayanagar 2nd Stage, Mysuru</span>
+                <span class="bg-yellow-400 text-slate-900 font-semibold px-2 py-0.5 rounded">CBSE Affiliated</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-emerald-600 flex items-center justify-center text-yellow-300 font-bold text-2xl shadow">
+                            GV
+                        </div>
+                        <div>
+                            <span class="text-xl font-bold text-emerald-800 tracking-tight block">Green Valley</span>
+                            <span class="text-xs text-slate-500 font-medium tracking-wider uppercase">Public School, Mysuru</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-6">
+                    <a href="index.html" class="text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-sm transition">Home</a>
+                    <a href="about.html" class="text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-sm transition">About Us</a>
+                    <a href="academics.html" class="text-emerald-700 font-semibold px-3 py-2 rounded-md text-sm">Academics</a>
+                    <a href="admissions.html" class="text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-sm transition">Admissions</a>
+                    <a href="facilities.html" class="text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-sm transition">Facilities</a>
+                    <a href="contact.html" class="text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-sm transition">Contact</a>
+                    <a href="admissions.html#enquiry" class="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-semibold px-4 py-2.5 rounded-lg text-sm shadow-sm transition">Apply Now</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-base">Home</a>
+            <a href="about.html" class="block text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-base">About Us</a>
+            <a href="academics.html" class="block text-emerald-700 font-semibold px-3 py-2 rounded-md text-base">Academics</a>
+            <a href="admissions.html" class="block text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-base">Admissions</a>
+            <a href="facilities.html" class="block text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-base">Facilities</a>
+            <a href="contact.html" class="block text-slate-600 hover:text-emerald-700 font-medium px-3 py-2 rounded-md text-base">Contact</a>
+            <div class="pt-2">
+                <a href="admissions.html#enquiry" class="block text-center bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-semibold px-4 py-2.5 rounded-lg text-base shadow-sm">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-emerald-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <span class="bg-yellow-400 text-slate-900 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3 inline-block">CBSE Curriculum</span>
+            <h1 class="text-4xl font-extrabold tracking-tight mb-3">Academic Excellence at Green Valley</h1>
+            <p class="text-emerald-100 text-lg max-w-2xl">Structured learning paths from Nursery to Class 12, featuring specialized Science and Commerce streams.</p>
+        </div>
+    </header>
+
+    <!-- Curriculum Levels -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-700 font-semibold text-sm uppercase tracking-wider block mb-2">Programs Offered</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Stages of Learning</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Nursery to Class 5 -->
+                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
+                    <div class="w-12 h-12 bg-emerald-700 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">01</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Foundational (Nursery - Class 5)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Play-way learning for early childhood transitioning into foundational literacy, numeracy, environmental science, and creative arts.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2">
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> Activity-based learning</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> English, Kannada, Hindi / Sanskrit</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> Basic Computer & Art classes</li>
+                    </ul>
+                </div>
+                <!-- Class 6 to 10 -->
+                <div class="bg-yellow-50 p-8 rounded-2xl border border-yellow-200">
+                    <div class="w-12 h-12 bg-yellow-500 text-slate-900 rounded-xl flex items-center justify-center font-bold text-lg mb-6">02</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Middle & Secondary (Class 6 - 10)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Rigorous CBSE syllabus emphasizing critical thinking, scientific inquiry, mathematical aptitude, and social sciences preparation for board exams.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2">
+                        <li><i class="fas fa-check text-yellow-700 mr-2"></i> Advanced Mathematics & Science Labs</li>
+                        <li><i class="fas fa-check text-yellow-700 mr-2"></i> Regular internal assessments</li>
+                        <li><i class="fas fa-check text-yellow-700 mr-2"></i> Class 10 Board Exam preparation</li>
+                    </ul>
+                </div>
+                <!-- Class 11 to 12 -->
+                <div class="bg-emerald-50 p-8 rounded-2xl border border-emerald-100">
+                    <div class="w-12 h-12 bg-emerald-700 text-white rounded-xl flex items-center justify-center font-bold text-lg mb-6">03</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Senior Secondary (Class 11 - 12)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Specialized streams equipping students for higher education, professional entrance examinations, and leadership careers.
+                    </p>
+                    <ul class="text-xs text-slate-700 space-y-2">
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> <strong>Science:</strong> Physics, Chem, Bio/Math</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> <strong>Commerce:</strong> Accountancy, BS, Economics</li>
+                        <li><i class="fas fa-check text-emerald-600 mr-2"></i> Career counselling & mentoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Timetable -->
+    <section class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-emerald-700 font-semibold text-sm uppercase tracking-wider block mb-2">Daily Schedule</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900">Sample Class Timetable</h2>
+                <p class="text-slate-600 mt-2">Our structured daily schedule balances rigorous academics with sports and extracurricular activities.</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[700px]">
+                    <thead>
+                        <tr class="bg-emerald-900 text-white text-sm">
+                            <th class="p-4">Time</th>
+                            <th class="p-4">Monday</th>
+                            <th class="p-4">Tuesday</th>
+                            <th class="p-4">Wednesday</th>
+                            <th class="p-4">Thursday</th>
+                            <th class="p-4">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-sm text-slate-700">
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">8:00 - 8:15 AM</td>
+                            <td colspan="5" class="p-4 text-center bg-slate-50 font-medium text-slate-500">Assembly & Morning Prayer</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">8:15 - 9:00 AM</td>
+                            <td class="p-4">Mathematics</td>
+                            <td class="p-4">Physics / EVS</td>
+                            <td class="p-4">Mathematics</td>
+                            <td class="p-4">Chemistry / EVS</td>
+                            <td class="p-4">Mathematics</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">9:00 - 9:45 AM</td>
+                            <td class="p-4">English Language</td>
+                            <td class="p-4">Mathematics</td>
+                            <td class="p-4">English Literature</td>
+                            <td class="p-4">Biology / Social</td>
+                            <td class="p-4">English Language</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-4 font-semibold text-emerald-800">9:45 - 10:00 AM</td>
+                            <td colspan="5" class="p-4 text-center font-medium text-slate-500">Short Break</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">10:00 - 10:45 AM</td>
+                            <td class="p-4">Science Lab</td>
+                            <td class="p-4">Social Studies</td>
+                            <td class="p-4">Computer Science</td>
+                            <td class="p-4">Mathematics</td>
+                            <td class="p-4">Science Lab</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">10:45 - 11:30 AM</td>
+                            <td class="p-4">Second Language (Kannada/Hindi)</td>
+                            <td class="p-4">English Language</td>
+                            <td class="p-4">Social Studies</td>
+                            <td class="p-4">Second Language</td>
+                            <td class="p-4">Commerce / GK</td>
+                        </tr>
+                        <tr class="bg-yellow-50">
+                            <td class="p-4 font-semibold text-yellow-800">11:30 - 12:15 PM</td>
+                            <td colspan="5" class="p-4 text-center font-medium text-yellow-900">Lunch Break</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">12:15 - 1:00 PM</td>
+                            <td class="p-4">Social Studies</td>
+                            <td class="p-4">Computer Lab</td>
+                            <td class="p-4">Science</td>
+                            <td class="p-4">English Literature</td>
+                            <td class="p-4">Social Studies</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">1:00 - 1:45 PM</td>
+                            <td class="p-4">Arts & Crafts</td>
+                            <td class="p-4">Second Language</td>
+                            <td class="p-4">Library</td>
+                            <td class="p-4">Music / Dance</td>
+                            <td class="p-4">Value Education</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">1:45 - 2:30 PM</td>
+                            <td class="p-4">Sports & Athletics</td>
+                            <td class="p-4">Physical Education</td>
+                            <td class="p-4">Sports & Games</td>
+                            <td class="p-4">Yoga & Meditation</td>
+                            <td class="p-4">Club Activities</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-emerald-800">2:30 - 3:30 PM</td>
+                            <td colspan="5" class="p-4 text-center bg-slate-50 font-medium text-slate-500">Revision, Doubt Clearing & Dispersion</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-950 text-slate-300 pt-16 pb-12 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-slate-900 font-bold text-xl">
+                            GV
+                        </div>
+                        <span class="text-xl font-bold text-white">Green Valley</span>
+                    </div>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                        Green Valley Public School, Mysuru is committed to cultivating intellectual curiosity, integrity, and lifelong learning in every student.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="academics.html" class="hover:text-yellow-400 transition">Academics</a></li>
+                        <li><a href="admissions.html" class="hover:text-yellow-400 transition">Admissions & Fees</a></li>
+                        <li><a href="facilities.html" class="hover:text-yellow-400 transition">Campus Facilities</a></li>
+                        <li><a href="contact.html" class="hover:text-yellow-400 transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">School Hours</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><strong class="text-white">Monday - Friday:</strong><br>8:00 AM - 3:30 PM</li>
+                        <li><strong class="text-white">Saturday:</strong><br>8:00 AM - 12:30 PM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li>45 Ring Road, Vijayanagar 2nd Stage, Mysuru, Karnataka 570017</li>
+                        <li>+91 821 456 7890</li>
+                        <li>info@greenvalleyschool.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-emerald-900 pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2025 Green Valley Public School, Mysuru. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
