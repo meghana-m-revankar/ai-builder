@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Asha</title>
+<meta name="description" content="Empowering young minds with education and meals">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fefce8','100':'#fef9c3','200':'#fef08a','300':'#fde047','400':'#facc15','500':'#eab308','600':'#ca8a04','700':'#a16207','800':'#854d0e','900':'#713f12'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Asha</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="programs.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Programs</a><a href="volunteer.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Volunteer</a><a href="donate.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Donate</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog &amp; Updates</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="programs.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Programs</a><a href="volunteer.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Volunteer</a><a href="donate.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Donate</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog &amp; Updates</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center text-white">
+    <img loading="lazy" decoding="async" src="https://picsum.photos/seed/happy children learning/1600/900" alt="Children learning in a bright classroom" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/40 to-transparent"></div>
+    <div class="relative max-w-4xl mx-auto px-4 text-center">
+      <h1 class="font-display text-5xl md:text-7xl font-bold mb-6">Empowering Young Minds, One Meal at a Time.</h1>
+      <p class="text-xl md:text-2xl mb-10 text-brand-50">Since 2016, Asha Foundation has been bridging the gap in education and nutrition for children across Bengaluru.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="donate.html" class="bg-yellow-400 text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition">Donate Now</a>
+        <a href="volunteer.html" class="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full font-bold hover:bg-white/20 transition">Join as Volunteer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats Strip -->
+  <section class="bg-brand-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div><div class="text-4xl font-display font-bold text-brand-600">5,000+</div><p class="text-brand-900">Children Educated</p></div>
+      <div><div class="text-4xl font-display font-bold text-brand-600">1.2M+</div><p class="text-brand-900">Nutritious Meals Served</p></div>
+      <div><div class="text-4xl font-display font-bold text-brand-600">4.9★</div><p class="text-brand-900">Community Rating</p></div>
+    </div>
+  </section>
+
+  <!-- 3. About Preview -->
+  <section id="about" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-16 items-center">
+      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/smiling children classroom/800/600" alt="Founder Ananya Sharma with students" class="w-full lg:w-1/2 h-96 object-cover rounded-3xl shadow-2xl">
+      <div>
+        <h2 class="font-display text-4xl font-bold text-brand-900 mb-6">Building a Brighter Future Together</h2>
+        <blockquote class="text-xl italic text-brand-700 mb-6">"Education is not just about books; it's about giving every child the dignity of a full stomach and a curious mind." — Ananya Sharma, Founder.</blockquote>
+        <p class="text-gray-600 mb-8">Located in the heart of Bengaluru, Asha Foundation works tirelessly to ensure that socio-economic barriers never stand in the way of a child's potential. We provide holistic support ranging from academic tutoring to daily nutrition.</p>
+        <a href="about.html" class="text-brand-600 font-bold hover:underline">Learn more about our journey →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Programs -->
+  <section id="programs" class="bg-brand-50 py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-display text-4xl font-bold text-brand-900 mb-12 text-center">Our Core Initiatives</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="book-open" class="w-10 h-10 text-brand-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Primary Education</h3>
+          <p class="text-gray-600">Foundational learning support for underprivileged kids. Completely free of cost to ensure 100% accessibility.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="coffee" class="w-10 h-10 text-brand-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Midday Meal Scheme</h3>
+          <p class="text-gray-600">Nutritionally balanced meals served daily to keep our students healthy and focused during their studies.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+          <i data-lucide="laptop" class="w-10 h-10 text-brand-600 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Digital Literacy</h3>
+          <p class="text-gray-600">Essential computer skills training to prepare the next generation for the modern workforce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Photo Gallery -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="font-display text-4xl font-bold text-brand-900 mb-12 text-center">Our Impact in Action</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img loading="lazy" decoding="async" src="https://picsum.photos/seed/children smiling 1/400/400" class="w-full h-64 object-cover rounded-2xl" alt="Children learning">
+        <img loading="lazy" decoding="async" src="https://picsum.photos/seed/children smiling 2/400/400" class="w-full h-64 object-cover rounded-2xl" alt="Students eating">
+        <img loading="lazy" decoding="async" src="https://picsum.photos/seed/children smiling 3/400/400" class="w-full h-64 object-cover rounded-2xl" alt="Group activity">
+        <img loading="lazy" decoding="async" src="https://picsum.photos/seed/children smiling 4/400/400" class="w-full h-64 object-cover rounded-2xl" alt="Teacher helping">
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. CTA Band -->
+  <section class="bg-brand-600 py-16">
+    <div class="max-w-4xl mx-auto px-4 text-center text-white">
+      <h2 class="font-display text-4xl font-bold mb-6">Ready to make a difference?</h2>
+      <p class="mb-8 text-lg">Your support helps us continue providing free education and meals to children in Bengaluru.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="donate.html" class="bg-yellow-400 text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300">Donate Now</a>
+        <a href="volunteer.html" class="border-2 border-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-600">Join Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Initialize Lucide icons
+  lucide.createIcons();
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Asha</p><p class="mt-3 text-sm text-slate-400">Empowering young minds with education and meals</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="programs.html" class="hover:text-white">Our Programs</a><a href="volunteer.html" class="hover:text-white">Volunteer</a><a href="donate.html" class="hover:text-white">Donate</a><a href="blog.html" class="hover:text-white">Blog &amp; Updates</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p><p class="mt-2 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p><p class="mt-2 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Asha. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

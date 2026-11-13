@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Programs | Asha</title>
+<meta name="description" content="Empowering young minds with education and meals">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fefce8','100':'#fef9c3','200':'#fef08a','300':'#fde047','400':'#facc15','500':'#eab308','600':'#ca8a04','700':'#a16207','800':'#854d0e','900':'#713f12'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Asha</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="programs.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Programs</a><a href="volunteer.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Volunteer</a><a href="donate.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Donate</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog &amp; Updates</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="programs.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Programs</a><a href="volunteer.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Volunteer</a><a href="donate.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Donate</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog &amp; Updates</a></div>
+</header>
+<main>
+<main>
+  <!-- Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center text-center">
+    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1554721299-e0b8aa7666ce?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8aGFwcHklMjBjaGlsZHJlbiUyMGxlYXJuaW5nfGVufDF8fHx8MTc5NDU3MTc3OXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Children learning with joy" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-brand-900/70"></div>
+    <div class="relative z-10 max-w-4xl px-4 text-white">
+      <h1 class="font-display text-5xl md:text-7xl mb-6">Empowering Tomorrow, Today</h1>
+      <p class="text-xl md:text-2xl mb-8 text-brand-50">Our community programs are 100% free, designed to nurture potential through holistic education, nutrition, and wellness support.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#programs" class="bg-yellow-400 text-brand-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-300 transition">Explore Programs</a>
+        <a href="volunteer.html" class="bg-white/10 backdrop-blur-md px-8 py-4 rounded-full font-bold hover:bg-white/20 transition">Join as Volunteer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Tabs -->
+  <section class="bg-brand-50 py-12">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <div class="inline-flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm border border-brand-100">
+        <button onclick="filterPrograms('all')" class="px-6 py-2 rounded-full bg-brand-600 text-white font-semibold">All Programs</button>
+        <button onclick="filterPrograms('education')" class="px-6 py-2 rounded-full hover:bg-brand-100 transition">Education</button>
+        <button onclick="filterPrograms('nutrition')" class="px-6 py-2 rounded-full hover:bg-brand-100 transition">Nutrition</button>
+        <button onclick="filterPrograms('health')" class="px-6 py-2 rounded-full hover:bg-brand-100 transition">Health & Wellness</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Grid -->
+  <section id="programs" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div id="program-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- JS Rendered Content -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Initiative -->
+  <section class="bg-brand-600 py-16 text-white">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
+      <div class="flex-1">
+        <span class="text-yellow-300 font-bold tracking-widest uppercase">Featured Initiative</span>
+        <h2 class="font-display text-4xl md:text-5xl my-4">Digital Literacy for Rural Youth</h2>
+        <p class="text-lg opacity-90 mb-6">Bridging the technology gap by providing hands-on coding and computer skills to students in underserved areas. We believe every child deserves access to the tools of the future.</p>
+        <a href="index.html" class="inline-block bg-white text-brand-600 px-8 py-3 rounded-xl font-bold">Learn More</a>
+      </div>
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585314540237-13cb52fe9998?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8a2lkcyUyMHVzaW5nJTIwbGFwdG9wc3xlbnwxfHx8fDE3OTQ1NzE3Nzl8MA&ixlib=rb-4.1.0&w=800&h=500&fit=crop&auto=format&q=80" alt="Students using laptops" class="rounded-2xl shadow-2xl w-full lg:w-1/2">
+    </div>
+  </section>
+
+  <!-- Impact Strip -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div><div class="text-4xl font-display text-brand-600 mb-2">5,000+</div><p class="text-gray-600">Children Empowered</p></div>
+      <div><div class="text-4xl font-display text-brand-600 mb-2">1.2M+</div><p class="text-gray-600">Meals Served</p></div>
+      <div><div class="text-4xl font-display text-brand-600 mb-2">4.9★</div><p class="text-gray-600">Community Rating</p></div>
+      <div><div class="text-4xl font-display text-brand-600 mb-2">8+</div><p class="text-gray-600">Years of Impact</p></div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="py-16 bg-yellow-400 text-brand-900">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="font-display text-4xl mb-6">Ready to make a difference?</h2>
+      <p class="text-lg mb-8">Whether you want to teach, donate, or spread the word, your involvement helps us reach more children in Bengaluru.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="donate.html" class="bg-brand-900 text-white px-8 py-3 rounded-full font-bold">Donate Now</a>
+        <a href="volunteer.html" class="bg-white px-8 py-3 rounded-full font-bold">Become a Volunteer</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const programs = [
+    { title: "Primary Education", cat: "education", desc: "Foundational schooling for children ages 6-12. Focused on literacy, numeracy, and character building.", price: "₹0" },
+    { title: "Midday Meal Scheme", cat: "nutrition", desc: "Nutritious daily meals ensuring no child attends school on an empty stomach.", price: "₹0" },
+    { title: "Digital Literacy", cat: "education", desc: "Training on basic computer usage, internet safety, and creative software skills.", price: "₹0" },
+    { title: "Health Checkups", cat: "health", desc: "Monthly medical screenings conducted by volunteer doctors and nursing staff.", price: "₹0" },
+    { title: "After-School Tutoring", cat: "education", desc: "Targeted academic support for students struggling with core curriculum subjects.", price: "₹0" },
+    { title: "Vocational Training", cat: "education", desc: "Skill-based workshops in tailoring, electronics, and graphic design for teenagers.", price: "₹0" },
+    { title: "Nutrition Counseling", cat: "nutrition", desc: "Workshops for parents on affordable healthy meal planning for children.", price: "₹0" },
+    { title: "Hygiene Awareness", cat: "health", desc: "Interactive sessions on sanitation, personal hygiene, and disease prevention.", price: "₹0" },
+    { title: "Mental Wellbeing", cat: "health", desc: "Counseling services and group therapy sessions for emotional support.", price: "₹0" },
+    { title: "Summer Camps", cat: "education", desc: "Fun-filled learning retreats featuring arts, crafts, and outdoor exploration.", price: "₹0" },
+    { title: "Clean Water Access", cat: "nutrition", desc: "Ensuring all partner schools have functional water purification systems.", price: "₹0" },
+    { title: "Community Vaccination", cat: "health", desc: "Coordinated drives for essential childhood vaccinations and immunizations.", price: "₹0" }
+  ];
+
+  function renderPrograms(filter = 'all') {
+    const grid = document.getElementById('program-grid');
+    const filtered = filter === 'all' ? programs : programs.filter(p => p.cat === filter);
+    grid.innerHTML = filtered.map(p => `
+      <div class="bg-white p-6 rounded-2xl shadow-lg border border-brand-100 hover:-translate-y-1 transition">
+        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center mb-4">
+          <i data-lucide="book-open" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-2">${p.title}</h3>
+        <p class="text-gray-600 mb-4 h-16">${p.desc}</p>
+        <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+          <span class="text-brand-600 font-bold">${p.price}</span>
+          <a href="index.html" class="text-sm font-semibold text-brand-800 hover:text-brand-600">Register →</a>
+        </div>
+      </div>
+    `).join('');
+    lucide.createIcons();
+  }
+
+  function filterPrograms(cat) { renderPrograms(cat); }
+  renderPrograms('all');
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Asha</p><p class="mt-3 text-sm text-slate-400">Empowering young minds with education and meals</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="programs.html" class="hover:text-white">Our Programs</a><a href="volunteer.html" class="hover:text-white">Volunteer</a><a href="donate.html" class="hover:text-white">Donate</a><a href="blog.html" class="hover:text-white">Blog &amp; Updates</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p><p class="mt-2 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p><p class="mt-2 text-sm text-slate-400">Asha Foundation, 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001, Phone: +91 80 4567 8910, WhatsApp: +91 98450 12345, Email: hello@asha.in, Opening Hours: Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM, Founded: 2016 (8+ years), Programs: Free Primary Education (₹0), Midday Meal Scheme (₹0), Digital Literacy Workshop (₹0), Healthcare Checkup Camp (₹0), After-School Tutoring (₹0), Vocational Skill Training (₹0), Founder: Ananya Sharma, Team: Rajesh Kumar (Director), Priya Nair (Operations Head), Ramesh Patel (Lead Educator), Sunita Rao (Volunteer Coordinator), Numbers: 5,000+ children educated, 1,200,000+ meals served, 4.9★ community rating, 8+ years of impact.</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Asha. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
