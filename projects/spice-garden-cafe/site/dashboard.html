@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Spice Garden Cafe</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-gray-100 flex h-screen">
+    <aside class="w-64 bg-brand-900 text-white p-6">
+        <h1 class="text-2xl font-bold mb-10">Cafe Admin</h1>
+        <nav class="space-y-4">
+            <a href="#" class="flex items-center gap-3 text-accent-500"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a href="#" class="flex items-center gap-3 opacity-70 hover:opacity-100"><i data-lucide="shopping-bag"></i> Orders</a>
+            <a href="#" class="flex items-center gap-3 opacity-70 hover:opacity-100"><i data-lucide="settings"></i> Settings</a>
+        </nav>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-8">
+        <header class="flex justify-between mb-8">
+            <h2 class="text-3xl font-bold">Overview</h2>
+            <input type="search" placeholder="Search orders..." class="px-4 py-2 rounded-lg border">
+        </header>
+        <section class="grid grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-sm text-gray-500">Today's Revenue</p><h3 class="text-2xl font-bold">$1,240</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-sm text-gray-500">Active Orders</p><h3 class="text-2xl font-bold">14</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-sm text-gray-500">Items Sold</p><h3 class="text-2xl font-bold">89</h3></div>
+            <div class="bg-white p-6 rounded-xl shadow-sm"><p class="text-sm text-gray-500">Wait Time</p><h3 class="text-2xl font-bold">4m</h3></div>
+        </section>
+        <section class="bg-white p-6 rounded-xl shadow-sm">
+            <h3 class="font-bold text-xl mb-6">Recent Orders</h3>
+            <table class="w-full text-left">
+                <thead><tr class="text-gray-500 text-sm border-b"><th>ID</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody id="order-table"></tbody>
+            </table>
+        </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.getElementById('order-table');
+            dashboardOrders.forEach(o => {
+                table.innerHTML += `<tr class="border-b last:border-0">
+                    <td class="py-4">${o.id}</td>
+                    <td class="py-4">${o.customer}</td>
+                    <td class="py-4">$${o.total}</td>
+                    <td class="py-4"><span class="px-2 py-1 rounded-full text-xs ${o.status === 'Completed' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'}">${o.status}</span></td>
+                </tr>`;
+            });
+            lucide.createIcons();
+        });
+    </script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

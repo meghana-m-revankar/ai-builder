@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Garden Cafe | Artisan Coffee & Bakery in the Heart of the City</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="bg-brand-50 text-brand-900 font-body">
+    <header class="sticky top-0 bg-white/90 backdrop-blur-sm z-50 border-b border-brand-100">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-display font-bold text-brand-700">Spice Garden</a>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="index.html" class="nav-active">Home</a>
+                <a href="menu.html" class="hover:text-accent-500">Menu</a>
+                <a href="contact.html" class="hover:text-accent-500">Contact</a>
+            </div>
+            <a href="contact.html" class="bg-brand-700 text-white px-5 py-2.5 rounded-full hover:bg-brand-900">Book a Table</a>
+            <button aria-controls="mobile-menu" class="md:hidden"><i data-lucide="menu"></i></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden p-6 bg-white border-t border-brand-100 space-y-4">
+            <a href="index.html" class="block">Home</a>
+            <a href="menu.html" class="block">Menu</a>
+            <a href="contact.html" class="block">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-[80vh] flex items-center justify-center text-center text-white">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1746289573063-2bee3bd96667?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y296eSUyMGludGVyaW9yJTIwYmFyaXN0YXxlbnwxfHx8fDE3OTQ1NjgxNzd8MA&ixlib=rb-4.1.0&w=1920&h=1080&fit=crop&auto=format&q=80" alt="Cafe Interior" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div class="relative z-10 px-6 max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-display font-extrabold mb-6">Awaken Your Senses</h1>
+                <p class="text-lg md:text-xl mb-10 opacity-90">Artisan coffee, freshly baked treats, and a cozy corner waiting just for you.</p>
+                <div class="flex gap-4 justify-center">
+                    <a href="menu.html" class="bg-accent-500 px-8 py-4 rounded-full font-bold hover:bg-opacity-90">View Our Menu</a>
+                    <a href="contact.html" class="border border-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-brand-900">Book a Table</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                <i data-lucide="coffee" class="w-10 h-10 mx-auto text-brand-700 mb-4"></i>
+                <h3 class="font-display text-xl font-bold mb-2">Premium Beans</h3>
+                <p class="text-brand-500">Ethically sourced, small-batch roasted.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                <i data-lucide="cake" class="w-10 h-10 mx-auto text-brand-700 mb-4"></i>
+                <h3 class="font-display text-xl font-bold mb-2">Daily Baked</h3>
+                <p class="text-brand-500">Fresh pastries delivered every morning.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm text-center">
+                <i data-lucide="users" class="w-10 h-10 mx-auto text-brand-700 mb-4"></i>
+                <h3 class="font-display text-xl font-bold mb-2">Community First</h3>
+                <p class="text-brand-500">A warm space for all to gather.</p>
+            </div>
+        </section>
+
+        <section class="py-20 bg-brand-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-display font-bold text-center mb-16">Signature Favourites</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-2xl">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cG91ciUyMG92ZXIlMjBjb2ZmZWV8ZW58MXx8fHwxNzk0NTY4MTc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Pour Over" class="rounded-xl mb-4 w-full h-64 object-cover">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold">House Blend Pour-Over</h4>
+                            <span class="font-display font-bold text-brand-700">$6.50</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1703168080814-3cd5ba68343d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cGlzdGFjaGlvJTIwY3JvaXNzYW50fGVufDF8fHx8MTc5NDU2ODE3N3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Croissant" class="rounded-xl mb-4 w-full h-64 object-cover">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold">Pistachio Croissant</h4>
+                            <span class="font-display font-bold text-brand-700">$5.75</span>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl">
+                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1687276287139-88f7333c8ca4?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YXZvJTIwdG9hc3R8ZW58MXx8fHwxNzk0NTY4MTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Avo Toast" class="rounded-xl mb-4 w-full h-64 object-cover">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-xl font-bold">Sourdough Avo Toast</h4>
+                            <span class="font-display font-bold text-brand-700">$12.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-900 text-brand-100 py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+            <div><h3 class="font-display text-lg font-bold mb-4">Spice Garden</h3><p>Warm hearts, fresh brews.</p></div>
+            <div><h4 class="font-bold mb-4">Links</h4><ul class="space-y-2"><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li></ul></div>
+            <div><h4 class="font-bold mb-4">Contact</h4><p>123 Coffee Lane<br>City Center, NY</p></div>
+            <div><h4 class="font-bold mb-4">Social</h4><div class="flex gap-4"><i data-lucide="instagram"></i><i data-lucide="facebook"></i></div></div>
+        </div>
+        <p class="max-w-7xl mx-auto px-6 pt-12 text-center text-sm">© <span data-year></span> Spice Garden Cafe</p>
+    </footer>
+    <script src="js/main.js"></script>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
