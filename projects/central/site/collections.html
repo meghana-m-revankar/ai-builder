@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collections | Central</title>
+<meta name="description" content="Cultivating a love for reading at Sunrise School.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fefcf7','100':'#fbf6ed','200':'#f3eada','300':'#e6d3b9','400':'#d1b490','500':'#a67c52','600':'#8c6742','700':'#735436','800':'#5c432b','900':'#4a3622'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Central</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="collections.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Collections</a><a href="membership.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Membership &amp; Rules</a><a href="events.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Events</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="collections.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Collections</a><a href="membership.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Membership &amp; Rules</a><a href="events.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Events</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-[70vh] flex items-center justify-center bg-brand-900 text-white py-20">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/library-books-shelves-x/1600/900" alt="Library shelves filled with books" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-brand-800 text-brand-200 text-sm font-medium mb-4 border border-brand-700">Sunrise School Library</span>
+      <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight mb-6">Explore Our 12,000+ Collections</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-8">Cultivating a love for reading with a rich catalog spanning fiction, science, history, regional languages, and more.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#collections-grid" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Browse Catalog</a>
+        <a href="#request-section" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-medium px-8 py-3 rounded-xl backdrop-blur-sm transition">Request a Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Interactive Filter Tabs -->
+  <section class="py-12 bg-brand-50 border-b border-brand-200 sticky top-0 z-40 backdrop-blur-md bg-opacity-95">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4" id="filter-tabs">
+        <button onclick="filterCollection('all')" class="filter-btn active px-5 py-2 rounded-xl text-sm font-medium transition bg-brand-700 text-white shadow">All Collections</button>
+        <button onclick="filterCollection('fiction')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">Fiction</button>
+        <button onclick="filterCollection('science')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">Science</button>
+        <button onclick="filterCollection('history')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">History</button>
+        <button onclick="filterCollection('children')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">Children's</button>
+        <button onclick="filterCollection('regional')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">Marathi/Hindi</button>
+        <button onclick="filterCollection('reference')" class="filter-btn px-5 py-2 rounded-xl text-sm font-medium transition bg-white text-brand-800 hover:bg-brand-100 border border-brand-200">Reference</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Card Grid for Each Collection -->
+  <section id="collections-grid" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-900 mb-4">Library Categories</h2>
+        <p class="text-brand-700 text-lg">Discover our meticulously curated shelves designed to spark curiosity, support academic growth, and transport readers to new worlds.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="collection-cards-container">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Reading Lists and Staff Recommendations -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-900 mb-4">Staff Recommendations</h2>
+        <p class="text-brand-700 text-lg">Hand-picked selections from Meena Joshi, Sanjay Kulkarni, and Pooja Deshpande to inspire your next reading journey.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-brand-100 flex flex-col justify-between hover:-translate-y-1 transition">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Meena Joshi" class="w-12 h-12 rounded-full object-cover border-2 border-brand-600">
+              <div>
+                <h4 class="font-display font-bold text-brand-900">Meena Joshi</h4>
+                <p class="text-xs text-brand-600">Head Librarian</p>
+              </div>
+            </div>
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/classic-literature-book-x/800/500" alt="Classic literature recommendation" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h3 class="font-display text-xl font-bold text-brand-900 mb-2">To Kill a Mockingbird</h3>
+            <p class="text-brand-700 text-sm mb-4">A timeless exploration of human behavior and moral roots in the American South. Essential reading for young minds developing empathy.</p>
+          </div>
+          <span class="inline-flex items-center text-sm font-semibold text-brand-600"><i data-lucide="book-open" class="w-4 h-4 mr-2"></i> Fiction Section</span>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-brand-100 flex flex-col justify-between hover:-translate-y-1 transition">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=53" alt="Sanjay Kulkarni" class="w-12 h-12 rounded-full object-cover border-2 border-brand-600">
+              <div>
+                <h4 class="font-display font-bold text-brand-900">Sanjay Kulkarni</h4>
+                <p class="text-xs text-brand-600">Assistant Librarian</p>
+              </div>
+            </div>
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/cosmos-science-book-x/800/500" alt="Science book recommendation" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h3 class="font-display text-xl font-bold text-brand-900 mb-2">Cosmos by Carl Sagan</h3>
+            <p class="text-brand-700 text-sm mb-4">An awe-inspiring journey through the universe that bridges science and philosophy. Sparked countless careers in astronomy at our school.</p>
+          </div>
+          <span class="inline-flex items-center text-sm font-semibold text-brand-600"><i data-lucide="book-open" class="w-4 h-4 mr-2"></i> Science Section</span>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-lg border border-brand-100 flex flex-col justify-between hover:-translate-y-1 transition">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=45" alt="Pooja Deshpande" class="w-12 h-12 rounded-full object-cover border-2 border-brand-600">
+              <div>
+                <h4 class="font-display font-bold text-brand-900">Pooja Deshpande</h4>
+                <p class="text-xs text-brand-600">Coordinator</p>
+              </div>
+            </div>
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/maratha-history-book-x/800/500" alt="History book recommendation" class="w-full h-48 object-cover rounded-xl mb-4">
+            <h3 class="font-display text-xl font-bold text-brand-900 mb-2">Raja Shivchhatrapati</h3>
+            <p class="text-brand-700 text-sm mb-4">Babasaheb Purandare's monumental historical narrative on Chhatrapati Shivaji Maharaj. A cornerstone of our regional history collection.</p>
+          </div>
+          <span class="inline-flex items-center text-sm font-semibold text-brand-600"><i data-lucide="book-open" class="w-4 h-4 mr-2"></i> Marathi/Hindi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Request a Book Form -->
+  <section id="request-section" class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-brand-900 text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-800 rounded-full opacity-50 pointer-events-none"></div>
+        <div class="relative z-10 max-w-2xl mx-auto text-center mb-10">
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Request a Book</h2>
+          <p class="text-brand-200">Can't find what you are looking for? Fill out the suggestion form below and our library team will review your book request for future acquisition.</p>
+        </div>
+        <form name="book-request" method="POST" data-netlify="true" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6" onsubmit="handleBookRequest(event)">
+          <div>
+            <label class="block text-sm font-medium text-brand-200 mb-2">Your Name</label>
+            <input type="text" name="name" required class="w-full bg-brand-800 border border-brand-700 rounded-xl px-4 py-3 text-white placeholder-brand-400 focus:outline-none focus:border-brand-500" placeholder="Aarav Sharma">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-brand-200 mb-2">Your Email / Student ID</label>
+            <input type="text" name="identifier" required class="w-full bg-brand-800 border border-brand-700 rounded-xl px-4 py-3 text-white placeholder-brand-400 focus:outline-none focus:border-brand-500" placeholder="student@sunriseschool.in">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-brand-200 mb-2">Book Title</label>
+            <input type="text" name="book-title" required class="w-full bg-brand-800 border border-brand-700 rounded-xl px-4 py-3 text-white placeholder-brand-400 focus:outline-none focus:border-brand-500" placeholder="Title of the book">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-brand-200 mb-2">Author Name</label>
+            <input type="text" name="author" required class="w-full bg-brand-800 border border-brand-700 rounded-xl px-4 py-3 text-white placeholder-brand-400 focus:outline-none focus:border-brand-500" placeholder="Author name">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium text-brand-200 mb-2">Reason / Comments</label>
+            <textarea name="reason" rows="3" class="w-full bg-brand-800 border border-brand-700 rounded-xl px-4 py-3 text-white placeholder-brand-400 focus:outline-none focus:border-brand-500" placeholder="Why should we add this book to our library?"></textarea>
+          </div>
+          <div class="sm:col-span-2 text-center">
+            <button type="submit" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-3 rounded-xl shadow-lg transition w-full sm:w-auto">Submit Book Request</button>
+          </div>
+        </form>
+        <div id="request-success" class="hidden mt-6 p-4 bg-brand-800 text-center rounded-xl text-brand-200">
+          Thank you! Your book request has been submitted to Meena Joshi for review.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA for Visiting the Library -->
+  <section class="py-16 md:py-24 bg-brand-100 border-t border-brand-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-brand-900 mb-6">Come Browse Our Shelves in Person</h2>
+        <p class="text-brand-700 text-lg mb-8">Visit us at Sunrise School, 12 FC Road, Shivajinagar, Pune. Experience the serene reading environment and explore our 12,000+ books firsthand.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="index.html#contact" class="bg-brand-800 hover:bg-brand-700 text-white font-medium px-8 py-3 rounded-xl shadow-lg transition">Plan Your Visit</a>
+          <a href="membership.html" class="bg-white hover:bg-brand-50 text-brand-800 border border-brand-300 font-medium px-8 py-3 rounded-xl transition">View Membership Rules</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const collectionsData = [
+    { id: 1, category: 'fiction', title: 'Fiction & Literature', count: '3,500+ Books', desc: 'Engaging novels, timeless classics, contemporary stories, and poetry collections that ignite the imagination.', image: 'https://picsum.photos/seed/fiction-books-library-x/800/600' },
+    { id: 2, category: 'science', title: 'Science & Technology', count: '2,200+ Books', desc: 'Explorations in physics, biology, computer science, space astronomy, and groundbreaking technological research.', image: 'https://picsum.photos/seed/science-lab-books-x/800/600' },
+    { id: 3, category: 'history', title: 'History & Geography', count: '2,000+ Books', desc: 'Detailed accounts of world history, Indian heritage, global civilizations, maps, and geographical studies.', image: 'https://picsum.photos/seed/history-books-vintage-x/800/600' },
+    { id: 4, category: 'children', title: "Children's Corner", count: '2,500+ Books', desc: 'Illustrated storybooks, fairy tales, early readers, and engaging activity books designed for younger students.', image: 'https://picsum.photos/seed/children-reading-books-x/800/600' },
+    { id: 5, category: 'regional', title: 'Marathi & Hindi Section', count: '1,000+ Books', desc: 'Rich regional literature, regional poetry, cultural magazines, and classical prose in Marathi and Hindi.', image: 'https://picsum.photos/seed/marathi-hindi-books-x/800/600' },
+    { id: 6, category: 'reference', title: 'Reference & Encyclopedia', count: '800+ Books', desc: 'Comprehensive encyclopedias, dictionaries, competitive exam guides, and academic atlases for deep research.', image: 'https://picsum.photos/seed/reference-encyclopedia-x/800/600' }
+  ];
+
+  function renderCollections(filter = 'all') {
+    const container = document.getElementById('collection-cards-container');
+    if (!container) return;
+    
+    const filtered = filter === 'all' 
+      ? collectionsData 
+      : collectionsData.filter(item => item.category === filter);
+      
+    let html = '';
+    for (let i = 0; i < filtered.length; i++) {
+      const item = filtered[i];
+      html += `
+        <div class="bg-white rounded-2xl shadow-lg border border-brand-100 overflow-hidden hover:-translate-y-1 transition flex flex-col">
+          <img loading="lazy" decoding="async" src="${item.image}" alt="${item.title}" class="w-full h-56 object-cover">
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold px-2.5 py-1 bg-brand-100 text-brand-800 rounded-full">${item.count}</span>
+              </div>
+              <h3 class="font-display text-xl font-bold text-brand-900 mb-2">${item.title}</h3>
+              <p class="text-brand-700 text-sm mb-4">${item.desc}</p>
+            </div>
+            <div class="pt-4 border-t border-brand-100 flex items-center justify-between">
+              <span class="text-xs text-brand-600 font-medium">Available on open shelves</span>
+              <span class="text-brand-700 hover:text-brand-900 text-sm font-semibold flex items-center gap-1">Explore <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    container.innerHTML = html;
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+
+  function filterCollection(category) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('bg-brand-700', 'text-white', 'shadow');
+      buttons[i].classList.add('bg-white', 'text-brand-800', 'hover:bg-brand-100', 'border', 'border-brand-200');
+    }
+    event.target.classList.remove('bg-white', 'text-brand-800', 'hover:bg-brand-100', 'border', 'border-brand-200');
+    event.target.classList.add('bg-brand-700', 'text-white', 'shadow');
+    
+    renderCollections(category);
+  }
+
+  function handleBookRequest(event) {
+    event.preventDefault();
+    const successDiv = document.getElementById('request-success');
+    if (successDiv) {
+      successDiv.classList.remove('hidden');
+      event.target.reset();
+      setTimeout(() => {
+        successDiv.classList.add('hidden');
+      }, 6000);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCollections('all');
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Central</p><p class="mt-3 text-sm text-slate-400">Cultivating a love for reading at Sunrise School.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="collections.html" class="hover:text-white">Collections</a><a href="membership.html" class="hover:text-white">Membership &amp; Rules</a><a href="events.html" class="hover:text-white">Events</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sunrise School, 12 FC Road, Shivajinagar, Pune, Maharashtra 411005</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 8:30 AM - 4:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2553 4400</p><p class="mt-2 text-sm text-slate-400">library@sunriseschool.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Central. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
