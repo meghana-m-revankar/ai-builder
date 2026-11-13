@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trainers | Iron Pulse Fitness</title>
+<meta name="description" content="Forge your strength at Bengaluru's premium fitness hub.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fff7ed','100':'#ffedd5','200':'#fed7aa','300':'#fdba74','400':'#fb923c','500':'#ea580c','600':'#c2410c','700':'#9a3412','800':'#7c2d12','900':'#431407'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Iron Pulse Fitness</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="programs.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Programs</a><a href="membership.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Membership Plans</a><a href="trainers.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Trainers</a><a href="schedule.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Class Schedule</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="programs.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Programs</a><a href="membership.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Membership Plans</a><a href="trainers.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Trainers</a><a href="schedule.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Class Schedule</a></div>
+</header>
+<main>
+<main class="bg-stone-950 text-stone-100 min-h-screen font-sans selection:bg-amber-500 selection:text-stone-950">
+
+  <!-- 1. Hero Section -->
+  <section id="hero" class="relative min-h-[75vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1738523686578-f18348c8292b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Z3ltJTIwY29hY2hlcyUyMHRlYW18ZW58MXx8fHwxNzk0NTkzOTQ5fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Iron Pulse Elite Fitness Coaching Staff" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 mb-6 text-sm font-semibold tracking-wide uppercase">
+        <i data-lucide="award" class="w-4 h-4"></i> World-Class Mentorship
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 uppercase">
+        Forge Your Strength With <span class="text-amber-500">Elite Trainers</span>
+      </h1>
+      <p class="max-w-3xl mx-auto text-lg sm:text-xl text-stone-300 mb-10 leading-relaxed">
+        Meet the dedicated professionals behind Iron Pulse Fitness. With over 6+ years of transformations, our certified experts guide your fitness journey in Bengaluru.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#trainers" class="px-8 py-4 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+          View All Trainers <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        </a>
+        <a href="schedule.html" class="px-8 py-4 bg-stone-900 hover:bg-stone-800 border border-stone-800 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2">
+          View Schedule <i data-lucide="calendar" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Individual Trainer Profiles -->
+  <section id="trainers" class="py-16 md:py-24 bg-stone-950 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-wide text-white mb-4">Meet Our Expert Coaches</h2>
+        <p class="text-stone-400 text-lg">Specialized coaches equipped with top-tier certifications to elevate your performance, recovery, and daily nutrition.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Vikram Reddy -->
+        <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="relative h-72 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/gym-founder-vikram-x/800/1000" alt="Vikram Reddy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-4 bg-amber-500 text-stone-950 text-xs font-bold px-3 py-1 rounded-full uppercase">Head Coach</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold text-white mb-1">Vikram Reddy</h3>
+            <p class="text-amber-500 text-sm font-semibold mb-3">Head Coach & Founder (Est. 2018)</p>
+            <p class="text-stone-400 text-sm mb-4 leading-relaxed">Specializing in raw powerlifting and advanced bodybuilding protocols. Vikram brings over a decade of elite fitness wisdom to the Indiranagar floor.</p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-800 text-xs text-stone-400">
+              <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i> CSCS Certified</span>
+              <a href="#booking" class="text-amber-500 font-bold hover:underline flex items-center gap-1">Book <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Meera Iyer -->
+        <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="relative h-72 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/yoga-trainer-meera-x/800/1000" alt="Meera Iyer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-4 bg-stone-800 text-stone-200 text-xs font-bold px-3 py-1 rounded-full uppercase border border-stone-700">Yoga Expert</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold text-white mb-1">Meera Iyer</h3>
+            <p class="text-amber-500 text-sm font-semibold mb-3">Yoga & Mobility Master</p>
+            <p class="text-stone-400 text-sm mb-4 leading-relaxed">Focusing on deep flexibility, core alignment, and meditative flow. Meera helps heavy lifters and busy professionals unlock joint mobility and mental peace.</p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-800 text-xs text-stone-400">
+              <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i> E-RYT 500</span>
+              <a href="#booking" class="text-amber-500 font-bold hover:underline flex items-center gap-1">Book <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arjun Singh -->
+        <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="relative h-72 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/strength-trainer-arjun-x/800/1000" alt="Arjun Singh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-4 bg-stone-800 text-stone-200 text-xs font-bold px-3 py-1 rounded-full uppercase border border-stone-700">Strength Lead</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold text-white mb-1">Arjun Singh</h3>
+            <p class="text-amber-500 text-sm font-semibold mb-3">Strength & Conditioning Coach</p>
+            <p class="text-stone-400 text-sm mb-4 leading-relaxed">Expert in functional hypertrophy, athletic conditioning, and injury rehabilitation. Arjun designs intense circuits that push your physical limits safely.</p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-800 text-xs text-stone-400">
+              <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i> NSCA-CPT</span>
+              <a href="#booking" class="text-amber-500 font-bold hover:underline flex items-center gap-1">Book <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kavya Menon -->
+        <div class="bg-stone-900 border border-stone-800 rounded-2xl overflow-hidden shadow-xl hover:-translate-y-1 transition-all group">
+          <div class="relative h-72 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/nutritionist-kavya-x/800/1000" alt="Kavya Menon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-transparent to-transparent"></div>
+            <span class="absolute top-4 right-4 bg-stone-800 text-stone-200 text-xs font-bold px-3 py-1 rounded-full uppercase border border-stone-700">Dietary Expert</span>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display text-2xl font-bold text-white mb-1">Kavya Menon</h3>
+            <p class="text-amber-500 text-sm font-semibold mb-3">Sports Nutrition Specialist</p>
+            <p class="text-stone-400 text-sm mb-4 leading-relaxed">Bridging the gap between heavy training and optimal fueling. Kavya crafts customized macros and sustainable Indian meal plans for fat loss and muscle gain.</p>
+            <div class="flex items-center justify-between pt-4 border-t border-stone-800 text-xs text-stone-400">
+              <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-4 h-4 text-amber-500"></i> MSc Nutrition</span>
+              <a href="#booking" class="text-amber-500 font-bold hover:underline flex items-center gap-1">Book <i data-lucide="chevron-right" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Trainer Availability and Booking Slots Preview -->
+  <section id="availability" class="py-16 md:py-24 bg-stone-900/50 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-bold uppercase mb-4">
+            <i data-lucide="clock" class="w-4 h-4"></i> Live Timings
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-wide text-white mb-6">Trainer Availability & Slots</h2>
+          <p class="text-stone-300 text-base sm:text-lg mb-6 leading-relaxed">
+            Personal training at Iron Pulse is tailored to your schedule. Choose from morning prime slots to evening power hours at our Indiranagar facility.
+          </p>
+          <div class="space-y-4 text-sm text-stone-300">
+            <div class="flex items-center gap-3 bg-stone-900 p-4 rounded-xl border border-stone-800">
+              <i data-lucide="calendar-check" class="w-6 h-6 text-amber-500 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-display">Personal Training Package</strong>
+                <span>₹9,999 for 12 intensive 1-on-1 sessions with custom routines.</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 bg-stone-900 p-4 rounded-xl border border-stone-800">
+              <i data-lucide="map-pin" class="w-6 h-6 text-amber-500 shrink-0"></i>
+              <div>
+                <strong class="text-white block font-display">Location & Hours</strong>
+                <span>3rd Floor, 22 Indiranagar 100 Feet Road, Bengaluru | Mon-Sat: 5:30 AM - 10:30 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="bg-stone-900 border border-stone-800 rounded-2xl p-6 sm:p-8 shadow-2xl">
+            <h3 class="font-display text-xl font-bold text-white mb-6 flex items-center justify-between">
+              <span>Current Week Slot Matrix</span>
+              <span class="text-xs text-amber-500 bg-amber-500/10 px-3 py-1 rounded-full uppercase">Updated Daily</span>
+            </h3>
+            
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-sm text-stone-300">
+                <thead class="bg-stone-950 text-stone-400 uppercase text-xs font-display">
+                  <tr>
+                    <th class="p-3 rounded-l-lg">Coach</th>
+                    <th class="p-3">Morning Slot</th>
+                    <th class="p-3">Evening Slot</th>
+                    <th class="p-3 rounded-r-lg">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-800">
+                  <tr class="hover:bg-stone-950/50">
+                    <td class="p-3 font-bold text-white flex items-center gap-2"><img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" class="w-7 h-7 rounded-full object-cover" alt="Vikram"> Vikram Reddy</td>
+                    <td class="p-3">06:00 AM - 09:00 AM</td>
+                    <td class="p-3">05:00 PM - 08:00 PM</td>
+                    <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded font-semibold">Few Slots</span></td>
+                  </tr>
+                  <tr class="hover:bg-stone-950/50">
+                    <td class="p-3 font-bold text-white flex items-center gap-2"><img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" class="w-7 h-7 rounded-full object-cover" alt="Meera"> Meera Iyer</td>
+                    <td class="p-3">07:00 AM - 10:00 AM</td>
+                    <td class="p-3">06:00 PM - 09:00 PM</td>
+                    <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded font-semibold">Available</span></td>
+                  </tr>
+                  <tr class="hover:bg-stone-950/50">
+                    <td class="p-3 font-bold text-white flex items-center gap-2"><img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=52" class="w-7 h-7 rounded-full object-cover" alt="Arjun"> Arjun Singh</td>
+                    <td class="p-3">05:30 AM - 08:30 AM</td>
+                    <td class="p-3">04:00 PM - 07:00 PM</td>
+                    <td class="p-3"><span class="px-2 py-1 bg-amber-500/10 text-amber-400 text-xs rounded font-semibold">Limited</span></td>
+                  </tr>
+                  <tr class="hover:bg-stone-950/50">
+                    <td class="p-3 font-bold text-white flex items-center gap-2"><img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=45" class="w-7 h-7 rounded-full object-cover" alt="Kavya"> Kavya Menon</td>
+                    <td class="p-3">10:00 AM - 01:00 PM</td>
+                    <td class="p-3">05:00 PM - 08:00 PM</td>
+                    <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 text-xs rounded font-semibold">Available</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="#booking" class="inline-block text-sm font-bold text-amber-500 hover:text-amber-400">Secure your preferred timing with a direct booking below &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Testimonial Highlights (Personal Training Success) -->
+  <section id="testimonials" class="py-16 md:py-24 bg-stone-950 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-500 text-xs font-bold uppercase tracking-widest block mb-2">Success Stories</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-wide text-white mb-4">Personal Training Triumphs</h2>
+        <p class="text-stone-400 text-lg">Hear from our 3,500+ active members who transformed their bodies and lifestyles under our expert coaches.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-stone-900 border border-stone-800 p-8 rounded-2xl relative shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            </div>
+            <p class="text-stone-300 italic mb-6 leading-relaxed">
+              "Training under Vikram Reddy completely altered my squat mechanics and gave me the competitive edge. The 12-session personal training package was worth every rupee for my strength gains."
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-stone-800">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=68" alt="Rohan K." class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Rohan K.</h4>
+              <p class="text-xs text-stone-400">Member since 2021 • Indiranagar</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-stone-900 border border-stone-800 p-8 rounded-2xl relative shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            </div>
+            <p class="text-stone-300 italic mb-6 leading-relaxed">
+              "Meera Iyer’s yoga and mobility sessions cured my chronic lower back pain from desk work. Her careful attention to posture during private sessions made all the difference."
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-stone-800">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=47" alt="Priya S." class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Priya S.</h4>
+              <p class="text-xs text-stone-400">Member since 2022 • Bengaluru</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-stone-900 border border-stone-800 p-8 rounded-2xl relative shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-amber-500 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
+            </div>
+            <p class="text-stone-300 italic mb-6 leading-relaxed">
+              "Combined Arjun's strength workouts with Kavya's nutrition plan. Lost 8 kgs of fat while adding lean muscle mass. Iron Pulse is truly Bengaluru's finest fitness hub!"
+            </p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-stone-800">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=15" alt="Aditya M." class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Aditya M.</h4>
+              <p class="text-xs text-stone-400">Member since 2023 • Indiranagar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Video Showcase of Trainer-Led Workout Techniques -->
+  <section id="techniques" class="py-16 md:py-24 bg-stone-900/40 border-t border-stone-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-amber-500 text-xs font-bold uppercase tracking-widest block mb-2">Masterclass Preview</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold uppercase tracking-wide text-white mb-6">Technique & Form Showcase</h2>
+          <p class="text-stone-300 text-base sm:text-lg mb-6 leading-relaxed">
+            Proper form is the cornerstone of injury-free progression. Watch our trainers break down compound lifts, kettlebell complexes, and explosive HIIT movements recorded live on our Indiranagar gym floor.
+          </p>
+          <ul class="space-y-3 text-stone-300 mb-8">
+            <li class="flex items-center gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500"></i>
+              <span>Biomechanically sound deadlift and squat breakdowns</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500"></i>
+              <span>High-intensity interval pacing by Arjun & Vikram</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500"></i>
+              <span>Recovery breathing techniques demonstrated by Meera</span>
+            </li>
+          </ul>
+          <a href="programs.html" class="inline-flex items-center gap-2 px-6 py-3 bg-stone-900 hover:bg-stone-800 border border-stone-700 text-white font-bold rounded-xl transition-all">
+            Explore All Programs <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+          <div class="relative rounded-2xl overflow-hidden bg-stone-950 border border-stone-800 shadow-2xl">
+            <div class="relative h-72 sm:h-96">
+              <img loading="lazy" decoding="async" src="https://picsum.photos/seed/gym-workout-technique-x/1000/700" alt="Workout Technique Demonstration" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-stone-950/40 flex items-center justify-center">
+                <div class="w-16 h-16 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center shadow-lg shadow-amber-500/50 cursor-pointer hover:scale-110 transition-transform">
+                  <i data-lucide="play" class="w-8 h-8 fill-stone-950 ml-1"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6 bg-stone-900">
+              <h3 class="font-display font-bold text-xl text-white mb-1">Advanced Compound Lift Masterclass</h3>
+              <p class="text-stone-400 text-sm">Led by Head Coach Vikram Reddy • Iron Pulse Indiranagar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA to Book a Session with a Specific Coach -->
+  <section id="booking" class="py-16 md:py-24 bg-stone-950 border-t border-stone-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <img loading="lazy" decoding="async" src="https://picsum.photos/seed/gym-equipment-dark-x/1600/900" class="w-full h-full object-cover" alt="Background Texture">
+    </div>
+    
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-gradient-to-b from-stone-900 to-stone-950 border border-stone-800 rounded-3xl p-8 sm:p-12 shadow-2xl">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-amber-500 text-xs font-bold uppercase tracking-widest block mb-2">Secure Your Spot</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase tracking-wide text-white mb-4">Book A Session With Your Coach</h2>
+          <p class="text-stone-400 text-base">Fill out the form below to request a 1-on-1 personal training consultation or customized coaching slot at our Bengaluru facility.</p>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" class="space-y-6" id="trainerBookingForm">
+          <input type="hidden" name="form-name" value="contact">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase text-stone-300 mb-2">Your Full Name</label>
+              <input type="text" name="name" required placeholder="Rohan Sharma" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-stone-300 mb-2">Phone Number</label>
+              <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase text-stone-300 mb-2">Email Address</label>
+              <input type="email" name="email" required placeholder="rohan@example.com" class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase text-stone-300 mb-2">Select Preferred Coach</label>
+              <select name="coach" required class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-amber-500">
+                <option value="" disabled selected>Choose a Coach</option>
+                <option value="Vikram Reddy">Vikram Reddy (Head Coach)</option>
+                <option value="Meera Iyer">Meera Iyer (Yoga)</option>
+                <option value="Arjun Singh">Arjun Singh (Strength)</option>
+                <option value="Kavya Menon">Kavya Menon (Nutrition)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase text-stone-300 mb-2">Fitness Goals / Notes</label>
+            <textarea name="message" rows="4" placeholder="Tell us about your fitness targets, previous injuries, or preferred time slots..." class="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:border-amber-500"></textarea>
+          </div>
+
+          <div class="text-center pt-2">
+            <button type="submit" class="w-full sm:w-auto px-8 py-4 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-xl transition-all shadow-lg shadow-amber-500/20 uppercase tracking-wide">
+              Confirm Booking Request
+            </button>
+          </div>
+        </form>
+
+        <div id="formSuccessToast" class="hidden mt-6 p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center rounded-xl text-sm font-semibold">
+          Thank you! Your booking request has been received. Our team will contact you shortly to confirm your session.
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Initialize Lucide icons
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+
+  // Handle form submission feedback toast
+  const bookingForm = document.getElementById('trainerBookingForm');
+  const successToast = document.getElementById('formSuccessToast');
+
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
+      // If netlify form submission isn't intercepted, let it post or show mock success for static demo
+      if (!bookingForm.getAttribute('data-netlify')) {
+        e.preventDefault();
+      } else {
+        // For static preview experience
+        e.preventDefault();
+        successToast.classList.remove('hidden');
+        bookingForm.reset();
+        setTimeout(() => {
+          successToast.classList.add('hidden');
+        }, 6000);
+      }
+    });
+  }
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Iron Pulse Fitness</p><p class="mt-3 text-sm text-slate-400">Forge your strength at Bengaluru's premium fitness hub.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="programs.html" class="hover:text-white">Programs</a><a href="membership.html" class="hover:text-white">Membership Plans</a><a href="trainers.html" class="hover:text-white">Trainers</a><a href="schedule.html" class="hover:text-white">Class Schedule</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">3rd Floor, 22 Indiranagar 100 Feet Road, Bengaluru, Karnataka 560038</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 5:30 AM - 10:30 PM, Sun: 7:00 AM - 1:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4123 7788</p><p class="mt-2 text-sm text-slate-400">hello@ironpulse.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Iron Pulse Fitness. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
