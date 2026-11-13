@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cart | Petal &amp; Stem Florist</title>
+<meta name="description" content="Handcrafted floral arrangements for every precious moment.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fdf2f8','100':'#fce7f3','200':'#fbcfe8','300':'#f9a8d4','400':'#f472b6','500':'#db2777','600':'#be185d','700':'#9d174d','800':'#831843','900':'#500724'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Petal &amp; Stem Florist</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Bouquets</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="cart.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Cart</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Bouquets</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="cart.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Cart</a></div>
+</header>
+<main>
+<main>
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white py-16">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1628456676381-cf822e3c3f9f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8ZWxlZ2FudCUyMGZsb3JhbCUyMGJvdXF1ZXRzfGVufDF8fHx8MTc5NDU5NjcwNHww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Petal and Stem Florist Cart" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">Your Floral Cart</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto">Review your selected arrangements and complete your order for fresh doorstep delivery.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="lg:col-span-2 space-y-8">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <h2 class="font-display text-2xl font-bold text-brand-900 mb-6">Cart Items</h2>
+            <div id="cart-items-container" class="divide-y divide-brand-100">
+              <!-- Rendered via JS -->
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+              <a href="products.html" class="text-brand-600 hover:text-brand-800 font-medium inline-flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Continue Shopping
+              </a>
+              <button id="clear-cart-btn" class="text-red-500 hover:text-red-700 text-sm font-medium">Clear Cart</button>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <h2 class="font-display text-2xl font-bold text-brand-900 mb-6">Delivery Details</h2>
+            <form id="checkout-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-brand-900 mb-1">Full Name</label>
+                  <input type="text" required class="w-full px-4 py-2 border border-brand-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Ananya Rao">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-brand-900 mb-1">Phone Number</label>
+                  <input type="tel" required class="w-full px-4 py-2 border border-brand-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="+91 98765 43210">
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-brand-900 mb-1">Delivery Address (Hyderabad area)</label>
+                <textarea required rows="3" class="w-full px-4 py-2 border border-brand-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="12-A, Jubilee Hills Road No. 36..."></textarea>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-brand-900 mb-1">Delivery Date</label>
+                  <input type="date" required class="w-full px-4 py-2 border border-brand-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-brand-900 mb-1">Personal Gift Message</label>
+                  <input type="text" class="w-full px-4 py-2 border border-brand-200 rounded-lg focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Happy Birthday! With love...">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <h2 class="font-display text-2xl font-bold text-brand-900 mb-6">Order Summary</h2>
+            <div id="order-summary" class="space-y-3 text-brand-700">
+              <!-- Rendered via JS -->
+            </div>
+            <div class="border-t border-brand-100 my-4 pt-4 flex justify-between font-bold text-brand-900 text-lg">
+              <span>Grand Total</span>
+              <span id="summary-grand-total">₹0</span>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+            <h2 class="font-display text-2xl font-bold text-brand-900 mb-6">Payment Options</h2>
+            <div class="space-y-3 mb-6">
+              <label class="flex items-center gap-3 p-3 border border-brand-200 rounded-xl cursor-pointer hover:bg-brand-50">
+                <input type="radio" name="payment" checked class="text-brand-600 focus:ring-brand-500">
+                <span class="font-medium text-brand-900">UPI / Google Pay / PhonePe</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 border border-brand-200 rounded-xl cursor-pointer hover:bg-brand-50">
+                <input type="radio" name="payment" class="text-brand-600 focus:ring-brand-500">
+                <span class="font-medium text-brand-900">Credit / Debit Card</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 border border-brand-200 rounded-xl cursor-pointer hover:bg-brand-50">
+                <input type="radio" name="payment" class="text-brand-600 focus:ring-brand-500">
+                <span class="font-medium text-brand-900">Net Banking</span>
+              </label>
+            </div>
+            <button id="place-order-btn" class="w-full py-3 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl shadow-md transition text-center">Place Secure Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-brand-900 mb-12">The Petal & Stem Promise</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-brand-50 rounded-2xl">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-brand-900 mb-2">Hand-Delivered Care</h3>
+          <p class="text-brand-600 text-sm">Every bouquet is transported in temperature-controlled conditions to ensure zero petal damage upon arrival.</p>
+        </div>
+        <div class="p-6 bg-brand-50 rounded-2xl">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-brand-900 mb-2">7-Day Freshness</h3>
+          <p class="text-brand-600 text-sm">Sourced daily from sustainable local farms, our blooms are guaranteed to stay vibrant for at least a full week.</p>
+        </div>
+        <div class="p-6 bg-brand-50 rounded-2xl">
+          <div class="w-12 h-12 bg-brand-600 text-white rounded-full flex items-center justify-center mx-auto mb-4">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-brand-900 mb-2">Artisanal Design</h3>
+          <p class="text-brand-600 text-sm">Crafted by professional botanical artists led by Ananya Rao, ensuring unique and breathtaking arrangements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Need Custom Floral Styling?</h2>
+      <p class="text-brand-100 max-w-2xl mx-auto mb-8">Contact our Jubilee Hills studio directly for bespoke wedding decorators or corporate events.</p>
+      <a href="contact.html" class="inline-block px-8 py-3 bg-white text-brand-900 font-medium rounded-xl hover:bg-brand-50 transition">Get in Touch</a>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let cart = JSON.parse(localStorage.getItem('petals_cart')) || [
+        { name: 'Signature Roses', price: 1499, qty: 1, image: 'https://images.unsplash.com/photo-1628456676381-cf822e3c3f9f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8ZWxlZ2FudCUyMGZsb3JhbCUyMGJvdXF1ZXRzfGVufDF8fHx8MTc5NDU5NjcwNHww&ixlib=rb-4.1.0&w=200&h=200&fit=crop&auto=format&q=80' },
+        { name: 'Pastel Hydrangea Vase', price: 2200, qty: 1, image: 'https://images.unsplash.com/photo-1628456676381-cf822e3c3f9f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8ZWxlZ2FudCUyMGZsb3JhbCUyMGJvdXF1ZXRzfGVufDF8fHx8MTc5NDU5NjcwNHww&ixlib=rb-4.1.0&w=200&h=200&fit=crop&auto=format&q=80' }
+      ];
+
+      function saveCart() {
+        localStorage.setItem('petals_cart', JSON.stringify(cart));
+        renderCart();
+      }
+
+      function renderCart() {
+        const container = document.getElementById('cart-items-container');
+        const summary = document.getElementById('order-summary');
+        const grandTotalEl = document.getElementById('summary-grand-total');
+
+        if (!container) return;
+
+        if (cart.length === 0) {
+          container.innerHTML = '<p class="text-brand-600 py-6 text-center">Your cart is currently empty.</p>';
+          if (summary) summary.innerHTML = '';
+          if (grandTotalEl) grandTotalEl.textContent = '₹0';
+          return;
+        }
+
+        let itemsHtml = '';
+        let subtotal = 0;
+
+        cart.forEach((item, index) => {
+          subtotal += item.price * item.qty;
+          itemsHtml += `
+            <div class="py-4 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-4">
+                <img loading="lazy" decoding="async" src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-xl">
+                <div>
+                  <h4 class="font-bold text-brand-900">${item.name}</h4>
+                  <p class="text-sm text-brand-600">₹${item.price} each</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <button onclick="updateQty(${index}, -1)" class="w-8 h-8 rounded-lg bg-brand-100 text-brand-900 flex items-center justify-center font-bold">-</button>
+                <span class="font-medium">${item.qty}</span>
+                <button onclick="updateQty(${index}, 1)" class="w-8 h-8 rounded-lg bg-brand-100 text-brand-900 flex items-center justify-center font-bold">+</button>
+                <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700 ml-2"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = itemsHtml;
+
+        let deliveryFee = subtotal > 2000 ? 0 : 150;
+        let grandTotal = subtotal + deliveryFee;
+
+        if (summary) {
+          summary.innerHTML = `
+            <div class="flex justify-between"><span>Subtotal</span><span>₹${subtotal}</span></div>
+            <div class="flex justify-between"><span>Delivery Fee</span><span>${deliveryFee === 0 ? 'Free' : '₹' + deliveryFee}</span></div>
+            <p class="text-xs text-brand-500 mt-1">${deliveryFee === 0 ? 'Free delivery applied on orders above ₹2,000!' : 'Add ₹' + (2001 - subtotal) + ' more for free delivery.'}</p>
+          `;
+        }
+
+        if (grandTotalEl) {
+          grandTotalEl.textContent = '₹' + grandTotal;
+        }
+
+        lucide.createIcons();
+      }
+
+      window.updateQty = function(index, change) {
+        cart[index].qty += change;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+        saveCart();
+      };
+
+      window.removeItem = function(index) {
+        cart.splice(index, 1);
+        saveCart();
+      };
+
+      const clearBtn = document.getElementById('clear-cart-btn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          cart = [];
+          saveCart();
+        });
+      }
+
+      const placeOrderBtn = document.getElementById('place-order-btn');
+      if (placeOrderBtn) {
+        placeOrderBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const form = document.getElementById('checkout-form');
+          if (form && form.checkValidity()) {
+            alert('Order placed successfully! Thank you for choosing Petal & Stem.');
+            cart = [];
+            saveCart();
+            window.location.href = 'index.html';
+          } else if (form) {
+            form.reportValidity();
+          }
+        });
+      }
+
+      renderCart();
+    });
+  </script>
+</main>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Petal &amp; Stem Florist</p><p class="mt-3 text-sm text-slate-400">Handcrafted floral arrangements for every precious moment.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="products.html" class="hover:text-white">Bouquets</a><a href="contact.html" class="hover:text-white">Contact</a><a href="cart.html" class="hover:text-white">Cart</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12-A, Jubilee Hills Road No. 36, Hyderabad, Telangana 500033</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM, Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 40 2354 7890</p><p class="mt-2 text-sm text-slate-400">hello@petalandstem.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Petal &amp; Stem Florist. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
