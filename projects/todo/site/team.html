@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Team | Todo</title>
+<meta name="description" content="Premium Real Estate Solutions for Modern Living">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0fdf4','100':'#dcfce7','200':'#bbf7d0','300':'#86efac','400':'#4ade80','500':'#16a34a','600':'#15803d','700':'#166534','800':'#14532d','900':'#020617'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Todo</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Team</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Team</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Page hero introducing our dedicated property experts -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-black text-white py-20">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1717167398817-121e3c283dbb?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fGx1eHVyeSUyMGFyY2hpdGVjdHVyZSUyMHByb3BlcnR5fGVufDF8fHx8MTc5NDY0NjE1MXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Todo Real Estate Team" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm mb-3 block">Expert Leadership</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">Meet the Visionaries Behind Todo</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 mb-8">Our seasoned professionals combine architectural insight with deep market intelligence to secure your ideal property.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#team-grid" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-3 rounded-xl transition shadow-lg">Explore Team</a>
+        <a href="#contact" class="bg-white/1> hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-3 rounded-xl backdrop-blur transition">Contact Advisors</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Grid layout featuring 4 key team members with roles -->
+  <section id="team-grid" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Leadership & Expertise</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-4">Dedicated Property Specialists</h2>
+        <p class="text-gray-600">Founded in 2016 by Vikram Sethi, our team brings over 8 years of luxury real estate excellence with 500+ successful closures.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition group">
+          <div class="h-64 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=12" alt="Vikram Sethi" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Founder & Principal</span>
+            <h3 class="text-xl font-bold font-display text-gray-900 mt-1 mb-2">Vikram Sethi</h3>
+            <p class="text-gray-600 text-sm">Former architect transitioning to real estate to curate human-centric living spaces with unmatched precision.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition group">
+          <div class="h-64 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=32" alt="Ananya Rao" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Senior Broker</span>
+            <h3 class="text-xl font-bold font-display text-gray-900 mt-1 mb-2">Ananya Rao</h3>
+            <p class="text-gray-600 text-sm">Specializing in high-value residential transactions and exclusive luxury apartment sales across prime Bengaluru locations.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition group">
+          <div class="h-64 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=52" alt="Rohan Mehta" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Legal Counsel</span>
+            <h3 class="text-xl font-bold font-display text-gray-900 mt-1 mb-2">Rohan Mehta</h3>
+            <p class="text-gray-600 text-sm">Ensuring absolute compliance, seamless contract negotiations, and transparent documentation for every property acquisition.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition group">
+          <div class="h-64 overflow-hidden">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=45" alt="Priya Sharma" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-semibold text-brand-600 uppercase tracking-wider">Client Relations</span>
+            <h3 class="text-xl font-bold font-display text-gray-900 mt-1 mb-2">Priya Sharma</h3>
+            <p class="text-gray-600 text-sm">Dedicated to maintaining our 98% client satisfaction rate through personalized concierge-level support and guidance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Bio section highlighting individual expertise and credentials -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1691272477702-0a2edae135f2?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fGx1eHVyeSUyMGFyY2hpdGVjdHVyZSUyMHByb3BlcnR5fGVufDF8fHx8MTc5NDY0NjE1MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Professional Consultation" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Individual Excellence</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-6">Technical Rigor Meets Creative Vision</h2>
+          <p class="text-gray-600 mb-6">Our multidisciplinary team includes Karan Singh, our Technical Analyst, who provides rigorous data-driven market insights alongside our core leadership. Every transaction is backed by comprehensive financial modeling and spatial analysis.</p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="p-2 bg-brand-50 text-brand-600 rounded-lg"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-gray-900">8+ Years of Market Mastery</h4>
+                <p class="text-gray-600 text-sm">Navigating Bengaluru's dynamic real estate landscape with proven strategic execution.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="p-2 bg-brand-50 text-brand-600 rounded-lg"><i data-lucide="award" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-gray-900">500+ Successful Closures</h4>
+                <p class="text-gray-600 text-sm">Trusted by discerning buyers, investors, and premier corporate lessees across the region.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Company culture and commitment to client success -->
+  <section class="py-16 md:py-24 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">Our Ethos</span>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mt-2 mb-6">Committed to Modern Living & Client Success</h2>
+      <p class="max-w-3xl mx-auto text-gray-300 text-lg mb-12">At Todo, we believe real estate is fundamentally about people, not just properties. Our collaborative culture fosters integrity, transparency, and a relentless pursuit of architectural perfection, ensuring every client finds an environment where they truly thrive.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left">
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur">
+          <i data-lucide="users" class="w-8 h-8 text-brand-400 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Human-Centric Design</h3>
+          <p class="text-gray-300 text-sm">Curating spaces that prioritize well-being, aesthetic harmony, and functional modern lifestyles.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur">
+          <i data-lucide="shield-check" class="w-8 h-8 text-brand-400 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Absolute Integrity</h3>
+          <p class="text-gray-300 text-sm">Upholding the highest ethical standards with transparent dealings and rigorous legal protection.</p>
+        </div>
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur">
+          <i data-lucide="trending-up" class="w-8 h-8 text-brand-400 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Long-Term Value</h3>
+          <p class="text-gray-300 text-sm">Delivering robust investment advisory and property management that safeguards your assets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Contact CTA for direct access to our senior brokers -->
+  <section id="contact" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+        <div class="p-8 sm:p-12 bg-black text-white flex flex-col justify-between">
+          <div>
+            <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">Direct Access</span>
+            <h2 class="text-3xl font-display font-bold mt-2 mb-4">Connect with Our Senior Brokers</h2>
+            <p class="text-gray-300 mb-8">Schedule a private consultation with Vikram Sethi or our senior advisory team to discuss your luxury property requirements.</p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <i data-lucide="map-pin" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                <p class="text-sm text-gray-300">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="phone" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                <p class="text-sm text-gray-300">+91 80 4567 8910</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="mail" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                <p class="text-sm text-gray-300">hello@todo.in</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="clock" class="w-5 h-5 text-brand-500 flex-shrink-0"></i>
+                <p class="text-sm text-gray-300">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 pt-8 border-t border-white/10">
+            <p class="text-xs text-brand-400 font-semibold uppercase tracking-wider">Other Pages</p>
+            <div class="flex flex-wrap gap-3 mt-2">
+              <a href="index.html" class="text-xs text-gray-300 hover:text-white underline">Home</a>
+              <a href="about.html" class="text-xs text-gray-300 hover:text-white underline">About</a>
+              <a href="services.html" class="text-xs text-gray-300 hover:text-white underline">Services</a>
+              <a href="blog.html" class="text-xs text-gray-300 hover:text-white underline">Blog</a>
+            </div>
+          </div>
+        </div>
+        <div class="p-8 sm:p-12">
+          <form name="contact" method="POST" data-netlify="true" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent to our team.');">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="Rajesh Kumar">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="rajesh@example.com">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="+91 98765 43210">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+              <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="I am interested in luxury apartment sales..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 rounded-xl transition shadow-lg">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Gallery of team activities and office environment -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Life at Todo</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-4">Our Office & Activities</h2>
+        <p class="text-gray-600">A glimpse into our vibrant Bengaluru headquarters and collaborative client strategy sessions.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1756064173162-326c8e85215d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fGx1eHVyeSUyMGFyY2hpdGVjdHVyZSUyMHByb3BlcnR5fGVufDF8fHx8MTc5NDY0NjE1MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Interior Design Staging" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1762811054947-605b20298615?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTR8fGx1eHVyeSUyMGFyY2hpdGVjdHVyZSUyMHByb3BlcnR5fGVufDF8fHx8MTc5NDY0NjE1MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Property Management Team" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg group">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1757359056339-22968344cce6?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTV8fGx1eHVyeSUyMGFyY2hpdGVjdHVyZSUyMHByb3BlcnR5fGVufDF8fHx8MTc5NDY0NjE1MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Client Strategy Session" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Todo</p><p class="mt-3 text-sm text-slate-400">Premium Real Estate Solutions for Modern Living</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Team</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@todo.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Todo. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

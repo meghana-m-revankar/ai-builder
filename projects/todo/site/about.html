@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Todo</title>
+<meta name="description" content="Premium Real Estate Solutions for Modern Living">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0fdf4','100':'#dcfce7','200':'#bbf7d0','300':'#86efac','400':'#4ade80','500':'#16a34a','600':'#15803d','700':'#166534','800':'#14532d','900':'#020617'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Todo</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Team</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Team</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-slate-950 text-slate-100 font-sans">
+  <!-- 1. Page Hero -->
+  <section id="hero" class="relative min-h-[70vh] flex items-center justify-center bg-slate-950 overflow-hidden py-20">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1718201525336-095240724352?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bHV4dXJ5JTIwYXJjaGl0ZWN0dXJlJTIwYmFuZ2Fsb3JlfGVufDF8fHx8MTc5NDY0NjE1Mnww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Luxury architecture building exterior" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-brand-500 font-semibold uppercase tracking-widest text-sm mb-4 block">Established 2016</span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6">
+        Curating Human-Centric <span class="text-brand-500">Living Spaces</span>
+      </h1>
+      <p class="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto mb-8">
+        Founded by former architect Vikram Sethi, Todo combines spatial expertise with deep real estate acumen to deliver unparalleled property solutions across Bengaluru.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#story" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Our Journey</a>
+        <a href="services.html" class="bg-slate-900 hover:bg-slate-800 text-white border border-slate-700 font-medium px-8 py-3.5 rounded-xl transition">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Detailed Company Story -->
+  <section id="story" class="py-16 md:py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-500 font-semibold uppercase tracking-wider text-xs mb-2 block">Our Heritage</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6">Over 8 Years of Redefining Bengaluru Real Estate</h2>
+          <p class="text-slate-300 mb-4 leading-relaxed">
+            Todo was born out of a distinct vision: to bridge the gap between cold transactional real estate and warm, thoughtful interior architecture. Founded in 2016 by Vikram Sethi, our firm started on MG Road with a small team of passionate design enthusiasts and seasoned brokers.
+          </p>
+          <p class="text-slate-300 mb-6 leading-relaxed">
+            Over the past eight years, we have grown into Bengaluru's premier real estate consultancy. By integrating rigorous structural evaluation with high-end lifestyle curation, we ensure every client finds not just a property, but a true sanctuary tailored to modern living.
+          </p>
+          <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+            <div>
+              <div class="font-display text-3xl font-bold text-brand-500 mb-1">500+</div>
+              <div class="text-slate-400 text-sm">Successful Closures</div>
+            </div>
+            <div>
+              <div class="font-display text-3xl font-bold text-brand-500 mb-1">98%</div>
+              <div class="text-slate-400 text-sm">Client Satisfaction</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1757924461488-ef9ad0670978?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bHV4dXJ5JTIwcHJvcGVydHklMjBpbnRlcmlvcnxlbnwxfHx8fDE3OTQ2NDYxNTF8MA&ixlib=rb-4.1.0&w=600&h=800&fit=crop&auto=format&q=80" alt="Luxury property interior" class="w-full h-72 object-cover rounded-2xl shadow-xl">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1479292889369-1a48f234247e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwYXJjaGl0ZWN0dXJlJTIwZ2xhc3N8ZW58MXx8fHwxNzk0NjQ2MTUxfDA&ixlib=rb-4.1.0&w=600&h=800&fit=crop&auto=format&q=80" alt="Modern architecture glass facade" class="w-full h-72 object-cover rounded-2xl shadow-xl mt-8">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Timeline of Major Achievements -->
+  <section id="timeline" class="py-16 md:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-xs mb-2 block">Milestones</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">Our Path of Growth</h2>
+        <p class="text-slate-400">Key achievements that shaped Todo into Bengaluru's trusted luxury real estate partner.</p>
+      </div>
+      <div class="relative border-l border-brand-500/30 ml-4 md:ml-32 space-y-12">
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-500 ring-4 ring-slate-950"></div>
+          <div class="text-brand-500 font-bold text-sm mb-1">2016</div>
+          <h3 class="text-xl font-bold text-white mb-2">Foundation on MG Road</h3>
+          <p class="text-slate-400 max-w-2xl">Todo was established at Ashok Nagar, Bengaluru, bringing a unique architectural perspective to residential sales and leasing.</p>
+        </div>
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-500 ring-4 ring-slate-950"></div>
+          <div class="text-brand-500 font-bold text-sm mb-1">2019</div>
+          <h3 class="text-xl font-bold text-white mb-2">Commercial Leasing Expansion</h3>
+          <p class="text-slate-400 max-w-2xl">Scaled operations to include premium commercial spaces, successfully leasing Grade-A office properties across central business districts.</p>
+        </div>
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-500 ring-4 ring-slate-950"></div>
+          <div class="text-brand-500 font-bold text-sm mb-1">2022</div>
+          <h3 class="text-xl font-bold text-white mb-2">12 Luxury Projects Milestone</h3>
+          <p class="text-slate-400 max-w-2xl">Completed exclusive portfolio management for 12 major luxury residential developments, setting new benchmarks in client retention.</p>
+        </div>
+        <div class="relative pl-8 md:pl-12">
+          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-500 ring-4 ring-slate-950"></div>
+          <div class="text-brand-500 font-bold text-sm mb-1">Present</div>
+          <h3 class="text-xl font-bold text-white mb-2">500+ Successful Closures</h3>
+          <p class="text-slate-400 max-w-2xl">Celebrating over eight years of excellence with a 98% client satisfaction rate and an expanding team of specialized consultants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Core Company Values -->
+  <section id="values" class="py-16 md:py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-xs mb-2 block">Our Ethos</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">Core Company Values</h2>
+        <p class="text-slate-400">The foundational pillars that guide our advisory and ensure uncompromising quality for every client.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:-translate-y-1 transition shadow-xl">
+          <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Uncompromising Integrity</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            We maintain total transparency in legal vetting, pricing, and negotiations. Trust is our most valued currency, earned through honest counsel and rigorous adherence to ethical standards.
+          </p>
+        </div>
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:-translate-y-1 transition shadow-xl">
+          <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="lightbulb" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Architectural Innovation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Rooted in our founder's design background, we look beyond square footage to evaluate spatial flow, natural light, and structural longevity in every home we represent.
+          </p>
+        </div>
+        <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 hover:-translate-y-1 transition shadow-xl">
+          <div class="w-12 h-12 bg-brand-500/10 text-brand-500 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Client-Centric Focus</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Every investor and homebuyer receives bespoke attention. We tailor our advisory services to match individual lifestyle aspirations and long-term financial goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Team Profiles -->
+  <section id="team" class="py-16 md:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-xs mb-2 block">Leadership & Experts</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">Meet Our Specialized Team</h2>
+        <p class="text-slate-400">Industry veterans dedicated to delivering excellence in every transaction and consultation.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Vikram Sethi -->
+        <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition shadow-lg">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=12" alt="Vikram Sethi" class="w-full h-72 object-cover">
+          <div class="p-6">
+            <div class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-1">Founder & Principal Architect</div>
+            <h3 class="text-xl font-bold text-white mb-2">Vikram Sethi</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Former architect who transitioned to real estate to curate human-centric living spaces and lead Todo's strategic vision.</p>
+          </div>
+        </div>
+        <!-- Ananya Rao -->
+        <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition shadow-lg">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=32" alt="Ananya Rao" class="w-full h-72 object-cover">
+          <div class="p-6">
+            <div class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-1">Senior Broker</div>
+            <h3 class="text-xl font-bold text-white mb-2">Ananya Rao</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Specializes in luxury residential acquisitions, connecting discerning buyers with Bengaluru's finest high-rise addresses.</p>
+          </div>
+        </div>
+        <!-- Rohan Mehta -->
+        <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition shadow-lg">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=53" alt="Rohan Mehta" class="w-full h-72 object-cover">
+          <div class="p-6">
+            <div class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-1">Legal Counsel</div>
+            <h3 class="text-xl font-bold text-white mb-2">Rohan Mehta</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Ensures absolute compliance and flawless title vetting for all commercial leasing and high-value residential transactions.</p>
+          </div>
+        </div>
+        <!-- Priya Sharma -->
+        <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition shadow-lg">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=45" alt="Priya Sharma" class="w-full h-72 object-cover">
+          <div class="p-6">
+            <div class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-1">Client Relations</div>
+            <h3 class="text-xl font-bold text-white mb-2">Priya Sharma</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Manages post-acquisition care and personalized consultations, maintaining our 98% client satisfaction standard.</p>
+          </div>
+        </div>
+        <!-- Karan Singh -->
+        <div class="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:-translate-y-1 transition shadow-lg sm:col-span-2 lg:col-span-2">
+          <div class="grid grid-cols-1 sm:grid-cols-2 h-full">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=68" alt="Karan Singh" class="w-full h-64 sm:h-full object-cover">
+            <div class="p-6 flex flex-col justify-center">
+              <div class="text-brand-500 text-xs font-semibold uppercase tracking-wider mb-1">Technical Analyst</div>
+              <h3 class="text-xl font-bold text-white mb-2">Karan Singh</h3>
+              <p class="text-slate-400 text-sm leading-relaxed mb-4">Evaluates market trends, structural metrics, and investment yields to provide data-driven advisory for our high-net-worth clientele.</p>
+              <a href="team.html" class="text-brand-500 text-sm font-semibold hover:underline inline-flex items-center gap-1">View full team directory <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Statistical Breakdown -->
+  <section id="stats" class="py-16 md:py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-xs mb-2 block">Impact & Scale</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mb-4">Our Footprint in Bengaluru</h2>
+        <p class="text-slate-400">Measurable metrics that underline our leadership in the city's premium real estate sector.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+          <div class="font-display text-4xl font-bold text-brand-500 mb-2">500+</div>
+          <div class="text-white font-medium mb-1">Successful Closures</div>
+          <p class="text-slate-400 text-xs">Delivered across prime micro-markets in Bengaluru.</p>
+        </div>
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+          <div class="font-display text-4xl font-bold text-brand-500 mb-2">98%</div>
+          <div class="text-white font-medium mb-1">Client Satisfaction</div>
+          <p class="text-slate-400 text-xs">Measured through post-transaction feedback audits.</p>
+        </div>
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+          <div class="font-display text-4xl font-bold text-brand-500 mb-2">12</div>
+          <div class="text-white font-medium mb-1">Luxury Projects</div>
+          <p class="text-slate-400 text-xs">Exclusively managed and successfully marketed.</p>
+        </div>
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 text-center">
+          <div class="font-display text-4xl font-bold text-brand-500 mb-2">8+</div>
+          <div class="text-white font-medium mb-1">Years Expertise</div>
+          <p class="text-slate-400 text-xs">Continually raising industry benchmarks since 2016.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="py-16 bg-brand-950 border-t border-brand-900/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Find Your Next Property?</h2>
+      <p class="text-brand-200 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+        Visit our office at Ashok Nagar or connect with Vikram Sethi and our team for a personalized consultation.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="index.html#contact" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-3.5 rounded-xl shadow-lg transition">Contact Us</a>
+        <a href="services.html" class="bg-slate-900 hover:bg-slate-800 text-white border border-brand-800/60 font-medium px-8 py-3.5 rounded-xl transition">View Services</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Todo</p><p class="mt-3 text-sm text-slate-400">Premium Real Estate Solutions for Modern Living</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Team</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@todo.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Todo. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
