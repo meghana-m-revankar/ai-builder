@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Test</title>
+<meta name="description" content="Exquisite dining experience in the heart of Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fefce8','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Test</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book a Table</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book a Table</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-brand-50 text-stone-800">
+  <!-- 1. Hero Section with Category Navigation Filters -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-stone-900 text-white py-20">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZmluZSUyMGRpbmluZyUyMGdvdXJtZXR8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Exquisite dining spread" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <span class="text-amber-400 font-medium tracking-widest uppercase text-sm mb-3 block">Culinary Excellence</span>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold mb-6">Our Exquisite Menu</h1>
+      <p class="text-lg text-stone-300 max-w-2xl mx-auto mb-10">
+        Crafted by Founder Arjun Reddy and Head Chef Priya, blending timeless family recipes with modern culinary artistry in the heart of Bengaluru.
+      </p>
+      <div id="menu-filters" class="flex flex-wrap justify-center gap-3">
+        <button onclick="filterMenu('all')" class="menu-filter-btn active px-6 py-2 rounded-full text-sm font-medium bg-amber-600 text-white transition shadow">All Items</button>
+        <button onclick="filterMenu('signature')" class="menu-filter-btn px-6 py-2 rounded-full text-sm font-medium bg-stone-800/80 text-stone-300 hover:bg-amber-600 hover:text-white transition">Signature</button>
+        <button onclick="filterMenu('mains')" class="menu-filter-btn px-6 py-2 rounded-full text-sm font-medium bg-stone-800/80 text-stone-300 hover:bg-amber-600 hover:text-white transition">Main Course</button>
+        <button onclick="filterMenu('desserts')" class="menu-filter-btn px-6 py-2 rounded-full text-sm font-medium bg-stone-800/80 text-stone-300 hover:bg-amber-600 hover:text-white transition">Desserts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Featured Special Item Banner -->
+  <section class="py-12 bg-amber-100/50 border-y border-amber-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col lg:flex-row items-center border border-amber-100">
+        <div class="w-full lg:w-1/2 h-72 lg:h-96">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1602563603373-5d806ff8380c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8dHJ1ZmZsZSUyMG11c2hyb29tJTIwcmlzb3R0b3xlbnwxfHx8fDE3OTQ2NDU5Nzh8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Truffle Mushroom Risotto" class="w-full h-full object-cover">
+        </div>
+        <div class="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+          <div class="flex items-center gap-2 text-amber-600 font-medium text-sm mb-2">
+            <i data-lucide="award" class="w-4 h-4"></i> Chef's Absolute Favorite
+          </div>
+          <h2 class="text-3xl font-display font-bold text-stone-900 mb-4">Truffle Mushroom Risotto</h2>
+          <p class="text-stone-600 mb-6 leading-relaxed">
+            Slow-cooked arborio rice folded with wild forest mushrooms, aged parmesan, and a delicate drizzle of authentic black truffle oil. A masterpiece of earthy flavors.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-bold text-amber-700">₹650</span>
+            <a href="booking.html" class="inline-flex items-center gap-2 bg-stone-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-amber-600 transition shadow">
+              Reserve a Table <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Grouped Menu Categories with Card-Based Display -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-stone-900 mb-4">A Symphony of Flavors</h2>
+        <p class="text-stone-600">Every dish is prepared to order using sustainably sourced local produce and imported artisanal ingredients.</p>
+      </div>
+
+      <div id="menu-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JavaScript for filter functionality -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Combo Offers Section -->
+  <section class="py-16 md:py-24 bg-stone-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-400 font-medium tracking-widest uppercase text-sm mb-2 block">Curated Pairings</span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold mb-4">Chef's Tasting Combos</h2>
+        <p class="text-stone-300">Experience a complete gastronomic journey with our specially priced multi-course pairing menus.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700 flex flex-col justify-between hover:border-amber-500 transition">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-display font-bold text-amber-400">The Royal Bengaluru Feast</h3>
+              <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/20">Save ₹300</span>
+            </div>
+            <p class="text-stone-300 mb-6">Includes Artisanal Sourdough Platter, Spiced Lamb Shank, and Saffron Infused Panna Cotta.</p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-700">
+            <div>
+              <span class="text-stone-400 line-through text-sm">₹1,590</span>
+              <span class="text-2xl font-bold text-white ml-2">₹1,290</span>
+            </div>
+            <a href="booking.html" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition">Book Combo</a>
+          </div>
+        </div>
+        <div class="bg-stone-800 p-8 rounded-2xl border border-stone-700 flex flex-col justify-between hover:border-amber-500 transition">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-display font-bold text-amber-400">Coastal & Garden Evening</h3>
+              <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/20">Save ₹250</span>
+            </div>
+            <p class="text-stone-300 mb-6">Includes Truffle Mushroom Risotto, Herb-Crusted Grilled Salmon, and Seasonal Berry Tart.</p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-700">
+            <div>
+              <span class="text-stone-400 line-through text-sm">₹1,860</span>
+              <span class="text-2xl font-bold text-white ml-2">₹1,610</span>
+            </div>
+            <a href="booking.html" class="bg-amber-600 hover:bg-amber-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition">Book Combo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Our Ingredients Are Special Section -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-stone-900 mb-4">Rooted in Quality</h2>
+        <p class="text-stone-600">We believe that extraordinary dining begins long before the kitchen, starting with uncompromising ingredient selection.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-200/60 text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="leaf" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Organic & Local</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Partnering directly with regional organic farmers around Karnataka to bring the freshest harvest to your plate daily.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-200/60 text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="sparkles" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Artisanal Craftsmanship</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Our breads, pastas, and dessert elements are handmade in-house from scratch by our skilled culinary brigade.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-200/60 text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="globe" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Global Sourcing</h3>
+          <p class="text-stone-600 text-sm leading-relaxed">Sourcing authentic specialty items like Italian truffles and Kashmiri saffron to ensure true depth of flavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Customer Review Highlight Quote Block -->
+  <section class="py-16 md:py-24 bg-amber-50 border-t border-amber-200/60">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <div class="flex justify-center gap-1 text-amber-500 mb-6">
+        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+      </div>
+      <blockquote class="text-2xl sm:text-3xl font-display italic text-stone-900 mb-8 leading-relaxed">
+        "An absolute gem on MG Road. The Truffle Mushroom Risotto is easily the best in Bengaluru, and the warm hospitality makes every visit feel deeply personal."
+      </blockquote>
+      <div class="font-medium text-stone-800">Dr. Rajesh Swaminathan</div>
+      <div class="text-sm text-stone-500 mt-1">Google Verified Review · 4.8★ Overall Rating</div>
+    </div>
+  </section>
+
+  <!-- Final CTA Band -->
+  <section class="py-16 bg-stone-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Ready to Taste the Experience?</h2>
+      <p class="text-stone-300 mb-8 max-w-xl mx-auto">Join us at Ashok Nagar for an unforgettable dining journey crafted with passion.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="bg-amber-600 hover:bg-amber-500 text-white px-8 py-3.5 rounded-xl font-medium transition shadow-lg">Book a Table</a>
+        <a href="index.html" class="bg-stone-800 hover:bg-stone-700 text-white px-8 py-3.5 rounded-xl font-medium transition border border-stone-700">Return Home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const menuItems = [
+    { name: 'Truffle Mushroom Risotto', category: 'signature', price: '₹650', desc: 'Slow-cooked arborio rice folded with wild forest mushrooms, aged parmesan, and authentic black truffle oil.', image: 'https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8dHJ1ZmZsZSUyMG11c2hyb29tJTIwcmlzb3R0b3xlbnwxfHx8fDE3OTQ2NDU5Nzh8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+    { name: 'Herb-Crusted Grilled Salmon', category: 'signature', price: '₹890', desc: 'Fresh Atlantic salmon fillet with a delicate herb crust, served alongside seasonal greens and lemon butter emulsion.', image: 'https://images.unsplash.com/photo-1663530761401-15eefb544889?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8ZmluZSUyMGRpbmluZyUyMGdvdXJtZXR8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+    { name: 'Spiced Lamb Shank', category: 'mains', price: '₹950', desc: 'Slow-braised tender lamb shank infused with aromatic spices, served on a bed of creamy saffron mash.', image: 'https://images.unsplash.com/photo-1676471926534-d5c9771909fa?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8ZmluZSUyMGRpbmluZyUyMGdvdXJtZXR8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+    { name: 'Artisanal Sourdough Platter', category: 'signature', price: '₹290', desc: 'Freshly baked house sourdough served with whipped cultured butter, infused olive oils, and sea salt flakes.', image: 'https://images.unsplash.com/photo-1616671285410-2a676a9a433d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8ZmluZSUyMGRpbmluZyUyMGdvdXJtZXR8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+    { name: 'Saffron Infused Panna Cotta', category: 'desserts', price: '₹350', desc: 'Silky Italian cream dessert delicately infused with Kashmiri saffron and topped with crushed pistachios.', image: 'https://images.unsplash.com/photo-1645769388059-7c862af64139?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8c2FmZnJvbiUyMHBhbm5hJTIwY290dGF8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+    { name: 'Seasonal Berry Tart', category: 'desserts', price: '₹320', desc: 'Buttery shortcrust pastry filled with vanilla bean custard and crowned with fresh seasonal organic berries.', image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8ZmluZSUyMGRpbmluZyUyMGdvdXJtZXR8ZW58MXx8fHwxNzk0NjQ1OTc4fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' }
+  ];
+
+  function renderMenu(category) {
+    const grid = document.getElementById('menu-grid');
+    if (!grid) return;
+    
+    const filtered = category === 'all' 
+      ? menuItems 
+      : menuItems.filter(item => item.category === category);
+      
+    grid.innerHTML = filtered.map(item => `
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-200/60 hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-56 overflow-hidden">
+            <img loading="lazy" decoding="async" src="${item.image}" alt="${item.name}" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">${item.name}</h3>
+              <span class="text-amber-700 font-bold">${item.price}</span>
+            </div>
+            <p class="text-stone-600 text-sm leading-relaxed">${item.desc}</p>
+          </div>
+        </div>
+        <div class="px-6 pb-6 pt-0">
+          <a href="booking.html" class="block w-full text-center bg-stone-100 hover:bg-amber-600 hover:text-white text-stone-800 py-2.5 rounded-xl text-sm font-medium transition">Order or Reserve</a>
+        </div>
+      </div>
+    `).join('');
+    
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+
+  function filterMenu(category) {
+    document.querySelectorAll('.menu-filter-btn').forEach(btn => {
+      btn.classList.remove('bg-amber-600', 'text-white');
+      btn.classList.add('bg-stone-800/80', 'text-stone-300');
+    });
+    event.currentTarget.classList.remove('bg-stone-800/80', 'text-stone-300');
+    event.currentTarget.classList.add('bg-amber-600', 'text-white');
+    
+    renderMenu(category);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderMenu('all');
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Test</p><p class="mt-3 text-sm text-slate-400">Exquisite dining experience in the heart of Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="menu.html" class="hover:text-white">Menu</a><a href="booking.html" class="hover:text-white">Book a Table</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@test.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Test. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
