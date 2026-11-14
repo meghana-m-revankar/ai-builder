@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Prerana</title>
+<meta name="description" content="Empowering minds through excellence in education">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Prerana</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="courses.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Courses</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Team</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="courses.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Courses</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Team</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Page hero with featured article highlight -->
+  <section class="relative min-h-[70vh] flex items-center bg-brand-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1636202339022-7d67f7447e3a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Students in classroom learning" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-900/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-600/30 border border-brand-500 text-brand-200 text-sm font-medium mb-6">
+          <i data-lucide="sparkles" class="w-4 h-4"></i> Featured Insight • Ananya Rao
+        </span>
+        <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight mb-6">
+          Bridging the Gap in Quality Supplementary Education
+        </h1>
+        <p class="text-lg sm:text-xl text-brand-100 mb-8 leading-relaxed">
+          Founded in 2016 by Ananya Rao, Prerana has dedicated 8+ years to transforming how 5,000+ students approach complex subjects like Foundation Math and Robotics Workshop. Discover our core educational philosophy.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#main-article" class="inline-flex justify-center items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg">
+            Read Featured Article <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+          <a href="courses.html" class="inline-flex justify-center items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-xl transition border border-white/20">
+            Explore Courses <i data-lucide="book-open" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Main article content snippet with image -->
+  <section id="main-article" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <div class="flex items-center gap-3 text-sm text-brand-600 font-semibold mb-4">
+            <span>Education Strategy</span>
+            <span>•</span>
+            <span>5 min read</span>
+            <span>•</span>
+            <span>October 24, 2023</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-6">
+            Why Conceptual Clarity Matters More Than Rote Learning in Modern STEM
+          </h2>
+          <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+            Since we opened our doors at MG Road, Ashok Nagar, Bengaluru, our mission has been crystal clear: empower young minds through deep conceptual understanding. Whether it is mastering Advanced Physics at ₹18,000 or diving into Coding Basics at ₹12,000, rote memorization fails to prepare students for real-world problem solving.
+          </p>
+          <p class="text-base text-gray-600 mb-8 leading-relaxed">
+            Lead Instructor Rajesh Kumar and our expert faculty design immersive curricula that connect classroom theories to practical applications. By encouraging curiosity through hands-on Science Projects (₹5,000), we watch students bridge the gap between textbook knowledge and innovation every single day.
+          </p>
+          <div class="flex items-center gap-4 pt-6 border-t border-gray-100">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" alt="Ananya Rao" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-gray-900">Ananya Rao</h4>
+              <p class="text-sm text-gray-500">Founder & Educational Director</p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1588075592405-d3d4f0846961?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Students engaged in active learning" class="w-full h-80 sm:h-96 object-cover rounded-2xl shadow-xl">
+            <div class="absolute -bottom-6 -left-6 bg-brand-900 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+              <p class="text-sm font-medium italic text-brand-200">"Education is not just filling a pail, but the lighting of a fire."</p>
+              <span class="block mt-2 text-xs font-bold text-brand-400">— Prerana Philosophy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Recent blog posts grid (6 articles) & 4. Category sidebar for educational topics -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Latest Educational Insights</h2>
+        <p class="text-gray-600 text-lg">Stay updated with expert teaching methodologies, student success stories, and curriculum guides from our Bengaluru center.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Main Posts Grid (3 cols on lg) -->
+        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6" id="blog-posts-grid">
+          <!-- Rendered via JS -->
+        </div>
+
+        <!-- Category Sidebar (1 col on lg) -->
+        <div class="lg:col-span-1 space-y-8">
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="text-lg font-display font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <i data-lucide="folder-open" class="w-5 h-5 text-brand-600"></i> Categories
+            </h3>
+            <ul class="space-y-3" id="blog-categories">
+              <!-- Rendered via JS -->
+            </ul>
+          </div>
+
+          <div class="bg-brand-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden">
+            <div class="relative z-10">
+              <h3 class="text-lg font-display font-bold mb-2">Need Guidance?</h3>
+              <p class="text-sm text-brand-200 mb-4">Speak with Vikram Singh, our student counselor, to find the right path for your child.</p>
+              <a href="index.html#contact" class="inline-block bg-white text-brand-900 font-semibold px-4 py-2 rounded-xl text-sm hover:bg-brand-50 transition">
+                Book Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Author spotlight section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-brand-50 rounded-3xl p-8 sm:p-12 border border-brand-100">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Meet Our Leadership</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2">Author Spotlight: Ananya Rao</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div class="text-center md:text-right">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Ananya Rao Founder" class="w-32 h-32 rounded-full object-cover mx-auto md:ml-auto md:mr-0 shadow-lg border-4 border-white">
+          </div>
+          <div class="md:col-span-2 text-center md:text-left">
+            <h3 class="text-2xl font-display font-bold text-gray-900">Ananya Rao</h3>
+            <p class="text-brand-600 font-medium mb-4">Founder & Lead Contributor</p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Ananya started Prerana in 2016 to bridge the gap in quality supplementary education across Bengaluru. With over 8 years of dedicated experience in curriculum design and student empowerment, she routinely writes about mathematics foundations, experiential learning, and holistic child development.
+            </p>
+            <div class="flex justify-center md:justify-start gap-4 text-sm text-gray-500">
+              <span class="flex items-center gap-1"><i data-lucide="book" class="w-4 h-4 text-brand-600"></i> 42 Articles Published</span>
+              <span class="flex items-center gap-1"><i data-lucide="users" class="w-4 h-4 text-brand-600"></i> 5,000+ Students Mentored</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Newsletter subscription block -->
+  <section class="py-16 md:py-24 bg-brand-900 text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center justify-center p-3 bg-brand-800 rounded-2xl mb-6 text-brand-300">
+        <i data-lucide="mail" class="w-8 h-8"></i>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Subscribe to Educational Insights</h2>
+      <p class="text-brand-200 text-lg max-w-2xl mx-auto mb-8">
+        Get weekly tips on STEM learning, exam preparation strategies, and course updates directly from our Ashok Nagar center.
+      </p>
+      <form name="newsletter" method="POST" data-netlify="true" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+        <input type="email" name="email" placeholder="Enter your email address" required class="flex-grow px-4 py-3 rounded-xl bg-brand-800 border border-brand-700 text-white placeholder-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500">
+        <button type="submit" class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-6 py-3 rounded-xl transition shadow-md">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const blogPosts = [
+      {
+        title: "Mastering Foundation Math: A Step-by-Step Guide",
+        category: "Mathematics",
+        date: "October 18, 2023",
+        readTime: "4 min read",
+        excerpt: "Discover how our Foundation Math curriculum (₹15,000) builds essential analytical logic for middle and high school students.",
+        image: "https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Introduction to Robotics: Building Future Innovators",
+        category: "STEM & Coding",
+        date: "October 12, 2023",
+        readTime: "6 min read",
+        excerpt: "Inside our Robotics Workshop (₹20,000): teaching students hardware assembling, sensors integration, and basic automation.",
+        image: "https://images.unsplash.com/photo-1557989048-03456d01a26e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTR8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Why English Fluency Opens Global Career Doors",
+        category: "Language & Skills",
+        date: "October 05, 2023",
+        readTime: "3 min read",
+        excerpt: "Effective communication techniques taught in our English Fluency course (₹8,000) to boost confidence and articulation.",
+        image: "https://images.unsplash.com/photo-1565057748808-18c797216b0c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTV8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Demystifying Advanced Physics Concepts",
+        category: "Science",
+        date: "September 28, 2023",
+        readTime: "5 min read",
+        excerpt: "How our Advanced Physics classes (₹18,000) break down complex mechanics and electromagnetism into digestible modules.",
+        image: "https://images.unsplash.com/photo-1598981457915-aea220950616?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTZ8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Coding Basics for Young Minds: Where to Start",
+        category: "STEM & Coding",
+        date: "September 20, 2023",
+        readTime: "4 min read",
+        excerpt: "Exploring logical thinking through our Coding Basics program (₹12,000), designed specifically for beginner learners.",
+        image: "https://images.unsplash.com/photo-1644055066046-054ac0fc7213?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTd8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Hands-On Science Projects That Spark Curiosity",
+        category: "Science",
+        date: "September 15, 2023",
+        readTime: "4 min read",
+        excerpt: "Why our Science Projects initiative (₹5,000) encourages experiential learning rather than textbook memorization.",
+        image: "https://images.unsplash.com/photo-1719159381962-4170890ada4e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTh8fHN0dWRlbnRzJTIwY2xhc3Nyb29tJTIwZWR1Y2F0aW9ufGVufDF8fHx8MTc5NDY0NDYwMnww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80"
+      }
+    ];
+
+    const categories = [
+      { name: "Mathematics", count: 8 },
+      { name: "STEM & Coding", count: 12 },
+      { name: "Science", count: 9 },
+      { name: "Language & Skills", count: 6 },
+      { name: "Student Success", count: 7 }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const gridContainer = document.getElementById("blog-posts-grid");
+      if (gridContainer) {
+        gridContainer.innerHTML = blogPosts.map(post => `
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-gray-100 flex flex-col">
+            <img loading="lazy" decoding="async" src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex items-center gap-2 text-xs font-semibold text-brand-600 mb-2">
+                <span>${post.category}</span>
+                <span>•</span>
+                <span>${post.readTime}</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-3">${post.title}</h3>
+              <p class="text-gray-600 text-sm mb-4 flex-grow">${post.excerpt}</p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+                <span>${post.date}</span>
+                <span class="font-medium text-brand-600 hover:underline cursor-pointer">Read article →</span>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      const catContainer = document.getElementById("blog-categories");
+      if (catContainer) {
+        catContainer.innerHTML = categories.map(cat => `
+          <li>
+            <a href="#" class="flex items-center justify-between text-gray-600 hover:text-brand-600 py-1.5 transition text-sm">
+              <span>${cat.name}</span>
+              <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-xs">${cat.count}</span>
+            </a>
+          </li>
+        `).join("");
+      }
+
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
+</main>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Prerana</p><p class="mt-3 text-sm text-slate-400">Empowering minds through excellence in education</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="courses.html" class="hover:text-white">Our Courses</a><a href="team.html" class="hover:text-white">Our Team</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@prerana.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Prerana. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

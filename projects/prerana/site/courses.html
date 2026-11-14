@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Courses | Prerana</title>
+<meta name="description" content="Empowering minds through excellence in education">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#2563eb','600':'#1d4ed8','700':'#1e40af','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Prerana</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="courses.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Courses</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Team</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="courses.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Courses</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Team</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Page Hero with Search and Filter -->
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white py-20">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y2xhc3Nyb29tJTIwc3R1ZGVudHMlMjBsZWFybmluZ3xlbnwxfHx8fDE3OTQ2NDQ2MDJ8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Students in classroom" class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+      <span class="inline-block py-1 px-3 rounded-full bg-brand-500/30 text-brand-200 text-sm font-semibold mb-4 backdrop-blur-sm">Empowering Minds</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">Explore Our Expert Courses</h1>
+      <p class="text-lg text-brand-100 max-w-2xl mx-auto mb-8">Discover our range of meticulously designed courses led by experienced educators to help you achieve academic excellence.</p>
+      
+      <div class="max-w-xl mx-auto bg-white p-2 rounded-2xl shadow-xl flex flex-col sm:flex-row gap-2">
+        <div class="flex-1 flex items-center px-3 bg-gray-50 rounded-xl">
+          <i data-lucide="search" class="w-5 h-5 text-gray-400 mr-2"></i>
+          <input type="text" id="course-search" placeholder="Search courses..." class="w-full py-2 bg-transparent text-gray-800 focus:outline-none text-sm">
+        </div>
+        <button onclick="filterCourses()" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-medium transition text-sm">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Category Tabs -->
+  <section class="py-8 bg-brand-50 border-b border-brand-100 sticky top-16 z-30 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4" id="category-tabs">
+        <button onclick="setCategory('all')" class="cat-btn px-5 py-2.5 rounded-xl font-medium text-sm transition bg-brand-600 text-white shadow-md">All Courses</button>
+        <button onclick="setCategory('stem')" class="cat-btn px-5 py-2.5 rounded-xl font-medium text-sm transition bg-white text-gray-700 hover:bg-brand-100">STEM & Tech</button>
+        <button onclick="setCategory('languages')" class="cat-btn px-5 py-2.5 rounded-xl font-medium text-sm transition bg-white text-gray-700 hover:bg-brand-100">Languages</button>
+        <button onclick="setCategory('workshops')" class="cat-btn px-5 py-2.5 rounded-xl font-medium text-sm transition bg-white text-gray-700 hover:bg-brand-100">Workshops</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Grid of Detailed Course Cards -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Course Spotlight Banner -->
+  <section class="py-16 md:py-24 bg-brand-900 text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 bg-brand-800 rounded-3xl p-8 sm:p-12 border border-brand-700">
+        <div class="w-full lg:w-1/2">
+          <span class="inline-block py-1 px-3 rounded-full bg-amber-400 text-brand-900 text-xs font-bold uppercase tracking-wider mb-4">Spotlight Course</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Robotics Workshop</h2>
+          <p class="text-brand-100 mb-6 leading-relaxed">Dive into the future of technology with our hands-on robotics program. Students build, program, and test autonomous robots while learning core engineering principles.</p>
+          <div class="flex items-center gap-6 mb-8">
+            <div>
+              <span class="block text-xs text-brand-300">Investment</span>
+              <span class="text-2xl font-bold font-display text-amber-300">₹20,000</span>
+            </div>
+            <div>
+              <span class="block text-xs text-brand-300">Duration</span>
+              <span class="text-lg font-semibold">12 Weeks</span>
+            </div>
+          </div>
+          <a href="#courses-grid" class="inline-flex items-center justify-center bg-white text-brand-900 hover:bg-brand-50 px-6 py-3 rounded-xl font-semibold transition shadow-lg">
+            Enroll in Workshop <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Robotics Workshop" class="w-full h-80 object-cover rounded-2xl shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Our Curriculum Is Special Strip -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Why Our Curriculum Is Special</h2>
+        <p class="text-gray-600">Founded by Ananya Rao in 2016, Prerana bridges the gap in quality supplementary education through proven methodologies.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Expert Instructors</h3>
+          <p class="text-gray-600 text-sm">Learn directly from seasoned mentors like Rajesh Kumar who bring real-world clarity to complex academic concepts.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="target" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Proven Track Record</h3>
+          <p class="text-gray-600 text-sm">With 8+ years of dedicated experience, we have successfully guided 5,000+ students toward academic excellence.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="book-open" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Holistic Approach</h3>
+          <p class="text-gray-600 text-sm">Our balanced curriculum combines rigorous analytical problem-solving with creative project-based learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Bundled Course Offers and Discounts -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Bundled Course Offers</h2>
+        <p class="text-gray-600">Maximize your learning and save more with our specially curated multi-course learning bundles.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-brand-50 border border-brand-200 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="inline-block bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Save 20%</div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">Complete STEM Bundle</h3>
+            <p class="text-gray-600 text-sm mb-6">Includes Foundation Math, Advanced Physics, and Coding Basics. Perfect for aspiring engineers and tech enthusiasts.</p>
+            <ul class="space-y-2 mb-8 text-sm text-gray-700">
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Foundation Math (₹15,000)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Advanced Physics (₹18,000)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Coding Basics (₹12,000)</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-brand-200">
+            <div>
+              <span class="text-xs text-gray-500 line-through">₹45,000</span>
+              <span class="text-2xl font-bold font-display text-brand-700 ml-2">₹36,000</span>
+            </div>
+            <a href="index.html#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="bg-brand-50 border border-brand-200 rounded-2xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="inline-block bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4">Save 15%</div>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-2">Future Innovator Bundle</h3>
+            <p class="text-gray-600 text-sm mb-6">Includes Science Projects and Robotics Workshop. Designed to foster hands-on creativity and technical aptitude.</p>
+            <ul class="space-y-2 mb-8 text-sm text-gray-700">
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Science Projects (₹5,000)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Robotics Workshop (₹20,000)</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-600 mr-2"></i> Priority Lab Access</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-brand-200">
+            <div>
+              <span class="text-xs text-gray-500 line-through">₹25,000</span>
+              <span class="text-2xl font-bold font-display text-brand-700 ml-2">₹21,250</span>
+            </div>
+            <a href="index.html#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="py-12 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-4">Have Questions About Our Programs?</h2>
+      <p class="text-brand-100 max-w-xl mx-auto mb-6 text-sm">Speak with our counselor Vikram Singh to find the right educational path for your child.</p>
+      <a href="index.html#contact" class="inline-block bg-white text-brand-900 hover:bg-brand-50 px-8 py-3 rounded-xl font-semibold transition text-sm shadow-lg">Get in Touch</a>
+    </div>
+  </section>
+
+  <script>
+    const coursesData = [
+      { id: 1, title: "Foundation Math", cat: "stem", price: "₹15,000", desc: "Build rock-solid mathematical fundamentals with problem-solving frameworks designed for long-term academic success.", image: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" },
+      { id: 2, title: "Advanced Physics", cat: "stem", price: "₹18,000", desc: "Explore mechanics, thermodynamics, and electromagnetism through analytical inquiry and guided experiments.", image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" },
+      { id: 3, title: "Coding Basics", cat: "stem", price: "₹12,000", desc: "Introduce young minds to programming logic, algorithms, and creative software creation in a supportive environment.", image: "https://images.unsplash.com/photo-1556636530-6b7482d80e3d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8Y29kaW5nJTIwYmFzaWNzJTIwc3R1ZGVudHN8ZW58MXx8fHwxNzk0NjQ0NjAzfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" },
+      { id: 4, title: "English Fluency", cat: "languages", price: "₹8,000", desc: "Enhance verbal articulation, grammar precision, and confident public speaking through immersive modules.", image: "https://images.unsplash.com/photo-1581726707445-75cbe4efc586?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" },
+      { id: 5, title: "Science Projects", cat: "workshops", price: "₹5,000", desc: "Transform theoretical concepts into tangible science models that foster curiosity and practical understanding.", image: "https://images.unsplash.com/photo-1570616969692-54d6ba3d0397?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" },
+      { id: 6, title: "Robotics Workshop", cat: "workshops", price: "₹20,000", desc: "Build, program, and test autonomous robots while learning core engineering principles in our state-of-the-art lab.", image: "https://images.unsplash.com/photo-1581726690015-c9861fa5057f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8c3R1ZGVudHMlMjBjbGFzc3Jvb20lMjBlZHVjYXRpb258ZW58MXx8fHwxNzk0NjQ0NjAyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" }
+    ];
+
+    let currentCategory = 'all';
+
+    function renderCourses(filterText = '') {
+      const grid = document.getElementById('courses-grid');
+      if (!grid) return;
+
+      const filtered = coursesData.filter(c => {
+        const matchesCat = currentCategory === 'all' || c.cat === currentCategory;
+        const matchesSearch = c.title.toLowerCase().includes(filterText.toLowerCase()) || c.desc.toLowerCase().includes(filterText.toLowerCase());
+        return matchesCat && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-500">No courses found matching your criteria.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(c => `
+        <div class="bg-white rounded-2xl shadow-lg hover:-translate-y-1 transition border border-gray-100 overflow-hidden flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="${c.image}" alt="${c.title}" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-50 text-brand-700 uppercase tracking-wide">${c.cat}</span>
+                <span class="text-xl font-display font-bold text-brand-600">${c.price}</span>
+              </div>
+              <h3 class="text-xl font-display font-bold text-gray-900 mb-2">${c.title}</h3>
+              <p class="text-gray-600 text-sm line-clamp-2">${c.desc}</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <a href="index.html#contact" class="w-full block text-center bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 py-2.5 rounded-xl font-medium text-sm transition">Enroll Now</a>
+          </div>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+    }
+
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-gray-700');
+      });
+      event.target.classList.remove('bg-white', 'text-gray-700');
+      event.target.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+      
+      const searchInput = document.getElementById('course-search');
+      renderCourses(searchInput ? searchInput.value : '');
+    }
+
+    function filterCourses() {
+      const searchInput = document.getElementById('course-search');
+      renderCourses(searchInput ? searchInput.value : '');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCourses();
+      const searchInput = document.getElementById('course-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => renderCourses(e.target.value));
+      }
+    });
+  </script>
+</main>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Prerana</p><p class="mt-3 text-sm text-slate-400">Empowering minds through excellence in education</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="courses.html" class="hover:text-white">Our Courses</a><a href="team.html" class="hover:text-white">Our Team</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@prerana.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Prerana. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
