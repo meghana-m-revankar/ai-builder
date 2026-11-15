@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Glow Beauty Salon</title>
+<meta name="description" content="Radiate elegance with our bespoke beauty services.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fff1f2','100':'#ffe4e6','200':'#fecdd3','300':'#fda4af','400':'#fb7185','500':'#e11d48','600':'#be123c','700':'#9f1239','800':'#881337','900':'#4c0519'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Glow Beauty Salon</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-brand-50/50 text-neutral-800">
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-neutral-900 overflow-hidden">
+    <div class="absolute inset-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1761718210089-ba3bb5ccb54f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Glow Beauty Salon Interior" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center text-white">
+      <span class="inline-block py-1 px-4 rounded-full bg-brand-600/30 border border-brand-400/30 text-brand-200 text-sm font-medium mb-6 backdrop-blur-sm">
+        Radiate Elegance in Dubai
+      </span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+        Bespoke Beauty & <span class="text-brand-300">Timeless Grace</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-neutral-200 mb-10 font-light">
+        Experience the finest blend of traditional Arabian beauty rituals and modern global trends at Al Wasl Road, Jumeirah.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-700 transition shadow-lg shadow-brand-600/30">
+          Book Appointment (حجز موعد)
+        </a>
+        <a href="services.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 transition backdrop-blur-sm border border-white/20">
+          Explore Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats Strip -->
+  <section class="bg-brand-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-brand-800">
+        <div class="py-4 md:py-0">
+          <p class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-2">15,000+</p>
+          <p class="text-neutral-300 text-sm sm:text-base">Happy & Loyal Clients</p>
+        </div>
+        <div class="py-4 md:py-0">
+          <p class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-2">4.9 ★</p>
+          <p class="text-neutral-300 text-sm sm:text-base">Google Rating in Jumeirah</p>
+        </div>
+        <div class="py-4 md:py-0">
+          <p class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-2">8+ Years</p>
+          <p class="text-neutral-300 text-sm sm:text-base">Of Excellence & Luxury</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder's Vision Preview -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Founder Sarah Al-Maktoum" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Founder's Vision</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mt-2 mb-6">
+            Crafting beauty with passion and heritage.
+          </h2>
+          <blockquote class="text-neutral-600 text-lg italic mb-6 border-l-4 border-brand-500 pl-4">
+            "Since 2016, our mission has been to celebrate individuality by blending time-honored Arabian rituals with cutting-edge global aesthetics."
+          </blockquote>
+          <p class="text-neutral-600 mb-8">
+            Founded by Sarah Al-Maktoum, Glow Beauty Salon provides an exclusive sanctuary on Al Wasl Road where every guest receives personalized, world-class attention.
+          </p>
+          <a href="about.html" class="inline-flex items-center text-brand-600 font-semibold hover:text-brand-700 transition">
+            Discover Our Story <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Salon Services -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Signature Treatments</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mt-2 mb-4">
+          Curated For Your Radiance
+        </h2>
+        <p class="text-neutral-600">
+          Indulge in our most sought-after bespoke beauty services performed by expert specialists.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-brand-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition border border-brand-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1731514771613-991a02407132?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Bridal Makeup Package" class="w-full h-48 object-cover rounded-xl mb-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-display text-xl font-bold text-neutral-900">Bridal Makeup Package</h3>
+              <span class="text-brand-600 font-bold">AED 2500</span>
+            </div>
+            <p class="text-neutral-600 text-sm mb-6">
+              Complete bridal transformation with premium international cosmetics and trial session included. Ensure you look breathtaking on your special day.
+            </p>
+          </div>
+          <a href="booking.html" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-700 transition">Book Service</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition border border-brand-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1626379501846-0df4067b8bb9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Hydrating Facial" class="w-full h-48 object-cover rounded-xl mb-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-display text-xl font-bold text-neutral-900">Hydrating Facial</h3>
+              <span class="text-brand-600 font-bold">AED 400</span>
+            </div>
+            <p class="text-neutral-600 text-sm mb-6">
+              Deeply nourishing facial treatment designed to restore moisture balance and give your skin an instant, luminous Jumeirah glow.
+            </p>
+          </div>
+          <a href="booking.html" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-700 transition">Book Service</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition border border-brand-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1634449862841-8c6e970117e5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Royal Spa Treatment" class="w-full h-48 object-cover rounded-xl mb-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="font-display text-xl font-bold text-neutral-900">Royal Spa Treatment</h3>
+              <span class="text-brand-600 font-bold">AED 500</span>
+            </div>
+            <p class="text-neutral-600 text-sm mb-6">
+              An ultimate relaxation ritual combining Arabian aromatic oils and modern therapeutic techniques to soothe body and mind.
+            </p>
+          </div>
+          <a href="booking.html" class="w-full text-center py-3 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-700 transition">Book Service</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="services.html" class="inline-flex items-center px-8 py-3 rounded-full border-2 border-brand-600 text-brand-600 font-medium hover:bg-brand-600 hover:text-white transition">
+          View All Services <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">The Glow Experience</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mt-2 mb-4">
+          Why Dubai Chooses Us
+        </h2>
+        <p class="text-neutral-600">
+          We combine luxury, precision, and personalized care to deliver unmatched beauty standards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Expert Specialists</h3>
+          <p class="text-neutral-600 text-sm">Led by top professionals like Fatima and Aisha, our team brings international expertise to every treatment.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Bespoke Rituals</h3>
+          <p class="text-neutral-600 text-sm">Tailored beauty solutions merging traditional Arabian heritage with modern global trends.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Prime Jumeirah Location</h3>
+          <p class="text-neutral-600 text-sm">Conveniently situated on Al Wasl Road with private parking and a serene, luxurious ambiance.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Premium Products</h3>
+          <p class="text-neutral-600 text-sm">We use only world-class, dermatologically tested luxury skincare and haircare brands.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Extended Hours</h3>
+          <p class="text-neutral-600 text-sm">Open daily from 10:00 AM to 10:00 PM to seamlessly fit your busy Dubai lifestyle.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">15,000+ Happy Clients</h3>
+                    <p class="text-neutral-600 text-sm">A trusted 4.9-star rating reflecting our unwavering commitment to client satisfaction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Three-step Beauty Appointment Process -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Seamless Journey</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-900 mt-2 mb-4">
+          Your Path to Radiance
+        </h2>
+        <p class="text-neutral-600">
+          Booking your luxury salon experience takes just a few moments.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="bg-brand-50/30 p-8 rounded-2xl border border-brand-100 text-center relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mx-auto mb-6 text-lg shadow-md">1</div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Select Your Service</h3>
+          <p class="text-neutral-600 text-sm">Choose from our precision haircuts, luxury facials, or bespoke bridal packages.</p>
+        </div>
+
+        <div class="bg-brand-50/30 p-8 rounded-2xl border border-brand-100 text-center relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mx-auto mb-6 text-lg shadow-md">2</div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Choose Date & Time</h3>
+          <p class="text-neutral-600 text-sm">Pick a convenient slot any day of the week between 10:00 AM and 10:00 PM.</p>
+        </div>
+
+        <div class="bg-brand-50/30 p-8 rounded-2xl border border-brand-100 text-center relative">
+          <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center mx-auto mb-6 text-lg shadow-md">3</div>
+          <h3 class="font-display text-xl font-bold text-neutral-900 mb-2">Relax & Glow</h3>
+          <p class="text-neutral-600 text-sm">Visit our Jumeirah sanctuary on Al Wasl Road and enjoy your transformation.</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="booking.html" class="inline-flex items-center px-8 py-4 rounded-full bg-brand-600 text-white font-medium hover:bg-brand-700 transition shadow-lg shadow-brand-600/30">
+          Book Your Appointment Now
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Glow Beauty Salon</p><p class="mt-3 text-sm text-slate-400">Radiate elegance with our bespoke beauty services.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Al Wasl Road, Jumeirah, Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Mon-Sun 10:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 555 0123</p><p class="mt-2 text-sm text-slate-400">hello@glowbeautysalon.ae</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Glow Beauty Salon. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

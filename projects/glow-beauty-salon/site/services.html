@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Glow Beauty Salon</title>
+<meta name="description" content="Radiate elegance with our bespoke beauty services.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fff1f2','100':'#ffe4e6','200':'#fecdd3','300':'#fda4af','400':'#fb7185','500':'#e11d48','600':'#be123c','700':'#9f1239','800':'#881337','900':'#4c0519'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Glow Beauty Salon</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-slate-50 text-slate-800">
+  <!-- 1. Page Hero with Breadcrumbs & Search -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1663811397207-418a92396ad5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bHV4dXJpb3VzJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Glow Beauty Salon Interior" class="absolute inset-0 w-full h-full object-cover opacity-40" />
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
+      <nav class="flex justify-center mb-4 text-sm text-pink-200/80 space-x-2">
+        <a href="index.html" class="hover:text-white transition">Home</a>
+        <span>/</span>
+        <span class="text-white font-medium">Services</span>
+      </nav>
+      <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight mb-6">Bespoke Beauty Treatments</h1>
+      <p class="max-w-2xl mx-auto text-lg text-pink-100/90 mb-8">
+        Immerse yourself in luxury at our Jumeirah sanctuary. From precision styling to royal spa rituals, explore our full menu of premium services.
+      </p>
+      
+      <!-- Search Bar -->
+      <div class="max-w-xl mx-auto relative">
+        <div class="relative flex items-center">
+          <input type="text" id="service-search" placeholder="Search services (e.g., Haircut, Facial, Bridal)..." class="w-full px-5 py-4 pl-12 rounded-full bg-white/95 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-xl" />
+          <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-4"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 & 3. Category Filter Tabs & Service Cards Grid -->
+  <section id="services-list" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-tabs">
+        <button onclick="filterServices('all')" class="tab-btn active px-6 py-2.5 rounded-full text-sm font-semibold transition border border-pink-600 bg-pink-600 text-white shadow-md">All Treatments</button>
+        <button onclick="filterServices('hair')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition border border-pink-200 bg-white text-slate-700 hover:border-pink-600 hover:text-pink-600 shadow-sm">Hair Care</button>
+        <button onclick="filterServices('skin')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition border border-pink-200 bg-white text-slate-700 hover:border-pink-600 hover:text-pink-600 shadow-sm">Skin & Spa</button>
+        <button onclick="filterServices('nails')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition border border-pink-200 bg-white text-slate-700 hover:border-pink-600 hover:text-pink-600 shadow-sm">Nails</button>
+        <button onclick="filterServices('bridal')" class="tab-btn px-6 py-2.5 rounded-full text-sm font-semibold transition border border-pink-200 bg-white text-slate-700 hover:border-pink-600 hover:text-pink-600 shadow-sm">Bridal & Glam</button>
+      </div>
+
+      <!-- Services Grid (Populated via Script) -->
+      <div id="services-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Cards inserted dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Today's Beauty Special Banner -->
+  <section class="py-12 bg-gradient-to-r from-rose-900 via-pink-900 to-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8 bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/10">
+        <div class="space-y-4 max-w-2xl text-center lg:text-left">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-500/20 text-pink-200 border border-pink-500/30 text-xs font-semibold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-4 h-4 text-pink-300"></i> Limited Time Offer
+          </span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold">Today's Royal Radiance Special</h2>
+          <p class="text-pink-100 text-base leading-relaxed">
+            Book any Hair Colour service alongside a Hydrating Facial and receive a complimentary Luxury Nail Spa session. Pamper yourself with our signature treatments.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start items-center gap-6 pt-2 text-sm text-pink-200">
+            <div class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-4 h-4 text-pink-400"></i> Valid until end of month
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="gift" class="w-4 h-4 text-pink-400"></i> Includes complimentary mocktail
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0">
+          <a href="booking.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-rose-950 font-bold hover:bg-pink-100 transition shadow-lg hover:-translate-y-0.5">
+            Claim Offer Now
+            <i data-lucide="arrow-right" class="w-5 h-5 ml-2 text-rose-950"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Our Services Are Special Strip -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mb-4">The Glow Excellence Standard</h2>
+        <p class="text-slate-600">Every treatment is engineered to deliver unmatched luxury and visible results, combining traditional Arabian beauty rituals with global innovations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 rounded-2xl bg-rose-50/50 border border-rose-100 hover:-translate-y-1 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-pink-600 text-white flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Master Stylists</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Led by Fatima and Aisha, our team brings over 8 years of international beauty expertise directly to your personalized session.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-rose-50/50 border border-rose-100 hover:-translate-y-1 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-pink-600 text-white flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="gem" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Premium Products</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">We exclusively use organic, cruelty-free, and high-performance beauty formulations imported from top global cosmetic laboratories.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-rose-50/50 border border-rose-100 hover:-translate-y-1 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-pink-600 text-white flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Tailored Consultations</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Every client undergoes a bespoke consultation to analyze skin tone, hair texture, and individual beauty goals before treatment.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-rose-50/50 border border-rose-100 hover:-translate-y-1 transition duration-300">
+          <div class="w-12 h-12 rounded-xl bg-pink-600 text-white flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Sanctuary Hygiene</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Our Jumeirah salon adheres to medical-grade sterilization standards, providing you a safe and deeply relaxing sanctuary environment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA Band -->
+  <section class="py-16 bg-slate-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <h2 class="font-display text-3xl sm:text-5xl font-bold mb-6">Ready to Radiate Elegance?</h2>
+      <p class="text-pink-100/90 max-w-2xl mx-auto text-lg mb-8">
+        Join our community of over 15,000+ satisfied clients. Reserve your luxury salon experience on Al Wasl Road today.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="px-8 py-4 rounded-full bg-pink-600 text-white font-bold hover:bg-pink-700 transition shadow-lg hover:-translate-y-0.5 inline-flex items-center justify-center">
+          Book Your Appointment Now
+          <i data-lucide="calendar" class="w-5 h-5 ml-2"></i>
+        </a>
+        <a href="about.html" class="px-8 py-4 rounded-full bg-slate-800 text-white font-semibold hover:bg-slate-700 transition border border-slate-700 inline-flex items-center justify-center">
+          Learn More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const servicesData = [
+    {
+      id: 1,
+      title: "Precision Haircut",
+      category: "hair",
+      price: "AED 250",
+      image: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8aGFpcmN1dCUyMHN0eWxpbmd8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Customized wash, structural hair sculpting, and professional blowout by Lead Stylist Fatima. Designed to flatter your face shape and natural hair flow.",
+      duration: "60 mins"
+    },
+    {
+      id: 2,
+      title: "Luxury Hair Colour",
+      category: "hair",
+      price: "AED 600",
+      image: "https://images.unsplash.com/photo-1554519934-e32b1629d9ee?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8aGFpciUyMGR5ZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Full balayage, subtle highlights, or rich single-process colouring using ammonia-free nourishment formulations. Restores silkiness and radiant shine.",
+      duration: "120 mins"
+    },
+    {
+      id: 3,
+      title: "Hydrating Facial",
+      category: "skin",
+      price: "AED 400",
+      image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8c2tpbmNhcmUlMjBmYWNpYWwlMjB0cmVhdG1lbnR8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Deep pore cleansing, botanical exfoliation, and hyaluronic infusion supervised by Senior Aesthetician Aisha. Rejuvenates tired skin for an instant glow.",
+      duration: "75 mins"
+    },
+    {
+      id: 4,
+      title: "Manicure & Pedicure",
+      category: "nails",
+      price: "AED 300",
+      image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bmFpbCUyMG1hbmljdXJlJTIwY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Nourishing spa soak, meticulous cuticle care, exfoliation, and long-lasting gel finish by Nail Specialist Layla. Complete hands and feet pampering.",
+      duration: "90 mins"
+    },
+    {
+      id: 5,
+      title: "Bridal Makeup Package",
+      category: "bridal",
+      price: "AED 2500",
+      image: "https://images.unsplash.com/photo-1610047614301-13c63f00c032?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnJpZGFsJTIwbWFrZXVwJTIwbHV4dXJ5fGVufDF8fHx8MTc5NDc2ODIwNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Comprehensive bridal look including trial session, HD airbrush makeup, and hair styling by Bridal Consultant Zainab. Includes luxury gift kit.",
+      duration: "240 mins"
+    },
+    {
+      id: 6,
+      title: "Royal Spa Treatment",
+      category: "skin",
+      price: "AED 500",
+      image: "https://images.unsplash.com/photo-1595944024804-733665a112db?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Traditional Arabian Hammam rituals blended with modern aromatherapy body polish and relaxing deep tissue session. Total physical renewal.",
+      duration: "105 mins"
+    },
+    {
+      id: 7,
+      title: "Keratin Smooth Therapy",
+      category: "hair",
+      price: "AED 750",
+      image: "https://images.unsplash.com/photo-1695527081782-33e110235ade?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Intense smoothing treatment that eliminates frizz and repairs damaged cuticles. Keeps your hair manageable, soft, and glossy for up to four months.",
+      duration: "150 mins"
+    },
+    {
+      id: 8,
+      title: "Gold Anti-Aging Facial",
+      category: "skin",
+      price: "AED 650",
+      image: "https://images.unsplash.com/photo-1746723378067-83a345ff3160?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OXx8bHV4dXJpb3VzJTIwc2Fsb24lMjBza2luY2FyZXxlbnwxfHx8fDE3OTQ3NjgyMDZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "24K gold foil infusion combined with collagen-stimulating massage techniques. Firms elasticity and leaves skin visibly lifted and luminous.",
+      duration: "90 mins"
+    },
+    {
+      id: 9,
+      title: "Nail Extensions & Art",
+      category: "nails",
+      price: "AED 450",
+      image: "https://images.unsplash.com/photo-1695527081882-a8b051dac51e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTB8fGx1eHVyaW91cyUyMHNhbG9uJTIwc2tpbmNhcmV8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Custom sculpted acrylic or gel extensions paired with handcrafted nail art motifs. Custom designed to match your personal style and occasion.",
+      duration: "105 mins"
+    },
+    {
+      id: 10,
+      title: "Evening Glam Makeup",
+      category: "bridal",
+      price: "AED 550",
+      image: "https://images.unsplash.com/photo-1760895535234-2c39c57cf187?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fGx1eHVyaW91cyUyMHNhbG9uJTIwc2tpbmNhcmV8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Full glam makeup application tailored for galas, red carpets, and special celebrations. Includes premium mink lashes and long-wearing contouring.",
+      duration: "75 mins"
+    },
+    {
+      id: 11,
+      title: "Scalp Detox & Hair Mask",
+      category: "hair",
+      price: "AED 320",
+      image: "https://images.unsplash.com/photo-1731514957270-c7a7d31efd8f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fGx1eHVyaW91cyUyMHNhbG9uJTIwc2tpbmNhcmV8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Exfoliating scalp scrub followed by an organic argan oil steam conditioning treatment. Rebalances oily or dry scalp and stimulates healthy growth.",
+      duration: "45 mins"
+    },
+    {
+      id: 12,
+      title: "Express Glam Duo",
+      category: "bridal",
+      price: "AED 480",
+      image: "https://images.unsplash.com/photo-1731514967573-09e41afb2394?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fGx1eHVyaW91cyUyMHNhbG9uJTIwc2tpbmNhcmV8ZW58MXx8fHwxNzk0NzY4MjA2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      description: "Quick turnaround hair styling and express makeover for busy professionals. Perfect for last-minute meetings or casual evening events.",
+      duration: "60 mins"
+    }
+  ];
+
+  let currentCategory = 'all';
+
+  function renderServices(items) {
+    const grid = document.getElementById('services-grid');
+    if (!grid) return;
+
+    if (items.length === 0) {
+      grid.innerHTML = `
+        <div class="col-span-full text-center py-12">
+          <i data-lucide="search-x" class="w-12 h-12 text-pink-400 mx-auto mb-4"></i>
+          <h3 class="text-xl font-bold text-slate-800 mb-2">No treatments found</h3>
+          <p class="text-slate-600">Try adjusting your search query or category selection.</p>
+        </div>
+      `;
+      if (window.lucide) lucide.createIcons();
+      return;
+    }
+
+    grid.innerHTML = items.map(item => `
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-rose-100 hover:-translate-y-1 transition duration-300 flex flex-col">
+        <div class="relative h-56 overflow-hidden">
+          <img loading="lazy" decoding="async" src="${item.image}" alt="${item.title}" class="w-full h-full object-cover transition duration-500 hover:scale-105" />
+          <div class="absolute top-4 right-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-pink-400"></i> ${item.duration}
+          </div>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <h3 class="font-display text-xl font-bold text-slate-900">${item.title}</h3>
+              <span class="text-lg font-bold text-pink-600 whitespace-nowrap">${item.price}</span>
+            </div>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">${item.description}</p>
+          </div>
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="booking.html" class="w-full text-center py-3 rounded-xl bg-rose-50 text-pink-700 hover:bg-pink-600 hover:text-white font-semibold transition text-sm flex items-center justify-center gap-2">
+              Book Appointment
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    if (window.lucide) lucide.createIcons();
+  }
+
+  function filterServices(category) {
+    currentCategory = category;
+    
+    // Update Tab Styles
+    const buttons = document.querySelectorAll('#category-tabs button');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-pink-600', 'text-white', 'border-pink-600');
+      btn.classList.add('bg-white', 'text-slate-700', 'border-pink-200');
+    });
+
+    const activeBtn = event ? event.currentTarget : buttons[0];
+    if (activeBtn) {
+      activeBtn.classList.remove('bg-white', 'text-slate-700', 'border-pink-200');
+      activeBtn.classList.add('bg-pink-600', 'text-white', 'border-pink-600');
+    }
+
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const searchVal = document.getElementById('service-search').value.toLowerCase().trim();
+    
+    const filtered = servicesData.filter(item => {
+      const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+      const matchesSearch = item.title.toLowerCase().includes(searchVal) || item.description.toLowerCase().includes(searchVal);
+      return matchesCategory && matchesSearch;
+    });
+
+    renderServices(filtered);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderServices(servicesData);
+
+    const searchInput = document.getElementById('service-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', applyFilters);
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Glow Beauty Salon</p><p class="mt-3 text-sm text-slate-400">Radiate elegance with our bespoke beauty services.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Al Wasl Road, Jumeirah, Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Mon-Sun 10:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 555 0123</p><p class="mt-2 text-sm text-slate-400">hello@glowbeautysalon.ae</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Glow Beauty Salon. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
