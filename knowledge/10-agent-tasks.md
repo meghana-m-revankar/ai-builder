@@ -10,6 +10,9 @@ Each agent reads its own section below and follows it exactly, together with the
 - Output only the files listed for your role. Never write files that belong to another agent.
 - Write each file once, with its full path and complete content. No duplicates, no placeholders like "..." or "rest of code here".
 - Return valid JSON: `{"summary": "...", "files": [{"path": "...", "content": "..."}]}`. Escape quotes and newlines correctly.
+  - The reply is that JSON object and nothing else: no ```json fences, no text before or after it, no nesting it inside another key.
+  - `path` is relative to the project root (`site/index.html`, not `/site/index.html` or `greenleaf-cafe/site/index.html`).
+- Bilingual sites: Static Site writes the language toggle exactly as 13 Build and Deploy rule E.12 says, in `site/js/app.js` or its own script tag, never inside the chat widget script.
 - If you run short of space, finish the files you started and list what is missing in `summary`. Never stop in the middle of a file.
 
 ## Architect
