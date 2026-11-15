@@ -54,6 +54,11 @@ After generation, every `https://picsum.photos/seed/<seed>/<w>/<h>` URL is **rep
 9. Tables on mobile scroll inside `overflow-x-auto`; forms are one column on mobile, two on `md:`.
 10. No horizontal scroll at any width: no element wider than the viewport, `overflow-x-hidden` on `body` only as a last resort.
 11. RTL (Arabic): use logical classes (`ms-`, `me-`, `ps-`, `pe-`, `start-`, `end-`, `text-start`) instead of `ml-`, `mr-`, `left-`, `right-`, `text-left`; set `dir="rtl"` on `<html>` when the language is Arabic and mirror directional icons (`rtl:rotate-180`).
+12. Language switch (bilingual sites) must actually work:
+    - Give every visible text element `data-i18n="key"`; keep all translations in one JS object `{ en: {...}, ar: {...} }`. Prices, phone numbers and brand names stay unchanged.
+    - The toggle button calls `setLanguage(lang)`, which updates every `[data-i18n]` element (and `data-i18n-placeholder` inputs), sets `<html lang>` and `dir` (`rtl` for Arabic), updates the button label and saves the choice in `localStorage` (wrapped in try/catch).
+    - Call `setLanguage()` once on page load with the saved language, or the browser language, defaulting to English.
+    - Put the language script in its own `<script>` tag, separate from the chat widget or any other module script, so a failing chat/webhook can never break the switch.
 
 ## F. Final self-check (do it before returning files)
 - [ ] Every `.cs` file has the usings for every type/method it uses.
@@ -62,3 +67,4 @@ After generation, every `https://picsum.photos/seed/<seed>/<w>/<h>` URL is **rep
 - [ ] Every SQL column used in procedures/seed exists in `schema.sql`.
 - [ ] Every picsum seed is descriptive (rule D).
 - [ ] Layout passes rule E at 360px and 1280px.
+- [ ] Bilingual sites: clicking the language toggle changes all text and direction (rule E.12).
