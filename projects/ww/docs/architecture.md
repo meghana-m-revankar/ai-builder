@@ -1,10 +1,8 @@
 docs/architecture.md
-Pages: index.html (Home, Menu, Contact)
+Pages: index.html (English), index-ar.html (Arabic).
 Structure:
-docs/
-  index.html
-  css/
-    style.css
-  js/
-    main.js
-  images/
+- index.html
+- index-ar.html
+- css/style.css
+- js/chat.js
+- images/

@@ -2,243 +2,335 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Booking | Ww</title>
-<meta name="description" content="Authentic flavors, timeless hospitality.">
+<title>Reservations | GreenLeaf Cafe</title>
+<meta name="description" content="Fresh flavors and sustainable brews in the heart of Dubai">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fffbeb','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0fdf4','100':'#dcfce7','200':'#bbf7d0','300':'#86efac','400':'#4ade80','500':'#22c55e','600':'#16a34a','700':'#15803d','800':'#166534','900':'#14532d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-slate-800">
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Ww</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
-    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">GreenLeaf Cafe</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Reservations</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Reservations</a></div>
 </header>
 <main>
-<main class="bg-[#FDFBF7] text-neutral-800">
-  <section class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white py-24">
-    <div class="absolute inset-0 z-0 opacity-40">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1515668236457-83c3b8764839?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTB8fHJlc3RhdXJhbnQlMjBkaW5pbmclMjBjdWlzaW5lfGVufDF8fHx8MTc5NDc2NjE0M3ww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Restaurant dining room" class="w-full h-full object-cover">
+<main class="bg-brand-50 text-stone-800">
+  <!-- 1. Page Hero -->
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1777372403660-fa09024321d7?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8b3JnYW5pYyUyMGNhZmUlMjBzcGVjaWFsdHl8ZW58MXx8fHwxNzk0NzY2NjQ4fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Elegant table setting at GreenLeaf Cafe" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
     </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-4xl sm:text-6xl font-display font-bold mb-4">Table Reservation</h1>
-      <p class="text-lg sm:text-xl text-neutral-200 max-w-2xl mx-auto">Experience timeless hospitality and authentic flavors. Secure your table at Ww today.</p>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-24">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-800/80 text-emerald-100 text-sm font-medium mb-4 backdrop-blur-sm">Table Reservations</span>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight mb-6">Reserve Your Sustainable Dining Experience</h1>
+      <p class="text-lg sm:text-xl text-stone-200 max-w-2xl mx-auto">Join us in the heart of Downtown Dubai for ethically sourced coffee and wholesome, locally grown dishes.</p>
     </div>
   </section>
 
-  <section class="py-16 md:py-24">
+  <!-- 2 & 3. Booking Form & Summary Card (App Interface) -->
+  <section id="reserve" class="py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-        <div class="lg:col-span-7 bg-white p-8 rounded-2xl shadow-lg border border-neutral-100">
-          <h2 class="text-2xl font-display font-bold mb-6 text-brand-900 flex items-center gap-2">
-            <i data-lucide="calendar-check" class="w-6 h-6 text-brand-600"></i> Reserve Your Experience
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Interactive Booking Form -->
+        <div class="lg:col-span-2 bg-white rounded-2xl shadow-xl p-6 sm:p-10 border border-stone-100">
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-stone-900 mb-6 flex items-center gap-3">
+            <i data-lucide="calendar" class="w-7 h-7 text-emerald-700"></i>
+            Select Your Date & Time
           </h2>
+          
           <form id="booking-form" class="space-y-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label class="block text-sm font-medium text-neutral-700 mb-2">Full Name</label>
-                <input type="text" id="book-name" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Vikram Singh">
+                <label class="block text-sm font-medium text-stone-700 mb-2">Date</label>
+                <input type="date" id="book-date" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-700 focus:outline-none bg-stone-50">
               </div>
               <div>
-                <label class="block text-sm font-medium text-neutral-700 mb-2">Email Address</label>
-                <input type="email" id="book-email" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="hello@ww.in">
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div>
-                <label class="block text-sm font-medium text-neutral-700 mb-2">Date</label>
-                <input type="date" id="book-date" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-neutral-700 mb-2">Time</label>
-                <select id="book-time" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                  <option value="">Select Time</option>
-                  <option value="12:00 PM">12:00 PM</option>
-                  <option value="01:00 PM">01:00 PM</option>
-                  <option value="02:00 PM">02:00 PM</option>
-                  <option value="07:00 PM">07:00 PM</option>
-                  <option value="08:00 PM">08:00 PM</option>
-                  <option value="09:00 PM">09:00 PM</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-neutral-700 mb-2">Guests</label>
-                <select id="book-guests" required class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
-                  <option value="1">1 Guest</option>
-                  <option value="2" selected>2 Guests</option>
-                  <option value="3">3 Guests</option>
-                  <option value="4">4 Guests</option>
-                  <option value="5">5+ Guests</option>
+                <label class="block text-sm font-medium text-stone-700 mb-2">Number of Guests</label>
+                <select id="book-guests" required class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-700 focus:outline-none bg-stone-50">
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6+ People (Group)</option>
                 </select>
               </div>
             </div>
+
             <div>
-              <label class="block text-sm font-medium text-neutral-700 mb-2">Special Requests</label>
-              <textarea id="book-notes" rows="3" class="w-full px-4 py-3 rounded-lg border border-neutral-300 focus:ring-2 focus:ring-brand-500 focus:outline-none" placeholder="Dietary restrictions, anniversary, etc."></textarea>
+              <label class="block text-sm font-medium text-stone-700 mb-2">Select Time Slot</label>
+              <div id="time-slots" class="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                <!-- Dynamically populated slots -->
+              </div>
             </div>
-            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
-              <i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Reservation
+
+            <div class="border-t border-stone-100 pt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-stone-700 mb-2">Full Name</label>
+                <input type="text" id="book-name" required placeholder="Sarah Al-Farsi" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-700 focus:outline-none bg-stone-50">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-stone-700 mb-2">Phone Number</label>
+                <input type="tel" id="book-phone" required placeholder="+971 4 555 0123" class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-700 focus:outline-none bg-stone-50">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-stone-700 mb-2">Special Requests or Dietary Requirements</label>
+              <textarea id="book-notes" rows="3" placeholder="Let us know about allergies or seating preferences..." class="w-full px-4 py-3 rounded-xl border border-stone-200 focus:ring-2 focus:ring-emerald-700 focus:outline-none bg-stone-50"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 bg-emerald-800 hover:bg-emerald-900 text-white font-semibold rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              Confirm Reservation
             </button>
           </form>
         </div>
 
-        <div class="lg:col-span-5">
-          <div class="bg-white p-8 rounded-2xl shadow-lg border border-neutral-100 sticky top-24">
-            <h3 class="text-xl font-display font-bold mb-4 text-brand-900 border-b pb-3">Reservation Summary</h3>
-            <div id="reservation-summary" class="space-y-4 text-neutral-600">
-              <p class="italic text-sm text-neutral-500">Fill out the form to generate your live summary.</p>
+        <!-- Summary Card -->
+        <div class="lg:col-span-1">
+          <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-stone-100 sticky top-24">
+            <h3 class="text-xl font-display font-bold text-stone-900 mb-4 pb-4 border-b border-stone-100 flex items-center gap-2">
+              <i data-lucide="receipt" class="w-5 h-5 text-emerald-700"></i>
+              Reservation Summary
+            </h3>
+
+            <div id="summary-content" class="space-y-4 text-stone-600">
+              <!-- Rendered via JS -->
             </div>
-            <div id="booking-confirmed-msg" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl">
-              <p class="font-bold flex items-center gap-2"><i data-lucide="sparkles" class="w-5 h-5"></i> Table Confirmed!</p>
-              <p class="text-sm mt-1">We have saved your details. We look forward to welcoming you at 14 MG Road.</p>
+
+            <div class="mt-8 bg-stone-50 p-4 rounded-xl border border-stone-200/60 text-sm text-stone-600 space-y-2">
+              <div class="flex items-center gap-2 font-medium text-stone-900">
+                <i data-lucide="map-pin" class="w-4 h-4 text-emerald-700"></i>
+                GreenLeaf Cafe Downtown
+              </div>
+              <p class="text-xs text-stone-500">Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE</p>
+              <p class="text-xs text-stone-500">Hours: Daily 8:00 AM - 11:00 PM</p>
+            </div>
+
+            <div id="booking-success-alert" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-sm animate-fade-in">
+              <div class="font-semibold flex items-center gap-1.5 mb-1">
+                <i data-lucide="check" class="w-4 h-4"></i> Table Reserved Successfully!
+              </div>
+              <p class="text-xs text-emerald-700">We have saved your details. We look forward to welcoming you.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="py-16 md:py-24 bg-neutral-100">
+  <!-- 4. Expectations -->
+  <section class="py-16 md:py-24 bg-stone-100/70 border-y border-stone-200/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-900 mb-4">What to Expect</h2>
-        <p class="text-neutral-600">Since 2016, we have crafted an atmosphere where every guest feels like family through our timeless hospitality.</p>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">What to Expect During Your Visit</h2>
+        <p class="text-stone-600">We pride ourselves on offering more than just exceptional organic coffee and farm-to-table cuisine.</p>
       </div>
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-md">
-          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-            <i data-lucide="utensils" class="w-6 h-6"></i>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 hover:-translate-y-1 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-6">
+            <i data-lucide="sprout" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-display font-bold mb-2 text-brand-900">Heritage Recipes</h3>
-          <p class="text-neutral-600">Enjoy 50+ unique recipes crafted with authentic spices and slow-cooked precision.</p>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-2">100% Sustainable Sourcing</h3>
+          <p class="text-stone-600">Every ingredient in our Avocado Sourdough Toast and Quinoa Harvest Bowl is thoughtfully procured from local farms.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md">
-          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
-            <i data-lucide="award" class="w-6 h-6"></i>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 hover:-translate-y-1 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-6">
+            <i data-lucide="coffee" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-display font-bold mb-2 text-brand-900">Award-Winning Service</h3>
-          <p class="text-neutral-600">Backed by a 4.9★ Google rating and 25,000+ satisfied guests over 8+ years.</p>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-2">Artisanal Craftsmanship</h3>
+          <p class="text-stone-600">Our baristas meticulously brew our signature Matcha Latte and Cold Brew Infusion to absolute perfection.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md">
-          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-stone-200/60 hover:-translate-y-1 transition">
+          <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center mb-6">
             <i data-lucide="heart" class="w-6 h-6"></i>
           </div>
-          <h3 class="text-xl font-display font-bold mb-2 text-brand-900">Warm Ambiance</h3>
-          <p class="text-neutral-600">Immerse yourself in our warm editorial aesthetic designed for intimate and memorable dining.</p>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-2">Warm, Organic Ambiance</h3>
+          <p class="text-stone-600">Immerse yourself in a serene environment designed with earth tones and natural greenery in Downtown Dubai.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- 5. FAQ -->
   <section class="py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-display font-bold text-center text-brand-900 mb-12">Booking FAQ</h2>
-      <div class="space-y-6">
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-neutral-200">
-          <h3 class="font-display font-bold text-lg text-brand-900 mb-2">Do you accept walk-ins?</h3>
-          <p class="text-neutral-600">Yes, we keep a few tables reserved for walk-ins, but advance booking is strongly recommended during weekends.</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-stone-600">Got questions about your upcoming reservation? Find answers below.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/60">
+          <h3 class="text-lg font-display font-bold text-stone-900 mb-2">Can we book tables for private events?</h3>
+          <p class="text-stone-600 text-sm">Yes, GreenLeaf Cafe offers full and partial buyouts for private gatherings, workshops, and corporate breakfasts. Please contact our team directly via email or phone.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-neutral-200">
-          <h3 class="font-display font-bold text-lg text-brand-900 mb-2">What are your operating hours?</h3>
-          <p class="text-neutral-600">We are open Mon-Sat 9AM-9PM and Sun 10AM-6PM to serve you authentic flavors.</p>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/60">
+          <h3 class="text-lg font-display font-bold text-stone-900 mb-2">What is the maximum group size for online bookings?</h3>
+          <p class="text-stone-600 text-sm">Our online reservation system accommodates parties of up to 6 guests. For larger groups, please reach out to us at hello@greenleafcafe.ae so we can curate your seating.</p>
         </div>
-        <div class="bg-white p-6 rounded-xl shadow-sm border border-neutral-200">
-          <h3 class="font-display font-bold text-lg text-brand-900 mb-2">Can I modify my reservation?</h3>
-          <p class="text-neutral-600">You can easily modify your details by contacting us directly at +91 80 4567 8910.</p>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/60">
+          <h3 class="text-lg font-display font-bold text-stone-900 mb-2">Do you hold tables if we are running late?</h3>
+          <p class="text-stone-600 text-sm">We hold reserved tables for up to 15 minutes past the booking time. If you anticipate a delay, kindly give us a quick call at +971 4 555 0123.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-brand-900 text-white">
+  <!-- 6. CTA Band -->
+  <section class="py-16 bg-emerald-900 text-white">
     <div class="max-w-5xl mx-auto px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Plan Your Visit Today</h2>
-      <p class="text-neutral-300 mb-8 max-w-xl mx-auto">Join us at 2nd Floor, 14 MG Road, Bengaluru for an unforgettable culinary journey.</p>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Prefer to Explore Our Menu First?</h2>
+      <p class="text-emerald-100 max-w-2xl mx-auto mb-8">Take a look at our sustainable brews, wholesome bowls, and artisanal pastries before securing your table.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="menu.html" class="bg-white text-brand-900 font-medium px-8 py-3 rounded-lg hover:bg-neutral-100 transition-colors">Explore Menu</a>
-        <a href="index.html" class="border border-white/30 text-white font-medium px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">Contact Us</a>
+        <a href="menu.html" class="px-8 py-4 bg-white text-emerald-900 font-semibold rounded-xl hover:bg-stone-100 transition shadow-lg">View Full Menu</a>
+        <a href="contact.html" class="px-8 py-4 bg-emerald-800 text-white font-semibold rounded-xl hover:bg-emerald-700 transition border border-emerald-700">Contact Us</a>
       </div>
     </div>
   </section>
 </main>
 
 <script>
+  // Booking App Logic with LocalStorage
   document.addEventListener('DOMContentLoaded', () => {
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
+    const timeSlots = ['08:00 AM', '09:30 AM', '11:00 AM', '12:30 PM', '02:00 PM', '04:00 PM', '06:00 PM', '08:00 PM'];
+    
+    // Set default date to today
+    const dateInput = document.getElementById('book-date');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.value = today;
+    dateInput.min = today;
+
+    // State
+    let bookingState = JSON.parse(localStorage.getItem('greenleaf_booking')) || {
+      date: today,
+      guests: '2',
+      time: '09:30 AM',
+      name: '',
+      phone: '',
+      notes: ''
+    };
+
+    const slotsContainer = document.getElementById('time-slots');
+    const guestsSelect = document.getElementById('book-guests');
+    const nameInput = document.getElementById('book-name');
+    const phoneInput = document.getElementById('book-phone');
+    const notesInput = document.getElementById('book-notes');
+    const summaryContainer = document.getElementById('summary-content');
+    const form = document.getElementById('booking-form');
+    const successAlert = document.getElementById('booking-success-alert');
+
+    guestsSelect.value = bookingState.guests;
+    nameInput.value = bookingState.name;
+    phoneInput.value = bookingState.phone;
+    notesInput.value = bookingState.notes;
+
+    function renderSlots() {
+      slotsContainer.innerHTML = '';
+      timeSlots.forEach(slot => {
+        const isSelected = bookingState.time === slot;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `py-2.5 px-3 rounded-xl text-sm font-medium transition border ${isSelected ? 'bg-emerald-800 text-white border-emerald-800 shadow-md' : 'bg-stone-50 text-stone-700 border-stone-200 hover:border-emerald-700'}`;
+        btn.textContent = slot;
+        btn.onclick = () => {
+          bookingState.time = slot;
+          saveAndRender();
+        };
+        slotsContainer.appendChild(btn);
+      });
     }
 
-    const form = document.getElementById('booking-form');
-    const summary = document.getElementById('reservation-summary');
-    const confirmedMsg = document.getElementById('booking-confirmed-msg');
-
-    const nameInput = document.getElementById('book-name');
-    const emailInput = document.getElementById('book-email');
-    const dateInput = document.getElementById('book-date');
-    const timeInput = document.getElementById('book-time');
-    const guestsInput = document.getElementById('book-guests');
-    const notesInput = document.getElementById('book-notes');
-
-    function updateSummary() {
-      const name = nameInput.value || 'Not provided';
-      const email = emailInput.value || 'Not provided';
-      const date = dateInput.value || 'Not selected';
-      const time = timeInput.value || 'Not selected';
-      const guests = guestsInput.value;
-      const notes = notesInput.value || 'None';
-
-      summary.innerHTML = `
-        <div class="flex justify-between border-b pb-2"><span class="font-medium">Name:</span> <span>${name}</span></div>
-        <div class="flex justify-between border-b pb-2"><span class="font-medium">Email:</span> <span>${email}</span></div>
-        <div class="flex justify-between border-b pb-2"><span class="font-medium">Date:</span> <span>${date}</span></div>
-        <div class="flex justify-between border-b pb-2"><span class="font-medium">Time:</span> <span>${time}</span></div>
-        <div class="flex justify-between border-b pb-2"><span class="font-medium">Guests:</span> <span>${guests}</span></div>
-        <div class="flex justify-between"><span class="font-medium">Notes:</span> <span class="truncate max-w-[180px]">${notes}</span></div>
+    function renderSummary() {
+      summaryContainer.innerHTML = `
+        <div class="flex justify-between items-center py-2 border-b border-stone-100">
+          <span class="text-stone-500">Date</span>
+          <span class="font-semibold text-stone-900">${bookingState.date}</span>
+        </div>
+        <div class="flex justify-between items-center py-2 border-b border-stone-100">
+          <span class="text-stone-500">Time</span>
+          <span class="font-semibold text-stone-900">${bookingState.time}</span>
+        </div>
+        <div class="flex justify-between items-center py-2 border-b border-stone-100">
+          <span class="text-stone-500">Guests</span>
+          <span class="font-semibold text-stone-900">${bookingState.guests} Person(s)</span>
+        </div>
+        <div class="flex justify-between items-center py-2">
+          <span class="text-stone-500">Name</span>
+          <span class="font-semibold text-stone-900">${bookingState.name || 'Not provided'}</span>
+        </div>
       `;
     }
 
-    [nameInput, emailInput, dateInput, timeInput, guestsInput, notesInput].forEach(input => {
-      input.addEventListener('input', updateSummary);
-      input.addEventListener('change', updateSummary);
-    });
+    function saveAndRender() {
+      localStorage.setItem('greenleaf_booking', JSON.stringify(bookingState));
+      renderSlots();
+      renderSummary();
+    }
 
-    updateSummary();
+    dateInput.onchange = (e) => {
+      bookingState.date = e.target.value;
+      saveAndRender();
+    };
 
-    form.addEventListener('submit', (e) => {
+    guestsSelect.onchange = (e) => {
+      bookingState.guests = e.target.value;
+      saveAndRender();
+    };
+
+    nameInput.oninput = (e) => {
+      bookingState.name = e.target.value;
+      renderSummary();
+    };
+
+    phoneInput.oninput = (e) => {
+      bookingState.phone = e.target.value;
+    };
+
+    notesInput.oninput = (e) => {
+      bookingState.notes = e.target.value;
+    };
+
+    form.onsubmit = (e) => {
       e.preventDefault();
-      const bookingData = {
-        name: nameInput.value,
-        email: emailInput.value,
-        date: dateInput.value,
-        time: timeInput.value,
-        guests: guestsInput.value,
-        notes: notesInput.value
-      };
-      localStorage.setItem('ww_latest_booking', JSON.stringify(bookingData));
-      confirmedMsg.classList.remove('hidden');
+      localStorage.setItem('greenleaf_booking', JSON.stringify(bookingState));
+      successAlert.classList.remove('hidden');
       form.reset();
-      updateSummary();
-      window.scrollTo({ top: 300, behavior: 'smooth' });
-    });
+      setTimeout(() => {
+        successAlert.classList.add('hidden');
+      }, 5000);
+    };
+
+    saveAndRender();
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
   });
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Ww</p><p class="mt-3 text-sm text-slate-400">Authentic flavors, timeless hospitality.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@ww.in</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">GreenLeaf Cafe</p><p class="mt-3 text-sm text-slate-400">Fresh flavors and sustainable brews in the heart of Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="contact.html" class="hover:text-white">Contact</a><a href="booking.html" class="hover:text-white">Reservations</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 11:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 555 0123</p><p class="mt-2 text-sm text-slate-400">hello@greenleafcafe.ae</p></div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Ww. All rights reserved.</div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> GreenLeaf Cafe. All rights reserved.</div>
 </footer>
 <script src="js/site-kit.js"></script>
 </body>

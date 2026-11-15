@@ -1,7 +1,7 @@
-# Ww
+# GreenLeaf Cafe
 
-Authentic flavors, timeless hospitality.
+Fresh flavors and sustainable brews in the heart of Dubai
 
 Static website - open index.html in a browser or host the folder on any static host.
 
-Pages: index.html, about.html, menu.html, booking.html, blog.html
+Pages: index.html, about.html, menu.html, contact.html, booking.html

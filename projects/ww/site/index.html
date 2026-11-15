@@ -2,97 +2,125 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Ww</title>
-<meta name="description" content="Authentic flavors, timeless hospitality.">
+<title>Home | GreenLeaf Cafe</title>
+<meta name="description" content="Fresh flavors and sustainable brews in the heart of Dubai">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fffbeb','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0fdf4','100':'#dcfce7','200':'#bbf7d0','300':'#86efac','400':'#4ade80','500':'#22c55e','600':'#16a34a','700':'#15803d','800':'#166534','900':'#14532d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-slate-800">
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Ww</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
-    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">GreenLeaf Cafe</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Reservations</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Reservations</a></div>
 </header>
 <main>
-<main class="bg-[#FDFBF7] text-[#2C2A29]">
-  <!-- 1. Full-bleed hero -->
+<main>
+  <!-- 3. Language Toggle (Sticky) -->
+  <div class="sticky top-16 z-40 bg-brand-50/90 backdrop-blur-md border-b border-brand-100 py-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end">
+      <button id="lang-toggle" onclick="toggleLanguage()" class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand-800 bg-white border border-brand-200 rounded-full shadow-sm hover:bg-brand-100 transition">
+        <i data-lucide="globe" class="w-3.5 h-3.5 text-brand-600"></i>
+        <span id="lang-text">العربية / English</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 1. Hero -->
   <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <!-- Background image representing video/pouring -->
     <div class="absolute inset-0 z-0">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YXV0aGVudGljJTIwcmVzdGF1cmFudCUyMGRpbmluZ3xlbnwxfHx8fDE3OTQ3NjYxNDN8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Ww Restaurant Interior" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8c3BlY2lhbHR5JTIwY29mZmVlJTIwcG91cmluZ3xlbnwxfHx8fDE3OTQ3NjY2NDh8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Specialty coffee pouring at GreenLeaf Cafe" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
     </div>
-    
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-24">
-      <span class="inline-block py-1 px-3 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-sm font-medium mb-6 backdrop-blur-sm">
-        Serving Heritage Since 2016
-      </span>
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-        Authentic flavors, <br /><span class="italic font-normal">timeless hospitality.</span>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-24">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-900/80 text-emerald-200 text-sm mb-6 backdrop-blur-sm border border-emerald-500/30">
+        <i data-lucide="leaf" class="w-4 h-4"></i>
+        <span data-i18n="hero-badge">Downtown Dubai's Sustainable Oasis</span>
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight" data-i18n="hero-title">
+        Fresh Flavors & Sustainable Brews
       </h1>
-      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-stone-200 mb-10 font-light">
-        Experience the rich heritage of traditional recipes crafted with modern elegance in the heart of Bengaluru.
+      <p class="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-10 font-light" data-i18n="hero-subtitle">
+        Experience conscious dining in the heart of Dubai. Locally sourced ingredients crafted with passion since 2019.
       </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="booking.html" class="px-8 py-4 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-medium transition shadow-lg hover:-translate-y-0.5">
-          Reserve a Table
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="menu.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-500 transition shadow-lg shadow-brand-900/30">
+          <span data-i18n="cta-menu">Explore Menu</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
         </a>
-        <a href="menu.html" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm font-medium transition">
-          Explore Menu
+        <a href="booking.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium backdrop-blur-md transition border border-white/20">
+          <span data-i18n="cta-book">Book a Table</span>
+          <i data-lucide="calendar" class="w-5 h-5 ml-2"></i>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 2. Stats strip -->
-  <section class="bg-stone-900 text-stone-100 py-12">
+  <!-- 2. Stats -->
+  <section class="bg-brand-900 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-brand-800">
         <div class="p-4">
-          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">8+ Years</div>
-          <div class="text-sm text-stone-400">Culinary Excellence</div>
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">5+</div>
+          <div class="text-gray-300 text-sm uppercase tracking-widest" data-i18n="stat-1">Years of Service</div>
         </div>
-        <div class="p-4">
-          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">25,000+</div>
-          <div class="text-sm text-stone-400">Satisfied Guests</div>
+        <div class="p-4 pt-6 md:pt-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">15,000+</div>
+          <div class="text-gray-300 text-sm uppercase tracking-widest" data-i18n="stat-2">Happy Customers</div>
         </div>
-        <div class="p-4">
-          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">4.9★</div>
-          <div class="text-sm text-stone-400">Google Rating</div>
-        </div>
-        <div class="p-4">
-          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">50+</div>
-          <div class="text-sm text-stone-400">Unique Recipes</div>
+        <div class="p-4 pt-6 md:pt-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">4.9 ★</div>
+          <div class="text-gray-300 text-sm uppercase tracking-widest" data-i18n="stat-3">Customer Rating</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Founder story preview section -->
-  <section class="py-16 md:py-24">
+  <!-- 4. About Preview -->
+  <section class="py-16 md:py-24 bg-brand-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="w-full lg:w-1/2">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1647689662423-7948c8523256?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGZvdW5kZXIlMjB2aWtyYW18ZW58MXx8fHwxNzk0NzY2MTQzfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Vikram Singh Founder" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y296eSUyMGNhZmUlMjBpbnRlcmlvcnxlbnwxfHx8fDE3OTQ3NjY2NDh8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Cozy interior of GreenLeaf Cafe" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+            <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-lg hidden sm:block max-w-xs border border-brand-100">
+              <div class="flex items-center gap-3 mb-2">
+                <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Sarah Al-Farsi" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                  <h4 class="font-bold text-gray-900 text-sm">Sarah Al-Farsi</h4>
+                  <p class="text-xs text-brand-600" data-i18n="founder-title">Founder & Sustainability Advocate</p>
+                </div>
+              </div>
+              <p class="text-xs text-gray-600 italic">"Started in 2019 to bring truly local, conscious ingredients to Downtown Dubai."</p>
+            </div>
+          </div>
         </div>
         <div class="w-full lg:w-1/2 space-y-6">
-          <span class="text-amber-700 font-semibold uppercase tracking-wider text-sm">Our Heritage</span>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 leading-tight">
-            Rooted in tradition, crafted for modern palates.
-</h2 >
-          <p class="text-stone-600 leading-relaxed">
-            Founded by Vikram Singh, a culinary enthusiast who started Ww to bring heritage recipes to modern diners, our kitchen is a tribute to India's rich gastronomic past. Every spice is hand-ground, and every recipe tells a story of cultural preservation.
+          <div class="inline-flex items-center gap-2 text-brand-600 font-semibold text-sm uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            <span data-i18n="about-tag">Our Story</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight" data-i18n="about-heading">
+            Rooted in Sustainability & Community
+          </h2>
+          <p class="text-gray-600 text-base leading-relaxed" data-i18n="about-text-1">
+            Founded by Sarah Al-Farsi, GreenLeaf Cafe was born from a deep commitment to sustainable living and wholesome nutrition. Located on Sheikh Mohammed bin Rashid Blvd, we strive to reduce our carbon footprint while serving exquisite flavors.
           </p>
-          <div class="pt-4">
-            <a href="about.html" class="inline-flex items-center gap-2 text-amber-800 font-semibold hover:text-amber-900 transition">
-              Read our full story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          <p class="text-gray-600 text-base leading-relaxed" data-i18n="about-text-2">
+            Every dish, from our signature avocado toast to our cold brew infusions, is meticulously crafted using ethically harvested, local ingredients that honor both your body and the planet.
+          </p>
+          <div>
+            <a href="about.html" class="inline-flex items-center gap-2 text-brand-700 font-semibold hover:text-brand-800 transition group">
+              <span data-i18n="read-more">Read More About Us</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
             </a>
           </div>
         </div>
@@ -100,157 +128,235 @@
     </div>
   </section>
 
-  <!-- 4. Featured dishes gallery -->
-  <section class="py-16 md:py-24 bg-stone-100/60">
+  <!-- 5. Featured Menu -->
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <span class="text-amber-700 font-semibold uppercase tracking-wider text-sm">Signature Offerings</span>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900">Taste the Masterpieces</h2>
-        <p class="text-stone-600">Sample our most beloved dishes, prepared daily with authentic spices and time-honored techniques.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider block mb-2" data-i18n="menu-tag">Seasonal Offerings</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4" data-i18n="menu-heading">Featured Favorites</h2>
+        <p class="text-gray-600 text-lg" data-i18n="menu-sub">Discover our most-loved dishes and artisan brews, prepared fresh daily.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8c2lnbmF0dXJlJTIwYmlyeWFuaSUyMGRpc2h8ZW58MXx8fHwxNzk0NzY2MTQzfDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Signature Biryani" class="w-full h-64 object-cover">
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-center">
-              <h3 class="font-display text-xl font-bold text-stone-900">Signature Biryani</h3>
-              <span class="text-amber-700 font-bold">₹499</span>
-            </div>
-            <p class="text-stone-600 text-sm">Fragrant basmati rice layered with tender, slow-cooked meat and aromatic whole spices.</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnV0dGVyJTIwcGFuZWVyJTIwZ3Jhdnl8ZW58MXx8fHwxNzk0NzY2MTQzfDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Butter Paneer" class="w-full h-64 object-cover">
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-center">
-              <h3 class="font-display text-xl font-bold text-stone-900">Butter Paneer</h3>
-              <span class="text-amber-700 font-bold">₹349</span>
-            </div>
-            <p class="text-stone-600 text-sm">Soft cottage cheese cubes simmered in a rich, velvety creamy tomato gravy with butter.</p>
-          </div>
-        </div>
-
-        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1687020835890-b0b8c6a04613?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8dGFuZG9vcmklMjBwbGF0dGVyJTIwc2tld2Vyc3xlbnwxfHx8fDE3OTQ3NjYxNDN8MA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Tandoori Platter" class="w-full h-64 object-cover">
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-center">
-              <h3 class="font-display text-xl font-bold text-stone-900">Tandoori Platter</h3>
-              <span class="text-amber-700 font-bold">₹599</span>
-            </div>
-            <p class="text-stone-600 text-sm">Assorted marinated skewers char-grilled to perfection in our traditional clay oven.</p>
-          </div>
-        </div>
+      <!-- Menu Grid (Carousel simulation or responsive grid of 6 items) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-menu-grid">
+        <!-- Rendered via script for dynamic language support -->
       </div>
 
-      <div class="text-center mt-12">
-        <a href="menu.html" class="inline-block px-8 py-3 rounded-full bg-stone-900 hover:bg-stone-800 text-white font-medium transition">
-          View Full Menu
+      <div class="mt-12 text-center">
+        <a href="menu.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-brand-50 text-brand-700 font-semibold hover:bg-brand-100 transition border border-brand-200">
+          <span data-i18n="view-all-menu">View Full Menu & Order</span>
+          <i data-lucide="utensils" class="w-4 h-4 ml-2"></i>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 5. Why choose us feature cards -->
-  <section class="py-16 md:py-24">
+  <!-- 6. Why Us -->
+  <section class="py-16 md:py-24 bg-brand-50/50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <span class="text-amber-700 font-semibold uppercase tracking-wider text-sm">The Ww Experience</span>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900">Why Dine With Us</h2>
-        <p class="text-stone-600">We blend exceptional culinary craftsmanship with warm, attentive hospitality for every guest.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider block mb-2" data-i18n="why-tag">The GreenLeaf Standard</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4" data-i18n="why-heading">Why Choose Us</h2>
+        <p class="text-gray-600 text-lg" data-i18n="why-sub">We believe in transparency, quality, and community impact.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
-            <i data-lucide="utensils" class="w-6 h-6"></i>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+            <i data-lucide="sprout" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display text-xl font-bold text-stone-900">Authentic Recipes</h3>
-          <p class="text-stone-600 text-sm leading-relaxed">Every dish is meticulously crafted using heirloom techniques passed down through generations. We preserve the true essence of traditional flavors.</p>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3" data-i18n="why-1-title">Organic Sourcing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="why-1-desc">We partner directly with regional organic farms to bring the freshest ingredients straight to your plate while minimizing food miles.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
-            <i data-lucide="heart" class="w-6 h-6"></i>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display text-xl font-bold text-stone-900">Timeless Hospitality</h3>
-          <p class="text-stone-600 text-sm leading-relaxed">Our team, led by seasoned professionals, ensures you feel welcomed like family from the moment you step through our doors.</p>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3" data-i18n="why-2-title">Fair Trade & Ethical</h3>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="why-2-desc">Our specialty coffee beans are ethically sourced from farmers who receive fair wages, ensuring sustainable livelihoods across the globe.</p>
         </div>
 
-        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-100 space-y-4">
-          <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center">
-            <i data-lucide="sparkles" class="w-6 h-6"></i>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <div class="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand-700 mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display text-xl font-bold text-stone-900">Warm Editorial Ambiance</h3>
-          <p class="text-stone-600 text-sm leading-relaxed">Dine in a thoughtfully designed space that combines rustic warmth with contemporary elegance for an unforgettable atmosphere.</p>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3" data-i18n="why-3-title">Passionate Local Talent</h3>
+          <p class="text-gray-600 text-sm leading-relaxed" data-i18n="why-3-desc">Led by experts like Ahmed and Omar, our dedicated team pours heart and craft into every single cup and plate we serve.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. How it works 3-step guide -->
-  <section class="py-16 md:py-24 bg-stone-900 text-stone-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-        <span class="text-amber-400 font-semibold uppercase tracking-wider text-sm">Seamless Dining</span>
-        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white">How It Works</h2>
-        <p class="text-stone-400">Plan your visit in three simple steps and prepare for a remarkable culinary journey.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-stone-800/60 p-8 rounded-2xl border border-stone-700/50 space-y-4 relative">
-          <span class="absolute top-4 right-6 font-display text-5xl font-bold text-stone-700/40">01</span>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
-            <i data-lucide="calendar" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white">Book Your Table</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">Reserve your spot online in seconds. Choose your preferred date, time, and seating preference effortlessly.</p>
-        </div>
-
-        <div class="bg-stone-800/60 p-8 rounded-2xl border border-stone-700/50 space-y-4 relative">
-          <span class="absolute top-4 right-6 font-display text-5xl font-bold text-stone-700/40">02</span>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
-            <i data-lucide="book-open" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white">Explore the Menu</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">Browse our curated selections of signature biryanis, kebabs, and handcrafted beverages ahead of your visit.</p>
-        </div>
-
-        <div class="bg-stone-800/60 p-8 rounded-2xl border border-stone-700/50 space-y-4 relative">
-          <span class="absolute top-4 right-6 font-display text-5xl font-bold text-stone-700/40">03</span>
-          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
-            <i data-lucide="smile" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-white">Savor & Enjoy</h3>
-          <p class="text-stone-300 text-sm leading-relaxed">Arrive at 14 MG Road, Bengaluru, and let our dedicated team treat you to an unforgettable dining experience.</p>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="booking.html" class="inline-block px-8 py-4 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-medium transition shadow-lg">
-          Book Your Experience Now
+  <!-- CTA Band -->
+  <section class="bg-brand-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4" data-i18n="cta-band-title">Ready to Experience GreenLeaf Cafe?</h2>
+      <p class="text-brand-100 max-w-xl mx-auto mb-8" data-i18n="cta-band-sub">Visit us at Sheikh Mohammed bin Rashid Blvd, Downtown Dubai or reserve your table today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="px-8 py-3.5 rounded-xl bg-white text-brand-900 font-semibold hover:bg-brand-50 transition shadow">
+          <span data-i18n="cta-book">Book a Table</span>
+        </a>
+        <a href="contact.html" class="px-8 py-3.5 rounded-xl bg-brand-700 text-white font-semibold hover:bg-brand-600 transition border border-brand-600">
+          <span data-i18n="cta-contact">Get in Touch</span>
         </a>
       </div>
     </div>
   </section>
 </main>
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  // Language data dictionary for EN / AR
+  const translations = {
+    en: {
+      "hero-badge": "Downtown Dubai's Sustainable Oasis",
+      "hero-title": "Fresh Flavors & Sustainable Brews",
+      "hero-subtitle": "Experience conscious dining in the heart of Dubai. Locally sourced ingredients crafted with passion since 2019.",
+      "cta-menu": "Explore Menu",
+      "cta-book": "Book a Table",
+      "stat-1": "Years of Service",
+      "stat-2": "Happy Customers",
+      "stat-3": "Customer Rating",
+      "founder-title": "Founder & Sustainability Advocate",
+      "about-tag": "Our Story",
+      "about-heading": "Rooted in Sustainability & Community",
+      "about-text-1": "Founded by Sarah Al-Farsi, GreenLeaf Cafe was born from a deep commitment to sustainable living and wholesome nutrition. Located on Sheikh Mohammed bin Rashid Blvd, we strive to reduce our carbon footprint while serving exquisite flavors.",
+      "about-text-2": "Every dish, from our signature avocado toast to our cold brew infusions, is meticulously crafted using ethically harvested, local ingredients that honor both your body and the planet.",
+      "read-more": "Read More About Us",
+      "menu-tag": "Seasonal Offerings",
+      "menu-heading": "Featured Favorites",
+      "menu-sub": "Discover our most-loved dishes and artisan brews, prepared fresh daily.",
+      "view-all-menu": "View Full Menu & Order",
+      "why-tag": "The GreenLeaf Standard",
+      "why-heading": "Why Choose Us",
+      "why-sub": "We believe in transparency, quality, and community impact.",
+      "why-1-title": "Organic Sourcing",
+      "why-1-desc": "We partner directly with regional organic farms to bring the freshest ingredients straight to your plate while minimizing food miles.",
+      "why-2-title": "Fair Trade & Ethical",
+      "why-2-desc": "Our specialty coffee beans are ethically sourced from farmers who receive fair wages, ensuring sustainable livelihoods across the globe.",
+      "why-3-title": "Passionate Local Talent",
+      "why-3-desc": "Led by experts like Ahmed and Omar, our dedicated team pours heart and craft into every single cup and plate we serve.",
+      "cta-band-title": "Ready to Experience GreenLeaf Cafe?",
+      "cta-band-sub": "Visit us at Sheikh Mohammed bin Rashid Blvd, Downtown Dubai or reserve your table today.",
+      "cta-contact": "Get in Touch"
+    },
+    ar: {
+      "hero-badge": "واحة دبي داون تاون المستدامة",
+      "hero-title": "نكهات طازجة ومشروبات مستدامة",
+      "hero-subtitle": "استمتع بتجربة طعام واعية في قلب دبي. مكونات محلية الصنع بحغ شغف منذ عام 2019.",
+      "cta-menu": "استكشف القائمة",
+      "cta-book": "حجز طاولة",
+      "stat-1": "سنوات من الخدمة",
+      "stat-2": "عميل سعيد",
+      "stat-3": "تقييم العملاء",
+      "founder-title": "المؤسسة ومناصرة الاستدامة",
+      "about-tag": "قصتنا",
+      "about-heading": "جذورنا في الاستدامة والمجتمع",
+      "about-text-1": "تأسست بواسطة سارة الفارسي، وُلدت جرين ليف كافيه من التزام عميق بالعيش المستدام والتغذية السليمة. يقع مقعنا في بوليفارد الشيخ محمد بن راشد، ونسعى جاهدين لتقليل بصمتنا الكربونية.",
+      "about-text-2": "كل طبق، من توست الأفوكادو المميز إلى مشروبات الباردة المبردة، مصنوع بعناية باستخدام مكونات محلية يتم حصادها بأخلاقية تكرم جسمك والكوكب.",
+      "read-more": "اقرأ المزيد عنا",
+      "menu-tag": "عروض موسمية",
+      "menu-heading": "المفضلة المميزة",
+      "menu-sub": "اكتشف أطباقنا ومشروباتنا الأكثر حبًا، والتي يتم تحضيرها طازجة يوميًا.",
+      "view-all-menu": "عرض القائمة الكاملة والطلب",
+      "why-tag": "معيار جرين ليف",
+      "why-heading": "لماذا تختارنا",
+      "why-sub": "نؤمن بالشفافية والجودة والتأثير المجتمعي.",
+      "why-1-title": "توريد عضوي",
+      "why-1-desc": "نتعاون مباشرة مع المزارع العضوية الإقليمية لجلب طازج المكونات مباشرة إلى طبقك مع تقليل أميال الغذاء.",
+      "why-2-title": "تجارة عادلة وأخلاقية",
+      "why-2-desc": "تُستورد حبوب القهوة المختصة لدينا بأخلاقية من المزارع الذين يتلقون أجورًا عادلة، مما يضمن سبل عيش مستدامة.",
+      "why-3-title": "مواهب محلية شغوفة",
+      "why-3-desc": "بقيادة خبراء مثل أحمد وعمر، يسكب فريقنا المتفاني القلب والصنعة في كل كوب وطبق نقدمه.",
+      "cta-band-title": "هل أنت مستعد لتجربة جرين ليف كافيه؟",
+      "cta-band-sub": "تفضل بزيارتنا في بوليفارد الشيخ محمد بن راشد، داون تاون دبي أو احجز طاولتك اليوم.",
+      "cta-contact": "اتصل بنا"
+    }
+  };
+
+  const featuredItems = [
+    { name: "Avocado Sourdough Toast", price: "AED 45", desc: "Mashed organic avocado with heirloom tomatoes and microgreens on house-baked sourdough.", seed: "avocado-sourdough-toast" },
+    { name: "Signature Matcha Latte", price: "AED 28", desc: "Ceremonial grade Japanese matcha whisked with velvety steamed oat milk.", seed: "matcha-latte" },
+    { name: "Quinoa Harvest Bowl", price: "AED 55", desc: "Nutrient-dense quinoa with roasted sweet potatoes, kale, avocado, and tahini dressing.", seed: "quinoa-harvest-bowl" },
+    { name: "Cold Brew Infusion", price: "AED 22", desc: "Steeped for 18 hours for a smooth, naturally sweet profile with chocolate notes.", seed: "cold-brew-coffee" },
+    { name: "Pistachio Croissant", price: "AED 18", desc: "Flaky, buttery pastry filled with rich house-made organic pistachio cream.", seed: "pistachio-croissant" },
+    { name: "Berry Acai Bowl", price: "AED 42", desc: "Blended organic acai topped with fresh berries, chia seeds, and toasted coconut flakes.", seed: "acai-bowl" }
+  ];
+
+  let currentLang = localStorage.getItem('greenleaf_lang') || 'en';
+
+  function renderFeaturedMenu() {
+    const container = document.getElementById('featured-menu-grid');
+    if (!container) return;
+    
+    let html = '';
+    featuredItems.forEach(item => {
+      html += `
+        <div class="bg-white rounded-2xl shadow-lg hover:-translate-y-1 transition overflow-hidden border border-brand-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/${item.seed}/600/400" alt="${item.name}" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="font-display text-xl font-bold text-gray-900">${item.name}</h3>
+                <span class="text-brand-700 font-semibold bg-brand-50 px-2.5 py-1 rounded-lg text-sm">${item.price}</span>
+              </div>
+              <p class="text-gray-600 text-sm leading-relaxed">${item.desc}</p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-0">
+            <a href="menu.html" class="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-brand-600 hover:text-brand-800 transition">
+              <span>Order Now</span>
+              <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-1"></i>
+            </a>
+          </div>
+        </div>
+      `;
+    });
+    container.innerHTML = html;
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+  }
+
+  function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('greenleaf_lang', currentLang);
+    applyLanguage();
+  }
+
+  function applyLanguage() {
+    const dict = translations[currentLang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        el.textContent = dict[key];
+      }
+    });
+
+    const htmlEl = document.documentElement;
+    if (currentLang === 'ar') {
+      htmlEl.setAttribute('dir', 'rtl');
+      htmlEl.setAttribute('lang', 'ar');
+    } else {
+      htmlEl.setAttribute('dir', 'ltr');
+      htmlEl.setAttribute('lang', 'en');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderFeaturedMenu();
+    applyLanguage();
   });
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Ww</p><p class="mt-3 text-sm text-slate-400">Authentic flavors, timeless hospitality.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@ww.in</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">GreenLeaf Cafe</p><p class="mt-3 text-sm text-slate-400">Fresh flavors and sustainable brews in the heart of Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="contact.html" class="hover:text-white">Contact</a><a href="booking.html" class="hover:text-white">Reservations</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 11:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 555 0123</p><p class="mt-2 text-sm text-slate-400">hello@greenleafcafe.ae</p></div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Ww. All rights reserved.</div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> GreenLeaf Cafe. All rights reserved.</div>
 </footer>
 <script src="js/site-kit.js"></script>
 </body>

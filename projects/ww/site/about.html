@@ -2,307 +2,225 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About Us | Ww</title>
-<meta name="description" content="Authentic flavors, timeless hospitality.">
+<title>About Us | GreenLeaf Cafe</title>
+<meta name="description" content="Fresh flavors and sustainable brews in the heart of Dubai">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fffbeb','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0fdf4','100':'#dcfce7','200':'#bbf7d0','300':'#86efac','400':'#4ade80','500':'#22c55e','600':'#16a34a','700':'#15803d','800':'#166534','900':'#14532d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
 <body class="font-sans antialiased bg-white text-slate-800">
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Ww</a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
-    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">GreenLeaf Cafe</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Reservations</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Reservations</a></div>
 </header>
 <main>
-<main class="bg-brand-50/40 text-slate-800 font-sans">
-  <!-- 1. Page Hero with Breadcrumbs -->
-  <section class="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGRpbmluZ3xlbnwxfHx8fDE3OTQ3NjYxNDN8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Ww Dining Atmosphere" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/50 to-slate-950/30"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center text-white">
-      <nav class="flex justify-center items-center gap-2 text-sm text-brand-200 mb-4 font-medium tracking-wide">
-        <a href="index.html" class="hover:text-white transition">Home</a>
-        <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        <span class="text-white">About Us</span>
-      </nav>
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">Our Heritage & Passion</h1>
-      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-200 font-light leading-relaxed">
-        Authentic flavors and timeless hospitality since 2016. Crafting unforgettable culinary memories in the heart of Bengaluru.
-      </p>
+<main class="bg-brand-50 text-stone-800">
+  <!-- 1. Page Hero -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y296eSUyMGludGVyaW9yJTIwY2FmZXxlbnwxfHx8fDE3OTQ3NjY2NDh8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="GreenLeaf Cafe interior" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+      <span class="inline-block py-1 px-3 rounded-full bg-emerald-800/80 text-emerald-100 text-sm font-medium mb-4 backdrop-blur-sm">Our Story</span>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight mb-6">Rooted in Passion, Grown in Dubai</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-stone-200">Discover the journey behind GreenLeaf Cafe and our unwavering commitment to sustainable, wholesome dining in the heart of the city.</p>
     </div>
   </section>
 
-  <!-- Quick Stats Bar -->
-  <section class="bg-brand-900 text-white py-10 border-b border-brand-800">
+  <!-- 2. Founder Story -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1546029029-d02d455e0e30?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8b3JnYW5pYyUyMGNhZmUlMjBmb3VuZGVyfGVufDF8fHx8MTc5NDc2NjY0OHww&ixlib=rb-4.1.0&w=800&h=800&fit=crop&auto=format&q=80" alt="Sarah Al-Farsi Founder" class="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2 space-y-6">
+          <div class="inline-flex items-center gap-2 text-emerald-700 font-semibold">
+            <i data-lucide="leaf" class="w-5 h-5"></i>
+            <span>Meet Our Founder</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900">Sarah Al-Farsi's Vision for Sustainable Living</h2>
+          <p class="text-stone-600 text-lg leading-relaxed">Founded in 2019, GreenLeaf Cafe was born from Sarah Al-Farsi's deep-rooted passion for sustainability and wholesome nutrition. As an advocate for conscious living, Sarah envisioned a space in Downtown Dubai where community and eco-friendly practices intersect seamlessly.</p>
+          <p class="text-stone-600 leading-relaxed">Every detail of our cafe reflects this mission, from our locally sourced organic ingredients to our zero-waste initiatives. We believe that great food and environmental responsibility should always go hand in hand.</p>
+          <div class="pt-4 flex items-center gap-4">
+            <a href="menu.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-emerald-800 text-white font-medium hover:bg-emerald-900 transition shadow-md">Explore Our Menu</a>
+            <a href="contact.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-stone-300 text-stone-700 font-medium hover:bg-stone-50 transition">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Timeline -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">Our Milestone Journey</h2>
+        <p class="text-stone-600">From a humble dream on Sheikh Mohammed bin Rashid Blvd to a beloved community staple.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between">
+          <div>
+            <span class="text-emerald-700 font-bold text-xl block mb-2">2019</span>
+            <h3 class="font-display font-semibold text-lg text-stone-900 mb-2">The Grand Opening</h3>
+            <p class="text-stone-600 text-sm">GreenLeaf Cafe opened its doors on Sheikh Mohammed bin Rashid Blvd, introducing specialty organic coffee to Downtown Dubai.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100"><span class="text-xs text-stone-400">Milestone 01</span></div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between">
+          <div>
+            <span class="text-emerald-700 font-bold text-xl block mb-2">2021</span>
+            <h3 class="font-display font-semibold text-lg text-stone-900 mb-2">Local Farm Partnership</h3>
+            <p class="text-stone-600 text-sm">Transitioned to 100% locally sourced greens and organic produce, reducing our carbon footprint significantly.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100"><span class="text-xs text-stone-400">Milestone 02</span></div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between">
+          <div>
+            <span class="text-emerald-700 font-bold text-xl block mb-2">2023</span>
+            <h3 class="font-display font-semibold text-lg text-stone-900 mb-2">Zero-Waste Initiative</h3>
+            <p class="text-stone-600 text-sm">Successfully eliminated single-use plastics entirely and launched our community composting program.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100"><span class="text-xs text-stone-400">Milestone 03</span></div>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg border border-stone-100 flex flex-col justify-between">
+          <div>
+            <span class="text-emerald-700 font-bold text-xl block mb-2">Today</span>
+            <h3 class="font-display font-semibold text-lg text-stone-900 mb-2">Community & Beyond</h3>
+            <p class="text-stone-600 text-sm">Celebrating over 5 years of serving 15,000+ happy customers with a 4.9-star rating across Dubai.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100"><span class="text-xs text-stone-400">Milestone 04</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Values -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">Core Values That Guide Us</h2>
+        <p class="text-stone-600">We are dedicated to maintaining the highest standards for our guests, our community, and our planet.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-emerald-800 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="sprout" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-stone-900 mb-3">100% Sustainability</h3>
+          <p class="text-stone-600">We prioritize eco-friendly packaging, energy-efficient operations, and minimal food waste practices daily. Our commitment ensures a greener tomorrow for Dubai.</p>
+        </div>
+        <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-emerald-800 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-stone-900 mb-3">Community First</h3>
+          <p class="text-stone-600">Creating an inclusive, warm space where neighbors gather, ideas spark, and lasting friendships form over specialty brews. We actively support local artisans.</p>
+        </div>
+        <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-emerald-800 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-stone-900 mb-3">Uncompromising Quality</h3>
+          <p class="text-stone-600">Every batch of cold brew and artisan pastry is crafted with meticulous care using only premium organic ingredients. Taste the dedication in every single bite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Team -->
+  <section class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">Meet the GreenLeaf Family</h2>
+        <p class="text-stone-600">The passionate professionals behind your favorite daily brews and wholesome meals.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/300?img=12" alt="Ahmed Head Barista" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-stone-900">Ahmed</h3>
+            <p class="text-emerald-700 font-medium text-sm mb-2">Head Barista</p>
+            <p class="text-stone-600 text-sm">Mastering specialty coffee extraction and latte art to make every morning cup an absolute masterpiece.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/300?img=32" alt="Layla Operations" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-stone-900">Layla</h3>
+            <p class="text-emerald-700 font-medium text-sm mb-2">Operations</p>
+            <p class="text-stone-600 text-sm">Ensuring smooth daily operations and maintaining our strict eco-friendly supply chain standards.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/300?img=53" alt="Omar Chef" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-stone-900">Omar</h3>
+            <p class="text-emerald-700 font-medium text-sm mb-2">Chef</p>
+            <p class="text-stone-600 text-sm">Crafting nutrient-dense bowls and artisanal sourdough creations that nourish the body and soul.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/300?img=45" alt="Fatima Customer Experience" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <h3 class="font-display font-bold text-xl text-stone-900">Fatima</h3>
+            <p class="text-emerald-700 font-medium text-sm mb-2">Customer Experience</p>
+            <p class="text-stone-600 text-sm">Welcoming every guest with warm Emirati hospitality and ensuring an unforgettable cafe visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Stats Strip -->
+  <section class="py-16 bg-emerald-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         <div>
-          <p class="font-display text-3xl sm:text-4xl font-bold text-brand-300">8+ Years</p>
-          <p class="text-xs sm:text-sm text-brand-100 mt-1 uppercase tracking-wider">Serving Excellence</p>
+          <span class="block text-4xl sm:text-5xl font-display font-bold mb-2">5+</span>
+          <span class="text-emerald-200 text-sm sm:text-base">Years of Service</span>
         </div>
         <div>
-          <p class="font-display text-3xl sm:text-4xl font-bold text-brand-300">25,000+</p>
-          <p class="text-xs sm:text-sm text-brand-100 mt-1 uppercase tracking-wider">Satisfied Guests</p>
+          <span class="block text-4xl sm:text-5xl font-display font-bold mb-2">15k+</span>
+          <span class="text-emerald-200 text-sm sm:text-base">Happy Customers</span>
         </div>
         <div>
-          <p class="font-display text-3xl sm:text-4xl font-bold text-brand-300">4.9 ★</p>
-          <p class="text-xs sm:text-sm text-brand-100 mt-1 uppercase tracking-wider">Google Rating</p>
+          <span class="block text-4xl sm:text-5xl font-display font-bold mb-2">4.9★</span>
+          <span class="text-emerald-200 text-sm sm:text-base">Average Rating</span>
         </div>
         <div>
-          <p class="font-display text-3xl sm:text-4xl font-bold text-brand-300">50+</p>
-          <p class="text-xs sm:text-sm text-brand-100 mt-1 uppercase tracking-wider">Unique Recipes</p>
+          <span class="block text-4xl sm:text-5xl font-display font-bold mb-2">100%</span>
+          <span class="text-emerald-200 text-sm sm:text-base">Locally Sourced</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. Detailed Founder Story & Philosophy -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-        <div class="w-full lg:w-1/2 relative">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1642354446709-844e5f0a69d9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Zm91bmRlciUyMHZpa3JhbSUyMHNpbmdofGVufDF8fHx8MTc5NDc2NjE0NHww&ixlib=rb-4.1.0&w=800&h=900&fit=crop&auto=format&q=80" alt="Vikram Singh Founder" class="w-full h-[450px] sm:h-[550px] object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <p class="font-display text-2xl font-bold">Vikram Singh</p>
-              <p class="text-brand-200 text-sm">Founder & Culinary Custodian</p>
-            </div>
-          </div>
-          <div class="hidden sm:block absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden border-4 border-white shadow-xl">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cmVzdGF1cmFudCUyMGRpbmluZyUyMGN1aXNpbmV8ZW58MXx8fHwxNzk0NzY2MTQzfDA&ixlib=rb-4.1.0&w=400&h=400&fit=crop&auto=format&q=80" alt="Kitchen Prep" class="w-full h-full object-cover">
-          </div>
+  <!-- CTA Band -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-brand-50 rounded-3xl p-8 sm:p-12 border border-stone-200 shadow-sm max-w-4xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mb-4">Experience GreenLeaf Cafe Today</h2>
+        <p class="text-stone-600 max-w-xl mx-auto mb-8">Join us in Downtown Dubai for a fresh sustainable brew or reserve your table for a wholesome dining experience.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="booking.html" class="px-8 py-3 rounded-xl bg-emerald-800 text-white font-medium hover:bg-emerald-900 transition shadow-md">Book a Table</a>
+          <a href="contact.html" class="px-8 py-3 rounded-xl border border-stone-300 text-stone-700 font-medium hover:bg-stone-100 transition">Visit Us</a>
         </div>
-
-        <div class="w-full lg:w-1/2 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-100 text-brand-800 text-xs font-semibold tracking-wide uppercase">
-            <i data-lucide="utensils" class="w-3.5 h-3.5"></i>
-            Our Story
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-            Preserving Heritage Recipes for Modern Diners
-          </h2>
-          <p class="text-slate-6 shadow-sm leading-relaxed text-base sm:text-lg">
-            Vikram Singh, a culinary enthusiast, started Ww in 2016 to bring forgotten heritage recipes back to modern dining tables. Inspired by centuries-old royal kitchens and regional family archives, Vikram set out on a mission to honor authentic preparation methods without taking shortcuts.
-          </p>
-          <p class="text-slate-6 shadow-sm leading-relaxed text-base sm:text-lg">
-            At Ww, philosophy centers around patient craftsmanship—like simmered 24-hour Dal Makhani (₹299) and fragrant slow-cooked Signature Biryani (₹499). Every dish reflects timeless hospitality, inviting guests to slow down and savor deep, complex spice profiles in a warm, cream-accented sanctuary.
-          </p>
-          <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-6">
-            <div>
-              <p class="font-display text-lg font-bold text-slate-900">Slow Cooking</p>
-              <p class="text-sm text-slate-500 mt-1">Authentic dum methods and stone-ground spices daily.</p>
-            </div>
-            <div>
-              <p class="font-display text-lg font-bold text-slate-900">Pure Ingredients</p>
-              <p class="text-sm text-slate-500 mt-1">Locally sourced produce paired with artisanal saffron and ghee.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Timeline of Major Achievements -->
-  <section class="py-16 md:py-24 bg-brand-50/50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-slate-900 mb-4">Our Journey Through Time</h2>
-        <p class="text-slate-600 text-base sm:text-lg">From a modest 6-table eatery on MG Road to Bengaluru’s premier heritage dining destination.</p>
-      </div>
-
-      <div class="relative border-l-2 border-brand-200 ml-4 sm:ml-32 space-y-12">
-        <!-- 2016 -->
-        <div class="relative pl-8 sm:pl-12 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
-          <span class="sm:absolute sm:-left-32 sm:top-0 text-xl font-display font-bold text-brand-700 block mb-1 sm:mb-0">2016</span>
-          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition">
-            <h3 class="font-display text-xl font-bold text-slate-900 mb-2">The Doors Open on MG Road</h3>
-            <p class="text-slate-600 leading-relaxed">Vikram Singh founded Ww at 2nd Floor, 14 MG Road with just 10 signature recipes, including our beloved Masala Chai (₹99) and Butter Paneer (₹349).</p>
-          </div>
-        </div>
-
-        <!-- 2018 -->
-        <div class="relative pl-8 sm:pl-12 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
-          <span class="sm:absolute sm:-left-32 sm:top-0 text-xl font-display font-bold text-brand-700 block mb-1 sm:mb-0">2018</span>
-          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition">
-            <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Culinary Recognition & Expansion</h3>
-            <p class="text-slate-600 leading-relaxed">Expanded the kitchen to introduce our legendary Tandoori Platter (₹599) and traditional desserts like Saffron Kulfi (₹199), doubling seating capacity.</p>
-          </div>
-        </div>
-
-        <!-- 2021 -->
-        <div class="relative pl-8 sm:pl-12 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
-          <span class="sm:absolute sm:-left-32 sm:top-0 text-xl font-display font-bold text-brand-700 block mb-1 sm:mb-0">2021</span>
-          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition">
-            <h3 class="font-display text-xl font-bold text-slate-900 mb-2">20,000+ Guest Milestone</h3>
-            <p class="text-slate-600 leading-relaxed">Crossed over 20,000 satisfied diners while maintaining a pristine 4.9-star rating, solidifying our reputation for timeless hospitality.</p>
-          </div>
-        </div>
-
-        <!-- Present -->
-        <div class="relative pl-8 sm:pl-12 group">
-          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white group-hover:scale-125 transition-transform"></div>
-          <span class="sm:absolute sm:-left-32 sm:top-0 text-xl font-display font-bold text-brand-700 block mb-1 sm:mb-0">Today</span>
-          <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition">
-            <h3 class="font-display text-xl font-bold text-slate-900 mb-2">50+ Heritage Recipes Mastered</h3>
-            <p class="text-slate-600 leading-relaxed">Now featuring over 50 unique items served six days a week, continuously setting the standard for warm editorial dining and authentic food.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. Core Values Icon Cards -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-slate-900 mb-4">Pillars of Ww Hospitality</h2>
-        <p class="text-slate-600 text-base sm:text-lg">The core values that guide our kitchen and guest experiences every single day.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-brand-50/60 p-8 rounded-2xl border border-brand-100/80 shadow-sm hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md">
-            <i data-lucide="flame" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Uncompromised Heritage</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">We strictly adhere to original slow-cook processes and classical techniques. No artificial shortcuts or pre-made bases are ever allowed in our kitchen.</p>
-        </div>
-
-        <div class="bg-brand-50/60 p-8 rounded-2xl border border-brand-100/80 shadow-sm hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md">
-            <i data-lucide="heart" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Timeless Hospitality</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">Every guest is welcomed like family into our cream-toned editorial sanctuary. We craft memorable dining experiences with genuine warmth.</p>
-        </div>
-
-        <div class="bg-brand-50/60 p-8 rounded-2xl border border-brand-100/80 shadow-sm hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-600 text-white flex items-center justify-center mb-6 shadow-md">
-            <i data-lucide="sparkles" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Artisanal Sourcing</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">From single-origin saffron to hand-milled spices and fresh local dairy, we select high-grade ingredients to ensure deep, distinct flavors.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Meet the Kitchen & House Team -->
-  <section class="py-16 md:py-24 bg-brand-50/40 border-t border-brand-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-slate-900 mb-4">Meet the Artisans</h2>
-        <p class="text-slate-600 text-base sm:text-lg">The dedicated culinary minds and hospitality leaders behind your dining experience.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Team 1 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 text-center hover:-translate-y-1 transition">
-          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Ananya Head Chef" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 ring-4 ring-brand-100">
-          <h3 class="font-display text-xl font-bold text-slate-900">Ananya</h3>
-          <p class="text-brand-600 text-xs font-semibold uppercase tracking-wider mb-3">Head Chef</p>
-          <p class="text-slate-600 text-sm leading-relaxed">Ananya leads the culinary brigade with over 12 years of expertise in dum cooking and regional spicing. She perfects every batch of our Signature Biryani.</p>
-        </div>
-
-        <!-- Team 2 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 text-center hover:-translate-y-1 transition">
-          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" alt="Rajesh Sous Chef" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 ring-4 ring-brand-100">
-          <h3 class="font-display text-xl font-bold text-slate-900">Rajesh</h3>
-          <p class="text-brand-600 text-xs font-semibold uppercase tracking-wider mb-3">Sous Chef</p>
-          <p class="text-slate-600 text-sm leading-relaxed">Master of tandoor techniques and slow marinades. Rajesh oversees grill precision for the Tandoori Platter and slow-cooked Dal Makhani.</p>
-        </div>
-
-        <!-- Team 3 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 text-center hover:-translate-y-1 transition">
-          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=47" alt="Meera Manager" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 ring-4 ring-brand-100">
-          <h3 class="font-display text-xl font-bold text-slate-900">Meera</h3>
-          <p class="text-brand-600 text-xs font-semibold uppercase tracking-wider mb-3">Manager</p>
-          <p class="text-slate-600 text-sm leading-relaxed">Meera ensures seamless restaurant operations and coordinates events. She guarantees that every guest feels genuinely welcomed and cared for.</p>
-        </div>
-
-        <!-- Team 4 -->
-        <div class="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 text-center hover:-translate-y-1 transition">
-          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=68" alt="Arjun Front of House" class="w-24 h-24 rounded-full mx-auto object-cover mb-4 ring-4 ring-brand-100">
-          <h3 class="font-display text-xl font-bold text-slate-900">Arjun</h3>
-          <p class="text-brand-600 text-xs font-semibold uppercase tracking-wider mb-3">Front of House</p>
-          <p class="text-slate-600 text-sm leading-relaxed">Arjun curates table pairings and warm dining interactions. His attentive service elevates every dinner visit into a memorable celebration.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & Hours Brief -->
-  <section class="py-12 bg-white border-y border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-slate-700">
-        <div class="flex items-start gap-4">
-          <div class="p-3 bg-brand-100 rounded-xl text-brand-700">
-            <i data-lucide="map-pin" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-display font-bold text-slate-900 mb-1">Our Location</h4>
-            <p class="text-sm">2nd Floor, 14 MG Road, Bengaluru, Karnataka 560001</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="p-3 bg-brand-100 rounded-xl text-brand-700">
-            <i data-lucide="clock" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-display font-bold text-slate-900 mb-1">Opening Hours</h4>
-            <p class="text-sm">Mon-Sat 9AM-9PM</p>
-            <p class="text-sm">Sun 10AM-6PM</p>
-          </div>
-        </div>
-
-        <div class="flex items-start gap-4">
-          <div class="p-3 bg-brand-100 rounded-xl text-brand-700">
-            <i data-lucide="phone" class="w-6 h-6"></i>
-          </div>
-          <div>
-            <h4 class="font-display font-bold text-slate-900 mb-1">Get in Touch</h4>
-            <p class="text-sm">+91 80 4567 8910</p>
-            <p class="text-sm">hello@ww.in</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. CTA Band -->
-  <section class="py-16 md:py-20 bg-brand-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-      <h2 class="font-display text-3xl sm:text-5xl font-bold mb-4">Experience Authentic Flavors Today</h2>
-      <p class="text-brand-200 text-base sm:text-lg max-w-2xl mx-auto mb-8">
-        Join us at MG Road or reserve your table in advance for an unforgettable heritage dining experience.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="booking.html" class="px-8 py-4 bg-white text-slate-900 font-semibold rounded-xl hover:bg-brand-100 transition shadow-lg text-center">
-          Reserve a Table
-        </a>
-        <a href="menu.html" class="px-8 py-4 bg-brand-800 text-white border border-brand-700 font-semibold rounded-xl hover:bg-brand-700 transition text-center">
-          Explore Our Menu
-        </a>
       </div>
     </div>
   </section>
 </main>
-
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener('DOMContentLoaded', () => {
     if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
@@ -311,12 +229,12 @@
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Ww</p><p class="mt-3 text-sm text-slate-400">Authentic flavors, timeless hospitality.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@ww.in</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">GreenLeaf Cafe</p><p class="mt-3 text-sm text-slate-400">Fresh flavors and sustainable brews in the heart of Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="contact.html" class="hover:text-white">Contact</a><a href="booking.html" class="hover:text-white">Reservations</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 11:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 555 0123</p><p class="mt-2 text-sm text-slate-400">hello@greenleafcafe.ae</p></div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Ww. All rights reserved.</div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> GreenLeaf Cafe. All rights reserved.</div>
 </footer>
 <script src="js/site-kit.js"></script>
 </body>
