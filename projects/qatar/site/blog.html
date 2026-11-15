@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Culinary Blog | Qatar</title>
+<meta name="description" content="Authentic Middle Eastern flavors in the heart of Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fdfdf7','100':'#f5f3e9','200':'#ede6d3','300':'#d6c9a9','400':'#b8a67d','500':'#1b4332','600':'#163a2a','700':'#113022','800':'#0c261a','900':'#071c13'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Qatar</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book a Table</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Culinary Blog</a></nav>
+    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book a Table</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Culinary Blog</a></div>
+</header>
+<main>
+<main class="bg-[#FDFBF7] text-[#2C3E2D]">
+
+  <!-- 1. Hero Header with Featured Article Highlight -->
+  <section class="relative py-16 md:py-24 bg-[#1C2E1F] text-[#FDFBF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-amber-400 font-semibold tracking-widest uppercase text-sm">Qatar Culinary Journal</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl mt-2 mb-4 text-[#FDFBF7]">Stories from the Middle East</h1>
+        <p class="text-gray-300 text-lg">Explore the rich heritage of spice blends, ancient cooking techniques, and the heart of Bengaluru's finest Middle Eastern kitchen.</p>
+      </div>
+
+      <!-- Featured Article Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#253A28] rounded-3xl overflow-hidden border border-amber-500/20 shadow-2xl">
+        <div class="lg:col-span-7 h-full">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1743674453093-592bed88018e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bWlkZGxlJTIwZWFzdGVybiUyMGN1aXNpbmUlMjBmZWFzdHxlbnwxfHx8fDE3OTQ3NjYzMTV8MA&ixlib=rb-4.1.0&w=1200&h=800&fit=crop&auto=format&q=80" alt="Middle Eastern Feast" class="w-full h-72 md:h-96 lg:h-full object-cover">
+        </div>
+        <div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="bg-amber-500/20 text-amber-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Featured Story</span>
+            <span class="text-gray-400 text-sm">May 15, 2024</span>
+          </div>
+          <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl mb-4 text-[#FDFBF7]">The Secret Behind Chef Amira's Grandmother's Spice Blends</h2>
+          <p class="text-gray-300 mb-6 text-sm sm:text-base">Discover how century-old traditions from Doha are preserved and brought to life in every plate served at our MG Road sanctuary since 2016.</p>
+          <a href="#" class="inline-flex items-center gap-2 text-amber-400 font-semibold hover:text-amber-300 transition-colors">
+            Read Full Article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Latest Articles Grid with Six Post Previews -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-[#1C2E1F] mb-4">Latest Journal Entries</h2>
+        <p class="text-[#2C3E2D]/80 text-lg">Dive deeper into our culinary philosophy, ingredient sourcing, and Middle Eastern culture.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Newsletter Subscription Section -->
+  <section class="py-16 bg-[#1C2E1F] text-[#FDFBF7] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center mx-auto mb-6 text-amber-400">
+        <i data-lucide="mail" class="w-6 h-6"></i>
+      </div>
+      <h2 class="font-display text-3xl sm:text-4xl mb-4">Join Our Culinary Circle</h2>
+      <p class="text-gray-300 max-w-xl mx-auto mb-8">Receive exclusive recipes, event invitations, and stories from Chef Amira directly in your inbox.</p>
+      
+      <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" name="email" placeholder="Enter your email address" required class="flex-grow px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-amber-400">
+        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-3 rounded-xl transition-colors shadow-lg">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 4. Trending Categories List -->
+  <section class="py-16 md:py-24 bg-[#F4EFEA]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl sm:text-4xl text-[#1C2E1F] mb-4">Explore Categories</h2>
+        <p class="text-[#2C3E2D]/80">Browse our stories by your favorite culinary topics.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="categories-grid">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Author Spotlight Profile -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-[#2C3E2D]/10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-4 text-center">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/300?img=44" alt="Chef Amira Al-Farsi" class="w-48 h-48 rounded-full object-cover mx-auto mb-4 border-4 border-amber-500/20 shadow-lg">
+          <h3 class="font-display text-2xl text-[#1C2E1F]">Chef Amira Al-Farsi</h3>
+          <p class="text-amber-700 font-medium text-sm">Head Chef & Founder</p>
+        </div>
+        <div class="lg:col-span-8">
+          <span class="text-amber-700 font-semibold tracking-wider uppercase text-xs">Author Spotlight</span>
+          <h4 class="font-display text-3xl text-[#1C2E1F] mt-1 mb-4">Crafting Memories Through Authentic Flavors</h4>
+          <p class="text-[#2C3E2D]/80 mb-4 leading-relaxed">Inspired by her grandmother's spice blends in Doha, Chef Amira founded Qatar in Bengaluru with a vision to serve genuine Middle Eastern hospitality. Having served over 50,000+ meals since 2016, she shares her passion for culinary arts through every story and dish.</p>
+          <div class="flex items-center gap-4 text-sm text-[#2C3E2D]/70 font-medium">
+            <span><strong class="text-[#1C2E1F]">8+</strong> Years Experience</span>
+            <span>•</span>
+            <span><strong class="text-[#1C2E1F]">4.9★</strong> Google Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA Band for Table Reservations -->
+  <section class="py-16 bg-[#1C2E1F] text-[#FDFBF7]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mb-4">Taste the Tradition at MG Road</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-8 text-lg">Join us for an unforgettable dining experience featuring our signature Lamb Mandi and Saffron Infused Hummus.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-4 rounded-xl transition-colors shadow-lg text-center">Book a Table</a>
+        <a href="menu.html" class="bg-transparent hover:bg-white/10 text-white border border-white/30 font-medium px-8 py-4 rounded-xl transition-colors text-center">Explore Our Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const articles = [
+      {
+        title: "The Art of Roasting Coffee: Cardamom Turkish Style",
+        excerpt: "Learn the intricate steps required to brew the perfect cup of Cardamom Turkish Coffee, a staple of our beverage menu.",
+        date: "May 10, 2024",
+        category: "Beverages",
+        image: "https://images.unsplash.com/photo-1743674453093-592bed88018e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTB8fG1pZGRsZSUyMGVhc3Rlcm4lMjBjdWlzaW5lfGVufDF8fHx8MTc5NDc2NjMxNXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Mastering the Lamb Mandi: Slow-Cooked Perfection",
+        excerpt: "An inside look at how we slow-cook our signature Lamb Mandi for hours to achieve melt-in-your-mouth tenderness.",
+        date: "May 02, 2024",
+        category: "Recipes",
+        image: "https://images.unsplash.com/photo-1696950169997-fd5714c555f1?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bGFtYiUyMG1hbmRpJTIwZmVhc3R8ZW58MXx8fHwxNzk0NzY2MzE1fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Saffron: The Red Gold of Middle Eastern Kitchens",
+        excerpt: "Why saffron is the crown jewel of our Saffron Infused Hummus and how it elevates simple ingredients to luxury.",
+        date: "Apr 28, 2024",
+        category: "Ingredients",
+        image: "https://images.unsplash.com/photo-1777891257717-6a83ac8e0bac?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fG1pZGRsZSUyMGVhc3Rlcm4lMjBjdWlzaW5lfGVufDF8fHx8MTc5NDc2NjMxNXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Sweet Traditions: The History of Rosewater Baklava",
+        excerpt: "Trace the flaky layers and honey-infused history of our beloved Rosewater Baklava dessert.",
+        date: "Apr 15, 2024",
+        category: "Desserts",
+        image: "https://images.unsplash.com/photo-1640040520679-2ace58742f22?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8cm9zZXdhdGVyJTIwYmFrbGF2YXxlbnwxfHx8fDE3OTQ3NjYzMTZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Dining in Bengaluru: Bringing Doha to MG Road",
+        excerpt: "Reflecting on 8+ years of operation at 14 MG Road and how Bengaluru welcomed our authentic flavors.",
+        date: "Apr 05, 2024",
+        category: "Culture",
+        image: "https://images.unsplash.com/photo-1767114915974-3481fa23cbb0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fG1pZGRsZSUyMGVhc3Rlcm4lMjBjdWlzaW5lfGVufDF8fHx8MTc5NDc2NjMxNXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      },
+      {
+        title: "Fresh & Vibrant: The Grilled Halloumi Salad Story",
+        excerpt: "Balancing rich textures with crisp greens in our signature Grilled Halloumi Salad recipe.",
+        date: "Mar 22, 2024",
+        category: "Recipes",
+        image: "https://images.unsplash.com/photo-1734770931927-6410f9a64832?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fG1pZGRsZSUyMGVhc3Rlcm4lMjBjdWlzaW5lfGVufDF8fHx8MTc5NDc2NjMxNXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+      }
+    ];
+
+    const categories = [
+      { name: "Recipes", count: "12 Articles", icon: "book-open", image: "https://picsum.photos/seed/Middle Eastern cuisine recipe/400/300" },
+      { name: "Ingredients", count: "8 Articles", icon: "feather", image: "https://picsum.photos/seed/Middle Eastern spices/400/300" },
+      { name: "Culture", count: "15 Articles", icon: "globe", image: "https://picsum.photos/seed/ornate golden decor/400/300" },
+      { name: "Beverages", count: "6 Articles", icon: "coffee", image: "https://picsum.photos/seed/authentic dining coffee/400/300" }
+    ];
+
+    const articlesGrid = document.getElementById('articles-grid');
+    if (articlesGrid) {
+      articlesGrid.innerHTML = articles.map(article => `
+        <article class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 border border-[#2C3E2D]/10 flex flex-col">
+          <img loading="lazy" decoding="async" src="${article.image}" alt="${article.title}" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-3 text-xs">
+              <span class="bg-amber-100 text-amber-800 font-semibold px-2.5 py-1 rounded-full">${article.category}</span>
+              <span class="text-[#2C3E2D]/60">${article.date}</span>
+            </div>
+            <h3 class="font-display text-xl text-[#1C2E1F] mb-2">${article.title}</h3>
+            <p class="text-[#2C3E2D]/80 text-sm mb-4 flex-grow">${article.excerpt}</p>
+            <a href="#" class="inline-flex items-center gap-1 text-amber-700 font-semibold text-sm hover:text-amber-800 transition-colors mt-auto">
+              Read Article <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    const categoriesGrid = document.getElementById('categories-grid');
+    if (categoriesGrid) {
+      categoriesGrid.innerHTML = categories.map(cat => `
+        <a href="#" class="group relative rounded-2xl overflow-hidden shadow-md h-40 flex items-end p-6 bg-cover bg-center transition-transform hover:-translate-y-1" style="background-image: linear-gradient(to top, rgba(28,46,31,0.9), rgba(28,46,31,0.3)), url('${cat.image}')">
+          <div class="relative z-10 text-white">
+            <div class="mb-2 text-amber-400">
+              <i data-lucide="${cat.icon}" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display text-xl font-bold">${cat.name}</h3>
+            <p class="text-xs text-gray-300">${cat.count}</p>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  </script>
+</main>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Qatar</p><p class="mt-3 text-sm text-slate-400">Authentic Middle Eastern flavors in the heart of Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Our Menu</a><a href="booking.html" class="hover:text-white">Book a Table</a><a href="blog.html" class="hover:text-white">Culinary Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM, Sun: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@qatar.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Qatar. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
