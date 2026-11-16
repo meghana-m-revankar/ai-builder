@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Realstate</title>
+<meta name="description" content="Premium properties crafted for your lifestyle.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eef2ff','100':'#e0e7ff','200':'#c7d2fe','300':'#a5b4fc','400':'#818cf8','500':'#1e3a8a','600':'#1e40af','700':'#1d4ed8','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Realstate</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Experts</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Insights</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Experts</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Insights</a></div>
+</header>
+<main>
+<main class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
+  <!-- 1. Full-width hero with language toggle and property search bar -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-slate-950">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Modern Luxury Architecture" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-black/40"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center w-full">
+      <div class="absolute top-4 right-4 sm:top-6 sm:right-8 flex items-center gap-2 bg-slate-900/80 border border-amber-500/30 px-3 py-1.5 rounded-full backdrop-blur-md">
+        <i data-lucide="globe" class="w-4 h-4 text-amber-400"></i>
+        <span class="text-xs font-semibold text-amber-200">EN</span>
+        <span class="text-xs text-slate-500">|</span>
+        <span class="text-xs text-slate-400 cursor-pointer hover:text-white">KA</span>
+      </div>
+
+      <span class="inline-block py-1 px-3 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm font-semibold tracking-wide uppercase mb-6">
+        Exclusive Real Estate Portfolio
+      </span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white mb-6">
+        Premium Properties Crafted <br class="hidden sm:inline" /><span class="text-amber-400">For Your Lifestyle</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 mb-10">
+        Discover Bengaluru's most coveted addresses with unmatched elegance, sophisticated corporate standards, and personalized advisory.
+      </p>
+
+      <!-- Property Search Bar -->
+      <div class="max-w-4xl mx-auto bg-slate-900/90 border border-amber-500/30 p-4 rounded-2xl shadow-2xl backdrop-blur-md">
+        <form action="services.html" method="GET" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="text-left">
+            <label class="block text-xs font-semibold text-amber-400 uppercase mb-1">Property Type</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+              <option>Luxury Apartments</option>
+              <option>Commercial Spaces</option>
+              <option>Rental Management</option>
+            </select>
+          </div>
+          <div class="text-left">
+            <label class="block text-xs font-semibold text-amber-400 uppercase mb-1">Location</label>
+            <select class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+              <option>Ashok Nagar, Bengaluru</option>
+              <option>MG Road, Bengaluru</option>
+              <option>Indiranagar, Bengaluru</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="search" class="w-5 h-5"></i> Search Properties
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="services.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-8 py-3.5 rounded-xl transition shadow-lg flex items-center gap-2">
+          Explore Services <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+        <a href="about.html" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-3.5 rounded-xl transition">
+          Our Heritage
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats strip displaying successful closures and client satisfaction metrics -->
+  <section class="border-y border-slate-900 bg-slate-900/50 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-amber-400 mb-2">500+</div>
+          <div class="text-slate-300 font-medium">Successful Closures</div>
+          <p class="text-slate-500 text-sm mt-1">Delivering elite properties across Bengaluru's prime sectors.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-amber-400 mb-2">4.9★</div>
+          <div class="text-slate-300 font-medium">Google Rating</div>
+          <p class="text-slate-500 text-sm mt-1">Trusted by discerning clients for absolute transparency.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-amber-400 mb-2">8+</div>
+          <div class="text-slate-300 font-medium">Years of Excellence</div>
+          <p class="text-slate-500 text-sm mt-1">Pioneering sophisticated corporate real estate standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder introduction with a brief story of our journey -->
+  <section class="py-16 md:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-12 items-center">
+        <div class="w-full lg:w-1/2">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bHV4dXJ5JTIwaW50ZXJpb3IlMjBkZXNpZ258ZW58MXx8fHwxNzk0ODE5Njc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Founder Vikram Malhotra" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-2xl border border-slate-800">
+            <div class="absolute -bottom-6 -right-6 bg-slate-900 border border-amber-500/30 p-6 rounded-2xl shadow-xl hidden sm:block backdrop-blur-md">
+              <div class="text-amber-400 font-display font-bold text-lg">Vikram Malhotra</div>
+              <div class="text-slate-400 text-sm">Founder & Market Leader</div>
+              <div class="text-slate-500 text-xs mt-1">15+ Years of Expertise</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Our Visionary Leadership</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-2 mb-6">
+            Building Legacies Through Uncompromising Quality
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg mb-6 leading-relaxed">
+            Founded by Vikram Malhotra, a visionary real estate expert with over 15 years of market leadership, our firm was established to redefine luxury living in Bengaluru. We believe that a home or commercial space is not merely an investment, but the cornerstone of your lifestyle and future success.
+          </p>
+          <p class="text-slate-400 text-sm sm:text-base mb-8 leading-relaxed">
+            Guided by principles of absolute transparency, legal security, and bespoke client service, our elite team of architects and advisors curate portfolios that stand the test of time. Experience a seamless journey from acquisition to asset management.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="team.html" class="bg-slate-900 hover:bg-slate-800 border border-amber-500/30 text-amber-400 font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2">
+              Meet Our Experts <i data-lucide="users" class="w-4 h-4"></i>
+            </a>
+            <a href="about.html" class="text-slate-300 hover:text-white font-medium flex items-center gap-1">
+              Read our full story <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured luxury residential properties grid with pricing -->
+  <section class="py-16 md:py-24 bg-slate-900/30 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Residential Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-2">
+            Featured Luxury Apartments
+          </h2>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="services.html" class="text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1">
+            View all residential listings <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Property 1 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Ashok Nagar Penthouse" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹1.5Cr
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Altus Penthouse</h3>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              Exquisite 4 BHK sky villa featuring private terrace gardens, panoramic views of Ashok Nagar, and bespoke Italian marble flooring. Designed for elite families seeking privacy and grand entertaining spaces.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> Ashok Nagar</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Schedule Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property 2 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="MG Road Residence" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹2.2Cr
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-xl text-white mb-2">Regal Sovereign Suites</h3>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              Immaculately crafted 3 BHK apartments situated right off MG Road with state-of-the-art home automation, private elevators, and world-class clubhouse amenities. A true testament to urban sophistication.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> MG Road</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Schedule Visit</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property 3 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1750160868338-c0813f5dfa31?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YmVuZ2FsdXJ1JTIwbHV4dXJ5JTIwdmlsbGF8ZW58MXx8fHwxNzk0ODE5Njc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Luxury Villa Bengaluru" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹3.8Cr
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Grandeur Estates</h3>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              Expansive ultra-luxury independent floors offering unmatched serenity amidst the bustling heart of Bengaluru. Features private plunge pools, multiple car bays, and 24/7 multi-tier security.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i> Central Bengaluru</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Schedule Visit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Featured commercial investment opportunities with high ROI projections -->
+  <section class="py-16 md:py-24 bg-slate-950 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">Commercial Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-2">
+            Commercial Spaces & High ROI
+          </h2>
+        </div>
+        <div class="mt-4 md:mt-0">
+          <a href="services.html" class="text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1">
+            View all commercial listings <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Commercial 1 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1549637642-90187f64f420?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y29ycG9yYXRlJTIwb2ZmaWNlJTIwc3BhY2V8ZW58MXx8fHwxNzk0ODE5Njc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Corporate Office Space" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹85L
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-display font-bold text-xl text-white">Apex Business Hub</h3>
+              <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20">11.5% ROI</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              Grade-A serviced office spaces located on MG Road, pre-leased to multinational corporations. Enjoy guaranteed rental yields and stellar capital appreciation in Bengaluru's prime financial district.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-amber-400"></i> High Yield Asset</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial 2 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1705558333321-7674072a235f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cmV0YWlsJTIwc2hvd3Jvb20lMjBiZW5nYWx1cnV8ZW58MXx8fHwxNzk0ODE5Njc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Retail Showroom Bengaluru" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹1.4Cr
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-display font-bold text-xl text-white">Vanguard Retail Arcade</h3>
+              <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20">10.2% ROI</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              High-street retail showrooms positioned in Ashok Nagar's most heavily footfall-trafficked commercial corridors. Ideal for luxury brands, flagship stores, and high-end dining establishments.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-amber-400"></i> High Footfall</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial 3 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col">
+          <div class="relative h-64">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1785623354485-b663cb9afa0b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8dGVjaCUyMHBhcmslMjBvZmZpY2V8ZW58MXx8fHwxNzk0ODE5Njc3fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Tech Park Office" class="w-full h-full object-cover">
+            <div class="absolute top-4 left-4 bg-slate-950/80 border border-amber-500/30 px-3 py-1 rounded-full text-amber-400 text-xs font-semibold backdrop-blur-md">
+              Starts at ₹2.5Cr
+            </div>
+          </div>
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex items-center justify-between mb-2">
+              <h3 class="font-display font-bold text-xl text-white">Meridian Tech Towers</h3>
+              <span class="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded border border-amber-500/20">12.8% ROI</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-4 flex-grow">
+              Full-floor commercial enterprise spaces equipped with redundant power systems, fiber optic connectivity, and green building certifications. Secure long-term institutional tenancy.
+            </p>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+              <span class="flex items-center gap-1"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-amber-400"></i> Enterprise Grade</span>
+              <a href="services.html" class="text-amber-400 font-semibold hover:underline">Inquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Why choose us section highlighting transparency and legal security -->
+  <section class="py-16 md:py-24 bg-slate-900/30 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-400 font-semibold text-sm uppercase tracking-wider">The Realstate Advantage</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mt-2 mb-4">
+          Why Discerning Investors Choose Us
+        </h2>
+        <p class="text-slate-300 text-base sm:text-lg">
+          We combine deep market intelligence with rigorous legal scrutiny to ensure your real estate portfolio yields secure, long-term prosperity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Absolute Transparency</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Every transaction is conducted with complete clarity regarding pricing, documentation, and developer credentials. No hidden fees or unexpected surprises.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Rigorous Legal Security</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Supervised by our in-house legal advisor Karan Varma, every property undergoes exhaustive title verification and compliance checks before listing.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-white mb-3">Tailored Advisory</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Benefit from 15+ years of market leadership under Vikram Malhotra. We tailor acquisition strategies precisely to your long-term wealth goals.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band & Special Offer -->
+  <section class="py-16 bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-slate-950/10 border border-slate-950/20 text-slate-950 text-sm font-bold uppercase tracking-wider mb-4">
+        Special Limited Offer
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">
+        Exclusive 2% Discount on First-Time Investment Consultation
+      </h2>
+      <p class="text-slate-900 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-medium">
+        Take the first step toward securing premium real estate in Bengaluru. Book your personalized advisory session with our experts today.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="services.html" class="bg-slate-950 hover:bg-slate-900 text-amber-400 font-semibold px-8 py-3.5 rounded-xl transition shadow-xl">
+          Claim Offer & Book Consultation
+        </a>
+        <a href="team.html" class="bg-white/20 hover:bg-white/30 text-slate-950 font-semibold px-8 py-3.5 rounded-xl transition">
+          Contact Our Team
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Realstate</p><p class="mt-3 text-sm text-slate-400">Premium properties crafted for your lifestyle.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Our Services</a><a href="team.html" class="hover:text-white">Our Experts</a><a href="blog.html" class="hover:text-white">Insights</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@realstate.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Realstate. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
