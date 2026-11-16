@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Elite Realty</title>
+<meta name="description" content="Finding your luxury dream home in Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eef2ff','100':'#e0e7ff','200':'#c7d2fe','300':'#a5b4fc','400':'#818cf8','500':'#1e3a8a','600':'#1e40af','700':'#1d4ed8','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Elite Realty</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="properties.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Properties</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="properties.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Properties</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 6. Language switch header (implied as a top bar banner/switcher inside hero or just above) -->
+  <div class="bg-brand-900 text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <span><i data-lucide="phone" class="w-3 h-3 inline mr-1"></i> +91 80 4567 8910</span>
+        <span class="hidden sm:inline"><i data-lucide="mail" class="w-3 h-3 inline mr-1"></i> hello@elite-realty.in</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="switchLang('en')" class="font-bold underline">EN</button>
+        <span>|</span>
+        <button onclick="switchLang('ar')" class="opacity-75 hover:opacity-100">العربية</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. Full-screen hero with search bar and property filters -->
+  <section class="relative min-h-[85vh] flex items-center justify-center text-white">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Modern Luxury Architecture" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-950/90 via-brand-900/50 to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 py-20 text-center w-full">
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6" data-i18n="hero-title">
+        Finding your luxury dream home in Bengaluru
+      </h1>
+      <p class="text-lg sm:text-xl text-brand-100 mb-10 max-w-2xl mx-auto" data-i18n="hero-subtitle">
+        Discover exceptional properties curated with precision by Bengaluru's most trusted real estate advisors.
+      </p>
+
+      <!-- Property Search & Filter Bar -->
+      <div class="bg-white/95 backdrop-blur p-4 rounded-2xl shadow-2xl text-slate-800 max-w-4xl mx-auto">
+        <form action="properties.html" method="GET" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase text-left mb-1">Property Type</label>
+            <select name="type" class="w-full p-3 rounded-xl bg-slate-100 border-0 text-sm focus:ring-2 focus:ring-brand-600">
+              <option>All Types</option>
+              <option>Premium Apartments (₹1.5Cr+)</option>
+              <option>Luxury Villas (₹4Cr+)</option>
+              <option>Commercial Spaces (₹2Cr+)</option>
+              <option>Penthouse Suites (₹6Cr+)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-500 uppercase text-left mb-1">Location</label>
+            <select name="location" class="w-full p-3 rounded-xl bg-slate-100 border-0 text-sm focus:ring-2 focus:ring-brand-600">
+              <option>Ashok Nagar & MG Road</option>
+              <option>Indiranagar</option>
+              <option>Koramangala</option>
+              <option>Whitefield</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold p-3 rounded-xl transition flex items-center justify-center gap-2">
+              <i data-lucide="search" class="w-5 h-5"></i> Search Properties
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats strip showing 500+ families and 120+ projects -->
+  <section class="bg-brand-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-1">500+</div>
+          <div class="text-sm text-brand-100">Satisfied Families</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-1">120+</div>
+          <div class="text-sm text-brand-100">Successful Projects</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-1">8+</div>
+          <div class="text-sm text-brand-100">Years of Trust</div>
+        </div>
+        <div>
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-300 mb-1">15+</div>
+          <div class="text-sm text-brand-100">Years Urban Planning Exp.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder story preview with call to action -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1758957701419-2c6e266f7988?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cmVzaWRlbnRpYWwlMjBpbnRlcmlvcnN8ZW58MXx8fHwxNzk0ODMxNzY2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Founder Vikram Malhotra" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold uppercase tracking-wider text-sm">Our Heritage</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-6">Founded on Visionary Urban Planning</h2>
+          <p class="text-slate-600 mb-4 leading-relaxed">
+            Founded in 2016 by Vikram Malhotra, a visionary with 15+ years in urban planning, Elite Realty has redefined luxury living in Bengaluru. We bridge architectural brilliance with functional urban spaces.
+          </p>
+          <p class="text-slate-600 mb-8 leading-relaxed">
+            Our leadership team—including Ananya, Rajesh, and Priya—brings decades of combined expertise in legal compliance, market analysis, and client relations to ensure your investment is secure and prestigious.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="about.html" class="bg-brand-900 hover:bg-brand-800 text-white px-6 py-3 rounded-xl font-medium transition text-center flex items-center justify-center gap-2">
+              Read Full Story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="contact.html" class="border border-brand-900 text-brand-900 hover:bg-brand-50 px-6 py-3 rounded-xl font-medium transition text-center">
+              Meet The Team
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured luxury properties grid -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <span class="text-brand-600 font-semibold uppercase tracking-wider text-sm">Exquisite Portfolio</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Featured Luxury Properties</h2>
+        </div>
+        <a href="properties.html" class="hidden sm:inline-flex items-center gap-1 text-brand-600 font-semibold hover:underline">
+          View All Properties <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-properties">
+        <!-- Rendered via JS for interactivity/completeness -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why choose us: 6 pillars of our service -->
+  <section class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold uppercase tracking-wider text-sm">The Elite Standard</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Why Choose Elite Realty</h2>
+        <p class="text-slate-600 mt-4">We deliver uncompromising excellence across every facet of your real estate journey.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">15+ Years Expertise</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Grounded in deep urban planning insights and architectural mastery led by Vikram Malhotra.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Verified Legal Title</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Rigorous checks by our dedicated legal head Priya ensuring absolute transparency and safety.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Data-Driven Valuation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Comprehensive market analytics by Rajesh delivering high-yield investment options.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Tailored Consultation</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Personalized guidance from Ananya and our advisory team matching your exact lifestyle needs.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="map-pin" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">Prime Bengaluru Locations</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Properties exclusively situated in Ashok Nagar, MG Road, Indiranagar, and Koramangala.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">8+ Years of Trust</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">Over 500+ families have found their dream luxury homes and commercial spaces with us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-brand-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to find your luxury dream home?</h2>
+      <p class="text-brand-100 max-w-xl mx-auto mb-8">Visit our office at 2nd Floor, 14 MG Road, Bengaluru or schedule a consultation today.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="contact.html" class="bg-white text-brand-900 hover:bg-brand-50 font-semibold px-8 py-3 rounded-xl transition">Contact Us Now</a>
+        <a href="properties.html" class="border border-white text-white hover:bg-white/10 font-semibold px-8 py-3 rounded-xl transition">Explore Listings</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const properties = [
+    { title: "Penthouse Suites", price: "₹6Cr+", location: "MG Road, Ashok Nagar", img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Breathtaking sky-high living with private terrace pools and panoramic views of Bengaluru." },
+    { title: "Luxury Villas", price: "₹4Cr+", location: "Whitefield", img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bHV4dXJ5JTIwdmlsbGElMjBleHRlcmlvcnxlbnwxfHx8fDE3OTQ4MzE3NjZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Spacious independent estates offering supreme privacy, lush gardens, and modern amenities." },
+    { title: "Gated Communities", price: "₹2.5Cr+", location: "Koramangala", img: "https://images.unsplash.com/photo-1775112077888-8fa36e9bbc51?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Z2F0ZWQlMjBjb21tdW5pdHklMjBsaXZpbmd8ZW58MXx8fHwxNzk0ODMxNzY2fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Secure neighborhood complexes designed for families seeking community and top-tier security." },
+    { title: "Commercial Spaces", price: "₹2Cr+", location: "Ashok Nagar", img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwY29tbWVyY2lhbCUyMG9mZmljZXxlbnwxfHx8fDE3OTQ4MzE3NjZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Prime grade-A office spaces engineered for high corporate prestige and productivity." },
+    { title: "Premium Apartments", price: "₹1.5Cr+", location: "Indiranagar", img: "https://images.unsplash.com/photo-1658218635253-64728f6234be?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8cHJlbWl1bSUyMGFwYXJ0bWVudCUyMGludGVyaW9yfGVufDF8fHx8MTc5NDgzMTc2Nnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Sophisticated multi-room residences featuring state-of-the-art Italian marble flooring." },
+    { title: "Residential Plots", price: "₹50L+", location: "North Bengaluru", img: "https://images.unsplash.com/photo-1603705502222-4356c929be57?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bGFuZCUyMHBsb3RzJTIwbmF0dXJlfGVufDF8fHx8MTc5NDgzMTc2Nnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Approved land parcels ready for customized architectural construction in expanding zones." }
+  ];
+
+  function renderFeatured() {
+    const container = document.getElementById('featured-properties');
+    if(!container) return;
+    container.innerHTML = properties.map(p => `
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition flex flex-col">
+        <img loading="lazy" decoding="async" src="${p.img}" alt="${p.title}" class="w-full h-64 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-brand-600 font-bold text-lg">${p.price}</span>
+            <span class="text-xs bg-slate-100 text-slate-600 px-2 py-1 rounded-md font-medium"><i data-lucide="map-pin" class="w-3 h-3 inline"></i> ${p.location}</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-slate-900 mb-2">${p.title}</h3>
+          <p class="text-slate-600 text-sm mb-6 flex-grow">${p.desc}</p>
+          <a href="properties.html" class="w-full bg-slate-50 hover:bg-brand-50 text-brand-900 font-semibold py-2.5 rounded-xl text-center transition flex items-center justify-center gap-2">
+            View Details <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function switchLang(lang) {
+    const title = document.querySelector('[data-i18n="hero-title"]');
+    const subtitle = document.querySelector('[data-i18n="hero-subtitle"]');
+    if(lang === 'ar') {
+      if(title) title.innerText = "العثور على منزل أحلامك الفاخر في بنغالور";
+      if(subtitle) subtitle.innerText = "اكتشف عقارات استثنائية تم اختيارها بدقة من قبل مستشاري العقارات الأكثر ثقة في بنغالور.";
+    } else {
+      if(title) title.innerText = "Finding your luxury dream home in Bengaluru";
+      if(subtitle) subtitle.innerText = "Discover exceptional properties curated with precision by Bengaluru's most trusted real estate advisors.";
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderFeatured();
+    if(typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Elite Realty</p><p class="mt-3 text-sm text-slate-400">Finding your luxury dream home in Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="properties.html" class="hover:text-white">Properties</a><a href="contact.html" class="hover:text-white">Contact</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM. Founded in 2016 by Vikram Malhotra, a visionary with 15+ years in urban planning</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@elite-realty.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Elite Realty. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

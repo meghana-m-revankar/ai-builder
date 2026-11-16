@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Elite Realty</title>
+<meta name="description" content="Finding your luxury dream home in Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eef2ff','100':'#e0e7ff','200':'#c7d2fe','300':'#a5b4fc','400':'#818cf8','500':'#1e3a8a','600':'#1e40af','700':'#1d4ed8','800':'#1e3a8a','900':'#172554'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Elite Realty</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="properties.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Properties</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="properties.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Properties</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-[60vh] flex items-center justify-center bg-brand-900 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1748063578185-3d68121b11ff?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NDgxOTY3N3ww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Elite Realty Office Building" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-900/90 to-brand-900/40 z-10"></div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+      <span class="text-brand-300 font-semibold tracking-widest uppercase text-sm mb-3 block">Get In Touch</span>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">Let's Discuss Your Dream Property</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-8">Connect with Bengaluru's premier luxury real estate advisory for personalized property curation and expert consultation.</p>
+      <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+        <a href="#inquiry" class="bg-white text-brand-900 hover:bg-brand-50 px-6 py-3 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Send Inquiry</a>
+        <a href="#locations" class="border border-white/30 hover:bg-white/10 px-6 py-3 rounded-xl transition">Visit Office</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Three Contact Cards -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Direct Channels</h2>
+        <p class="text-gray-600">Reach out through your preferred medium and our dedicated client relations team will respond promptly.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Call Card -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 text-center border border-gray-100">
+          <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="phone" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Call Us Directly</h3>
+          <p class="text-gray-600 text-sm mb-6">Speak immediately with our expert property advisors for instant guidance.</p>
+          <a href="tel:+918045678910" class="text-brand-600 font-semibold hover:text-brand-700 text-lg">+91 80 4567 8910</a>
+        </div>
+        <!-- WhatsApp Card -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 text-center border border-gray-100">
+          <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="message-square" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">WhatsApp Chat</h3>
+          <p class="text-gray-600 text-sm mb-6">Quick response for brochures, pricing, and site visit scheduling.</p>
+          <a href="https://wa.me/918045678910" target="_blank" rel="noopener" class="text-emerald-600 font-semibold hover:text-emerald-700 text-lg">Start Chatting</a>
+        </div>
+        <!-- Email Card -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition duration-300 text-center border border-gray-100">
+          <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="mail" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Email Inquiry</h3>
+          <p class="text-gray-600 text-sm mb-6">Send detailed requirements and proposals for comprehensive review.</p>
+          <a href="mailto:hello@elite-realty.in" class="text-brand-600 font-semibold hover:text-brand-700 text-lg">hello@elite-realty.in</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Inquiry Form & Address Details -->
+  <section id="inquiry" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <span class="text-brand-600 font-semibold tracking-widest uppercase text-sm mb-3 block">Start A Conversation</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Send Us Your Requirements</h2>
+          <p class="text-gray-600 mb-8">Fill out the form with your preferences, and our senior consultants will curate exclusive property options matching your exact criteria.</p>
+          
+          <div class="space-y-6 bg-brand-50 p-8 rounded-2xl border border-brand-100">
+            <div class="flex items-start space-x-4">
+              <div class="bg-white p-3 rounded-xl text-brand-600 shadow-sm">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900">Office Address</h4>
+                <p class="text-gray-600 text-sm mt-1">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="bg-white p-3 rounded-xl text-brand-600 shadow-sm">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900">Business Hours</h4>
+                <p class="text-gray-600 text-sm mt-1">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 sm:p-10 rounded-2xl shadow-lg border border-gray-100">
+          <form name="contact" method="POST" data-netlify="true" class="space-y-6" id="contactForm">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none bg-white" placeholder="Vikram Malhotra">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none bg-white" placeholder="vikram@example.com">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none bg-white" placeholder="+91 98765 43210">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Interested Property Type</label>
+              <select name="property_type" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none bg-white">
+                <option>Premium Apartments (₹1.5Cr+)</option>
+                <option>Luxury Villas (₹4Cr+)</option>
+                <option>Penthouse Suites (₹6Cr+)</option>
+                <option>Gated Communities (₹2.5Cr+)</option>
+                <option>Commercial Spaces (₹2Cr+)</option>
+                <option>Plots (₹50L+)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Your Message / Requirements *</label>
+              <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none bg-white" placeholder="Describe your preferred location, budget, and timeline..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-brand-900 hover:bg-brand-800 text-white font-medium py-3.5 px-6 rounded-xl shadow-lg transition duration-200">Submit Inquiry</button>
+          </form>
+          <div id="formSuccess" class="hidden mt-4 p-4 bg-emerald-50 text-emerald-700 rounded-xl text-center font-medium">Thank you! We have received your inquiry and will contact you shortly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Google Maps Iframe -->
+  <section id="locations" class="py-12 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">Visit Our Headquarters</h3>
+        <p class="text-gray-600 text-sm">Located in the heart of Bengaluru's premier business district on MG Road.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-xl h-96 w-full border border-gray-200">
+        <iframe title="Elite Realty Office Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.044525808796!2d77.6055!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b4444d%3A0x23f66318c5e60935!2sMG%20Road%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FAQ Accordion -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-semibold tracking-widest uppercase text-sm mb-3 block">Got Questions?</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-600">Find clear answers regarding our real estate advisory services, property acquisition process, and legal assistance.</p>
+      </div>
+      <div class="space-y-4" id="faqAccordion">
+        <div class="border border-gray-200 rounded-2xl overflow-hidden bg-gray-50">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-gray-900 flex justify-between items-center focus:outline-none">
+            <span>What services does Elite Realty provide?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-brand-600 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm leading-relaxed">
+            We specialize in end-to-end luxury real estate advisory including property curation, site visits, price negotiations, end-to-end legal verification by our legal head, and complete documentation support for high-end apartments, villas, and commercial spaces across Bengaluru.
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-2xl overflow-hidden bg-gray-50">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-gray-900 flex justify-between items-center focus:outline-none">
+            <span>How do I schedule a private property site visit?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-brand-600 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm leading-relaxed">
+            You can schedule a private site visit by contacting us via phone at +91 80 4567 8910, messaging us on WhatsApp, or filling out the inquiry form on this page. Our lead consultant Ananya will coordinate a private chauffeured tour at your convenience.
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-2xl overflow-hidden bg-gray-50">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-gray-900 flex justify-between items-center focus:outline-none">
+            <span>Are all properties legally verified?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-brand-600 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm leading-relaxed">
+            Yes. Every property listed with Elite Realty undergoes stringent title and compliance checks led by Priya, our Legal Head, ensuring 100% transparent and hassle-free transactions for our clients.
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-2xl overflow-hidden bg-gray-50">
+          <button class="faq-btn w-full px-6 py-4 text-left font-display font-bold text-gray-900 flex justify-between items-center focus:outline-none">
+            <span>What are your operating hours?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-brand-600 transition-transform duration-200"></i>
+          </button>
+          <div class="faq-content hidden px-6 pb-4 text-gray-600 text-sm leading-relaxed">
+            Our MG Road office is open Monday through Saturday from 9:00 AM to 9:00 PM, and Sundays from 10:00 AM to 6:00 PM. You can also reach our helpline during these hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA Band -->
+  <section class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to Find Your Luxury Address?</h2>
+      <p class="text-brand-100 max-w-2xl mx-auto mb-8 text-lg">Join over 500 satisfied families who found their dream homes through Elite Realty.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="properties.html" class="bg-white text-brand-900 hover:bg-brand-50 px-8 py-4 rounded-xl font-medium shadow-lg transition">Explore Properties</a>
+        <a href="tel:+918045678910" class="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-xl font-medium transition">Call +91 80 4567 8910</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // FAQ Accordion logic
+    const faqButtons = document.querySelectorAll('.faq-btn');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Close all
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn i').forEach(i => i.style.transform = 'rotate(0deg)');
+        
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Contact form submission simulation
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.reset();
+        successMsg.classList.remove('hidden');
+        setTimeout(() => {
+          successMsg.classList.add('hidden');
+        }, 5000);
+      });
+    }
+
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Elite Realty</p><p class="mt-3 text-sm text-slate-400">Finding your luxury dream home in Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="properties.html" class="hover:text-white">Properties</a><a href="contact.html" class="hover:text-white">Contact</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM. Founded in 2016 by Vikram Malhotra, a visionary with 15+ years in urban planning</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@elite-realty.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Elite Realty. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

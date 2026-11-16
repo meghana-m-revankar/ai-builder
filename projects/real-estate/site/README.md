@@ -1,0 +1,7 @@
+# Elite Realty
+
+Finding your luxury dream home in Bengaluru.
+
+Static website - open index.html in a browser or host the folder on any static host.
+
+Pages: index.html, about.html, properties.html, contact.html, blog.html
