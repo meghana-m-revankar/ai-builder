@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Cafe Coffee Day</title>
+<meta name="description" content="India's favorite destination for conversation and coffee.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fffbeb','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Cafe Coffee Day</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Book a Table</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Coffee Culture</a></nav>
+    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Book a Table</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Coffee Culture</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Full-screen hero with CTA -->
+  <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8aW50ZXJpb3IlMjBjb2ZmZWV8ZW58MXx8fHwxNzk0ODIxNjY0fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Cafe Coffee Day warm interior" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-24">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-brand-600/90 text-white text-sm font-medium mb-6 uppercase tracking-wider">A Lot Can Happen Over Coffee</span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">India's Favorite Destination for Conversation</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 mb-10">Established in 1996, we have spent over 28 years bringing people together over steaming cups of coffee and delightful conversations.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="menu.html" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl shadow-lg transition duration-200">Explore Our Menu</a>
+        <a href="booking.html" class="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium rounded-xl transition duration-200">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats strip showing reach and rating -->
+  <section class="bg-brand-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">500+</div>
+          <div class="text-sm text-gray-300">Locations Across India</div>
+        </div>
+        <div>
+          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">2M+</div>
+          <div class="text-sm text-gray-300">Daily Cups Served</div>
+        </div>
+        <div>
+          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">4.7★</div>
+          <div class="text-sm text-gray-300">Google Rating</div>
+        </div>
+        <div>
+          <div class="font-display text-3xl sm:text-4xl font-bold text-amber-400 mb-1">28+</div>
+          <div class="text-sm text-gray-300">Years of Legacy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder story preview section -->
+  <section id="story" class="py-16 md:py-24 bg-amber-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y29mZmVlJTIwYmVhbnN8ZW58MXx8fHwxNzk0ODIxNjY0fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Coffee beans and brewing" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Our Heritage</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6">Rooted in Passion Since 1996</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">Founded by V.G. Siddhartha, Cafe Coffee Day was envisioned as a welcoming sanctuary for the youth of India to connect, share ideas, and build relationships over an authentic cup of coffee.</p>
+          <p class="text-gray-700 mb-8 leading-relaxed">From our very first cafe on MG Road in Bengaluru to becoming a cultural phenomenon across the nation, our commitment to exceptional brew quality and warm hospitality remains unchanged.</p>
+          <a href="about.html" class="inline-flex items-center gap-2 font-semibold text-brand-600 hover:text-brand-700">
+            Read our full story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured coffee and snacks grid -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Taste Perfection</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Our Signature Creations</h2>
+        <p class="text-gray-600">Discover the iconic flavors that have made us India's favorite hangout spot for decades.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition duration-200 border border-amber-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1593443320739-77f74939d0da?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bGF0dGUlMjBhcnR8ZW58MXx8fHwxNzk0ODIxNjY0fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Classic Cappuccino" class="w-full h-48 object-cover rounded-xl mb-4">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Classic Cappuccino</h3>
+              <span class="text-brand-600 font-bold">₹160</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Rich espresso under a deep layer of foamed milk, crafted to absolute perfection by our expert baristas.</p>
+          </div>
+          <a href="menu.html" class="w-full py-2.5 bg-brand-600 text-white rounded-xl font-medium text-center hover:bg-brand-700 transition">Order Now</a>
+        </div>
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition duration-200 border border-amber-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1488667499475-42a530fab02b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZGV2aWxzJTIwb3duJTIwY29mZmVlfGVufDF8fHx8MTc5NDgyMTY2NHww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Devil's Own" class="w-full h-48 object-cover rounded-xl mb-4">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Devil's Own</h3>
+              <span class="text-brand-600 font-bold">₹220</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">Our legendary cold coffee blended with rich chocolate syrup and topped with a generous swirl of whipped cream.</p>
+          </div>
+          <a href="menu.html" class="w-full py-2.5 bg-brand-600 text-white rounded-xl font-medium text-center hover:bg-brand-700 transition">Order Now</a>
+        </div>
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition duration-200 border border-amber-100 flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y2hvY29sYXRlJTIwY2FrZSUyMHNsaWNlfGVufDF8fHx8MTc5NDgyMTY2NHww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Chocolate Fantasy Cake" class="w-full h-48 object-cover rounded-xl mb-4">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Chocolate Fantasy Cake</h3>
+              <span class="text-brand-600 font-bold">₹180</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">A decadent, warm chocolate cake that melts in your mouth, served best with a hot cup of coffee.</p>
+          </div>
+          <a href="menu.html" class="w-full py-2.5 bg-brand-600 text-white rounded-xl font-medium text-center hover:bg-brand-700 transition">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why choose us feature cards -->
+  <section class="py-16 md:py-24 bg-amber-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">The CCD Experience</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Why Choose Cafe Coffee Day</h2>
+        <p class="text-gray-600">We go beyond brewing great coffee to create spaces where memories are made daily.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-amber-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="coffee" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Estate-Grown Beans</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Our coffee beans are sourced directly from our own lush shade-grown coffee estates in Chikmagalur, ensuring unmatched flavor.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-amber-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Vibrant Spaces</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Designed for comfort, conversation, and collaboration, our cafes provide a cozy ambiance for meetings or casual hangouts.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-md border border-amber-100">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Warm Hospitality</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Led by passionate baristas like Anjali and our dedicated team, we treat every guest like family from the moment they step in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Three-step ordering process visual -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Simple & Convenient</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">How It Works</h2>
+        <p class="text-gray-600">Enjoy your favorite coffee and snacks in just three easy steps.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brand-600 text-white font-display text-2xl font-bold rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">1</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Browse & Select</h3>
+          <p class="text-gray-600 text-sm">Explore our rich menu featuring classic coffees, paninis, and decadent desserts online.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brand-600 text-white font-display text-2xl font-bold rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">2</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Book or Order</h3>
+          <p class="text-gray-600 text-sm">Reserve your table ahead of time or place an order for quick pickup at your nearest CCD outlet.</p>
+        </div>
+        <div class="text-center p-6">
+          <div class="w-16 h-16 bg-brand-600 text-white font-display text-2xl font-bold rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">3</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Sip & Connect</h3>
+          <p class="text-gray-600 text-sm">Step into our warm cafe environment and enjoy great conversations over exceptional coffee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-brand-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready for a Great Conversation?</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto mb-8">Visit us at MG Road, Bengaluru, or book your table today to experience India's favorite coffee destination.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl shadow-lg transition duration-200">Book a Table Now</a>
+        <a href="menu.html" class="px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 font-medium rounded-xl transition duration-200">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Cafe Coffee Day</p><p class="mt-3 text-sm text-slate-400">India's favorite destination for conversation and coffee.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="menu.html" class="hover:text-white">Menu</a><a href="booking.html" class="hover:text-white">Book a Table</a><a href="blog.html" class="hover:text-white">Coffee Culture</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@cafe-coffee-day.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Cafe Coffee Day. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
