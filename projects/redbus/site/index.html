@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Redbus</title>
+<meta name="description" content="Your Premier Bus Booking Partner in Dubai">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef2f2','100':'#fee2e2','200':'#fecaca','300':'#fca5a5','400':'#f87171','500':'#ef4444','600':'#dc2626','700':'#b91c1c','800':'#991b1b','900':'#7f1d1d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Redbus</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-white text-zinc-900 font-serif">
+  <!-- 1. Hero section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-zinc-900 text-white">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1759177000910-c406ca6928da?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZHViYWklMjBidXMlMjBoaWdod2F5fGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Redbus luxury coach on Sheikh Zayed Road" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center w-full">
+      <div class="absolute top-4 right-4 sm:right-8 flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full text-sm">
+        <i data-lucide="globe" class="w-4 h-4"></i>
+        <span>EN / AR</span>
+      </div>
+      <span class="inline-block bg-red-600 text-white text-xs uppercase tracking-widest px-3 py-1 rounded-full font-sans mb-6 font-bold">Dubai's Premier Bus Partner</span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto font-serif">
+        Modernizing Transit Across Dubai Since 2016
+      </h1>
+      <p class="text-lg sm:text-xl text-zinc-300 max-w-2xl mx-auto mb-10 font-sans">
+        Experience luxury, punctuality, and safety with over 50,000+ happy passengers connecting through our premier fleet.
+      </p>
+
+      <!-- Search Bar Widget -->
+      <div class="bg-white text-zinc-900 p-4 sm:p-6 rounded-2xl shadow-2xl max-w-4xl mx-auto font-sans">
+        <form id="hero-search-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+          <div class="text-left">
+            <label class="block text-xs uppercase text-zinc-500 font-bold mb-1">From</label>
+            <div class="flex items-center border border-zinc-200 rounded-xl px-3 py-2 bg-zinc-50">
+              <i data-lucide="map-pin" class="w-4 h-4 text-red-600 mr-2">></i>
+              <select id="search-from" class="bg-transparent w-full outline-none text-sm">
+                <option>Dubai (Al Ghubaiba)</option>
+                <option>Abu Dhabi Central</option>
+                <option>Sharjah Rolla</option>
+                <option>Dubai Airport T3</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-left">
+            <label class="block text-xs uppercase text-zinc-500 font-bold mb-1">To</label>
+            <div class="flex items-center border border-zinc-200 rounded-xl px-3 py-2 bg-zinc-50">
+              <i data-lucide="navigation" class="w-4 h-4 text-red-600 mr-2"></i>
+              <select id="search-to" class="bg-transparent w-full outline-none text-sm">
+                <option>Abu Dhabi (Downtown)</option>
+                <option>Dubai Marina</option>
+                <option>Sharjah Corniche</option>
+                <option>Global Village</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-left">
+            <label class="block text-xs uppercase text-zinc-500 font-bold mb-1">Date</label>
+            <div class="flex items-center border border-zinc-200 rounded-xl px-3 py-2 bg-zinc-50">
+              <i data-lucide="calendar" class="w-4 h-4 text-red-600 mr-2"></i>
+              <input type="date" id="search-date" class="bg-transparent w-full outline-none text-sm" value="2024-05-01">
+            </div>
+          </div>
+          <div class="flex items-end h-full pt-5 lg:pt-0">
+            <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-xl transition shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="search" class="w-4 h-4"></i>
+              Search Buses
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4 font-sans">
+        <a href="booking.html" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition shadow-lg">Book Tickets Now</a>
+        <a href="services.html" class="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur transition border border-white/20">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats strip -->
+  <section class="bg-red-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center font-sans">
+        <div class="p-4 border-b md:border-b-0 md:border-r border-red-500/50">
+          <div class="text-4xl sm:text-5xl font-bold font-serif mb-2">50,000+</div>
+          <div class="text-red-100 uppercase tracking-wider text-sm">Happy Passengers</div>
+        </div>
+        <div class="p-4 border-b md:border-b-0 md:border-r border-red-500/50">
+          <div class="text-4xl sm:text-5xl font-bold font-serif mb-2">4.9 ★</div>
+          <div class="text-red-100 uppercase tracking-wider text-sm">Satisfaction Rating</div>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl sm:text-5xl font-bold font-serif mb-2">8+ Years</div>
+          <div class="text-red-100 uppercase tracking-wider text-sm">Of Excellence in Dubai</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About us preview -->
+  <section class="py-16 md:py-24 bg-zinc-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1662098567478-757c3ef5288a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZHViYWklMjBidXMlMjBmbGVldHxlbnwxfHx8fDE3OTQ4MTkyMTR8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Modern Dubai Bus Fleet" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-lg">
+        </div>
+        <div class="w-full lg:w-1/2 space-y-6">
+          <span class="text-red-600 font-sans uppercase tracking-widest text-sm font-bold">About Redbus</span>
+          <h2 class="text-3xl sm:text-5xl font-bold font-serif text-zinc-900 leading-tight">
+            Pioneering Modern Bus Transit in the Heart of Dubai
+          </h2>
+          <p class="text-zinc-600 font-sans leading-relaxed">
+            Founded in 2016 by Ahmed Al-Mansoori, Redbus set out with a bold vision to transform urban and intercity travel across the UAE. We combine state-of-the-art vehicles with unmatched digital convenience to get you to your destination safely.
+          </p>
+          <blockquote class="border-l-4 border-red-600 pl-4 italic text-zinc-700 font-serif">
+            "Our mission has always been simple: provide every passenger with a first-class travel experience that is reliable, affordable, and exceptionally comfortable."
+            <span class="block not-italic font-sans text-xs font-bold text-red-600 mt-2">— Ahmed Al-Mansoori, Founder</span>
+          </blockquote>
+          <div class="pt-4 font-sans">
+            <a href="about.html" class="inline-flex items-center gap-2 text-red-600 font-bold hover:text-red-700 transition">
+              Read our full history <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured popular bus routes and travel packages -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-red-600 font-sans uppercase tracking-widest text-sm font-bold">Our Offerings</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif mt-2 mb-4">Popular Routes & Travel Packages</h2>
+        <p class="text-zinc-600 font-sans">Choose from our daily express commuter lines or luxury tourist packages tailored for every traveler.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1546412414-c2658fffe7d9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8aW50ZXJjaXR5JTIwYnVzJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Intercity Express" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Express</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 50</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Intercity Express</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Fast and frequent connections between major UAE city centers with zero hassle.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1546412414-8035e1776c9a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Luxury Sleeper" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Premium</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 120</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Luxury Sleeper</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Ultimate comfort on long journeys featuring reclining seats and personal entertainment.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1703866367063-71eae5acbf5d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZHViYWklMjBhaXJwb3J0JTIwc2h1dHRsZXxlbnwxfHx8fDE3OTQ4MTkyMTR8MA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Airport Shuttle" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Convenient</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 75</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Airport Shuttle</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Direct, on-time transfers to and from Dubai International Airport with luggage assistance.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1546412414-c2658fffe7d9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8ZHViYWklMjB0b3VyaXN0JTIwYnVzfGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Tourist Hop-on" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Sightseeing</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 150</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Tourist Hop-on</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Explore iconic Dubai landmarks at your own pace with unlimited day-pass access.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y29tbXV0ZXIlMjBwYXNzJTIwYnVzfGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Monthly Commuter Pass" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Pass</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 900</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Monthly Commuter Pass</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Cost-effective unlimited monthly travel for regular daily professionals across the city.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-zinc-50 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+          <div>
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1703866367063-71eae5acbf5d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Group Charter" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full font-sans">Private</span>
+                <span class="text-xl font-bold font-serif text-zinc-900">AED 2500</span>
+              </div>
+              <h3 class="text-xl font-bold font-serif mb-2">Group Charter</h3>
+              <p class="text-zinc-600 text-sm font-sans mb-4">Exclusive private bus rentals for corporate events, tours, and special private gatherings.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 font-sans">
+            <a href="booking.html" class="w-full block text-center bg-zinc-900 hover:bg-red-600 text-white font-bold py-2.5 rounded-xl transition">Book Route</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why choose Redbus -->
+  <section class="py-16 md:py-24 bg-zinc-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-red-500 font-sans uppercase tracking-widest text-sm font-bold">The Redbus Advantage</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif mt-2 mb-4">Why Choose Redbus</h2>
+        <p class="text-zinc-400 font-sans">We set the gold standard in passenger transit through rigorous safety standards and exceptional service.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 font-sans">
+        <div class="bg-zinc-800 p-8 rounded-2xl border border-zinc-700">
+          <div class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3 text-white">Safety First</h3>
+          <p class="text-zinc-400 text-sm">Every vehicle undergoes rigorous daily maintenance checks and is operated by certified professional drivers.</p>
+        </div>
+
+        <div class="bg-zinc-800 p-8 rounded-2xl border border-zinc-700">
+          <div class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3 text-white">Punctuality</h3>
+          <p class="text-zinc-400 text-sm">We value your time with strict schedule adherence and real-time GPS tracking across all active routes.</p>
+        </div>
+
+        <div class="bg-zinc-800 p-8 rounded-2xl border border-zinc-700">
+          <div class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3 text-white">Maximum Comfort</h3>
+          <p class="text-zinc-400 text-sm">Enjoy plush ergonomic seating, onboard Wi-Fi, climate control, and generous luggage compartments.</p>
+        </div>
+
+        <div class="bg-zinc-800 p-8 rounded-2xl border border-zinc-700">
+          <div class="w-12 h-12 bg-red-600 text-white rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="smartphone" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-3 text-white">Digital Support</h3>
+          <p class="text-zinc-400 text-sm">Manage bookings seamlessly via our online platform backed by 24/7 dedicated customer success teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. How it works -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-red-600 font-sans uppercase tracking-widest text-sm font-bold">Simple Process</span>
+        <h2 class="text-3xl sm:text-5xl font-bold font-serif mt-2 mb-4">How It Works</h2>
+        <p class="text-zinc-600 font-sans">Book your next journey across Dubai in three quick and effortless steps.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 font-sans text-center">
+        <div class="p-8 bg-zinc-50 rounded-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+          <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4">
+            <i data-lucide="search" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-zinc-900">Search Route</h3>
+          <p class="text-zinc-600 text-sm">Enter your origin, destination, and travel date into our smart booking search bar.</p>
+        </div>
+
+        <div class="p-8 bg-zinc-50 rounded-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+          <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4">
+            <i data-lucide="ticket" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-zinc-900">Book Ticket</h3>
+          <p class="text-zinc-600 text-sm">Select your preferred package, choose your seats, and securely complete your payment online.</p>
+        </div>
+
+        <div class="p-8 bg-zinc-50 rounded-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+          <div class="w-16 h-16 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 mt-4">
+            <i data-lucide="bus" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold font-serif mb-2 text-zinc-900">Board & Travel</h3>
+          <p class="text-zinc-600 text-sm">Show your digital boarding pass on your phone and enjoy a smooth, relaxing ride.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-red-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-sans">
+      <h2 class="text-3xl sm:text-5xl font-bold font-serif mb-4">Ready to Journey Across Dubai?</h2>
+      <p class="text-red-100 max-w-2xl mx-auto mb-8">Join thousands of satisfied passengers and book your next trip with Redbus today.</p>
+      <div class="flex justify-center gap-4">
+        <a href="booking.html" class="bg-white text-red-600 hover:bg-zinc-100 font-bold px-8 py-4 rounded-xl transition shadow-lg">Book Your Ticket Now</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.getElementById('hero-search-form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const from = document.getElementById('search-from').value;
+        const to = document.getElementById('search-to').value;
+        const date = document.getElementById('search-date').value;
+        window.location.href = `booking.html?from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&date=${encodeURIComponent(date)}`;
+      });
+    }
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Redbus</p><p class="mt-3 text-sm text-slate-400">Your Premier Bus Booking Partner in Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Zayed Road, Office 402, Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 234 5678</p><p class="mt-2 text-sm text-slate-400">hello@redbus.ae</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Redbus. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

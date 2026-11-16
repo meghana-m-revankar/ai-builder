@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Redbus</title>
+<meta name="description" content="Your Premier Bus Booking Partner in Dubai">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef2f2','100':'#fee2e2','200':'#fecaca','300':'#fca5a5','400':'#f87171','500':'#ef4444','600':'#dc2626','700':'#b91c1c','800':'#991b1b','900':'#7f1d1d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Redbus</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Hero with featured travel article and image -->
+  <section id="hero" class="relative py-20 bg-brand-900 text-white">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1584226563262-db73d18754b5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Dubai travel view from bus" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="bg-red-600 text-white text-xs font-bold uppercase tracking-widest py-1 px-3 rounded-full">Featured Article</span>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mt-4 mb-6 leading-tight">Navigating Dubai in 2024: The Ultimate Guide to Scenic Bus Routes</h1>
+        <p class="text-lg text-gray-200 mb-8">Discover how modern intercity express routes are transforming the way residents and tourists explore the emirate's architectural marvels and hidden cultural gems without breaking the bank.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#articles" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition text-center">Read Full Story</a>
+          <a href="booking.html" class="bg-white hover:bg-gray-100 text-brand-900 font-bold py-3 px-8 rounded-lg transition text-center">Book Your Trip</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 & 3. Grid of 6 recent blog posts & Sidebar with search and trending -->
+  <section id="articles" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        
+        <!-- Main Blog Grid (2 cols) -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="font-display text-3xl font-bold text-gray-900">Recent Travel Articles</h2>
+            <span id="post-count" class="text-sm text-gray-500">Showing 6 articles</span>
+          </div>
+          
+          <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Rendered via JS -->
+          </div>
+        </div>
+
+        <!-- Sidebar (1 col) -->
+        <div class="space-y-8">
+          <!-- Search Widget -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <i data-lucide="search" class="w-5 h-5 text-red-600"></i> Search Blog
+            </h3>
+            <div class="relative">
+              <input type="text" id="blog-search" placeholder="Type to search articles..." class="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-600">
+              <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3 top-3.5"></i>
+            </div>
+          </div>
+
+          <!-- Trending Topics -->
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h3 class="font-display text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+              <i data-lucide="trending-up" class="w-5 h-5 text-red-600"></i> Trending Topics
+            </h3>
+            <div class="flex flex-wrap gap-2" id="trending-tags">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Quick Contact Box -->
+          <div class="bg-red-900 text-white p-6 rounded-2xl shadow-lg">
+            <h3 class="font-display text-xl font-bold mb-2">Need Assistance?</h3>
+            <p class="text-sm text-gray-200 mb-4">Our support team is available daily from 8:00 AM to 10:00 PM to help with your bookings.</p>
+            <a href="index.html#contact" class="inline-block bg-white text-red-900 font-bold text-sm py-2 px-4 rounded-lg hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Author spotlight section for guest travel experts -->
+  <section id="authors" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Guest Travel Experts</h2>
+        <p class="text-gray-600">Meet the seasoned voyagers and logistics specialists sharing their insider knowledge to make your journeys across the UAE seamless.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="authors-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Newsletter signup box for travel alerts and promotions -->
+  <section id="newsletter" class="py-16 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-red-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl text-center relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 opacity-10">
+          <i data-lucide="mail" class="w-64 h-64"></i>
+        </div>
+        <div class="relative z-10 max-w-xl mx-auto">
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Never Miss a Travel Update</h2>
+          <p class="text-red-100 mb-8">Subscribe to receive exclusive route announcements, monthly pass discounts, and expert Dubai travel itineraries directly in your inbox.</p>
+          
+          <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row gap-3 justify-center" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Redbus travel alerts!');">
+            <input type="email" name="email" required placeholder="Enter your email address" class="px-4 py-3 rounded-lg text-gray-900 w-full sm:w-80 focus:outline-none">
+            <button type="submit" class="bg-gray-900 hover:bg-gray-800 text-white font-bold px-6 py-3 rounded-lg transition">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA band for booking your next trip -->
+  <section id="cta" class="py-16 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ready to Experience Dubai with Redbus?</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">Join over 50,000+ happy passengers who trust our intercity express and luxury sleeper services for their daily commute and weekend getaways.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="booking.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg transition">Book a Ticket Now</a>
+        <a href="services.html" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3 px-8 rounded-lg transition">View All Services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const blogPosts = [
+    {
+      title: "Top 5 Hidden Gems Accessible via Intercity Express",
+      excerpt: "Escape the bustling city center and explore serene coastal spots and historical villages just a comfortable bus ride away.",
+      category: "Travel Tips",
+      date: "May 12, 2024",
+      image: "https://images.unsplash.com/photo-1658578294216-d855a1ac923c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Sarah (Lead Operations)"
+    },
+    {
+      title: "Why Monthly Commuter Passes Save You Time and Money",
+      excerpt: "Break down the economics of daily transit in Dubai and discover how our AED 900 pass streamlines your routine.",
+      category: "Dubai News",
+      date: "May 08, 2024",
+      image: "https://images.unsplash.com/photo-1669544912173-19d9d8cc0746?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Ahmed Al-Mansoori"
+    },
+    {
+      title: "Traveling to the Airport? Avoid Traffic with Airport Shuttles",
+      excerpt: "Priced at just AED 75, our dedicated airport transit service ensures you reach your terminal relaxed and right on schedule.",
+      category: "Travel Tips",
+      date: "April 29, 2024",
+      image: "https://images.unsplash.com/photo-1777124941757-9737a5fb3d4c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OXx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Rashid (Fleet Manager)"
+    },
+    {
+      title: "Inside Our Luxury Sleeper Fleet: Comfort on Long Routes",
+      excerpt: "Experience reclining seats, personal entertainment screens, and unmatched smoothness on extended inter-emirate journeys.",
+      category: "Fleet Update",
+      date: "April 21, 2024",
+      image: "https://images.unsplash.com/photo-1768463024950-e9ee6d362576?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTB8fGJ1cyUyMHRyYXZlbCUyMGR1YmFpfGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Omar (Tech Lead)"
+    },
+    {
+      title: "Family Trip Planning: Using Tourist Hop-on Services",
+      excerpt: "Maximize your weekend sightseeing with flexible schedules that stop directly at Dubai's most iconic landmarks.",
+      category: "Travel Tips",
+      date: "April 15, 2024",
+      image: "https://images.unsplash.com/photo-1651986629485-afc89d40dd16?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8ZHViYWklMjB0b3VyaXN0JTIwYnVzfGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Fatima (Customer Success)"
+    },
+    {
+      title: "Group Charters Made Easy for Corporate and Private Events",
+      excerpt: "Planning an outing for your team or family reunion? Here is how our AED 2500 group charter service delivers hassle-free transit.",
+      category: "Services",
+      date: "April 10, 2024",
+      image: "https://images.unsplash.com/photo-1759177000910-c406ca6928da?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fGJ1cyUyMHRyYXZlbCUyMGR1YmFpfGVufDF8fHx8MTc5NDgxOTIxNHww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80",
+      author: "Ahmed Al-Mansoori"
+    }
+  ];
+
+  const trendingTagsList = ["Intercity Express", "Luxury Sleeper", "Airport Shuttle", "Monthly Pass", "Tourist Guide", "Group Charter", "Dubai Transit"];
+
+  const authorsList = [
+    {
+      name: "Ahmed Al-Mansoori",
+      role: "Founder & CEO",
+      bio: "Started Redbus in 2016 to modernize Dubai's transit landscape with reliable, affordable, and high-quality bus networks.",
+      img: "https://i.pravatar.cc/120?img=12"
+    },
+    {
+      name: "Sarah",
+      role: "Lead Operations",
+      bio: "Ensures every route runs seamlessly and maintains our 4.9★ passenger satisfaction rating across thousands of weekly trips.",
+      img: "https://i.pravatar.cc/120?img=32"
+    },
+    {
+      name: "Omar",
+      role: "Tech Lead",
+      bio: "Spearheads digital booking innovations, real-time fleet tracking, and a frictionless passenger experience platform.",
+      img: "https://i.pravatar.cc/120?img=53"
+    }
+  ];
+
+  function renderBlog(posts) {
+    const grid = document.getElementById('blog-grid');
+    if(!grid) return;
+    
+    if(posts.length === 0) {
+      grid.innerHTML = '<div class="col-span-2 text-center py-12 text-gray-500">No articles found matching your search.</div>';
+      return;
+    }
+
+    grid.innerHTML = posts.map(post => `
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:-translate-y-1 transition flex flex-col">
+        <img loading="lazy" decoding="async" src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex items-center justify-between text-xs text-gray-500 mb-2">
+            <span class="bg-red-50 text-red-600 font-semibold px-2 py-0.5 rounded">${post.category}</span>
+            <span>${post.date}</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2 leading-snug">${post.title}</h3>
+          <p class="text-gray-600 text-sm mb-4 flex-grow">${post.excerpt}</p>
+          <div class="flex items-center justify-between pt-4 border-t border-gray-100 text-xs text-gray-500">
+            <span>By ${post.author}</span>
+            <span class="text-red-600 font-bold hover:underline cursor-pointer">Read More &rarr;</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderTags() {
+    const container = document.getElementById('trending-tags');
+    if(!container) return;
+    container.innerHTML = trendingTagsList.map(tag => `
+      <span class="bg-gray-100 hover:bg-red-50 hover:text-red-600 text-gray-700 text-xs font-medium px-3 py-1.5 rounded-lg transition cursor-pointer">#${tag}</span>
+    `).join('');
+  }
+
+  function renderAuthors() {
+    const container = document.getElementById('authors-grid');
+    if(!container) return;
+    container.innerHTML = authorsList.map(author => `
+      <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-center flex flex-col items-center">
+        <img loading="lazy" decoding="async" src="${author.img}" alt="${author.name}" class="w-24 h-24 rounded-full object-cover mb-4 shadow-md">
+        <h3 class="font-display text-xl font-bold text-gray-900">${author.name}</h3>
+        <p class="text-xs text-red-600 font-bold uppercase tracking-wider mb-3">${author.role}</p>
+        <p class="text-gray-600 text-sm">${author.bio}</p>
+      </div>
+    `).join('');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderBlog(blogPosts);
+    renderTags();
+    renderAuthors();
+
+    const searchInput = document.getElementById('blog-search');
+    if(searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const term = e.target.value.toLowerCase();
+        const filtered = blogPosts.filter(p => p.title.toLowerCase().includes(term) || p.excerpt.toLowerCase().includes(term) || p.category.toLowerCase().includes(term));
+        renderBlog(filtered);
+        document.getElementById('post-count').innerText = `Showing ${filtered.length} articles`;
+      });
+    }
+
+    if(typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Redbus</p><p class="mt-3 text-sm text-slate-400">Your Premier Bus Booking Partner in Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Zayed Road, Office 402, Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 234 5678</p><p class="mt-2 text-sm text-slate-400">hello@redbus.ae</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Redbus. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

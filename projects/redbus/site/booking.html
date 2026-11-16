@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking | Redbus</title>
+<meta name="description" content="Your Premier Bus Booking Partner in Dubai">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef2f2','100':'#fee2e2','200':'#fecaca','300':'#fca5a5','400':'#f87171','500':'#ef4444','600':'#dc2626','700':'#b91c1c','800':'#991b1b','900':'#7f1d1d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Redbus</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Blog</a></nav>
+    <button data-lang-toggle class="notranslate rounded-full border border-current px-3 py-1.5 text-sm font-semibold">العربية</button><a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Blog</a></div>
+</header>
+<main>
+<main class="bg-white text-neutral-900">
+    <section id="hero" class="relative min-h-[70vh] flex items-center justify-center bg-brand-900 text-white py-16">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1654169630656-002890076bc4?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8YnVzJTIwdHJhdmVsJTIwZHViYWl8ZW58MXx8fHwxNzk0ODE5MjE0fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Redbus fleet on Dubai highway" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-950/90 to-brand-900/70 z-10"></div>
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+            <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight mb-4">Book Your Journey</h1>
+            <p class="text-lg sm:text-xl text-neutral-200 max-w-2xl mx-auto mb-8 font-serif">Seamless travel across the UAE. Secure your seat in seconds with our instant booking system.</p>
+            
+            <div class="max-w-3xl mx-auto bg-white/1:// backdrop-blur-md p-4 rounded-2xl border border-white/20 flex justify-between items-center text-sm sm:text-base">
+                <div class="flex items-center gap-2 text-white font-semibold">
+                    <span class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center text-white">1</span>
+                    <span>Route & Service</span>
+                </div>
+                <div class="h-0.5 flex-1 bg-white/30 mx-2"></div>
+                <div class="flex items-center gap-2 text-neutral-300">
+                    <span class="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center text-white">2</span>
+                    <span>Passenger Details</span>
+                </div>
+                <div class="h-0.5 flex-1 bg-white/30 mx-2"></div>
+                <div class="flex items-center gap-2 text-neutral-300">
+                    <span class="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center text-white">3</span>
+                    <span>Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-app" class="py-16 md:py-24 bg-neutral-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <div class="lg:col-span-2 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-neutral-100">
+                    <h2 class="text-2xl font-display font-bold text-neutral-900 mb-6">Select Your Trip Details</h2>
+                    <form id="bookingForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-neutral-700 mb-2">Origin</label>
+                                <select id="origin" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif">
+                                    <option value="Dubai (Sheikh Zayed Rd)">Dubai (Sheikh Zayed Rd)</option>
+                                    <option value="Abu Dhabi Central">Abu Dhabi Central</option>
+                                    <option value="Sharjah Corniche">Sharjah Corniche</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-neutral-700 mb-2">Destination</label>
+                                <select id="destination" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif">
+                                    <option value="Abu Dhabi Central">Abu Dhabi Central</option>
+                                    <option value="Dubai (Sheikh Zayed Rd)">Dubai (Sheikh Zayed Rd)</option>
+                                    <option value="Sharjah Corniche">Sharjah Corniche</option>
+                                    <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-neutral-700 mb-2">Service Type</label>
+                            <select id="serviceType" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif">
+                                <option value="50" data-name="Intercity Express">Intercity Express (AED 50)</option>
+                                <option value="120" data-name="Luxury Sleeper">Luxury Sleeper (AED 120)</option>
+                                <option value="75" data-name="Airport Shuttle">Airport Shuttle (AED 75)</option>
+                                <option value="150" data-name="Tourist Hop-on">Tourist Hop-on (AED 150)</option>
+                                <option value="900" data-name="Monthly Commuter Pass">Monthly Commuter Pass (AED 900)</option>
+                                <option value="2500" data-name="Group Charter">Group Charter (AED 2500)</option>
+                            </select>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-neutral-700 mb-2">Date</label>
+                                <input type="date" id="tripDate" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-neutral-700 mb-2">Time Slot</label>
+                                <select id="tripTime" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif">
+                                    <option value="08:00 AM">08:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="04:00 PM">04:00 PM</option>
+                                    <option value="08:00 PM">08:00 PM</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-neutral-700 mb-2">Passengers</label>
+                                <input type="number" id="passengerCount" min="1" max="10" value="1" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-neutral-700 mb-2">Passenger Full Name</label>
+                            <input type="text" id="passengerName" placeholder="Ahmed Al-Mansoori" class="w-full rounded-xl border border-neutral-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none font-serif" required>
+                        </div>
+
+                        <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 rounded-xl transition shadow-lg shadow-red-600/20 font-serif">
+                            Proceed to Payment
+                        </button>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-1">
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-neutral-100 sticky top-24">
+                        <h3 class="text-xl font-display font-bold text-neutral-900 mb-4 pb-4 border-b border-neutral-100">Live Summary</h3>
+                        <div id="summaryContent" class="space-y-4 text-sm text-neutral-600 font-serif">
+                            <div class="flex justify-between">
+                                <span class="font-medium text-neutral-900">Route:</span>
+                                <span id="sumRoute">Dubai to Abu Dhabi</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-neutral-900">Service:</span>
+                                <span id="sumService">Intercity Express</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-neutral-900">Date & Time:</span>
+                                <span id="sumDateTime">Today, 08:00 AM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium text-neutral-900">Passengers:</span>
+                                <span id="sumPassengers">1</span>
+                            </div>
+                            <div class="pt-4 border-t border-neutral-100 flex justify-between items-center">
+                                <span class="text-base font-bold text-neutral-900">Total Price:</span>
+                                <span id="sumPrice" class="text-2xl font-bold text-red-600 font-display">AED 50</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 bg-red-50 p-4 rounded-xl border border-red-100 flex items-start gap-3">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-red-600 shrink-0 mt-0.5"></i>
+                            <p class="text-xs text-red-900 font-serif">Free cancellation up to 24 hours before departure. Instant ticket delivery via email.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expectations" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">What to Expect on Your Journey</h2>
+                <p class="text-neutral-600 font-serif">We combine modern amenities with punctuality to ensure your trip across Dubai and beyond is exceptionally comfortable.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-neutral-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition border border-neutral-100 text-center">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="wifi" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-neutral-900 mb-2">High-Speed Wi-Fi</h3>
+                    <p class="text-neutral-600 font-serif">Stay connected throughout your transit with our complimentary onboard high-speed internet connection.</p>
+                </div>
+                <div class="bg-neutral-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition border border-neutral-100 text-center">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="wind" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-neutral-900 mb-2">Climate Control</h3>
+                    <p class="text-neutral-600 font-serif">Beat the Dubai heat with our advanced climate control systems keeping the cabin at the perfect temperature.</p>
+                </div>
+                <div class="bg-neutral-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition border border-neutral-100 text-center">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="armchair" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-display font-bold text-neutral-900 mb-2">Reclining Seats</h3>
+                    <p class="text-neutral-600 font-serif">Enjoy ample legroom and ergonomic reclining seats designed for maximum relaxation during your ride.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-neutral-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-neutral-900 mb-4">Ticket Changes & Cancellations</h2>
+                <p class="text-neutral-600 font-serif">Find quick answers regarding modifying your travel plans with Redbus.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-neutral-100">
+                    <h3 class="text-lg font-display font-bold text-neutral-900 mb-2">How can I change my travel date or time?</h3>
+                    <p class="text-neutral-600 font-serif">You can modify your ticket up to 3 hours before departure through your dashboard or by contacting our 24/7 customer support team.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-neutral-100">
+                    <h3 class="text-lg font-display font-bold text-neutral-900 mb-2">What is the cancellation policy?</h3>
+                    <p class="text-neutral-600 font-serif">Cancellations made 24 hours prior to departure are eligible for a full refund. Later cancellations may incur a nominal processing fee.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-neutral-100">
+                    <h3 class="text-lg font-display font-bold text-neutral-900 mb-2">How long do refunds take to process?</h3>
+                    <p class="text-neutral-600 font-serif">Refunds are typically processed back to your original payment method within 3 to 5 business days.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-neutral-900 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-4 border border-neutral-800">
+        <div class="w-10 h-10 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center shrink-0">
+            <i data-lucide="check" class="w-5 h-5"></i>
+        </div>
+        <div>
+            <h4 class="font-bold font-display text-sm">Booking Confirmed!</h4>
+            <p id="toastMessage" class="text-xs text-neutral-300 font-serif">Your ticket has been booked successfully.</p>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        const originEl = document.getElementById('origin');
+        const destinationEl = document.getElementById('destination');
+        const serviceTypeEl = document.getElementById('serviceType');
+        const tripDateEl = document.getElementById('tripDate');
+        const tripTimeEl = document.getElementById('tripTime');
+        const passengerCountEl = document.getElementById('passengerCount');
+        const passengerNameEl = document.getElementById('passengerName');
+        const bookingForm = document.getElementById('bookingForm');
+
+        const sumRoute = document.getElementById('sumRoute');
+        const sumService = document.getElementById('sumService');
+        const sumDateTime = document.getElementById('sumDateTime');
+        const sumPassengers = document.getElementById('sumPassengers');
+        const sumPrice = document.getElementById('sumPrice');
+
+        // Set default date to today
+        const today = new Date().toISOString().split('T')[0];
+        tripDateEl.value = today;
+
+        function updateSummary() {
+            const origin = originEl.value;
+            const destination = destinationEl.value;
+            const selectedOption = serviceTypeEl.options[serviceTypeEl.selectedIndex];
+            const serviceName = selectedOption.getAttribute('data-name');
+            const basePrice = parseFloat(selectedOption.value);
+            const count = parseInt(passengerCountEl.value) || 1;
+            const date = tripDateEl.value;
+            const time = tripTimeEl.value;
+
+            sumRoute.textContent = `${origin.split(' ')[0]} to ${destination.split(' ')[0]}`;
+            sumService.textContent = serviceName;
+            sumDateTime.textContent = `${date}, ${time}`;
+            sumPassengers.textContent = count;
+            
+            const total = basePrice * count;
+            sumPrice.textContent = `AED ${total}`;
+        }
+
+        [originEl, destinationEl, serviceTypeEl, tripDateEl, tripTimeEl, passengerCountEl].forEach(el => {
+            el.addEventListener('change', updateSummary);
+            el.addEventListener('input', updateSummary);
+        });
+
+        updateSummary();
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const bookingData = {
+                id: 'RB-' + Math.floor(100000 + Math.random() * 900000),
+                origin: originEl.value,
+                destination: destinationEl.value,
+                service: serviceTypeEl.options[serviceTypeEl.selectedIndex].getAttribute('data-name'),
+                date: tripDateEl.value,
+                time: tripTimeEl.value,
+                passengers: passengerCountEl.value,
+                name: passengerNameEl.value,
+                total: sumPrice.textContent,
+                createdAt: new Date().toISOString()
+            };
+
+            const existingBookings = JSON.parse(localStorage.getItem('redbus_bookings') || '[]');
+            existingBookings.push(bookingData);
+            localStorage.setItem('redbus_bookings', JSON.stringify(existingBookings));
+
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = `Ticket ${bookingData.id} booked successfully for ${bookingData.name}!`;
+            
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 4000);
+
+            bookingForm.reset();
+            tripDateEl.value = today;
+            updateSummary();
+        });
+    });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Redbus</p><p class="mt-3 text-sm text-slate-400">Your Premier Bus Booking Partner in Dubai</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="booking.html" class="hover:text-white">Booking</a><a href="blog.html" class="hover:text-white">Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">Sheikh Zayed Road, Office 402, Dubai, UAE</p><p class="mt-2 text-sm text-slate-400">Daily 8:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+971 4 234 5678</p><p class="mt-2 text-sm text-slate-400">hello@redbus.ae</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Redbus. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
