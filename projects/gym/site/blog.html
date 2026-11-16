@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitness Blog | Gym</title>
+<meta name="description" content="Transform your body and mind with elite fitness.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f8fafc','100':'#f1f5f9','200':'#e2e8f0','300':'#cbd5e1','400':'#94a3b8','500':'#1e3a8a','600':'#1e40af','700':'#1e3a8a','800':'#0f172a','900':'#020617'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Gym</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Trainers</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Fitness Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Trainers</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Fitness Blog</a></div>
+</header>
+<main>
+<main class="bg-neutral-950 text-neutral-100 min-h-screen">
+  <!-- 1. Hero Section with Featured Article -->
+  <section id="hero" class="relative py-20 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Athlete lifting heavy weights in elite gym" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex items-center gap-2 text-brand-400 font-semibold mb-4">
+        <i data-lucide="flame" class="w-5 h-5"><span>Featured Article</span></i>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+            Unlocking Hypertrophy: The Science of Muscle Growth
+          </h1>
+          <p class="text-neutral-300 text-lg sm:text-xl mb-8 leading-relaxed">
+            Discover the optimal volume, tension, and recovery metrics required to break through plateaus. Written by founder Arjun Mehta after years of national-level athletic conditioning.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-4 rounded-xl transition shadow-lg text-center flex items-center justify-center gap-2">
+              Read Full Article <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+            <a href="services.html" class="border border-neutral-700 hover:border-neutral-500 text-white font-medium px-8 py-4 rounded-xl transition text-center flex items-center justify-center">
+              Explore Training
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Weightlifting session" class="w-full h-80 sm:h-96 object-cover rounded-2xl shadow-2xl border border-neutral-800">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Recent Post Grid Cards -->
+  <section id="recent-posts" class="py-16 md:py-24 bg-neutral-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Latest Insights & Guides</h2>
+        <p class="text-neutral-400 text-lg">Expert advice on training, recovery, and nutrition directly from our Bengaluru facility.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="blog-grid">
+        <!-- Rendered via script or static cards -->
+        <article class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Nutrition and meal prep" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider mb-2">Nutrition</span>
+            <h3 class="font-display text-xl font-bold mb-3">Macro Ratios for Fat Loss and Muscle Retention</h3>
+            <p class="text-neutral-400 text-sm mb-6 flex-grow">Learn how to calculate your exact caloric deficit without sacrificing performance in our HIIT classes.</p>
+            <div class="flex items-center justify-between border-t border-neutral-800 pt-4 mt-auto text-xs text-neutral-500">
+              <span>By Rohan (Nutritionist)</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+        <article class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Yoga flow session" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider mb-2">Recovery</span>
+            <h3 class="font-display text-xl font-bold mb-3">Why Mobility is the Missing Link in Heavy Lifting</h3>
+            <p class="text-neutral-400 text-sm mb-6 flex-grow">Incorporate targeted Yoga Flow sequences to protect your joints and improve range of motion under heavy loads.</p>
+            <div class="flex items-center justify-between border-t border-neutral-800 pt-4 mt-auto text-xs text-neutral-500">
+              <span>By Sarah (Yoga Lead)</span>
+              <span>4 min read</span>
+            </div>
+          </div>
+        </article>
+        <article class="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8cGVyc29uYWwlMjB0cmFpbmluZ3xlbnwxfHx8fDE3OTQ4MTc0NTJ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Personal training session" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider mb-2">Training</span>
+            <h3 class="font-display text-xl font-bold mb-3">The 5000+ Member Milestone: What We Learned</h3>
+            <p class="text-neutral-400 text-sm mb-6 flex-grow">Reflecting on 8+ years of operation in Ashok Nagar, Bengaluru, and the core habits of our most consistent members.</p>
+            <div class="flex items-center justify-between border-t border-neutral-800 pt-4 mt-auto text-xs text-neutral-500">
+              <span>By Priya (Head Trainer)</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Category Sidebar for Nutrition and Training -->
+  <section id="categories" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-8">
+          <h2 class="font-display text-3xl font-bold">Explore Categories</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl">
+              <i data-lucide="dumbbell" class="w-8 h-8 text-brand-500 mb-4"></i>
+              <h3 class="font-display text-xl font-bold mb-2">Elite Training</h3>
+              <p class="text-neutral-400 text-sm mb-4">Advanced strength routines, HIIT breakdowns, and personal training methodologies.</p>
+              <a href="services.html" class="text-brand-400 font-semibold text-sm flex items-center gap-1 hover:underline">View Services <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            </div>
+            <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl">
+              <i data-lucide="apple" class="w-8 h-8 text-brand-500 mb-4"></i>
+              <h3 class="font-display text-xl font-bold mb-2">Nutrition & Fuel</h3>
+              <p class="text-neutral-400 text-sm mb-4">Dietary frameworks, supplement guides, and consultation insights from Rohan.</p>
+              <a href="services.html" class="text-brand-400 font-semibold text-sm flex items-center gap-1 hover:underline">Book Consultation <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl h-fit">
+          <h3 class="font-display text-xl font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-3 text-neutral-400 text-sm">
+            <li><a href="index.html" class="hover:text-white transition flex items-center gap-2"><i data-lucide="home" class="w-4 h-4"></i> Home Page</a></li>
+            <li><a href="about.html" class="hover:text-white transition flex items-center gap-2"><i data-lucide="info" class="w-4 h-4"></i> About Us (Arjun Mehta)</a></li>
+            <li><a href="services.html" class="hover:text-white transition flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i> Services & Pricing</a></li>
+            <li><a href="team.html" class="hover:text-white transition flex items-center gap-2"><i data-lucide="users" class="w-4 h-4"></i> Our Trainers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Newsletter Subscription Block -->
+  <section id="newsletter" class="py-16 md:py-24 bg-neutral-900/50 border-y border-neutral-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-neutral-900 border border-neutral-800 p-8 sm:p-12 rounded-2xl shadow-xl">
+        <i data-lucide="mail" class="w-12 h-12 text-brand-500 mx-auto mb-6"></i>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Get Elite Fitness Tips in Your Inbox</h2>
+        <p class="text-neutral-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+          Join our subscriber community for weekly training breakdowns, nutrition hacks, and exclusive updates from our Bengaluru facility.
+        </p>
+        <form onsubmit="handleNewsletter(event)" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input type="email" required placeholder="Enter your email address" class="bg-neutral-950 border border-neutral-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 flex-grow">
+          <button type="submit" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-6 py-3 rounded-xl transition whitespace-nowrap">Subscribe</button>
+        </form>
+        <p id="newsletter-toast" class="text-xs text-brand-400 mt-3 hidden">Successfully subscribed to fitness tips!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Recent Comments or Community Highlights -->
+  <section id="community" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Community Highlights</h2>
+        <p class="text-neutral-400 text-lg">See what our 5,000+ members are saying about their transformation journey.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col justify-between">
+          <p class="text-neutral-300 text-sm italic mb-6">"The HIIT classes combined with Rohan's nutrition advice completely changed my energy levels. Best gym in Bengaluru!"</p>
+          <div class="flex items-center gap-3">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" alt="Member avatar" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-sm">Karan Sharma</h4>
+              <span class="text-xs text-neutral-500">Member for 2 years</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col justify-between">
+          <p class="text-neutral-300 text-sm italic mb-6">"Personal training with Priya is intense and rewarding. The facility on MG Road is spotless and world-class."</p>
+          <div class="flex items-center gap-3">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Member avatar" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-sm">Ananya Rao</h4>
+              <span class="text-xs text-neutral-500">Annual Pass Holder</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-neutral-900 border border-neutral-800 p-6 rounded-2xl flex flex-col justify-between">
+          <p class="text-neutral-300 text-sm italic mb-6">"4.9★ rating is completely deserved. The recovery massage sessions after heavy lifting are an absolute game-changer."</p>
+          <div class="flex items-center gap-3">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=55" alt="Member avatar" class="w-10 h-10 rounded-full object-cover">
+            <div>
+              <h4 class="font-bold text-sm">Rahul Verma</h4>
+              <span class="text-xs text-neutral-500">Member for 1 year</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA for Regular Fitness Tips -->
+  <section id="cta" class="py-16 md:py-24 bg-neutral-900/50 border-t border-neutral-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-4xl sm:text-5xl font-bold mb-6">Ready to Transform Your Body and Mind?</h2>
+      <p class="text-neutral-400 text-lg mb-8 max-w-2xl mx-auto">
+        Join our elite community today. Visit us at 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, or start with our Monthly Membership for ₹3,500.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="services.html" class="bg-brand-600 hover:bg-brand-500 text-white font-medium px-8 py-4 rounded-xl transition shadow-lg">
+          View All Services
+        </a>
+        <a href="about.html" class="border border-neutral-700 hover:border-neutral-500 text-white font-medium px-8 py-4 rounded-xl transition">
+          Meet Our Founder Arjun
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  function handleNewsletter(e) {
+    e.preventDefault();
+    const toast = document.getElementById('newsletter-toast');
+    toast.classList.remove('hidden');
+    e.target.reset();
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4000);
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Gym</p><p class="mt-3 text-sm text-slate-400">Transform your body and mind with elite fitness.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Our Trainers</a><a href="blog.html" class="hover:text-white">Fitness Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9:00 AM-9:00 PM, Sun 10:00 AM-6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@gym.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Gym. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

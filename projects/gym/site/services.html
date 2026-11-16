@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Gym</title>
+<meta name="description" content="Transform your body and mind with elite fitness.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f8fafc','100':'#f1f5f9','200':'#e2e8f0','300':'#cbd5e1','400':'#94a3b8','500':'#1e3a8a','600':'#1e40af','700':'#1e3a8a','800':'#0f172a','900':'#020617'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Gym</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Trainers</a><a href="blog.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Fitness Blog</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Trainers</a><a href="blog.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Fitness Blog</a></div>
+</header>
+<main>
+<main class="bg-zinc-950 text-zinc-100 min-h-screen">
+  <!-- 1. Page Hero with Service Categories Filter -->
+  <section id="hero" class="relative py-20 md:py-32 overflow-hidden border-b border-zinc-800">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1722925541142-5db2668ca492?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Gym training floor" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-zinc-800 text-zinc-300 text-xs font-semibold uppercase tracking-widest mb-4">Elite Offerings</span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-display tracking-tight text-white mb-6">
+        Transform Your <span class="text-brand-500">Body & Mind</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-zinc-400 mb-10">
+        Discover our comprehensive range of high-performance fitness services designed to push your limits and deliver real, measurable results.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <button onclick="filterServices('all')" class="category-btn px-6 py-2.5 rounded-full bg-white text-zinc-950 font-semibold text-sm transition hover:bg-brand-500 hover:text-white active">All Services</button>
+        <button onclick="filterServices('training')" class="category-btn px-6 py-2.5 rounded-full bg-zinc-900 text-zinc-300 font-semibold text-sm border border-zinc-800 transition hover:bg-brand-500 hover:text-white">Training & Classes</button>
+        <button onclick="filterServices('wellness')" class="category-btn px-6 py-2.5 rounded-full bg-zinc-900 text-zinc-300 font-semibold text-sm border border-zinc-800 transition hover:bg-brand-500 hover:text-white">Wellness & Recovery</button>
+        <button onclick="filterServices('membership')" class="category-btn px-6 py-2.5 rounded-full bg-zinc-900 text-zinc-300 font-semibold text-sm border border-zinc-800 transition hover:bg-brand-500 hover:text-white">Memberships</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Service Item Cards with Pricing and Buy Buttons -->
+  <section id="services-grid" class="py-16 md:py-24 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Program Spotlight Banner -->
+  <section id="spotlight" class="py-16 md:py-24 bg-zinc-900 border-y border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-500 font-semibold uppercase tracking-wider text-sm">Signature Program</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-display text-white mt-2 mb-4">Corporate & Advanced Wellness</h2>
+          <p class="text-zinc-400 text-base sm:text-lg mb-6">
+            Elevate your company's performance or undergo a total physical reboot with our comprehensive corporate wellness packages. Tailored training routines, nutritional overviews, and priority booking designed for high achievers.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-zinc-300">
+              <i data-lucide="check-circle" class="w-5 h-5 text-brand-500"><span>Customized team building fitness sessions</span></i>
+            </li>
+            <li class="flex items-center gap-3 text-zinc-300">
+              <i data-lucide="check-circle" class="w-5 h-5 text-brand-500"><span>Dedicated on-site wellness consultations</span></i>
+            </li>
+            <li class="flex items-center gap-3 text-zinc-300">
+              <i data-lucide="check-circle" class="w-5 h-5 text-brand-500"><span>Exclusive access to recovery and massage suites</span></i>
+            </li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#cta" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-500 transition shadow-lg shadow-brand-900/20">
+              Inquire Now (₹50,000/mo)
+            </a>
+            <a href="about.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-zinc-800 text-zinc-200 font-semibold hover:bg-zinc-700 transition">
+              Meet Our Team
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Advanced gym training" class="w-full h-80 md:h-[400px] object-cover rounded-2xl shadow-2xl border border-zinc-800">
+          <div class="absolute -bottom-6 -left-6 bg-zinc-950 border border-zinc-800 p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+            <div class="flex items-center gap-3 mb-2">
+              <i data-lucide="award" class="w-8 h-8 text-brand-500"></i>
+              <div>
+                <h4 class="font-bold text-white">Elite Standards</h4>
+                <p class="text-xs text-zinc-400">Founded by Arjun Mehta</p>
+              </div>
+            </div>
+            <p class="text-xs text-zinc-400">Democratizing elite fitness in Bengaluru with proven, science-backed methodologies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Benefits Strip with Checkmark Icons -->
+  <section id="benefits" class="py-16 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-extrabold font-display text-white mb-4">Why Train With Us</h2>
+        <p class="text-zinc-400">We provide an unmatched environment built for serious results, clean recovery, and lasting health.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center mb-4">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-white mb-2">State-of-the-Art Gear</h3>
+          <p class="text-sm text-zinc-400">Top-tier equipment maintained daily to ensure maximum safety and optimal performance during your heavy lifts.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center mb-4">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-white mb-2">Expert Guidance</h3>
+          <p class="text-sm text-zinc-400">Led by former national athletes and certified specialists dedicated to correcting form and driving progress.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center mb-4">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-white mb-2">Holistic Wellness</h3>
+          <p class="text-sm text-zinc-400">Comprehensive nutrition consultations and recovery massages to heal your body efficiently after intense output.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80">
+          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center mb-4">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-white mb-2">Flexible Hours</h3>
+          <p class="text-sm text-zinc-400">Open early till late (Mon-Sat 9 AM - 9 PM) right at the heart of Ashok Nagar, Bengaluru.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Membership Package Comparison Table -->
+  <section id="comparison" class="py-16 md:py-24 bg-zinc-900 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-sm">Transparent Pricing</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-2 mb-4">Compare Memberships</h2>
+        <p class="text-zinc-400">Choose the plan that fits your ambition. No hidden fees, cancel or upgrade anytime.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b border-zinc-800">
+              <th class="p-4 text-zinc-400 font-medium">Features</th>
+              <th class="p-4 text-white font-bold">Monthly Pass</th>
+              <th class="p-4 text-brand-500 font-bold bg-brand-950/20 rounded-t-xl">Annual Pass (Best Value)</th>
+              <th class="p-4 text-white font-bold">Corporate Wellness</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/60 text-sm">
+            <tr>
+              <td class="p-4 font-medium text-zinc-300">Investment</td>
+              <td class="p-4 text-white font-semibold">₹3,500 / mo</td>
+              <td class="p-4 text-brand-400 font-bold bg-brand-950/20">₹35,000 / yr</td>
+              <td class="p-4 text-white font-semibold">₹50,000 / mo</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium text-zinc-300">Gym Floor Access</td>
+              <td class="p-4"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+              <td class="p-4 bg-brand-950/20"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+              <td class="p-4"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium text-zinc-300">HIIT & Yoga Classes</td>
+              <td class="p-4"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+              <td class="p-4 bg-brand-950/20"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+              <td class="p-4"><i data-lucide="check" class="w-5 h-5 text-brand-500"></i></td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium text-zinc-300">Nutrition Consultation</td>
+              <td class="p-4 text-zinc-500">Add-on</td>
+              <td class="p-4 bg-brand-950/20 text-brand-400 font-semibold">Included (Quarterly)</td>
+              <td class="p-4 text-white font-semibold">Unlimited team sessions</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium text-zinc-300">Recovery Massages</td>
+              <td class="p-4 text-zinc-500">-</td>
+              <td class="p-4 bg-brand-950/20 text-brand-400 font-semibold">2 Sessions / mo</td>
+              <td class="p-4 text-white font-semibold">Custom allocation</td>
+            </tr>
+            <tr>
+              <td class="p-4"></td>
+              <td class="p-4"><button onclick="bookService('Monthly Membership', 3500)" class="px-4 py-2 rounded-xl bg-zinc-800 text-white text-xs font-semibold hover:bg-zinc-750 transition">Select</button></td>
+              <td class="p-4 bg-brand-950/20 rounded-b-xl"><button onclick="bookService('Annual Pass', 35000)" class="px-4 py-2 rounded-xl bg-brand-600 text-white text-xs font-semibold hover:bg-brand-500 transition">Select Annual</button></td>
+              <td class="p-4"><button onclick="bookService('Corporate Wellness', 50000)" class="px-4 py-2 rounded-xl bg-zinc-800 text-white text-xs font-semibold hover:bg-zinc-750 transition">Select</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA Band for Trial Booking -->
+  <section id="cta" class="py-20 bg-zinc-950 border-t border-zinc-800">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-r from-zinc-900 to-zinc-900/80 border border-zinc-800 p-8 sm:p-12 shadow-2xl relative overflow-hidden text-center">
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <span class="text-brand-500 font-semibold uppercase tracking-wider text-sm">Start Your Journey</span>
+        <h2 class="text-3xl sm:text-5xl font-extrabold font-display text-white mt-2 mb-4">Book Your Trial Session Today</h2>
+        <p class="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg mb-8">
+          Experience our elite facility at 14 MG Road, Ashok Nagar, Bengaluru. Fill out the form below and our team will get in touch instantly.
+        </p>
+        <form name="contact" method="POST" data-netlify="true" class="max-w-md mx-auto space-y-4 text-left" onsubmit="handleFormSubmit(event)">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1">Full Name</label>
+            <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:outline-none focus:border-brand-500 transition" placeholder="Arjun Kumar">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1">Phone Number</label>
+            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:outline-none focus:border-brand-500 transition" placeholder="+91 98765 43210">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-400 uppercase tracking-wider mb-1">Preferred Service</label>
+            <select name="service" class="w-full px-4 py-3 rounded-xl bg-zinc-950 border border-zinc-800 text-white focus:outline-none focus:border-brand-500 transition">
+              <option value="Personal Training">Personal Training (₹2,500)</option>
+              <option value="HIIT Class">HIIT Class (₹800)</option>
+              <option value="Yoga Flow">Yoga Flow (₹600)</option>
+              <option value="Nutrition Consultation">Nutrition Consultation (₹1,200)</option>
+              <option value="Recovery Massage">Recovery Massage (₹2,000)</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 transition shadow-lg shadow-brand-900/30">
+            Confirm Trial Booking
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+const servicesData = [
+  { id: 1, category: 'training', title: 'Personal Training', price: '₹2,500 / session', desc: 'One-on-one custom coaching tailored to your exact body type, strength goals, and metabolic rate.', image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 2, category: 'training', title: 'HIIT Class', price: '₹800 / class', desc: 'High-intensity interval training designed to torch calories, build cardiovascular endurance, and shred fat.', image: 'https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 3, category: 'training', title: 'Yoga Flow', price: '₹600 / class', desc: 'Restore mobility, improve flexibility, and center your mind with our expert-led flow sessions.', image: 'https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OXx8Zml0bmVzcyUyMHdlaWdodGxpZnRpbmclMjBneW18ZW58MXx8fHwxNzk0ODE3NDUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 4, category: 'wellness', title: 'Nutrition Consultation', price: '₹1,200 / consult', desc: 'Detailed dietary plans and macro assessments formulated by our in-house nutrition expert Rohan.', image: 'https://images.unsplash.com/photo-1549476464-37392f717541?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTB8fGZpdG5lc3MlMjB3ZWlnaHRsaWZ0aW5nJTIwZ3ltfGVufDF8fHx8MTc5NDgxNzQ1Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 5, category: 'wellness', title: 'Recovery Massage', price: '₹2,000 / session', desc: 'Deep tissue therapy to relieve sore muscles, speed up recovery times, and prevent athletic injuries.', image: 'https://images.unsplash.com/photo-1674834727206-4bc272bfd8da?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fGZpdG5lc3MlMjB3ZWlnaHRsaWZ0aW5nJTIwZ3ltfGVufDF8fHx8MTc5NDgxNzQ1Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 6, category: 'membership', title: 'Monthly Membership', price: '₹3,500 / mo', desc: 'Full unlimited access to our state-of-the-art gym floor, weight room, and group fitness classes.', image: 'https://images.unsplash.com/photo-1605296867724-fa87a8ef53fd?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fGZpdG5lc3MlMjB3ZWlnaHRsaWZ0aW5nJTIwZ3ltfGVufDF8fHx8MTc5NDgxNzQ1Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 7, category: 'membership', title: 'Annual Pass', price: '₹35,000 / yr', desc: 'Our best value pass offering 12 months of uninhibited access plus priority perks and guest passes.', image: 'https://images.unsplash.com/photo-1592588253414-887759037c2a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fGZpdG5lc3MlMjB3ZWlnaHRsaWZ0aW5nJTIwZ3ltfGVufDF8fHx8MTc5NDgxNzQ1Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' },
+  { id: 8, category: 'membership', title: 'Corporate Wellness', price: '₹50,000 / mo', desc: 'Comprehensive organizational fitness programs designed to boost team productivity and morale.', image: 'https://images.unsplash.com/photo-1620188467120-5042ed1eb5da?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTR8fGZpdG5lc3MlMjB3ZWlnaHRsaWZ0aW5nJTIwZ3ltfGVufDF8fHx8MTc5NDgxNzQ1Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80' }
+];
+
+function renderServices(filter = 'all') {
+  const container = document.getElementById('services-container');
+  if (!container) return;
+  
+  const filtered = filter === 'all' 
+    ? servicesData 
+    : servicesData.filter(s => s.category === filter);
+    
+  container.innerHTML = filtered.map(s => `
+    <div class="rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+      <div>
+        <img loading="lazy" decoding="async" src="${s.image}" alt="${s.title}" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-3">
+            <span class="text-xs uppercase tracking-wider font-semibold text-brand-500 bg-brand-950/40 px-2.5 py-1 rounded-md">${s.category}</span>
+            <span class="text-white font-bold">${s.price}</span>
+          </div>
+          <h3 class="text-xl font-bold font-display text-white mb-2">${s.title}</h3>
+          <p class="text-zinc-400 text-sm mb-6">${s.desc}</p>
+        </div>
+      </div>
+      <div class="p-6 pt-0">
+        <button onclick="bookService('${s.title}', '${s.price}')" class="w-full py-3 rounded-xl bg-zinc-800 hover:bg-brand-600 text-white text-sm font-semibold transition flex items-center justify-center gap-2">
+          <i data-lucide="shopping-cart" class="w-4 h-4"></i> Book / Register
+        </button>
+      </div>
+    </div>
+  `).join('');
+  
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+function filterServices(category) {
+  document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.classList.remove('bg-white', 'text-zinc-950', 'bg-brand-500', 'text-white');
+    btn.classList.add('bg-zinc-900', 'text-zinc-300', 'border', 'border-zinc-800');
+  });
+  event.target.classList.remove('bg-zinc-900', 'text-zinc-300', 'border', 'border-zinc-800');
+  event.target.classList.add('bg-brand-500', 'text-white');
+  
+  renderServices(category);
+}
+
+function bookService(title, price) {
+  alert(`Thank you for selecting "${title}" (${price}). Redirecting to checkout or confirmation.`);
+}
+
+function handleFormSubmit(e) {
+  e.preventDefault();
+  alert('Trial booking request submitted successfully! We will contact you at +91 80 4567 8910 or via email.');
+  e.target.reset();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderServices('all');
+});
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Gym</p><p class="mt-3 text-sm text-slate-400">Transform your body and mind with elite fitness.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Our Trainers</a><a href="blog.html" class="hover:text-white">Fitness Blog</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9:00 AM-9:00 PM, Sun 10:00 AM-6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@gym.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Gym. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
