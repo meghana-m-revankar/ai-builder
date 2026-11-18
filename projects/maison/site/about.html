@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | MaiSon</title>
+<meta name="description" content="An elegant sanctuary of coffee and comfort in Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#ecfdf5','100':'#d1fae5','200':'#a7f3d0','300':'#6ee7b7','400':'#34d399','500':'#10b981','600':'#059669','700':'#047857','800':'#065f46','900':'#064e3b'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">MaiSon</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Full-bleed page hero with brand story overlay -->
+  <section class="relative min-h-[70vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1648081596668-beccca435ddd?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8Y2FmZSUyMHNwZWNpYWx0eSUyMGNvZmZlZXxlbnwxfHx8fDE3OTUwMDI2OTN8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="MaiSon Cafe Interior" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center py-24">
+      <span class="inline-block px-4 py-1.5 mb-6 text-xs font-semibold tracking-wider uppercase bg-brand-800/80 text-brand-200 rounded-full backdrop-blur-sm">Our Story</span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">Where Parisian Charm Meets Bangalore's Warmth</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-10 leading-relaxed">Founded in 2016 by Ananya Rao, MaiSon was born out of a deep passion to bring authentic European cafe culture, specialty coffee, and organic comfort to the bustling heart of MG Road.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="products.html" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-lg transition transform hover:-translate-y-0.5">Explore Our Menu</a>
+        <a href="#founder" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl backdrop-blur-md transition">Meet The Founder</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Founder's story with split image and text -->
+  <section id="founder" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div class="w-full lg:w-1/2">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1608552265242-65a398258f3c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8Y2FmZSUyMHNwZWNpYWx0eSUyMGNvZmZlZXxlbnwxfHx8fDE3OTUwMDI2OTN8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Ananya Rao Founder" class="w-full h-[450px] lg:h-[550px] object-cover rounded-3xl shadow-2xl">
+            <div class="absolute -bottom-6 -right-6 bg-brand-50 border border-brand-100 p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+              <div class="flex items-center gap-3 mb-2">
+                <i data-lucide="award" class="w-8 h-8 text-brand-600"></i>
+                <span class="font-display font-bold text-xl text-brand-900">8+ Years</span>
+              </div>
+              <p class="text-sm text-brand-700">Of crafting memorable coffee moments and community connections in Ashok Nagar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">The Visionary</span>
+          <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 mb-6">Crafting a sanctuary of comfort on MG Road</h2>
+          <p class="text-brand-700 text-lg mb-6 leading-relaxed">After spending years studying culinary arts and cafe management in Paris, Ananya Rao returned to Bengaluru with a singular dream: to create an unhurried sanctuary where exceptional specialty coffee meets soulful, artisanal bakes.</p>
+          <p class="text-brand-700 mb-8 leading-relaxed">Every corner of MaiSon is thoughtfully designed with organic textures, warm ambient lighting, and earthy tones to offer a tranquil escape from the city's fast pace. Whether you are dropping by for a morning Cortado or settling in with a book and a Pistachio Croissant, our doors are always open to warm conversations.</p>
+          <div class="grid grid-cols-2 gap-6 pt-6 border-t border-brand-100">
+            <div>
+              <span class="block font-display text-3xl font-bold text-brand-900">15k+</span>
+              <span class="text-sm text-brand-600 font-medium">Satisfied Guests</span>
+            </div>
+            <div>
+              <span class="block font-display text-3xl font-bold text-brand-900">4.9★</span>
+              <span class="text-sm text-brand-600 font-medium">Google Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Timeline milestones since 2016 -->
+  <section class="py-16 md:py-24 bg-brand-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Our Journey</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 mb-4">Milestones Along the Way</h2>
+        <p class="text-brand-700 text-lg">From a quiet corner on MG Road to becoming Bengaluru's most cherished European-style cafe.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100/50">
+          <span class="inline-block px-3 py-1 bg-brand-100 text-brand-800 font-bold rounded-lg text-sm mb-4">2016</span>
+          <h3 class="font-display font-bold text-xl text-brand-900 mb-2">The Inception</h3>
+          <p class="text-brand-700 text-sm leading-relaxed">MaiSon opens its doors on the 2nd floor of MG Road, introducing artisanal filter coffees and classic French viennoiserie.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100/50">
+          <span class="inline-block px-3 py-1 bg-brand-100 text-brand-800 font-bold rounded-lg text-sm mb-4">2018</span>
+          <h3 class="font-display font-bold text-xl text-brand-900 mb-2">Expanding Palates</h3>
+          <p class="text-brand-700 text-sm leading-relaxed">Introduced our signature cold brews and organic sourdough sandwiches, quickly becoming a local favorite for weekend brunch.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100/50">
+          <span class="inline-block px-3 py-1 bg-brand-100 text-brand-800 font-bold rounded-lg text-sm mb-4">2021</span>
+          <h3 class="font-display font-bold text-xl text-brand-900 mb-2">Community & Craft</h3>
+          <p class="text-brand-700 text-sm leading-relaxed">Launched weekend barista brewing masterclasses and partnered with local organic farms for our fresh dairy and produce.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition border border-brand-100/50">
+          <span class="inline-block px-3 py-1 bg-brand-100 text-brand-800 font-bold rounded-lg text-sm mb-4">2024</span>
+          <h3 class="font-display font-bold text-xl text-brand-900 mb-2">15,000+ Guests</h3>
+          <p class="text-brand-700 text-sm leading-relaxed">Celebrating over eight years of warmth, maintaining a 4.9-star rating while staying true to our artisanal roots.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Core values section with 3 icon cards -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">What We Stand For</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 mb-4">Our Core Values</h2>
+        <p class="text-brand-700 text-lg">The guiding principles behind every cup we brew and every pastry we bake.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-brand-50/50 p-8 rounded-2xl border border-brand-100/80 hover:-translate-y-1 transition">
+          <div class="w-14 h-14 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="coffee" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-brand-900 mb-3">Uncompromising Quality</h3>
+          <p class="text-brand-700 leading-relaxed">We source ethically farmed specialty coffee beans and premium local ingredients to ensure every flavor note sings true. Excellence is never an accident.</p>
+        </div>
+        <div class="bg-brand-50/50 p-8 rounded-2xl border border-brand-100/80 hover:-translate-y-1 transition">
+          <div class="w-14 h-14 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="heart" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-brand-900 mb-3">Genuine Warmth</h3>
+          <p class="text-brand-700 leading-relaxed">Hospitality at MaiSon goes beyond service; it is about creating a welcoming home away from home where every guest feels like family from the moment they step in.</p>
+        </div>
+        <div class="bg-brand-50/50 p-8 rounded-2xl border border-brand-100/80 hover:-translate-y-1 transition">
+          <div class="w-14 h-14 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md">
+            <i data-lucide="leaf" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-brand-900 mb-3">Sustainable Craft</h3>
+          <p class="text-brand-700 leading-relaxed">We are deeply committed to minimizing our environmental footprint through biodegradable packaging, zero-waste baking practices, and conscious sourcing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Team profiles with photos and roles -->
+  <section class="py-16 md:py-24 bg-brand-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">The Artisans</span>
+        <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 mb-4">Meet Our Team</h2>
+        <p class="text-brand-700 text-lg">The passionate individuals behind your favorite cafe experiences.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=32" alt="Ananya Rao" class="w-full h-72 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="font-display font-bold text-xl text-brand-900 mb-1">Ananya Rao</h3>
+            <p class="text-brand-600 font-medium text-sm mb-3">Founder / Head Chef</p>
+            <p class="text-brand-700 text-sm leading-relaxed">Le Cordon Bleu trained pastry chef with a vision for European cafe culture in Bangalore.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=12" alt="Vikram" class="w-full h-72 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="font-display font-bold text-xl text-brand-900 mb-1">Vikram</h3>
+            <p class="text-brand-600 font-medium text-sm mb-3">Lead Barista</p>
+            <p class="text-brand-700 text-sm leading-relaxed">Coffee connoisseur obsessed with extraction curves, latte art, and single-origin beans.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=45" alt="Priya" class="w-full h-72 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="font-display font-bold text-xl text-brand-900 mb-1">Priya</h3>
+            <p class="text-brand-600 font-medium text-sm mb-3">Patisserie Specialist</p>
+            <p class="text-brand-700 text-sm leading-relaxed">Master of flaky croissants, cheesecakes, and delicate French viennoiserie arts.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition border border-brand-100">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/400?img=68" alt="Rohan" class="w-full h-72 object-cover">
+          <div class="p-6 text-center">
+            <h3 class="font-display font-bold text-xl text-brand-900 mb-1">Rohan</h3>
+            <p class="text-brand-600 font-medium text-sm mb-3">Operations Manager</p>
+            <p class="text-brand-700 text-sm leading-relaxed">Ensures seamless service, warm guest relations, and cozy cafe ambiance every single day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA band for visiting the cafe -->
+  <section class="py-16 md:py-24 bg-brand-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1564327367587-8808ebf012fe?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Y2FmZSUyMHNwZWNpYWx0eSUyMGNvZmZlZXxlbnwxfHx8fDE3OTUwMDI2OTN8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Cafe Atmosphere" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+      <span class="text-brand-300 font-semibold text-sm uppercase tracking-wider mb-2 block">Come Say Hello</span>
+      <h2 class="font-display text-3xl sm:text-5xl font-bold mb-6">Experience MaiSon in Person</h2>
+      <p class="text-brand-100 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">Drop by our sanctuary on MG Road for your daily brew, a relaxing weekend brunch, or a quiet corner to work and unwind.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="products.html" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-lg transition transform hover:-translate-y-0.5">View Menu & Prices</a>
+        <a href="index.html#contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl backdrop-blur-md transition">Get Directions</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">MaiSon</p><p class="mt-3 text-sm text-slate-400">An elegant sanctuary of coffee and comfort in Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="products.html" class="hover:text-white">Menu</a><a href="pricing.html" class="hover:text-white">Pricing</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@maison.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> MaiSon. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
