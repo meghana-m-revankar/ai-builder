@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Magic Bricks</title>
+<meta name="description" content="Crafting your legacy in the heart of Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f4f8','100':'#e0e7ed','200':'#c3d0dc','300':'#96adc2','400':'#6585a2','500':'#3d6487','600':'#1e3a8a','700':'#1a337a','800':'#172d6b','900':'#142657'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1706808849780-7a04fbac83ef?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Magic Bricks logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a></div>
+</header>
+<main>
+<main class="bg-slate-950 text-slate-100 font-sans antialiased overflow-hidden">
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-[85vh] flex items-center justify-center bg-slate-950">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Luxury Architecture Bengaluru" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <span class="inline-block py-1 px-3 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-sm font-medium mb-6 tracking-widest uppercase">Bengaluru's Premier Real Estate Consultants</span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white mb-6">
+        Crafting Your Legacy in <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-600">Bengaluru</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-slate-300 mb-10">
+        Discover exceptional luxury apartments, sprawling villa estates, and high-yield commercial spaces tailored for the elite.
+      </p>
+      
+      <!-- Search Bar UI -->
+      <div class="max-w-3xl mx-auto bg-slate-900/90 border border-amber-500/30 p-3 sm:p-4 rounded-2xl shadow-2xl backdrop-blur-md">
+        <form action="products.html" method="GET" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="text-left">
+            <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-1">Property Type</label>
+            <select name="type" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+              <option>Luxury Apartments</option>
+              <option>Villa Estates</option>
+              <option>Commercial Spaces</option>
+              <option>Penthouse Suites</option>
+            </select>
+          </div>
+          <div class="text-left">
+            <label class="block text-xs uppercase tracking-wider text-amber-400 font-semibold mb-1">Budget</label>
+            <select name="budget" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-amber-500">
+              <option>₹1.5Cr - ₹3Cr</option>
+              <option>₹3Cr - ₹7Cr</option>
+              <option>₹7Cr+</option>
+            </select>
+          </div>
+          <div class="flex items-end">
+            <button type="submit" class="w-full bg-gradient-to-r from-amber-400 to-amber-600 text-slate-950 font-semibold py-2.5 px-6 rounded-xl hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
+              <i data-lucide="search" class="w-5 h-5"><span>Search</span></i> Explore
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <a href="services.html" class="bg-amber-500 text-slate-950 font-semibold px-8 py-3.5 rounded-xl hover:bg-amber-400 transition shadow-lg">Our Services</a>
+        <a href="about.html" class="border border-slate-700 bg-slate-900/50 backdrop-blur text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-slate-800 transition">About Vikram Malhotra</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats Strip -->
+  <section class="py-12 bg-slate-900 border-y border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4">
+          <div class="text-3xl sm:text-5xl font-display font-bold text-amber-400 mb-2">500+</div>
+          <div class="text-slate-400 text-sm uppercase tracking-wider">Luxury Homes Sold</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-5xl font-display font-bold text-amber-400 mb-2">4.9★</div>
+          <div class="text-slate-400 text-sm uppercase tracking-wider">Google Rating</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-5xl font-display font-bold text-amber-400 mb-2">150+</div>
+          <div class="text-slate-400 text-sm uppercase tracking-wider">Corporate Clients</div>
+        </div>
+        <div class="p-4">
+          <div class="text-3xl sm:text-5xl font-display font-bold text-amber-400 mb-2">8+</div>
+          <div class="text-slate-400 text-sm uppercase tracking-wider">Years of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Properties Showcase -->
+  <section class="py-16 md:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-amber-400 text-sm font-semibold uppercase tracking-widest">Exclusive Portfolio</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">Featured Properties</h2>
+        </div>
+        <a href="products.html" class="mt-4 md:mt-0 text-amber-400 hover:text-amber-300 font-medium flex items-center gap-1">View all properties <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Property 1 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Penthouse Suite" class="w-full h-64 object-cover">
+            <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">₹10Cr+</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-display font-bold text-white mb-2">The Crown Penthouse Suites</h3>
+            <p class="text-slate-400 text-sm mb-4">Unmatched panoramic skyline views atop MG Road with private infinity pool and bespoke Italian marble flooring.</p>
+            <a href="pricing.html" class="text-amber-400 text-sm font-semibold hover:underline flex items-center gap-1">Inquire Details <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <!-- Property 2 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Villa Estates" class="w-full h-64 object-cover">
+            <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">₹8Cr+</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-display font-bold text-white mb-2">Serene Villa Estates</h3>
+            <p class="text-slate-400 text-sm mb-4">Nestled in lush greenery offering absolute privacy, smart home automation, and expansive landscaped gardens.</p>
+            <a href="pricing.html" class="text-amber-400 text-sm font-semibold hover:underline flex items-center gap-1">Inquire Details <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <!-- Property 3 -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300">
+          <div class="relative">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Commercial Spaces" class="w-full h-64 object-cover">
+            <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur text-amber-400 text-xs font-bold px-3 py-1 rounded-full border border-amber-500/30">₹5Cr+</span>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-display font-bold text-white mb-2">Apex Commercial Hub</h3>
+            <p class="text-slate-400 text-sm mb-4">Grade-A office spaces in Ashok Nagar designed for global enterprises seeking prestige and optimal connectivity.</p>
+            <a href="pricing.html" class="text-amber-400 text-sm font-semibold hover:underline flex items-center gap-1">Inquire Details <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. About Preview -->
+  <section class="py-16 md:py-24 bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1748063578185-3d68121b11ff?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8bW9kZXJuJTIwbHV4dXJ5JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Vikram Malhotra Founder" class="w-full h-96 object-cover rounded-2xl border border-amber-500/20 shadow-2xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-amber-400 text-sm font-semibold uppercase tracking-widest">Architectural Heritage</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2 mb-6">Guided by Vision & Precision</h2>
+          <p class="text-slate-300 mb-6 leading-relaxed">
+            Founded in 2016 by visionary architect Vikram Malhotra, Magic Bricks has redefined luxury real estate consulting in Bengaluru. We merge deep spatial design expertise with market intelligence to curate living spaces that transcend ordinary standards.
+          </p>
+          <blockquote class="border-l-4 border-amber-400 pl-4 italic text-slate-300 mb-8">
+            "A home is not merely an address; it is the physical manifestation of your life's greatest achievements." 
+            <span class="block not-italic text-amber-400 font-semibold mt-2">— Vikram Malhotra, Founder</span>
+          </blockquote>
+          <a href="about.html" class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 text-white font-semibold px-6 py-3 rounded-xl hover:bg-slate-700 transition">
+            Read Our Full Story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us -->
+  <section class="py-16 md:py-24 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-400 text-sm font-semibold uppercase tracking-widest">The Magic Bricks Advantage</span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">Why Discerning Buyers Choose Us</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Unrivaled Market Access</h3>
+          <p class="text-slate-400 text-sm">Gain exclusive access to off-market luxury estates and premier commercial spaces across prime Bengaluru locales.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Absolute Transparency</h3>
+          <p class="text-slate-400 text-sm">Every title is rigorously vetted by top legal experts ensuring completely secure, hassle-free transactions.</p>
+        </div>
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
+          <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/30 rounded-xl flex items-center justify-center text-amber-400 mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-white mb-2">Concierge Advisory</h3>
+          <p class="text-slate-400 text-sm">Receive personalized guidance from seasoned consultants who understand architectural finesse and high-yield investments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. How It Works -->
+  <section class="py-16 md:py-24 bg-slate-900/30 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-400 text-sm font-semibold uppercase tracking-widest">Seamless Journey</span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white mt-2">How It Works for Buyers</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+          <div class="w-10 h-10 bg-amber-500 text-slate-950 font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">1</div>
+          <h3 class="text-lg font-display font-bold text-white mb-2">Consultation</h3>
+          <p class="text-slate-400 text-sm">We define your aesthetic preferences, investment goals, and precise budget requirements.</p>
+        </div>
+        <div class="text-center p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+          <div class="w-10 h-10 bg-amber-500 text-slate-950 font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">2</div>
+          <h3 class="text-lg font-display font-bold text-white mb-2">Curated Tours</h3>
+          <p class="text-slate-400 text-sm">Experience private, chauffeured viewings of handpicked elite properties matching your profile.</p>
+        </div>
+        <div class="text-center p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+          <div class="w-10 h-10 bg-amber-500 text-slate-950 font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">3</div>
+          <h3 class="text-lg font-display font-bold text-white mb-2">Legal & Financials</h3>
+          <p class="text-slate-400 text-sm">Our experts handle complete title due diligence, negotiations, and structured financing.</p>
+        </div>
+        <div class="text-center p-6 bg-slate-900 border border-slate-800 rounded-2xl">
+          <div class="w-10 h-10 bg-amber-500 text-slate-950 font-bold rounded-full flex items-center justify-center mx-auto mb-4 text-lg">4</div>
+          <h3 class="text-lg font-display font-bold text-white mb-2">Key Handover</h3>
+          <p class="text-slate-400 text-sm">Seamless closing and white-glove move-in support into your magnificent new legacy asset.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="py-16 bg-gradient-to-r from-amber-600 via-amber-500 to-amber-700 text-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Ready to Secure Your Elite Address in Bengaluru?</h2>
+      <p class="text-slate-950/80 max-w-xl mx-auto mb-8 font-medium">Connect with our luxury consultants today or visit our office on MG Road.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="pricing.html" class="bg-slate-950 text-amber-400 font-semibold px-8 py-3.5 rounded-xl hover:bg-slate-900 transition shadow-lg">Schedule Consultation</a>
+        <a href="services.html" class="border border-slate-950/30 bg-white/10 backdrop-blur text-slate-950 font-semibold px-8 py-3.5 rounded-xl hover:bg-white/20 transition">Explore Services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Initialize Lucide icons if loaded
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Magic Bricks</p><p class="mt-3 text-sm text-slate-400">Crafting your legacy in the heart of Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="products.html" class="hover:text-white">Products</a><a href="pricing.html" class="hover:text-white">Pricing</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM. Founded in 2016, 8+ years of excellence</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@magic-bricks.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Magic Bricks. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | Magic Bricks</title>
+<meta name="description" content="Crafting your legacy in the heart of Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f4f8','100':'#e0e7ed','200':'#c3d0dc','300':'#96adc2','400':'#6585a2','500':'#3d6487','600':'#1e3a8a','700':'#1a337a','800':'#172d6b','900':'#142657'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1680874261352-ed1ee3d1cf01?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTZ8fG1vZGVybiUyMGx1eHVyeSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3OTUwMDYwMzZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Magic Bricks logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a></div>
+</header>
+<main>
+<main class="bg-slate-950 text-slate-100 font-sans">
+
+<!-- 1. Page Hero -->
+<section class="relative min-h-[60vh] flex items-center justify-center py-24">
+  <div class="absolute inset-0 z-0">
+    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1707189856923-46dd41ea2bdc?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fG1vZGVybiUyMGx1eHVyeSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3OTUwMDYwMzZ8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Luxury Real Estate Bengaluru" class="w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+  </div>
+  <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+    <span class="text-amber-400 font-medium tracking-widest uppercase text-sm mb-3 block">Exquisite Portfolio</span>
+    <h1 class="text-4xl sm:text-6xl font-display font-bold text-white mb-6">Crafting Your Legacy in Bengaluru</h1>
+    <p class="text-lg text-slate-300 max-w-2xl mx-auto mb-8">Explore our exclusive collection of handpicked luxury residences, premium commercial spaces, and high-yield investment properties.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#portfolio" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-8 py-3 rounded-xl transition shadow-lg shadow-amber-500/20">View Listings</a>
+      <a href="pricing.html" class="border border-amber-500/50 hover:border-amber-500 text-white font-semibold px-8 py-3 rounded-xl transition">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Filterable Product Grid & 3. Detailed Property Cards -->
+<section id="portfolio" class="py-16 md:py-24 bg-slate-900/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <span class="text-amber-400 font-medium uppercase text-sm tracking-wider">Curated Estates</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-1">Featured Properties</h2>
+      </div>
+      <div id="filter-buttons" class="flex flex-wrap gap-2">
+        <button onclick="filterProducts('all')" class="filter-btn active bg-amber-500 text-slate-950 px-4 py-2 rounded-lg text-sm font-semibold transition">All</button>
+        <button onclick="filterProducts('Apartment')" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-semibold transition">Apartments</button>
+        <button onclick="filterProducts('Villa')" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-semibold transition">Villas</button>
+        <button onclick="filterProducts('Commercial')" class="filter-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg text-sm font-semibold transition">Commercial</button>
+      </div>
+    </div>
+    
+    <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- 4. Combo Packages for Investors and Home Buyers -->
+<section class="py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="text-amber-400 font-medium uppercase text-sm tracking-wider">Strategic Wealth</span>
+      <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-1">Investor & Buyer Combos</h2>
+      <p class="text-slate-400 mt-3">Tailored packages designed to maximize rental yields and portfolio diversification across Bengaluru's prime corridors.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <span class="bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20">High Yield</span>
+              <h3 class="text-2xl font-display font-bold text-white mt-3">The NRI Portfolio Builder</h3>
+            </div>
+            <span class="text-2xl font-bold text-amber-400">₹6.5 Cr+</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-6">A curated dual-asset bundle featuring 1 Luxury Apartment in Ashok Nagar and 1 Commercial Space on MG Road for immediate rental income.</p>
+          <ul class="space-y-3 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Guaranteed 8% rental yield on commercial space</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> End-to-end rental management included for 2 years</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Priority legal clearance and title deed audit</li>
+          </ul>
+        </div>
+        <a href="pricing.html" class="w-full bg-slate-800 hover:bg-slate-700 text-white text-center font-semibold py-3 rounded-xl transition">Inquire About Package</a>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 shadow-xl flex flex-col justify-between">
+        <div>
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <span class="bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20">Legacy Living</span>
+              <h3 class="text-2xl font-display font-bold text-white mt-3">The Ultimate Estate Duo</h3>
+            </div>
+            <span class="text-2xl font-bold text-amber-400">₹12 Cr+</span>
+          </div>
+          <p class="text-slate-300 text-sm mb-6">Combine our flagship Penthouse Suite with a secluded Villa Estate in North Bengaluru for the ultimate bi-lifestyle residential experience.</p>
+          <ul class="space-y-3 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Custom interior design consultation by Vikram Malhotra</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Complimentary concierge and valet services for 1 year</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-400"></i> Zero brokerage on secondary asset acquisition</li>
+          </ul>
+        </div>
+        <a href="pricing.html" class="w-full bg-slate-800 hover:bg-slate-700 text-white text-center font-semibold py-3 rounded-xl transition">Inquire About Package</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Testimonial Snippet -->
+<section class="py-16 bg-slate-900/40 border-y border-slate-800">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <div class="flex justify-center mb-4 text-amber-400">
+      <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+      <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+      <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+      <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+      <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+    </div>
+    <blockquote class="text-xl sm:text-2xl font-display text-slate-200 italic mb-6">
+      "Magic Bricks transformed our property search into an absolute pleasure. Vikram Malhotra’s deep insight into Bengaluru’s luxury micro-markets secured us an incredible penthouse well before public launch."
+    </blockquote>
+    <div class="font-semibold text-white">Rajesh & Sunita Sharma</div>
+    <div class="text-sm text-slate-400">Homeowners, Lavelle Road</div>
+  </div>
+</section>
+
+<!-- 6. CTA Band for Scheduling a Property Viewing -->
+<section class="py-20 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-t border-slate-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-4">Ready to Experience Unmatched Luxury?</h2>
+    <p class="text-slate-300 max-w-2xl mx-auto mb-8">Schedule a private chauffeur-driven property tour across our exclusive Bengaluru portfolios today.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="services.html" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-semibold px-8 py-3 rounded-xl transition shadow-lg shadow-amber-500/20">Schedule Private Viewing</a>
+      <a href="index.html" class="border border-slate-700 hover:border-slate-500 text-white font-semibold px-8 py-3 rounded-xl transition">Return Home</a>
+    </div>
+  </div>
+</section>
+
+<script>
+const products = [
+  {
+    id: 1,
+    title: "The Regal Penthouse Suite",
+    type: "Apartment",
+    price: "₹10 Cr+",
+    sqft: "6,500 sq ft",
+    amenities: ["Private Infinity Pool", "360° City View", "Private Elevator"],
+    desc: "An ultra-luxurious penthouse perched above Ashok Nagar, offering panoramic views of Bengaluru's skyline and bespoke Italian marble finishes.",
+    img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZSUyMGludGVyaW9yfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  },
+  {
+    id: 2,
+    title: "Emerald Villa Estates",
+    type: "Villa",
+    price: "₹8 Cr+",
+    sqft: "8,200 sq ft",
+    amenities: ["Private Garden", "Home Theatre", "Temperature Controlled Pool"],
+    desc: "Secluded sanctuary estates designed for elite families seeking expansive green lawns, state-of-the-art security, and architectural brilliance.",
+    img: "https://images.unsplash.com/photo-1738168279272-c08d6dd22002?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8cHJlbWl1bSUyMHVyYmFuJTIwbGl2aW5nfGVufDF8fHx8MTc5NTAwNjAzN3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  },
+  {
+    id: 3,
+    title: "MG Road Apex Commercial Tower",
+    type: "Commercial",
+    price: "₹5 Cr+",
+    sqft: "4,000 sq ft",
+    amenities: ["Grade-A Office Specs", "100% Power Backup", "Valet Parking"],
+    desc: "Prime commercial office space situated in the absolute financial heart of Bengaluru, tailored for multinational HQs and family offices.",
+    img: "https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTR8fG1vZGVybiUyMGx1eHVyeSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3OTUwMDYwMzZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  },
+  {
+    id: 4,
+    title: "Serenity Luxe Apartments",
+    type: "Apartment",
+    price: "₹2 Cr+",
+    sqft: "2,800 sq ft",
+    amenities: ["Concierge Service", "Smart Home Automation", "Clubhouse & Spa"],
+    desc: "Sophisticated urban residences blending contemporary elegance with sustainable living in one of Bengaluru's most coveted residential nodes.",
+    img: "https://images.unsplash.com/photo-1503174971373-b1f69850bded?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8cmVhbCUyMGVzdGF0ZSUyMGludGVyaW9yfGVufDF8fHx8MTc5NTAwNjAzNnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  },
+  {
+    id: 5,
+    title: "The Heritage Sovereign Plots",
+    type: "Commercial",
+    price: "₹1.5 Cr+",
+    sqft: "5,000 sq ft",
+    amenities: ["Gated Community", "Wide Avenue Roads", "Clear Titles"],
+    desc: "Gated premium land parcels ready for bespoke architectural creation, backed by absolute legal clarity and high capital appreciation potential.",
+    img: "https://images.unsplash.com/photo-1758448511320-05d7d28f4298?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8cHJlbWl1bSUyMHVyYmFuJTIwbGl2aW5nfGVufDF8fHx8MTc5NTAwNjAzN3ww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  },
+  {
+    id: 6,
+    title: "Skyline Manor Residences",
+    type: "Apartment",
+    price: "₹3.5 Cr+",
+    sqft: "3,500 sq ft",
+    amenities: ["Private Deck", "Modular Gourmet Kitchen", "24/7 Concierge"],
+    desc: "Immaculately crafted high-rise homes providing effortless access to elite clubs, fine dining, and Bengaluru's premier tech parks.",
+    img: "https://images.unsplash.com/photo-1717167398817-121e3c283dbb?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTV8fG1vZGVybiUyMGx1eHVyeSUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3OTUwMDYwMzZ8MA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+  }
+];
+
+function renderProducts(items) {
+  const grid = document.getElementById('product-grid');
+  if(!grid) return;
+  
+  grid.innerHTML = items.map(p => `
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition flex flex-col justify-between">
+      <div>
+        <div class="relative h-64 overflow-hidden">
+          <img loading="lazy" decoding="async" src="${p.img}" alt="${p.title}" class="w-full h-full object-cover">
+          <span class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20">${p.type}</span>
+        </div>
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-display font-bold text-white">${p.title}</h3>
+            <span class="text-amber-400 font-bold">${p.price}</span>
+          </div>
+          <p class="text-slate-400 text-sm mb-4">${p.desc}</p>
+          <div class="text-xs font-medium text-slate-300 mb-4 bg-slate-950/50 p-3 rounded-xl border border-slate-800">
+            <span class="text-amber-400">Size:</span> ${p.sqft}
+          </div>
+          <div class="flex flex-wrap gap-2 mb-6">
+            ${p.amenities.map(a => `<span class="bg-slate-800 text-slate-300 text-xs px-2.5 py-1 rounded-lg">${a}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+      <div class="px-6 pb-6 pt-0">
+        <a href="pricing.html" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2.5 rounded-xl transition text-sm">Schedule Viewing</a>
+      </div>
+    </div>
+  `).join('');
+  
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+}
+
+function filterProducts(type) {
+  const buttons = document.querySelectorAll('.filter-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-amber-500', 'text-slate-950');
+    btn.classList.add('bg-slate-800', 'text-slate-300');
+    if(btn.textContent.toLowerCase() === type.toLowerCase() || (type === 'all' && btn.textContent === 'All')) {
+      btn.classList.remove('bg-slate-800', 'text-slate-300');
+      btn.classList.add('bg-amber-500', 'text-slate-950');
+    }
+  });
+
+  if(type === 'all') {
+    renderProducts(products);
+  } else {
+    const filtered = products.filter(p => p.type.toLowerCase() === type.toLowerCase());
+    renderProducts(filtered);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts(products);
+});
+</script>
+</main>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Magic Bricks</p><p class="mt-3 text-sm text-slate-400">Crafting your legacy in the heart of Bengaluru.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="products.html" class="hover:text-white">Products</a><a href="pricing.html" class="hover:text-white">Pricing</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM. Founded in 2016, 8+ years of excellence</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@magic-bricks.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Magic Bricks. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
