@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Test Cafe</title>
+<meta name="description" content="Crafting perfect coffee and artisanal sandwiches in Pune.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#ecfdf5','100':'#d1fae5','200':'#a7f3d0','300':'#6ee7b7','400':'#34d399','500':'#10b981','600':'#059669','700':'#047857','800':'#065f46','900':'#064e3b'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Test Cafe</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products / Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products / Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a></div>
+</header>
+<main>
+<main>
+  <!-- 1. Full-width hero -->
+  <section class="relative min-h-[85vh] flex items-center justify-center text-white">
+    <div class="absolute inset-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1715783691179-ebd004a7319e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8d2FybSUyMGludGVyaW9yJTIwcHVuZXxlbnwxfHx8fDE3OTQ5OTEwMjF8MA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Test Cafe cozy interior in Pune" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+      <span class="inline-flex items-center gap-2 bg-brand-600/90 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+        <i data-lucide="star" class="w-4 h-4 fill-current"></i> 4.9★ Google rating in Pune
+      </span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+        Crafting Perfect Coffee &amp; Artisanal Sandwiches
+      </h1>
+      <p class="text-lg sm:text-xl max-w-2xl mx-auto text-gray-200 mb-10">
+        Welcome to Test Cafe at Koregaon Park. Experience ethically sourced artisanal roasts and freshly baked sourdough in a warm, inviting space.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-xl transition shadow-lg">
+          <i data-lucide="calendar" class="w-5 h-5"></i> Book a Table
+        </a>
+        <a href="menu.html" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 font-medium px-8 py-4 rounded-xl transition">
+          <i data-lucide="coffee" class="w-5 h-5"></i> Explore Menu
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats strip -->
+  <section class="bg-brand-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">5+</div>
+          <div class="text-gray-300 text-sm sm:text-base">Years of Experience</div>
+        </div>
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">15k+</div>
+          <div class="text-gray-300 text-sm sm:text-base">Happy Customers</div>
+        </div>
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">4.9★</div>
+          <div class="text-gray-300 text-sm sm:text-base">Google Rating</div>
+        </div>
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold text-brand-200 mb-2">100%</div>
+          <div class="text-gray-300 text-sm sm:text-base">Artisanal Roasts</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder's story preview -->
+  <section class="py-16 md:py-24 bg-amber-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1709689156424-16fe0e05b47b?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Y2FmZSUyMGNvZmZlZSUyMHNhbmR3aWNoZXN8ZW58MXx8fHwxNzk0OTkxMDIxfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Ananya Rao founder of Test Cafe" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2 space-y-6">
+          <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Our Heritage</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900">
+            Founded with a passion for exceptional brewing
+          </h2>
+          <p class="text-gray-600 leading-relaxed">
+            Since 2019, Test Cafe has been a beloved cornerstone of Koregaon Park. Ananya Rao, a dedicated coffee enthusiast, started this cafe to bring true artisanal roasting and gourmet dining to Pune. Every cup tells a story of careful sourcing and expert craftsmanship.
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            Alongside our Head Barista Rohan and Kitchen Lead Priya, we pour our hearts into creating a warm, welcoming space where every visitor feels like family.
+          </p>
+          <div>
+            <a href="about.html" class="inline-flex items-center gap-2 text-brand-700 font-semibold hover:text-brand-800 transition">
+              Read our full story <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured menu items -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Taste Perfection</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">Featured Menu Items</h2>
+        <p class="text-gray-600">Discover our most loved specialty drinks and handcrafted gourmet sandwiches, prepared fresh daily.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-md hover:-translate-y-1 transition border border-amber-100">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1644764399224-f7d18b1e8d1c?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8bml0cm8lMjBjb2xkJTIwYnJldyUyMGNvZmZlZXxlbnwxfHx8fDE3OTQ5OTEwMjF8MA&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Signature Nitro Cold Brew" class="w-full h-52 object-cover rounded-xl mb-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-display text-xl font-bold text-gray-900">Signature Nitro Cold Brew</h3>
+            <span class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-lg text-sm">₹220</span>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Steeped for 24 hours and infused with nitrogen for a velvety, rich crema texture that delights.</p>
+          <a href="menu.html" class="text-brand-600 font-medium text-sm inline-flex items-center gap-1 hover:underline">View in Menu <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        </div>
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-md hover:-translate-y-1 transition border border-amber-100">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1539252554453-80ab65ce3586?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8YXZvY2FkbyUyMHNvdXJkb3VnaCUyMHNhbmR3aWNofGVufDF8fHx8MTc5NDk5MTAyMXww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Classic Avocado Sourdough" class="w-full h-52 object-cover rounded-xl mb-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-display text-xl font-bold text-gray-900">Classic Avocado Sourdough</h3>
+            <span class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-lg text-sm">₹380</span>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Fresh smashed avocado, heirloom tomatoes, and microgreens on our house-baked artisanal sourdough bread.</p>
+          <a href="menu.html" class="text-brand-600 font-medium text-sm inline-flex items-center gap-1 hover:underline">View in Menu <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        </div>
+        <div class="bg-amber-50/30 rounded-2xl p-6 shadow-md hover:-translate-y-1 transition border border-amber-100">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1621852004158-f3bc188ace2d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8Z3JpbGxlZCUyMHBlc3RvJTIwcGFuaW5pfGVufDF8fHx8MTc5NDk5MTAyMXww&ixlib=rb-4.1.0&w=600&h=400&fit=crop&auto=format&q=80" alt="Grilled Pesto Panini" class="w-full h-52 object-cover rounded-xl mb-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-display text-xl font-bold text-gray-900">Grilled Pesto Panini</h3>
+            <span class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-lg text-sm">₹280</span>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">House-made basil pesto, fresh mozzarella, and sun-dried tomatoes pressed to crispy perfection.</p>
+          <a href="menu.html" class="text-brand-600 font-medium text-sm inline-flex items-center gap-1 hover:underline">View in Menu <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="menu.html" class="inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-800 text-white font-medium px-8 py-3.5 rounded-xl transition shadow">
+          View Complete Menu <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why choose us section -->
+  <section class="py-16 md:py-24 bg-amber-50/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">The Test Cafe Difference</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">Why Pune Loves Us</h2>
+        <p class="text-gray-600">We take pride in our uncompromising standards, from the beans we roast to the ingredients we bake with.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="w-14 h-14 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="leaf" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">100% Organic Ingredients</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">We source our produce and dairy from trusted local organic farms around Maharashtra to ensure peak freshness and flavor.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="w-14 h-14 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="flame" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Small-Batch Roasting</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Our coffee beans are carefully roasted in small batches right here in Pune to guarantee optimal flavor profiles in every cup.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="w-14 h-14 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="heart" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Warm &amp; Friendly Vibe</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Designed with natural wood tones and soft lighting, our cafe is your perfect neighborhood sanctuary to work or relax.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Three-step ordering process -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Simple &amp; Convenient</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">How It Works</h2>
+        <p class="text-gray-600">Enjoy your favorite artisanal coffee and sandwiches in just three easy steps.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div class="bg-amber-50/30 p-8 rounded-2xl text-center border border-amber-100 relative">
+          <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-6 text-lg shadow-md">1</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Explore Menu</h3>
+          <p class="text-gray-600 text-sm">Browse our exquisite selection of specialty coffees, cold brews, and gourmet sandwiches online.</p>
+        </div>
+        <div class="bg-amber-50/30 p-8 rounded-2xl text-center border border-amber-100 relative">
+          <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-6 text-lg shadow-md">2</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Book or Order</h3>
+          <p class="text-gray-600 text-sm">Reserve a cozy table for your visit or place an order for quick pickup at Koregaon Park.</p>
+        </div>
+        <div class="bg-amber-50/30 p-8 rounded-2xl text-center border border-amber-100 relative">
+          <div class="w-12 h-12 bg-brand-600 text-white font-bold rounded-full flex items-center justify-center mx-auto mb-6 text-lg shadow-md">3</div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-3">Savor &amp; Relax</h3>
+          <p class="text-gray-600 text-sm">Visit us to enjoy your freshly prepared treats in our warm, friendly neighborhood atmosphere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section class="bg-brand-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready for your next favorite cup of coffee?</h2>
+      <p class="text-gray-300 max-w-xl mx-auto mb-8">Visit us at Koregaon Park, Pune or reserve your table today to skip the wait.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-3.5 rounded-xl transition shadow">
+          Book a Table Now
+        </a>
+        <a href="contact.html" class="bg-transparent hover:bg-white/10 border border-white/30 text-white font-medium px-8 py-3.5 rounded-xl transition">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Test Cafe</p><p class="mt-3 text-sm text-slate-400">Crafting perfect coffee and artisanal sandwiches in Pune.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="menu.html" class="hover:text-white">Products / Menu</a><a href="contact.html" class="hover:text-white">Contact</a><a href="booking.html" class="hover:text-white">Booking</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">45, Koregaon Park, Pune, Maharashtra 411001</p><p class="mt-2 text-sm text-slate-400">Mon-Sun: 8:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2615 0000</p><p class="mt-2 text-sm text-slate-400">hello@testcafe.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Test Cafe. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Booking | Test Cafe</title>
+<meta name="description" content="Crafting perfect coffee and artisanal sandwiches in Pune.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#ecfdf5','100':'#d1fae5','200':'#a7f3d0','300':'#6ee7b7','400':'#34d399','500':'#10b981','600':'#059669','700':'#047857','800':'#065f46','900':'#064e3b'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="font-display text-xl font-extrabold text-brand-600">Test Cafe</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products / Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products / Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking</a></div>
+</header>
+<main>
+<main class="bg-brand-50 min-h-screen text-stone-800">
+    <!-- 1. Hero Section -->
+    <section class="relative min-h-[50vh] flex items-center justify-center bg-stone-900 text-white py-20">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1790774888482-8d56acd2a444?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTl8fGNhZmUlMjBjb2ZmZWUlMjBzYW5kd2ljaGVzfGVufDF8fHx8MTc5NDk5MTAyMXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Test Cafe Interior" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/50 to-transparent z-10"></div>
+        <div class="relative z-20 max-w-4xl mx-auto px-4 text-center">
+            <span class="text-brand-400 font-medium tracking-wider uppercase text-sm mb-3 block">Reserve Your Experience</span>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Book a Table at Test Cafe</h1>
+            <p class="text-stone-300 text-lg sm:text-xl max-w-2xl mx-auto mb-8">
+                Secure your spot in the heart of Koregaon Park, Pune. Enjoy our artisanal coffee and gourmet sandwiches in a warm, friendly ambiance.
+            </p>
+            <div class="flex justify-center gap-4 text-sm text-stone-300">
+                <span class="flex items-center gap-1"><i data-lucide="clock" class="w-4 h-4 text-brand-400"></i> Mon-Sun: 8 AM - 10 PM</span>
+                <span class="flex items-center gap-1"><i data-lucide="map-pin" class="w-4 h-4 text-brand-400"></i> Koregaon Park, Pune</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 & 3. Interactive Booking Form & Live Summary -->
+    <section id="reservation-section" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+                <!-- Form -->
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-xl p-6 sm:p-10 border border-stone-100">
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-stone-900 mb-6">Table Reservation Details</h2>
+                    <form id="booking-form" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-stone-700 mb-2">Full Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="Ananya Rao">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-stone-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="+91 98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div>
+                                <label for="guests" class="block text-sm font-medium text-stone-700 mb-2">Guests</label>
+                                <select id="guests" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition bg-white">
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5 People</option>
+                                    <option value="6">6+ People (Group)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="date" class="block text-sm font-medium text-stone-700 mb-2">Date</label>
+                                <input type="date" id="date" required class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition">
+                            </div>
+                            <div>
+                                <label for="time" class="block text-sm font-medium text-stone-700 mb-2">Time Slot</label>
+                                <select id="time" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition bg-white">
+                                    <option value="08:00 AM">08:00 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="02:00 PM">02:00 PM</option>
+                                    <option value="04:00 PM">04:00 PM</option>
+                                    <option value="06:00 PM">06:00 PM</option>
+                                    <option value="08:00 PM">08:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="seating" class="block text-sm font-medium text-stone-700 mb-2">Seating Preference</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                <label class="flex items-center p-4 border border-stone-200 rounded-xl cursor-pointer hover:border-brand-600 transition">
+                                    <input type="radio" name="seating" value="Indoor Cozy" checked class="text-brand-600 focus:ring-brand-600 mr-3">
+                                    <span class="text-sm font-medium">Indoor Cozy</span>
+                                </label>
+                                <label class="flex items-center p-4 border border-stone-200 rounded-xl cursor-pointer hover:border-brand-600 transition">
+                                    <input type="radio" name="seating" value="Patio Garden" class="text-brand-600 focus:ring-brand-600 mr-3">
+                                    <span class="text-sm font-medium">Patio Garden</span>
+                                </label>
+                                <label class="flex items-center p-4 border border-stone-200 rounded-xl cursor-pointer hover:border-brand-600 transition">
+                                    <input type="radio" name="seating" value="Bar Counter" class="text-brand-600 focus:ring-brand-600 mr-3">
+                                    <span class="text-sm font-medium">Bar Counter</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="requests" class="block text-sm font-medium text-stone-700 mb-2">Special Requests (Optional)</label>
+                            <textarea id="requests" rows="3" class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none transition" placeholder="Dietary requirements, high chair needed, etc."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-medium py-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i> Confirm Reservation
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Summary Card -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 border border-stone-100 sticky top-24">
+                        <h3 class="font-display text-xl font-bold text-stone-900 mb-4 pb-4 border-b border-stone-100 flex items-center justify-between">
+                            <span>Reservation Summary</span>
+                            <i data-lucide="receipt" class="w-5 h-5 text-brand-600"></i>
+                        </h3>
+                        <div id="live-summary" class="space-y-4 text-stone-600">
+                            <!-- Populated dynamically -->
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-stone-100 bg-brand-50 p-4 rounded-xl">
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="info" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
+                                <p class="text-xs text-stone-600 leading-relaxed">
+                                    We hold tables for up to 15 minutes past the reservation time. For changes, please call us at +91 20 2615 0000.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. What to Expect Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-medium tracking-wider uppercase text-sm mb-3 block">The Test Cafe Experience</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-900 mb-4">What to Expect When You Arrive</h2>
+                <p class="text-stone-600">We take pride in our 4.9★ Google rating and strive to make every visit memorable.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition duration-200">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="coffee" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-stone-900 mb-3">Artisanal Welcoming Brew</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Start your table experience with a complimentary sample pour of our daily specialty roast curated by Rohan, our Head Barista.</p>
+                </div>
+                <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition duration-200">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-stone-900 mb-3">Warm Natural Ambience</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Relax amidst natural wood textures, soft lighting, and cream tones designed for comfortable conversations or focused laptop sessions.</p>
+                </div>
+                <div class="bg-brand-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition duration-200">
+                    <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="utensils" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-stone-900 mb-3">Freshly Crafted Bites</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Priya, our Kitchen Lead, ensures every Classic Avocado Sourdough and Grilled Pesto Panini is prepared fresh to order.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ Section -->
+    <section class="py-16 md:py-24 bg-brand-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-600 font-medium tracking-wider uppercase text-sm mb-3 block">Got Questions?</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-stone-900 mb-4">Reservation FAQs</h2>
+                <p class="text-stone-600">Everything you need to know about booking a table with us.</p>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h3 class="font-display text-lg font-bold text-stone-900 mb-2">Do I need to reserve a table in advance?</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">While walk-ins are always welcome, we recommend booking online, especially on weekends, to secure your preferred seating and avoid wait times.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h3 class="font-display text-lg font-bold text-stone-900 mb-2">How long will my table be held?</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">We hold reserved tables for up to 15 minutes past your booking time. If you are running late, please call us at +91 20 2615 0000.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h3 class="font-display text-lg font-bold text-stone-900 mb-2">Can I book for large groups or private events?</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Yes! For groups larger than 6, or private gatherings, please use our group booking option below or contact us directly via email at hello@testcafe.in.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-stone-100">
+                    <h3 class="font-display text-lg font-bold text-stone-900 mb-2">Is parking available at Koregaon Park?</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Street parking is available nearby, and our Front of House team Sameer and staff can guide you upon arrival.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CTA for Group Bookings or Events -->
+    <section class="py-16 md:py-24 bg-stone-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1651408036297-2a8efb387caa?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MjB8fGNhZmUlMjBjb2ZmZWUlMjBzYW5kd2ljaGVzfGVufDF8fHx8MTc5NDk5MTAyMXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Cafe Event" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-brand-400 font-medium tracking-wider uppercase text-sm mb-3 block">Private & Group Bookings</span>
+            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Planning a Celebration or Corporate Meet?</h2>
+            <p class="text-stone-300 text-lg max-w-2xl mx-auto mb-8">
+                Host your next intimate gathering, coffee tasting workshop, or team meet at Test Cafe. Customized menus and dedicated service await.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-brand-600 hover:bg-brand-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg transition duration-200">
+                    Inquire for Events
+                </a>
+                <a href="tel:+912026150000" class="bg-transparent hover:bg-white/10 text-white border border-white/30 font-medium px-8 py-4 rounded-xl transition duration-200 flex items-center justify-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i> Call +91 20 2615 0000
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('booking-form');
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const guestsInput = document.getElementById('guests');
+        const dateInput = document.getElementById('date');
+        const timeInput = document.getElementById('time');
+        const requestsInput = document.getElementById('requests');
+        const liveSummary = document.getElementById('live-summary');
+
+        // Set default date to today
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.value = today;
+        dateInput.min = today;
+
+        function updateSummary() {
+            const seatingEl = document.querySelector('input[name="seating"]:checked');
+            const seating = seatingEl ? seatingEl.value : 'Indoor Cozy';
+            
+            liveSummary.innerHTML = `
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Name</span>
+                    <span class="text-sm font-semibold text-stone-900">${nameInput.value || 'Not provided'}</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Phone</span>
+                    <span class="text-sm font-semibold text-stone-900">${phoneInput.value || 'Not provided'}</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Guests</span>
+                    <span class="text-sm font-semibold text-stone-900">${guestsInput.value} ${guestsInput.value == 1 ? 'Person' : 'People'}</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Date</span>
+                    <span class="text-sm font-semibold text-stone-900">${dateInput.value}</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Time</span>
+                    <span class="text-sm font-semibold text-stone-900">${timeInput.value}</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-stone-100">
+                    <span class="text-sm font-medium text-stone-500">Seating</span>
+                    <span class="text-sm font-semibold text-stone-900">${seating}</span>
+                </div>
+                <div class="py-2">
+                    <span class="text-sm font-medium text-stone-500 block mb-1">Requests</span>
+                    <span class="text-sm text-stone-700 italic">${requestsInput.value || 'None'}</span>
+                </div>
+            `;
+        }
+
+        // Attach listeners
+        [nameInput, phoneInput, guestsInput, dateInput, timeInput, requestsInput].forEach(el => {
+            el.addEventListener('input', updateSummary);
+            el.addEventListener('change', updateSummary);
+        });
+
+        document.querySelectorAll('input[name="seating"]').forEach(radio => {
+            radio.addEventListener('change', updateSummary);
+        });
+
+        // Initial render
+        updateSummary();
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const seatingEl = document.querySelector('input[name="seating"]:checked');
+            
+            const bookingData = {
+                name: nameInput.value,
+                phone: phoneInput.value,
+                guests: guestsInput.value,
+                date: dateInput.value,
+                time: timeInput.value,
+                seating: seatingEl ? seatingEl.value : 'Indoor Cozy',
+                requests: requestsInput.value,
+                timestamp: new Date().toISOString()
+            };
+
+            // Save to localStorage
+            const existingBookings = JSON.parse(localStorage.getItem('testCafeBookings') || '[]');
+            existingBookings.push(bookingData);
+            localStorage.setItem('testCafeBookings', JSON.stringify(existingBookings));
+
+            // Show success alert & reset
+            alert(`Thank you, ${bookingData.name}! Your table for ${bookingData.guests} on ${bookingData.date} at ${bookingData.time} has been successfully reserved. We look forward to seeing you at Test Cafe, Pune.`);
+            form.reset();
+            dateInput.value = today;
+            updateSummary();
+        });
+    });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Test Cafe</p><p class="mt-3 text-sm text-slate-400">Crafting perfect coffee and artisanal sandwiches in Pune.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="menu.html" class="hover:text-white">Products / Menu</a><a href="contact.html" class="hover:text-white">Contact</a><a href="booking.html" class="hover:text-white">Booking</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">45, Koregaon Park, Pune, Maharashtra 411001</p><p class="mt-2 text-sm text-slate-400">Mon-Sun: 8:00 AM - 10:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 20 2615 0000</p><p class="mt-2 text-sm text-slate-400">hello@testcafe.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Test Cafe. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
