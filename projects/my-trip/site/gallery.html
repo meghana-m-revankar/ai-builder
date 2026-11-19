@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | My Trip</title>
+<meta name="description" content="Your seamless gateway to India's best journeys.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f9ff','100':'#e0f2fe','200':'#bae6fd','300':'#7dd3fc','400':'#38bdf8','500':'#0ea5e9','600':'#0284c7','700':'#0369a1','800':'#075985','900':'#0c4a6e'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="My Trip logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a></div>
+</header>
+<main data-page="P5">
+<main>
+  <!-- Hero / Intro -->
+  <section data-section="S1" class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden py-20">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1618904695045-ff24cdbec53e?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTF8fHRyYXZlbCUyMHRvdXJpc20lMjBsYW5kc2NhcGVzfGVufDF8fHx8MTc5NTA4NTMzOXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Incredible India Travel" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/50 to-transparent"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-brand-600/80 text-white text-sm font-medium mb-4 backdrop-blur-sm">Visual Journey</span>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight mb-6">Captivating Moments Across India</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-8">Explore the breathtaking landscapes, vibrant cultures, and historic cities captured through the lenses of our travelers and expert guides.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#gallery-section" class="px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold shadow-lg transition transform hover:-translate-y-0.5">Explore Gallery</a>
+        <a href="services.html" class="px-8 py-3.5 rounded-xl bg-white/1> hover:bg-white/20 text-white font-semibold backdrop-blur-md transition">Book a Trip</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Gallery Categories & Masonry Grid -->
+  <section data-section="S2" id="gallery-section" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-900 mb-4">Wanderlust Gallery</h2>
+        <p class="text-gray-600">Filter through our curated collection of stunning destinations. Click any image to view in full screen.</p>
+        
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-2 mt-8" id="filter-buttons">
+          <button onclick="filterGallery('all')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-brand-600 text-white transition shadow">All Photos</button>
+          <button onclick="filterGallery('Nature')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition">Nature</button>
+          <button onclick="filterGallery('Cities')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition">Cities</button>
+          <button onclick="filterGallery('Culture')" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold bg-gray-100 text-gray-700 hover:bg-gray-200 transition">Culture</button>
+        </div>
+      </div>
+
+      <!-- Masonry Grid Rendered via JS -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="masonry-grid"></div>
+    </div>
+  </section>
+
+  <!-- Highlight of Top 10 Most Booked Destinations -->
+  <section data-section="S3" class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Most Popular</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-900 mt-1">Top 10 Most Booked Destinations</h2>
+        </div>
+        <p class="text-gray-600 max-w-md mt-4 md:mt-0">The absolute favorite spots among our 50,000+ happy travelers over our 8+ years of excellence.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6" id="top-destinations-grid"></div>
+    </div>
+  </section>
+
+  <!-- User-Submitted Photo Showcase Section -->
+  <section data-section="S4" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Community</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-900 mt-1">Traveler Spotlight</h2>
+        <p class="text-gray-600 mt-2">Real moments captured by our travelers using our Luxury Bus and Express Train services across India.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="user-showcase-grid"></div>
+    </div>
+  </section>
+
+  <!-- CTA Band for Travel Inspiration -->
+  <section data-section="S5" class="py-16 bg-brand-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1788771246152-a12424bba589?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTJ8fHRyYXZlbCUyMHRvdXJpc20lMjBsYW5kc2NhcGVzfGVufDF8fHx8MTc5NTA4NTMzOXww&ixlib=rb-4.1.0&w=1600&h=800&fit=crop&auto=format&q=80" alt="Travel Inspiration" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-5xl font-display font-bold mb-4">Ready to Create Your Own Story?</h2>
+      <p class="text-brand-100 text-lg max-w-2xl mx-auto mb-8">Join over 50,000+ happy travelers. Book your next journey with My Trip today and experience seamless travel.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="services.html" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-bold shadow-lg transition">Explore Services (From ₹750)</a>
+        <a href="index.html#contact" class="px-8 py-4 rounded-xl bg-white text-brand-900 hover:bg-brand-50 font-bold shadow-lg transition">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Screen Image Modal Preview -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+    <button onclick="closeModal()" class="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <div class="max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+      <img loading="lazy" decoding="async" id="modal-img" src="https://images.unsplash.com/photo-1586618761884-a062d527523f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MTN8fHRyYXZlbCUyMHRvdXJpc20lMjBsYW5kc2NhcGVzfGVufDF8fHx8MTc5NTA4NTMzOXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="" class="max-h-[75vh] object-contain rounded-lg shadow-2xl mb-4">
+      <h3 id="modal-title" class="text-white text-2xl font-bold font-display"></h3>
+      <p id="modal-desc" class="text-brand-200 text-sm mt-1"></p>
+    </div>
+  </div>
+</main>
+
+<script>
+  const galleryData = [
+    { title: "Himalayan Sunrise", category: "Nature", img: "himalayan-mountain-sunrise", desc: "Breathtaking peak views captured during our Weekend Getaway Package." },
+    { title: "Varanasi Ghats", category: "Culture", img: "varanasi-ghats-ganges", desc: "The spiritual heart of India illuminated during evening aarti." },
+    { title: "Mumbai Skyline", category: "Cities", img: "mumbai-cityscape-marine-drive", desc: "The bustling Queen's Necklace at twilight." },
+    { title: "Kerala Backwaters", category: "Nature", img: "kerala-backwaters-boat", desc: "Serene houseboat cruising through lush tropical greenery." },
+    { title: "Jaipur Amber Fort", category: "Culture", img: "jaipur-amber-fort-palace", desc: "Majestic architecture reflecting royal heritage." },
+    { title: "Bengaluru Tech Park", category: "Cities", img: "bengaluru-mg-road-city", desc: "Modern infrastructure near our MG Road headquarters." },
+    { title: "Goa Beach Sunset", category: "Nature", img: "goa-beach-sunset-palms", desc: "Golden hour waves along the pristine coastline." },
+    { title: "Udaipur Lake Palace", category: "Culture", img: "udaipur-lake-palace-water", desc: "Exquisite marble palace floating on calm waters." },
+    { title: "Delhi Connaught Place", category: "Cities", img: "delhi-connaught-place-hub", desc: "Vibrant shopping and colonial architecture hub." }
+  ];
+
+  const topDestinations = [
+    { name: "Goa Beaches", bookings: "8,400+ bookings", img: "goa-beach-palm" },
+    { name: "Manali Mountains", bookings: "7,200+ bookings", img: "manali-snow-peaks" },
+    { name: "Jaipur Heritage", bookings: "6,900+ bookings", img: "jaipur-palace-arch" },
+    { name: "Kerala Backwaters", bookings: "5,800+ bookings", img: "kerala-boat-palm" },
+    { name: "Varanasi Ghats", bookings: "5,100+ bookings", img: "varanasi-river-ganges" },
+    { name: "Udaipur Lakes", bookings: "4,600+ bookings", img: "udaipur-lake-palace" },
+    { name: "Agra Taj Mahal", bookings: "4,300+ bookings", img: "agra-taj-mahal-dome" },
+    { name: "Bengaluru City", bookings: "3,900+ bookings", img: "bengaluru-mg-road" },
+    { name: "Mumbai Marine Drive", bookings: "3,500+ bookings", img: "mumbai-marine-drive" },
+    { name: "Shimla Pines", bookings: "3,100+ bookings", img: "shimla-pine-hills" }
+  ];
+
+  const userShowcase = [
+    { user: "Arjun Mehta", city: "Mumbai", text: "My Trip's luxury bus booking made our journey to Goa incredibly smooth and comfortable. 5/5 stars!", avatar: 12, img: "goa-trip-traveler" },
+    { user: "Sunita Iyer", city: "Chennai", text: "The guided city tour in Bengaluru was exceptionally well-organized and insightful. Highly recommended!", avatar: 25, img: "bengaluru-tour-traveler" },
+    { user: "Rohan Patel", city: "Delhi", text: "Express train tickets were booked in seconds. Great customer support and seamless experience overall.", avatar: 38, img: "delhi-train-traveler" }
+  ];
+
+  function renderGallery(filter = 'all') {
+    const grid = document.getElementById('masonry-grid');
+    const filtered = filter === 'all' ? galleryData : galleryData.filter(item => item.category === filter);
+    
+    grid.innerHTML = filtered.map(item => `
+      <div onclick="openModal('${item.title}', '${item.desc}', 'https://picsum.photos/seed/${item.img}/1200/800')" class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-md bg-gray-100 h-80">
+        <img loading="lazy" decoding="async" src="https://picsum.photos/seed/${item.img}/800/600" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6 text-white">
+          <span class="text-xs uppercase tracking-wider text-brand-300 font-semibold mb-1">${item.category}</span>
+          <h3 class="text-xl font-bold font-display">${item.title}</h3>
+          <p class="text-sm text-gray-200 mt-1 line-clamp-2">${item.desc}</p>
+        </div>
+      </div>
+    `).join('');
+    lucide.createIcons();
+  }
+
+  function filterCategory(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('bg-brand-600', 'text-white');
+      btn.classList.add('bg-gray-100', 'text-gray-700');
+    });
+    event.currentTarget.classList.remove('bg-gray-100', 'text-gray-700');
+    event.currentTarget.classList.add('bg-brand-600', 'text-white');
+    renderGallery(category);
+  }
+
+  // Bind filter buttons correctly
+  window.filterGallery = function(cat) {
+    renderGallery(cat);
+  }
+
+  function renderTopDestinations() {
+    const grid = document.getElementById('top-destinations-grid');
+    grid.innerHTML = topDestinations.map((dest, idx) => `
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col group hover:-translate-y-1 transition">
+        <div class="relative h-44 overflow-hidden">
+          <span class="absolute top-3 left-3 z-10 bg-brand-600 text-white font-bold text-xs px-2.5 py-1 rounded-full">#${idx + 1}</span>
+          <img loading="lazy" decoding="async" src="https://picsum.photos/seed/${dest.img}/600/400" alt="${dest.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <div class="p-4 flex flex-col flex-grow justify-between">
+          <h3 class="font-display font-bold text-brand-900 text-lg">${dest.name}</h3>
+          <p class="text-xs text-brand-600 font-semibold mt-1">${dest.bookings}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function renderUserShowcase() {
+    const grid = document.getElementById('user-showcase-grid');
+    grid.innerHTML = userShowcase.map(item => `
+      <div class="bg-brand-50 rounded-2xl p-6 shadow-md flex flex-col justify-between">
+        <div>
+          <div class="h-56 rounded-xl overflow-hidden mb-4">
+            <img loading="lazy" decoding="async" src="https://picsum.photos/seed/${item.img}/800/600" alt="${item.user}" class="w-full h-full object-cover">
+          </div>
+          <p class="text-gray-700 italic text-sm mb-4">"${item.text}"</p>
+        </div>
+        <div class="flex items-center gap-3 pt-4 border-t border-brand-200">
+          <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=${item.avatar}" alt="${item.user}" class="w-10 h-10 rounded-full object-cover">
+          <div>
+            <h4 class="font-bold text-brand-900 text-sm">${item.user}</h4>
+            <p class="text-xs text-gray-500">${item.city} • 5.0 ★</p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function openModal(title, desc, imgUrl) {
+    document.getElementById('modal-img').src = imgUrl;
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-desc').textContent = desc;
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('image-modal');
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderGallery('all');
+    renderTopDestinations();
+    renderUserShowcase();
+    lucide.createIcons();
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">My Trip</p><p class="mt-3 text-sm text-slate-400">Your seamless gateway to India's best journeys.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="pricing.html" class="hover:text-white">Pricing</a><a href="gallery.html" class="hover:text-white">Gallery</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 9AM-9PM, Sun: 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@mytrip.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> My Trip. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P5</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

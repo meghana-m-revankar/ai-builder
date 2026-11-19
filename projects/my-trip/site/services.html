@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | My Trip</title>
+<meta name="description" content="Your seamless gateway to India's best journeys.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f0f9ff','100':'#e0f2fe','200':'#bae6fd','300':'#7dd3fc','400':'#38bdf8','500':'#0ea5e9','600':'#0284c7','700':'#0369a1','800':'#075985','900':'#0c4a6e'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="My Trip logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a></div>
+</header>
+<main data-page="P3">
+<main>
+  <!-- Hero Section -->
+  <section data-section="S1" class="relative min-h-[50vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden py-20">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1501786223405-6d024d7c3b8d?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8MXx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Travel Landscape" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-900/80 to-transparent z-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">Our Travel Services</h1>
+      <p class="text-lg sm:text-xl text-brand-100 max-w-2xl mx-auto mb-8">From luxury bus bookings to fully guided city tours, discover seamless journeys crafted for every kind of traveler across India.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#services-grid" class="bg-brand-600 hover:bg-brand-500 text-white font-semibold px-6 py-3 rounded-xl shadow-lg transition-all">Explore Services</a>
+        <a href="pricing.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-xl backdrop-blur-md transition-all">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Category Filter Tabs -->
+  <section data-section="S2" class="py-8 bg-brand-50 border-b border-brand-100 sticky top-16 z-30 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-3" id="filter-tabs">
+        <button onclick="filterServices('all')" class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-brand-600 text-white shadow-md" data-category="all">All Services</button>
+        <button onclick="filterServices('transit')" class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-white text-brand-700 hover:bg-brand-100 shadow-sm" data-category="transit">Transit & Tickets</button>
+        <button onclick="filterServices('tours')" class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-white text-brand-700 hover:bg-brand-100 shadow-sm" data-category="tours">Tours & Getaways</button>
+        <button onclick="filterServices('corporate')" class="filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-white text-brand-700 hover:bg-brand-100 shadow-sm" data-category="corporate">Corporate & Airport</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Grid of Travel Service Cards with Pricing -->
+  <section data-section="S3" id="services-grid" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Handcrafted Itineraries</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-4">Choose Your Next Adventure</h2>
+        <p class="text-gray-600">Explore our top-rated travel solutions designed for comfort, safety, and unforgettable memories across India.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="services-container">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Featured Service Promotion Banner -->
+  <section data-section="S4" class="py-16 bg-gradient-to-r from-brand-900 to-brand-800 text-white overflow-hidden relative">
+    <div class="absolute inset-0 opacity-20">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1676066334943-f9185b820612?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Weekend Getaway Banner" class="w-full h-full object-cover">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+        <div class="max-w-2xl">
+          <span class="bg-brand-500/30 text-brand-200 border border-brand-400/30 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Featured Promotion</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold mt-4 mb-3">Weekend Getaway Packages</h2>
+          <p class="text-brand-100 text-lg mb-6">Escape the city rush with our curated 3-day weekend retreats. Includes premium stays, guided explorations, and seamless transit starting at just ₹5,999.</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="pricing.html" class="bg-white text-brand-900 hover:bg-brand-50 font-semibold px-6 py-3 rounded-xl shadow-lg transition-all">Book Getaway Now</a>
+            <a href="about.html" class="border border-white/30 hover:bg-white/10 text-white font-semibold px-6 py-3 rounded-xl transition-all">Learn More</a>
+          </div>
+        </div>
+        <div class="w-full lg:w-auto">
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-center shadow-2xl">
+            <span class="text-brand-200 text-sm block uppercase tracking-wider font-semibold">Special Offer Price</span>
+            <div class="text-4xl sm:text-5xl font-display font-bold my-2">₹5,999</div>
+            <p class="text-xs text-brand-200 mb-4">All-inclusive per person package</p>
+            <div class="flex items-center justify-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <span class="text-white text-xs ml-1 font-medium">4.9/5 Rating</span>
+            </div>
+            <a href="pricing.html" class="block w-full bg-brand-600 hover:bg-brand-500 text-white font-medium py-2.5 rounded-xl transition-all text-center">Claim Offer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Benefits of Choosing Our Travel Services -->
+  <section data-section="S5" class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Why My Trip</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-4">The Standard of Excellence in Travel</h2>
+        <p class="text-gray-600">Backed by 8+ years of expertise, we ensure every mile of your journey is comfortable, safe, and memorable.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-all">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-3">100% Verified Safety</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">All our transit partners, vehicles, and guides undergo rigorous background and safety vetting to guarantee peace of mind.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-all">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="headphones" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-3">24/7 Concierge Support</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Our Bengaluru-based support team is always available around the clock to assist you with real-time adjustments and queries.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition-all">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="tag" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Transparent Pricing</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">No hidden fees or unexpected surcharges. What you see on our menu is what you pay, ensuring complete financial clarity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Combo Package and Seasonal Offers -->
+  <section data-section="S6" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wider uppercase text-sm">Value Bundles</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-4">Combo Packages & Seasonal Deals</h2>
+        <p class="text-gray-600">Maximize your savings and experience more with our specially crafted multi-service travel bundles.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-brand-900 text-white p-8 sm:p-10 rounded-2xl relative overflow-hidden flex flex-col justify-between shadow-xl">
+          <div class="absolute right-0 top-0 w-64 h-64 bg-brand-600 rounded-full filter blur-3xl opacity-20 -mr-20 -mt-20"></div>
+          <div>
+            <span class="bg-amber-400 text-brand-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Best Seller</span>
+            <h3 class="text-2xl sm:text-3xl font-display font-bold mt-4 mb-3">The Explorer Combo</h3>
+            <p class="text-brand-100 text-sm leading-relaxed mb-6">Includes Express Train Tickets, Airport Transfer Service, and a Guided City Tour. Perfect for solo travelers and couples looking for a complete city immersion.</p>
+            <ul class="space-y-3 mb-8 text-sm text-brand-100">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Priority Train Booking & Seat Selection</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Seamless Airport Pickup & Drop</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> Expert Local Guide for Full Day Tour</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-brand-800">
+            <div>
+              <span class="text-xs text-brand-300 block">Combo Price</span>
+              <span class="text-3xl font-display font-bold">₹3,499</span>
+            </div>
+            <a href="pricing.html" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-xl font-semibold transition-all">Book Combo</a>
+          </div>
+        </div>
+
+        <div class="bg-brand-50 border border-brand-100 p-8 sm:p-10 rounded-2xl relative overflow-hidden flex flex-col justify-between shadow-lg">
+          <div>
+            <span class="bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Corporate Elite</span>
+            <h3 class="text-2xl sm:text-3xl font-display font-bold text-gray-900 mt-4 mb-3">Business Traveler Pass</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-6">Tailored for corporate teams requiring frequent Airport Transfers, Luxury Bus/Train bookings, and dedicated account management.</p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-600"></i> Custom Billing & Monthly Invoicing</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-600"></i> Dedicated Priority Support Line</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-600"></i> Flexible Rescheduling & Cancellations</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-brand-200">
+            <div>
+              <span class="text-xs text-gray-500 block">Pricing Model</span>
+              <span class="text-3xl font-display font-bold text-gray-900">Custom</span>
+            </div>
+            <a href="pricing.html" class="bg-brand-900 hover:bg-brand-800 text-white px-6 py-3 rounded-xl font-semibold transition-all">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Client Review Highlight -->
+  <section data-section="S7" class="py-16 md:py-24 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-400 font-semibold tracking-wider uppercase text-sm">Testimonials</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold mt-2 mb-4">Trusted by 50,000+ Travelers</h2>
+        <p class="text-brand-100">Here is what our travelers from across India have to say about our seamless services.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700/50 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-brand-100 text-sm leading-relaxed mb-6">"The Luxury Bus Booking service made our trip to Goa completely hassle-free. Clean interiors, punctual departure, and extremely polite staff!"</p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-brand-700/50">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=12" alt="Arjun Mehta" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Arjun Mehta</h4>
+              <span class="text-xs text-brand-300">Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700/50 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-brand-100 text-sm leading-relaxed mb-6">"Ananya Rao and the operations team arranged our Corporate Travel seamlessly. Every transfer was on time and billing was crystal clear."</p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-brand-700/50">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Sunita Iyer" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Sunita Iyer</h4>
+              <span class="text-xs text-brand-300">Chennai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-brand-800/60 p-8 rounded-2xl border border-brand-700/50 flex flex-col justify-between shadow-xl">
+          <div>
+            <div class="flex items-center gap-1 text-amber-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-brand-100 text-sm leading-relaxed mb-6">"The Weekend Getaway Package was worth every rupee. Great stays, amazing food, and Vikram Singh was an incredible lead guide!"</p>
+          </div>
+          <div class="flex items-center gap-4 pt-4 border-t border-brand-700/50">
+            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=52" alt="Rohan Patel" class="w-12 h-12 rounded-full object-cover">
+            <div>
+              <h4 class="font-display font-bold text-white">Rohan Patel</h4>
+              <span class="text-xs text-brand-300">Chennai</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section data-section="S8" class="py-16 bg-brand-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Ready to Start Your Next Journey?</h2>
+      <p class="text-brand-100 max-w-2xl mx-auto mb-8 text-lg">Book your transit, tour, or custom travel package today and experience India like never before.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="pricing.html" class="bg-white text-brand-900 font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:bg-brand-50 transition-all">Book Service Now</a>
+        <a href="index.html" class="bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:bg-brand-800 transition-all">Return to Home</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const servicesData = [
+    {
+      id: 1,
+      title: "Luxury Bus Booking",
+      category: "transit",
+      price: "₹899",
+      description: "Travel in utmost comfort with plush reclining seats, AC climate control, and onboard entertainment across major intercity routes.",
+      image: "https://images.unsplash.com/photo-1612171181961-d8ac6c52dff1?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    },
+    {
+      id: 2,
+      title: "Express Train Tickets",
+      category: "transit",
+      price: "₹1,250",
+      description: "Skip the waiting lists with priority express train bookings, instant seat confirmations, and seamless ticket management.",
+      image: "https://images.unsplash.com/photo-1529423490069-1eb2984eb2c7?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    },
+    {
+      id: 3,
+      title: "Guided City Tours",
+      category: "tours",
+      price: "₹2,499",
+      description: "Discover local heritage and hidden gems with our expert lead guides, inclusive of monument entries and local culinary stops.",
+      image: "https://images.unsplash.com/photo-1502003148287-a82ef80a6abc?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    },
+    {
+      id: 4,
+      title: "Weekend Getaway Packages",
+      category: "tours",
+      price: "₹5,999",
+      description: "Refresh your senses with 3-day curated retreats featuring scenic landscapes, premium accommodations, and complete transit.",
+      image: "https://images.unsplash.com/photo-1601892991788-1c0f0e1120ba?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    },
+    {
+      id: 5,
+      title: "Corporate Travel Management",
+      category: "corporate",
+      price: "Custom",
+      description: "End-to-end travel logistics for businesses with dedicated account coordinators, monthly invoicing, and priority support.",
+      image: "https://images.unsplash.com/photo-1635913336120-48a179bf6048?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    },
+    {
+      id: 6,
+      title: "Airport Transfer Service",
+      category: "corporate",
+      price: "₹750",
+      description: "Punctual, safe, and comfortable airport pickup and drop-off services available 24/7 with flight tracking included.",
+      image: "https://images.unsplash.com/photo-1567727556158-db6301f2c317?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8dHJhdmVsJTIwdG91cmlzbSUyMGxhbmRzY2FwZXN8ZW58MXx8fHwxNzk1MDg1MzM5fDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80"
+    }
+  ];
+
+  function renderServices(category) {
+    const container = document.getElementById('services-container');
+    if (!container) return;
+    
+    const filtered = category === 'all' 
+      ? servicesData 
+      : servicesData.filter(s => s.category === category);
+      
+    container.innerHTML = filtered.map(service => `
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-1 transition-all flex flex-col justify-between">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img loading="lazy" decoding="async" src="${service.image}" alt="${service.title}" class="w-full h-full object-cover">
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-brand-900 font-display font-bold text-sm shadow-md">
+              ${service.price}
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs uppercase font-semibold text-brand-600 tracking-wider">${service.category}</span>
+            <h3 class="text-xl font-display font-bold text-gray-900 mt-1 mb-2">${service.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">${service.description}</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="pricing.html" class="block w-full text-center bg-brand-50 hover:bg-brand-600 text-brand-700 hover:text-white font-medium py-3 rounded-xl transition-all">Book Service</a>
+        </div>
+      </div>
+    `).join('');
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+
+  function filterServices(category) {
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-category') === category) {
+        btn.className = "filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-brand-600 text-white shadow-md";
+      } else {
+        btn.className = "filter-btn px-5 py-2.5 rounded-xl font-medium text-sm transition-all bg-white text-brand-700 hover:bg-brand-100 shadow-sm";
+      }
+    });
+    renderServices(category);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderServices('all');
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">My Trip</p><p class="mt-3 text-sm text-slate-400">Your seamless gateway to India's best journeys.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="pricing.html" class="hover:text-white">Pricing</a><a href="gallery.html" class="hover:text-white">Gallery</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 9AM-9PM, Sun: 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@mytrip.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> My Trip. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P3</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
