@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products / Menu | Mysore Cafe</title>
+<meta name="description" content="Authentic brews and handcrafted pasta in the heart of the city.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#3b82f6','600':'#1e3a8a','700':'#1e40af','800':'#1e3a8a','900':'#1e3a8a'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Mysore Cafe logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products / Menu</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products / Menu</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a></div>
+</header>
+<main>
+<main class="bg-stone-50 text-stone-800">
+  <!-- 1. Hero header with category navigation tabs -->
+  <section class="relative min-h-[50vh] flex items-center justify-center bg-stone-900 text-white overflow-hidden py-16">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1608649226842-f39257c9085f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Mysore Cafe interior and dishes" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/50 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">Our Artisanal Menu</h1>
+      <p class="text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto mb-8">Handcrafted pasta made fresh daily and specialty brews sourced from the finest estates, bringing Italian tradition to Bengaluru.</p>
+      
+      <!-- Category Navigation Tabs -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="px-5 py-2.5 rounded-full bg-white/1:// hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Home</a>
+        <a href="menu.html" class="px-5 py-2.5 rounded-full bg-amber-600 text-white text-sm font-medium shadow-lg transition">Menu</a>
+        <a href="pricing.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Pricing & Combos</a>
+        <a href="gallery.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Gallery</a>
+        <a href="about.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">About</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Category filter control for coffee and pasta -->
+  <section class="py-8 bg-white border-b border-stone-200 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <i data-lucide="filter" class="w-5 h-5 text-amber-600"></i>
+        <span class="font-display font-semibold text-stone-900">Filter Menu:</span>
+      </div>
+      <div class="flex flex-wrap gap-2" id="filter-buttons">
+        <button onclick="filterMenu('all')" class="px-4 py-2 rounded-xl bg-amber-600 text-white text-sm font-medium transition filter-btn active" data-filter="all">All Items</button>
+        <button onclick="filterMenu('coffee')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="coffee">Coffee & Brews</button>
+        <button onclick="filterMenu('pasta')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="pasta">Handcrafted Pasta</button>
+        <button onclick="filterMenu('dessert')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="dessert">Desserts</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Grid layout of menu items with photos and prices -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured daily special highlighted banner -->
+  <section class="py-12 bg-amber-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-amber-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 border border-amber-700">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1599326838415-8122d96c6159?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Tiramisu Slice Daily Special" class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-md">
+        </div>
+        <div class="w-full lg:w-1/2 space-y-4">
+          <span class="inline-block px-3 py-1 rounded-full bg-amber-500/30 text-amber-200 text-xs font-semibold tracking-wider uppercase">Chef's Daily Special</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold">Artisanal Tiramisu Slice & Cold Brew Combo</h2>
+          <p class="text-amber-100 text-base">Experience our signature mascarpone tiramisu paired with a refreshing cold brew. Crafted fresh daily by Chef Rajesh and Meera.</p>
+          <div class="flex items-center space-x-4 pt-2">
+            <span class="text-2xl font-bold font-display text-white">₹450 <span class="text-sm font-normal text-amber-200 line-through">₹510</span></span>
+            <a href="pricing.html" class="px-6 py-3 rounded-xl bg-white text-amber-900 font-semibold hover:bg-amber-50 transition shadow-lg">Order Special</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why our ingredients section with three icons -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-600 font-semibold text-sm uppercase tracking-wider">Uncompromising Quality</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-2 mb-4">Why Our Ingredients Matter</h2>
+        <p class="text-stone-600">Founded by Ananya Rao after returning from Italy, Mysore Cafe brings authentic European techniques together with the finest local Indian produce.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="wheat" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Durum Wheat Semolina</h3>
+          <p class="text-stone-600 text-sm">We source premium Italian durum wheat to ensure our handcrafted pasta maintains the perfect al dente bite every single time.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="coffee" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Single-Origin Coffee Beans</h3>
+          <p class="text-stone-600 text-sm>Our signature espresso and cold brews are crafted from hand-picked beans roasted to perfection, serving over 15,000+ happy patrons.</p>
+        </div>
+
+        <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
+          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <i data-lucide="sparkles" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Fresh Local Herbs</h3>
+          <p class="text-stone-600 text-sm>Basil, garlic, and fresh tomatoes are delivered daily from organic farms around Bengaluru to elevate our sauces to authentic heights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Combo deals section with savings highlighted -->
+  <section class="py-16 md:py-24 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-amber-600 font-semibold text-sm uppercase tracking-wider">Value Pairings</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-2 mb-4">Our Special Combo Deals</h2>
+        <p class="text-stone-600">Enjoy our most loved pasta dishes paired with your favorite handcrafted coffee brews at special bundled prices.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-200 relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Save ₹100</div>
+          <div>
+            <h3 class="text-2xl font-display font-bold text-stone-900 mb-2">The Italian Roasters Combo</h3>
+            <p class="text-stone-600 text-sm mb-6">Choose any classic pasta (Alfredo or Arrabbiata) paired with our Signature Espresso and a Tiramisu Slice.</p>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1 rounded-lg">Pasta of Choice</span>
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1 rounded-lg">Signature Espresso</span>
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1 rounded-lg">Tiramisu</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-2xl font-display font-bold text-amber-600">₹790</span>
+              <span class="text-sm text-stone-400 line-through ml-2">₹890</span>
+            </div>
+            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 transition">Get Combo</a>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-stone-200 relative overflow-hidden flex flex-col justify-between">
+          <div class="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Save ₹80</div>
+          <div>
+            <h3 class="text-2xl font-display font-bold text-stone-900 mb-2">Basil & Brew Chill Deal</h3>
+            <p class="text-stone-600 text-sm mb-6">Our aromatic Garlic Basil Pasta served alongside our smooth, slow-steeped Cold Brew coffee.</p>
+            <div class="flex items-center gap-3 mb-6">
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1 rounded-lg">Garlic Basil Pasta</span>
+              <span class="text-xs bg-stone-100 text-stone-700 px-3 py-1 rounded-lg">Cold Brew</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100">
+            <div>
+              <span class="text-2xl font-display font-bold text-amber-600">₹620</span>
+              <span class="text-sm text-stone-400 line-through ml-2">₹700</span>
+            </div>
+            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 transition">Get Combo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const menuItems = [
+    { name: "Signature Espresso", category: "coffee", price: 180, image: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8c2lnbmF0dXJlJTIwZXNwcmVzc28lMjBjdXB8ZW58MXx8fHwxNzk1MDg0NTcxfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Rich and bold single-origin espresso shot crafted with precision by our lead barista Meera." },
+    { name: "Cold Brew", category: "coffee", price: 220, image: "https://images.unsplash.com/photo-1660924770022-a0b64016fc24?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NXx8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Slow-steeped for 18 hours to achieve a remarkably smooth, refreshing profile with chocolate notes." },
+    { name: "Creamy Alfredo Pasta", category: "pasta", price: 450, image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8Y3JlYW15JTIwYWxmcmVkbyUyMHBhc3RhfGVufDF8fHx8MTc5NTA4NDU3Mnww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Handcrafted fettuccine tossed in a rich, velvety parmesan and garlic cream sauce by Chef Rajesh." },
+    { name: "Arrabbiata Pasta", category: "pasta", price: 420, image: "https://images.unsplash.com/photo-1660924769951-e893972473d5?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Nnx8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Fresh penne pasta in a fiery, garlic-infused tomato sauce with chili flakes and fresh basil." },
+    { name: "Garlic Basil Pasta", category: "pasta", price: 480, image: "https://images.unsplash.com/photo-1759220928266-7aa45a5aeca0?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8N3x8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Handmade pasta coated in a vibrant, fragrant house-made pesto and roasted garlic reduction." },
+    { name: "Tiramisu Slice", category: "dessert", price: 290, image: "https://images.unsplash.com/photo-1650431980181-8f4f671ed785?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8OHx8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80", desc: "Traditional Italian mascarpone layered with espresso-soaked ladyfingers and fine cocoa." }
+  ];
+
+  function renderMenu(category) {
+    const grid = document.getElementById('menu-grid');
+    if (!grid) return;
+    
+    const filtered = category === 'all' 
+      ? menuItems 
+      : menuItems.filter(item => item.category === category);
+      
+    grid.innerHTML = filtered.map(item => `
+      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col justify-between border border-stone-100">
+        <div>
+          <img loading="lazy" decoding="async" src="${item.image}" alt="${item.name}" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">${item.name}</h3>
+              <span class="text-amber-600 font-display font-bold text-lg">₹${item.price}</span>
+            </div>
+            <p class="text-stone-600 text-sm leading-relaxed">${item.desc}</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="pricing.html" class="w-full block text-center py-2.5 rounded-xl bg-stone-100 hover:bg-amber-600 hover:text-white text-stone-800 text-sm font-medium transition">Order Item</a>
+        </div>
+      </div>
+    `).join('');
+    
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+
+  function filterMenu(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.className = "px-4 py-2 rounded-xl bg-amber-600 text-white text-sm font-medium transition filter-btn active";
+      } else {
+        btn.className = "px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn";
+      }
+    });
+    renderMenu(category);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderMenu('all');
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Mysore Cafe</p><p class="mt-3 text-sm text-slate-400">Authentic brews and handcrafted pasta in the heart of the city.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="menu.html" class="hover:text-white">Products / Menu</a><a href="pricing.html" class="hover:text-white">Pricing</a><a href="gallery.html" class="hover:text-white">Gallery</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9am-9pm, Sun 10am-6pm</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@mysorecafe.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Mysore Cafe. All rights reserved.</div>
+</footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
