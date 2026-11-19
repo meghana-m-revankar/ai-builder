@@ -14,19 +14,19 @@ Applies to the Static Site agent and any HTML/CSS/JS output.
 | **Bootstrap** | Bootstrap 5.3.3 CSS + JS bundle (links below) | Bootstrap components and utilities + `css/style.css` for brand tokens (`--bs-primary` etc.) and custom components |
 | **Plain CSS** | Nothing | Hand-written `css/style.css` with design tokens, a grid system, and component classes (BEM naming: `.card`, `.card__title`, `.card--featured`) |
 
-All three choices use the same fonts, the icon pack chosen in the brief (see 01 Design System → Icons) and the same colour tokens.
+All three choices use the same fonts, Lucide icons (see 01 Design System → Icons) and the same colour tokens.
 
 ## Allowed external resources (exact URLs, nothing else)
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-<!-- plus the ONE icon pack link from 01 Design System → Icons -->
+<!-- plus the Lucide script from 01 Design System → Icons -->
 <!-- Bootstrap only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 ```
-- MUST include the Google Fonts link and the chosen icon pack on every page, whatever the framework.
+- MUST include the Google Fonts link and the Lucide script on every page, whatever the framework.
 - Images: the URLs in the brief's **Image Library** first, then `https://picsum.photos` as fallback, `https://i.pravatar.cc` for avatars, and the client's own "Logo URL". See 01 Design System → Imagery.
 - No jQuery, no other libraries. Charts: inline SVG or CSS.
 
@@ -51,7 +51,7 @@ site/
 ## Minimum content (MUST)
 - **Landing / marketing home**: at least 8 sections: navbar, hero (headline, sub-headline, 2 buttons, hero image), trust/stats strip, features or services (6 cards with icons), products or showcase (from data.js, with images and prices), how it works (3-4 steps), testimonials (3+, with avatars and star ratings), FAQ accordion (5+), CTA band, footer (logo, 3-4 link columns, contact, social icons).
 - **App / dashboard home**: sidebar, top bar, 4 KPI cards with icons and trend badges, a chart (SVG), a recent-activity table (10+ rows), a quick-actions card.
-- Every page: at least 15 icons from the chosen pack used meaningfully, at least 3 images on marketing pages.
+- Every page: at least 15 Lucide icons used meaningfully, at least 3 images on marketing pages.
 - At least one Dribbble-style pattern per page (bento grid, floating chips over an image, HTML/CSS product mockup). See 01 Design System → Design inspiration.
 - `index.html` is typically 15-30 KB; `style.css` 6-15 KB; `app.js` 4-10 KB. A 2 KB page means content is missing.
 
@@ -76,8 +76,9 @@ site/
 Use 09 Site Template as the starting point and adapt it to the project, brand and framework. Keep its structure and quality level; replace all content.
 
 ## Before you answer, check
-- [ ] Google Fonts and the chosen icon pack on every page; only that one pack used
+- [ ] Google Fonts and Lucide on every page; no other icon pack used
 - [ ] Zero `style="` and zero `onclick=` in the HTML
 - [ ] Minimum sections present, data rendered from data.js, images and icons used
 - [ ] All files inside `site/`, relative paths only
 - [ ] Looks finished at 375px and 1440px
+- [ ] Page numbers (`data-page`), section numbers (`data-section`) and `site/pages.json` present, per 14 Page and Section Numbers

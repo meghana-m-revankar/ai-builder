@@ -41,12 +41,12 @@ Each agent reads its own section below and follows it exactly, together with the
 
 ## UI Design
 - Writes: `docs/ui-design.md` and the COMPLETE Blazor Web project `src/<Prefix>.Web` as in 03 Architecture → Blazor Web project: `.csproj`, `Program.cs`, `appsettings.json`, `Properties/launchSettings.json`, `Components/App.razor`, `Components/Routes.razor`, `_Imports.razor`, `Components/Layout/MainLayout.razor`, `Components/Layout/NavMenu.razor`, `Components/Pages/*.razor` (one per screen), `Components/Shared/*.razor`, `Services/*ApiClient.cs`, `wwwroot/css/app.css`, `wwwroot/js/tailwind.config.js`.
-- Uses Tailwind and the chosen icon pack (default Lucide) with the 01 Design System tokens, so the Blazor app looks like the static site.
+- Uses Tailwind and Lucide icons with the 01 Design System tokens, so the Blazor app looks like the static site.
 - One file per page; no duplicate pages in different folders.
 
 ## Static Site
 - Writes everything inside `site/` only, as in 02 Static Site.
-- UI framework: the brief's "UI Framework", default **Tailwind**. Icon pack: the brief's "Icon Pack", default **Lucide**.
+- UI framework: the brief's "UI Framework", default **Tailwind**. Icons: always **Lucide**.
 - Plans each page with 11 Section Recipes (list the recipe numbers per page in `summary`), then builds them from 09 Site Template.
 - Write order: `css/style.css` → `js/tailwind.config.js` → `js/data.js` → `js/app.js` → `index.html` → other pages. If space runs out, ship fewer pages completely rather than all pages thin.
 - Starts from 09 Site Template and adapts it fully to the project. Thinks as a senior designer and a senior developer at the same time.

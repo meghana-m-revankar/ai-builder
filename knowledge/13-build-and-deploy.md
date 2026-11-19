@@ -6,9 +6,9 @@ Every project is built with `dotnet publish` inside Docker and must start on the
 1. **Every file starts with its `using` lines.** Never rely on a using from another file. Typical ones:
    - EF Core methods (`AnyAsync`, `ToListAsync`, `FirstOrDefaultAsync`, `Include`, `AsNoTracking`, `ExecuteSqlRawAsync`, `FromSqlRaw`) → `using Microsoft.EntityFrameworkCore;`
    - `IConfiguration` → `using Microsoft.Extensions.Configuration;`; `IServiceCollection` → `using Microsoft.Extensions.DependencyInjection;`; `ILogger<T>` → `using Microsoft.Extensions.Logging;`
-   - Npgsql → `using Npgsql;`; Dapper → `using Dapper;`; `[ApiController]` → `using Microsoft.AspNetCore.Mvc;`; `[Authorize]` → `using Microsoft.AspNetCore.Authorization;`
+   - MySqlConnector → `using MySqlConnector;`; Dapper → `using Dapper;`; `[ApiController]` → `using Microsoft.AspNetCore.Mvc;`; `[Authorize]` → `using Microsoft.AspNetCore.Authorization;`
 2. **Every type you use must exist.** If you reference a class, interface, DTO, enum or method, you must write it in this run or it must be in the Architect's file list. No `// TODO: implement` methods that other code calls; write a simple working body instead.
-3. **Every NuGet package you use must be in that project's `.csproj`**, with a fixed version for .NET 8 (e.g. `Microsoft.EntityFrameworkCore` 8.0.10, `Npgsql.EntityFrameworkCore.PostgreSQL` 8.0.10, `Npgsql` 8.0.5, `Dapper` 2.1.35, `Swashbuckle.AspNetCore` 6.5.0, `FluentValidation` 11.9.0, `Microsoft.AspNetCore.Authentication.JwtBearer` 8.0.10, `BCrypt.Net-Next` 4.0.3). Never use a package version above 8.x for Microsoft packages.
+3. **Every NuGet package you use must be in that project's `.csproj`**, with a fixed version for .NET 8 (e.g. `Microsoft.EntityFrameworkCore` 8.0.10, `Pomelo.EntityFrameworkCore.MySql` 8.0.2, `MySqlConnector` 2.3.7, `Dapper` 2.1.35, `Swashbuckle.AspNetCore` 6.5.0, `FluentValidation` 11.9.0, `Microsoft.AspNetCore.Authentication.JwtBearer` 8.0.10, `BCrypt.Net-Next` 4.0.3). Never use a package version above 8.x for Microsoft packages.
 4. **Project references follow the layers**: Domain → nothing; Application → Domain; Infrastructure → Application + Domain; Api → Application + Infrastructure; Web → Application (+ Domain). Never Domain → Infrastructure.
 5. Namespaces match folders: `<Prefix>.<Layer>.<Folder>`. One public type per file, file name = type name.
 6. `async` methods return `Task`/`Task<T>` and take a `CancellationToken ct = default` as the last parameter. Never `async void`.
@@ -25,9 +25,9 @@ Every project is built with `dotnet publish` inside Docker and must start on the
 6. CORS: allow any origin in the API for the demo (`AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()`).
 7. If the database is not reachable at start, the app must still start (log the error; do not crash in `Program.cs`). Retry DB calls in the seeder up to 5 times with a 3-second wait.
 
-## C. SQL that runs on PostgreSQL 16
+## C. SQL that runs on MySQL 8
 1. Files: `db/schema.sql` → `db/procedures.sql` → `db/seed.sql`, run in that order. Each must run on an empty database without errors.
-2. `CREATE TABLE IF NOT EXISTS`, `CREATE OR REPLACE FUNCTION/PROCEDURE`, `snake_case` names, every column used in procedures and seed must exist in schema with the **same name**.
+2. `CREATE TABLE IF NOT EXISTS`, `DROP PROCEDURE IF EXISTS` before each `CREATE PROCEDURE` (inside `DELIMITER $$`), `snake_case` names, every column used in procedures and seed must exist in schema with the **same name**.
 3. Create tables in dependency order (parents before children). Insert seed data in the same order.
 4. Quote nothing that does not need quoting; never use reserved words (`user`, `order`, `group`) as table names: use `users`, `orders`, `user_groups`.
 5. Seed with explicit columns: `INSERT INTO products (id, name_en, ...) VALUES (...)`. Text with apostrophes doubles them (`'Chef''s choice'`).

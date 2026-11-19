@@ -8,7 +8,7 @@ The pipeline runs `tools/check_project.py <project-folder>` after the agents fin
 | Size | `index.html` >= 15 KB, `css/style.css` >= 6 KB, `js/app.js` >= 4 KB, `js/data.js` >= 2 KB |
 | Pages | >= 3 HTML pages; every page has `<title>`, `meta description`, one `<h1>` |
 | Sections | `index.html` has >= 8 `<section>` (or header/footer + 8 sections) |
-| Icons | >= 15 icon uses per page; exactly ONE icon pack loaded |
+| Icons | >= 15 icon uses per page; Lucide only, no other icon pack loaded |
 | Images | >= 3 `<img>` (or image URLs in data.js) on marketing pages |
 | Forbidden | no `style="`, `onclick=`, `href="#"`, `lorem`, `Feature 1`, `#0D6EFD` |
 | Links | every relative `href`/`src` points to a file that exists |

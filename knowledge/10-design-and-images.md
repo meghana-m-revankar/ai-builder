@@ -11,7 +11,7 @@
 - Dark mode: toggle the "dark" class on <html>, use dark: variants, and remember the choice.
 - Design: one accent colour, plenty of white space, rounded-2xl cards, soft shadows,
   readable text sizes, hover and focus states on every button and link.
-- Icons: use the Icon Pack chosen in the request. For Lucide load
+- Icons: always Lucide (no other pack). Load
   https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js and call lucide.createIcons().
 
 ## Images

@@ -51,41 +51,36 @@ Design as if the page will be posted as a top shot on Dribbble. Use these curren
 - Uppercase labels: 0.75rem, weight 600, letter-spacing 0.08em.
 
 ## Icons
-Use the pack from the "Icon Pack" field of the brief (default **Lucide**). Use exactly one pack per project. Never mix packs. Never use emoji as icons.
+**Always use Lucide. It is the only icon pack.** Ignore any "Icon Pack" value in a brief. Never load or use Phosphor, Boxicons, Bootstrap Icons, Font Awesome or any other pack, and never use emoji as icons.
 
-| Pack | Load (exact) | Usage |
-|---|---|---|
-| **Lucide** (default) | `<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>` | `<i data-lucide="calendar"></i>`; call `lucide.createIcons()` in `app.js` after every render |
-| **Phosphor** | `<link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">` (+ `.../src/fill/style.css` if filled icons are used) | `<i class="ph ph-calendar"></i>`, filled: `<i class="ph-fill ph-star"></i>` |
-| **Boxicons** | `<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">` | `<i class="bx bx-calendar"></i>`, solid `bxs-`, brands `bxl-` |
-| **Bootstrap Icons** | `<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">` | `<i class="bi bi-calendar3"></i>` |
+- Static sites: `<script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>`; write icons as `<i data-lucide="calendar"></i>` and call `lucide.createIcons()` in `app.js` after every render.
+- Blazor apps: load the same script in `App.razor` and call `lucide.createIcons()` after render.
 
-Common icons in each pack:
-| Meaning | Lucide | Phosphor | Boxicons | Bootstrap |
-|---|---|---|---|---|
-| Dashboard | layout-dashboard | ph-squares-four | bx-grid-alt | bi-grid-1x2 |
-| Users | users | ph-users | bx-group | bi-people |
-| Calendar | calendar | ph-calendar | bx-calendar | bi-calendar3 |
-| Settings | settings | ph-gear | bx-cog | bi-gear |
-| Money | banknote | ph-money | bx-money | bi-cash-stack |
-| Cart / order | shopping-bag | ph-shopping-bag | bx-shopping-bag | bi-bag-check |
-| Success | circle-check | ph-check-circle | bx-check-circle | bi-check-circle |
-| Warning | triangle-alert | ph-warning | bx-error | bi-exclamation-triangle |
-| Delete | trash-2 | ph-trash | bx-trash | bi-trash3 |
-| Edit | square-pen | ph-pencil-simple | bx-edit | bi-pencil-square |
-| Search | search | ph-magnifying-glass | bx-search | bi-search |
-| Star | star | ph-star | bxs-star | bi-star-fill |
-| Time | clock | ph-clock | bx-time | bi-clock |
-| Phone | phone | ph-phone | bx-phone | bi-telephone |
-| Location | map-pin | ph-map-pin | bx-map | bi-geo-alt |
-| Menu | menu | ph-list | bx-menu | bi-list |
-| Arrow | arrow-right | ph-arrow-right | bx-right-arrow-alt | bi-arrow-right |
-| Instagram | instagram | ph-instagram-logo | bxl-instagram | bi-instagram |
+Common Lucide icon names:
+| Meaning | Lucide name |
+|---|---|
+| Dashboard | layout-dashboard |
+| Users | users |
+| Calendar | calendar |
+| Settings | settings |
+| Money | banknote |
+| Cart / order | shopping-bag |
+| Success | circle-check |
+| Warning | triangle-alert |
+| Delete | trash-2 |
+| Edit | square-pen |
+| Search | search |
+| Star | star |
+| Time | clock |
+| Phone | phone |
+| Location | map-pin |
+| Menu | menu |
+| Arrow | arrow-right |
+| Instagram | instagram |
 
-- Size icons with the text (1em) or 20px in buttons, 24-32px in feature cards (Lucide: set `width`/`height` via CSS on `svg.lucide`, `stroke-width: 1.75`).
+- Size icons with the text (1em) or 20px in buttons, 24-32px in feature cards (set `width`/`height` via CSS on `svg.lucide`, `stroke-width: 1.75`).
 - Feature icons sit in a tinted rounded square (48-56px, brand-100 background, brand-700 icon).
 - Every icon-only button has `aria-label`. Decorative icons have `aria-hidden="true"`.
-- The 09 Site Template uses Lucide (`data-lucide="..."`): for another pack, swap the names using the table above.
 
 ## Brand colours from the logo (takes priority)
 - If the brief contains a "Brand Palette" (extracted from the client's logo), build the colour tokens from it:
@@ -164,7 +159,7 @@ Common icons in each pack:
 - Library images are Creative Commons: add a small "Image credits" line in the footer (or a credits section on the About page) listing each used image's `attribution` text.
 - Always style images to fit the brand: `object-fit: cover`, fixed `aspect-ratio`, rounded corners, and a brand-coloured gradient overlay on hero images so text stays readable.
 - Every `<img>` has a descriptive `alt`, `loading="lazy"` (except the hero), and explicit `width` and `height`.
-- Combine photos with inline SVG illustrations, CSS gradient shapes, product mockups built in HTML/CSS, and icons from the chosen pack in tinted circles.
+- Combine photos with inline SVG illustrations, CSS gradient shapes, product mockups built in HTML/CSS, and Lucide icons in tinted circles.
 - Dashboards and app screens use few photos: avatars (initials in coloured circles or `https://i.pravatar.cc/80?u=<name>`), illustrations for empty states.
 
 ## Content

@@ -155,8 +155,7 @@ When the request gives no colours or style, pick by business type:
 | Real estate, finance, legal, B2B | Navy `#1e3a8a` + gold accent | Premium, corporate |
 | Anything else | Indigo `#4f46e5` | Modern, clean |
 
-Fonts are always Plus Jakarta Sans (headings) and Inter (body). Icons are Lucide unless the request
-chooses another pack.
+Fonts are always Plus Jakarta Sans (headings) and Inter (body). Icons are always Lucide, whatever the request says.
 
 ---
 
@@ -167,7 +166,7 @@ Type only this into the form; everything else comes from the defaults above:
 - **Project Name:** `Spice Garden Cafe`
 - **Requirements:** `Website for my cafe.`
 - **Tech Stack:** `Static HTML + CSS + Tailwind`
-- **Icon Pack:** `Lucide`
+- **Icon Pack:** `Lucide` (always; no other pack)
 
 Expected result: 4-5 pages (Home, About, Menu, Contact, plus Booking), sticky header with
 "Book a Table", 4-column footer with the MG Road address, +91 phone, hours and social icons, a

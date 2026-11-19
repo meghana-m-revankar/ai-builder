@@ -12,7 +12,7 @@ src/
   <Project>.Web             Blazor UI (pages, components, view models) - calls Application through the API or directly.
 tests/
   <Project>.UnitTests       Domain + Application
-  <Project>.IntegrationTests API + database (Testcontainers PostgreSQL)
+  <Project>.IntegrationTests API + database (Testcontainers MySQL)
 ```
 
 ## Solution and project files (MUST - the code must open and build in Visual Studio / `dotnet build`)
@@ -97,10 +97,10 @@ src/<Project>.Web/
 **.csproj rules** (SDK-style, minimal; shared settings come from Directory.Build.props):
 - Domain: `<Project Sdk="Microsoft.NET.Sdk">`, no package or project references.
 - Application: references Domain; packages FluentValidation, MediatR (or own handler interfaces).
-- Infrastructure: references Application; packages Npgsql.EntityFrameworkCore.PostgreSQL 8.0.10, EFCore.NamingConventions 8.0.3 (no migrations, see 05 Database).
+- Infrastructure: references Application; packages Pomelo.EntityFrameworkCore.MySql 8.0.2, EFCore.NamingConventions 8.0.3 (no migrations, see 05 Database).
 - Api: `<Project Sdk="Microsoft.NET.Sdk.Web">`, references Application and Infrastructure; packages Swashbuckle.AspNetCore, Serilog.AspNetCore.
 - Web: `<Project Sdk="Microsoft.NET.Sdk.Web">`, references Application (or calls the Api over HTTP).
-- Tests: `<IsPackable>false</IsPackable>`, packages Microsoft.NET.Test.Sdk, xunit, xunit.runner.visualstudio, FluentAssertions, NSubstitute; IntegrationTests also Microsoft.AspNetCore.Mvc.Testing and Testcontainers.PostgreSql.
+- Tests: `<IsPackable>false</IsPackable>`, packages Microsoft.NET.Test.Sdk, xunit, xunit.runner.visualstudio, FluentAssertions, NSubstitute; IntegrationTests also Microsoft.AspNetCore.Mvc.Testing and Testcontainers.MySql.
 - Pin package versions (e.g. `Version="8.0.10"`), never `*`.
 - Every `.cs` file's namespace matches its project and folder; `Program.cs` registers all services, DbContext, the DbSeeder (Development), Swagger, health checks and the exception middleware.
 
