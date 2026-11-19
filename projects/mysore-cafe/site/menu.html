@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#3b82f6','600':'#1e3a8a','700':'#1e40af','800':'#1e3a8a','900':'#1e3a8a'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef2f2','100':'#fee2e2','200':'#fecaca','300':'#fca5a5','400':'#f87171','500':'#ef4444','600':'#dc2626','700':'#b91c1c','800':'#991b1b','900':'#7f1d1d'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="icon" href="images/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
@@ -37,7 +37,7 @@
       <!-- Category Navigation Tabs -->
       <div class="flex flex-wrap justify-center gap-3">
         <a href="index.html" class="px-5 py-2.5 rounded-full bg-white/1:// hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Home</a>
-        <a href="menu.html" class="px-5 py-2.5 rounded-full bg-amber-600 text-white text-sm font-medium shadow-lg transition">Menu</a>
+        <a href="menu.html" class="px-5 py-2.5 rounded-full bg-red-600 text-white text-sm font-medium shadow-lg transition">Menu</a>
         <a href="pricing.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Pricing & Combos</a>
         <a href="gallery.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">Gallery</a>
         <a href="about.html" class="px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-medium backdrop-blur-sm transition">About</a>
@@ -49,11 +49,11 @@
   <section class="py-8 bg-white border-b border-stone-200 sticky top-0 z-30 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center space-x-2">
-        <i data-lucide="filter" class="w-5 h-5 text-amber-600"></i>
+        <i data-lucide="filter" class="w-5 h-5 text-red-600"></i>
         <span class="font-display font-semibold text-stone-900">Filter Menu:</span>
       </div>
       <div class="flex flex-wrap gap-2" id="filter-buttons">
-        <button onclick="filterMenu('all')" class="px-4 py-2 rounded-xl bg-amber-600 text-white text-sm font-medium transition filter-btn active" data-filter="all">All Items</button>
+        <button onclick="filterMenu('all')" class="px-4 py-2 rounded-xl bg-red-600 text-white text-sm font-medium transition filter-btn active" data-filter="all">All Items</button>
         <button onclick="filterMenu('coffee')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="coffee">Coffee & Brews</button>
         <button onclick="filterMenu('pasta')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="pasta">Handcrafted Pasta</button>
         <button onclick="filterMenu('dessert')" class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn" data-filter="dessert">Desserts</button>
@@ -71,19 +71,19 @@
   </section>
 
   <!-- 4. Featured daily special highlighted banner -->
-  <section class="py-12 bg-amber-900 text-white">
+  <section class="py-12 bg-red-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-amber-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 border border-amber-700">
+      <div class="bg-red-800 rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-8 border border-red-700">
         <div class="w-full lg:w-1/2">
           <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1599326838415-8122d96c6159?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8Y2FmZSUyMHBhc3RhJTIwY29mZmVlfGVufDF8fHx8MTc5NTA4NDU3MXww&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Tiramisu Slice Daily Special" class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-md">
         </div>
         <div class="w-full lg:w-1/2 space-y-4">
-          <span class="inline-block px-3 py-1 rounded-full bg-amber-500/30 text-amber-200 text-xs font-semibold tracking-wider uppercase">Chef's Daily Special</span>
+          <span class="inline-block px-3 py-1 rounded-full bg-red-500/30 text-red-200 text-xs font-semibold tracking-wider uppercase">Chef's Daily Special</span>
           <h2 class="text-3xl sm:text-4xl font-display font-bold">Artisanal Tiramisu Slice & Cold Brew Combo</h2>
-          <p class="text-amber-100 text-base">Experience our signature mascarpone tiramisu paired with a refreshing cold brew. Crafted fresh daily by Chef Rajesh and Meera.</p>
+          <p class="text-red-100 text-base">Experience our signature mascarpone tiramisu paired with a refreshing cold brew. Crafted fresh daily by Chef Rajesh and Meera.</p>
           <div class="flex items-center space-x-4 pt-2">
-            <span class="text-2xl font-bold font-display text-white">₹450 <span class="text-sm font-normal text-amber-200 line-through">₹510</span></span>
-            <a href="pricing.html" class="px-6 py-3 rounded-xl bg-white text-amber-900 font-semibold hover:bg-amber-50 transition shadow-lg">Order Special</a>
+            <span class="text-2xl font-bold font-display text-white">₹450 <span class="text-sm font-normal text-red-200 line-through">₹510</span></span>
+            <a href="pricing.html" class="px-6 py-3 rounded-xl bg-white text-red-900 font-semibold hover:bg-red-50 transition shadow-lg">Order Special</a>
           </div>
         </div>
       </div>
@@ -94,14 +94,14 @@
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-amber-600 font-semibold text-sm uppercase tracking-wider">Uncompromising Quality</span>
+        <span class="text-red-600 font-semibold text-sm uppercase tracking-wider">Uncompromising Quality</span>
         <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-2 mb-4">Why Our Ingredients Matter</h2>
         <p class="text-stone-600">Founded by Ananya Rao after returning from Italy, Mysore Cafe brings authentic European techniques together with the finest local Indian produce.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
-          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i data-lucide="wheat" class="w-7 h-7"></i>
           </div>
           <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Durum Wheat Semolina</h3>
@@ -109,7 +109,7 @@
         </div>
 
         <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
-          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i data-lucide="coffee" class="w-7 h-7"></i>
           </div>
           <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Single-Origin Coffee Beans</h3>
@@ -117,7 +117,7 @@
         </div>
 
         <div class="bg-stone-50 p-8 rounded-2xl shadow-sm hover:-translate-y-1 transition text-center">
-          <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+          <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <i data-lucide="sparkles" class="w-7 h-7"></i>
           </div>
           <h3 class="text-xl font-display font-bold text-stone-900 mb-3">Fresh Local Herbs</h3>
@@ -131,7 +131,7 @@
   <section class="py-16 md:py-24 bg-stone-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-amber-600 font-semibold text-sm uppercase tracking-wider">Value Pairings</span>
+        <span class="text-red-600 font-semibold text-sm uppercase tracking-wider">Value Pairings</span>
         <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-2 mb-4">Our Special Combo Deals</h2>
         <p class="text-stone-600">Enjoy our most loved pasta dishes paired with your favorite handcrafted coffee brews at special bundled prices.</p>
       </div>
@@ -150,10 +150,10 @@
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-stone-100">
             <div>
-              <span class="text-2xl font-display font-bold text-amber-600">₹790</span>
+              <span class="text-2xl font-display font-bold text-red-600">₹790</span>
               <span class="text-sm text-stone-400 line-through ml-2">₹890</span>
             </div>
-            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 transition">Get Combo</a>
+            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-red-600 text-white text-sm font-medium hover:bg-red-700 transition">Get Combo</a>
           </div>
         </div>
 
@@ -169,10 +169,10 @@
           </div>
           <div class="flex items-center justify-between pt-4 border-t border-stone-100">
             <div>
-              <span class="text-2xl font-display font-bold text-amber-600">₹620</span>
+              <span class="text-2xl font-display font-bold text-red-600">₹620</span>
               <span class="text-sm text-stone-400 line-through ml-2">₹700</span>
             </div>
-            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-amber-600 text-white text-sm font-medium hover:bg-amber-700 transition">Get Combo</a>
+            <a href="pricing.html" class="px-5 py-2.5 rounded-xl bg-red-600 text-white text-sm font-medium hover:bg-red-700 transition">Get Combo</a>
           </div>
         </div>
       </div>
@@ -205,13 +205,13 @@
           <div class="p-6">
             <div class="flex justify-between items-start mb-2">
               <h3 class="text-xl font-display font-bold text-stone-900">${item.name}</h3>
-              <span class="text-amber-600 font-display font-bold text-lg">₹${item.price}</span>
+              <span class="text-red-600 font-display font-bold text-lg">₹${item.price}</span>
             </div>
             <p class="text-stone-600 text-sm leading-relaxed">${item.desc}</p>
           </div>
         </div>
         <div class="p-6 pt-0">
-          <a href="pricing.html" class="w-full block text-center py-2.5 rounded-xl bg-stone-100 hover:bg-amber-600 hover:text-white text-stone-800 text-sm font-medium transition">Order Item</a>
+          <a href="pricing.html" class="w-full block text-center py-2.5 rounded-xl bg-stone-100 hover:bg-red-600 hover:text-white text-stone-800 text-sm font-medium transition">Order Item</a>
         </div>
       </div>
     `).join('');
@@ -224,7 +224,7 @@
   function filterMenu(category) {
     document.querySelectorAll('.filter-btn').forEach(btn => {
       if (btn.getAttribute('data-filter') === category) {
-        btn.className = "px-4 py-2 rounded-xl bg-amber-600 text-white text-sm font-medium transition filter-btn active";
+        btn.className = "px-4 py-2 rounded-xl bg-red-600 text-white text-sm font-medium transition filter-btn active";
       } else {
         btn.className = "px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 text-sm font-medium transition filter-btn";
       }
