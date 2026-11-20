@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | Boat</title>
+<meta name="description" content="Immersive Sound for the Modern Lifestyle">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef5f0','100':'#fde8dd','200':'#fbd1bb','300':'#f9b08b','400':'#f68950','500':'#f46820','600':'#ea580c','700':'#b34409','800':'#8d3507','900':'#6b2805'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Boat logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a></div>
+</header>
+<main data-page="P3">
+<main class="bg-neutral-950 text-neutral-100 min-h-screen">
+  <!-- 1. Comparison hero highlighting value for money -->
+  <section data-section="S1" class="relative py-20 md:py-32 overflow-hidden border-b border-neutral-800">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/2c638df3-fd3f-4f8d-8d59-b535d3b313ed/thumb/" alt="High-end headphones" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 text-sm font-semibold">
+        <i data-lucide="zap" class="w-4 h-4"></i> Unbeatable Value & Pricing
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+        Premium Sound.<br><span class="text-orange-500">Accessible to Every Indian.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-neutral-400 mb-10">
+        Experience studio-grade acoustics and futuristic design without the luxury markup. Compare our value-driven tiers designed by Sameer Mehta and engineered for modern lifestyles.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#pricing-table" class="px-8 py-4 rounded-xl bg-orange-500 hover:bg-orange-600 text-neutral-950 font-bold transition flex items-center justify-center gap-2">
+          View Pricing Tiers <i data-lucide="arrow-down" class="w-5 h-5"></i>
+        </a>
+        <a href="menu.html" class="px-8 py-4 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold border border-neutral-800 transition flex items-center justify-center gap-2">
+          Browse All Products <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Tiered pricing table for different product ranges -->
+  <section data-section="S2" id="pricing-table" class="py-16 md:py-24 bg-neutral-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-5xl font-bold mb-4">Transparent Pricing Tiers</h2>
+        <p class="text-neutral-400">Choose the audio gear that fits your daily grind. Backed by 8+ years of innovation and 500,000+ happy customers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Tier 1 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col justify-between hover:border-orange-500/50 transition">
+          <div>
+            <div class="text-orange-500 font-semibold text-sm mb-2">ENTRY ESSENTIALS</div>
+            <h3 class="font-display text-2xl font-bold mb-4">Wired & Basic TWS</h3>
+            <p class="text-neutral-400 text-sm mb-6">Perfect for daily commutes and casual listening with durable build quality and punchy bass.</p>
+            <div class="text-3xl font-bold font-display mb-6">₹899 <span class="text-sm font-normal text-neutral-400">onwards</span></div>
+            <ul class="space-y-3 text-sm text-neutral-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Bassheads Wired (₹899)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Airdopes TWS (₹1,999)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> 1-Year Standard Warranty</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Sweat & Water Resistance</li>
+            </ul>
+          </div>
+          <a href="menu.html" class="w-full py-3 rounded-xl bg-neutral-800 hover:bg-orange-500 hover:text-neutral-950 font-semibold text-center transition">Select Entry</a>
+        </div>
+
+        <!-- Tier 2 - Featured -->
+        <div class="bg-neutral-900 border-2 border-orange-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-2xl shadow-orange-500/10">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-neutral-950 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Most Popular</div>
+          <div>
+            <div class="text-orange-500 font-semibold text-sm mb-2">PRO PERFORMANCE</div>
+            <h3 class="font-display text-2xl font-bold mb-4">Wireless & Speakers</h3>
+            <p class="text-neutral-400 text-sm mb-6">Immersive wireless freedom and powerful party speakers engineered for deep bass enthusiasts.</p>
+            <div class="text-3xl font-bold font-display mb-6">₹2,499 <span class="text-sm font-normal text-neutral-400">onwards</span></div>
+            <ul class="space-y-3 text-sm text-neutral-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Rockerz Wireless (₹2,499)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Stone Bluetooth Speaker (₹2,999)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> ASAP Fast Charging Tech</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Dedicated Customer Support</li>
+            </ul>
+          </div>
+          <a href="menu.html" class="w-full py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-neutral-950 font-semibold text-center transition">Select Pro</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col justify-between hover:border-orange-500/50 transition">
+          <div>
+            <div class="text-orange-500 font-semibold text-sm mb-2">ULTIMATE LIFESTYLE</div>
+            <h3 class="font-display text-2xl font-bold mb-4">Wearables & Gaming</h3>
+            <p class="text-neutral-400 text-sm mb-6">Next-gen smartwatches and ultra-precise gaming gear built for peak performance.</p>
+            <div class="text-3xl font-bold font-display mb-6">₹1,299 <span class="text-sm font-normal text-neutral-400">onwards</span></div>
+            <ul class="space-y-3 text-sm text-neutral-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Immortals Gaming Mouse (₹1,299)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Watch Storm Smartwatch (₹3,499)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Health & Fitness Trackers</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-orange-500"></i> Priority VIP Replacement</li>
+            </ul>
+          </div>
+          <a href="menu.html" class="w-full py-3 rounded-xl bg-neutral-800 hover:bg-orange-500 hover:text-neutral-950 font-semibold text-center transition">Select Ultimate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Exclusive bundle packages with discount breakdown -->
+  <section data-section="S3" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="font-display text-3xl sm:text-5xl font-bold mb-4">Exclusive Audio Bundles</h2>
+        <p class="text-neutral-400">Pair your devices and save big with our curated lifestyle bundles designed for maximum synergy.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Bundle 1 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row gap-6 items-center">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/4fdb78a4-277d-48aa-9d0d-f61923620499/thumb/" alt="Audio Bundle" class="w-full md:w-48 h-48 object-cover rounded-xl">
+          <div class="flex-1">
+            <span class="text-xs font-bold text-orange-500 uppercase tracking-wider bg-orange-500/10 px-3 py-1 rounded-full">Save 25%</span>
+            <h3 class="font-display text-2xl font-bold mt-3 mb-2">The Ultimate Gamer Pack</h3>
+            <p class="text-neutral-400 text-sm mb-4">Includes Rockerz Wireless Headphones and Immortals Gaming Mouse for total auditory and tactile dominance.</p>
+            <div class="flex items-center gap-4">
+              <span class="text-2xl font-bold text-orange-500 font-display">₹3,299</span>
+              <span class="text-neutral-500 line-through text-sm">₹3,798</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 2 -->
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex flex-col md:flex-row gap-6 items-center">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/89485905-93fb-4d56-acbc-29f9626af161/thumb/" alt="Fitness Bundle" class="w-full md:w-48 h-48 object-cover rounded-xl">
+          <div class="flex-1">
+            <span class="text-xs font-bold text-orange-500 uppercase tracking-wider bg-orange-500/10 px-3 py-1 rounded-full">Save 30%</span>
+            <h3 class="font-display text-2xl font-bold mt-3 mb-2">Fitness & Groove Kit</h3>
+            <p class="text-neutral-400 text-sm mb-4">Combines Airdopes TWS Earbuds and Watch Storm Smartwatch to track your workouts while blasting bass.</p>
+            <div class="flex items-center gap-4">
+              <span class="text-2xl font-bold text-orange-500 font-display">₹4,499</span>
+              <span class="text-neutral-500 line-through text-sm">₹5,498</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Warranty and support inclusion details -->
+  <section data-section="S4" class="py-16 md:py-24 bg-neutral-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-orange-500 font-semibold text-sm mb-2 block">PEACE OF MIND</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold mb-6">Industry-Leading Warranty & Support</h2>
+          <p class="text-neutral-400 mb-8">
+            Every Boat product is backed by our unwavering commitment to quality. Enjoy seamless replacements, dedicated helplines, and pan-India service coverage.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="p-2 rounded-lg bg-orange-500/10 text-orange-500 mt-1"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-lg">1-Year Comprehensive Warranty</h4>
+                <p class="text-sm text-neutral-400">Covers manufacturing defects and hardware malfunctions with zero hassle.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="p-2 rounded-lg bg-orange-500/10 text-orange-500 mt-1"><i data-lucide="headphones" class="w-6 h-6"></i></div>
+              <div>
+                <h4 class="font-bold text-lg">24/7 Customer Assistance</h4>
+                <p class="text-sm text-neutral-400">Reach out anytime via email at hello@boat.in or call our Bengaluru hub.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-neutral-900 border border-neutral-800 rounded-2xl p-8">
+          <h3 class="font-display text-2xl font-bold mb-6">Visit Our Experience Center</h3>
+          <p class="text-neutral-400 text-sm mb-6">Experience our complete product lineup firsthand at our Bengaluru headquarters.</p>
+          <div class="space-y-4 text-sm text-neutral-300">
+            <div class="flex items-center gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-orange-500"></i> 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru 560001</div>
+            <div class="flex items-center gap-3"><i data-lucide="phone" class="w-5 h-5 text-orange-500"></i> +91 80 4567 8910</div>
+            <div class="flex items-center gap-3"><i data-lucide="clock" class="w-5 h-5 text-orange-500"></i> Mon-Sat: 9:00 AM - 9:00 PM · Sun: 10:00 AM - 6:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Payment methods accepted badges -->
+  <section data-section="S5" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold mb-8">Secure & Flexible Payment Methods</h2>
+      <div class="flex flex-wrap justify-center gap-6 items-center">
+        <div class="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold flex items-center gap-2">
+          <i data-lucide="credit-card" class="w-5 h-5 text-orange-500"></i> Credit / Debit Cards
+        </div>
+        <div class="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold flex items-center gap-2">
+          <i data-lucide="smartphone" class="w-5 h-5 text-orange-500"></i> UPI & Netbanking
+        </div>
+        <div class="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold flex items-center gap-2">
+          <i data-lucide="wallet" class="w-5 h-5 text-orange-500"></i> Digital Wallets
+        </div>
+        <div class="px-6 py-3 rounded-xl bg-neutral-900 border border-neutral-800 text-neutral-300 font-semibold flex items-center gap-2">
+          <i data-lucide="truck" class="w-5 h-5 text-orange-500"></i> Cash on Delivery
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CTA band to shop now -->
+  <section data-section="S6" class="py-20 bg-orange-500 text-neutral-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-5xl font-bold mb-6">Ready to Amplify Your Lifestyle?</h2>
+      <p class="max-w-2xl mx-auto text-lg mb-8 font-medium">Join 500,000+ happy customers enjoying premium immersive sound across India.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="menu.html" class="px-8 py-4 rounded-xl bg-neutral-950 text-white font-bold hover:bg-neutral-900 transition shadow-xl flex items-center justify-center gap-2">
+          Shop Now <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="contact.html" class="px-8 py-4 rounded-xl bg-orange-600 text-neutral-950 font-bold hover:bg-orange-700 transition border border-orange-700 flex items-center justify-center gap-2">
+          Contact Us <i data-lucide="mail" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Boat</p><p class="mt-3 text-sm text-slate-400">Immersive Sound for the Modern Lifestyle</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="menu.html" class="hover:text-white">Products</a><a href="pricing.html" class="hover:text-white">Pricing</a><a href="gallery.html" class="hover:text-white">Gallery</a><a href="contact.html" class="hover:text-white">Contact</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@boat.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Boat. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P3</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
