@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home | Skill Up</title>
-<meta name="description" content="Empowering youth through accessible vocational training and mentorship.">
+<meta name="description" content="Master the art of digital growth and coding.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f4f8f6','100':'#e6f1ec','200':'#cbe3d9','300':'#a2cca0','400':'#73b070','500':'#489146','600':'#367335','700':'#2d5c2d','800':'#264a26','900':'#213d21'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eff6ff','100':'#dbeafe','200':'#bfdbfe','300':'#93c5fd','400':'#60a5fa','500':'#3b82f6','600':'#2563eb','700':'#1d4ed8','800':'#1e40af','900':'#1e3a8a'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
 <link rel="icon" href="images/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
@@ -16,250 +16,217 @@
 <header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
     <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Skill Up logo" class="h-10 w-auto"></a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking / Appointment</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Team</a></nav>
-    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking / Appointment</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Team</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a></div>
 </header>
 <main data-page="P1">
 <main>
-  <!-- 1. Hero Section -->
-  <section data-section="S1" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <!-- 1. Full-bleed hero banner -->
+  <section data-section="S1" class="relative min-h-[85vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Youth learning vocational skills at Skill Up Bengaluru" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Students learning digital growth and coding" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/60 to-transparent"></div>
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-24">
-      <div class="inline-flex items-center gap-2 bg-brand-600/90 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-        <i data-lucide="trending-up" class="w-4 h-4"></i> Empowering Youth Through Vocational Training
-      </div>
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl mx-auto">
-        Bridge the Digital Divide and Build Your Future
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/20 text-brand-300 text-sm font-semibold mb-6 backdrop-blur-sm border border-brand-500/30">
+        <i data-lucide="zap" class="w-4 h-4"></i> Empowering Digital Careers Since 2016
+      </span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl mx-auto mb-6">
+        Master the Art of <span class="text-brand-400">Digital Growth</span> & Coding
       </h1>
-      <p class="text-lg sm:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-        Gain industry-ready skills with expert mentorship, hands-on coding bootcamps, and professional career counseling right in the heart of Bengaluru.
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+        Bridge the gap between technology and marketing with industry-leading courses designed to fast-track your career.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="booking.html" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
-          <i data-lucide="calendar" class="w-5 h-5"></i> Book a Session
+        <a href="services.html" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+          Explore Courses <i data-lucide="arrow-right" class="w-5 h-5"></i>
         </a>
-        <a href="services.html" class="bg-white/10 hover:bg-white/20 backdrop-blur text-white font-semibold px-8 py-4 rounded-xl border border-white/30 transition flex items-center justify-center gap-2">
-          <i data-lucide="book-open" class="w-5 h-5"></i> Explore Programs
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-sm border border-white/20 transition">
+          Book Free Demo
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 2. Impact Statistics Strip -->
-  <section data-section="S2" class="bg-brand-900 text-white py-12">
+  <!-- 2. Stats strip -->
+  <section data-section="S2" class="bg-brand-900 border-t border-brand-800 text-white py-12">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-          <div class="text-4xl sm:text-5xl font-bold font-display text-brand-300 mb-2">15,000+</div>
-          <p class="text-gray-300 text-lg">Students Trained & Certified</p>
+        <div class="p-6 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-4xl lg:text-5xl font-display font-bold text-brand-400 mb-2">15,000+</div>
+          <div class="text-gray-300 font-medium">Students Trained</div>
         </div>
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-          <div class="text-4xl sm:text-5xl font-bold font-display text-brand-300 mb-2">95%</div>
-          <p class="text-gray-300 text-lg">Job Placement Rate</p>
+        <div class="p-6 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-4xl lg:text-5xl font-display font-bold text-brand-400 mb-2">95%</div>
+          <div class="text-gray-300 font-medium">Placement Rate</div>
         </div>
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-          <div class="text-4xl sm:text-5xl font-bold font-display text-brand-300 mb-2">8+ Years</div>
-          <p class="text-gray-300 text-lg">Of Transformative Impact</p>
+        <div class="p-6 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-4xl lg:text-5xl font-display font-bold text-brand-400 mb-2">8+ Years</div>
+          <div class="text-gray-300 font-medium">Of Excellence</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. Founder's Vision -->
-  <section data-section="S3" class="py-16 md:py-24 bg-white">
+  <!-- 3. About preview section -->
+  <section data-section="S3" class="py-16 md:py-24 bg-white text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row items-center gap-12">
         <div class="w-full lg:w-1/2">
-          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Ananya Rao founder of Skill Up" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Founder Ananya Rao" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
         </div>
         <div class="w-full lg:w-1/2">
-          <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Founder's Vision</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6">
-            Bridging the Gap Between Education and Employment
-          </h2>
-          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-            Founded by Ananya Rao, a dedicated social entrepreneur, Skill Up was built on the belief that every young mind deserves access to quality vocational training regardless of their background. We combine practical technical skills with compassionate mentorship to foster absolute self-reliance.
+          <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Our Story</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-6">Bridging the gap between coding and marketing</h2>
+          <p class="text-gray-600 text-lg mb-6">
+            Founded in 2016 by Ananya Rao—a former lead developer turned growth hacker—Skill Up was born out of a simple realization: modern digital success requires a hybrid skill set. You can't just code a product; you need to market it effectively.
           </p>
-          <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
-            <img loading="lazy" decoding="async" src="https://i.pravatar.cc/120?img=32" alt="Ananya Rao" class="w-14 h-14 rounded-full object-cover">
-            <div>
-              <h4 class="font-bold text-gray-900 text-lg">Ananya Rao</h4>
-              <p class="text-brand-600 text-sm">Founder & Executive Director</p>
+          <p class="text-gray-600 mb-8">
+            Located in the heart of Bengaluru's tech district, our expert mentors bring real-world industry experience directly to the classroom, ensuring every graduate is job-ready from day one.
+          </p>
+          <a href="about.html" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700">
+            Learn more about our team <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured courses grid -->
+  <section data-section="S4" class="py-16 md:py-24 bg-gray-50 text-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Top Learning Paths</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold mt-2 mb-4">Featured Courses</h2>
+        <p class="text-gray-600 text-lg">Accelerate your career with our most popular industry-aligned programs.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Full Stack Dev" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-600 rounded-full">Development</span>
+              <span class="font-bold text-brand-600">₹45,000</span>
             </div>
+            <h3 class="font-display text-xl font-bold mb-2">Full Stack Dev</h3>
+            <p class="text-gray-600 text-sm mb-4">Master front-end and back-end technologies to build scalable web applications from scratch.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">View Curriculum <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="SEO Mastery" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-600 rounded-full">Marketing</span>
+              <span class="font-bold text-brand-600">₹15,000</span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">SEO Mastery</h3>
+            <p class="text-gray-600 text-sm mb-4">Learn advanced search engine optimization techniques to drive organic traffic and dominate search results.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">View Curriculum <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Growth Hacking" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold px-3 py-1 bg-brand-50 text-brand-600 rounded-full">Strategy</span>
+              <span class="font-bold text-brand-600">₹20,000</span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-2">Growth Hacking</h3>
+            <p class="text-gray-600 text-sm mb-4">Discover data-driven tactics and rapid experimentation strategies to scale user acquisition exponentially.</p>
+            <a href="services.html" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-600 hover:text-brand-700">View Curriculum <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. Featured Training Programs Grid -->
-  <section data-section="S4" class="py-16 md:py-24 bg-gray-50">
+  <!-- 5. Why choose us feature cards -->
+  <section data-section="S5" class="py-16 md:py-24 bg-white text-gray-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Our Offerings</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">
-          Featured Vocational Training Programs
-        </h2>
-        <p class="text-gray-600 text-lg">
-          Choose from our expertly crafted courses designed to equip you with modern digital and professional capabilities.
-        </p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Program 1 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Digital Literacy" class="w-full h-52 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-center mb-3">
-                <span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">Beginner Friendly</span>
-                <span class="font-display font-bold text-xl text-gray-900">₹499</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Digital Literacy</h3>
-              <p class="text-gray-600 text-sm mb-4">Master essential computer operations, internet navigation, and workplace productivity software to unlock modern employment opportunities.</p>
-            </div>
-          </div>
-          <div class="p-6 pt-0">
-            <a href="services.html" class="block w-full text-center bg-gray-100 hover:bg-brand-600 hover:text-white text-gray-800 font-semibold py-3 rounded-xl transition">Learn More</a>
-          </div>
-        </div>
-        <!-- Program 2 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Coding Bootcamp" class="w-full h-52 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-center mb-3">
-                <span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">High Demand</span>
-                <span class="font-display font-bold text-xl text-gray-900">₹2,499</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Coding Bootcamp</h3>
-              <p class="text-gray-600 text-sm mb-4">Dive deep into full-stack web development with hands-on projects, real-world coding challenges, and dedicated mentor code reviews.</p>
-            </div>
-          </div>
-          <div class="p-6 pt-0">
-            <a href="services.html" class="block w-full text-center bg-gray-100 hover:bg-brand-600 hover:text-white text-gray-800 font-semibold py-3 rounded-xl transition">Learn More</a>
-          </div>
-        </div>
-        <!-- Program 3 -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
-          <div>
-            <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Graphic Design" class="w-full h-52 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-center mb-3">
-                <span class="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full">Creative Track</span>
-                <span class="font-display font-bold text-xl text-gray-900">₹1,999</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-gray-900 mb-2">Graphic Design</h3>
-              <p class="text-gray-600 text-sm mb-4">Learn industry-standard design tools, typography principles, and branding strategies to launch your career as a professional visual artist.</p>
-            </div>
-          </div>
-          <div class="p-6 pt-0">
-            <a href="services.html" class="block w-full text-center bg-gray-100 hover:bg-brand-600 hover:text-white text-gray-800 font-semibold py-3 rounded-xl transition">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="text-center mt-12">
-        <a href="services.html" class="inline-flex items-center gap-2 font-semibold text-brand-600 hover:text-brand-700 text-lg">
-          View All Programs & Services <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Why Skill Up: Core Values and Benefits -->
-  <section data-section="S5" class="py-16 md:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Why Choose Us</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">
-          Built for Your Career Growth
-        </h2>
-        <p class="text-gray-600 text-lg">
-          We provide an inclusive ecosystem designed to nurture talent and ensure tangible employment outcomes.
-        </p>
+        <span class="text-brand-600 font-semibold text-sm tracking-wider uppercase">Why Skill Up</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold mt-2 mb-4">Built For Your Success</h2>
+        <p class="text-gray-600 text-lg">Discover what sets our training programs apart from standard bootcamps.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100">
-          <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
+        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
             <i data-lucide="users" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Expert Mentorship</h3>
-          <p class="text-gray-600">Learn directly from seasoned industry professionals who provide personalized guidance and career counseling every step of the way.</p>
+          <h3 class="font-display text-xl font-bold mb-3">Expert Mentors</h3>
+          <p class="text-gray-600">Learn directly from seasoned industry professionals like Vikram and Priya who bring years of practical experience.</p>
         </div>
-        <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100">
-          <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
+        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
             <i data-lucide="briefcase" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Guaranteed Placements</h3>
-          <p class="text-gray-600">Our dedicated placement cell partners with top employers across Bengaluru to secure rewarding job opportunities for our graduates.</p>
+          <h3 class="font-display text-xl font-bold mb-3">Guaranteed Placements</h3>
+          <p class="text-gray-600">Take advantage of our robust network of hiring partners, achieving an impressive 95% overall placement rate.</p>
         </div>
-        <div class="p-8 rounded-2xl bg-brand-50/50 border border-brand-100">
-          <div class="w-12 h-12 bg-brand-600 text-white rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="award" class="w-6 h-6"></i>
+        <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6">
+            <i data-lucide="code" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Affordable Training</h3>
-          <p class="text-gray-600">We keep our course fees accessible with transparent pricing models, ensuring financial constraints never limit potential.</p>
+          <h3 class="font-display text-xl font-bold mb-3">Hands-on Projects</h3>
+          <p class="text-gray-600">Build a comprehensive portfolio using real-world case studies and live coding environments from day one.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. Step-by-Step Enrollment Process -->
-  <section data-section="S6" class="py-16 md:py-24 bg-gray-50">
+  <!-- 6. How it works 3-step enrollment process -->
+  <section data-section="S6" class="py-16 md:py-24 bg-brand-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Getting Started</span>
-        <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">
-          Your Journey in 3 Simple Steps
-        </h2>
-        <p class="text-gray-600 text-lg">
-          Embarking on your path to professional success is quick and straightforward.
-        </p>
+        <span class="text-brand-400 font-semibold text-sm tracking-wider uppercase">Simple Process</span>
+        <h2 class="font-display text-3xl sm:text-5xl font-bold mt-2 mb-4">How It Works</h2>
+        <p class="text-gray-300 text-lg">Get started on your digital transformation journey in three easy steps.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-2xl shadow-md relative">
-          <div class="absolute -top-4 left-8 bg-brand-600 text-white w-10 h-10 rounded-xl font-display font-bold flex items-center justify-center text-lg">1</div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mt-4 mb-3">Browse & Choose</h3>
-          <p class="text-gray-600">Explore our diverse range of vocational programs and select the course that aligns best with your career aspirations.</p>
+        <div class="relative p-8 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-brand-400 font-display font-bold text-4xl mb-4">01</div>
+          <h3 class="font-display text-xl font-bold mb-3">Choose Your Path</h3>
+          <p class="text-gray-300">Browse our comprehensive selection of coding and growth marketing courses tailored to your goals.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md relative">
-          <div class="absolute -top-4 left-8 bg-brand-600 text-white w-10 h-10 rounded-xl font-display font-bold flex items-center justify-center text-lg">2</div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mt-4 mb-3">Book a Consultation</h3>
-          <p class="text-gray-600">Schedule a free counseling session with our mentorship leads to map out your personalized learning roadmap.</p>
+        <div class="relative p-8 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-brand-400 font-display font-bold text-4xl mb-4">02</div>
+          <h3 class="font-display text-xl font-bold mb-3">Learn & Build</h3>
+          <p class="text-gray-300">Engage in interactive classes, live coding sessions, and practical workshops led by expert instructors.</p>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-md relative">
-          <div class="absolute -top-4 left-8 bg-brand-600 text-white w-10 h-10 rounded-xl font-display font-bold flex items-center justify-center text-lg">3</div>
-          <h3 class="font-display font-bold text-xl text-gray-900 mt-4 mb-3">Start Learning</h3>
-          <p class="text-gray-600">Join our classes at our Bengaluru center, engage with expert trainers, and transform your future starting today.</p>
+        <div class="relative p-8 rounded-2xl bg-brand-800/50 border border-brand-700/50">
+          <div class="text-brand-400 font-display font-bold text-4xl mb-4">03</div>
+          <h3 class="font-display text-xl font-bold mb-3">Get Hired</h3>
+          <p class="text-gray-300">Leverage our placement cell, resume reviews, and interview prep to secure your dream role.</p>
         </div>
       </div>
-      <div class="mt-12 text-center">
-        <a href="booking.html" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg transition">
-          Book Your Consultation Now
-        </a>
-      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section data-section="S7" class="py-16 bg-brand-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to elevate your digital career?</h2>
+      <p class="text-brand-100 text-lg max-w-2xl mx-auto mb-8">Join over 15,000 successful alumni who transformed their careers with Skill Up.</p>
+      <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-white text-brand-900 hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl shadow-lg transition">
+        Get Started Today <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
     </div>
   </section>
 </main>
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  });
+  // Lucide icons are initialized globally by the wrapper layout.
 </script>
 </main>
 <footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Skill Up</p><p class="mt-3 text-sm text-slate-400">Empowering youth through accessible vocational training and mentorship.</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="booking.html" class="hover:text-white">Booking / Appointment</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Our Team</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9 AM-9 PM, Sun 10 AM-6 PM</p></div>
-    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@skillup.in</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">Skill Up</p><p class="mt-3 text-sm text-slate-400">Master the art of digital growth and coding.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About</a><a href="services.html" class="hover:text-white">Services</a><a href="contact.html" class="hover:text-white">Contact</a><a href="pricing.html" class="hover:text-white">Pricing</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@skill-up.in</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Skill Up. All rights reserved.</div>
 <div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P1</div></footer>

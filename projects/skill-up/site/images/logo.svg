@@ -1,29 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" height="56">
-  <defs>
-    <style>
-      .brand-text {
-        font-family: "Plus Jakarta Sans", Arial, sans-serif;
-        font-weight: 800;
-        font-size: 22px;
-        fill: #0f172a;
-      }
-    </style>
-  </defs>
-
-  <!-- Icon: Geometric upward-stepping growth / progress integrated with a leaf/growth motif (NGO + Skill Up) -->
-  <g transform="translate(6, 4)">
-    <!-- Base block / foundation -->
-    <path d="M4 36h12v8H4z" fill="#367335" rx="2" />
-    <!-- Mid step -->
-    <path d="M18 24h12v20H18z" fill="#367335" rx="2" />
-    <!-- High step / Upward leaf shape -->
-    <path d="M32 10h12v34H32z" fill="#367335" rx="2" />
-    <!-- Upward Arrow / Growth sprout overlay -->
-    <path d="M38 2L24 16h8v8h12v-8h8z" fill="#367335" />
-    <!-- Subtract/clean up arrow inner space for modern icon look -->
-    <path d="M38 6L46 14h-4v8H34v-8h-4z" fill="#ffffff" opacity="0.15" />
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#2563eb" />
+    <path d="M14 30L22 18L30 30" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="20,13 22,11 24,13" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="12" y1="36" x2="32" y2="36" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
   </g>
-
-  <!-- Business Name -->
-  <text x="64" y="35" class="brand-text">Skill Up</text>
+  <text x="64" y="34" font-family="Plus Jakarta Sans, Arial, sans-serif" font-weight="800" font-size="22" fill="#0f172a" letter-spacing="-0.5">Skill Up</text>
 </svg>

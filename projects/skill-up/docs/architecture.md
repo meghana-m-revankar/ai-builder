@@ -1,3 +1,13 @@
-docs/architecture.md
-Pages: Home, About, Booking / Appointment, Services, Team, Login / Dashboard
-Files: index.html, css/app.css, js/main.js, images/
+# Architecture
+- Project: Skill Up (Marketing / Agency)
+- Tech Stack: Static HTML + CSS + Tailwind (CDN)
+- Pages: 1. Home (index.html), 2. About (about.html), 3. Services (services.html), 4. Contact (contact.html), 5. Pricing (pricing.html)
+- Structure:
+  - index.html
+  - about.html
+  - services.html
+  - contact.html
+  - pricing.html
+  - css/ (custom styles)
+  - js/ (interactive scripts)
+  - images/ (assets)

@@ -1,7 +1,7 @@
 # Skill Up
 
-Empowering youth through accessible vocational training and mentorship.
+Master the art of digital growth and coding.
 
 Static website - open index.html in a browser or host the folder on any static host.
 
-Pages: index.html, about.html, booking.html, services.html, team.html
+Pages: index.html, about.html, services.html, contact.html, pricing.html

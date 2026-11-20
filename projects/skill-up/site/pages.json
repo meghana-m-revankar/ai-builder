@@ -3,30 +3,30 @@
     "page": "P1",
     "file": "index.html",
     "title": "Home",
-    "sections": 6
+    "sections": 7
   },
   {
     "page": "P2",
     "file": "about.html",
-    "title": "About Us",
+    "title": "About",
     "sections": 6
   },
   {
     "page": "P3",
-    "file": "booking.html",
-    "title": "Booking / Appointment",
-    "sections": 5
+    "file": "services.html",
+    "title": "Services",
+    "sections": 1
   },
   {
     "page": "P4",
-    "file": "services.html",
-    "title": "Services",
-    "sections": 7
+    "file": "contact.html",
+    "title": "Contact",
+    "sections": 6
   },
   {
     "page": "P5",
-    "file": "team.html",
-    "title": "Our Team",
-    "sections": 5
+    "file": "pricing.html",
+    "title": "Pricing",
+    "sections": 6
   }
 ]
