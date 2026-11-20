@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Crunchy Bites</title>
+<meta name="description" content="Every Bite, A Little Happiness!">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f6f1fe','100':'#e9defc','200':'#d3bef9','300':'#b48ff5','400':'#8f57f0','500':'#7028eb','600':'#7c3aed','700':'#4a10ad','800':'#3a0c88','900':'#2c0967'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Crunchy Bites logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products</a></div>
+</header>
+<main data-page="P1">
+<main>
+  <!-- 1. Hero -->
+  <section data-section="S1" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/ec8e2dc6-14ac-4ab3-842c-7a5103f28ce9/thumb/" alt="Crispy golden potato chips" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center text-white">
+      <span class="inline-block bg-brand-500 text-white text-sm font-bold uppercase tracking-wider px-4 py-1.5 rounded-full mb-6">Crunchy Bites</span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
+        Every Bite, A Little <span class="text-brand-400">Happiness!</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 mb-10">
+        Discover handcrafted, ultra-crispy potato snacks made with love in Bengaluru since 2016. Taste the perfection in every single crunch.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="products.html" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+          Explore Products
+        </a>
+        <a href="#about" class="bg-white/10 hover:bg-white/20 backdrop-blur text-white font-bold px-8 py-4 rounded-xl border border-white/30 transition">
+          Our Story
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats Strip -->
+  <section data-section="S2" class="bg-brand-600 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold mb-2">50,000+</div>
+          <div class="text-brand-100 font-medium">Happy Customers</div>
+        </div>
+        <div class="p-4 border-t md:border-t-0 md:border-x border-brand-500/50">
+          <div class="font-display text-4xl sm:text-5xl font-bold mb-2">15+</div>
+          <div class="text-brand-100 font-medium">Unique Flavours</div>
+        </div>
+        <div class="p-4">
+          <div class="font-display text-4xl sm:text-5xl font-bold mb-2">8+ Years</div>
+          <div class="text-brand-100 font-medium">Of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About Preview -->
+  <section data-section="S3" id="about" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/" alt="Founder Rohan Mehta preparing snacks" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Founded in 2016</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-6">
+            Bringing authentic, crispy joy to every Indian household.
+          </h2>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Crunchy Bites started with a simple vision by Rohan Mehta: to craft potato snacks that combine traditional Indian spices with unmatched crunchiness. We use locally sourced farm-fresh potatoes and rigorous quality checks to deliver pure bliss.
+          </p>
+          <blockquote class="border-l-4 border-brand-600 pl-4 italic text-gray-700 mb-8">
+            "We believe that a great snack isn't just about taste—it's about creating moments of shared happiness with family and friends." 
+            <span class="block not-italic font-bold text-gray-900 mt-2">— Rohan Mehta, Founder</span>
+          </blockquote>
+          <a href="products.html" class="inline-flex items-center gap-2 text-brand-600 font-bold hover:text-brand-700">
+            View our full collection <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Products Grid -->
+  <section data-section="S4" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">Taste The Magic</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Featured Crunchy Treats</h2>
+        <p class="text-gray-600">Explore our best-selling flavours loved by thousands across the country.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/70c09b65-a892-49d1-a591-84278f582f16/thumb/" alt="Classic Salted Chips" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Classic Salted</h3>
+              <span class="text-brand-600 font-bold text-lg">₹20</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-6 flex-grow">The timeless original, lightly sprinkled with pure rock salt for a crisp and clean taste.</p>
+            <a href="products.html" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 font-bold py-3 rounded-xl text-center transition">
+              Order Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/6f88ab5e-63f5-47b8-9c87-004673391529/thumb/" alt="Magic Masala Chips" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Magic Masala</h3>
+              <span class="text-brand-600 font-bold text-lg">₹20</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-6 flex-grow">Packed with an aromatic blend of exotic Indian spices that dance on your tastebuds.</p>
+            <a href="products.html" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 font-bold py-3 rounded-xl text-center transition">
+              Order Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300 flex flex-col">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/aefa73e1-aca8-49d8-8213-d56f4c63e15b/thumb/" alt="Family Combo Pack" class="w-full h-56 object-cover">
+          <div class="p-6 flex flex-col flex-grow">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-display text-xl font-bold text-gray-900">Family Combo Pack</h3>
+              <span class="text-brand-600 font-bold text-lg">₹99</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-6 flex-grow">The ultimate sharing assortment featuring all our top flavours for movie nights and parties.</p>
+            <a href="products.html" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-600 font-bold py-3 rounded-xl text-center transition">
+              Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="products.html" class="inline-block bg-gray-900 hover:bg-gray-800 text-white font-bold px-8 py-4 rounded-xl shadow transition">
+          View All Products & Prices
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us -->
+  <section data-section="S5" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-bold uppercase tracking-wider text-sm">The Crunchy Difference</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">Why Choose Crunchy Bites?</h2>
+        <p class="text-gray-600">We go the extra mile to ensure absolute quality and superior crunch in every packet.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="sprout" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Farm Fresh Potatoes</h3>
+          <p class="text-gray-600 text-sm">Sourced directly from trusted local farmers to ensure natural sweetness and starch balance.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Zero Preservatives</h3>
+          <p class="text-gray-600 text-sm">Made with 100% natural ingredients and edible oils with no artificial additives or colors.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Signature Crunch</h3>
+          <p class="text-gray-600 text-sm">Precision slice thickness and optimal frying temperature guarantee an unforgettable snap.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="heart" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Crafted with Passion</h3>
+          <p class="text-gray-600 text-sm">Every batch is carefully supervised by our culinary experts led by Vikram Rao.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Trusted Quality</h3>
+          <p class="text-gray-600 text-sm">Over 8 years of excellence delivering hygienic and delicious snacks across households.</p>
+        </div>
+
+        <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="smile" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-gray-900 mb-2">Customer Happiness</h3>
+          <p class="text-gray-600 text-sm">Loved by over 50,000 snack enthusiasts who make us part of their daily celebrations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. How It's Made -->
+  <section data-section="S6" class="py-16 md:py-24 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-400 font-bold uppercase tracking-wider text-sm">Our Process</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-4">How It's Made</h2>
+        <p class="text-gray-400">A seamless 3-step quality process turning raw farm potatoes into golden perfection.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+          <div class="text-brand-400 font-display text-6xl font-bold mb-4 opacity-40">01</div>
+          <h3 class="font-display text-2xl font-bold mb-3">Hand-Picked Sorting</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">We select only premium quality potatoes of the ideal size and starch content, washing and peeling them meticulously.</p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+          <div class="text-brand-400 font-display text-6xl font-bold mb-4 opacity-40">02</div>
+          <h3 class="font-display text-2xl font-bold mb-3">Precision Slicing & Frying</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Sliced to exact thickness and cooked in healthy edible oils at controlled temperatures for the ultimate crisp.</p>
+        </div>
+
+        <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative">
+          <div class="text-brand-400 font-display text-6xl font-bold mb-4 opacity-40">03</div>
+          <h3 class="font-display text-2xl font-bold mb-3">Tossing & Sealing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Tossed in our signature spice blends and instantly sealed in airtight nitrogen packs to lock in freshness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section data-section="S7" class="py-16 bg-brand-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to Taste the Happiness?</h2>
+      <p class="text-brand-100 max-w-xl mx-auto mb-8">Grab your favourite packet of Crunchy Bites today and experience unmatched flavour.</p>
+      <a href="products.html" class="inline-block bg-white text-brand-600 hover:bg-brand-50 font-bold px-8 py-4 rounded-xl shadow-lg transition">
+        Browse Products Now
+      </a>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Lucide icons are initialized globally by the platform wrapper
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Crunchy Bites</p><p class="mt-3 text-sm text-slate-400">Every Bite, A Little Happiness!</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="products.html" class="hover:text-white">Products</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">24, MG Road, Bengaluru, Karnataka – 560001</p><p class="mt-2 text-sm text-slate-400">Mon–Sat, 9:00 AM – 8:00 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 98765 43210</p><p class="mt-2 text-sm text-slate-400">hello@crunchybites.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Crunchy Bites. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P1</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

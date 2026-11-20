@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" height="56">
+  <defs>
+    <style>
+      .brand-name {
+        font-family: "Plus Jakarta Sans", Arial, sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        fill: #0f172a;
+        letter-spacing: -0.5px;
+      }
+    </style>
+  </defs>
+  
+  <!-- Icon: Modern geometric 'B' and shopping bag/grid integration for E-commerce -->
+  <g transform="translate(4, 4)">
+    <!-- Rounded outer container -->
+    <rect width="48" height="48" rx="12" fill="#7c3aed" />
+    
+    <!-- Abstract 'B' and shopping elements -->
+    <path d="M16 14h9a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5h-9z" fill="#ffffff" opacity="0.9" />
+    <path d="M16 24h10a5 5 0 0 1 5 5v0a5 5 0 0 1-5 5h-10z" fill="#ffffff" opacity="0.9" />
+    <rect x="13" y="14" width="3" height="20" rx="1.5" fill="#ffffff" />
+    
+    <!-- Dynamic commerce accent dot -->
+    <circle cx="33" cy="14" r="3" fill="#facc15" />
+  </g>
+
+  <!-- Business Name -->
+  <text x="64" y="36" class="brand-name">Bingo</text>
+</svg>
