@@ -1,0 +1,32 @@
+[
+  {
+    "page": "P1",
+    "file": "index.html",
+    "title": "Home",
+    "sections": 7
+  },
+  {
+    "page": "P2",
+    "file": "about.html",
+    "title": "About",
+    "sections": 7
+  },
+  {
+    "page": "P3",
+    "file": "services.html",
+    "title": "Services",
+    "sections": 7
+  },
+  {
+    "page": "P4",
+    "file": "team.html",
+    "title": "Team",
+    "sections": 5
+  },
+  {
+    "page": "P5",
+    "file": "testimonials.html",
+    "title": "Testimonials",
+    "sections": 6
+  }
+]
