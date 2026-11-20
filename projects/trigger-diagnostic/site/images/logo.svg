@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" height="56">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap');
+      .brand-text {
+        font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+        font-weight: 800;
+        font-size: 21px;
+        fill: #0f172a;
+      }
+      .brand-sub {
+        font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        fill: #0284c7;
+        letter-spacing: 2px;
+      }
+    </style>
+  </defs>
+
+  <!-- Icon: Modern tech diagnostic / lightning circuit motif -->
+  <g transform="translate(4, 4)">
+    <!-- Outer hexagon/shield container -->
+    <path d="M24 2 L42 12 L42 36 L24 46 L6 36 L6 12 Z" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linejoin="round"/>
+    
+    <!-- Inner pulse / diagnostic waveform integrated with a lightning bolt -->
+    <path d="M16 26 L22 26 L26 15 L22 33 L28 33 L32 22" fill="none" stroke="#0284c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Tech nodes / data points -->
+    <circle cx="16" cy="26" r="2.5" fill="#0284c7"/>
+    <circle cx="32" cy="22" r="2.5" fill="#0284c7"/>
+  </g>
+
+  <!-- Business Name & Subtext -->
+  <text x="64" y="27" class="brand-text">Trigger</text>
+  <text x="144" y="27" class="brand-text" fill="#0284c7">Diagnostic</text>
+  <text x="65" y="42" class="brand-sub">IT INTELLIGENCE</text>
+</svg>
