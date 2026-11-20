@@ -3,263 +3,259 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Services | Skill Up</title>
-<meta name="description" content="Master the markets with expert-led trading programs">
+<meta name="description" content="Empowering youth through accessible vocational training and mentorship.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#eaf2f3','100':'#d0e1e4','200':'#a7c6cd','300':'#72a3ad','400':'#46818e','500':'#2c6775','600':'#114C5A','700':'#0f3e4a','800':'#0f333d','900':'#0e2b34'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
-
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#f4f8f6','100':'#e6f1ec','200':'#cbe3d9','300':'#a2cca0','400':'#73b070','500':'#489146','600':'#367335','700':'#2d5c2d','800':'#264a26','900':'#213d21'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 </head>
-<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
-<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
-    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="data:image/jpeg;base64,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" alt="Skill Up logo" class="h-10 w-auto"><span>Skill Up</span></a>
-    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Courses</a><a href="pricing.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Pricing</a></nav>
-    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Skill Up logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="about.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">About Us</a><a href="booking.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Booking / Appointment</a><a href="services.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Services</a><a href="team.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Our Team</a></nav>
+    <a href="booking.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
     <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Courses</a><a href="pricing.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Pricing</a></div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="about.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">About Us</a><a href="booking.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Booking / Appointment</a><a href="services.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Services</a><a href="team.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Our Team</a></div>
 </header>
+<main data-page="P4">
 <main>
-<main class="bg-slate-950 text-slate-100 min-h-screen">
-  <!-- 1. Hero with service overview -->
-  <section id="services-hero" class="relative min-h-[75vh] flex items-center justify-center overflow-hidden py-20">
-    <div class="absolute inset-0 z-0">
-      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8Mnx8c3RvY2slMjB0cmFkaW5nJTIwY3J5cHRvY3VycmVuY3l8ZW58MXx8fHwxNzk1MDA4MzUyfDA&ixlib=rb-4.1.0&w=1600&h=900&fit=crop&auto=format&q=80" alt="Stock trading charts and analytics" class="w-full h-full object-cover opacity-25">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+  <!-- 1. Page Hero -->
+  <section data-section="S1" class="relative py-24 md:py-32 bg-brand-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Students in classroom" class="w-full h-full object-cover">
     </div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 mb-6 text-sm font-medium">
-        <i data-lucide="trending-up" class="w-4 h-4"></i> Expert-Led Professional Services
-      </div>
-      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white">
-        Accelerate Your Financial Mastery
-      </h1>
-      <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 mb-10">
-        From foundational technical analysis to advanced algorithmic execution, our comprehensive service offerings are engineered to transform aspiring market participants into consistent, disciplined professionals.
-      </p>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider uppercase bg-brand-600 rounded-full">Our Services</span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6">Empowering Programs for Your Future</h1>
+      <p class="max-w-2xl mx-auto text-lg text-brand-100 mb-8">Discover our industry-aligned vocational training and mentorship programs designed to bridge the digital divide and launch your career.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#discovery-call" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold transition shadow-lg shadow-brand-600/30">
-          Book Discovery Call <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-        </a>
-        <a href="pricing.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold transition">
-          View Course Pricing
-        </a>
+        <a href="booking.html" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow-lg transition">Enroll Now</a>
+        <a href="about.html" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl backdrop-blur-sm transition">Learn About Us</a>
       </div>
     </div>
   </section>
 
-  <!-- 2. Comprehensive educational path explanation -->
-  <section id="educational-path" class="py-16 md:py-24 bg-slate-900/50 border-y border-slate-900">
+  <!-- 2. Category Filter Tabs -->
+  <section data-section="S2" class="py-12 bg-white border-b border-gray-100 sticky top-0 z-30 backdrop-blur-md bg-white/90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4" id="filter-tabs">
+        <button onclick="filterPrograms('All')" class="px-6 py-2.5 rounded-xl font-medium text-sm transition bg-brand-600 text-white filter-btn shadow-sm" data-filter="All">All Programs</button>
+        <button onclick="filterPrograms('Coding')" class="px-6 py-2.5 rounded-xl font-medium text-sm transition bg-gray-100 hover:bg-gray-200 text-gray-700 filter-btn" data-filter="Coding">Coding & Tech</button>
+        <button onclick="filterPrograms('Design')" class="px-6 py-2.5 rounded-xl font-medium text-sm transition bg-gray-100 hover:bg-gray-200 text-gray-700 filter-btn" data-filter="Design">Design & Media</button>
+        <button onclick="filterPrograms('Soft Skills')" class="px-6 py-2.5 rounded-xl font-medium text-sm transition bg-gray-100 hover:bg-gray-200 text-gray-700 filter-btn" data-filter="Soft Skills">Soft Skills & Career</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Catalog of Programs -->
+  <section data-section="S3" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="programs-grid">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Program Spotlight Banner -->
+  <section data-section="S4" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-900 to-brand-800 rounded-3xl overflow-hidden shadow-2xl text-white flex flex-col lg:flex-row items-center">
+        <div class="p-8 sm:p-12 lg:w-1/2">
+          <span class="inline-block px-3 py-1 mb-4 text-xs font-semibold uppercase bg-brand-600 rounded-full">Featured Spotlight</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Coding Bootcamp</h2>
+          <p class="text-brand-100 mb-6">Our most popular intensive program transforms beginners into job-ready developers. Learn full-stack fundamentals, build real projects, and get 1-on-1 mentorship from industry experts.</p>
+          <div class="flex items-center gap-6 mb-8">
+            <div>
+              <span class="block text-sm text-brand-200">Investment</span>
+              <span class="text-2xl font-bold font-display">₹2,499</span>
+            </div>
+            <div>
+              <span class="block text-sm text-brand-200">Duration</span>
+              <span class="text-2xl font-bold font-display">12 Weeks</span>
+            </div>
+          </div>
+          <a href="booking.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-brand-900 hover:bg-brand-50 font-semibold rounded-xl shadow transition">
+            Secure Your Spot <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="lg:w-1/2 w-full h-72 lg:h-auto">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Coding bootcamp students" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Our Curriculum is Industry-Ready -->
+  <section data-section="S5" class="py-16 md:py-24 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-display text-3xl sm:text-5xl font-bold mb-4">Structured Educational Pathway</h2>
-        <p class="text-slate-400 text-lg">Our 8+ years of excellence have refined a rigorous, step-by-step curriculum designed to take you from market novice to elite trader.</p>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Built for Real-World Success</h2>
+        <p class="text-gray-600">We don't just teach theory; we build practical capabilities that employers actively look for in candidates.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
-            <i data-lucide="compass" class="w-6 h-6"></i>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="check-circle-2" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display text-xl font-bold mb-3">1. Foundation & Analysis</h3>
-          <p class="text-slate-400 mb-4">Master core principles through our Technical Analysis (₹12,000) and Crypto Fundamentals (₹15,000) modules. Build an unshakeable understanding of market mechanics and price action.</p>
-          <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider">Level 1: Beginner to Intermediate</span>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Practical Projects</h3>
+          <p class="text-gray-600">Every module concludes with a live project that goes straight into your professional portfolio, proving your skills to recruiters.</p>
         </div>
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
-            <i data-lucide="cpu" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3">2. Advanced Execution</h3>
-          <p class="text-slate-400 mb-4">Transition to quantitative methods with Algo Trading (₹25,000) and Data Science for Finance (₹20,000). Automate strategies and harness big data for high-probability setups.</p>
-          <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider">Level 2: Advanced Quant</span>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-lg hover:-translate-y-1 transition">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
-            <i data-lucide="briefcase" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3">3. Professional Practice</h3>
-          <p class="text-slate-400 mb-4">Conclude your journey with Portfolio Management (₹14,000) and UI/UX for FinTech (₹18,000). Manage institutional-grade assets or design next-generation financial interfaces.</p>
-          <span class="text-xs font-semibold text-brand-400 uppercase tracking-wider">Level 3: Professional Mastery</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Corporate training solutions for firms -->
-  <section id="corporate-training" class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
-        <div class="w-full lg:w-1/2">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8M3x8c3RvY2slMjB0cmFkaW5nJTIwY3J5cHRvY3VycmVuY3l8ZW58MXx8fHwxNzk1MDA4MzUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="Corporate training room with financial screens" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl border border-slate-800">
-        </div>
-        <div class="w-full lg:w-1/2">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 mb-4 text-xs font-medium">
-            B2B Solutions
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">Corporate Training & Upskilling</h2>
-          <p class="text-slate-300 mb-6">
-            Empower your financial institution, brokerage, or fintech startup with bespoke training programs led by former hedge fund manager Vikram Malhotra and our expert team. We tailor our curriculum to address your specific operational goals.
-          </p>
-          <ul class="space-y-4 mb-8">
-            <li class="flex items-start gap-3 text-slate-300">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-              <span>Customized modules for proprietary trading desks and analyst teams.</span>
-            </li>
-            <li class="flex items-start gap-3 text-slate-300">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-              <span>Flexible on-site delivery at our Bengaluru campus or secure virtual sessions.</span>
-            </li>
-            <li class="flex items-start gap-3 text-slate-300">
-              <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-400 shrink-0 mt-0.5"></i>
-              <span>Comprehensive progress tracking and institutional performance reports.</span>
-            </li>
-          </ul>
-          <a href="#discovery-call" class="inline-flex items-center px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-100 border border-slate-800 font-semibold transition">
-            Inquire for Enterprise <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. One-on-one mentorship program description -->
-  <section id="mentorship" class="py-16 md:py-24 bg-slate-900/50 border-t border-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
-        <div class="w-full lg:w-1/2">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1634704784915-aacf363b021f?ixid=M3wxMTMwODAzfDB8MXxzZWFyY2h8NHx8c3RvY2slMjB0cmFkaW5nJTIwY3J5cHRvY3VycmVuY3l8ZW58MXx8fHwxNzk1MDA4MzUyfDA&ixlib=rb-4.1.0&w=800&h=600&fit=crop&auto=format&q=80" alt="One-on-one market mentorship session" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl border border-slate-800">
-        </div>
-        <div class="w-full lg:w-1/2">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 mb-4 text-xs font-medium">
-            Elite Guidance
-          </div>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold mb-6">1-on-1 Personalized Mentorship</h2>
-          <p class="text-slate-300 mb-6">
-            Accelerate your learning curve with direct, private coaching from lead instructors like Ananya Rao. Eliminate costly mistakes by reviewing live trades, refining your risk management parameters, and building a bulletproof trading psychology.
-          </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-              <h4 class="font-bold text-white mb-1">Weekly Live Reviews</h4>
-              <p class="text-sm text-slate-400">Analyze your trade journal directly with seasoned experts.</p>
-            </div>
-            <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-              <h4 class="font-bold text-white mb-1">Custom Strategy Build</h4>
-              <p class="text-sm text-slate-400">Develop a tailored trading playbook matching your capital size.</p>
-            </div>
-          </div>
-          <a href="about.html" class="inline-flex items-center text-brand-400 hover:text-brand-300 font-semibold transition">
-            Meet our expert mentors <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. Certification details and industry recognition -->
-  <section id="certification" class="py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="max-w-3xl mx-auto mb-16">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 mb-4 text-xs font-medium">
-          Accredited Excellence
-        </div>
-        <h2 class="font-display text-3xl sm:text-5xl font-bold mb-4">Industry-Recognized Certification</h2>
-        <p class="text-slate-400 text-lg">Earn verifiable credentials backed by our 4.9★ student rating and trusted by over 15,000+ successful graduates globally.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
-            <i data-lucide="award" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3">Verifiable Credentials</h3>
-          <p class="text-slate-400">Every completed program issues a secure digital certificate with a unique credential ID, easily shareable on LinkedIn and professional resumes.</p>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
-            <i data-lucide="shield-check" class="w-6 h-6"></i>
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3">Rigorous Assessments</h3>
-          <p class="text-slate-400">Our certificates aren't handed out lightly. Students must pass practical backtesting evaluations, live simulation challenges, and comprehensive final exams.</p>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 border border-brand-500/20 flex items-center justify-center text-brand-400 mb-6">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="users" class="w-6 h-6"></i>
           </div>
-          <h3 class="font-display text-xl font-bold mb-3">Alumni Network Access</h3>
-          <p class="text-slate-400">Gain lifetime entry into our exclusive alumni community for ongoing market discussions, networking events, and continuous learning opportunities.</p>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Expert Mentorship</h3>
+          <p class="text-gray-600">Learn directly from seasoned professionals like Vikram Singh and Priya Sharma who guide you through every challenge.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-gray-900 mb-2">Guaranteed Placement Support</h3>
+          <p class="text-gray-600">Benefit from our 95% placement rate with dedicated resume reviews, mock interviews, and direct hiring partner referrals.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. CTA for booking a discovery call -->
-  <section id="discovery-call" class="py-16 md:py-24 bg-gradient-to-t from-slate-900 to-slate-950 border-t border-slate-900">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-        <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+  <!-- 6. Package Deals and Student Discounts -->
+  <section data-section="S6" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mb-4">Accessible Learning Deals</h2>
+        <p class="text-gray-600">We believe financial constraints should never stop ambition. Explore our special bundles and subsidies.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gray-50 border border-gray-200 p-8 rounded-2xl flex flex-col justify-between">
           <div>
-            <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Schedule Your Free Discovery Call</h2>
-            <p class="text-slate-400 mb-6">
-              Not sure which program aligns with your goals? Speak directly with our advisory team to map out your personalized educational trajectory.
-            </p>
-            <div class="space-y-3 text-sm text-slate-300">
-              <div class="flex items-center gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-brand-400"></i>
-                <span>15-minute 1-on-1 consultation session</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-brand-400"></i>
-                <span>Skill assessment & course recommendation</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <i data-lucide="check" class="w-5 h-5 text-brand-400"></i>
-                <span>Zero obligation, high-value insights</span>
-              </div>
-            </div>
+            <span class="text-xs font-semibold uppercase text-brand-600 tracking-wider">Bundle Offer</span>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mt-1 mb-3">Tech & Career Starter</h3>
+            <p class="text-gray-600 mb-6">Combine Digital Literacy and English Fluency to build an unshakeable foundation for office environments.</p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Digital Literacy (₹499)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> English Fluency (₹799)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Free Career Counseling session</li>
+            </ul>
           </div>
-          <div>
-            <form name="contact" method="POST" data-netlify="true" class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! We will contact you soon.');">
-              <div>
-                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Full Name</label>
-                <input type="text" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-500 transition" placeholder="Vikram Malhotra">
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Email Address</label>
-                <input type="email" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-500 transition" placeholder="hello@skillup.in">
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">Phone Number</label>
-                <input type="tel" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-500 transition" placeholder="+91 80 4567 8910">
-              </div>
-              <button type="submit" class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold transition shadow-lg shadow-brand-600/30">
-                Book Discovery Call
-              </button>
-            </form>
+          <div class="flex items-center justify-between pt-6 border-t border-gray-200">
+            <div>
+              <span class="text-xs text-gray-500 block">Bundle Price</span>
+              <span class="text-2xl font-bold font-display text-gray-900">₹1,099</span>
+            </div>
+            <a href="booking.html" class="px-6 py-2.5 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl transition text-sm">Claim Bundle</a>
           </div>
         </div>
+
+        <div class="bg-brand-50 border border-brand-200 p-8 rounded-2xl flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-semibold uppercase text-brand-600 tracking-wider">Social Impact</span>
+            <h3 class="text-2xl font-display font-bold text-gray-900 mt-1 mb-3">Youth Scholarship Fund</h3>
+            <p class="text-gray-600 mb-6">Supported by founder Ananya Rao's mission to bridge the digital divide, eligible students receive up to 50% fee waivers.</p>
+            <ul class="space-y-3 mb-8 text-sm text-gray-600">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Applicable on all major bootcamps</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Easy installment options available</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-600"></i> Dedicated mentorship support</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-brand-200">
+            <div>
+              <span class="text-xs text-gray-500 block">Eligibility</span>
+              <span class="text-lg font-bold font-display text-brand-900">Need-Based</span>
+            </div>
+            <a href="booking.html" class="px-6 py-2.5 bg-brand-900 hover:bg-brand-800 text-white font-medium rounded-xl transition text-sm">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section data-section="S7" class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Ready to Skill Up Your Future?</h2>
+      <p class="max-w-xl mx-auto text-brand-100 mb-8">Join over 15,000+ students who have transformed their careers with us at MG Road, Bengaluru.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="booking.html" class="px-8 py-3.5 bg-brand-600 hover:bg-brand-500 text-white font-medium rounded-xl shadow transition">Book Consultation</a>
+        <a href="index.html" class="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-medium rounded-xl transition">Back to Home</a>
       </div>
     </div>
   </section>
 </main>
+
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    if (window.lucide) {
+  const programsData = [
+    { title: "Digital Literacy", category: "Coding", price: "₹499", desc: "Master essential computer skills, internet navigation, and productivity tools for modern workplaces.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" },
+    { title: "Coding Bootcamp", category: "Coding", price: "₹2,499", desc: "An intensive full-stack development journey with hands-on projects and expert placement assistance.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" },
+    { title: "Graphic Design", category: "Design", price: "₹1,999", desc: "Learn industry-standard design tools, typography, and visual branding to kickstart your creative career.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" },
+    { title: "English Fluency", category: "Soft Skills", price: "₹799", desc: "Build spoken and written confidence for professional environments through interactive workshops.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" },
+    { title: "Entrepreneurship 101", category: "Soft Skills", price: "₹1,299", desc: "Turn your business idea into a viable startup plan with guidance from experienced social entrepreneurs.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" },
+    { title: "Career Counseling", category: "Soft Skills", price: "₹299", desc: "Get 1-on-1 expert guidance to map your professional path, polish your resume, and ace interviews.", image: "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6f1ec%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a2cca0%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" }
+  ];
+
+  function renderPrograms(filter) {
+    const grid = document.getElementById('programs-grid');
+    if (!grid) return;
+    
+    const filtered = filter === 'All' ? programsData : programsData.filter(p => p.category === filter);
+    
+    grid.innerHTML = filtered.map(p => `
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:-translate-y-1 transition duration-300 flex flex-col justify-between">
+        <div>
+          <div class="h-48 overflow-hidden relative">
+            <img loading="lazy" decoding="async" src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+            <span class="absolute top-3 right-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-xs font-semibold text-brand-900 rounded-full shadow">${p.category}</span>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-baseline mb-2">
+              <h3 class="text-xl font-display font-bold text-gray-900">${p.title}</h3>
+              <span class="text-lg font-bold font-display text-brand-600">${p.price}</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">${p.desc}</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <a href="booking.html" class="w-full block text-center py-2.5 bg-gray-50 hover:bg-brand-600 hover:text-white text-brand-900 font-medium rounded-xl transition text-sm border border-gray-200 hover:border-transparent">Enroll Program</a>
+        </div>
+      </div>
+    `).join('');
+    
+    if (typeof lucide !== 'undefined') {
       lucide.createIcons();
     }
+  }
+
+  function filterPrograms(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.classList.remove('bg-gray-100', 'text-gray-700');
+        btn.classList.add('bg-brand-600', 'text-white', 'shadow-sm');
+      } else {
+        btn.classList.remove('bg-brand-600', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-gray-100', 'text-gray-700');
+      }
+    });
+    renderPrograms(category);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderPrograms('All');
   });
 </script>
 </main>
-<footer class="bg-black text-slate-300">
+<footer class="bg-slate-900 text-slate-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-    <div><p class="font-display text-xl font-extrabold text-white">Skill Up</p><p class="mt-3 text-sm text-slate-400">Master the markets with expert-led trading programs</p></div>
-    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="services.html" class="hover:text-white">Services</a><a href="products.html" class="hover:text-white">Courses</a><a href="pricing.html" class="hover:text-white">Pricing</a></div></div>
-    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9AM-9PM, Sun 10AM-6PM</p></div>
+    <div><p class="font-display text-xl font-extrabold text-white">Skill Up</p><p class="mt-3 text-sm text-slate-400">Empowering youth through accessible vocational training and mentorship.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="about.html" class="hover:text-white">About Us</a><a href="booking.html" class="hover:text-white">Booking / Appointment</a><a href="services.html" class="hover:text-white">Services</a><a href="team.html" class="hover:text-white">Our Team</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9 AM-9 PM, Sun 10 AM-6 PM</p></div>
     <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@skillup.in</p></div>
   </div>
   <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Skill Up. All rights reserved.</div>
-</footer>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P4</div></footer>
 <script src="js/site-kit.js"></script>
 </body>
 </html>

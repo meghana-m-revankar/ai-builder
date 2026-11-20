@@ -1,7 +1,7 @@
 # Skill Up
 
-Master the markets with expert-led trading programs
+Empowering youth through accessible vocational training and mentorship.
 
 Static website - open index.html in a browser or host the folder on any static host.
 
-Pages: index.html, about.html, services.html, products.html, pricing.html
+Pages: index.html, about.html, booking.html, services.html, team.html

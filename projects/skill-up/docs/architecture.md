@@ -1,3 +1,3 @@
-# Skill Up - Stock & Crypto Trading
-- Pages: Home, About, Services, Products, Pricing, Gallery, Team, Testimonials, Blog, FAQ, Contact, Booking, Cart, Login/Dashboard
-- Structure: index.html, css/styles.css, js/main.js, images/
+docs/architecture.md
+Pages: Home, About, Booking / Appointment, Services, Team, Login / Dashboard
+Files: index.html, css/app.css, js/main.js, images/
