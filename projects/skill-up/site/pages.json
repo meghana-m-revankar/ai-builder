@@ -15,18 +15,12 @@
     "page": "P3",
     "file": "services.html",
     "title": "Services",
-    "sections": 1
+    "sections": 6
   },
   {
     "page": "P4",
     "file": "contact.html",
     "title": "Contact",
-    "sections": 6
-  },
-  {
-    "page": "P5",
-    "file": "pricing.html",
-    "title": "Pricing",
-    "sections": 6
+    "sections": 7
   }
 ]

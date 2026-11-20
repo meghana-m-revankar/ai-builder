@@ -1,13 +1,3 @@
-# Architecture
-- Project: Skill Up (Marketing / Agency)
-- Tech Stack: Static HTML + CSS + Tailwind (CDN)
-- Pages: 1. Home (index.html), 2. About (about.html), 3. Services (services.html), 4. Contact (contact.html), 5. Pricing (pricing.html)
-- Structure:
-  - index.html
-  - about.html
-  - services.html
-  - contact.html
-  - pricing.html
-  - css/ (custom styles)
-  - js/ (interactive scripts)
-  - images/ (assets)
+- Pages: Home (index.html), About (about.html), Services (services.html), Contact (contact.html)
+- Structure: docs/index.html, docs/about.html, docs/services.html, docs/contact.html, docs/css/styles.css, docs/js/main.js, docs/images/
+- Style: Static HTML + Tailwind CSS, light theme, marketing agency palette.

@@ -4,7 +4,7 @@
     try{ window.lucide && lucide.createIcons(); }catch(e){}
     $('[data-year],.year,#year').forEach(function(e){e.textContent=new Date().getFullYear()});
     // broken image: try up to 2 spare photos from this site, then show a brand-coloured block (never a broken icon)
-    var SPARES=[], BLOCK="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23dbeafe%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2393c5fd%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E", si=0;
+    var SPARES=[], BLOCK="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e0e7ff%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23a5b4fc%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E", si=0;
     function fixImg(img){ var n=+(img.dataset.fb||0); if(n>=3) return; img.dataset.fb=n+1;
       img.src=(n<2 && SPARES.length) ? SPARES[(si++)%SPARES.length] : BLOCK; }
     $('img').forEach(function(img){ if(img.complete && img.naturalWidth===0 && img.getAttribute('src')) fixImg(img); });
