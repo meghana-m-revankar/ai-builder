@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products / Menu | Lays</title>
+<meta name="description" content="Crispy perfection in every bite, delivered fresh.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef5f0','100':'#fde8dd','200':'#fbd1bb','300':'#f9b08b','400':'#f68950','500':'#f46820','600':'#ea580c','700':'#b34409','800':'#8d3507','900':'#6b2805'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Lays logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products / Menu</a><a href="gallery.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Gallery</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products / Menu</a><a href="gallery.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Gallery</a></div>
+</header>
+<main data-page="P2">
+<main>
+  <!-- 1. Hero Section -->
+  <section data-section="S1" class="relative min-h-[70vh] flex items-center justify-center bg-brand-900 text-white overflow-hidden py-16">
+    <div class="absolute inset-0 z-0 opacity-40">
+      <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/" alt="Crispy potato chips background" class="w-full h-full object-cover">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-900/60 to-transparent z-0"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/30 border border-brand-400/40 text-brand-200 text-sm font-medium mb-4 backdrop-blur-sm">Crispy Perfection</span>
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6">Our Gourmet Products</h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-brand-100 mb-8 font-light">Explore our handcrafted selection of crispy potato chips and artisanal dips, made fresh daily with premium ingredients.</p>
+      
+      <!-- Category Tabs Navigation -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <button onclick="filterCategory('all')" id="tab-all" class="px-6 py-2.5 rounded-full text-sm font-medium bg-brand-500 text-white shadow-lg transition-all">All Items</button>
+        <button onclick="filterCategory('chips')" id="tab-chips" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all">Chips</button>
+        <button onclick="filterCategory('dips')" id="tab-dips" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all">Dips</button>
+        <button onclick="filterCategory('combos')" id="tab-combos" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all">Combos</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Interactive Filter & 3. Chips Grid & 4. Dips & 5. Combos -->
+  <section data-section="S2" class="py-16 md:py-24 bg-brand-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex justify-between items-center mb-12">
+        <div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900">Freshly Baked & Fried</h2>
+          <p class="text-gray-600 mt-1">Select your favorite crunch or create the ultimate snacking experience.</p>
+        </div>
+        <div class="hidden sm:flex items-center gap-2 text-sm text-brand-600 font-medium">
+          <i data-lucide="sparkles" class="w-4 h-4"><span>8+ Years of Crunch</span></i>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Grid Container -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. Ingredient Quality Highlight -->
+  <section data-section="S3" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Uncompromising Quality</span>
+          <h2 class="font-display text-3xl sm:text-5xl font-bold text-gray-900 mt-2 mb-6">Why Our Ingredients Make the Difference</h2>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Founded in 2016 by food technologist Ananya Rao, Lays began in a home kitchen with a simple mission: to craft chips that combine farm-fresh potatoes with bold, natural seasonings. Every batch is kettle-cooked in small portions to ensure maximum crunch without artificial preservatives.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-50">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">Farm-Fresh Potatoes</h4>
+                <p class="text-xs text-gray-600 mt-1">Sourced directly from local sustainable farmers in Karnataka.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-brand-50">
+              <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0 mt-0.5"></i>
+              <div>
+                <h4 class="font-bold text-gray-900 text-sm">100% Natural Spices</h4>
+                <p class="text-xs text-gray-600 mt-1">No MSG or harmful additives, just pure vibrant flavor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="index.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-600 text-white font-medium hover:bg-brand-700 transition shadow-lg shadow-brand-600/20">
+              Back to Home <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </a>
+            <a href="gallery.html" class="inline-flex items-center justify-center px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-50 transition">
+              View Gallery
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/" alt="Gourmet snacking lifestyle" class="w-full h-[450px] object-cover rounded-3xl shadow-2xl">
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block border border-gray-100">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold">4.9</div>
+              <div>
+                <div class="flex text-yellow-400">★★★★★</div>
+                <span class="text-xs text-gray-500 font-medium">50,000+ Satisfied Snackers</span>
+              </div>
+            </div>
+            <p class="text-xs text-gray-600">"The absolute best crunch in Bengaluru. The Spicy Masala is addictive!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band -->
+  <section data-section="S4" class="py-16 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl sm:text-4xl font-bold mb-4">Ready to Taste the Crunch?</h2>
+      <p class="text-brand-200 max-w-xl mx-auto mb-8">Order fresh chips and dips straight to your door or visit our flagship store at MG Road.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="index.html#contact" class="px-8 py-3.5 rounded-xl bg-brand-500 text-white font-medium hover:bg-brand-600 transition shadow-lg">Visit Our Store</a>
+        <a href="mailto:hello@lays.in" class="px-8 py-3.5 rounded-xl bg-white/10 text-white font-medium hover:bg-white/20 transition backdrop-blur-sm">Contact Support</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const productsData = [
+    { id: 1, name: "Classic Salted Chips", category: "chips", price: 99, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Lightly sprinkled with Himalayan pink salt. Timeless perfection in every single bite.", pairing: "Best enjoyed plain or with our Garlic Herb Aioli." },
+    { id: 2, name: "Spicy Masala Crunch", category: "chips", price: 120, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "A fiery blend of handpicked Indian spices. Delivers an unforgettable kick for spice lovers.", pairing: "Pairs wonderfully with Creamy Onion Dip to balance the heat." },
+    { id: 3, name: "Tangy Tomato Zest", category: "chips", price: 110, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Ripe vine tomatoes infused with zesty herbs. Sweet, tangy, and irresistibly crispy.", pairing: "Enhance the zest by pairing with Habanero Salsa." },
+    { id: 4, name: "Creamy Onion Dip", category: "dips", price: 150, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Rich sour cream blended with caramelized onions. Smooth texture and comforting savory depth.", pairing: "The ultimate match for Classic Salted Chips." },
+    { id: 5, name: "Habanero Salsa Dip", category: "dips", price: 180, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Fire-roasted tomatoes mixed with spicy habanero peppers. Bold, smoky, and packed with punch.", pairing: "Pairs exceptionally well with Tangy Tomato Zest." },
+    { id: 6, name: "Garlic Herb Aioli", category: "dips", price: 160, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Aromatic roasted garlic folded into rich European mayo. Infused with fresh garden herbs.", pairing: "Elevates any chip variety to gourmet status." },
+    { id: 7, name: "Movie Night Combo", category: "combos", price: 350, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "Includes 2 bags of chips of your choice and 1 signature dip. Perfect for sharing on weekends.", pairing: "Ultimate weekend binge-watching snack bundle." },
+    { id: 8, name: "Party Pack Assortment", category: "combos", price: 650, image: "https://api.openverse.org/v1/images/aa8b7c2c-24c9-440c-ba0b-fb303c1e449d/thumb/", desc: "All 3 chip flavors and 2 dips bundled together. Designed to keep every guest happy and snacking.", pairing: "Great for gatherings, birthdays, and celebrations." }
+  ];
+
+  let currentFilter = 'all';
+
+  function filterCategory(category) {
+    currentFilter = category;
+    
+    // Update active tab styles
+    ['all', 'chips', 'dips', 'combos'].forEach(cat => {
+      const btn = document.getElementById(`tab-${cat}`);
+      if (btn) {
+        if (cat === category) {
+          btn.className = "px-6 py-2.5 rounded-full text-sm font-medium bg-brand-500 text-white shadow-lg transition-all";
+        } else {
+          btn.className = "px-6 py-2.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all";
+        }
+      }
+    });
+
+    renderProducts();
+  }
+
+  function renderProducts() {
+    const grid = document.getElementById('product-grid');
+    if (!grid) return;
+
+    const filtered = currentFilter === 'all' 
+      ? productsData 
+      : productsData.filter(p => p.category === currentFilter);
+
+    grid.innerHTML = filtered.map(item => `
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-1 transition duration-300 flex flex-col border border-gray-100">
+        <div class="relative h-64 overflow-hidden">
+          <img loading="lazy" decoding="async" src="${item.image}" alt="${item.name}" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+          <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-md text-brand-700 shadow-sm uppercase tracking-wide">
+            ${item.category}
+          </span>
+        </div>
+        <div class="p-6 flex flex-col flex-grow">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="font-display text-xl font-bold text-gray-900">${item.name}</h3>
+            <span class="text-lg font-bold text-brand-600">₹${item.price}</span>
+          </div>
+          <p class="text-gray-600 text-sm mb-4 flex-grow">${item.desc}</p>
+          <div class="pt-4 border-t border-gray-100 mt-auto">
+            <p class="text-xs text-brand-700 font-medium flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Pairing: ${item.pairing}
+            </p>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProducts();
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Lays</p><p class="mt-3 text-sm text-slate-400">Crispy perfection in every bite, delivered fresh.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="products.html" class="hover:text-white">Products / Menu</a><a href="gallery.html" class="hover:text-white">Gallery</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9am-9pm, Sun 10am-6pm</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@lays.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Lays. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P2</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
