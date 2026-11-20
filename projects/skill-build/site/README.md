@@ -1,6 +1,6 @@
 # Skill Build
 
-Empowering brands through data-driven digital marketing excellence.
+Master the art of profitable trading.
 
 Static website - open index.html in a browser or host the folder on any static host.
 

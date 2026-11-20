@@ -1,6 +1,0 @@
-/* Skill Build custom stylesheet */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-}

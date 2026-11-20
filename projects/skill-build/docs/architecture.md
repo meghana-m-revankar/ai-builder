@@ -1,9 +1,5 @@
-# Skill Build Architecture
-- Industry: Marketing / Agency | Type: Marketing / Landing Page
-- Style: Corporate / Professional | Theme: Light | Brand: #0284c7
-- Page list: 1. Home (index.html)
-- File structure:
-  - docs/index.html
-  - docs/css/app.css
-  - docs/js/main.js
-  - docs/images/
+- Pages: Home (index.html)
+- Structure: index.html, css/app.css, js/main.js, images/
+- Architecture: Static HTML5 + Tailwind CSS v3 via CDN
+- Theme: Light, Bold & Colourful (#7c3aed primary)
+- Stack: Plain static site with zero backend dependencies
