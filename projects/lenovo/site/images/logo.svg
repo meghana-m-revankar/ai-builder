@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" height="56">
+  <defs>
+    <style>
+      .brand-name {
+        font-family: "Plus Jakarta Sans", Arial, sans-serif;
+        font-weight: 800;
+        font-size: 26px;
+        fill: #0f172a;
+        letter-spacing: -0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Icon: Modern Geometric Shopping / E-commerce Bag & Play Symbol -->
+  <g transform="translate(4, 4)">
+    <!-- Base background container with rounded corners -->
+    <rect width="48" height="48" rx="12" fill="#e11d48" />
+    
+    <!-- Abstract Shopping Bag / Forward Arrow -->
+    <path d="M16 18h16l-2 16h-12l-2-16z" fill="#ffffff" opacity="0.25" />
+    <path d="M18 20h12l-1.5 13h-9L18 20z" fill="#ffffff" />
+    
+    <!-- Handle -->
+    <path d="M21 20v-3a3 3 0 0 1 6 0v3" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+    
+    <!-- Accent dot -->
+    <circle cx="24" cy="26.5" r="2" fill="#e11d48" />
+  </g>
+
+  <!-- Business Name -->
+  <text x="64" y="36" class="brand-name">Lenovo</text>
+</svg>

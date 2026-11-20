@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Products | Lenovo</title>
+<meta name="description" content="Engineering the Future of Personal Computing">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fdf1f4','100':'#fbdfe5','200':'#f7c0cc','300':'#f193a7','400':'#ea5c7b','500':'#e42f57','600':'#e11d48','700':'#a71635','800':'#83112a','900':'#630d20'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased theme-dark bg-slate-950 text-slate-100">
+<header class="sticky top-0 z-50 bg-slate-950/80 border-white/10 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Lenovo logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="products.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products</a></nav>
+    <a href="index.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="products.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products</a></div>
+</header>
+<main data-page="P2">
+<main class="bg-neutral-950 text-neutral-100 min-h-screen">
+  <!-- 1. Full-bleed product category hero with breadcrumb navigation -->
+  <section data-section="S1" class="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-neutral-900 border-b border-neutral-800">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fbdfe5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f193a7%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Lenovo Premium Hardware" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <nav class="flex justify-center items-center space-x-2 text-sm text-neutral-400 mb-6 font-display">
+        <a href="index.html" class="hover:text-red-500 transition-colors">Home</a>
+        <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-600"></i>
+        <span class="text-red-500 font-semibold">Products</span>
+      </nav>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold tracking-tight text-white mb-6">
+        Engineered For <span class="text-red-600">Excellence</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg text-neutral-300">
+        Discover our flagship lineup of high-performance laptops, professional ultrabooks, and immersive tablets built for the modern pioneer.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Category filter tabs -->
+  <section data-section="S2" class="py-8 bg-neutral-900 border-b border-neutral-800 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-3">
+      <button onclick="filterProducts('all')" data-filter="all" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-red-600 text-white shadow-lg shadow-red-900/30">
+        All Hardware
+      </button>
+      <button onclick="filterProducts('Ultrabook')" data-filter="Ultrabook" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-neutral-800 text-neutral-300 hover:bg-neutral-700">
+        Ultrabooks
+      </button>
+      <button onclick="filterProducts('Gaming')" data-filter="Gaming" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-neutral-800 text-neutral-300 hover:bg-neutral-700">
+        Gaming
+      </button>
+      <button onclick="filterProducts('Tablet')" data-filter="Tablet" class="filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-neutral-800 text-neutral-300 hover:bg-neutral-700">
+        Tablets
+      </button>
+    </div>
+  </section>
+
+  <!-- 3. Dynamic product grid displaying high-res hardware images -->
+  <section data-section="S3" class="py-16 md:py-24 bg-neutral-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered via script -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured special edition laptop banner with CTA -->
+  <section data-section="S4" class="py-16 md:py-24 bg-neutral-900 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#dc2626_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-neutral-950 border border-red-600/30 rounded-2xl p-8 md:p-12 shadow-2xl flex flex-col lg:flex-row items-center gap-10">
+        <div class="w-full lg:w-1/2">
+          <span class="inline-block px-3 py-1 bg-red-950 text-red-500 rounded-full text-xs font-semibold mb-4 tracking-wider uppercase border border-red-800/50">Special Edition</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-4">ThinkPad X1 Carbon Anniversary Edition</h2>
+          <p class="text-neutral-300 mb-6">
+            Crafted with aerospace-grade carbon fiber and accented with our signature crimson chassis trim. Limited global allocation for elite professionals.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#" class="px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-semibold transition-all text-center shadow-lg shadow-red-900/40">Secure Allocation (₹1,75,000)</a>
+            <a href="index.html" class="px-8 py-3 bg-neutral-800 hover:bg-neutral-700 text-neutral-200 rounded-xl font-semibold transition-all text-center">Explore Specs</a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fbdfe5%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f193a7%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="ThinkPad X1 Carbon Anniversary Edition" class="w-full h-72 md:h-80 object-cover rounded-xl shadow-xl border border-neutral-800">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why our engineering leads the industry feature strip -->
+  <section data-section="S5" class="py-16 md:py-24 bg-neutral-950 border-t border-neutral-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mb-4">Why Our Engineering Leads The Industry</h2>
+        <p class="text-neutral-400">Pioneering hardware solutions trusted by 10M+ users globally with an unmatched 4.9★ satisfaction rating.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-red-600/50 transition-all hover:-translate-y-1">
+          <div class="w-12 h-12 bg-red-950 text-red-500 rounded-xl flex items-center justify-center mb-6 border border-red-800/30">
+            <i data-lucide="cpu" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Thermal Architecture</h3>
+          <p class="text-neutral-400 text-sm">Advanced vapor chamber cooling systems ensure peak sustained performance without thermal throttling under heavy loads.</p>
+        </div>
+        <div class="p-8 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-red-600/50 transition-all hover:-translate-y-1">
+          <div class="w-12 h-12 bg-red-950 text-red-500 rounded-xl flex items-center justify-center mb-6 border border-red-800/30">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Military-Grade Durability</h3>
+          <p class="text-neutral-400 text-sm">Tested against 12 MIL-STD 810H methods and 200+ quality checks to survive extreme environments and accidental drops.</p>
+        </div>
+        <div class="p-8 bg-neutral-900 rounded-2xl border border-neutral-800 hover:border-red-600/50 transition-all hover:-translate-y-1">
+          <div class="w-12 h-12 bg-red-950 text-red-500 rounded-xl flex items-center justify-center mb-6 border border-red-800/30">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-display font-semibold text-white mb-3">Rapid Charge Tech</h3>
+          <p class="text-neutral-400 text-sm">Engineered battery cells deliver up to 80% charge in just 60 minutes, keeping your workflow uninterrupted all day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Exclusive hardware bundles and seasonal discounts section -->
+  <section data-section="S6" class="py-16 md:py-24 bg-neutral-900 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-red-500 font-semibold tracking-wider text-sm uppercase">Limited Offers</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-white mt-2 mb-4">Exclusive Hardware Bundles</h2>
+        <p class="text-neutral-400">Maximize your productivity with curated ecosystem bundles designed for creators, developers, and enterprise leaders.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 bg-neutral-950 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-display font-bold text-white">Creator Pro Bundle</h3>
+              <span class="px-3 py-1 bg-red-900/40 text-red-400 text-xs font-semibold rounded-full border border-red-700/30">Save ₹20,000</span>
+            </div>
+            <p class="text-neutral-400 text-sm mb-6">Includes Yoga 9i laptop, active stylus precision pen, and noise-canceling wireless ANC headphones.</p>
+            <ul class="space-y-3 mb-8 text-sm text-neutral-300">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Yoga 9i OLED Laptop (₹1,45,000 value)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Lenovo Precision Pen 2 included</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> 3-Year Accidental Damage Protection</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-neutral-800">
+            <div>
+              <span class="text-xs text-neutral-500 line-through">₹1,75,000</span>
+              <div class="text-xl font-bold text-white">₹1,55,000</div>
+            </div>
+            <a href="index.html" class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-sm font-semibold transition-all">Claim Bundle</a>
+          </div>
+        </div>
+
+        <div class="p-8 bg-neutral-950 rounded-2xl border border-neutral-800 flex flex-col justify-between">
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <h3 class="text-2xl font-display font-bold text-white">Ultimate Gaming Rig</h3>
+              <span class="px-3 py-1 bg-red-900/40 text-red-400 text-xs font-semibold rounded-full border border-red-700/30">Save ₹30,000</span>
+            </div>
+            <p class="text-neutral-400 text-sm mb-6">Complete battle station featuring Legion 7i Pro, RGB mechanical keyboard, and precision gaming mouse.</p>
+            <ul class="space-y-3 mb-8 text-sm text-neutral-300">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Legion 7i Pro RTX Laptop (₹2,10,000 value)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Legion M600 Wireless Gaming Mouse</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-red-500"></i> Legion H600 Wireless Headset</li>
+            </ul>
+          </div>
+          <div class="flex items-center justify-between pt-6 border-t border-neutral-800">
+            <div>
+              <span class="text-xs text-neutral-500 line-through">₹2,45,000</span>
+              <div class="text-xl font-bold text-white">₹2,15,000</div>
+            </div>
+            <a href="index.html" class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-sm font-semibold transition-all">Claim Bundle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const products = [
+    { name: "ThinkPad X1 Carbon", category: "Ultrabook", price: "₹1,50,000", desc: "Legendary durability meets featherlight carbon fiber construction for mobile executives.", image: "https://picsum.photos/seed/ThinkPad X1 Carbon/800/600" },
+    { name: "Yoga 9i", category: "Ultrabook", price: "₹1,45,000", desc: "Stunning OLED touchscreen display with a 360-degree rotating soundbar hinge.", image: "https://picsum.photos/seed/Yoga 9i/800/600" },
+    { name: "Legion 7i Pro", category: "Gaming", price: "₹2,10,000", desc: "Uncompromised gaming performance driven by advanced AI tuning and extreme thermal cooling.", image: "https://picsum.photos/seed/Legion 7i Pro/800/600" },
+    { name: "IdeaPad Slim 5", category: "Ultrabook", price: "₹65,000", desc: "Sleek aluminum chassis packed with reliable everyday performance and all-day battery.", image: "https://picsum.photos/seed/IdeaPad Slim 5/800/600" },
+    { name: "ThinkBook 14", category: "Ultrabook", price: "₹55,000", desc: "Modern business laptop designed for growing enterprises with robust security features.", image: "https://picsum.photos/seed/ThinkBook 14/800/600" },
+    { name: "Tab P12", category: "Tablet", price: "₹35,000", desc: "Immersive 3K large-screen entertainment and productivity tablet with pen support.", image: "https://picsum.photos/seed/Tab P12/800/600" }
+  ];
+
+  function renderProducts(filter) {
+    const grid = document.getElementById('product-grid');
+    if (!grid) return;
+    
+    const filtered = filter === 'all' ? products : products.filter(p => p.category === filter);
+    
+    grid.innerHTML = filtered.map(p => `
+      <div class="bg-neutral-900 rounded-2xl border border-neutral-800 overflow-hidden flex flex-col justify-between hover:border-red-600/50 transition-all hover:-translate-y-1 shadow-lg">
+        <div>
+          <div class="relative overflow-hidden h-64">
+            <img loading="lazy" decoding="async" src="${p.image}" alt="${p.name}" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+            <div class="absolute top-4 right-4 bg-neutral-950/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-semibold text-red-500 border border-neutral-800">
+              ${p.category}
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-display font-bold text-white mb-2">${p.name}</h3>
+            <p class="text-neutral-400 text-sm mb-4">${p.desc}</p>
+          </div>
+        </div>
+        <div class="p-6 pt-0 flex items-center justify-between border-t border-neutral-800/50 mt-4">
+          <div class="text-lg font-bold text-white">${p.price}</div>
+          <a href="index.html" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-semibold transition-all">Configure</a>
+        </div>
+      </div>
+    `).join('');
+    
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+
+  function filterProducts(category) {
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.className = "filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-red-600 text-white shadow-lg shadow-red-900/30";
+      } else {
+        btn.className = "filter-btn px-6 py-2.5 rounded-full text-sm font-semibold transition-all bg-neutral-800 text-neutral-300 hover:bg-neutral-700";
+      }
+    });
+    renderProducts(category);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderProducts('all');
+  });
+</script>
+</main>
+<footer class="bg-black text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Lenovo</p><p class="mt-3 text-sm text-slate-400">Engineering the Future of Personal Computing</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="products.html" class="hover:text-white">Products</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat 9 AM-9 PM, Sun 10 AM-6 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@lenovo.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Lenovo. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P2</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
