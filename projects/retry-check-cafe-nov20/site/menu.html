@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Retry Check Cafe</title>
+<meta name="description" content="Reboot your day with the perfect brew.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fffbeb','100':'#fef3c7','200':'#fde68a','300':'#fcd34d','400':'#fbbf24','500':'#d97706','600':'#b45309','700':'#92400e','800':'#78350f','900':'#451a03'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Retry Check Cafe logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a></div>
+</header>
+<main data-page="P2">
+<main>
+  <section data-section="S1" class="relative min-h-[50vh] flex items-center justify-center bg-stone-900 text-white">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Retry Check Cafe Interior" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+      <nav class="flex justify-center items-center gap-2 text-sm text-brand-300 mb-4 font-medium">
+        <a href="index.html" class="hover:underline">Home</a>
+        <span>/</span>
+        <span class="text-white">Menu</span>
+      </nav>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-4">Our Artisan Menu</h1>
+      <p class="text-lg sm:text-xl text-stone-300 max-w-2xl mx-auto">Reboot your day with our expertly brewed coffees, handcrafted sandwiches, and freshly baked pastries.</p>
+    </div>
+  </section>
+
+  <section data-section="S2" class="py-12 bg-brand-50 border-b border-brand-100 sticky top-16 z-30 backdrop-blur-md bg-opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap justify-center gap-3" id="menu-filters">
+        <button onclick="filterMenu('all')" class="px-6 py-2.5 rounded-full text-sm font-medium bg-brand-600 text-white shadow transition hover:bg-brand-700 active-filter" data-filter="all">All Items</button>
+        <button onclick="filterMenu('beverages')" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white text-stone-700 border border-brand-200 shadow-sm transition hover:bg-brand-100" data-filter="beverages">Coffee & Tea</button>
+        <button onclick="filterMenu('food')" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white text-stone-700 border border-brand-200 shadow-sm transition hover:bg-brand-100" data-filter="food">Sandwiches & Eats</button>
+        <button onclick="filterMenu('bakery')" class="px-6 py-2.5 rounded-full text-sm font-medium bg-white text-stone-700 border border-brand-200 shadow-sm transition hover:bg-brand-100" data-filter="bakery">Bakery & Desserts</button>
+      </div>
+    </div>
+  </section>
+
+  <section data-section="S3" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Liquid Refresh</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-1">Coffee & Tea Selection</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="beverages-grid">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="beverages">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Classic Espresso" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Classic Espresso</h3>
+              <span class="text-lg font-bold text-brand-600">₹150</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">A rich, concentrated shot of our signature single-origin roast with a velvety crema layer. Perfectly extracted to awaken your senses instantly.</p>
+            <button onclick="addToCart('Classic Espresso', 150)" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="beverages">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Cold Brew" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Cold Brew</h3>
+              <span class="text-lg font-bold text-brand-600">₹220</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">Steeped slowly for 18 hours to unlock ultra-smooth chocolate notes with zero bitterness. Served over crystal clear ice.</p>
+            <button onclick="addToCart('Cold Brew', 220)" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="beverages">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Masala Chai" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Masala Chai</h3>
+              <span class="text-lg font-bold text-brand-600">₹120</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">A robust blend of hand-crushed aromatic spices, fresh ginger, and premium Assam tea brewed with milk. Comfort in every single sip.</p>
+            <button onclick="addToCart('Masala Chai', 120)" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-section="S4" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Savory Bites</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-1">Artisan Sandwiches & Breakfast</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto" id="food-grid">
+        <div class="bg-stone-50 rounded-2xl shadow-sm overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="food">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Grilled Veg Sandwich" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Grilled Veg Sandwich</h3>
+              <span class="text-lg font-bold text-brand-600">₹280</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">Loaded with farm-fresh zucchini, bell peppers, melted artisanal cheese, and our house herb spread on sourdough. Grilled to absolute crisp perfection.</p>
+            <button onclick="addToCart('Grilled Veg Sandwich', 280)" class="w-full bg-white hover:bg-brand-600 hover:text-white text-brand-700 border border-brand-200 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-stone-50 rounded-2xl shadow-sm overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="food">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Pesto Chicken Panini" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Pesto Chicken Panini</h3>
+              <span class="text-lg font-bold text-brand-600">₹350</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">Tender grilled chicken breast tossed in vibrant basil pesto, sun-dried tomatoes, and fresh mozzarella pressed in rustic ciabatta bread.</p>
+            <button onclick="addToCart('Pesto Chicken Panini', 350)" class="w-full bg-white hover:bg-brand-600 hover:text-white text-brand-700 border border-brand-200 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-section="S5" class="py-16 md:py-24 bg-stone-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-12">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Sweet Treats</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-stone-900 mt-1">Dessert & Bakery Items</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto" id="bakery-grid">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="bakery">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Choco-Chip Cookie" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Choco-Chip Cookie</h3>
+              <span class="text-lg font-bold text-brand-600">₹90</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">Warm, gooey center with crisp edges packed generously with premium dark chocolate chunks. Baked fresh in small batches every morning.</p>
+            <button onclick="addToCart('Choco-Chip Cookie', 90)" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-stone-100 hover:-translate-y-1 transition duration-300 menu-item" data-category="bakery">
+          <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Almond Croissant" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-xl font-display font-bold text-stone-900">Almond Croissant</h3>
+              <span class="text-lg font-bold text-brand-600">₹180</span>
+            </div>
+            <p class="text-stone-600 text-sm mb-4">Flaky, buttery multi-layered pastry filled with rich frangipane cream and topped with toasted sliced almonds and powdered sugar.</p>
+            <button onclick="addToCart('Almond Croissant', 180)" class="w-full bg-brand-50 hover:bg-brand-600 hover:text-white text-brand-700 font-medium py-2.5 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i data-lucide="plus" class="w-4 h-4"></i> Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-section="S6" class="py-16 bg-brand-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-10">
+      <img loading="lazy" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22800%22%20height%3D%22600%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23fef3c7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23fcd34d%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22800%22%20height%3D%22600%22%20fill%3D%22url(%23g)%22%2F%3E%3C%2Fsvg%3E" alt="Pattern" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-brand-800/80 border border-brand-700 rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 text-center md:text-left">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-brand-600 text-white uppercase tracking-wider">Today's Special</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold">Honey Lavender Latte & Blueberry Muffin Combo</h2>
+        <p class="text-stone-300 text-sm sm:text-base max-w-xl">Experience our limited batch organic honey lavender syrup paired with a freshly baked warm blueberry muffin. Available all day today!</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto shrink-0">
+        <button onclick="addToCart('Honey Lavender Combo', 380)" class="bg-white text-brand-900 hover:bg-brand-100 font-semibold px-8 py-4 rounded-xl transition shadow-lg text-center">
+          Order Special (₹380)
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  function filterMenu(category) {
+    const buttons = document.querySelectorAll('#menu-filters button');
+    buttons.forEach(btn => {
+      if (btn.getAttribute('data-filter') === category) {
+        btn.classList.remove('bg-white', 'text-stone-700', 'border', 'border-brand-200');
+        btn.classList.add('bg-brand-600', 'text-white');
+      } else {
+        btn.classList.add('bg-white', 'text-stone-700', 'border', 'border-brand-200');
+        btn.classList.remove('bg-brand-600', 'text-white');
+      }
+    });
+
+    const items = document.querySelectorAll('.menu-item');
+    items.forEach(item => {
+      if (category === 'all' || item.getAttribute('data-category') === category) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  function addToCart(name, price) {
+    let cart = JSON.parse(localStorage.getItem('retry_cart')) || [];
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    localStorage.setItem('retry_cart', JSON.stringify(cart));
+    
+    // Toast notification
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-5 right-5 z-50 bg-stone-900 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-stone-800 animate-bounce';
+    toast.innerHTML = `<i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i><span>Added ${name} to your order!</span>`;
+    document.body.appendChild(toast);
+    lucide.createIcons();
+    setTimeout(() => toast.remove(), 3000);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Retry Check Cafe</p><p class="mt-3 text-sm text-slate-400">Reboot your day with the perfect brew.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="menu.html" class="hover:text-white">Menu</a><a href="contact.html" class="hover:text-white">Contact</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat: 9 AM - 9 PM, Sun: 10 AM - 6 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 80 4567 8910</p><p class="mt-2 text-sm text-slate-400">hello@retry-check-cafe.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Retry Check Cafe. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P2</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>
