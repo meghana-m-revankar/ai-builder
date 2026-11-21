@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 56" height="56">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&amp;display=swap');
+      .brand-text {
+        font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+        font-weight: 800;
+        font-size: 21px;
+        fill: #0f172a;
+      }
+    </style>
+  </defs>
+  
+  <!-- Icon (Croissant / Pastry geometric mark) -->
+  <g transform="translate(4, 4)">
+    <circle cx="24" cy="24" r="24" fill="#ea580c" opacity="0.1"/>
+    <!-- Stylized modern croissant / pastry slice -->
+    <path d="M24 13C29.5 13 34 16.5 35.5 21.5C32 20.5 28 20.5 24 20.5C20 20.5 16 20.5 12.5 21.5C14 16.5 18.5 13 24 13Z" fill="#ea580c"/>
+    <path d="M11 24C11 23 11.5 22 12.2 21C16 20 20 20 24 20C28 20 32 20 35.8 21C36.5 22 37 23 37 24C37 30 31 35 24 35C17 35 11 30 11 24Z" fill="#ea580c"/>
+    <!-- Playful crumb dots -->
+    <circle cx="16" cy="38" r="1.5" fill="#ea580c"/>
+    <circle cx="21" cy="40" r="1" fill="#ea580c"/>
+    <circle cx="30" cy="38" r="1.2" fill="#ea580c"/>
+  </g>
+
+  <!-- Business Name -->
+  <text x="64" y="34" class="brand-text">Sweet Crumbs</text>
+</svg>

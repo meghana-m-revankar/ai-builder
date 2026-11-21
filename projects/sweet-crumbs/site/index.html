@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | Sweet Crumbs</title>
+<meta name="description" content="Baked fresh every morning.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{'50':'#fef5f0','100':'#fde8dd','200':'#fbd1bb','300':'#f9b08b','400':'#f68950','500':'#f46820','600':'#ea580c','700':'#b34409','800':'#8d3507','900':'#6b2805'}},fontFamily:{display:['"Plus Jakarta Sans"','sans-serif'],sans:['Inter','sans-serif']}}}}</script>
+<link rel="icon" href="images/logo.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="font-sans antialiased bg-white text-slate-800">
+<header class="sticky top-0 z-50 bg-white/80 border-slate-200 backdrop-blur border-b transition-shadow">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-display text-xl font-extrabold text-brand-600"><img loading="lazy" decoding="async" src="images/logo.svg" alt="Sweet Crumbs logo" class="h-10 w-auto"></a>
+    <nav class="hidden md:flex items-center gap-1 text-sm font-medium"><a href="index.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Home</a><a href="menu.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Products / Menu</a><a href="contact.html" class="px-3 py-2 rounded-lg hover:text-brand-500 transition">Contact</a></nav>
+    <a href="contact.html" class="hidden md:inline-flex rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700">Get in touch</a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden p-2 rounded-lg" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 px-4 py-3 text-base font-medium"><a href="index.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Home</a><a href="menu.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Products / Menu</a><a href="contact.html" class="block px-4 py-3 rounded-lg hover:bg-brand-500/10">Contact</a></div>
+</header>
+<main data-page="P1">
+<main>
+  <!-- 1. Hero Section -->
+  <section data-section="S1" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/2389f203-5372-4197-ad41-beedd5b4180f/thumb/" alt="Sweet Crumbs Bakery Interior" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-24">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-600/90 text-white text-sm font-medium mb-6">
+        <i data-lucide="sparkles" class="w-4 h-4"></i> Baked fresh every morning
+      </span>
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6">
+        Artisanal Bakes Made With <span class="text-brand-400">Love</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-200 mb-10">
+        Welcome to Sweet Crumbs. Bringing warmth, sweetness, and delightful handcrafted treats to MG Road, Bengaluru since 2016.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="menu.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg transition transform hover:-translate-y-0.5">
+          <i data-lucide="cake" class="w-5 h-5"></i> Explore Menu
+        </a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white/15 hover:bg-white/25 text-white backdrop-blur-md font-semibold transition">
+          <i data-lucide="map-pin" class="w-5 h-5"></i> Visit Our Bakery
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Stats Strip -->
+  <section data-section="S2" class="bg-brand-50 py-12 border-y border-brand-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="p-4">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-brand-600 mb-2">8+</div>
+          <p class="text-gray-600 font-medium">Years of Baking</p>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-brand-600 mb-2">5000+</div>
+          <p class="text-gray-600 font-medium">Happy Customers</p>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-brand-600 mb-2">4.9★</div>
+          <p class="text-gray-600 font-medium">Google Rating</p>
+        </div>
+        <div class="p-4">
+          <div class="text-4xl sm:text-5xl font-display font-bold text-brand-600 mb-2">100%</div>
+          <p class="text-gray-600 font-medium">Fresh Ingredients</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Founder Story Preview -->
+  <section data-section="S3" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <div class="w-full lg:w-1/2">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/d5c04fbc-14dc-4627-a23b-d27b5f75fb8d/thumb/" alt="Ananya Rao Founder" class="w-full h-80 md:h-[450px] object-cover rounded-2xl shadow-xl">
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Our Story</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2 mb-6">
+            Turned kitchen passion into a neighborhood favorite.
+          </h2>
+          <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+            Founded in 2016 by Ananya Rao, Sweet Crumbs started out of a deep love for traditional baking and comforting aromas. What began as weekend experiments in a home kitchen has now blossomed into Bengaluru's coziest destination for sweet tooths.
+          </p>
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            Every recipe is crafted from scratch using wholesome ingredients, traditional techniques, and a generous pinch of warmth. We believe every crumb should tell a story of quality and care.
+          </p>
+          <a href="contact.html" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700 transition">
+            Meet the team <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Featured Products Carousel / Grid -->
+  <section data-section="S4" class="py-16 md:py-24 bg-brand-50/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">Bestsellers</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2">
+          Our Most Loved Creations
+        </h2>
+        <p class="text-gray-600 mt-4 text-lg">
+          Indulge in our signature bakes, loved by thousands across Bengaluru and baked fresh daily.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/a60b6aa9-3de8-42bc-a518-83de5931ab6a/thumb/" alt="Chocolate Cake" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-display font-bold text-xl text-gray-900">Chocolate Cake</h3>
+              <span class="text-brand-600 font-bold text-lg">₹600</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Decadent layers of moist sponge and rich dark chocolate ganache. A dream come true for every chocolate lover.
+            </p>
+            <a href="menu.html" class="w-full block text-center py-2.5 rounded-xl bg-brand-50 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold transition">
+              View in Menu
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/2389f203-5372-4197-ad41-beedd5b4180f/thumb/" alt="Red Velvet Cupcake" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-display font-bold text-xl text-gray-900">Red Velvet Cupcake</h3>
+              <span class="text-brand-600 font-bold text-lg">₹80</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Soft, velvety texture topped with our signature sweet cream cheese frosting. Perfectly sized for a quick treat.
+            </p>
+            <a href="menu.html" class="w-full block text-center py-2.5 rounded-xl bg-brand-50 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold transition">
+              View in Menu
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:-translate-y-1 transition duration-300">
+          <img loading="lazy" decoding="async" src="https://api.openverse.org/v1/images/2389f203-5372-4197-ad41-beedd5b4180f/thumb/" alt="Butter Cookies Box" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-2">
+              <h3 class="font-display font-bold text-xl text-gray-900">Butter Cookies Box</h3>
+              <span class="text-brand-600 font-bold text-lg">₹250</span>
+            </div>
+            <p class="text-gray-600 text-sm mb-4">
+              Delicately crisp and melt-in-your-mouth buttery cookies packaged in a rustic box. Perfect for tea time.
+            </p>
+            <a href="menu.html" class="w-full block text-center py-2.5 rounded-xl bg-brand-50 text-brand-600 hover:bg-brand-600 hover:text-white font-semibold transition">
+              View in Menu
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="menu.html" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow transition">
+          Browse Full Menu <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Why Choose Us Section -->
+  <section data-section="S5" class="py-16 md:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-semibold tracking-wide uppercase text-sm">The Sweet Crumbs Standard</span>
+        <h2 class="text-3xl sm:text-4xl font-display font-bold text-gray-900 mt-2">
+          Why Choose Our Bakery
+        </h2>
+        <p class="text-gray-600 mt-4 text-lg">
+          We combine traditional home-style baking with uncompromised quality standards.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl bg-brand-50/60 border border-brand-100 text-center">
+          <div class="w-14 h-14 mx-auto mb-6 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md">
+            <i data-lucide="wheat" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Fresh Ingredients</h3>
+          <p class="text-gray-600">
+            We source premium flour, real butter, and farm-fresh produce every single morning to ensure top-tier taste.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-brand-50/60 border border-brand-100 text-center">
+          <div class="w-14 h-14 mx-auto mb-6 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md">
+            <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Locally Sourced</h3>
+          <p class="text-gray-600">
+            Supporting local dairy farms and suppliers around Bengaluru allows us to keep our carbon footprint low and quality high.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl bg-brand-50/60 border border-brand-100 text-center">
+          <div class="w-14 h-14 mx-auto mb-6 rounded-xl bg-brand-600 text-white flex items-center justify-center shadow-md">
+            <i data-lucide="clock" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-display font-bold text-xl text-gray-900 mb-3">Baked Daily</h3>
+          <p class="text-gray-600">
+            No day-old pastries here. Everything is baked in small batches throughout the day so you get it warm and fresh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Daily Specials Showcase with Price Tags -->
+  <section data-section="S6" class="py-16 md:py-24 bg-brand-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div class="lg:w-1/2">
+          <span class="text-brand-400 font-semibold tracking-wide uppercase text-sm">Special Offer</span>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold mt-2 mb-6">
+            Enjoy 10% Off On Orders Above ₹1000!
+          </h2>
+          <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+            Planning a celebration or stocking up on your favorite treats? Place an order above ₹1000 today and receive an automatic 10% discount at checkout.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="menu.html" class="px-8 py-4 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold shadow transition">
+              Order Now
+            </a>
+            <a href="contact.html" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-md transition">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:w-1/2 w-full">
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/10">
+            <h3 class="text-2xl font-display font-bold mb-6 flex items-center gap-2">
+              <i data-lucide="tag" class="w-6 h-6 text-brand-400"></i> Today's Spotlight Items
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex justify-between items-center pb-4 border-b border-white/10">
+                <div>
+                  <h4 class="font-semibold text-lg">Birthday Cake</h4>
+                  <p class="text-sm text-gray-300">Customizable celebration cakes</p>
+                </div>
+                <span class="text-xl font-bold text-brand-400">₹900</span>
+              </li>
+              <li class="flex justify-between items-center pb-4 border-b border-white/10">
+                <div>
+                  <h4 class="font-semibold text-lg">Blueberry Muffin</h4>
+                  <p class="text-sm text-gray-300">Bursting with fresh blueberries</p>
+                </div>
+                <span class="text-xl font-bold text-brand-400">₹120</span>
+              </li>
+              <li class="flex justify-between items-center">
+                <div>
+                  <h4 class="font-semibold text-lg">Almond Biscotti</h4>
+                  <p class="text-sm text-gray-300">Crunchy twice-baked Italian biscuits</p>
+                </div>
+                <span class="text-xl font-bold text-brand-400">₹200</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  });
+</script>
+</main>
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><p class="font-display text-xl font-extrabold text-white">Sweet Crumbs</p><p class="mt-3 text-sm text-slate-400">Baked fresh every morning.</p></div>
+    <div><p class="font-semibold text-white">Pages</p><div class="mt-3 grid gap-2 text-sm"><a href="index.html" class="hover:text-white">Home</a><a href="menu.html" class="hover:text-white">Products / Menu</a><a href="contact.html" class="hover:text-white">Contact</a></div></div>
+    <div><p class="font-semibold text-white">Visit us</p><p class="mt-3 text-sm text-slate-400">12, MG Road, Bengaluru 560001</p><p class="mt-2 text-sm text-slate-400">Mon-Sat, 9 AM - 8 PM</p></div>
+    <div><p class="font-semibold text-white">Contact</p><p class="mt-3 text-sm text-slate-400">+91 98765 43210</p><p class="mt-2 text-sm text-slate-400">hello@sweetcrumbs.in</p></div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-slate-500">© <span data-year>2026</span> Sweet Crumbs. All rights reserved.</div>
+<div data-page-label class="notranslate" style="text-align:center;font:500 12px Inter,sans-serif;opacity:.65;padding:10px 0 18px">Page P1</div></footer>
+<script src="js/site-kit.js"></script>
+</body>
+</html>

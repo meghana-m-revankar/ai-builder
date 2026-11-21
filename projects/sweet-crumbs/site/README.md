@@ -1,0 +1,7 @@
+# Sweet Crumbs
+
+Baked fresh every morning.
+
+Static website - open index.html in a browser or host the folder on any static host.
+
+Pages: index.html, menu.html, contact.html
