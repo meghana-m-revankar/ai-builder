@@ -3,30 +3,30 @@
     "page": "P1",
     "file": "index.html",
     "title": "Home",
-    "sections": 6
+    "sections": 7
   },
   {
     "page": "P2",
-    "file": "products.html",
-    "title": "Products",
-    "sections": 1
+    "file": "about.html",
+    "title": "About Us",
+    "sections": 7
   },
   {
     "page": "P3",
-    "file": "cart.html",
-    "title": "Cart / Checkout",
-    "sections": 2
+    "file": "services.html",
+    "title": "Our Services",
+    "sections": 6
   },
   {
     "page": "P4",
-    "file": "about.html",
-    "title": "About",
-    "sections": 6
+    "file": "team.html",
+    "title": "Our Team",
+    "sections": 5
   },
   {
     "page": "P5",
-    "file": "faq.html",
-    "title": "FAQ",
-    "sections": 6
+    "file": "blog.html",
+    "title": "Wellness Journal",
+    "sections": 5
   }
 ]

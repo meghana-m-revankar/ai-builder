@@ -1,0 +1,80 @@
+@page "/activities"
+
+<PageTitle>JioLife - Activity Tracker</PageTitle>
+
+<div class="space-y-6">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-900">Activity Logs</h1>
+            <p class="text-slate-500">Record and manage your daily workouts and physical activities.</p>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Add Activity Form -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm h-fit">
+            <h2 class="text-lg font-bold text-slate-900 mb-4">Log New Activity</h2>
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Activity Type</label>
+                    <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <option>Running</option>
+                        <option>Cycling</option>
+                        <option>Yoga</option>
+                        <option>Weight Training</option>
+                        <option>Swimming</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Duration (minutes)</label>
+                    <input type="number" placeholder="e.g. 45" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Calories Burned</label>
+                    <input type="number" placeholder="e.g. 350" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                </div>
+                <button type="button" class="w-full bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 rounded-xl transition shadow-lg shadow-purple-700/20">
+                    Save Activity
+                </button>
+            </form>
+        </div>
+
+        <!-- Activity List Table -->
+        <div class="lg:col-span-2 bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
+            <h2 class="text-lg font-bold text-slate-900 mb-4">History</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-100 text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                            <th class="py-3 px-4">Type</th>
+                            <th class="py-3 px-4">Duration</th>
+                            <th class="py-3 px-4">Calories</th>
+                            <th class="py-3 px-4">Logged At</th>
+                            <th class="py-3 px-4 text-right">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600 divide-y divide-slate-50">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-4 px-4 font-semibold text-slate-900">Running</td>
+                            <td class="py-4 px-4">45 mins</td>
+                            <td class="py-4 px-4 font-mono text-slate-900">420 kcal</td>
+                            <td class="py-4 px-4 text-slate-400">2023-10-25</td>
+                            <td class="py-4 px-4 text-right">
+                                <button class="text-red-500 hover:text-red-700 p-1 rounded-lg"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-4 px-4 font-semibold text-slate-900">Cycling</td>
+                            <td class="py-4 px-4">60 mins</td>
+                            <td class="py-4 px-4 font-mono text-slate-900">550 kcal</td>
+                            <td class="py-4 px-4 text-slate-400">2023-10-24</td>
+                            <td class="py-4 px-4 text-right">
+                                <button class="text-red-500 hover:text-red-700 p-1 rounded-lg"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
