@@ -1,0 +1,14 @@
+[
+  {
+    "page": "P1",
+    "file": "index.html",
+    "title": "Home",
+    "sections": 7
+  },
+  {
+    "page": "P2",
+    "file": "about.html",
+    "title": "About",
+    "sections": 7
+  }
+]
