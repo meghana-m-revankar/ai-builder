@@ -1,0 +1,26 @@
+[
+  {
+    "page": "P1",
+    "file": "index.html",
+    "title": "Home",
+    "sections": 4
+  },
+  {
+    "page": "P2",
+    "file": "services.html",
+    "title": "Services",
+    "sections": 4
+  },
+  {
+    "page": "P3",
+    "file": "gallery.html",
+    "title": "Gallery",
+    "sections": 1
+  },
+  {
+    "page": "P4",
+    "file": "pricing.html",
+    "title": "Pricing",
+    "sections": 4
+  }
+]
