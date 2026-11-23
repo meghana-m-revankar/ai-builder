@@ -1,3 +1,0 @@
-- Pages: Home (index.html), About (about.html), Services (services.html), Contact (contact.html)
-- Structure: docs/index.html, docs/about.html, docs/services.html, docs/contact.html, docs/css/styles.css, docs/js/main.js, docs/images/
-- Style: Static HTML + Tailwind CSS, light theme, marketing agency palette.

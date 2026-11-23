@@ -1,2 +1,0 @@
-- Pages: 1. Home, 2. About, 3. Products / Menu, 4. Contact
-- Structure: index.html, about.html, menu.html, contact.html, css/, js/, images/
