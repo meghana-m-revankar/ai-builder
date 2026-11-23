@@ -1,0 +1,4 @@
+- pages: index.html, about.html, contact.html
+- structure: index.html, css/styles.css, js/main.js, images/
+- stack: static html, tailwind css
+- design: clean, light theme

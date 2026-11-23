@@ -1,0 +1,32 @@
+[
+  {
+    "page": "P1",
+    "file": "index.html",
+    "title": "Home",
+    "sections": 6
+  },
+  {
+    "page": "P2",
+    "file": "about.html",
+    "title": "About Us",
+    "sections": 6
+  },
+  {
+    "page": "P3",
+    "file": "services.html",
+    "title": "Our Services",
+    "sections": 8
+  },
+  {
+    "page": "P4",
+    "file": "booking.html",
+    "title": "Book a Session",
+    "sections": 5
+  },
+  {
+    "page": "P5",
+    "file": "blog.html",
+    "title": "Wellness Journal",
+    "sections": 3
+  }
+]

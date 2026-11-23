@@ -1,0 +1,8 @@
+<svg xmlns="http://www.
+w3.org/2000/svg" viewBox="0 0 240 56" height="56">
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="44" height="44" rx="10" fill="#3d5268" />
+    <path d="M14 14h16v4H18v6h10v4H18v6h12v4H14z" fill="#ffffff" />
+  </g>
+  <text x="62" y="35" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="22" fill="#0f172a" letter-spacing="-0.5">BUSINESS</text>
+</svg>
