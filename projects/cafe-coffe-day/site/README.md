@@ -1,7 +1,7 @@
-# Cafe Coffee Day
+# Cafe Coffe Day
 
-India's favorite destination for conversation and coffee.
+Savor the perfect brew in the heart of Pune.
 
 Static website - open index.html in a browser or host the folder on any static host.
 
-Pages: index.html, about.html, menu.html, booking.html, blog.html
+Pages: index.html, about.html, menu.html, gallery.html, testimonials.html
