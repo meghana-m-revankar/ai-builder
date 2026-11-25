@@ -1,0 +1,7 @@
+# Skima's
+
+Handmade soy candles crafted in Bengaluru
+
+Static website - open index.html in a browser or host the folder on any static host.
+
+Pages: index.html, shop.html, about.html, gallery.html
