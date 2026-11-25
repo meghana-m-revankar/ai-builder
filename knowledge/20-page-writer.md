@@ -13,4 +13,6 @@ Keep this file under 5 KB: it is added to the system prompt of every page the wr
 9. **SEO/a11y**: headings in order, descriptive alt on every image, labels on every field, `aria-label` on icon buttons, visible focus styles, descriptive link text.
 10. **Images**: only `https://picsum.photos/seed/<2-4 words describing the photo>/<w>/<h>`, every seed different; hero 1600/900, cards 800/600.
 11. **Motion**: hover lift/zoom and fade-up reveal only; nothing infinite; respect reduced motion.
-12. **Done means**: every link goes to a listed page or an id on this page, every button does something, no lorem ipsum, no "Feature 1".
+12. **Libraries (18)**: only when needed on that page. SweetAlert2 for confirmations and form results; Chart.js for charts (with a text summary); Simple-DataTables for big admin tables (plain table otherwise). No jQuery. Login screens use an auth provider (Firebase/Supabase, OAuth with PKCE) or are a Sample screen.
+13. **Client media**: if CLIENT MEDIA URLs are given, use them exactly (hero first, then gallery, products, team) before any picsum image.
+14. **Done means**: every link goes to a listed page or an id on this page, every button does something, no lorem ipsum, no "Feature 1".

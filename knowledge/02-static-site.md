@@ -28,7 +28,7 @@ All three choices use the same fonts, Lucide icons (see 01 Design System → Ico
 ```
 - MUST include the Google Fonts link and the Lucide script on every page, whatever the framework.
 - Images: the URLs in the brief's **Image Library** first, then `https://picsum.photos` as fallback, `https://i.pravatar.cc` for avatars, and the client's own "Logo URL". See 01 Design System → Imagery.
-- No jQuery, no other libraries. Charts: inline SVG or CSS.
+- No jQuery. The only extra libraries allowed are in 18 UI Libraries and Auth (SweetAlert2, Chart.js, Simple-DataTables, three.js for 3D sections), each loaded only on pages that use it.
 
 ## No inline styles (MUST)
 - No `style="..."` attributes anywhere. No `<style>` blocks inside pages (except the Tailwind config script).
