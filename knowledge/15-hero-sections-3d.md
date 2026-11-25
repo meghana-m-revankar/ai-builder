@@ -27,7 +27,32 @@ Allowed 3D source (static sites):
 ```html
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}</script>
 ```
-Scenes are simple procedural geometry (floating shapes, soft-lit product plinth, particles, an isometric building block for real estate). Do not load external 3D models unless the brief provides a `.glb` file.
+Scene types (`data-scene`):
+| Scene | What it shows | Use for |
+|---|---|---|
+| `product` | the section's product photo as a floating 3D card (thickness, soft shadow, turns towards the pointer) | e-commerce hero, featured product, tech shop items |
+| `laptop` | a 3D laptop with the section's image as its screen | SaaS, hosting, IT services, web agencies (screenshot / dashboard image) |
+| `phone` | a 3D phone with the section's image as its screen | mobile apps, app products, booking apps |
+| `model` + `data-model="<.glb url>"` | the client's real 3D model (Blender export), auto-centred and turning | when the brief / media library gives a `.glb` |
+| `orbit`, `particles`, `walkthrough` | abstract background scenes | tech heroes, agencies, real estate |
+
+For `product`, `laptop` and `phone`, put the image inside its own frame element (`<div class="relative aspect-[4/3]"><img data-product …></div>`, or `data-screen` for device screenshots). The 3D version replaces the image in exactly that frame, and the image remains the 2D fallback. Do not load external 3D models unless the brief provides a `.glb` file.
+
+## B2. Studio Motion direction (award-style)
+For agencies, portfolios, creative studios and premium brands. It uses the same 3D rules plus motion attributes, handled by the motion kit (GSAP + ScrollTrigger + Lenis, loaded only for this direction):
+| Attribute | Effect |
+|---|---|
+| `data-split` on an h1/h2 with plain text | words slide up line by line |
+| `data-reveal` | block fades and rises in |
+| `data-pin` on a section, `data-pin-step` on its children | section pins and steps animate in while scrolling (desktop) |
+| `data-speed="0.15"` on an image | parallax |
+| `data-marquee` on a wrapper with one child `<span>` | infinite scrolling strip (clients, services) |
+| `data-magnetic` on buttons | button pulls towards the cursor |
+| `data-hover-zoom` on case-study / product cards | image zoom on hover |
+| `data-cursor` on `<body>` (added automatically) | custom cursor that grows over links |
+| `<div data-preloader>Brand</div>` first in `<main>` (optional) | short branded intro |
+
+Use oversized type (`text-6xl md:text-8xl`), generous space, one bold accent, big case-study images, and at most one marquee and one pinned section per page. All motion turns off for reduced motion, touch devices (pointer effects) and slow connections, and every piece of content is readable without it.
 
 ## C. Hero / banner types
 Pick the one the brief asks for; otherwise the industry default from 14 Industries.
