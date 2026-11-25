@@ -46,7 +46,8 @@ site/
   assets/logo.svg       SVG logo built from the project name in brand colours
 ```
 - Relative paths only (`css/style.css`, never `/css/style.css`). The site is served from a sub-folder.
-- Lists, cards, tables, testimonials and prices are rendered by `app.js` from `data.js`, not typed by hand in HTML.
+- **Public marketing content** (cards, menu items, products, testimonials, team, FAQ) is written **directly in the HTML**, so a page is never empty if a script fails and search engines can read it.
+- Only **app screens** (booking slots, cart, dashboard tables) render from `data.js` + `localStorage`.
 
 ## Minimum content (MUST)
 - **Landing / marketing home**: at least 8 sections: navbar, hero (headline, sub-headline, 2 buttons, hero image), trust/stats strip, features or services (6 cards with icons), products or showcase (from data.js, with images and prices), how it works (3-4 steps), testimonials (3+, with avatars and star ratings), FAQ accordion (5+), CTA band, footer (logo, 3-4 link columns, contact, social icons).
@@ -62,7 +63,7 @@ site/
 
 ## Behaviour (must actually work)
 - Navigation links go to real pages or real section ids. No `href="#"`.
-- Tables and card grids render from `data.js`; search filters live; filter dropdowns work.
+- App tables render from `data.js`; search and filter tabs work on the HTML cards (show/hide by `data-category`).
 - Forms validate; on submit, add the record (stored in `localStorage` under a project-specific key), show a success toast, reset the form.
 - Delete asks for confirmation in a modal, then removes the item and shows a toast.
 - Empty, loading and error states exist for every list.
@@ -78,7 +79,8 @@ Use 09 Site Template as the starting point and adapt it to the project, brand an
 ## Before you answer, check
 - [ ] Google Fonts and Lucide on every page; no other icon pack used
 - [ ] Zero `style="` and zero `onclick=` in the HTML
-- [ ] Minimum sections present, data rendered from data.js, images and icons used
+- [ ] Minimum sections present, marketing content written in the HTML, images and icons used
 - [ ] All files inside `site/`, relative paths only
-- [ ] Looks finished at 375px and 1440px
-- [ ] Page numbers (`data-page`), section numbers (`data-section`) and `site/pages.json` present, per 14 Page and Section Numbers
+- [ ] Looks finished at 360px, 768px and 1280px (16 Production Standards)
+- [ ] No invented business facts; every placeholder marked Sample (00 Start Here)
+- [ ] Page numbers (`data-page`), section numbers (`data-section`) and `site/pages.json` are added automatically by the pipeline; do not remove them when editing

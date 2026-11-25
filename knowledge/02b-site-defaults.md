@@ -4,37 +4,36 @@ Applies to the Static Site agent and the site planner. The user may write only o
 ("website for my bakery"). Everything below is filled in automatically, so the user never has to
 describe the header, footer, contact details or standard pages.
 
-**Rule:** if the request gives a value (name, address, phone, colours, pages), use the request.
-Otherwise use the default from this file. Never leave a field empty, never write "Lorem ipsum",
-"Your address here", "123 Main Street" or "example.com".
+**Rule:** if the request gives a value (name, address, phone, colours, pages), use the request exactly.
+Otherwise follow the honesty rule in 00 Start Here: **design and structure** come from this file,
+**business facts are never invented** — they are written as clearly labelled **Sample** content.
+Never write "Lorem ipsum", "Feature 1" or "123 Main Street".
 
 ---
 
-## 1. Default business details
+## 1. Business details: given facts vs Sample placeholders
 
-Use these when the request does not give them. Replace `<Business Name>` and `<slug>` with the
-project name (slug = lowercase, words joined with `-`).
+Replace `<Business Name>` with the project name. Put every placeholder fact inside
+`<span class="sample" data-sample>…</span>` so it is visibly marked and easy to find later.
 
-| Field | Default |
-|---|---|
-| Business name | The project name, in Title Case |
-| Tagline | One short line (max 8 words) written for this business type |
-| City | Bengaluru, Karnataka, India |
-| Address | 2nd Floor, 14 MG Road, Ashok Nagar, Bengaluru, Karnataka 560001 |
-| Phone | +91 80 4567 8910 |
-| WhatsApp | +91 98450 12345 (link: `https://wa.me/919845012345`) |
-| Email | hello@`<slug>`.in |
-| Opening hours | Mon - Sat: 9:00 AM - 9:00 PM · Sunday: 10:00 AM - 6:00 PM |
-| Founded | 2016 (use "Since 2016" and "8+ years") |
-| Currency | Indian Rupee, written as ₹ (e.g. ₹249, ₹1,499) |
-| Social links | Instagram, Facebook, X, LinkedIn, YouTube: `https://instagram.com/<slug>` etc. |
-| Map | Google Maps embed for the address: `https://www.google.com/maps?q=MG+Road+Bengaluru&output=embed` in an `<iframe loading="lazy">` |
+| Field | If given | If NOT given (Sample) |
+|---|---|---|
+| Business name | as given | the project name, Title Case (not Sample) |
+| Tagline | as given | write one for the business type, max 8 words (copy, not a fact — no badge) |
+| Address | as given | `Your street, City` (Sample) |
+| Phone / WhatsApp | as given (`tel:` / `https://wa.me/` links) | `+91 00000 00000` (Sample), link `tel:` left empty → link to contact.html |
+| Email | as given (`mailto:`) | `hello@yourbusiness.com` (Sample) |
+| Opening hours | as given | `Add your opening hours` (Sample) |
+| Year founded, customer counts, ratings | as given | do NOT show a number; use a non-numeric trust line ("Locally owned", "Made fresh daily") |
+| Prices | as given | `from ₹XXX` or no price (Sample badge on the card) |
+| Products / services | as given | 6-9 typical items for the business type, each card with a **Sample** badge |
+| Team / founder | as given | role-only cards ("Head Chef", "Lead Stylist") with a Sample badge and an initials avatar; no invented personal names |
+| Testimonials | as given | section titled "What customers say" with a visible note "Sample reviews — replace with real ones"; reviewer shown as "Customer name" |
+| Social links | as given | omit social icons |
+| Map | from the given address | omit the map; show "Add your location" (Sample) |
+| Currency | from the country (default ₹) | ₹ |
 
-Business facts to invent when missing (keep them realistic and specific to the business type):
-- 6-9 products or services with names, one-line descriptions and ₹ prices
-- 3 numbers for the stats strip (e.g. "12,000+ happy customers", "4.8★ Google rating", "8+ years")
-- a founder name and a 2-sentence founder story
-- 3 testimonials with Indian names, the city and a star rating
+Sample badge style (Tailwind): `inline-flex items-center rounded-full bg-amber-100 text-amber-800 text-xs font-semibold px-2 py-0.5`.
 
 ---
 
@@ -65,8 +64,8 @@ A page with only a heading and a few lines of text is a failure. Every page othe
 - **Category filter tabs** at the top (All + each category), working with JavaScript: clicking a tab
   shows only that category, the active tab is highlighted.
 - **Every item is a card with:** a photo (`h-56 w-full object-cover rounded-xl`, picsum seed that
-  describes that exact item, e.g. `masala-chai-clay-cup`), name, 2-line appetising description, ₹ price
-  in bold brand colour, small badges where they fit (Bestseller, Veg, Spicy 🌶, New, Chef's pick), and an
+  describes that exact item, e.g. `masala-chai-clay-cup`), name, 2-line appetising description, the given
+  ₹ price in bold brand colour (or a **Sample** badge and "from ₹XXX" when prices are not given), small badges where they fit (Bestseller, Veg, Spicy 🌶, New, Chef's pick), and an
   "Add" / "Order" / "Book" button.
 - Write **all items directly in the HTML** (not rendered from empty JS arrays), so the page is never empty.
 - Also on this page: a **featured item** banner (split image/text, "Today's special"), a short
@@ -77,9 +76,9 @@ A page with only a heading and a few lines of text is a failure. Every page othe
   "Coffee", or one-word descriptions.
 
 ### About page
-Page hero, story (split image/text, 2 paragraphs), timeline (4 milestones with years), values (3 icon
-cards), team (4 people with photo `https://i.pravatar.cc/300?img=<n>`, name, role, one line), stats strip,
-gallery (6 photos), CTA.
+Page hero, story (split image/text, 2 paragraphs — the given story, or a Sample story template the owner
+fills in), timeline only if real milestones are given, values (3 icon cards), team (given people; otherwise
+role-only Sample cards with initials avatars), trust strip, gallery (6 photos), CTA.
 
 ### Contact page
 Page hero, 3 contact cards (Call, WhatsApp, Email with icons and links), contact form (name, phone,
@@ -128,13 +127,13 @@ Floating **WhatsApp button** on every page: bottom-right, round, green (`bg-gree
 ## 5. Default home page sections (in this order)
 
 1. Hero: full-bleed photo with dark gradient overlay, headline, sub-headline, 2 buttons (primary + "Explore <Services>")
-2. Stats strip: the 3 numbers + Google rating
+2. Trust strip: given numbers/rating only; otherwise 3-4 non-numeric trust points with icons ("Locally owned", "Fresh every day")
 3. About preview: split image/text, founder quote, "Read our story" → about.html
 4. Featured items: 6 cards (image, name, ₹ price, button) → services.html
 5. Why choose us: 6 feature cards with Lucide icons
 6. How it works: 3 steps
 7. Gallery: 6-8 photos in a bento grid
-8. Testimonials: 3 cards with avatars and stars
+8. Testimonials: real ones from the brief; otherwise 3 cards marked "Sample reviews — replace with real ones", reviewer "Customer name", no star rating
 9. FAQ: 5 items using `<details>`
 10. CTA band, then the footer
 
@@ -169,5 +168,6 @@ Type only this into the form; everything else comes from the defaults above:
 - **Icon Pack:** `Lucide` (always; no other pack)
 
 Expected result: 4-5 pages (Home, About, Menu, Contact, plus Booking), sticky header with
-"Book a Table", 4-column footer with the MG Road address, +91 phone, hours and social icons, a
-WhatsApp button, amber warm design, menu items with ₹ prices.
+"Book a Table", 4-column footer whose address, phone and hours are **Sample** placeholders,
+a warm restaurant theme from 17 Themes, menu cards marked Sample, and a summary listing every
+Sample item the owner must replace. No invented address, phone, prices or customer names.

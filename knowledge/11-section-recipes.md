@@ -13,7 +13,7 @@ Alternate section backgrounds so the page never shows two plain white sections i
 | R2 | Hero | 2 columns from lg. Left: eyebrow with icon, h1 (`.hero-title`, fluid `--fs-hero`) with ONE word in `text-brand-500`, lead paragraph, 2 buttons (accent + outline, both with icons), 3 stats (mono number + label). Right: 4:3 image `rounded-xl2 shadow-soft` + 2 floating `.chip` (rating, live status). Background `.hero-glow` |
 | R3 | Trust strip | 4-6 items in a row: icon + bold value + small label (e.g. "4.9 Google rating", "12 trainers", "Since 2016") on `border-y border-line` |
 | R4 | Bento features | `md:grid-cols-3 md:grid-rows-2`; card 1 spans 2×2 with image + title + text; 4 smaller cards each with `.icon-tile`, title, text |
-| R5 | Showcase / products | `bg-brand-100`; heading left + filter pills right; 4-8 cards from data.js: image with zoom, badge pill, title + mono price, 1-line description, button or link |
+| R5 | Showcase / products | `bg-brand-100`; heading left + filter pills right; 4-8 cards written in the HTML: image with zoom, badge pill, title + mono price, 1-line description, button or link |
 | R6 | How it works | 3-4 numbered steps; each: big mono number in a brand circle, icon, title, text; connecting line on lg |
 | R7 | Stats band or mockup | either 4 big numbers on `bg-brand-900`, or an HTML/CSS product mockup (app card, schedule widget, phone frame) next to a bullet list with check icons |
 | R8 | Testimonials | `bg-brand-900 text-white`; 3 cards on `bg-white/5 border-white/10`: 5 star icons, quote, avatar img + name + role |
@@ -36,5 +36,6 @@ Alternate section backgrounds so the page never shows two plain white sections i
 - A hero without an image or mockup, or with a centred text-only layout.
 - Default framework look: unstyled Bootstrap `.card`, blue `btn-primary` (#0D6EFD), grey borders only.
 - Fewer than 3 depth cues on the page (shadow, gradient, overlap, floating chip, blur).
-- Lists or cards typed by hand in HTML instead of rendered from data.js.
+- Public content rendered by JavaScript into empty containers (write it in the HTML; only app screens use data.js).
+- Invented facts (prices, phone, reviews, counts) without a Sample label.
 - Generic copy: "Welcome to our website", "Feature 1", "Lorem ipsum", "Our services".
