@@ -47,7 +47,7 @@ Subcategories: restaurant, cafe / coffee shop, bakery / desserts, cloud kitchen,
 - **Facts to use**: menu with prices, opening hours, address and map, booking / delivery links, dietary labels (veg, vegan, spicy).
 - **Primary button**: "Book a table" / "Order online" / "Check availability" (hotels).
 - **User flow**: Home → Menu (or Rooms) → Booking (date, time/nights, guests) → Confirmation; or Menu → Order online link. Phone, hours and directions one tap away on mobile.
-- **Rules**: no 3D hero by default — food photography sells better; at most a 3D gallery.
+- **Rules**: when the AI picks the mode for each section, the hero stays 2D because food photography sells better. If the owner chooses 3D Interactive for the whole site, the hero may use a light 3D scene (e.g. a floating dish on a plinth) layered behind the photo.
 
 ## 5. Corporate, Agencies & Professional Services
 Subcategories: marketing / creative agency, consulting, law firm, accounting / finance, manufacturing / industrial, logistics.

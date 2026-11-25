@@ -3,14 +3,18 @@
 How to build heroes and content sections, choose layouts, and use 3D without hurting speed or usability.
 
 ## A. Design direction
-| Direction | What it means |
+The direction applies to the **whole website**: every page follows it.
+
+| Direction | What it means for the whole site |
 |---|---|
-| **2D Modern** (default) | Clean, minimal, elegant type, smooth hover and scroll-reveal micro-interactions, fast. No WebGL. |
-| **3D Interactive** | The 1-2 sections marked `[3D]` in 14 Industries get an interactive 3D scene; everything else stays 2D Modern. |
-| **Mixed** | The brief lists the mode per section (e.g. "Hero: 3D, Gallery: 2D"). Follow it exactly. |
+| **2D Modern** (default) | Clean, minimal, elegant type, smooth hover and scroll-reveal micro-interactions, fast. No WebGL on any page. |
+| **3D Interactive** | Every page has a **3D look and feel**: (1) depth styling everywhere, using layered cards, CSS `perspective` tilt on cards (desktop only), parallax layers and scroll-triggered depth reveals, all CSS + IntersectionObserver; (2) a **real 3D scene (WebGL) in 1-2 sections per page**, normally the page hero plus at most one more (product showcase, property walkthrough, gallery). The home page gets the richest scene; inner pages get a lighter hero scene. |
+| **Mixed** | The brief lists a mode for each section (e.g. "Hero: 3D, everything else: 2D"). Follow it exactly. A section without a mode uses the website's direction. |
+
+Users can override any single section (2D ↔ 3D) without losing content, because both versions share the same HTML (rule 3 below).
 
 ## B. 3D rules (MUST)
-1. **Maximum 2 sections with 3D per page.** Never 3D on every page; inner pages are 2D unless the brief says otherwise.
+1. **At most 2 WebGL sections per page**, on any page. A 3D Interactive site gets 3D depth styling on every page, but never WebGL in every section. Usability and speed come first.
 2. **Always 2D**: navigation, footer, forms, checkout, FAQ, testimonials, reviews, team, blog, pricing tables.
 3. **Same content both ways**: a 3D section has the same heading, text, buttons and images as its 2D version. Write the 2D version in the HTML first; the 3D scene is an enhancement layered behind or beside it.
 4. **Mark it**: `<section data-variant="3d" data-scene="orbit|product|walkthrough|particles">`. The 2D fallback is the section's normal HTML.
