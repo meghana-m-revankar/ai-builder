@@ -1,0 +1,12 @@
+<svg xmlns="http://www
+.w3.org/2000/svg" viewBox="0 0 240 56" height="56">
+  <g transform="translate(6, 4)">
+    <circle cx="24" cy="24" r="22" fill="#f3e8ff" />
+    <path d="M20 12 C18 12 16 14 16 18 V28 C16 32 18 34 20 34 C22 34 24 32 24 28 V18 C24 14 22 12 20 12 Z" fill="#8b5cf6" />
+    <path d="M12 14 C12 13 13 12 14 12 C15 12 16 13 16 14 V20 C16 21 15 22 14 22 C13 22 12 21 12 20 Z" fill="#8b5cf6" />
+    <path d="M28 14 C28 13 29 12 30 12 C31 12 32 13 32 14 V20 C32 21 31 22 30 22 C29 22 28 21 28 20 Z" fill="#8b5cf6" />
+    <path d="M12 38 H36 C38 38 38 40 36 40 H12 C10 40 10 38 12 38 Z" fill="#8b5cf6" />
+    <path d="M20 34 V38" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+  <text x="60" y="35" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="24" fill="#f8fafc" letter-spacing="-0.5">Samira</text>
+</svg>
