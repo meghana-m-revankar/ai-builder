@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meghana-m-revankar.github.io/ai-builder/projects/your-business/site/sitemap.xml
