@@ -1,0 +1,58 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      project_path:
+        description: "Folder of the Expo app, e.g. projects/my-app/app"
+        required: true
+      app_name:
+        description: "Name used for the release, e.g. my-app"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install dependencies
+        working-directory: ${{ inputs.project_path }}
+        run: |
+          npm install
+          npx expo install --fix
+
+      - name: Generate native Android project
+        working-directory: ${{ inputs.project_path }}
+        run: npx expo prebuild --platform android --no-install
+
+      - name: Build release APK
+        working-directory: ${{ inputs.project_path }}/android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+
+      - name: Rename APK
+        run: |
+          cp "${{ inputs.project_path }}/android/app/build/outputs/apk/release/app-release.apk" "${{ inputs.app_name }}.apk"
+
+      - name: Publish as GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "apk-${{ inputs.app_name }}-${{ github.run_number }}" "${{ inputs.app_name }}.apk" \
+            --title "${{ inputs.app_name }} (Android APK)" \
+            --notes "Download the .apk on an Android phone and install it (allow unknown sources if asked)."
